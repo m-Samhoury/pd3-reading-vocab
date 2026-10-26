@@ -1,0 +1,7 @@
+# Only the PD3 coach skill and progress data are tracked; exam PDFs and other tools' files stay untracked.
+/*
+!/.gitignore
+!/.claude/
+!/pd3-data/
+/.claude/worktrees/
+/pd3-data/cache/
