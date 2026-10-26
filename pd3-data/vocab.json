@@ -10,19 +10,23 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2,
+      "note": "≠ ellers"
     },
     "ellers": {
       "word": "ellers",
-      "meaning": "otherwise / else",
-      "group": "l1_ord",
+      "meaning": "otherwise",
+      "group": "betingelse",
       "example": "Skynd dig, ellers kommer du for sent.",
       "ef": 2.5,
       "interval": 0,
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 1,
+      "note": "ADV — ≠ eller (or)"
     },
     "næppe": {
       "word": "næppe",
@@ -34,7 +38,9 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2,
+      "note": "≈ næsten ikke"
     },
     "næsten_ikke": {
       "word": "næsten ikke",
@@ -46,7 +52,8 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2
     },
     "kunne": {
       "word": "kunne",
@@ -58,7 +65,9 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2,
+      "note": "+ infinitiv uden \"at\""
     },
     "skulle": {
       "word": "skulle",
@@ -70,7 +79,9 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2,
+      "note": "+ infinitiv uden \"at\""
     },
     "måtte": {
       "word": "måtte",
@@ -82,7 +93,9 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2,
+      "note": "må ikke = forbudt"
     },
     "ville": {
       "word": "ville",
@@ -94,7 +107,9 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2,
+      "note": "+ infinitiv uden \"at\""
     },
     "at_betyde": {
       "word": "at betyde",
@@ -106,7 +121,8 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2
     },
     "at_anbefale": {
       "word": "at anbefale",
@@ -118,7 +134,8 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2
     },
     "at_fremhæve": {
       "word": "at fremhæve",
@@ -130,7 +147,8 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2
     },
     "at_vare": {
       "word": "at vare",
@@ -142,7 +160,8 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2
     },
     "at_ansøge_om": {
       "word": "at ansøge (om)",
@@ -154,7 +173,8 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2
     },
     "at_bestille": {
       "word": "at bestille",
@@ -166,11 +186,12 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2
     },
     "at_optage": {
       "word": "at optage",
-      "meaning": "to admit (to a programme) / to take up",
+      "meaning": "to admit (to a programme)",
       "group": "l1_verb",
       "example": "Skolen optager 60 elever om året.",
       "ef": 2.5,
@@ -178,7 +199,8 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2
     },
     "at_undlade": {
       "word": "at undlade",
@@ -190,7 +212,8 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2
     },
     "at_udelukke": {
       "word": "at udelukke",
@@ -202,7 +225,9 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2,
+      "note": "≈ ekskludere"
     },
     "at_omfatte": {
       "word": "at omfatte",
@@ -214,11 +239,13 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2,
+      "note": "≈ inkludere"
     },
     "at_uddele": {
       "word": "at uddele",
-      "meaning": "to hand out, distribute",
+      "meaning": "to hand out",
       "group": "l1_verb",
       "example": "Der uddeles gratis frugt.",
       "ef": 2.5,
@@ -226,7 +253,8 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2
     },
     "at_fordele": {
       "word": "at fordele",
@@ -238,7 +266,8 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2
     },
     "et_udsagn": {
       "word": "et udsagn",
@@ -250,11 +279,12 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2
     },
     "i_overensstemmelse_med": {
       "word": "i overensstemmelse med",
-      "meaning": "in accordance with, consistent with",
+      "meaning": "in accordance with",
       "group": "l2_ord",
       "example": "Svaret er i overensstemmelse med teksten.",
       "ef": 2.5,
@@ -262,7 +292,8 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2
     },
     "at_give_udtryk_for": {
       "word": "at give udtryk for",
@@ -274,7 +305,8 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2
     },
     "at_afgøre": {
       "word": "at afgøre",
@@ -286,7 +318,8 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2
     },
     "afgørende": {
       "word": "afgørende",
@@ -298,7 +331,8 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2
     },
     "en_årsag": {
       "word": "en årsag",
@@ -310,7 +344,8 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2
     },
     "et_vilkår": {
       "word": "et vilkår",
@@ -322,7 +357,8 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2
     },
     "et_forhold": {
       "word": "et forhold",
@@ -334,19 +370,22 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2
     },
     "i_forhold_til": {
       "word": "i forhold til",
       "meaning": "compared to / in relation to",
-      "group": "l2_ord",
+      "group": "sammenligning",
       "example": "Prisen er høj i forhold til kvaliteten.",
       "ef": 2.5,
       "interval": 0,
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 1,
+      "note": "PRÆP"
     },
     "om_hvorvidt": {
       "word": "om / hvorvidt",
@@ -358,19 +397,23 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2,
+      "note": "SUB"
     },
     "derfor": {
       "word": "derfor",
       "meaning": "therefore",
       "group": "konsekvens",
-      "example": "Det regnede, derfor blev vi hjemme.",
+      "example": "Det regnede. Derfor blev vi hjemme.",
       "ef": 2.5,
       "interval": 0,
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 1,
+      "note": "ADV"
     },
     "dermed": {
       "word": "dermed",
@@ -382,35 +425,41 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 1,
+      "note": "ADV"
     },
     "således": {
       "word": "således",
       "meaning": "thus, in this way",
       "group": "konsekvens",
-      "example": "Således kan man spare penge.",
+      "example": "Således kan man spare mange penge.",
       "ef": 2.5,
       "interval": 0,
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 1,
+      "note": "ADV — derfor ≈ således (L3: begge forkerte)"
     },
     "følgelig": {
       "word": "følgelig",
       "meaning": "consequently",
       "group": "konsekvens",
-      "example": "Der var ingen bus; følgelig kom hun for sent.",
+      "example": "Der kom ingen bus; følgelig kom hun for sent.",
       "ef": 2.5,
       "interval": 0,
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 1,
+      "note": "ADV — formel"
     },
     "desuden": {
       "word": "desuden",
-      "meaning": "furthermore, besides",
+      "meaning": "besides, furthermore",
       "group": "tilføjelse",
       "example": "Desuden er det billigt.",
       "ef": 2.5,
@@ -418,7 +467,9 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 1,
+      "note": "ADV"
     },
     "derudover": {
       "word": "derudover",
@@ -430,11 +481,13 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 1,
+      "note": "ADV — ét ord"
     },
     "ligeledes": {
       "word": "ligeledes",
-      "meaning": "likewise, in the same way",
+      "meaning": "likewise, also",
       "group": "sammenligning",
       "example": "Eleverne skal ligeledes aflevere en rapport.",
       "ef": 2.5,
@@ -442,7 +495,9 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 1,
+      "note": "ADV"
     },
     "blandt_andet": {
       "word": "blandt andet",
@@ -454,31 +509,37 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 1,
+      "note": "ADV — forkortes bl.a."
     },
     "fordi": {
       "word": "fordi",
       "meaning": "because",
       "group": "årsag",
-      "example": "Jeg bliver hjemme, fordi jeg er syg.",
+      "example": "Jeg bliver hjemme, fordi jeg ikke har det godt.",
       "ef": 2.5,
       "interval": 0,
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 1,
+      "note": "SUB"
     },
     "nemlig": {
       "word": "nemlig",
-      "meaning": "namely / you see (gives the reason)",
+      "meaning": "you see / namely (gives the reason)",
       "group": "årsag",
-      "example": "Han kom ikke; han var nemlig syg.",
+      "example": "Han kom ikke. Han var nemlig syg.",
       "ef": 2.5,
       "interval": 0,
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 1,
+      "note": "ADV — står efter verbet: \"Han var nemlig …\""
     },
     "alligevel": {
       "word": "alligevel",
@@ -490,7 +551,9 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 1,
+      "note": "ADV"
     },
     "imidlertid": {
       "word": "imidlertid",
@@ -502,19 +565,23 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 1,
+      "note": "ADV — formel; IKKE \"immediately\""
     },
     "derimod": {
       "word": "derimod",
       "meaning": "on the other hand, by contrast",
       "group": "kontrast",
-      "example": "Jens elsker sport, Mette derimod hader det.",
+      "example": "Jens elsker sport. Mette derimod hader det.",
       "ef": 2.5,
       "interval": 0,
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 1,
+      "note": "ADV"
     },
     "selvom": {
       "word": "selvom",
@@ -526,7 +593,9 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 1,
+      "note": "SUB — ét ord"
     },
     "omvendt": {
       "word": "omvendt",
@@ -538,7 +607,9 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 1,
+      "note": "ADV"
     },
     "til_gengæld": {
       "word": "til gengæld",
@@ -550,19 +621,23 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 1,
+      "note": "ADV — noget negativt opvejes af noget positivt"
     },
     "hvorimod": {
       "word": "hvorimod",
       "meaning": "whereas",
       "group": "kontrast",
-      "example": "Byen vokser, hvorimod landet affolkes.",
+      "example": "Byen vokser, hvorimod landsbyerne affolkes.",
       "ef": 2.5,
       "interval": 0,
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 1,
+      "note": "SUB"
     },
     "overraskende": {
       "word": "overraskende",
@@ -574,7 +649,8 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 3
     },
     "logisk": {
       "word": "logisk",
@@ -586,7 +662,8 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 3
     },
     "forventeligt": {
       "word": "forventeligt",
@@ -598,7 +675,8 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 3
     },
     "nødvendigt": {
       "word": "nødvendigt",
@@ -610,7 +688,8 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 3
     },
     "hensigtsmæssig": {
       "word": "hensigtsmæssig",
@@ -622,7 +701,8 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 3
     },
     "tvivlsomt": {
       "word": "tvivlsomt",
@@ -634,7 +714,8 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 3
     },
     "bæredygtig": {
       "word": "bæredygtig",
@@ -646,7 +727,8 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 3
     },
     "at_forhindre": {
       "word": "at forhindre",
@@ -658,7 +740,9 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2,
+      "note": "forhindre nogen i at …"
     },
     "at_begrænse": {
       "word": "at begrænse",
@@ -670,7 +754,8 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2
     },
     "at_forebygge": {
       "word": "at forebygge",
@@ -682,7 +767,8 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2
     },
     "at_undgå": {
       "word": "at undgå",
@@ -694,7 +780,8 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2
     },
     "at_medføre": {
       "word": "at medføre",
@@ -706,7 +793,9 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2,
+      "note": "≈ føre til, resultere i"
     },
     "at_føre_til": {
       "word": "at føre til",
@@ -718,7 +807,8 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2
     },
     "at_resultere_i": {
       "word": "at resultere i",
@@ -730,7 +820,8 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2
     },
     "at_betinge": {
       "word": "at betinge",
@@ -742,7 +833,8 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2
     },
     "at_sikre": {
       "word": "at sikre",
@@ -754,7 +846,8 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2
     },
     "at_garantere": {
       "word": "at garantere",
@@ -766,7 +859,8 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2
     },
     "at_understrege": {
       "word": "at understrege",
@@ -778,7 +872,8 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2
     },
     "at_kræve": {
       "word": "at kræve",
@@ -790,7 +885,8 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2
     },
     "at_forårsage": {
       "word": "at forårsage",
@@ -802,7 +898,9 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2,
+      "note": "≈ fremkalde"
     },
     "at_fremkalde": {
       "word": "at fremkalde",
@@ -814,19 +912,22 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2
     },
     "at_skyldes": {
       "word": "at skyldes",
       "meaning": "to be due to",
       "group": "årsag",
-      "example": "Stigningen skyldes flere ældre.",
+      "example": "Stigningen skyldes, at der bliver flere ældre.",
       "ef": 2.5,
       "interval": 0,
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 1,
+      "note": "verbum: X skyldes Y"
     },
     "at_afvise": {
       "word": "at afvise",
@@ -838,7 +939,9 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2,
+      "note": "= sige nej tak"
     },
     "at_indrømme": {
       "word": "at indrømme",
@@ -850,7 +953,8 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2
     },
     "et_formål_med": {
       "word": "et formål med",
@@ -862,7 +966,8 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2
     },
     "problemer_med": {
       "word": "problemer med",
@@ -874,7 +979,8 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2
     },
     "effekten_af": {
       "word": "effekten af",
@@ -886,13 +992,1401 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "priority": 2
     },
     "indflydelse_på": {
       "word": "indflydelse på",
       "meaning": "influence on",
       "group": "praep",
       "example": "Medierne har indflydelse på debatten.",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": [],
+      "priority": 2
+    },
+    "da": {
+      "word": "da",
+      "meaning": "because / when (once, in the past)",
+      "group": "årsag",
+      "example": "Da det regnede, blev vi hjemme.",
+      "priority": 1,
+      "note": "SUB — årsag eller tid (fortid); konteksten afgør",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "eftersom": {
+      "word": "eftersom",
+      "meaning": "since, as (reason)",
+      "group": "årsag",
+      "example": "Eftersom bussen ikke kom, tog vi en taxa.",
+      "priority": 1,
+      "note": "SUB — mere formel end fordi",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "idet": {
+      "word": "idet",
+      "meaning": "as, since / at the moment when",
+      "group": "årsag",
+      "example": "Han takkede nej, idet han ikke havde tid.",
+      "priority": 1,
+      "note": "SUB — formel",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "for": {
+      "word": "for",
+      "meaning": "because, for",
+      "group": "årsag",
+      "example": "Hun blev hjemme, for hun var syg.",
+      "priority": 1,
+      "note": "KOO — hovedsætningsordstilling (ikke som fordi)",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "på_grund_af": {
+      "word": "på grund af",
+      "meaning": "because of",
+      "group": "årsag",
+      "example": "Toget var forsinket på grund af sneen.",
+      "priority": 1,
+      "note": "PRÆP",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "som_følge_af": {
+      "word": "som følge af",
+      "meaning": "as a result of",
+      "group": "årsag",
+      "example": "Som følge af krisen mistede mange deres job.",
+      "priority": 1,
+      "note": "PRÆP",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "derved": {
+      "word": "derved",
+      "meaning": "thereby, by doing so",
+      "group": "konsekvens",
+      "example": "Man cykler og sparer derved penge.",
+      "priority": 1,
+      "note": "ADV",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "af_den_grund": {
+      "word": "af den grund",
+      "meaning": "for that reason",
+      "group": "konsekvens",
+      "example": "Af den grund valgte hun at flytte.",
+      "priority": 1,
+      "note": "ADV",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "så": {
+      "word": "så",
+      "meaning": "so (result)",
+      "group": "konsekvens",
+      "example": "Jeg var træt, så jeg gik i seng.",
+      "priority": 1,
+      "note": "KOO — \"så\" = derfor; \"så at\" = formål",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "hvilket_betyder_at": {
+      "word": "hvilket betyder, at",
+      "meaning": "which means that",
+      "group": "konsekvens",
+      "example": "Priserne stiger, hvilket betyder, at mange må spare.",
+      "priority": 1,
+      "note": "SUB",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "endvidere": {
+      "word": "endvidere",
+      "meaning": "furthermore",
+      "group": "tilføjelse",
+      "example": "Endvidere skal man have en uddannelse.",
+      "priority": 1,
+      "note": "ADV — formel",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "ydermere": {
+      "word": "ydermere",
+      "meaning": "moreover",
+      "group": "tilføjelse",
+      "example": "Ydermere er der lange ventelister.",
+      "priority": 1,
+      "note": "ADV — formel",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "tilmed": {
+      "word": "tilmed",
+      "meaning": "even, on top of that",
+      "group": "tilføjelse",
+      "example": "Det var dyrt og tilmed dårligt.",
+      "priority": 1,
+      "note": "ADV",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "samt": {
+      "word": "samt",
+      "meaning": "as well as, and",
+      "group": "tilføjelse",
+      "example": "Prisen omfatter morgenmad samt aftensmad.",
+      "priority": 1,
+      "note": "KOO — formel \"og\"",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "ikke_kun_men_også": {
+      "word": "ikke kun … men også",
+      "meaning": "not only … but also",
+      "group": "tilføjelse",
+      "example": "Det er ikke kun dyrt, men også farligt.",
+      "priority": 1,
+      "note": "fast udtryk",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "både_og": {
+      "word": "både … og",
+      "meaning": "both … and",
+      "group": "tilføjelse",
+      "example": "Både børn og voksne kan deltage.",
+      "priority": 1,
+      "note": "KOO",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "tilsvarende": {
+      "word": "tilsvarende",
+      "meaning": "correspondingly, similarly",
+      "group": "sammenligning",
+      "example": "Tilsvarende er priserne steget i Sverige.",
+      "priority": 1,
+      "note": "ADV",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "ligesom": {
+      "word": "ligesom",
+      "meaning": "just like",
+      "group": "sammenligning",
+      "example": "Ligesom sidste år er der mange ansøgere.",
+      "priority": 1,
+      "note": "SUB/PRÆP",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "til_sammenligning": {
+      "word": "til sammenligning",
+      "meaning": "by comparison",
+      "group": "sammenligning",
+      "example": "Til sammenligning tjener en lærer mindre.",
+      "priority": 1,
+      "note": "ADV",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "sammenlignet_med": {
+      "word": "sammenlignet med",
+      "meaning": "compared to",
+      "group": "sammenligning",
+      "example": "Sammenlignet med 1990 bruger vi mere energi.",
+      "priority": 1,
+      "note": "PRÆP",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "heller_ikke": {
+      "word": "heller ikke",
+      "meaning": "not … either",
+      "group": "sammenligning",
+      "example": "Jeg kan heller ikke lide kaffe.",
+      "priority": 1,
+      "note": "negativ lighed",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "hverken_eller": {
+      "word": "hverken … eller",
+      "meaning": "neither … nor",
+      "group": "sammenligning",
+      "example": "Hun har hverken tid eller penge.",
+      "priority": 1,
+      "note": "negativ lighed",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "men": {
+      "word": "men",
+      "meaning": "but",
+      "group": "kontrast",
+      "example": "Det er dyrt, men det er godt.",
+      "priority": 1,
+      "note": "KOO — komma før men",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "dog": {
+      "word": "dog",
+      "meaning": "however, though",
+      "group": "kontrast",
+      "example": "Det er dog ikke alle, der er enige.",
+      "priority": 1,
+      "note": "ADV",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "mens": {
+      "word": "mens",
+      "meaning": "while / whereas",
+      "group": "kontrast",
+      "example": "Hun læser, mens han laver mad.",
+      "priority": 1,
+      "note": "SUB — tid ELLER modsætning",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "tværtimod": {
+      "word": "tværtimod",
+      "meaning": "on the contrary",
+      "group": "kontrast",
+      "example": "Det er ikke billigt, tværtimod.",
+      "priority": 1,
+      "note": "ADV",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "i_modsætning_til": {
+      "word": "i modsætning til",
+      "meaning": "unlike, in contrast to",
+      "group": "kontrast",
+      "example": "I modsætning til sin bror er han meget stille.",
+      "priority": 1,
+      "note": "PRÆP",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "i_stedet_for": {
+      "word": "i stedet for",
+      "meaning": "instead of",
+      "group": "kontrast",
+      "example": "Han tog cyklen i stedet for bilen.",
+      "priority": 1,
+      "note": "PRÆP",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "på_den_ene_side_på_den_anden_side": {
+      "word": "på den ene side … på den anden side",
+      "meaning": "on the one hand … on the other hand",
+      "group": "kontrast",
+      "example": "På den ene side er det dyrt, på den anden side er det sundt.",
+      "priority": 1,
+      "note": "ADV",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "skønt": {
+      "word": "skønt",
+      "meaning": "although",
+      "group": "indrømmelse",
+      "example": "Skønt han var træt, arbejdede han videre.",
+      "priority": 1,
+      "note": "SUB — formel",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "ikke_desto_mindre": {
+      "word": "ikke desto mindre",
+      "meaning": "nonetheless",
+      "group": "indrømmelse",
+      "example": "Ikke desto mindre valgte han at blive.",
+      "priority": 1,
+      "note": "ADV — formel",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "ganske_vist": {
+      "word": "ganske vist",
+      "meaning": "admittedly",
+      "group": "indrømmelse",
+      "example": "Det er ganske vist dyrt, men det er pengene værd.",
+      "priority": 1,
+      "note": "ADV — efterfølges ofte af \"men\"",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "trods_på_trods_af": {
+      "word": "trods / på trods af",
+      "meaning": "despite, in spite of",
+      "group": "indrømmelse",
+      "example": "På trods af regnen gik vi en tur.",
+      "priority": 1,
+      "note": "PRÆP",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "hvis": {
+      "word": "hvis",
+      "meaning": "if",
+      "group": "betingelse",
+      "example": "Hvis det regner, bliver vi hjemme.",
+      "priority": 1,
+      "note": "SUB",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "såfremt": {
+      "word": "såfremt",
+      "meaning": "provided that, if",
+      "group": "betingelse",
+      "example": "Såfremt du består, kan du starte i august.",
+      "priority": 1,
+      "note": "SUB — formel \"hvis\"",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "forudsat_at": {
+      "word": "forudsat at",
+      "meaning": "provided that",
+      "group": "betingelse",
+      "example": "Vi kommer, forudsat at vejret er godt.",
+      "priority": 1,
+      "note": "SUB",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "medmindre": {
+      "word": "medmindre",
+      "meaning": "unless",
+      "group": "betingelse",
+      "example": "Vi går, medmindre det regner.",
+      "priority": 1,
+      "note": "SUB",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "for_at": {
+      "word": "for at",
+      "meaning": "in order to",
+      "group": "formål",
+      "example": "Hun flyttede for at få et bedre job.",
+      "priority": 1,
+      "note": "+ infinitiv",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "så_at": {
+      "word": "så (at)",
+      "meaning": "so that",
+      "group": "formål",
+      "example": "Han talte højt, så alle kunne høre det.",
+      "priority": 1,
+      "note": "SUB",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "med_henblik_på": {
+      "word": "med henblik på",
+      "meaning": "with a view to",
+      "group": "formål",
+      "example": "Kurset er tilrettelagt med henblik på job.",
+      "priority": 1,
+      "note": "PRÆP — formel",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "undtagen": {
+      "word": "undtagen",
+      "meaning": "except",
+      "group": "udelukkelse",
+      "example": "Alle kom undtagen Peter.",
+      "priority": 1,
+      "note": "PRÆP",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "bortset_fra": {
+      "word": "bortset fra",
+      "meaning": "apart from",
+      "group": "udelukkelse",
+      "example": "Bortset fra vejret var turen god.",
+      "priority": 1,
+      "note": "PRÆP",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "frem_for": {
+      "word": "frem for",
+      "meaning": "rather than",
+      "group": "udelukkelse",
+      "example": "Mange vælger toget frem for bilen.",
+      "priority": 1,
+      "note": "PRÆP",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "snarere": {
+      "word": "snarere",
+      "meaning": "rather",
+      "group": "udelukkelse",
+      "example": "Det er snarere et spørgsmål om penge.",
+      "priority": 1,
+      "note": "ADV",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "for_eksempel_fx": {
+      "word": "for eksempel (fx)",
+      "meaning": "for example",
+      "group": "præcisering",
+      "example": "Mange sportsgrene, fx fodbold, er populære.",
+      "priority": 1,
+      "note": "ADV — også f.eks.",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "eksempelvis": {
+      "word": "eksempelvis",
+      "meaning": "for instance",
+      "group": "præcisering",
+      "example": "Eksempelvis kan man tage toget.",
+      "priority": 1,
+      "note": "ADV",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "især": {
+      "word": "især",
+      "meaning": "especially",
+      "group": "præcisering",
+      "example": "Især unge bruger sociale medier.",
+      "priority": 1,
+      "note": "ADV",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "navnlig": {
+      "word": "navnlig",
+      "meaning": "in particular",
+      "group": "præcisering",
+      "example": "Navnlig ældre har brug for hjælp.",
+      "priority": 1,
+      "note": "ADV — formel \"især\"",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "det_vil_sige_dvs": {
+      "word": "det vil sige (dvs.)",
+      "meaning": "that is, i.e.",
+      "group": "præcisering",
+      "example": "Han er pensionist, det vil sige, at han ikke arbejder.",
+      "priority": 1,
+      "note": "fast udtryk",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "med_andre_ord": {
+      "word": "med andre ord",
+      "meaning": "in other words",
+      "group": "præcisering",
+      "example": "Med andre ord er der ingen penge.",
+      "priority": 1,
+      "note": "ADV",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "herunder": {
+      "word": "herunder",
+      "meaning": "including",
+      "group": "præcisering",
+      "example": "Alle borgere, herunder børn, skal registreres.",
+      "priority": 1,
+      "note": "ADV",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "heldigvis": {
+      "word": "heldigvis",
+      "meaning": "fortunately",
+      "group": "holdning",
+      "example": "Heldigvis kom ingen til skade.",
+      "priority": 1,
+      "note": "ADV",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "desværre": {
+      "word": "desværre",
+      "meaning": "unfortunately",
+      "group": "holdning",
+      "example": "Desværre kan jeg ikke komme.",
+      "priority": 1,
+      "note": "ADV",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "naturligvis": {
+      "word": "naturligvis",
+      "meaning": "naturally, of course",
+      "group": "holdning",
+      "example": "Naturligvis skal man betale skat.",
+      "priority": 1,
+      "note": "ADV",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "faktisk": {
+      "word": "faktisk",
+      "meaning": "actually, in fact",
+      "group": "holdning",
+      "example": "Det er faktisk ret billigt.",
+      "priority": 1,
+      "note": "ADV",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "overraskende_nok": {
+      "word": "overraskende nok",
+      "meaning": "surprisingly",
+      "group": "holdning",
+      "example": "Overraskende nok var der få deltagere.",
+      "priority": 1,
+      "note": "ADV",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "når": {
+      "word": "når",
+      "meaning": "when (whenever / future)",
+      "group": "tid",
+      "example": "Når jeg kommer hjem, ringer jeg.",
+      "priority": 1,
+      "note": "SUB — gentaget eller fremtid; da = én gang i fortiden",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "inden": {
+      "word": "inden",
+      "meaning": "before",
+      "group": "tid",
+      "example": "Ring, inden du kommer.",
+      "priority": 1,
+      "note": "SUB",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "efter_at": {
+      "word": "efter at",
+      "meaning": "after",
+      "group": "tid",
+      "example": "Efter at hun var flyttet, fik hun nyt job.",
+      "priority": 1,
+      "note": "SUB",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "efterhånden_som": {
+      "word": "efterhånden som",
+      "meaning": "as (gradually)",
+      "group": "tid",
+      "example": "Efterhånden som man bliver ældre, får man brug for mere søvn.",
+      "priority": 1,
+      "note": "SUB",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "siden": {
+      "word": "siden",
+      "meaning": "since",
+      "group": "tid",
+      "example": "Siden han flyttede, har vi ikke set ham.",
+      "priority": 1,
+      "note": "SUB/ADV",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "derefter": {
+      "word": "derefter",
+      "meaning": "after that, then",
+      "group": "tid",
+      "example": "Derefter tog vi hjem.",
+      "priority": 1,
+      "note": "ADV",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "herefter": {
+      "word": "herefter",
+      "meaning": "after this",
+      "group": "tid",
+      "example": "Herefter skal man udfylde en formular.",
+      "priority": 1,
+      "note": "ADV",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "til_sidst": {
+      "word": "til sidst",
+      "meaning": "finally, in the end",
+      "group": "tid",
+      "example": "Til sidst gav han op.",
+      "priority": 1,
+      "note": "ADV",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "endelig": {
+      "word": "endelig",
+      "meaning": "finally / at last",
+      "group": "tid",
+      "example": "Endelig fik hun svar.",
+      "priority": 1,
+      "note": "ADV",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "alt_i_alt": {
+      "word": "alt i alt",
+      "meaning": "all in all",
+      "group": "konklusion",
+      "example": "Alt i alt mener jeg, at fordelene vejer tungest.",
+      "priority": 1,
+      "note": "ADV",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "samlet_set": {
+      "word": "samlet set",
+      "meaning": "overall",
+      "group": "konklusion",
+      "example": "Samlet set er det en god løsning.",
+      "priority": 1,
+      "note": "ADV",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "kort_sagt": {
+      "word": "kort sagt",
+      "meaning": "in short",
+      "group": "konklusion",
+      "example": "Kort sagt kan det ikke betale sig.",
+      "priority": 1,
+      "note": "ADV",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "for_at_konkludere": {
+      "word": "for at konkludere",
+      "meaning": "to conclude",
+      "group": "konklusion",
+      "example": "For at konkludere: Jeg synes, at …",
+      "priority": 1,
+      "note": "fast udtryk",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "at_påpege": {
+      "word": "at påpege",
+      "meaning": "to point out",
+      "group": "l3_forklare",
+      "example": "Forskeren påpeger, at der mangler data.",
+      "priority": 2,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "at_bekræfte": {
+      "word": "at bekræfte",
+      "meaning": "to confirm",
+      "group": "l3_forklare",
+      "example": "Undersøgelsen bekræfter tendensen.",
+      "priority": 2,
+      "note": "≠ benægte",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "at_benægte": {
+      "word": "at benægte",
+      "meaning": "to deny",
+      "group": "l3_forklare",
+      "example": "Han benægter alt.",
+      "priority": 2,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "at_modsige": {
+      "word": "at modsige",
+      "meaning": "to contradict",
+      "group": "l3_forklare",
+      "example": "Resultaterne modsiger teorien.",
+      "priority": 2,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "at_fortryde": {
+      "word": "at fortryde",
+      "meaning": "to regret",
+      "group": "l3_ord",
+      "example": "Hun fortryder, at hun flyttede.",
+      "priority": 2,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "at_beklage": {
+      "word": "at beklage",
+      "meaning": "to regret, apologise for",
+      "group": "l3_ord",
+      "example": "Vi beklager forsinkelsen.",
+      "priority": 2,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "at_opleve": {
+      "word": "at opleve",
+      "meaning": "to experience",
+      "group": "l3_ord",
+      "example": "Mange unge oplever stress.",
+      "priority": 2,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "at_reducere": {
+      "word": "at reducere",
+      "meaning": "to reduce",
+      "group": "l3_ord",
+      "example": "Målet er at reducere CO₂-udledningen.",
+      "priority": 2,
+      "note": "≈ mindske, nedsætte",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "at_muliggøre": {
+      "word": "at muliggøre",
+      "meaning": "to make possible",
+      "group": "l3_ord",
+      "example": "Teknologien muliggør hjemmearbejde.",
+      "priority": 2,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "at_udvide": {
+      "word": "at udvide",
+      "meaning": "to expand",
+      "group": "l3_ord",
+      "example": "Butikken vil udvide sortimentet.",
+      "priority": 2,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "at_forlænge": {
+      "word": "at forlænge",
+      "meaning": "to extend, lengthen",
+      "group": "l3_ord",
+      "example": "Åbningstiden forlænges.",
+      "priority": 2,
+      "note": "≠ forkorte",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "at_forenkle": {
+      "word": "at forenkle",
+      "meaning": "to simplify",
+      "group": "l3_ord",
+      "example": "Reglerne skal forenkles.",
+      "priority": 2,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "at_investere_i": {
+      "word": "at investere i",
+      "meaning": "to invest in",
+      "group": "l3_ord",
+      "example": "Kommunen investerer i nye skoler.",
+      "priority": 2,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "at_offentliggøre": {
+      "word": "at offentliggøre",
+      "meaning": "to publish, make public",
+      "group": "l3_ord",
+      "example": "Resultatet offentliggøres i dag.",
+      "priority": 2,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "en_mulighed": {
+      "word": "en mulighed",
+      "meaning": "a possibility, option",
+      "group": "l3_ord",
+      "example": "Der er mange muligheder for at læse videre.",
+      "priority": 2,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "en_udfordring": {
+      "word": "en udfordring",
+      "meaning": "a challenge",
+      "group": "l3_ord",
+      "example": "Det er en stor udfordring for kommunerne.",
+      "priority": 2,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "et_ansvar": {
+      "word": "et ansvar",
+      "meaning": "a responsibility",
+      "group": "l3_ord",
+      "example": "Forældrene har ansvaret for barnet.",
+      "priority": 2,
+      "note": "ansvar for",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "et_behov": {
+      "word": "et behov",
+      "meaning": "a need",
+      "group": "l3_ord",
+      "example": "Der er behov for flere sygeplejersker.",
+      "priority": 2,
+      "note": "behov for",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "en_modstand": {
+      "word": "en modstand",
+      "meaning": "resistance, opposition",
+      "group": "l3_ord",
+      "example": "Forslaget mødte stor modstand.",
+      "priority": 2,
+      "note": "≠ opbakning",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "en_opbakning": {
+      "word": "en opbakning",
+      "meaning": "support, backing",
+      "group": "l3_ord",
+      "example": "Planen har bred opbakning i befolkningen.",
+      "priority": 2,
+      "note": "opbakning til",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "en_forudsætning": {
+      "word": "en forudsætning",
+      "meaning": "a precondition",
+      "group": "l3_ord",
+      "example": "Dansk er en forudsætning for jobbet.",
+      "priority": 2,
+      "note": "forudsætning for",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "en_påstand": {
+      "word": "en påstand",
+      "meaning": "a claim",
+      "group": "l3_ord",
+      "example": "Det er en påstand uden beviser.",
+      "priority": 2,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "en_tendens": {
+      "word": "en tendens",
+      "meaning": "a trend, tendency",
+      "group": "l3_ord",
+      "example": "Der er en tendens til, at flere flytter til byerne.",
+      "priority": 2,
+      "note": "tendens til",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "en_omkostning": {
+      "word": "en omkostning",
+      "meaning": "a cost",
+      "group": "l3_ord",
+      "example": "Omkostningerne er steget.",
+      "priority": 2,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "en_undtagelse": {
+      "word": "en undtagelse",
+      "meaning": "an exception",
+      "group": "l3_ord",
+      "example": "Med undtagelse af søndag er der åbent.",
+      "priority": 2,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "en_målsætning": {
+      "word": "en målsætning",
+      "meaning": "an objective, goal",
+      "group": "l3_ord",
+      "example": "Regeringens målsætning er at skabe flere job.",
+      "priority": 2,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "en_forklaring": {
+      "word": "en forklaring",
+      "meaning": "an explanation",
+      "group": "l3_ord",
+      "example": "Der er flere forklaringer på det.",
+      "priority": 2,
+      "note": "forklaring på",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "typisk": {
+      "word": "typisk",
+      "meaning": "typical(ly)",
+      "group": "l3_ord",
+      "example": "Det er typisk unge, der flytter.",
+      "priority": 2,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "karakteristisk": {
+      "word": "karakteristisk",
+      "meaning": "characteristic",
+      "group": "l3_ord",
+      "example": "Det er karakteristisk for byen.",
+      "priority": 2,
+      "note": "karakteristisk for",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-10-27",
+      "lapses": 0,
+      "history": []
+    },
+    "sjældent": {
+      "word": "sjældent",
+      "meaning": "rarely",
+      "group": "l3_ord",
+      "example": "Det sker sjældent.",
+      "priority": 2,
+      "note": "≠ ofte",
       "ef": 2.5,
       "interval": 0,
       "reps": 0,
