@@ -1,13 +1,29 @@
 # PD3 reading vocabulary
 
 Study tool for the reading part (Læseforståelse 1–3) of Prøve i Dansk 3, built from the four
-exam sittings Nov 2022 – May 2024. Three standalone pages, no install needed, work offline:
+exam sittings Nov 2022 – May 2024. Standalone pages, no install needed, work offline:
 
 - `index.html` – overview, progress and word groups
 - `study-sheet.html` – every word with meanings, examples, collocations and word order; search, filter, print
 - `flashcards.html` – spaced-repetition flashcards (`#learn`) and a 10-question exam-style test (`#test`)
+- `assisted-learning.html` – guided teach → test → review for the PD3 coach deck ([open](https://m-samhoury.github.io/pd3-reading-vocab/assisted-learning.html))
 
 Progress is stored in the browser (localStorage). Use Export/Import on the flashcards page to move it.
+
+## Assisted Learning
+
+**Open it: https://m-samhoury.github.io/pd3-reading-vocab/assisted-learning.html**
+
+A guided page for the PD3 coach's 174-card deck (connectors first). New words come in batches of five from
+one relation group and are taught before they're tested: word-order rule (SUB/ADV/KOO/PRÆP), example,
+real sentences from the 2004–2024 reading texts, the Den Danske Ordbog entry and the confusable partner.
+Then six rotating exercises (meaning, typing, relation, gap-fill, word-order tiles, L3 pair), a
+confusables drill (*da/når*, *for/fordi* …), SM-2 spaced repetition and a group map.
+Progress is saved in the browser on each device (localStorage) and survives closing the page.
+
+`assisted-learning.html` is a single self-contained file built by the pd3-coach skill in the
+PD3 samples collection project (`python3 -I .claude/skills/pd3-coach/scripts/pd3.py page`); to update it,
+copy the rebuilt file over this one. It also opens straight from disk, no server needed.
 
 ## Contents
 
@@ -88,6 +104,7 @@ python3 src/scripts/wiktionary.py    # English headword glosses from Wiktionary 
 python3 src/scripts/render.py --private   # private/ – same pages plus DDO's definitions verbatim
 ```
 
-`private/` is git-ignored: Den Danske Ordbog's wording is copyrighted, so it is only
-used in the local copy and never published. The public pages link to DDO, ordbogen.com
-and Wiktionary for every word.
+`private/` is git-ignored: Den Danske Ordbog's wording is copyrighted, so the study sheet and
+flashcards only use it in the local copy; their public pages link to DDO, ordbogen.com and
+Wiktionary for every word. Exception: `assisted-learning.html` is published with DDO definitions
+and citations included.
