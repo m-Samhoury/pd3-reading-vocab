@@ -51,6 +51,7 @@ After adding cards, re-run both so new words get definitions and exam sentences.
 Danish label, own example) and hand-picked exam sentences labelled with their sense. `pd3.py sentences` uses those
 instead of pattern matches, and the page shows one block per meaning. When adding such a word, label its sentences
 by reading them: a pattern can't tell *da* = because from *da* = when, or the connector *for* from the preposition.
+Cards whose word is not its own DDO headword (fixed phrases, *skyldes*, *blandt andet*) got their definition by hand from the right entry and meaning; `dict.head` names that entry and the page shows "Fra opslaget …". *overraskende nok* and *samlet set* are not in DDO.
 `pd3-data/translations.json` (`pd3.py translate`, Google Translate, then checked by hand) gives the English shown in
 small print under each DDO definition. It only fills missing entries, so hand corrections stay.
 The free "write one sentence with 3 connectors" task stays in chat (it needs grading by you).

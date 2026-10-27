@@ -44,7 +44,22 @@
       "lapses": 0,
       "history": [],
       "priority": 1,
-      "note": "ADV — ≠ eller (or)"
+      "note": "ADV — ≠ eller (or)",
+      "dict": {
+        "source": "DDO",
+        "pos": "adverbium",
+        "head": "ellers",
+        "senses": [
+          "hvis det ikke forholder sig som netop omtalt",
+          "under andre eller normale omstændigheder"
+        ],
+        "cite": [
+          "Vi var nødt til at skære et sted, ellers var hele programmet blevet for langt",
+          "Ulla er nu voldsomt angrebet af den ellers sjældne bakteriesygdom tuberkulose",
+          "Den smagte faktisk godt. Jeg plejer ellers ikke at kunne lide leverpostej"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=ellers"
+      }
     },
     "næppe": {
       "word": "næppe",
@@ -83,7 +98,20 @@
       "due": "2026-10-27",
       "lapses": 0,
       "history": [],
-      "priority": 2
+      "priority": 2,
+      "dict": {
+        "source": "DDO",
+        "pos": "adverbium",
+        "head": "næsten",
+        "senses": [
+          "ikke helt, men tæt på"
+        ],
+        "cite": [
+          "Lysene var næsten brændt ned på juletræet",
+          "Det var næsten middag, inden hun nåede tilbage til præstegården"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=n%C3%A6sten"
+      }
     },
     "kunne": {
       "word": "kunne",
@@ -97,7 +125,27 @@
       "lapses": 0,
       "history": [],
       "priority": 2,
-      "note": "+ infinitiv uden \"at\""
+      "note": "+ infinitiv uden \"at\"",
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "kunne",
+        "senses": [
+          "have evnen til at; være i stand til at",
+          "have mulighed for eller lejlighed til at",
+          "bruges for at angive at noget er muligt eller sandsynligt",
+          "få tilladelse til at"
+        ],
+        "cite": [
+          "Et af de hurtigste dyr på prærien er gaffelbukken. Den kan løbe med 90 km i timen",
+          "jeg kunne lugte, at hun havde drukket en øl",
+          "I Lotto kan man vinde flere millioner ved at ramme syv tal",
+          "om aftenen kan man sidde på terrassen og se på vildgæssene",
+          "Han kunne vel være omkring de halvtreds",
+          "Hun kan komme hvert øjeblik, det skal være"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=kunne"
+      }
     },
     "skulle": {
       "word": "skulle",
@@ -111,7 +159,27 @@
       "lapses": 0,
       "history": [],
       "priority": 2,
-      "note": "+ infinitiv uden \"at\""
+      "note": "+ infinitiv uden \"at\"",
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "skulle",
+        "senses": [
+          "være tvunget til noget af ydre omstændigheder",
+          "bruges for at udtrykke moralsk forpligtelse eller korrekthed",
+          "være planlagt eller bestemt til at",
+          "være tilfældet efter hvad man har hørt eller mener at vide"
+        ],
+        "cite": [
+          "Lyngby skal vinde i morgen for at gå videre i turneringen",
+          "der er jo masser af tøj der skal vaskes når man er fire mennesker",
+          "Man skal jo aflevere fundne sager hos politiet, ikke?",
+          "Ærligt talt, jeg synes, I skulle skamme jer",
+          "Det er sært at tænke på at du nu snart skal begynde at gå i skole",
+          "Vi skal til Kreta om tre uger"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=skulle"
+      }
     },
     "måtte": {
       "word": "måtte",
@@ -125,7 +193,26 @@
       "lapses": 0,
       "history": [],
       "priority": 2,
-      "note": "må ikke = forbudt"
+      "note": "må ikke = forbudt",
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "måtte",
+        "senses": [
+          "være nødt til at gøre noget bestemt, især tvunget af ydre omstændigheder",
+          "få lov eller have lov til at",
+          "bruges for at udtrykke at noget logisk set er temmelig sikkert"
+        ],
+        "cite": [
+          "Der var så mange varer at bære på, at de af og til måtte standse og stille det hele fra sig, mens de pustede ud",
+          "Fruen sover, De må komme igen senere, siger hun meget bestemt",
+          "\"Må jeg få en flødebolle?\" spørger Bernhard pænt",
+          "Vil du lige slukke den cigaret; der må ikke ryges på 1. sal",
+          "Det må være hende tandlægen, jeg kan genkende bilen",
+          "der må være sket en fejltagelse"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=m%C3%A5tte"
+      }
     },
     "ville": {
       "word": "ville",
@@ -139,7 +226,24 @@
       "lapses": 0,
       "history": [],
       "priority": 2,
-      "note": "+ infinitiv uden \"at\""
+      "note": "+ infinitiv uden \"at\"",
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "ville",
+        "senses": [
+          "bruges for at udtrykke ønske eller vilje",
+          "bruges for at angive fremtid",
+          "bruges for at angive følgerne af en tænkt begivenhed eller situation"
+        ],
+        "cite": [
+          "Jeg vil gerne være researcher på TV eller lave radio",
+          "Vores krav har ændret sig. Vi vil have lys, plads, luft, natur og sportsfaciliteter i nærheden af bopælen",
+          "I de kommende år vil gymnasiet og hf blive stillet over for nye store udfordringer",
+          "Søren ville ha' været stolt, hvis han havde kunnet se sin familie i dag"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=ville"
+      }
     },
     "at_betyde": {
       "word": "at betyde",
@@ -152,7 +256,24 @@
       "due": "2026-10-27",
       "lapses": 0,
       "history": [],
-      "priority": 2
+      "priority": 2,
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "betyde",
+        "senses": [
+          "være udtryk for et bestemt (tanke)indhold",
+          "svare til eller være ensbetydende med",
+          "være vigtig eller betydningsfuld; have værdi eller betydning"
+        ],
+        "cite": [
+          "Sproget er fuldt af ord der staves ens, men betyder noget forskelligt",
+          "Fornuftig information betyder større viden omkring problemerne og dermed større tryghed",
+          "Min familie betyder alt for mig",
+          "penge havde jo aldrig betydet noget videre for Sylvia"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=betyde"
+      }
     },
     "at_anbefale": {
       "word": "at anbefale",
@@ -218,7 +339,22 @@
       "due": "2026-10-27",
       "lapses": 0,
       "history": [],
-      "priority": 2
+      "priority": 2,
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "vare",
+        "senses": [
+          "have en vis udstrækning i tid",
+          "fortsætte i længere tid"
+        ],
+        "cite": [
+          "Forhandlingerne varede hele dagen og en god del af aftenen med",
+          "Festen varede fra kl. 15 til 01 – og hvert minut var fyldt med underholdning",
+          "hvis din skoletræthed varer ved, ville det måske være en idé med et sabbatår i udlandet mellem 2. og 3. g"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=vare"
+      }
     },
     "at_ansøge_om": {
       "word": "at ansøge (om)",
@@ -262,7 +398,23 @@
       "due": "2026-10-27",
       "lapses": 0,
       "history": [],
-      "priority": 2
+      "priority": 2,
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "bestille",
+        "senses": [
+          "træffe aftale om levering af en vare eller ydelse",
+          "træffe aftale forud om at noget, fx en plads eller et mødetidspunkt, står til rådighed"
+        ],
+        "cite": [
+          "vinduespudseren blev bestilt til at rengøre samtlige husets vinduer",
+          "Jeg har længe gået og overvejet at bestille Toyotas nye elbil",
+          "Hvis du prøver at bestille et bord på en restaurant i København på dagen, så er det en umulig opgave. Alle restauranter er propfyldte",
+          "Jeg har ikke bestilt sommerferien endnu, men vil helt sikkert holde øje med Polen"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=bestille"
+      }
     },
     "at_optage": {
       "word": "at optage",
@@ -275,7 +427,19 @@
       "due": "2026-10-27",
       "lapses": 0,
       "history": [],
-      "priority": 2
+      "priority": 2,
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "optage",
+        "senses": [
+          "indlemme som medlem, elev el.lign., fx i en forening eller på en uddannelse"
+        ],
+        "cite": [
+          "Bliver du optaget på en uddannelse, du egentlig slet ikke ønsker, spilder du tiden"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=optage"
+      }
     },
     "at_undlade": {
       "word": "at undlade",
@@ -375,7 +539,19 @@
       "due": "2026-10-27",
       "lapses": 0,
       "history": [],
-      "priority": 2
+      "priority": 2,
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "uddele",
+        "senses": [
+          "fordele blandt flere personer"
+        ],
+        "cite": [
+          "Foreløbig er der uddelt 170.000 gasmasker til områdets 1,7 millioner palæstinensere"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=uddele"
+      }
     },
     "at_fordele": {
       "word": "at fordele",
@@ -388,7 +564,23 @@
       "due": "2026-10-27",
       "lapses": 0,
       "history": [],
-      "priority": 2
+      "priority": 2,
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "fordele",
+        "senses": [
+          "dele en helhed i flere enheder af samme eller forskellig størrelse og give eller sende dem videre til flere forskellige modtagere",
+          "dele i forskellige enheder, grupper eller kategorier"
+        ],
+        "cite": [
+          "Fortjenesten fordeles procentvist i forhold til anpartshavernes indskud",
+          "Jesper Klein ledte og fordelte arbejdet med at skænke kaffe",
+          "Kurset er på 12 timer, der er fordelt på 3 eller 4 dage",
+          "Af tandlæger skal der for fremtiden uddannes 100, fordelt med 60 i København og 40 i Århus"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=fordele"
+      }
     },
     "et_udsagn": {
       "word": "et udsagn",
@@ -426,7 +618,19 @@
       "due": "2026-10-27",
       "lapses": 0,
       "history": [],
-      "priority": 2
+      "priority": 2,
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv",
+        "head": "overensstemmelse",
+        "senses": [
+          "det at noget stemmer med, passer til eller svarer til noget andet"
+        ],
+        "cite": [
+          "Kirkeudvalget fører tilsyn med .. at der er rimelig overensstemmelse imellem regnskaberne og budgetterne"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=overensstemmelse"
+      }
     },
     "at_give_udtryk_for": {
       "word": "at give udtryk for",
@@ -439,7 +643,19 @@
       "due": "2026-10-27",
       "lapses": 0,
       "history": [],
-      "priority": 2
+      "priority": 2,
+      "dict": {
+        "source": "DDO",
+        "pos": "",
+        "head": "give udtryk for",
+        "senses": [
+          "meddele sig til andre gennem sprog eller handlinger"
+        ],
+        "cite": [
+          "Hvad hun inderst inde følte, gav hun aldrig udtryk for"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=give%20udtryk%20for"
+      }
     },
     "at_afgøre": {
       "word": "at afgøre",
@@ -855,7 +1071,23 @@
       "lapses": 0,
       "history": [],
       "priority": 1,
-      "note": "ADV — forkortes bl.a."
+      "note": "ADV — forkortes bl.a.",
+      "dict": {
+        "source": "DDO",
+        "pos": "præposition",
+        "head": "blandt",
+        "senses": [
+          "bruges ved angivelse af eksempel",
+          "inden for gruppen eller mængden af"
+        ],
+        "cite": [
+          "Mange konger har også boet her, blandt andre Kong Hans, Kong Knud og Christoffer af Bayern",
+          "Odin var blandt meget andet runernes og magiens herre",
+          "Maja Riis blev udvalgt blandt 100 håbefulde piger",
+          "Han var den største og stærkeste blandt ridderne"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=blandt"
+      }
     },
     "fordi": {
       "word": "fordi",
@@ -1121,7 +1353,19 @@
       "due": "2026-10-27",
       "lapses": 0,
       "history": [],
-      "priority": 3
+      "priority": 3,
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "overraske",
+        "senses": [
+          "hensætte i en tilstand af mildt chok ved at gøre eller sige noget helt uventet; overvælde ved sin pludselighed eller uventethed"
+        ],
+        "cite": [
+          "Gud, hvor du overrasker mig. Jeg troede, du var sådan en bornert fyr"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=overraske"
+      }
     },
     "logisk": {
       "word": "logisk",
@@ -1160,7 +1404,19 @@
       "due": "2026-10-27",
       "lapses": 0,
       "history": [],
-      "priority": 3
+      "priority": 3,
+      "dict": {
+        "source": "DDO",
+        "pos": "adjektiv",
+        "head": "forventelig",
+        "senses": [
+          "som kan ventes; naturlig og ikke overraskende"
+        ],
+        "cite": [
+          "De triste følelser .. er en rimelig og forventelig reaktion på så mange år med (for) stor arbejdsaktivitet"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=forventelig"
+      }
     },
     "nødvendigt": {
       "word": "nødvendigt",
@@ -1173,7 +1429,20 @@
       "due": "2026-10-27",
       "lapses": 0,
       "history": [],
-      "priority": 3
+      "priority": 3,
+      "dict": {
+        "source": "DDO",
+        "pos": "adjektiv",
+        "head": "nødvendig",
+        "senses": [
+          "som der absolut er behov for; som er en uomgængelig betingelse eller forudsætning"
+        ],
+        "cite": [
+          "For at opdyrke jord til landbrug, anlægge plantager og udvinde mineraler var det nødvendigt at fjerne skoven",
+          "Jeg går lige ind og pakker det nødvendigste"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=n%C3%B8dvendig"
+      }
     },
     "hensigtsmæssig": {
       "word": "hensigtsmæssig",
@@ -1186,7 +1455,20 @@
       "due": "2026-10-27",
       "lapses": 0,
       "history": [],
-      "priority": 3
+      "priority": 3,
+      "dict": {
+        "source": "DDO",
+        "pos": "adjektiv",
+        "head": "hensigtsmæssig",
+        "senses": [
+          "som er i overensstemmelse med et (ikke nærmere defineret) mål; som er rigtig (i en bestemt situation eller sammenhæng)"
+        ],
+        "cite": [
+          "Kirkeudvalget fører tilsyn med .. at menighedsrådet og dets udvalg disponerer på en hensigtsmæssig og forsvarlig måde",
+          "Ulykker på tæer, fødder og ben kunne måske have været undgået ved brug af hensigtsmæssigt fodværn, støvler og bukser"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=hensigtsm%C3%A6ssig"
+      }
     },
     "tvivlsomt": {
       "word": "tvivlsomt",
@@ -1199,7 +1481,21 @@
       "due": "2026-10-27",
       "lapses": 0,
       "history": [],
-      "priority": 3
+      "priority": 3,
+      "dict": {
+        "source": "DDO",
+        "pos": "adjektiv",
+        "head": "tvivlsom",
+        "senses": [
+          "med en status, egenskab eller tilstand der kan diskuteres eller være tvivl eller usikkerhed om",
+          "af en mistænkelig, angribelig eller uigennemskuelig karakter"
+        ],
+        "cite": [
+          "Halmvarmeværker er samfundsøkonomisk set tvivlsomme ved lave oliepriser",
+          "Han .. begyndte at drikke og genoptog forbindelsen med de tvivlsomme venner i Hells Angels"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=tvivlsom"
+      }
     },
     "bæredygtig": {
       "word": "bæredygtig",
@@ -1212,7 +1508,20 @@
       "due": "2026-10-27",
       "lapses": 0,
       "history": [],
-      "priority": 3
+      "priority": 3,
+      "dict": {
+        "source": "DDO",
+        "pos": "adjektiv",
+        "head": "bæredygtig",
+        "senses": [
+          "som giver et godt resultat der er i stand til at bestå over tid"
+        ],
+        "cite": [
+          "Min mands idé var bæredygtig, og da han var 24 år, havde han 70 mand i arbejde",
+          "En del gode ideer går altså tabt og bliver aldrig til økonomisk bæredygtige virksomheder"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=b%C3%A6redygtig"
+      }
     },
     "at_forhindre": {
       "word": "at forhindre",
@@ -1252,7 +1561,22 @@
       "due": "2026-10-27",
       "lapses": 0,
       "history": [],
-      "priority": 2
+      "priority": 2,
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "begrænse",
+        "senses": [
+          "fastsætte en øvre grænse for hvor stort noget må være, for at sikre at det ikke bliver større",
+          "reducere noget i omfang eller mængde, fx sådan at man kan holde det inden for bestemte, ønskelige grænser"
+        ],
+        "cite": [
+          "Udbygningen af atomkraft blev ved en folkeafstemning 1980 begrænset til 12 reaktorer de næste 25 år",
+          "Kina og Indien har radikalt sat ind på at begrænse børnetallet",
+          "Et af projektets mål er at begrænse affaldsmængden med 75 procent"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=begr%C3%A6nse"
+      }
     },
     "at_forebygge": {
       "word": "at forebygge",
@@ -1265,7 +1589,20 @@
       "due": "2026-10-27",
       "lapses": 0,
       "history": [],
-      "priority": 2
+      "priority": 2,
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "forebygge",
+        "senses": [
+          "(forsøge at) hindre noget uønsket, fx sygdom, i at opstå eller brede sig ved at træffe bestemte forholdsregler"
+        ],
+        "cite": [
+          "Politiet på Fyn vil hele december gennemføre flere færdselskontroller på Fyn, primært for at forebygge spritkørsel",
+          "Hvad kan man gøre for at forebygge vold?"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=forebygge"
+      }
     },
     "at_undgå": {
       "word": "at undgå",
@@ -1307,7 +1644,20 @@
       "lapses": 0,
       "history": [],
       "priority": 2,
-      "note": "≈ føre til, resultere i"
+      "note": "≈ føre til, resultere i",
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "medføre",
+        "senses": [
+          "have som følge; være årsag til"
+        ],
+        "cite": [
+          "et samleje kan medføre graviditet",
+          "Hans morgenjob har medført, at han udviser stor passivitet i timerne"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=medf%C3%B8re"
+      }
     },
     "at_føre_til": {
       "word": "at føre til",
@@ -1320,7 +1670,20 @@
       "due": "2026-10-27",
       "lapses": 0,
       "history": [],
-      "priority": 2
+      "priority": 2,
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "føre (til)",
+        "senses": [
+          "resultere i en bestemt tilstand eller situation; bevirke at noget bestemt sker"
+        ],
+        "cite": [
+          "Grundforskning førte til opdagelsen af elektromagnetismen som førte til det fjernsyn, hvorpå De ser dette program",
+          "Kompliceret lovgivning fører let med sig, at ikke blot befolkningen, men også vore politikere mister overblikket"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=f%C3%B8re"
+      }
     },
     "at_resultere_i": {
       "word": "at resultere i",
@@ -1333,7 +1696,19 @@
       "due": "2026-10-27",
       "lapses": 0,
       "history": [],
-      "priority": 2
+      "priority": 2,
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "resultere",
+        "senses": [
+          "have som resultat eller konsekvens"
+        ],
+        "cite": [
+          "Udvalgets arbejde resulterede i betænkning nr. 1043, 1985, om genteknologi og sikkerhed"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=resultere"
+      }
     },
     "at_betinge": {
       "word": "at betinge",
@@ -1346,7 +1721,22 @@
       "due": "2026-10-27",
       "lapses": 0,
       "history": [],
-      "priority": 2
+      "priority": 2,
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "betinge",
+        "senses": [
+          "udgøre en årsag eller forudsætning for; få til at afhænge af sig",
+          "behøve som forudsætning; stille som krav"
+        ],
+        "cite": [
+          "For de fleste muslimer er det Islam, der betinger deres identitet og loyalitet",
+          "Tilkendelse af højeste førtidspension er betinget af, at erhvervsevnen varigt er nedsat",
+          "lokalplanen betinger, at der langs områdets kajkant skal anlægges en offentligt tilgængelig promenade for fodgængere og cyklister"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=betinge"
+      }
     },
     "at_sikre": {
       "word": "at sikre",
@@ -1412,7 +1802,22 @@
       "due": "2026-10-27",
       "lapses": 0,
       "history": [],
-      "priority": 2
+      "priority": 2,
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "understrege",
+        "senses": [
+          "fremhæve, betone eller lægge vægt på",
+          "sætte en streg under et ord eller en sætning i en tekst, oftest for at fremhæve noget"
+        ],
+        "cite": [
+          "Statsministeren understregede kraftigt behovet for en supplerende arbejdsmarkedspension",
+          "Farverne understreger helhedsindtrykket af en utrolig stærk fremstilling af den umenneskelige lidelse, som døden på korset var",
+          "hun havde understreget med rødt, hvad hun syntes var mest vigtigt"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=understrege"
+      }
     },
     "at_kræve": {
       "word": "at kræve",
@@ -1458,7 +1863,20 @@
       "lapses": 0,
       "history": [],
       "priority": 2,
-      "note": "≈ fremkalde"
+      "note": "≈ fremkalde",
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "forårsage",
+        "senses": [
+          "være årsag til eller skyld i at noget sker, eller at en anden tilstand indtræder, ofte noget ubehageligt"
+        ],
+        "cite": [
+          "Det voldsomme tordenvejr i går forårsagede flere mindre strømafbrydelser",
+          "De miljømæssige ulemper forårsaget af landbrugsdrift skal begrænses til det mindst mulige"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=for%C3%A5rsage"
+      }
     },
     "at_fremkalde": {
       "word": "at fremkalde",
@@ -1471,7 +1889,20 @@
       "due": "2026-10-27",
       "lapses": 0,
       "history": [],
-      "priority": 2
+      "priority": 2,
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "fremkalde",
+        "senses": [
+          "få til at opstå"
+        ],
+        "cite": [
+          "Provokeret abort vil sige en abort, som fremkaldes ved et indgreb i livmoren",
+          "måske vil bamsen fremkalde minder og associationer"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=fremkalde"
+      }
     },
     "at_skyldes": {
       "word": "at skyldes",
@@ -1485,7 +1916,20 @@
       "lapses": 0,
       "history": [],
       "priority": 1,
-      "note": "verbum: X skyldes Y"
+      "note": "verbum: X skyldes Y",
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "skyldes (under skylde)",
+        "senses": [
+          "have sin årsag i; kunne tilskrives"
+        ],
+        "cite": [
+          "Fodvorter skyldes en virusinfektion og kan derfor smitte",
+          "den samfundsmæssige uro skyldtes kongemagtens forsøg på at øge sin magt"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=skyldes"
+      }
     },
     "at_afvise": {
       "word": "at afvise",
@@ -1527,7 +1971,20 @@
       "due": "2026-10-27",
       "lapses": 0,
       "history": [],
-      "priority": 2
+      "priority": 2,
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "indrømme",
+        "senses": [
+          "indse og erklære at noget forholder sig på en bestemt måde, ofte en anden måde end hvad man tidligere har ment, troet eller givet udtryk for"
+        ],
+        "cite": [
+          "hun indrømmer, at hun tit savner Australien",
+          "lidt har du nu altså skræmt os alligevel, Per, det må jeg indrømme"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=indr%C3%B8mme"
+      }
     },
     "et_formål_med": {
       "word": "et formål med",
@@ -1570,7 +2027,20 @@
       "due": "2026-10-27",
       "lapses": 0,
       "history": [],
-      "priority": 2
+      "priority": 2,
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv",
+        "head": "problem",
+        "senses": [
+          "væsentligt, uafklaret anliggende som man bør forholde sig til ved hjælp af analyse eller tankevirksomhed"
+        ],
+        "cite": [
+          "Politikerne er verdensmestre i at forflygtige problemerne",
+          "Indenrigsministeren har .. planer om at nedsætte et etisk råd til at beskæftige sig med de problemer, den genetiske og biotekniske forsknings resultater rejser"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=problem"
+      }
     },
     "effekten_af": {
       "word": "effekten af",
@@ -1583,7 +2053,19 @@
       "due": "2026-10-27",
       "lapses": 0,
       "history": [],
-      "priority": 2
+      "priority": 2,
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv",
+        "head": "effekt",
+        "senses": [
+          "virkning eller resultat der følger af en handling, begivenhed eller påvirkning"
+        ],
+        "cite": [
+          "Desværre har offentlige besparelser en meget ringe effekt på betalingsbalancen, fordi de ikke påvirker importen nævneværdigt"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=effekt"
+      }
     },
     "indflydelse_på": {
       "word": "indflydelse på",
@@ -1658,7 +2140,20 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "konjunktion",
+        "head": "eftersom",
+        "senses": [
+          "bruges som indledning til en ledsætning der udtrykker årsag, især en årsag der anføres som logisk eller naturlig begrundelse"
+        ],
+        "cite": [
+          "Eftersom han ikke var i stuen, gik hun ud fra, at han måtte være på toilettet",
+          "Han er vel blevet forelsket i en pige på Lolland, eftersom han vil derned og arbejde på en gård"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=eftersom"
+      }
     },
     "idet": {
       "word": "idet",
@@ -1763,7 +2258,19 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv",
+        "head": "følge",
+        "senses": [
+          "logisk eller naturlig virkning eller resultat af noget forudgående"
+        ],
+        "cite": [
+          "Sidste år døde 188 narkomaner som følge af overdosis"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=f%C3%B8lge"
+      }
     },
     "derved": {
       "word": "derved",
@@ -1777,7 +2284,21 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "adverbium",
+        "head": "derved",
+        "senses": [
+          "i kraft af, som følge af eller ved hjælp af det netop nævnte",
+          "på den måde; i den henseende"
+        ],
+        "cite": [
+          "P-piller indeholder hormoner, som er i stand til at hindre ægløsning og derved hindre graviditet",
+          "Østfløjens kælder er interessant derved, at den har bevaret sine oprindelige hvælvinger"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=derved"
+      }
     },
     "af_den_grund": {
       "word": "af den grund",
@@ -1791,7 +2312,20 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv",
+        "head": "grund",
+        "senses": [
+          "grundlag som forårsager, motiverer eller forklarer et forhold, en opfattelse, en handling el.lign."
+        ],
+        "cite": [
+          "Hvad er grunden til at du har valgt tysk som fag?",
+          "Jeg holder på at man altid skal sige sandheden, for det første af moralske grunde, for det andet af praktiske grunde"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=grund"
+      }
     },
     "så": {
       "word": "så",
@@ -1834,7 +2368,19 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "betyde",
+        "senses": [
+          "svare til eller være ensbetydende med"
+        ],
+        "cite": [
+          "Fornuftig information betyder større viden omkring problemerne og dermed større tryghed"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=betyde"
+      }
     },
     "endvidere": {
       "word": "endvidere",
@@ -1899,7 +2445,19 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "adverbium",
+        "head": "tilmed",
+        "senses": [
+          "som noget yderligere ud over det netop omtalte"
+        ],
+        "cite": [
+          "Det er sjovt og afslappende at køre med tog, og så er det tilmed billigt i Storbritannien"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=tilmed"
+      }
     },
     "samt": {
       "word": "samt",
@@ -1940,7 +2498,22 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "adverbium",
+        "head": "kun",
+        "senses": [
+          "udelukkende; som det eneste",
+          "ikke andet end"
+        ],
+        "cite": [
+          "Kun fordi en læge lynhurtigt blev tilkaldt og gav den bevidstløse 60-årige en modgift, blev hans liv reddet",
+          "Han ville intet spise – kun drikke lidt sodavand",
+          "Kun fantasien sætter grænser for hvad man kan foretage sig på Mallorca"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=kun"
+      }
     },
     "både_og": {
       "word": "både … og",
@@ -2068,7 +2641,20 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "sammenligne",
+        "senses": [
+          "(prøve at) finde ligheder og forskelle mellem to eller flere genstande, forhold eller personer"
+        ],
+        "cite": [
+          "Dansk erhvervsliv bør ikke pålægges forhindringer, der stiller dem ringere end virksomheder i de lande, vi sammenligner os med",
+          "København er en lilleputstad sammenlignet med Hamborg, Berlin og London"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=sammenligne"
+      }
     },
     "heller_ikke": {
       "word": "heller ikke",
@@ -2082,7 +2668,20 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "adverbium",
+        "head": "heller",
+        "senses": [
+          "bruges for at udtrykke at noget lige så vel som noget andet ikke er tilfældet"
+        ],
+        "cite": [
+          "Åke var ingen digter og heller ikke nogen politiker, men måske en brobygger",
+          "der er faktisk ingen forbehold og ingen betingelser heller"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=heller"
+      }
     },
     "hverken_eller": {
       "word": "hverken … eller",
@@ -2305,7 +2904,19 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "",
+        "head": "på den ene side .. på den anden side",
+        "senses": [
+          "bruges for at fremhæve to størrelser eller forhold der hører sammen som modsætninger"
+        ],
+        "cite": [
+          "På den ene side burde vi gå i seng. På den anden side kunne vi jo også lige se lidt af den videofilm, som vi har optaget"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=p%C3%A5%20den%20ene%20side"
+      }
     },
     "skønt": {
       "word": "skønt",
@@ -2319,7 +2930,20 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "konjunktion",
+        "head": "skønt",
+        "senses": [
+          "bruges indrømmende: til trods for den kendsgerning at"
+        ],
+        "cite": [
+          "Vinduerne er hermetisk tillukkede skønt det er dejligt forår udenfor",
+          "Skønt teolog af uddannelse tilsluttede han sig tidligt det liberale borgerskabs filosofi"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=sk%C3%B8nt"
+      }
     },
     "ikke_desto_mindre": {
       "word": "ikke desto mindre",
@@ -2389,7 +3013,23 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "præposition",
+        "head": "trods / på trods af",
+        "senses": [
+          "bruges ved angivelse af et forhold eller en omstændighed der, modsat hvad man skulle vente, ikke har indflydelse på noget omtalt",
+          "i klar modstrid med"
+        ],
+        "cite": [
+          "Trods trætheden kan jeg ikke falde i søvn",
+          "Knud kan ikke lade være med at grine lidt, trods sin ulykke",
+          "der var mange fodgængere på færde på trods af vejret",
+          "På trods af at det kun var lokalbedøvelse, må jeg være døset lidt hen"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=trods"
+      }
     },
     "hvis": {
       "word": "hvis",
@@ -2436,7 +3076,20 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "konjunktion",
+        "head": "såfremt",
+        "senses": [
+          "under forudsætning af at; på den betingelse at"
+        ],
+        "cite": [
+          "Såfremt flere har indsendt gevinstbeviser samtidig, foretages der lodtrækning",
+          "Tilbudet gælder også Deres ægtefælle, såfremt Deres ægtefælle er \"senior\""
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=s%C3%A5fremt"
+      }
     },
     "forudsat_at": {
       "word": "forudsat at",
@@ -2450,7 +3103,20 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "konjunktion",
+        "head": "forudsat (at)",
+        "senses": [
+          "på betingelse af (at); under den forudsætning (at); under antagelse af (at)"
+        ],
+        "cite": [
+          "Du har fuld returret på dine film, forudsat at folien omkring kassetten ikke er brudt",
+          "forudsat alt vil gå efter planen, bliver næste opgave at sammensætte en ledelse"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=forudsat"
+      }
     },
     "medmindre": {
       "word": "medmindre",
@@ -2464,7 +3130,20 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "konjunktion",
+        "head": "medmindre",
+        "senses": [
+          "bortset fra det tilfælde hvor"
+        ],
+        "cite": [
+          "Fra årsskiftet må børn under tre år ikke sidde på forsædet af en bil, medmindre de er anbragt i en barnestol",
+          "Medmindre andet er aftalt, forbliver pantebrevet indestående i ejendommen"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=medmindre"
+      }
     },
     "for_at": {
       "word": "for at",
@@ -2536,7 +3215,20 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv",
+        "head": "med henblik på",
+        "senses": [
+          "med bestræbelserne eller opmærksomheden rettet (særligt/specielt) mod"
+        ],
+        "cite": [
+          "ministeren lovede at kontakte kommunen med henblik på at finde en løsning for Bagsværd Fort",
+          "Listen over de supplerende materialer, som findes bagest i hver bog, er udvalgt med henblik på de elever, som ønsker yderligere informationer"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=henblik"
+      }
     },
     "undtagen": {
       "word": "undtagen",
@@ -2550,7 +3242,22 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "præposition",
+        "head": "undtagen",
+        "senses": [
+          "med undtagelse af; bortset fra",
+          "bortset fra det tilfælde hvor"
+        ],
+        "cite": [
+          "Børneforestillingerne finder sted dagligt kl. 11 undtagen lørdage",
+          "Alle børnene fik erstatning efter ulykken undtagen Frans han fik en krans",
+          "Her bider sygdom ikke undtagen det er Vorherres vilje"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=undtagen"
+      }
     },
     "bortset_fra": {
       "word": "bortset fra",
@@ -2564,7 +3271,20 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "",
+        "head": "bortset fra",
+        "senses": [
+          "idet man ikke tager i betragtning"
+        ],
+        "cite": [
+          "Tre enkle og nemme toilettasker. Bortset fra størrelsen er taskerne fuldstændig ens",
+          "Det kan være svært at forstå, hvad der får folk til at købe en sådan vare – bortset altså fra prisen"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=bortset%20fra"
+      }
     },
     "frem_for": {
       "word": "frem for",
@@ -2606,7 +3326,20 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "adverbium",
+        "head": "snarere",
+        "senses": [
+          "bruges for at udtrykke at noget er mere sandsynligt eller rigtigt end noget andet"
+        ],
+        "cite": [
+          "Hun kneb munden sammen og forsøgte at se tapper ud, men hun lignede snarere en, som kunne begynde at græde når som helst",
+          "Hans styre var ikke demokratisk. Der var snarere tale om et militært diktatur"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=snarere"
+      }
     },
     "for_eksempel_fx": {
       "word": "for eksempel (fx)",
@@ -2703,7 +3436,20 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "adverbium",
+        "head": "navnlig",
+        "senses": [
+          "bruges for at fremhæve det som har særlig betydning, eller det som udsagnet særlig gælder"
+        ],
+        "cite": [
+          "Klokkefrøen forekommer navnlig i kystnære sumpe og vandhuller",
+          "han var ikke så forfærdelig sikker på sig selv. Navnlig var han usikker, når han skulle tale"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=navnlig"
+      }
     },
     "det_vil_sige_dvs": {
       "word": "det vil sige (dvs.)",
@@ -2775,7 +3521,19 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "adverbium",
+        "head": "herunder",
+        "senses": [
+          "heri indbefattet"
+        ],
+        "cite": [
+          "En del plastictyper er farlige, herunder skumplast"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=herunder"
+      }
     },
     "heldigvis": {
       "word": "heldigvis",
@@ -2969,7 +3727,20 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "konjunktion",
+        "head": "efter (konjunktion)",
+        "senses": [
+          "senere end det tidspunkt da"
+        ],
+        "cite": [
+          "efter at ægget har sat sig fast, begynder dannelsen af moderkagen",
+          "jeg har boet der til kort tid efter jeg fyldte atten år"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=efter"
+      }
     },
     "efterhånden_som": {
       "word": "efterhånden som",
@@ -2983,7 +3754,20 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "adverbium",
+        "head": "efterhånden",
+        "senses": [
+          "med trinvis eller gradvis udvikling over et vist stykke tid"
+        ],
+        "cite": [
+          "Min bror har efterhånden fået lige så mange børn, som vi selv var derhjemme",
+          "Efterhånden er der opbygget megen viden om børns udvikling"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=efterh%C3%A5nden"
+      }
     },
     "siden": {
       "word": "siden",
@@ -3026,7 +3810,20 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "adverbium",
+        "head": "derefter",
+        "senses": [
+          "umiddelbart efter den netop nævnte begivenhed"
+        ],
+        "cite": [
+          "Hun blev først ligbleg, derefter meget rød i ansigtet",
+          "I 1973 udkom en ucensureret udgave i Vesten, og først derefter blev romanen trykt i sin helhed i Sovjet"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=derefter"
+      }
     },
     "herefter": {
       "word": "herefter",
@@ -3131,7 +3928,19 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "",
+        "head": "(alt) i alt",
+        "senses": [
+          "som det generelle indtryk efter en samlet vurdering af de relevante forhold"
+        ],
+        "cite": [
+          "Alt i alt er Lise meget ligetil og i besiddelse af en utrolig tilpasningsevne"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=alt%20i%20alt"
+      }
     },
     "samlet_set": {
       "word": "samlet set",
@@ -3188,7 +3997,20 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "konkludere",
+        "senses": [
+          "danne eller fremføre en konklusion"
+        ],
+        "cite": [
+          "Psykiateren konkluderede, at alkoholmisbruget både skyldtes de beskrevne miljøfaktorer og en svag karakter",
+          "Masser af undersøgelser har konkluderet, at film-vold fremkalder virkelig vold"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=konkludere"
+      }
     },
     "at_påpege": {
       "word": "at påpege",
@@ -4010,7 +4832,20 @@
       "reps": 0,
       "due": "2026-10-27",
       "lapses": 0,
-      "history": []
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "adjektiv",
+        "head": "sjælden",
+        "senses": [
+          "som forekommer forholdsvis få gange inden for en periode"
+        ],
+        "cite": [
+          "Kender børn overhovedet hestevogne i vore dage? De er i hvert tilfælde et sjældent syn i vores gader",
+          "Vi støder sjældnere og sjældnere på folk, der kører promille- og spirituskørsel op til jul"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=sj%C3%A6lden"
+      }
     }
   }
 }
