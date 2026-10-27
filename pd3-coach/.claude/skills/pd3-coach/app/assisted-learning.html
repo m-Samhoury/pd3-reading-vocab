@@ -1,0 +1,1397 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guidet læring · PD3 ordforråd</title>
+<meta name="description" content="Guided teach → test → spaced review for the PD3 coach's vocabulary deck, connectors first.">
+<style>
+/* Design tokens and shared components follow pd3-reading-vocab's src/templates/common.css, so this page
+   looks like the rest of that site (white sheets, soft grey page, one orange accent; light/dark by system). */
+:root {
+  --paper: #f7f7f9; --sheet: #ffffff; --ink: #15161b; --soft: #5d606b; --faint: #8b8e99;
+  --rule: #ebebef; --rule-strong: #dcdce2; --hl: #ffd9c7; --hl-ink: #15161b;
+  --accent: #ec6a3c; --accent-ink: #ffffff; --accent-soft: #fff1ea; --accent-text: #c4481c;
+  --blue: #3b7bf6; --blue-soft: #eaf1ff; --blue-text: #2457c5;
+  --violet: #7b5cf0; --violet-soft: #f0ecff; --violet-text: #5a3fc9;
+  --link: #2457c5; --ok: #1f8a4c; --ok-bg: #e6f6ec; --bad: #c8412c; --bad-bg: #fdeceb;
+  --warn: #9a6400; --warn-bg: #fff5dc; --focus: #ec6a3c;
+  --shadow: 0 1px 2px rgba(20, 22, 30, .04), 0 6px 20px rgba(20, 22, 30, .05);
+  --shadow-lg: 0 2px 4px rgba(20, 22, 30, .04), 0 18px 40px rgba(20, 22, 30, .08);
+  --head: "Inter", "SF Pro Display", -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --body: "Inter", "SF Pro Text", -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --r: 16px; --gutter: 16px;
+  /* learning states in the group map */
+  --s-new: var(--rule-strong); --s-learn: var(--accent); --s-known: var(--blue); --s-master: var(--ok);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0f1014; --sheet: #17181e; --ink: #f1f1f4; --soft: #a9abb6; --faint: #7f828e;
+    --rule: #26272f; --rule-strong: #34353f; --hl: #6a3420; --hl-ink: #fff3ec;
+    --accent: #ff7b4d; --accent-ink: #1a0c05; --accent-soft: #2d1a12; --accent-text: #ff9b75;
+    --blue: #5b93ff; --blue-soft: #16223a; --blue-text: #93b6ff;
+    --violet: #9b83ff; --violet-soft: #221c3a; --violet-text: #b9a8ff;
+    --link: #93b6ff; --ok: #6fd59a; --ok-bg: #14291d; --bad: #ff8b78; --bad-bg: #36191a;
+    --warn: #f2c15a; --warn-bg: #33280f; --focus: #ff7b4d;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3); --shadow-lg: 0 10px 30px rgba(0, 0, 0, .4);
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.55 var(--body); -webkit-font-smoothing: antialiased; }
+h1, h2, h3 { font-family: var(--head); line-height: 1.2; margin: 0; letter-spacing: -.02em; font-weight: 700; }
+a { color: var(--link); text-underline-offset: 3px; }
+button, input { font: inherit; color: inherit; }
+:focus-visible { outline: 3px solid color-mix(in srgb, var(--focus) 60%, transparent); outline-offset: 2px; border-radius: 10px; }
+[hidden] { display: none !important; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-left: var(--gutter); padding-right: var(--gutter); }
+.narrow { max-width: 780px; margin: 0 auto; }
+
+/* top bar: logo · links · help · language (as on the other pages) */
+.topbar { background: var(--sheet); border-bottom: 1px solid var(--rule); }
+.topbar-in { display: flex; flex-wrap: wrap; align-items: center; gap: 0 24px; min-height: 64px; }
+.brand { order: 0; display: inline-flex; align-items: center; gap: 10px; min-height: 56px; text-decoration: none; color: var(--ink); font-weight: 700; letter-spacing: -.01em; }
+.logo { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 9px; background: var(--accent-soft);
+  color: var(--accent); font-weight: 800; font-size: .95rem; letter-spacing: -.04em; }
+.nav { display: flex; align-items: center; gap: 2px 4px; flex: 1 1 auto; flex-wrap: wrap; order: 1; }
+.nav a { display: inline-flex; align-items: center; min-height: 40px; padding: 0 12px; border-radius: 10px; text-decoration: none;
+  color: var(--soft); font-weight: 500; font-size: .95rem; }
+.nav a:hover { color: var(--ink); background: var(--paper); }
+.nav a[aria-current="page"] { color: var(--ink); font-weight: 600; background: var(--paper); }
+.iconbtn { order: 2; margin-left: auto; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%;
+  border: 1px solid var(--rule-strong); background: var(--sheet); color: var(--soft); cursor: pointer; }
+.iconbtn:hover { color: var(--ink); border-color: var(--ink); }
+.langbtn { order: 2; margin-left: 8px; min-height: 38px; padding: 6px 16px; border-radius: 10px; border: 1px solid var(--rule-strong);
+  background: var(--sheet); color: var(--ink); font-weight: 600; font-size: .9rem; cursor: pointer; }
+.langbtn:hover { border-color: var(--ink); }
+@media (max-width: 640px) {
+  .topbar-in { padding-bottom: 8px; }
+  .nav { order: 3; flex-basis: 100%; margin-left: -10px; }
+  .nav a { padding: 0 10px; }
+}
+dialog.info { border: 0; border-radius: 18px; padding: 0; width: min(580px, calc(100vw - 32px)); max-height: calc(100vh - 48px);
+  background: var(--sheet); color: var(--ink); box-shadow: var(--shadow-lg); overflow: auto; }
+dialog.info::backdrop { background: rgba(15, 16, 20, .45); }
+dialog.info .ib { padding: 14px 20px 22px; }
+dialog.info .ih { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+dialog.info .ih h2 { font-size: 1.3rem; }
+dialog.info h3 { font-size: 1rem; margin: 18px 0 6px; }
+dialog.info p { margin: 6px 0; color: var(--soft); font-size: .93rem; }
+dialog.explain { width: min(680px, calc(100vw - 32px)); }
+dialog.explain .ih { position: sticky; top: 0; background: var(--sheet); padding: 14px 0 10px; margin-top: -14px; border-bottom: 1px solid var(--rule); z-index: 1; }
+dialog.explain .ih .big { font-size: 1.8rem; }
+dialog.explain h3 .soft { font-weight: 400; font-size: .85rem; }
+dialog.explain .ex { display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+dialog.explain .ex > span:not(.tag) { flex: 1 1 240px; min-width: 0; }
+dialog.explain .tr { margin-left: auto; font-size: .8rem; white-space: nowrap; }
+dialog.explain blockquote { display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: baseline; }
+.trl { flex-basis: 100%; font-style: normal; font-size: .92rem; color: var(--soft); padding: 4px 0 2px 10px; border-left: 2px solid var(--blue); }
+.trl.err a { color: var(--accent-text); }
+.mates { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 8px; }
+.mate { text-align: left; font: inherit; color: inherit; cursor: pointer; background: var(--paper); border: 1px solid var(--rule); border-radius: 10px; padding: 8px 11px; }
+.mate:hover { border-color: var(--accent); }
+.mate b { display: block; } .mate span { font-size: .85rem; color: var(--soft); }
+.mate.same { border-color: var(--blue); }
+button.word { cursor: pointer; font: inherit; font-size: .9rem; color: inherit; }
+button.word:hover { border-color: var(--accent); }
+.morebtn { margin-left: auto; }
+dl.keylist { display: grid; grid-template-columns: max-content 1fr; gap: 6px 14px; margin: 0; font-size: .9rem; color: var(--soft); }
+dl.keylist dt { font-weight: 600; color: var(--ink); }
+dl.keylist dd { margin: 0; }
+
+/* page heading */
+.top { padding-top: 44px; padding-bottom: 8px; }
+.top h1 { font-size: clamp(1.9rem, 6vw, 2.6rem); font-weight: 700; letter-spacing: -.03em; }
+.top h1 .light { font-weight: 400; display: block; }
+.top > p { margin: 10px 0 0; color: var(--soft); max-width: 62ch; }
+.chip { display: inline-flex; align-items: center; gap: 8px; padding: 4px 12px 4px 4px; border-radius: 999px; background: var(--sheet);
+  border: 1px solid var(--rule); box-shadow: var(--shadow); font-size: .85rem; font-weight: 500; color: var(--ink); margin-bottom: 16px; }
+.chip b { padding: 2px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-text); font-weight: 600; font-size: .8rem; }
+.finder { margin-top: 22px; }
+.finder input { width: 100%; font: inherit; font-size: 1.25rem; padding: 14px 16px; border-radius: 14px; border: 1.5px solid var(--rule-strong); background: var(--sheet); color: var(--ink); }
+.finder input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.hits { display: grid; gap: 12px; margin-top: 18px; }
+.hit { padding: 16px 18px; }
+.hit .head .big { font-size: 1.6rem; }
+.hit .via { font-size: .8rem; color: var(--faint); }
+.hit .cats { display: grid; gap: 8px; margin-top: 12px; }
+.hit .cat { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: .92rem; }
+.hit .cat .src { min-width: 120px; color: var(--soft); font-size: .82rem; }
+.hit .cat .gname { font-weight: 700; font-size: 1.05rem; }
+.hit .cat .gname small { font-weight: 400; color: var(--soft); font-size: .85rem; }
+.hit .row { margin-top: 12px; }
+.picker { margin-top: 22px; padding: 14px 16px 16px; }
+.picker .ph { display: flex; align-items: baseline; gap: 6px 12px; flex-wrap: wrap; }
+.picker .ph b { font-size: .95rem; }
+.picker .tier { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 10px; }
+.picker .tier .badge { margin-right: 4px; }
+.pchip { display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--rule-strong);
+  background: var(--sheet); color: var(--ink); font: inherit; font-size: .88rem; cursor: pointer; transition: border-color .15s, background .15s; }
+.pchip:hover { border-color: var(--accent); }
+.pchip[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent); color: var(--accent-text); font-weight: 600; }
+.pchip[aria-pressed="true"]::before { content: "✓"; }
+.pchip .n { font-size: .75rem; color: var(--faint); font-weight: 400; }
+.pchip .d { min-width: 18px; padding: 0 5px; border-radius: 999px; background: var(--accent); color: var(--accent-ink); font-size: .7rem; font-weight: 700; text-align: center; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.section { margin-top: 40px; }
+.section > h2 { font-size: 1.35rem; margin-bottom: 14px; }
+.soft { color: var(--soft); }
+.small { font-size: .88rem; }
+.lbl { display: block; font-size: .72rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--faint); margin-bottom: 6px; }
+footer.foot { padding-top: 40px; padding-bottom: 48px; color: var(--faint); font-size: .85rem; }
+
+/* controls */
+.btn {
+  min-height: 44px; padding: 9px 18px; border-radius: 10px; border: 1px solid var(--rule-strong);
+  background: var(--sheet); color: var(--ink); cursor: pointer; font-weight: 600; font-size: .95rem;
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none;
+  transition: border-color .15s, background .15s, box-shadow .15s;
+}
+.btn:hover { border-color: var(--ink); }
+.btn.solid { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); box-shadow: 0 6px 16px color-mix(in srgb, var(--accent) 28%, transparent); }
+.btn.solid:hover { background: color-mix(in srgb, var(--accent) 88%, black); border-color: transparent; }
+.btn.quiet { border-color: transparent; background: transparent; color: var(--soft); }
+.linkbtn { border: 0; background: none; padding: 0; font: inherit; color: var(--accent-text); text-decoration: underline; cursor: pointer; }
+.btn.quiet:hover { color: var(--ink); background: var(--sheet); border-color: var(--rule); }
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+.btn.solid:disabled:hover { background: var(--accent); }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.spacer { flex: 1; }
+.badge { display: inline-flex; align-items: center; min-height: 22px; padding: 1px 9px; border-radius: 999px; font-size: .75rem; font-weight: 600; white-space: nowrap; }
+.badge.t1 { background: var(--accent-soft); color: var(--accent-text); }
+.badge.t2 { background: var(--blue-soft); color: var(--blue-text); }
+.badge.t3 { background: var(--violet-soft); color: var(--violet-text); }
+.tag { display: inline-flex; align-items: center; min-height: 22px; padding: 0 7px; border-radius: 6px; border: 1px solid var(--rule-strong);
+  font-size: .72rem; font-weight: 600; color: var(--soft); letter-spacing: .02em; }
+.sheet { background: var(--sheet); border: 1px solid var(--rule); border-radius: var(--r); box-shadow: var(--shadow); }
+.bar { height: 8px; background: var(--rule); border-radius: 999px; overflow: hidden; display: flex; }
+.bar > span { display: block; height: 100%; transition: width .25s; }
+mark.hl { background: var(--hl); color: var(--hl-ink); padding: 0 3px; border-radius: 4px; font-style: normal; font-weight: 600; }
+.err { background: var(--bad-bg); color: var(--bad); border-radius: 12px; padding: 14px 16px; }
+code { background: var(--paper); border: 1px solid var(--rule); border-radius: 6px; padding: 1px 6px; font-size: .88em; }
+
+/* progress band (as on the overview page) */
+.band { background: var(--blue); color: #fff; border-radius: 20px; padding: 22px; box-shadow: 0 14px 30px color-mix(in srgb, var(--blue) 25%, transparent); }
+@media (prefers-color-scheme: dark) { .band { background: #2a4fa8; } }
+.prog { display: grid; gap: 18px 28px; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+.prog .m .lbl { font-size: .82rem; font-weight: 600; opacity: .85; color: inherit; letter-spacing: 0; text-transform: none; margin: 0; }
+.prog .m b { display: block; font-size: 1.9rem; font-weight: 700; letter-spacing: -.02em; line-height: 1.15; }
+.prog .m .s { font-size: .85rem; opacity: .85; }
+.prog .bar { margin-top: 8px; background: rgba(255,255,255,.25); }
+.prog .bar > span { background: #fff; }
+
+/* group map */
+.tierlabel { display: flex; align-items: center; gap: 8px; margin: 22px 0 10px; font-size: .9rem; font-weight: 600; color: var(--soft); }
+.legend { display: flex; gap: 6px 16px; flex-wrap: wrap; font-size: .85rem; color: var(--soft); }
+.legend i, .word i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; vertical-align: -1px; }
+.groups { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+.group { text-align: left; padding: 14px 16px; cursor: pointer; color: inherit; transition: box-shadow .15s, transform .15s, border-color .15s; }
+.group:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+.group.open { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft), var(--shadow); }
+.group .gn { font-weight: 600; }
+.group .ge { font-size: .85rem; color: var(--soft); }
+.group .due { font-size: .75rem; font-weight: 600; color: var(--accent-text); background: var(--accent-soft); border-radius: 999px; padding: 1px 8px; }
+.group .bar { margin-top: 10px; background: var(--s-new); }
+.detail { grid-column: 1 / -1; padding: 16px; }
+.words { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 14px; }
+.word { font-size: .9rem; background: var(--paper); border: 1px solid var(--rule); border-radius: 8px; padding: 3px 9px; }
+
+/* session */
+.counter { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 2px 12px; color: var(--soft); font-size: .9rem; margin: 22px 0 8px; }
+.sessionbar { background: var(--rule); }
+.sessionbar > span { background: var(--accent); border-radius: 999px; }
+.q { padding: 22px 20px; margin-top: 14px; box-shadow: var(--shadow-lg); border-radius: 20px; }
+.kind { font-size: .72rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--faint); }
+.prompt { margin: 6px 0 14px; color: var(--soft); }
+.big { font-family: var(--head); font-size: clamp(2rem, 7vw, 2.6rem); font-weight: 700; letter-spacing: -.03em; line-height: 1.1; }
+.meaning { font-size: 1.2rem; font-weight: 600; margin-top: 6px; }
+.sentence { font-size: 1.15rem; font-weight: 500; line-height: 1.55; }
+.gap { display: inline-block; min-width: 4.5em; border-bottom: 2.5px solid var(--accent); margin: 0 2px; }
+.opts { display: grid; gap: 8px; margin-top: 16px; }
+.opt { justify-content: flex-start; text-align: left; min-height: 62px; font-size: 1.05rem; font-weight: 500; border-radius: 14px; padding: 12px 16px; }
+.opt:hover:not(:disabled) { border-color: var(--accent); background: var(--accent-soft); }
+.opt .k { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 8px; background: var(--paper); color: var(--soft); font-weight: 700; font-size: .85rem; flex: 0 0 auto; }
+.opt.sel { border-color: var(--accent); background: var(--accent-soft); }
+.opt.right { background: var(--ok-bg); border-color: var(--ok); }
+.opt.wrong { background: var(--bad-bg); border-color: var(--bad); }
+.opt:disabled { cursor: default; opacity: 1; }
+input.answer { width: 100%; min-height: 52px; font-size: 1.15rem; padding: 10px 14px; border: 1px solid var(--rule-strong); border-radius: 12px; background: var(--sheet); margin-top: 14px; }
+input.answer:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); outline: none; }
+.letters { display: flex; gap: 6px; margin-top: 8px; align-items: center; }
+.letters button { min-width: 40px; min-height: 36px; border-radius: 9px; border: 1px solid var(--rule-strong); background: var(--sheet); cursor: pointer; font-size: 1rem; }
+.letters button:hover { border-color: var(--ink); }
+.tiles, .built { display: flex; flex-wrap: wrap; gap: 8px; }
+.built { min-height: 58px; border: 1.5px dashed var(--rule-strong); border-radius: 14px; padding: 10px; margin: 14px 0 12px; align-content: flex-start; background: var(--paper); }
+.tile { border: 1px solid var(--rule-strong); background: var(--sheet); border-radius: 10px; padding: 7px 13px; font-size: 1.05rem; font-weight: 500; cursor: pointer; }
+.tile:hover:not(:disabled) { border-color: var(--accent); }
+.tile.fixed { background: var(--accent-soft); border-color: transparent; color: var(--accent-text); cursor: default; font-weight: 600; }
+.tile.used { visibility: hidden; }
+.shake { animation: shake .35s; }
+@keyframes shake { 25% { transform: translateX(-6px); } 75% { transform: translateX(6px); } }
+.feedback { margin-top: 14px; padding: 12px 14px; border-radius: 12px; }
+.feedback.ok { background: var(--ok-bg); } .feedback.bad { background: var(--bad-bg); }
+.feedback h3 { font-size: 1rem; margin-bottom: 4px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.feedback .why { margin-top: 4px; }
+.sev { font-size: .72rem; font-weight: 700; padding: 1px 8px; border-radius: 999px; }
+.sev.critical { background: var(--bad); color: var(--sheet); }
+.sev.moderate { background: var(--warn-bg); color: var(--warn); }
+.sev.minor { background: var(--sheet); color: var(--ok); }
+.next { margin-top: 16px; }
+
+/* teach card */
+.head { display: flex; align-items: center; gap: 8px 10px; flex-wrap: wrap; }
+.block { margin-top: 18px; }
+.eg { padding: 12px 14px; border-radius: 12px; background: var(--paper); border-left: 3px solid var(--accent); }
+.eg .sentence { font-style: italic; font-size: 1.05rem; }
+.note { padding: 12px 14px; background: var(--blue-soft); border-radius: 12px; font-size: .94rem; display: grid; gap: 4px; margin-top: 8px; }
+.note b.t { color: var(--blue-text); }
+.note .demo { font-style: italic; }
+.ex { margin: 8px 0; font-size: 1rem; }
+.ex .tag { margin-right: 8px; }
+.ddo { padding: 14px 16px; border: 1px solid var(--rule-strong); border-radius: 12px; }
+.ddo blockquote { margin: 6px 0 0; padding-left: 10px; border-left: 2px solid var(--rule-strong); color: var(--soft); font-style: italic; font-size: .92rem; }
+.ddo .cite { margin-top: 8px; font-size: .8rem; color: var(--faint); }
+.en-def { font-size: .8rem; line-height: 1.4; color: var(--soft); margin: 1px 0 6px; }
+.sense { margin-top: 14px; }
+.sense:first-of-type { margin-top: 8px; }
+.sense .sh { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 8px; margin-bottom: 6px; }
+.sense .sh .num { display: inline-grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--accent-soft); color: var(--accent-text); font-weight: 700; font-size: .78rem; align-self: center; }
+.sense .sh b { font-size: 1.02rem; }
+.sense .eg { margin-bottom: 6px; }
+.sense .none { font-size: .85rem; color: var(--faint); font-style: italic; }
+.sensenote { margin-top: 12px; padding: 10px 14px; background: var(--blue-soft); border-radius: 12px; font-size: .9rem; }
+.warnbox { padding: 12px 14px; border-radius: 12px; background: var(--accent-soft); font-size: .94rem; }
+.warnbox b { color: var(--accent-text); }
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px; }
+.pair > div { background: var(--sheet); border-radius: 10px; padding: 10px 12px; }
+
+/* summary */
+.score { font-family: var(--head); font-size: 3.4rem; font-weight: 700; letter-spacing: -.03em; line-height: 1; color: var(--accent); }
+.list { margin: 0; padding: 0; list-style: none; }
+.list li { padding: 10px 0; border-bottom: 1px solid var(--rule); display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+.list li:last-child { border-bottom: 0; }
+
+@media (max-width: 600px) { .pair { grid-template-columns: 1fr; } .q { padding: 18px 16px; } }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" href="index.html" data-site><span class="logo" aria-hidden="true">Pd</span><span data-i18n="brand">PD3 ordforråd</span></a>
+    <nav class="nav" aria-label="Pages">
+      <a href="index.html" data-site data-i18n="nav.overview">Overblik</a>
+      <a href="study-sheet.html" data-site data-i18n="nav.study">Studieark</a>
+      <a href="flashcards.html#learn" data-site data-i18n="nav.flash">Flashcards</a>
+      <a href="flashcards.html#test" data-site data-i18n="nav.test">Test</a>
+      <a href="assisted-learning.html" aria-current="page" data-i18n="nav.assisted" id="navAL">Guidet læring</a>
+      <a href="assisted-learning.html#find" data-i18n="nav.find" id="navFind">Find ord</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap" id="app"><p class="soft">…</p></main>
+<footer class="wrap foot" id="foot"></footer>
+<script>window.PD3_DECK = null; /*DECK*/</script>
+<script>
+"use strict";
+// ---------- interface language (shared with the other pages via localStorage "pd3.lang") ----------
+const LANG = (() => { try { return localStorage.getItem("pd3.lang") === "en" ? "en" : "da"; } catch (e) { return "da"; } })();
+const I18N = {
+  "brand": ["PD3 ordforråd", "PD3 vocabulary"],
+  "nav.overview": ["Overblik", "Overview"], "nav.study": ["Studieark", "Study sheet"], "nav.flash": ["Flashcards", "Flashcards"],
+  "nav.test": ["Test", "Test"], "nav.assisted": ["Guidet læring", "Assisted learning"],
+  "lang.button": ["English", "Dansk"], "lang.title": ["Skift sprog til engelsk", "Switch language to Danish"],
+  "info.open": ["Hjælp", "Help"], "info.title": ["Hjælp", "Help"], "info.close": ["Luk", "Close"],
+  "info.how": ["Sådan virker det", "How it works"],
+  "info.p1": ["Nye ord kommer fem ad gangen fra én gruppe. Først ser du ordet med ordstilling, eksempel, rigtige sætninger fra prøverne og ordbogsopslaget; bagefter bliver du testet.",
+              "New words come five at a time from one group. First you see each word with its word order, example, real exam sentences and the dictionary entry; then you're tested."],
+  "info.p2": ["Gentagelse med mellemrum (SM-2): hvert svar giver en karakter 0–5, som bestemmer, hvornår ordet kommer igen. Højst 15 nye ord om dagen.",
+              "Spaced repetition (SM-2): every answer gets a grade 0–5 that decides when the word comes back. At most 15 new words a day."],
+  "info.p3": ["Fremskridt gemmes kun i denne browser på denne enhed.", "Progress is stored only in this browser on this device."],
+  "info.keys": ["Taster", "Keys"],
+  "key.num": ["Vælg svar", "Pick an answer"], "key.enter": ["Tjek / Næste", "Check / Next"],
+  "info.grades": ["Karakterer", "Grades"],
+  "gr.5": ["med det samme og rigtigt", "instant and right"], "gr.4": ["rigtigt", "right"], "gr.3": ["stavefejl eller andet forsøg", "typo or second try"],
+  "gr.2": ["genkendt, da du så svaret", "recognised when shown"], "gr.1": ["forkert", "wrong"], "gr.0": ["ved ikke", "don't know"],
+  "foot": ["Ordforrådet fra PD3-coachen: forbinderord først. Eksempelsætninger fra Prøve i Dansk 3, Læseforståelse 2004–2024 (SIRI). Definitioner fra Den Danske Ordbog (ordnet.dk). Fremskridt gemmes kun i denne browser.",
+           "The PD3 coach's vocabulary: connectors first. Example sentences from Prøve i Dansk 3, Læseforståelse 2004–2024 (SIRI). Definitions from Den Danske Ordbog (ordnet.dk). Progress is stored only in this browser."],
+  "nodeck": ["Ingen ordliste i denne fil. Det er skabelonen; byg siden fra projektmappen:", "No deck in this file. This is the template; build the page from the project folder:"],
+  // home
+  "h.chip.days": ["{0} dage", "{0} days"], "h.chip": ["til den skriftlige prøve", "to the written exam"],
+  "h.h1a": ["Lær, test og gentag", "Learn, test and review"], "h.h1b": ["Guidet læring", "Assisted learning"],
+  "h.intro": ["{0} ord fra PD3-coachen, forbinderordene først. Hvert nyt ord bliver forklaret, før du bliver testet i det.",
+              "{0} words from the PD3 coach, connectors first. Every new word is taught before you're tested on it."],
+  "h.go": ["Start session", "Start session"], "h.learn": ["Lær {0} nye", "Learn {0} new"], "h.review": ["Kun gentagelser", "Reviews only"],
+  "h.conf": ["Forvekslingsord", "Confusables drill"],
+  "h.blurb": ["En session = {0}. Fremskridt gemmes i denne browser.", "A session = {0}. Progress is saved in this browser."],
+  "h.review.t": ["Kun ord, der skal gentages i dag – ingen nye ord.", "Only words due today, no new words."],
+  "h.review.off": ["Intet skal gentages i dag. Ord, du har lært, kommer tilbage her, når de skal gentages.", "Nothing is due today. Words you've learnt come back here when they're due."],
+  "nav.find": ["Find ord", "Find a word"],
+  "f.h1a": ["Hvilken gruppe hører", "Which group does"], "f.h1b": ["ordet til?", "a word belong to?"],
+  "f.intro": ["Skriv et dansk ord (eller et engelsk) og se, hvilken gruppe det hører til – i Guidet læring og i studiearket.", "Type a Danish word (or an English one) to see which group it belongs to, in Assisted learning and on the study sheet."],
+  "f.ph": ["fx fordi, blandt andet, medføre …", "e.g. fordi, blandt andet, medføre …"],
+  "f.al": ["Guidet læring", "Assisted learning"], "f.site": ["Studiearket", "Study sheet"],
+  "f.notal": ["ikke i Guidet læring", "not in Assisted learning"], "f.notsite": ["ikke i studiearket", "not on the study sheet"],
+  "f.pract": ["Øv gruppen", "Practise this group"], "f.none": ["“{0}” findes ikke i nogen af listerne.", "“{0}” isn't in either list."],
+  "f.near": ["Mente du:", "Did you mean:"], "f.ddo": ["Slå “{0}” op på ordnet.dk ↗", "Look up “{0}” on ordnet.dk ↗"],
+  "f.viaen": ["fundet via den engelske betydning", "matched on the English meaning"], "f.viaform": ["fundet via bøjningsformen “{0}”", "matched on the form “{0}”"],
+  "f.loading": ["Henter studiearkets ordliste …", "Loading the study sheet's word list …"], "f.offline": ["Studiearkets ordliste kunne ikke hentes; viser kun Guidet læring.", "Couldn't load the study sheet's word list; showing Assisted learning only."],
+  "f.count": ["{0} ord i Guidet læring · {1} på studiearket", "{0} words in Assisted learning · {1} on the study sheet"],
+  "pk.title": ["Hvad vil du øve?", "What do you want to practise?"],
+  "pk.all": ["Alle grupper – vælg en eller flere for kun at øve dem.", "All groups. Pick one or more to practise only those."],
+  "pk.some": ["{0} valgt · {1} ord", "{0} selected · {1} words"], "pk.clear": ["Ryd valg", "Clear"],
+  "pk.due": ["{0} skal gentages", "{0} due"], "s.groups": ["{0} grupper", "{0} groups"],
+  "h.map.s": ["Tryk på en gruppe for at se dens ord.", "Tap a group to see its words."],
+  "h.blurb.r": ["{0} gentagelser", "{0} reviews"], "h.blurb.r1": ["1 gentagelse", "1 review"],
+  "h.blurb.n": ["{0} nye ord (forklaret, så testet)", "{0} new words (taught, then tested)"],
+  "h.nothing": ["Intet at gentage, og dagens nye ord er brugt. Kom igen i morgen, eller vælg en gruppe nedenfor for ekstra øvelse.",
+                "Nothing due and today's new words are used up. Come back tomorrow, or pick a group below for extra practice."],
+  "h.storage": ["Din browser gemmer ikke data her (privat vindue?), så fremskridt forsvinder, når siden lukkes.",
+                "This browser isn't storing data here (private window?), so progress is lost when the page closes."],
+  "h.progress": ["Dit fremskridt", "Your progress"],
+  "m.due": ["Skal gentages", "Due"], "m.due.s": ["i dag", "today"], "m.new": ["Nye ord", "New words"], "m.new.s": ["tilbage i dag", "left today"],
+  "m.learn": ["I gang", "Learning"], "m.learn.s": ["ord du øver", "words in progress"], "m.master": ["Kan du", "Mastered"], "m.master.s": ["21+ dage", "21+ days"],
+  "h.groups": ["Fremskridt per gruppe", "Progress by group"],
+  "st.new": ["ny", "new"], "st.learn": ["i gang", "learning"], "st.known": ["kendt (6+ dage)", "known (6+ days)"], "st.master": ["kan du (21+ dage)", "mastered (21+ days)"],
+  "p.1": ["Forbinderord", "Connectors"], "p.2": ["Ord fra prøven", "Exam words"], "p.3": ["Andre nyttige ord", "Other useful words"],
+  "g.due": ["{0} skal gentages", "{0} due"], "g.words": ["{0} ord", "{0} words"], "g.next": ["næste gang {0}", "next {0}"],
+  "g.study": ["Øv denne gruppe", "Study this group"],
+  "g.study.s": ["Ord, der skal gentages, først, så op til {0} nye; ellers ekstra øvelse.", "Due cards first, then up to {0} new ones; extra practice if nothing is due."],
+  "g.empty": ["Intet at øve i de valgte grupper endnu.", "Nothing in the selected groups to study yet."], "h.empty": ["Intet at gentage lige nu.", "Nothing due right now."],
+  // session
+  "s.session": ["Session", "Session"], "s.conf": ["Forvekslingsord", "Confusables"], "s.end": ["Afslut", "End"],
+  "s.count": ["{0} / {1}", "{0} / {1}"],
+  "k.new": ["Nye ord", "New words"], "k.back": ["Tilbageblik", "Looking back"],
+  "b.prev": ["Forrige", "Back"], "b.prev.t": ["Se det forrige ord igen (←). Svar, du har givet, tæller stadig.", "See the previous word again (←). Answers you gave still count."], "k.learn": ["Lær", "Learn"],
+  "k.practice": ["Øvelse", "Practice"], "k.first": ["Nyt", "New"], "k.review": ["Gentagelse", "Review"],
+  "x.meaning": ["Betydning", "Meaning"], "x.produce": ["Skriv det på dansk", "Say it in Danish"], "x.cloze": ["Udfyld hullet", "Fill the gap"],
+  "x.relation": ["Hvilken relation?", "Which relation?"], "x.order": ["Ordstilling", "Word order"], "x.odd": ["L3: find parret", "L3: find the pair"],
+  "intro.p": ["{0} nye ord fra én gruppe. Først ser du hvert ord med ordstilling, rigtige sætninger fra prøverne og ordbogsopslaget; så en kort test i dem alle.",
+              "{0} new words from one group. First you'll see each one with its word order, real exam sentences and the dictionary entry; then a quick test on all of them."],
+  "b.start": ["Start", "Start"], "b.got": ["Forstået", "Got it"], "b.next": ["Næste", "Next"], "b.check": ["Tjek", "Check"],
+  "b.clear": ["Ryd", "Clear"], "b.show": ["Vis mig", "Show me"], "b.idk": ["Ved ikke", "I don't know"],
+  "b.override": ["Jeg havde ret – tæl det med", "I was right, count it"], "b.skip": ["Spring over", "Skip retype"],
+  "t.order": ["Ordstilling", "Word order"], "t.example": ["Eksempel", "Example"], "t.exam": ["Fra prøverne", "From the exams"],
+  "t.senses": ["Betydninger", "Meanings"], "t.senses.s": ["ordet har mere end én betydning", "this word has more than one meaning"],
+  "t.sense1": ["Betydning", "Meaning"], "s.noexam": ["Ingen eksempler i læseteksterne 2004–2024.", "No examples in the 2004–2024 reading texts."],
+  "b.more": ["📖 Forklar mere", "📖 Explain more"], "m.title": ["Mere om ordet", "More about this word"],
+  "m.senses": ["Alle betydninger", "All meanings"], "m.cites": ["Brugt i ordbogen", "Used in the dictionary"],
+  "m.exam": ["Flere sætninger fra prøverne", "More sentences from the exams"], "m.tr": ["oversæt", "translate"], "m.tr.hide": ["skjul", "hide"], "m.tr.wait": ["oversætter…", "translating…"],
+  "m.tr.err": ["Kunne ikke oversætte lige nu.", "Couldn't translate right now."], "m.tr.open": ["Åbn i Google Translate ↗", "Open in Google Translate ↗"],
+  "m.mates": ["Ord i samme gruppe", "Words in the same group"], "m.mates.s": ["(tryk for at se dem)", "(tap one to open it)"],
+  "m.same": ["samme betydning", "same meaning"], "m.nodict": ["Ordet er ikke slået op i Den Danske Ordbog her.", "This word has no dictionary entry in the deck."],
+  "m.lookup": ["Slå op på ordnet.dk ↗", "Look it up on ordnet.dk ↗"],
+  "m.coach": ["Stadig uklart? Spørg coachen i chatten, fx “/pd3-coach forklar {0} med flere eksempler”.", "Still unclear? Ask the coach in chat, e.g. “/pd3-coach explain {0} with more examples”."],
+  "t.ddo": ["Den Danske Ordbog", "Den Danske Ordbog"], "t.mix": ["Forveksl ikke:", "Don't mix up:"],
+  "q.meaning": ["Hvad betyder det?", "What does it mean?"], "q.relation": ["Hvilken relation udtrykker forbinderordet?", "Which relation does this connector express?"],
+  "q.cloze": ["Hvilket ord passer i hullet?", "Which word fits the gap?"], "q.base": [" (grundform)", " (options in base form)"],
+  "q.odd": ["To af dem hører til samme relation, så i en L3-opgave ville de udelukke hinanden. Vælg de to.",
+            "Two of these belong to the same relation, so in an L3 grid they'd cancel each other out. Pick the two."],
+  "q.produce": ["Skriv det danske ord eller udtryk.", "Type the Danish word or phrase."], "q.ph": ["dansk…", "Danish…"],
+  "q.order": ["Sæt ordene i den rigtige rækkefølge. Det er ordstillingen, censor tjekker ved {0}.", "Put the words in the right order. Word order is what the examiners check with {0}."],
+  "q.pair": ["Sætning {0} af {1}: hvilket ord passer?", "Sentence {0} of {1}: which one fits?"],
+  "f.right": ["✅ Rigtigt", "✅ Right"], "f.wrong": ["❌ Ikke denne gang", "❌ Not this time"], "f.almost": ["Næsten", "Almost"],
+  "f.counted": ["✅ Talt med som rigtigt", "✅ Counted as right"], "f.its": ["❌ Det er {0}", "❌ It's {0}"],
+  "f.spelling": ["Stavning: {0} (du skrev “{1}”)", "Spelling: {0} (you wrote “{1}”)"], "f.wrote": ["Du skrev “{0}”. ", "You wrote “{0}”. "],
+  "f.twin": ["✅ {0} passer også", "✅ {0} works too"], "f.twin.p": ["Dette kort er et andet ord med samme betydning. Prøv igen.", "This card is a different word with the same meaning. Try once more."],
+  "f.both": ["{0} og {1} hører begge til {2}.", "{0} and {1} are both {2}."],
+  "f.retry": ["Ikke helt – prøv én gang til.", "Not quite, one more try."], "f.retry.p": ["Se på, hvor verbet står efter {0}.", "Check where the verb goes after {0}."],
+  "f.retype": ["Skriv den rigtige sætning", "Retype the correct sentence"], "f.retype.s": ["(så hånden husker den)", "(motor memory)"],
+  "f.practice": ["øvelse – ingen karakter", "practice: not graded"], "f.grade": ["karakter {0}/5", "grade {0}/5"],
+  "f.rule": ["Tommelfingerregel:", "Rule of thumb:"],
+  "sev.critical": ["🔴 kritisk", "🔴 critical"], "sev.moderate": ["🟡 middel", "🟡 moderate"], "sev.minor": ["🟢 lille", "🟢 minor"],
+  // summary
+  "r.done": ["{0} · færdig", "{0} · done"], "r.score": ["{0} af {1} kort rigtige", "{0} of {1} graded cards right"],
+  "r.practice": ["Kun øvelse: ingen karakterer, så din plan er uændret.", "Practice only: nothing was graded, so your schedule didn't change."],
+  "r.shaky": ["Stadig usikre", "Still shaky"], "r.tomorrow": ["igen i morgen", "back tomorrow"], "r.none": ["Ingen usikre ord denne gang. 🎯", "Nothing shaky this time. 🎯"],
+  "r.next": ["Næste gang du ser dem", "Next time you'll see them"], "r.cards": ["{0} kort", "{0} cards"],
+  "r.coach": ["Vil du have feedback på en fri sætning? Spørg coachen i chatten (/pd3-coach vocab) om opgaven “skriv én sætning med 3 af dagens forbinderord”.",
+              "Want feedback on a free sentence? Ask the coach in chat (/pd3-coach vocab) for the “write one sentence with 3 of today's connectors” task."],
+  "r.home": ["Tilbage til oversigten", "Back to overview"],
+};
+function t(key, ...args) {
+  const e = I18N[key];
+  let s = e ? e[LANG === "en" ? 1 : 0] : key;
+  args.forEach((a, i) => { s = s.split(`{${i}}`).join(String(a)); });
+  return s;
+}
+
+// ---------- reference data (mirrors references/connectors.md and vocab.md) ----------
+// id: [English name, Danish name, priority]
+const GROUPS = {
+  "årsag": ["Cause", "Årsag", 1], "konsekvens": ["Result", "Konsekvens", 1], "kontrast": ["Contrast", "Kontrast", 1],
+  "indrømmelse": ["Concession", "Indrømmelse", 1], "tilføjelse": ["Addition", "Tilføjelse", 1], "betingelse": ["Condition", "Betingelse", 1],
+  "formål": ["Purpose", "Formål", 1], "tid": ["Time / order", "Tid / rækkefølge", 1], "sammenligning": ["Comparison", "Sammenligning", 1],
+  "præcisering": ["Example / precision", "Præcisering", 1], "udelukkelse": ["Exclusion", "Udelukkelse", 1],
+  "konklusion": ["Conclusion", "Konklusion", 1], "holdning": ["Attitude", "Holdning", 1],
+  "l1_ord": ["L1 key words", "L1-nøgleord", 2], "l1_verb": ["L1 verbs", "L1-verber", 2], "l2_ord": ["L2 question words", "L2-spørgeord", 2],
+  "modalverbum": ["Modal verbs", "Modalverber", 2], "l3_medfoere": ["L3: lead to / cause", "L3: føre til / forårsage", 2],
+  "l3_forhindre": ["L3: prevent / limit", "L3: forhindre / begrænse", 2], "l3_forklare": ["L3: say / claim", "L3: sige / påstå", 2],
+  "l3_ord": ["L3 words", "L3-ord", 2], "praep": ["Fixed prepositions", "Faste præpositioner", 2], "adjektiv": ["Adjectives", "Adjektiver", 3],
+};
+const GROUP_ORDER = Object.keys(GROUPS);
+
+// [title, English rule, Danish rule, demo]
+const RULES = {
+  SUB: ["Underordnende konjunktion · SUB",
+        "Starts a sub-clause: subject – <i>ikke</i> – verb. When the sub-clause comes first, the main clause inverts (verb before subject).",
+        "Starter en ledsætning: subjekt – <i>ikke</i> – verbum. Står ledsætningen først, bliver der inversion i hovedsætningen (verbum før subjekt).",
+        "…, fordi han <b>ikke har</b> tid. · Selvom det regner, <b>går vi</b> en tur."],
+  ADV: ["Konjunktionaladverbium · ADV",
+        "At the start of a sentence it takes the first slot, so the verb comes next, then the subject (inversion).",
+        "Først i sætningen tager det første plads, så verbet kommer lige efter og derefter subjektet (inversion).",
+        "Derfor <b>er det</b> vigtigt … — aldrig <s>Derfor det er</s>."],
+  KOO: ["Sideordnende konjunktion · KOO", "Joins two main clauses. Normal word order on both sides.",
+        "Binder to hovedsætninger sammen. Normal ordstilling på begge sider.", "Det regnede, men <b>vi gik</b> ud."],
+  "PRÆP": ["Præposition · PRÆP", "Followed by a noun phrase, not by a clause.", "Efterfølges af et navneord, ikke af en sætning.",
+           "på grund af <b>regnen</b> — men fordi <b>det regner</b>."],
+};
+const rule = k => RULES[k] && RULES[k][LANG === "en" ? 1 : 2];
+
+// Pairs learners mix up; drilled side by side when one of them lapses (vocab.md). [a, b, English tip, Danish tip]
+const CONFUSABLES = [
+  ["da", "når", "da = one time in the past (or because) · når = repeated or future", "da = én gang i fortiden (eller fordi) · når = gentaget eller fremtid"],
+  ["for", "fordi", "for = main-clause word order · fordi = sub-clause order (ikke before the verb)", "for = hovedsætningsordstilling · fordi = ledsætningsordstilling (ikke før verbet)"],
+  ["eller", "ellers", "eller = or · ellers = otherwise", "eller = or · ellers = ellers/i modsat fald"],
+  ["derfor", "derimod", "derfor = therefore (result) · derimod = by contrast", "derfor = konsekvens · derimod = modsætning"],
+  ["selvom", "alligevel", "same idea, different word order: Selvom det regner, går vi · Det regner, men vi går alligevel", "samme idé, forskellig ordstilling: Selvom det regner, går vi · Det regner, men vi går alligevel"],
+  ["på_grund_af", "fordi", "på grund af + noun · fordi + clause", "på grund af + navneord · fordi + sætning"],
+  ["derfor", "således", "both mean result: in L3 they cancel each other out", "begge udtrykker konsekvens: i L3 udelukker de hinanden"],
+  ["mens", "hvorimod", "mens = while (time) or whereas · hvorimod = only whereas", "mens = tid eller modsætning · hvorimod = kun modsætning"],
+  ["at_bekræfte", "at_benægte", "bekræfte = confirm · benægte = deny", "bekræfte = sige ja til · benægte = sige nej til"],
+  ["en_modstand", "en_opbakning", "modstand = opposition · opbakning = support", "modstand = man er imod · opbakning = man støtter"],
+  ["næppe", "næsten_ikke", "same meaning: næppe is the formal one", "samme betydning: næppe er det formelle"],
+];
+const tip = p => p[LANG === "en" ? 2 : 3];
+
+// Connectors with a second relation: never offer that one as a wrong answer
+const ALSO = { da: ["tid"], mens: ["tid", "kontrast"], siden: ["årsag", "tid"], "så": ["formål"], "så_at": ["konsekvens"], "nemlig": ["præcisering"] };
+
+const NEW_PER_DAY = 15, BATCH = 5, REVIEW_LIMIT = 12;
+
+// ---------- state ----------
+let DB = null;           // {today, profile, cards: {id: card}, sentences}
+let S = null;            // current session
+let openGroup = null;     // group whose word list is open in the progress map
+// groups picked in the chips above the session buttons; empty = all groups (remembered per browser)
+const PICK_KEY = "pd3-assisted-learning:groups";
+let picked = [];
+try { picked = JSON.parse(localStorage.getItem(PICK_KEY) || "[]"); } catch (e) { picked = []; }
+function setPicked(gs) { picked = GROUP_ORDER.filter(g => gs.includes(g)); try { localStorage.setItem(PICK_KEY, JSON.stringify(picked)); } catch (e) { /* ignore */ } }
+
+const $ = (sel, el = document) => el.querySelector(sel);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const pick = a => a[Math.floor(Math.random() * a.length)];
+const norm = s => String(s).normalize("NFC").toLowerCase().replace(/[.,!?;:"«»()…]/g, " ").replace(/\s+/g, " ").trim();
+const cards = () => Object.values(DB.cards);
+
+// The deck is embedded in the built page (no server needed); review progress lives in this
+// browser's localStorage, so it survives closing the page. Cards never reviewed here keep the deck's own schedule.
+const STORE = "pd3-assisted-learning:progress:v1";
+const SRS_FIELDS = ["ef", "interval", "reps", "due", "lapses", "history", "introduced"];
+let storageOK = true;
+
+function readProgress() {
+  try { return JSON.parse(localStorage.getItem(STORE) || "{}").cards || {}; }
+  catch (e) { storageOK = false; return {}; }
+}
+function writeProgress(id) {
+  try {
+    const all = readProgress();
+    all[id] = Object.fromEntries(SRS_FIELDS.filter(f => DB.cards[id][f] !== undefined).map(f => [f, DB.cards[id][f]]));
+    localStorage.setItem(STORE, JSON.stringify({ cards: all, saved: new Date().toISOString() }));
+    storageOK = true;
+  } catch (e) { storageOK = false; }
+}
+const iso = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+
+// ---------- page chrome: language, help, links ----------
+// Opened from disk, the other pages aren't next to this file: send their links to the published site.
+const SITE = "https://m-samhoury.github.io/pd3-reading-vocab/";
+function chrome() {
+  document.documentElement.lang = LANG;
+  document.title = `${t("nav.assisted")} · ${t("brand")}`;
+  document.querySelectorAll("[data-i18n]").forEach(n => { n.textContent = t(n.dataset.i18n); });
+  if (location.protocol === "file:") document.querySelectorAll("a[data-site]").forEach(a => { a.href = SITE + a.getAttribute("href"); });
+  const bar = $(".topbar-in");
+  const info = document.createElement("button");
+  info.type = "button"; info.className = "iconbtn"; info.title = t("info.open"); info.setAttribute("aria-label", t("info.open"));
+  info.innerHTML = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M12 11v6"/><circle cx="12" cy="7.5" r=".6" fill="currentColor"/></svg>';
+  const dlg = document.createElement("dialog");
+  dlg.className = "info"; dlg.setAttribute("aria-labelledby", "infoTitle");
+  dlg.innerHTML = `<div class="ib"><div class="ih"><h2 id="infoTitle">${t("info.title")}</h2><button type="button" class="btn quiet" id="infoClose">${t("info.close")}</button></div>
+    <h3>${t("info.how")}</h3><p>${t("info.p1")}</p><p>${t("info.p2")}</p><p>${t("info.p3")}</p>
+    <h3>${t("info.keys")}</h3><dl class="keylist"><dt>1 – 4</dt><dd>${t("key.num")}</dd><dt>Enter</dt><dd>${t("key.enter")}</dd><dt>←</dt><dd>${t("b.prev.t")}</dd></dl>
+    <h3>${t("info.grades")}</h3><dl class="keylist">${[5, 4, 3, 2, 1, 0].map(g => `<dt>${g}</dt><dd>${t("gr." + g)}</dd>`).join("")}</dl></div>`;
+  dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
+  document.body.append(dlg);
+  $("#infoClose").onclick = () => dlg.close();
+  info.onclick = () => dlg.showModal();
+  const lang = document.createElement("button");
+  lang.type = "button"; lang.className = "langbtn"; lang.lang = LANG === "en" ? "da" : "en";
+  lang.textContent = t("lang.button"); lang.title = t("lang.title");
+  lang.onclick = () => { try { localStorage.setItem("pd3.lang", LANG === "en" ? "da" : "en"); } catch (e) { /* ignore */ } location.reload(); };
+  bar.append(info, lang);
+  $("#foot").textContent = t("foot");
+}
+
+function load() {
+  chrome();
+  // the deck is embedded by `pd3.py page` (window.PD3_DECK), so the built file opens straight from disk
+  const deck = window.PD3_DECK;
+  if (!deck) {
+    $("#app").innerHTML = `<div class="err" style="margin-top:32px">${t("nodeck")}<br><br><code>python3 -I .claude/skills/pd3-coach/scripts/pd3.py page</code></div>`;
+    return;
+  }
+  DB = { today: iso(new Date()), profile: deck.profile || {}, sentences: deck.sentences || {}, senses: deck.senses || {}, cards: {} };
+  const saved = readProgress();
+  for (const [id, c] of Object.entries(deck.cards)) DB.cards[id] = { id, ...c, history: c.history || [], ...(saved[id] || {}) };
+  // ask the browser not to clear this page's storage when space runs low (Chrome/Firefox; Safari decides itself)
+  if (navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(() => {});
+  route();
+  window.addEventListener("hashchange", route);
+}
+function route() {
+  const find = location.hash.startsWith("#find");
+  document.title = `${t(find ? "nav.find" : "nav.assisted")} · ${t("brand")}`;
+  $("#navAL").toggleAttribute("aria-current", !find); $("#navFind").toggleAttribute("aria-current", find);
+  if (find) { $("#navFind").setAttribute("aria-current", "page"); findView(decodeURIComponent(location.hash.slice(6))); }
+  else { $("#navAL").setAttribute("aria-current", "page"); home(); }
+}
+
+// SM-2, same maths as sm2() in pd3.py
+function grade(id, q) {
+  const c = DB.cards[id];
+  c.introduced = c.introduced || DB.today;
+  if (q >= 3) {
+    c.interval = c.reps === 0 ? 1 : c.reps === 1 ? 6 : Math.round(c.interval * c.ef);
+    c.reps += 1;
+  } else {
+    c.interval = 1; c.reps = 0; c.lapses += 1;
+  }
+  c.ef = Math.max(1.3, Math.round((c.ef + (0.1 - (5 - q) * (0.08 + (5 - q) * 0.02))) * 100) / 100);
+  const d = new Date(DB.today + "T12:00"); d.setDate(d.getDate() + c.interval);
+  c.due = iso(d);
+  c.history = [...c.history, [DB.today, q]].slice(-10);
+  writeProgress(id);
+  return c;
+}
+
+// ---------- card helpers ----------
+function wtype(c) {
+  const m = /^(SUB\/PRÆP|SUB\/ADV|SUB|ADV|KOO|PRÆP)\b/.exec(c.note || "");
+  return m ? m[1] : null;
+}
+function stateOf(c) {
+  if (!c.history || !c.history.length) return "new";
+  return c.interval >= 21 ? "master" : c.interval >= 6 ? "known" : "learn";
+}
+function variants(word) {
+  const base = norm(word.replace(/\(.*?\)/g, ""));
+  const out = [norm(word), base, ...[...word.matchAll(/\((.*?)\)/g)].map(m => norm(m[1]))];
+  base.split(/\s*\/\s*/).forEach(p => out.push(p.trim()));
+  out.slice().forEach(v => { for (const a of ["at ", "en ", "et "]) if (v.startsWith(a)) out.push(v.slice(a.length)); });
+  return [...new Set(out.filter(Boolean))];
+}
+function isAnswer(c, input) {
+  const a = norm(input), set = variants(c.word);
+  return set.includes(a) || set.includes(a.replace(/^(at|en|et) /, ""));
+}
+function lev(a, b) {
+  const d = Array.from({ length: a.length + 1 }, (_, i) => [i]);
+  for (let j = 1; j <= b.length; j++) d[0][j] = j;
+  for (let i = 1; i <= a.length; i++) for (let j = 1; j <= b.length; j++)
+    d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+  return d[a.length][b.length];
+}
+function nearMiss(c, input) {
+  const a = norm(input).replace(/^(at|en|et) /, "");
+  return a.length > 2 && variants(c.word).some(v => lev(a, v) <= (v.length > 8 ? 2 : 1));
+}
+// Where the card word sits in a sentence (for highlighting and cloze gaps)
+function findSpan(c, s) {
+  const w = norm(c.word);
+  const kind = w.startsWith("at ") ? "verb" : /^(en|et) /.test(w) ? "noun" : c.group === "adjektiv" ? "adj" : "fixed";
+  const vs = variants(c.word).filter(v => !/^(at|en|et) /.test(v) && v.length > 1).sort((a, b) => b.length - a.length);
+  for (const v of vs) {
+    const toks = v.split(" ").map(t => t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+    if (kind === "verb") toks[0] = toks[0].replace(/e$/, "") + "\\p{L}{0,4}";
+    else if (kind !== "fixed") toks[0] += "\\p{L}{0,4}";
+    const m = new RegExp("(?<![\\p{L}])" + toks.join("\\s+") + "(?![\\p{L}])", "iu").exec(s);
+    if (m) return [m.index, m.index + m[0].length];
+  }
+  return null;
+}
+function hlSentence(c, s, span) {
+  span = span || findSpan(c, s);
+  if (!span) return esc(s);
+  return esc(s.slice(0, span[0])) + `<mark class="hl">${esc(s.slice(span[0], span[1]))}</mark>` + esc(s.slice(span[1]));
+}
+function examSentences(c) { return DB.sentences[c.id] || []; }
+function partnerPairs(id) { return CONFUSABLES.filter(p => (p[0] === id || p[1] === id) && DB.cards[p[0]] && DB.cards[p[1]]); }
+function gname(g) { return GROUPS[g] ? GROUPS[g][LANG === "en" ? 0 : 1] : g; }
+// both languages, the page language first (as the other pages name their groups)
+function glabel(g) { return GROUPS[g] ? (LANG === "en" ? `${GROUPS[g][0]} · ${GROUPS[g][1]}` : `${GROUPS[g][1]} · ${GROUPS[g][0]}`) : g; }
+const prio = g => (GROUPS[g] || [])[2] || 3;
+
+// ---------- home ----------
+function daysTo(d) { return d ? Math.round((new Date(d) - new Date(DB.today)) / 864e5) : null; }
+function counts() {
+  const all = cards();
+  const introducedToday = all.filter(c => c.introduced === DB.today).length;
+  return {
+    due: all.filter(c => c.history && c.history.length && c.due <= DB.today).length,
+    newLeft: Math.max(0, NEW_PER_DAY - introducedToday),
+    fresh: all.filter(c => stateOf(c) === "new").length,
+    learning: all.filter(c => ["learn", "known"].includes(stateOf(c))).length,
+    mastered: all.filter(c => stateOf(c) === "master").length,
+    total: all.length,
+  };
+}
+
+function home() {
+  S = null;
+  const k = counts(), p = DB.profile || {};
+  const dW = daysTo(p.exam_date);
+  const groupsBy = {};
+  cards().forEach(c => (groupsBy[c.group] = groupsBy[c.group] || []).push(c));
+  const tiles = pr => GROUP_ORDER.filter(g => prio(g) === pr && groupsBy[g]).map(g => groupTile(g, groupsBy[g])).join("");
+  const metric = (l, n, s, pct) => `<div class="m"><div class="lbl">${l}</div><b>${n}</b><span class="s">${s}</span>${pct != null ? `<div class="bar"><span style="width:${pct.toFixed(1)}%"></span></div>` : ""}</div>`;
+  const newLeft = Math.min(k.newLeft, k.fresh);
+  if (picked.some(g => !groupsBy[g])) setPicked(picked.filter(g => groupsBy[g]));
+  const sel = picked.length ? picked : null;
+  const pool = sel ? sel.flatMap(g => groupsBy[g]) : cards();
+  const dueIn = cs => cs.filter(c => c.history.length && c.due <= DB.today).length;
+  const canNew = Math.min(k.newLeft, pool.filter(c => stateOf(c) === "new").length);
+  const canDue = dueIn(pool);
+  const chips = pr => GROUP_ORDER.filter(g => prio(g) === pr && groupsBy[g]).map(g => {
+    const d = dueIn(groupsBy[g]);
+    return `<button type="button" class="pchip" data-g="${esc(g)}" aria-pressed="${picked.includes(g)}">${esc(gname(g))}<span class="n">${groupsBy[g].length}</span>${d ? `<span class="d" title="${esc(t("pk.due", d))}">${d}</span>` : ""}</button>`;
+  }).join("");
+  $("#app").innerHTML = `
+    <div class="top">
+      ${dW != null && dW >= 0 ? `<span class="chip"><b>${t("h.chip.days", dW)}</b><span>${t("h.chip")}</span></span>` : ""}
+      <h1><span class="light">${t("h.h1a")}</span>${t("h.h1b")}</h1>
+      <p>${t("h.intro", k.total)}</p>
+      <div class="sheet picker" role="group" aria-labelledby="pkTitle">
+        <div class="ph"><b id="pkTitle">${t("pk.title")}</b>
+          <span class="soft small">${sel ? t("pk.some", sel.length, pool.length) : t("pk.all")}</span>
+          ${sel ? `<button type="button" class="linkbtn small" id="allg">${t("pk.clear")}</button>` : ""}</div>
+        ${[1, 2, 3].map(pr => `<div class="tier"><span class="badge t${pr}">${t("p." + pr)}</span>${chips(pr)}</div>`).join("")}
+      </div>
+      <div class="hero-cta">
+        <button class="btn solid" id="go">${t("h.go")}${sel ? ` · ${sel.length === 1 ? esc(gname(sel[0])) : t("s.groups", sel.length)}` : ""}</button>
+        <button class="btn" id="learn" ${canNew ? "" : "disabled"}>${t("h.learn", BATCH)}</button>
+        <button class="btn" id="review" ${canDue ? "" : "disabled"} title="${esc(canDue ? t("h.review.t") : t("h.review.off"))}">${t("h.review")}</button>
+        <button class="btn" id="conf">${t("h.conf")}</button>
+      </div>
+      <p class="soft small" style="margin-top:12px">${sessionBlurb(k, canDue, canNew)}</p>
+      ${storageOK ? "" : `<div class="err small">${t("h.storage")}</div>`}
+    </div>
+    <div class="section"><h2>${t("h.progress")}</h2><div class="band"><div class="prog">
+      ${metric(t("m.due"), k.due, t("m.due.s"))}
+      ${metric(t("m.new"), newLeft, t("m.new.s"), 100 * newLeft / NEW_PER_DAY)}
+      ${metric(t("m.learn"), k.learning, t("m.learn.s"))}
+      ${metric(t("m.master"), `${k.mastered} / ${k.total}`, t("m.master.s"), 100 * k.mastered / k.total)}
+    </div></div></div>
+    <div class="section"><h2>${t("h.groups")}</h2><p class="soft small" style="margin:-4px 0 10px">${t("h.map.s")}</p>
+      <div class="legend">${["new", "learn", "known", "master"].map(s => `<span><i style="background:var(--s-${s})"></i>${t("st." + s)}</span>`).join("")}</div>
+      ${[1, 2, 3].map(pr => `<div class="tierlabel"><span class="badge t${pr}">${t("p." + pr)}</span></div><div class="groups" data-pr="${pr}">${tiles(pr)}</div>`).join("")}
+    </div>`;
+  $("#go").onclick = () => startSession({ groups: sel });
+  $("#learn").onclick = () => startSession({ groups: sel, reviews: 0 });
+  $("#review").onclick = () => startSession({ groups: sel, fresh: 0 });
+  if ($("#allg")) $("#allg").onclick = () => { setPicked([]); home(); };
+  document.querySelectorAll(".pchip").forEach(b => b.onclick = () => {
+    const g = b.dataset.g;
+    setPicked(picked.includes(g) ? picked.filter(x => x !== g) : [...picked, g]);
+    const y = window.scrollY; home(); window.scrollTo(0, y);
+    $(`.pchip[data-g="${CSS.escape(g)}"]`)?.focus();
+  });
+  $("#conf").onclick = () => startConfusables();
+  document.querySelectorAll(".group").forEach(b => b.onclick = () => { openGroup = openGroup === b.dataset.g ? null : b.dataset.g; const y = window.scrollY; home(); window.scrollTo(0, y); });
+  if (openGroup && groupsBy[openGroup]) showGroupDetail(openGroup, groupsBy[openGroup]);
+}
+function sessionBlurb(k, due, fresh) {
+  const r = Math.min(due, REVIEW_LIMIT), n = Math.min(BATCH, fresh);
+  if (!r && !n) return t("h.nothing");
+  const parts = [r ? (r === 1 ? t("h.blurb.r1") : t("h.blurb.r", r)) : null, n ? t("h.blurb.n", n) : null].filter(Boolean);
+  return t("h.blurb", parts.join(" + "));
+}
+function groupTile(g, cs) {
+  const n = { new: 0, learn: 0, known: 0, master: 0 };
+  cs.forEach(c => n[stateOf(c)]++);
+  const due = cs.filter(c => c.history.length && c.due <= DB.today).length;
+  const seg = s => n[s] ? `<span style="width:${100 * n[s] / cs.length}%;background:var(--s-${s})"></span>` : "";
+  const other = GROUPS[g] ? GROUPS[g][LANG === "en" ? 1 : 0] : "";
+  return `<button class="sheet group${openGroup === g ? " open" : ""}" data-g="${esc(g)}">
+    <div class="row"><span class="gn">${esc(gname(g))}</span><span class="spacer"></span>${due ? `<span class="due">${t("g.due", due)}</span>` : ""}</div>
+    <div class="ge">${esc(other)} · ${t("g.words", cs.length)}</div>
+    <div class="bar">${seg("master")}${seg("known")}${seg("learn")}</div></button>`;
+}
+function showGroupDetail(g, cs) {
+  const grid = $(`.groups[data-pr="${prio(g)}"]`);
+  const tiles = [...grid.children], idx = tiles.findIndex(x => x.dataset.g === g);
+  // place the panel after the last tile in the clicked tile's row
+  const top = tiles[idx].offsetTop;
+  let last = idx; while (tiles[last + 1] && tiles[last + 1].offsetTop === top) last++;
+  const d = document.createElement("div");
+  d.className = "sheet detail";
+  const order = { new: 3, learn: 0, known: 1, master: 2 };
+  d.innerHTML = `<b>${esc(glabel(g))}</b>
+    <div class="words">${cs.slice().sort((a, b) => order[stateOf(a)] - order[stateOf(b)]).map(c =>
+      `<button type="button" class="word" data-id="${esc(c.id)}" lang="da" title="${esc(c.meaning)}${c.history.length ? " · " + t("g.next", c.due) : ""}"><i style="background:var(--s-${stateOf(c)})"></i>${esc(c.word)}</button>`).join("")}</div>
+    <div class="row"><button class="btn solid" id="gstudy">${t("g.study")}</button><span class="soft small">${t("g.study.s", BATCH)}</span></div>`;
+  tiles[last].after(d);
+  $("#gstudy").onclick = () => startSession({ groups: [g] });
+  d.querySelectorAll("button.word").forEach(b => { b.onclick = () => explain(DB.cards[b.dataset.id]); });
+}
+
+// ---------- session building ----------
+function startSession({ groups = null, reviews = REVIEW_LIMIT, fresh = BATCH }) {
+  const k = counts();
+  const inGroup = c => !groups || groups.includes(c.group);
+  const rank = c => [c.priority || 3, -(c.lapses || 0), c.reps || 0];
+  const cmp = (a, b) => { const x = rank(a), y = rank(b); return x[0] - y[0] || x[1] - y[1] || x[2] - y[2]; };
+  const due = cards().filter(c => inGroup(c) && c.history.length && c.due <= DB.today).sort(cmp).slice(0, reviews);
+  const n = Math.min(fresh, k.newLeft);
+  let batch = [];
+  if (n > 0) {
+    // taught group by group: fill the batch from the first (selected) group that still has new words, then the next
+    for (const g of GROUP_ORDER.filter(g => !groups || groups.includes(g))) {
+      if (batch.length >= n) break;
+      batch.push(...cards().filter(c => c.group === g && stateOf(c) === "new").slice(0, n - batch.length));
+    }
+  }
+  let practice = [];
+  if (groups && !due.length && !batch.length) // nothing to grade: practise the groups' learnt words without touching the schedule
+    practice = shuffle(cards().filter(c => inGroup(c) && c.history.length)).slice(0, 8);
+  const q = [];
+  due.forEach(c => q.push({ kind: "ex", id: c.id }));
+  if (batch.length) {
+    q.push({ kind: "intro", ids: batch.map(c => c.id) });
+    batch.forEach(c => q.push({ kind: "teach", id: c.id }));
+    shuffle(batch).forEach(c => q.push({ kind: "ex", id: c.id, first: true }));
+  }
+  practice.forEach(c => q.push({ kind: "ex", id: c.id, practice: true }));
+  if (!q.length) { alert(groups ? t("g.empty") : t("h.empty")); return; }
+  const title = !groups ? t("s.session") : groups.length === 1 ? glabel(groups[0]) : groups.length <= 3 ? groups.map(gname).join(" · ") : t("s.groups", groups.length);
+  S = { queue: q, i: 0, results: [], lastType: null, graded: new Set(), title };
+  step();
+}
+function startConfusables() {
+  const pairs = shuffle(CONFUSABLES.filter(p => DB.cards[p[0]] && DB.cards[p[1]])).slice(0, 5);
+  S = { queue: pairs.map(p => ({ kind: "pair", pair: p })), i: 0, results: [], lastType: null, graded: new Set(), title: t("s.conf") };
+  step();
+}
+
+// ---------- step rendering ----------
+function frame(kindLabel, inner) {
+  const done = S.i - (S.back || 0), total = S.queue.length;
+  $("#app").innerHTML = `<div class="narrow">
+    <div class="counter"><span>${esc(S.title)} · ${t("s.count", done + 1, total)}</span>
+      <span class="row" style="gap:4px">${prevIndex() >= 0 ? `<button class="btn quiet" id="prev" title="${esc(t("b.prev.t"))}">← ${t("b.prev")}</button>` : ""}<button class="btn quiet" id="quit">✕ ${t("s.end")}</button></span></div>
+    <div class="bar sessionbar" aria-hidden="true"><span style="width:${100 * done / total}%"></span></div>
+    <div class="sheet q"><div class="kind">${esc(kindLabel)}</div>${inner}</div></div>`;
+  $("#quit").onclick = () => S.results.length ? summary() : home();
+  if ($("#prev")) $("#prev").onclick = goBack;
+  window.scrollTo(0, 0);
+}
+// ---------- going back ----------
+// Earlier steps are shown again as their word's lesson card (read-only): answers already given keep their grade.
+// S.back counts how many steps behind the current one (S.i) the screen is.
+const reviewable = it => it && (it.kind === "intro" || it.kind === "teach" || it.kind === "ex");
+function prevIndex() {
+  for (let j = S.i - (S.back || 0) - 1; j >= 0; j--) if (reviewable(S.queue[j])) return j;
+  return -1;
+}
+function goBack() {
+  if (S.pending && !S.back) { flushPending(); S.i++; }  // an answer on screen counts before leaving it
+  const j = prevIndex();
+  if (j < 0) return;
+  S.back = S.i - j;
+  step();
+}
+function goForward() {
+  do S.back--; while (S.back > 0 && !reviewable(S.queue[S.i - S.back]));
+  step();
+}
+function step() {
+  if (S.back > 0) {
+    const it = S.queue[S.i - S.back];
+    return it.kind === "intro" ? renderIntro(it, true) : renderTeach(DB.cards[it.id], true);
+  }
+  if (S.i >= S.queue.length) return summary();
+  const it = S.queue[S.i];
+  if (it.kind === "intro") return renderIntro(it);
+  if (it.kind === "teach") return renderTeach(DB.cards[it.id]);
+  if (it.kind === "pair") return renderPair(it);
+  return renderExercise(it);
+}
+function advance() { S.i++; step(); }
+
+function renderIntro(it, review) {
+  const cs = it.ids.map(id => DB.cards[id]);
+  frame(review ? t("k.back") : t("k.new"), `
+    <h2 style="font-size:1.6rem;margin-top:6px">${[...new Set(cs.map(c => c.group))].map(g => esc(glabel(g))).join("<br>")}</h2>
+    <p class="prompt">${t("intro.p", cs.length)}</p>
+    <div class="words" lang="da">${cs.map(c => `<span class="word">${esc(c.word)}</span>`).join("")}</div>
+    <button class="btn solid next" id="nx">${review ? t("b.next") + " →" : t("b.start")}</button>`);
+  bindNext(review ? goForward : advance);
+}
+
+// DDO definitions with the English translation in small print under each
+function ddoSenses(d, n) {
+  return d.senses.slice(0, n).map((s, i) => `<div lang="da" style="margin-top:4px">${d.senses.length > 1 ? `<b>${i + 1}.</b> ` : ""}${esc(s)}</div>${
+    d.senses_en && d.senses_en[i] ? `<div class="en-def" lang="en">${esc(d.senses_en[i])}</div>` : ""}`).join("");
+}
+// words with more than one meaning (senses.json): one block per meaning with its own example and exam sentences
+function senseBlocks(c, perSense, withTr) {
+  const info = DB.senses[c.id];
+  const ex = examSentences(c);
+  const exLine = e => `<div class="ex" lang="da"><span class="tag">${esc(e.src)}</span><span>${hlSentence(c, e.s, e.m)}</span>${withTr ? trLink(e.s) : ""}</div>`;
+  return info.senses.map((sn, i) => {
+    const mine = ex.filter(e => e.sense === sn.id).slice(0, perSense);
+    return `<div class="sense"><div class="sh">${info.senses.length > 1 ? `<span class="num">${i + 1}</span>` : ""}<b lang="en">${esc(sn.en)}</b><span class="soft" lang="da">${esc(sn.da)}</span></div>
+      <div class="eg"><div class="ex" lang="da"><span class="sentence">${hlSentence(c, sn.example)}</span>${withTr ? trLink(sn.example) : ""}</div></div>
+      ${mine.length ? mine.map(exLine).join("") : `<div class="none">${t("s.noexam")}</div>`}</div>`;
+  }).join("") + (info.note ? `<div class="sensenote" lang="da">${esc(info.note)}</div>` : "");
+}
+function ruleBlock(c) {
+  const w = wtype(c);
+  if (!w) return "";
+  return w.split("/").map(k => RULES[k] ? `<div class="note"><b class="t">${RULES[k][0]}</b><div>${rule(k)}</div><div class="demo" lang="da">${RULES[k][3]}</div></div>` : "").join("");
+}
+// the word-type label is shown as a tag already
+function noteText(c) { return (c.note || "").replace(/^(SUB\/PRÆP|SUB\/ADV|SUB|ADV|KOO|PRÆP)\s*(—\s*)?/, ""); }
+function renderTeach(c, review) {
+  const ex = examSentences(c).slice(0, 2);
+  const d = c.dict;
+  const pairs = partnerPairs(c.id);
+  const extraNote = noteText(c);
+  frame(review ? t("k.back") : t("k.learn"), `
+    <div class="head" style="margin-top:6px"><span class="big" lang="da">${esc(c.word)}</span>${wtype(c) ? `<span class="tag">${esc(wtype(c))}</span>` : ""}<span class="badge t${prio(c.group)}">${esc(glabel(c.group))}</span></div>
+    <div class="meaning">${esc(c.meaning)}</div>
+    ${extraNote ? `<div class="soft" lang="da" style="margin-top:4px">${esc(extraNote)}</div>` : ""}
+    ${wtype(c) ? `<div class="block"><span class="lbl">${t("t.order")}</span>${ruleBlock(c)}</div>` : ""}
+    ${DB.senses[c.id] ? `<div class="block"><span class="lbl">${DB.senses[c.id].senses.length > 1 ? `${t("t.senses")} · ${t("t.senses.s")}` : t("t.sense1")}</span>${senseBlocks(c, 1, false)}</div>` : `
+    <div class="block"><div class="eg"><span class="lbl">${t("t.example")}</span><div class="sentence" lang="da">${hlSentence(c, c.example)}</div></div></div>
+    ${ex.length ? `<div class="block"><span class="lbl">${t("t.exam")}</span>${ex.map(e => `<div class="ex" lang="da"><span class="tag">${esc(e.src)}</span>${hlSentence(c, e.s, e.m)}</div>`).join("")}</div>` : ""}`}
+    ${d ? `<div class="block"><div class="ddo"><span class="lbl">${t("t.ddo")}</span><div class="soft small">${esc(d.pos)}</div>${ddoSenses(d, 2)}${d.cite.slice(0, 1).map(x => `<blockquote lang="da">${esc(x)}</blockquote>`).join("")}<div class="cite"><a href="${esc(d.url)}" target="_blank" rel="noopener">ordnet.dk ↗</a></div></div></div>` : ""}
+    ${pairs.map(p => { const o = DB.cards[p[0] === c.id ? p[1] : p[0]]; return `<div class="block"><div class="warnbox"><b>${t("t.mix")}</b> <span lang="da">${esc(c.word)} / ${esc(o.word)}</span> — ${esc(tip(p))}</div></div>`; }).join("")}
+    <div class="row next"><button class="btn solid" id="nx">${review ? t("b.next") + " →" : t("b.got")}</button><button class="btn quiet morebtn" id="more">${t("b.more")}</button></div>`);
+  $("#more").onclick = () => explain(c);
+  bindNext(review ? goForward : advance);
+}
+
+// ---------- exercises ----------
+function orderTokens(c) {
+  const s = c.example || "";
+  if (/[…:;()]|\.\s|\?\s/.test(s.slice(0, -1))) return null;
+  const toks = s.replace(/[.!?]$/, "").split(/\s+/).map(x => x.replace(/,$/, "")).filter(Boolean);
+  return toks.length >= 4 && toks.length <= 11 ? toks : null;
+}
+function clozeSource(c) {
+  if (c.word.includes("…")) return null;
+  const sp = c.example && findSpan(c, c.example);
+  // a lone exam sentence lacks the context that decides between connectors (derfor vs ligeledes both fit
+  // "… findes ___ også …"), so connectors use their example, written with that context; content words use the exam
+  if (c.priority === 1 && sp) return { s: c.example, span: sp, src: "example" };
+  const srcs = examSentences(c).map(e => ({ s: e.s, span: e.m, src: e.src }));
+  if (sp) srcs.push({ s: c.example, span: sp, src: "example" });
+  return srcs.length ? pick(srcs.slice(0, 3)) : null;
+}
+function eligibleTypes(c, first) {
+  const ts = [["meaning", 1], ["produce", 2]];
+  if (clozeSource(c)) ts.push(["cloze", 2]);
+  if (c.priority === 1) {
+    ts.push(["relation", 1]);
+    if (cards().filter(x => x.group === c.group).length > 1) ts.push(["odd", 1]);
+    if (wtype(c) && orderTokens(c)) ts.push(["order", 3]);
+  }
+  // a brand-new word is tested with recognition first
+  return first ? ts.filter(([k]) => ["meaning", "cloze", "relation"].includes(k)) : ts;
+}
+function chooseType(c, first) {
+  let ts = eligibleTypes(c, first).filter(([k]) => k !== S.lastType);
+  if (!ts.length) ts = eligibleTypes(c, first);
+  let r = Math.random() * ts.reduce((a, [, w]) => a + w, 0);
+  for (const [k, w] of ts) if ((r -= w) < 0) return k;
+  return ts[0][0];
+}
+function distractors(c, n, filter) {
+  const pool = shuffle(cards().filter(x => x.id !== c.id && x.group !== c.group && filter(x)));
+  const out = [], seen = new Set([norm(c.meaning), norm(c.word)]);
+  for (const x of pool) {
+    if (seen.has(norm(x.meaning)) || seen.has(norm(x.word))) continue;
+    seen.add(norm(x.meaning)); seen.add(norm(x.word)); out.push(x);
+    if (out.length === n) break;
+  }
+  return out;
+}
+const sameKind = c => { const w = norm(c.word); return w.startsWith("at ") ? x => norm(x.word).startsWith("at ") : /^(en|et) /.test(w) ? x => /^(en|et) /.test(norm(x.word)) : x => (x.priority || 3) === (c.priority || 3) && !/^(at|en|et) /.test(norm(x.word)); };
+
+function renderExercise(it) {
+  const c = DB.cards[it.id];
+  const type = it.type || chooseType(c, it.first);
+  it.type = type;
+  S.lastType = type;
+  S.t0 = performance.now();
+  const label = t(it.practice ? "k.practice" : it.first ? "k.first" : "k.review") + " · " + t("x." + type);
+  ({ meaning: exMeaning, produce: exProduce, cloze: exCloze, relation: exRelation, order: exOrder, odd: exOdd })[type](c, label, it);
+}
+
+function mc(label, head, options, correctIdx, onDone) {
+  frame(label, `${head}<div class="opts">${options.map((o, i) => `<button class="btn opt" data-i="${i}"><span class="k">${i + 1}</span><span>${o}</span></button>`).join("")}</div><div id="fb"></div>`);
+  const btns = [...document.querySelectorAll(".opt")];
+  const choose = i => {
+    if (btns[0].disabled) return;
+    btns.forEach(b => b.disabled = true);
+    btns[correctIdx].classList.add("right");
+    if (i !== correctIdx) btns[i].classList.add("wrong");
+    onDone(i === correctIdx);
+  };
+  btns.forEach(b => b.onclick = () => choose(+b.dataset.i));
+  S.keys = e => { const n = +e.key; if (n >= 1 && n <= options.length) choose(n - 1); };
+}
+const quick = () => performance.now() - S.t0 < 6000;
+
+function exMeaning(c, label, it) {
+  const opts = shuffle([c, ...distractors(c, 3, x => (x.priority || 3) === (c.priority || 3))]);
+  mc(label, `<p class="prompt">${t("q.meaning")}</p><div class="big" lang="da">${esc(c.word)}</div>`,
+    opts.map(o => esc(o.meaning)), opts.indexOf(c),
+    ok => feedback(c, it, ok ? (quick() ? 5 : 4) : 2, ok, ok ? "" : `<b lang="da">${esc(c.word)}</b> = ${esc(c.meaning)}`, ok ? null : "moderate"));
+}
+
+function exRelation(c, label, it) {
+  const groups = shuffle([c.group, ...shuffle(GROUP_ORDER.filter(g => prio(g) === 1 && g !== c.group && !(ALSO[c.id] || []).includes(g))).slice(0, 3)]);
+  mc(label, `<p class="prompt">${t("q.relation")}</p><div class="big" lang="da">${esc(c.word)}</div>`,
+    groups.map(g => esc(glabel(g))), groups.indexOf(c.group),
+    ok => feedback(c, it, ok ? 4 : 2, ok, `<b lang="da">${esc(c.word)}</b> (${esc(c.meaning)}) → ${esc(glabel(c.group))}`, ok ? null : "moderate"));
+}
+
+function exCloze(c, label, it) {
+  const src = clozeSource(c);
+  // same word class (and same word-order type for connectors), so the choice is about meaning, not grammar
+  const opts = shuffle([c, ...distractors(c, 3, x => sameKind(c)(x) && !x.word.includes("…") && (!wtype(c) || wtype(x) === wtype(c)))]);
+  if (opts.length < 3) { it.type = "meaning"; return exMeaning(c, label, it); }
+  const [a, b] = src.span;
+  const gapped = `${esc(src.s.slice(0, a))}<span class="gap">&nbsp;</span>${esc(src.s.slice(b))}`;
+  const inflected = norm(src.s.slice(a, b)) !== norm(c.word.replace(/^(at|en|et) /, ""));
+  mc(label, `<p class="prompt">${t("q.cloze")}${inflected ? t("q.base") : ""} ${src.src !== "example" ? `<span class="tag">${esc(src.src)}</span>` : ""}</p><div class="sentence" lang="da">${gapped}</div>`,
+    opts.map(o => `<span lang="da">${esc(o.word)}</span>`), opts.indexOf(c),
+    ok => feedback(c, it, ok ? (quick() ? 5 : 4) : 2, ok,
+      `<div class="sentence" lang="da">${hlSentence(c, src.s, src.span)}</div><div class="small"><span lang="da">${esc(c.word)}</span> = ${esc(c.meaning)}</div>`, ok ? null : "moderate"));
+}
+
+function exOdd(c, label, it) {
+  const mate = pick(cards().filter(x => x.group === c.group && x.id !== c.id));
+  const others = [];
+  shuffle(cards().filter(x => x.priority === 1 && x.group !== c.group)).forEach(x => { if (others.length < 2 && !others.some(o => o.group === x.group)) others.push(x); });
+  const opts = shuffle([c, mate, ...others]);
+  frame(label, `<p class="prompt">${t("q.odd")}</p>
+    <div class="opts">${opts.map((o, i) => `<button class="btn opt" data-i="${i}"><span class="k">${i + 1}</span><span lang="da">${esc(o.word)}</span></button>`).join("")}</div><div id="fb"></div>`);
+  const btns = [...document.querySelectorAll(".opt")], sel = new Set();
+  const toggle = i => {
+    if (btns[0].disabled) return;
+    sel.has(i) ? sel.delete(i) : sel.add(i);
+    btns[i].classList.toggle("sel");
+    if (sel.size < 2) return;
+    btns.forEach(b => b.disabled = true);
+    const ok = [...sel].every(j => opts[j].group === c.group);
+    opts.forEach((o, j) => { btns[j].classList.remove("sel"); if (o.group === c.group) btns[j].classList.add("right"); else if (sel.has(j)) btns[j].classList.add("wrong"); });
+    feedback(c, it, ok ? 4 : 2, ok, t("f.both", `<b lang="da">${esc(c.word)}</b>`, `<b lang="da">${esc(mate.word)}</b>`, esc(glabel(c.group))) + " " +
+      opts.filter(o => o.group !== c.group).map(o => `<span lang="da">${esc(o.word)}</span> = ${esc(gname(o.group))}`).join(" · "), ok ? null : "moderate");
+  };
+  btns.forEach(b => b.onclick = () => toggle(+b.dataset.i));
+  S.keys = e => { const n = +e.key; if (n >= 1 && n <= 4) toggle(n - 1); };
+}
+
+function letters() { return `<div class="letters">${["æ", "ø", "å"].map(l => `<button type="button" data-l="${l}">${l}</button>`).join("")}</div>`; }
+function bindLetters(input) {
+  document.querySelectorAll("[data-l]").forEach(b => b.onclick = () => {
+    const p = input.selectionStart ?? input.value.length;
+    input.value = input.value.slice(0, p) + b.dataset.l + input.value.slice(input.selectionEnd ?? p);
+    input.focus(); input.setSelectionRange(p + 1, p + 1);
+    input.dispatchEvent(new Event("input"));
+  });
+}
+function exProduce(c, label, it) {
+  frame(label, `<p class="prompt">${t("q.produce")}</p>
+    <div class="meaning" style="font-size:1.5rem">${esc(c.meaning)}</div>
+    <div class="soft small">${esc(glabel(c.group))}${wtype(c) ? " · " + esc(wtype(c)) : ""}</div>
+    <input class="answer" id="ans" lang="da" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="${t("q.ph")}">${letters()}
+    <div class="row next"><button class="btn solid" id="chk">${t("b.check")}</button><button class="btn quiet" id="idk">${t("b.idk")}</button></div><div id="fb"></div>`);
+  const input = $("#ans");
+  input.focus(); bindLetters(input);
+  const check = give => {
+    if (input.disabled) return;
+    const v = input.value.trim();
+    if (!v && !give) return;
+    // another deck word with an overlapping meaning (however → dog / imidlertid): not wrong, ask for the other one
+    const gloss = s => new Set(s.toLowerCase().split(/[,/;()]+/).map(x => x.trim()).filter(Boolean));
+    const twin = !give && !isAnswer(c, v) && cards().find(x => x.id !== c.id && isAnswer(x, v) && [...gloss(x.meaning)].some(g => gloss(c.meaning).has(g)));
+    if (twin) {
+      $("#fb").innerHTML = `<div class="feedback ok"><h3>${t("f.twin", esc(twin.word))}</h3><div class="why">${t("f.twin.p")}</div></div>`;
+      input.value = ""; input.focus();
+      return;
+    }
+    input.disabled = true; $("#chk").remove(); $("#idk").remove();
+    const answer = `<b lang="da">${esc(c.word)}</b><div class="small" lang="da">${hlSentence(c, c.example)}</div>`;
+    if (!give && isAnswer(c, v)) return feedback(c, it, performance.now() - S.t0 < 9000 ? 5 : 4, true, answer);
+    if (!give && nearMiss(c, v)) return feedback(c, it, 3, true, t("f.spelling", `<b lang="da">${esc(c.word)}</b>`, esc(v)), "minor", t("f.almost"));
+    feedback(c, it, give ? 0 : 1, false, (v ? t("f.wrote", esc(v)) : "") + answer, give ? null : "moderate", null, !give);
+  };
+  $("#chk").onclick = () => check(false);
+  $("#idk").onclick = () => check(true);
+  S.keys = e => { if (e.key === "Enter" && document.activeElement === input) { e.preventDefault(); check(false); } };
+}
+
+function exOrder(c, label, it) {
+  const toks = orderTokens(c);
+  const rest = toks.slice(1);
+  let tiles = shuffle(rest.map((x, i) => ({ t: x, i })));
+  for (let n = 0; n < 5 && tiles.map(x => x.t).join(" ") === rest.join(" "); n++) tiles = shuffle(tiles);
+  const placed = [];
+  let tries = 0;
+  frame(label, `<p class="prompt">${t("q.order", `<b lang="da">${esc(c.word)}</b> <span class="tag">${esc(wtype(c))}</span>`)}</p>
+    <div class="built" id="built" lang="da"></div><div class="tiles" id="tiles" lang="da"></div>
+    <div class="row next"><button class="btn solid" id="chk" disabled>${t("b.check")}</button><button class="btn quiet" id="clr">${t("b.clear")}</button><button class="btn quiet" id="idk">${t("b.show")}</button></div><div id="fb"></div>`);
+  const draw = () => {
+    $("#built").innerHTML = `<span class="tile fixed">${esc(toks[0])}</span>` + placed.map((x, k) => `<button class="tile" data-k="${k}">${esc(x.t)}</button>`).join("");
+    $("#tiles").innerHTML = tiles.map((x, k) => `<button class="tile${placed.includes(x) ? " used" : ""}" data-t="${k}">${esc(x.t)}</button>`).join("");
+    document.querySelectorAll("[data-t]").forEach(b => b.onclick = () => { if (!placed.includes(tiles[+b.dataset.t])) { placed.push(tiles[+b.dataset.t]); draw(); } });
+    document.querySelectorAll("[data-k]").forEach(b => b.onclick = () => { placed.splice(+b.dataset.k, 1); draw(); });
+    $("#chk").disabled = placed.length !== rest.length;
+  };
+  draw();
+  const right = `<div class="sentence" lang="da">${hlSentence(c, c.example)}</div>`;
+  const finish = (q, ok, sev) => {
+    ["#chk", "#clr", "#idk"].forEach(s => $(s)?.remove());
+    document.querySelectorAll(".tile").forEach(b => b.disabled = true);
+    feedback(c, it, q, ok, right + `<div class="why">${rule(wtype(c).split("/")[0]) || ""}</div>`, sev, null, false, ok ? null : c.example);
+  };
+  $("#chk").onclick = () => {
+    const ok = placed.map(x => x.t.toLowerCase()).join(" ") === rest.join(" ").toLowerCase();
+    tries++;
+    if (ok) return finish(tries === 1 ? 5 : 3, true);
+    if (tries === 1) {
+      $("#built").classList.remove("shake"); void $("#built").offsetWidth; $("#built").classList.add("shake");
+      $("#fb").innerHTML = `<div class="feedback bad"><h3>${t("f.retry")}</h3><div class="why">${t("f.retry.p", `<b lang="da">${esc(c.word)}</b>`)}</div></div>`;
+      return;
+    }
+    finish(1, false, "critical");
+  };
+  $("#clr").onclick = () => { placed.length = 0; draw(); };
+  $("#idk").onclick = () => finish(1, false, "critical");
+  S.keys = e => { if (e.key === "Enter" && !$("#chk")?.disabled) $("#chk")?.click(); };
+}
+
+// ---------- feedback + grading ----------
+// q follows vocab.md: 5 instant · 4 after hesitation · 3 small slip · 2 recognised when shown · 1 vaguely · 0 blank
+function feedback(c, it, q, ok, body, severity, headText, canOverride, retype) {
+  S.pending = { id: c.id, q, ok, practice: it.practice || S.graded.has(c.id) };
+  const why = c.note ? `<div class="why soft small" lang="da">${esc(c.note)}</div>` : "";
+  const sevTag = severity ? `<span class="sev ${severity}">${t("sev." + severity)}</span>` : "";
+  $("#fb").innerHTML = `<div class="feedback ${ok ? "ok" : "bad"}">
+      <h3>${sevTag}${headText || (ok ? t("f.right") : t("f.wrong"))}</h3>
+      <div class="why">${body}</div>${why}
+      ${retype ? `<div style="margin-top:12px"><div class="small"><b>${t("f.retype")}</b> ${t("f.retype.s")}</div><input class="answer" id="rt" lang="da" autocomplete="off" spellcheck="false" style="margin-top:6px">${letters()}</div>` : ""}
+    </div>
+    <div class="row next"><button class="btn solid" id="nx" ${retype ? "disabled" : ""}>${t("b.next")}</button>
+      ${canOverride ? `<button class="btn quiet" id="ov">${t("b.override")}</button>` : ""}
+      ${retype ? `<button class="btn quiet" id="skip">${t("b.skip")}</button>` : ""}
+      <button class="btn quiet" id="more">${t("b.more")}</button>
+      <span class="spacer"></span><span class="soft small">${S.pending.practice ? t("f.practice") : t("f.grade", q)}</span></div>`;
+  $("#more").onclick = () => explain(c);
+  if (retype) {
+    const r = $("#rt"); r.focus(); bindLetters(r);
+    r.oninput = () => { $("#nx").disabled = norm(r.value) !== norm(retype); if (!$("#nx").disabled) $("#nx").focus(); };
+    $("#skip").onclick = () => { $("#nx").disabled = false; $("#nx").focus(); };
+  }
+  if (canOverride) $("#ov").onclick = () => { S.pending.q = 4; S.pending.ok = true; $(".feedback").className = "feedback ok"; $(".feedback h3").textContent = t("f.counted"); $("#ov").remove(); };
+  bindNext(commit);
+}
+function commit() {
+  $("#nx") && ($("#nx").disabled = true);
+  flushPending();
+  advance();
+}
+function flushPending() {
+  const p = S.pending;
+  if (!p) return;
+  S.pending = null;
+  if (!p.practice) {
+    grade(p.id, p.q);
+    S.graded.add(p.id);
+    S.results.push({ id: p.id, q: p.q });
+    if (p.q < 3) {
+      // relearn later in this session with another exercise type, and drill its confusable partner
+      S.queue.splice(Math.min(S.i + 4, S.queue.length), 0, { kind: "ex", id: p.id, practice: true });
+      const pr = partnerPairs(p.id)[0];
+      if (pr && !S.queue.some(x => x.kind === "pair" && x.pair === pr)) S.queue.splice(Math.min(S.i + 2, S.queue.length), 0, { kind: "pair", pair: pr });
+    }
+  }
+}
+
+function renderPair(it) {
+  const [a, b] = it.pair;
+  const A = DB.cards[a], B = DB.cards[b];
+  const items = shuffle([A, B]).map(c => {
+    const s = (c.example && findSpan(c, c.example)) ? { s: c.example, span: findSpan(c, c.example) } :
+      examSentences(c)[0] ? { s: examSentences(c)[0].s, span: examSentences(c)[0].m } : null;
+    return s && { c, ...s };
+  }).filter(Boolean);
+  let k = 0;
+  const one = () => {
+    if (k >= items.length) return;
+    const x = items[k], opts = [A, B];
+    const gapped = `${esc(x.s.slice(0, x.span[0]))}<span class="gap">&nbsp;</span>${esc(x.s.slice(x.span[1]))}`;
+    mc(`${t("s.conf")} · ${A.word} / ${B.word}`, `<p class="prompt">${t("q.pair", k + 1, items.length)}</p><div class="sentence" lang="da">${gapped}</div>`,
+      opts.map(o => `<b lang="da">${esc(o.word)}</b> <span class="soft">· ${esc(o.meaning)}</span>`), opts.indexOf(x.c), ok => {
+        $("#fb").innerHTML = `<div class="feedback ${ok ? "ok" : "bad"}"><h3>${ok ? t("f.right") : t("f.its", esc(x.c.word))}</h3>
+          <div class="why sentence" lang="da">${hlSentence(x.c, x.s, x.span)}</div>
+          ${k === items.length - 1 ? `<div class="pair"><div><b lang="da">${esc(A.word)}</b><br>${esc(A.meaning)}<div class="small soft" lang="da">${esc(A.note || "")}</div></div><div><b lang="da">${esc(B.word)}</b><br>${esc(B.meaning)}<div class="small soft" lang="da">${esc(B.note || "")}</div></div></div><div class="why"><b>${t("f.rule")}</b> ${esc(tip(it.pair))}</div>` : ""}
+          </div><div class="row next"><button class="btn solid" id="nx">${t("b.next")}</button><button class="btn quiet" id="more">${t("b.more")}: <span lang="da">${esc(x.c.word)}</span></button><span class="spacer"></span><span class="soft small">${t("f.practice")}</span></div>`;
+        $("#more").onclick = () => explain(x.c);
+        bindNext(() => { k++; if (k < items.length) one(); else advance(); });
+      });
+  };
+  if (!items.length) return advance();
+  one();
+}
+
+// ---------- find a word ----------
+// the study sheet's own list (data/words.json on the site) has its own groups; it's fetched once when the finder opens
+let SITE_WORDS = null;   // null = not loaded, false = failed, else {words, groups}
+async function loadSiteWords() {
+  if (SITE_WORDS !== null) return SITE_WORDS;
+  const base = location.protocol === "file:" ? SITE : "";
+  try {
+    const [w, g] = await Promise.all(["data/words.json", "data/groups.json"].map(async u => { const r = await fetch(base + u); if (!r.ok) throw 0; return r.json(); }));
+    SITE_WORDS = { words: w, groups: Object.fromEntries(g.map(x => [x.id, x])) };
+  } catch (e) { SITE_WORDS = false; }
+  return SITE_WORDS;
+}
+const fold = s => norm(s).replace(/æ/g, "ae").replace(/ø/g, "oe").replace(/å/g, "aa").replace(/aa/g, "a");
+// one entry per Danish word, merging the coach deck and the study sheet
+let WI = null, WI_SITE;
+function wordIndex() {
+  if (WI && WI_SITE === SITE_WORDS) return WI;
+  const idx = new Map();
+  const get = key => { if (!idx.has(key)) idx.set(key, { key, word: null, meaning: "", card: null, site: null, forms: new Set(), en: "" }); return idx.get(key); };
+  for (const c of cards()) {
+    const e = get(fold(c.word)); e.word = c.word; e.card = c; e.meaning = c.meaning; e.en += " " + c.meaning;
+    variants(c.word).forEach(v => e.forms.add(v));
+  }
+  for (const w of SITE_WORDS ? SITE_WORDS.words : []) {
+    const k = fold(w.display);
+    // join to a coach card when one of its look-up forms is this word
+    const hit = [...idx.values()].find(e => e.card && [...e.forms].some(f => fold(f) === k));
+    const e = hit || get(k);
+    e.site = w; e.word = e.word || w.display;
+    const en = (w.senses || []).map(s => s.en_definition || "").join(" ");
+    e.en += " " + en;
+    if (!e.meaning) e.meaning = ((w.senses || [])[0]?.en_definition || "").replace(/\s+[–-]\s+.*$/, "");
+    [w.display, w.lemma, ...(w.forms || [])].filter(Boolean).forEach(v => e.forms.add(norm(v)));
+  }
+  WI_SITE = SITE_WORDS;
+  return (WI = [...idx.values()]);
+}
+const ABBR = { "bl a": "blandt andet", "fx": "for eksempel", "f eks": "for eksempel", "dvs": "det vil sige", "mht": "med hensyn til",
+  "pga": "på grund af", "ift": "i forhold til", "osv": "og så videre", "evt": "eventuelt", "ca": "cirka", "iflg": "ifølge", "vha": "ved hjælp af" };
+// bare stems of a typed word, so "medfører", "medførte", "konsekvenser" find "at medføre", "konsekvens"
+function stems(f) {
+  const out = new Set([f]);
+  for (const end of ["ede", "ende", "erne", "ene", "er", "en", "et", "ne", "de", "te", "r", "e", "s"])
+    if (f.endsWith(end) && f.length - end.length >= 3) { const b = f.slice(0, -end.length); out.add(b); out.add(b + "e"); }
+  return out;
+}
+function searchWords(q) {
+  q = ABBR[norm(q).replace(/\.$/, "")] || q;
+  const f = fold(q);
+  if (!f) return [];
+  const fs = stems(f);
+  const out = [];
+  for (const e of wordIndex()) {
+    let best = null;
+    for (const v of e.forms) {
+      const fv = fold(v);
+      const sc = fv === f ? 0 : fv.startsWith(f) ? 1 : fs.has(fv) ? 1.5 : (f.length >= 3 && fv.includes(f)) ? 2 : null;
+      if (sc !== null && (!best || sc < best.sc)) best = { sc, form: v };
+    }
+    if (!best && f.length >= 3 && new RegExp(`\\b${f.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`).test(fold(e.en))) best = { sc: 3, en: true };
+    if (best) out.push({ e, ...best });
+  }
+  return out.sort((a, b) => a.sc - b.sc || a.e.word.length - b.e.word.length).slice(0, 12);
+}
+function nearWords(q) {
+  const f = fold(q);
+  return wordIndex().map(e => ({ e, d: Math.min(...[...e.forms].map(v => lev(fold(v), f))) }))
+    .filter(x => x.d <= Math.max(2, Math.floor(f.length / 3))).sort((a, b) => a.d - b.d).slice(0, 6).map(x => x.e);
+}
+function hitCard(x) {
+  const e = x.e, c = e.card, w = e.site;
+  const sg = w ? (w.groups || [w.primary_group]).map(id => SITE_WORDS.groups[id]).filter(Boolean) : [];
+  const via = x.en ? t("f.viaen") : (x.form && fold(x.form) !== fold(e.word) && x.sc === 0) ? t("f.viaform", x.form) : "";
+  return `<div class="sheet hit">
+    <div class="head"><span class="big" lang="da">${esc(e.word)}</span>${c && wtype(c) ? `<span class="tag">${esc(wtype(c))}</span>` : w ? `<span class="tag">${esc(w.word_class || "")}</span>` : ""}</div>
+    ${e.meaning ? `<div class="meaning">${esc(e.meaning)}</div>` : ""}${via ? `<div class="via">${esc(via)}</div>` : ""}
+    <div class="cats">
+      <div class="cat"><span class="src">${t("f.al")}</span>${c ? `<span class="badge t${prio(c.group)}">${esc(t("p." + prio(c.group)))}</span><span class="gname">${esc(gname(c.group))} <small>· ${esc(GROUPS[c.group] ? GROUPS[c.group][LANG === "en" ? 1 : 0] : "")}</small></span>` : `<span class="soft">${t("f.notal")}</span>`}</div>
+      ${SITE_WORDS ? `<div class="cat"><span class="src">${t("f.site")}</span>${sg.length ? sg.map((g, i) => `<span class="gname">${esc(LANG === "en" ? g.name_en : g.name_da)} <small>· ${esc(LANG === "en" ? g.name_da : g.name_en)}</small></span>`).join(`<span class="soft">+</span>`) : `<span class="soft">${t("f.notsite")}</span>`}</div>` : ""}
+    </div>
+    ${c ? `<div class="row"><button class="btn" data-explain="${esc(c.id)}">${t("b.more")}</button><button class="btn quiet" data-practise="${esc(c.group)}">${t("f.pract")} →</button></div>` : ""}
+  </div>`;
+}
+async function findView(q0) {
+  S = null;
+  const k = counts();
+  $("#app").innerHTML = `<div class="narrow">
+    <div class="top"><h1><span class="light">${t("f.h1a")}</span>${t("f.h1b")}</h1><p>${t("f.intro")}</p>
+      <div class="finder"><input id="fq" type="search" lang="da" autocomplete="off" spellcheck="false" placeholder="${esc(t("f.ph"))}" aria-label="${esc(t("nav.find"))}">${letters()}</div>
+      <p class="soft small" id="fmeta" style="margin-top:8px"></p></div>
+    <div class="hits" id="hits" aria-live="polite"></div></div>`;
+  const input = $("#fq"); bindLetters(input);
+  input.value = q0 || ""; input.focus();
+  const meta = () => { $("#fmeta").textContent = SITE_WORDS === null ? t("f.loading") : SITE_WORDS === false ? t("f.offline") : t("f.count", k.total, SITE_WORDS.words.length); };
+  const draw = () => {
+    const q = input.value.trim();
+    history.replaceState(null, "", "#find" + (q ? "=" + encodeURIComponent(q) : ""));
+    if (!q) { $("#hits").innerHTML = ""; return; }
+    const hits = searchWords(q);
+    if (hits.length) $("#hits").innerHTML = hits.map(hitCard).join("");
+    else {
+      const near = nearWords(q);
+      // a close spelling is most likely what was meant: show it in full, the rest as chips
+      $("#hits").innerHTML = `<div class="sheet hit"><b>${esc(t("f.none", q))}</b>
+        ${near.length > 1 ? `<div class="row"><span class="soft">${t("f.near")}</span>${near.map(e => `<button type="button" class="pchip" data-q="${esc(e.word)}" lang="da">${esc(e.word)}</button>`).join("")}</div>` : ""}
+        <p class="small" style="margin-top:12px"><a href="https://ordnet.dk/ddo/ordbog?query=${encodeURIComponent(q)}" target="_blank" rel="noopener">${esc(t("f.ddo", q))}</a></p></div>
+        ${near.length ? `<span class="lbl" style="margin:6px 0 -4px">${t("f.near")}</span>${hitCard({ e: near[0] })}` : ""}`;
+    }
+    $("#hits").querySelectorAll("[data-explain]").forEach(b => b.onclick = () => explain(DB.cards[b.dataset.explain]));
+    $("#hits").querySelectorAll("[data-practise]").forEach(b => b.onclick = () => { setPicked([b.dataset.practise]); location.hash = ""; });
+    $("#hits").querySelectorAll("[data-q]").forEach(b => b.onclick = () => { input.value = b.dataset.q; draw(); input.focus(); });
+  };
+  input.oninput = draw;
+  meta(); draw();
+  await loadSiteWords();
+  if ($("#fq") === input) { meta(); draw(); }
+}
+
+// ---------- explain more ----------
+// translation into English, shown under the sentence; cached per browser so each sentence is fetched once
+const TR_KEY = "pd3-assisted-learning:tr:v1";
+let TR = {};
+try { TR = JSON.parse(localStorage.getItem(TR_KEY) || "{}"); } catch (e) { TR = {}; }
+async function translate(s) {
+  if (TR[s]) return TR[s];
+  const q = encodeURIComponent(s);
+  const tries = [
+    async () => (await (await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=da&tl=en&dt=t&q=${q}`)).json())[0].map(x => x[0]).join(""),
+    async () => { const r = await (await fetch(`https://api.mymemory.translated.net/get?q=${q}&langpair=da|en`)).json(); if (r.responseStatus !== 200) throw 0; return r.responseData.translatedText; },
+  ];
+  for (const f of tries) {
+    try {
+      const out = (await f() || "").trim();
+      if (out) { TR[s] = out; try { localStorage.setItem(TR_KEY, JSON.stringify(TR)); } catch (e) { /* ignore */ } return out; }
+    } catch (e) { /* try the next one */ }
+  }
+  throw new Error("no translation");
+}
+function trLink(s) { return `<button type="button" class="linkbtn tr" data-s="${esc(s)}">${t("m.tr")}</button>`; }
+function bindTr(root) {
+  root.querySelectorAll("button.tr").forEach(b => b.onclick = async () => {
+    const box = b.parentElement, open = box.querySelector(":scope > .trl");
+    if (open) { open.remove(); b.textContent = t("m.tr"); return; }
+    const s = b.dataset.s, line = document.createElement("div");
+    line.className = "trl"; line.lang = "en"; line.setAttribute("aria-live", "polite");
+    line.textContent = t("m.tr.wait"); box.append(line); b.textContent = t("m.tr.hide");
+    try { line.textContent = await translate(s); }
+    catch (e) {
+      line.classList.add("err");
+      line.innerHTML = `${t("m.tr.err")} <a href="https://translate.google.com/?sl=da&tl=en&op=translate&text=${encodeURIComponent(s)}" target="_blank" rel="noopener">${t("m.tr.open")}</a>`;
+    }
+  });
+}
+function explain(c) {
+  let dlg = $("#explain");
+  if (!dlg) {
+    dlg = document.createElement("dialog");
+    dlg.className = "info explain"; dlg.id = "explain"; dlg.setAttribute("aria-labelledby", "exTitle");
+    dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
+    document.body.append(dlg);
+  }
+  const d = c.dict, ex = examSentences(c), pairs = partnerPairs(c.id);
+  const same = x => norm(x.meaning) === norm(c.meaning);
+  const mates = Object.values(DB.cards).filter(x => x.group === c.group && x.id !== c.id)
+    .sort((a, b) => same(b) - same(a) || a.word.localeCompare(b.word, "da"));
+  const lookup = d ? d.url : `https://ordnet.dk/ddo/ordbog?query=${encodeURIComponent(variants(c.word).filter(v => !/^(at|en|et) /.test(v)).pop() || c.word)}`;
+  dlg.innerHTML = `<div class="ib">
+    <div class="ih"><div><span class="lbl" id="exTitle">${t("m.title")}</span><div class="head"><span class="big" lang="da">${esc(c.word)}</span>${wtype(c) ? `<span class="tag">${esc(wtype(c))}</span>` : ""}</div></div>
+      <button type="button" class="btn quiet" id="exClose">${t("info.close")}</button></div>
+    <div class="meaning" style="margin-top:12px">${esc(c.meaning)}</div>
+    ${noteText(c) ? `<div class="soft" lang="da" style="margin-top:4px">${esc(noteText(c))}</div>` : ""}
+    ${DB.senses[c.id] ? "" : `<div class="block"><div class="eg"><span class="lbl">${t("t.example")}</span><div class="ex" lang="da"><span class="sentence">${hlSentence(c, c.example)}</span>${trLink(c.example)}</div></div></div>`}
+    ${wtype(c) ? `<h3>${t("t.order")}</h3>${ruleBlock(c)}` : ""}
+    <h3>${t("m.senses")} <span class="soft">· ${t("t.ddo")}</span></h3>
+    ${d ? `<div class="ddo"><div class="soft small">${esc(d.pos)}</div>${ddoSenses(d, 99)}
+      ${d.cite.length ? `<span class="lbl" style="margin-top:12px">${t("m.cites")}</span>${d.cite.map(x => `<blockquote lang="da"><span>${esc(x)}</span>${trLink(x)}</blockquote>`).join("")}` : ""}
+      <div class="cite"><a href="${esc(d.url)}" target="_blank" rel="noopener">ordnet.dk ↗</a></div></div>`
+      : `<p>${t("m.nodict")} <a href="${esc(lookup)}" target="_blank" rel="noopener">${t("m.lookup")}</a></p>`}
+    ${DB.senses[c.id] ? `<h3>${t("t.senses")} <span class="soft">· ${t("m.exam")}</span></h3>${senseBlocks(c, 99, true)}` :
+      ex.length ? `<h3>${t("m.exam")} <span class="soft">· ${ex.length}</span></h3>${ex.map(e => `<div class="ex" lang="da"><span class="tag">${esc(e.src)}</span><span>${hlSentence(c, e.s, e.m)}</span>${trLink(e.s)}</div>`).join("")}` : ""}
+    ${pairs.map(p => { const o = DB.cards[p[0] === c.id ? p[1] : p[0]]; return `<div class="block"><div class="warnbox"><b>${t("t.mix")}</b> <span lang="da">${esc(c.word)} / ${esc(o.word)}</span> (${esc(o.meaning)}) — ${esc(tip(p))}</div></div>`; }).join("")}
+    ${mates.length ? `<h3>${t("m.mates")} <span class="soft">· ${esc(gname(c.group))} ${t("m.mates.s")}</span></h3>
+      <div class="mates">${mates.map(x => `<button type="button" class="mate${same(x) ? " same" : ""}" data-id="${esc(x.id)}"><b lang="da">${esc(x.word)}</b><span>${esc(x.meaning)}${same(x) ? ` · ${t("m.same")}` : ""}</span></button>`).join("")}</div>` : ""}
+    <p class="small" style="margin-top:18px">${t("m.coach", esc(c.word))}</p></div>`;
+  $("#exClose").onclick = () => dlg.close();
+  bindTr(dlg);
+  dlg.querySelectorAll(".mate").forEach(b => { b.onclick = () => explain(DB.cards[b.dataset.id]); });
+  if (!dlg.open) dlg.showModal();
+  dlg.scrollTop = 0;
+}
+
+// ---------- keyboard ----------
+function bindNext(fn) {
+  S.keys = null;
+  const b = $("#nx");
+  if (b) { b.onclick = fn; setTimeout(() => { if (!document.activeElement || document.activeElement === document.body) b.focus(); }, 0); }
+  S.next = fn;
+}
+document.addEventListener("keydown", e => {
+  if (!S || document.querySelector("dialog[open]")) return;
+  const nx = $("#nx");
+  if (e.key === "Enter" && nx && !nx.disabled && (document.activeElement?.tagName !== "INPUT" || document.activeElement.id === "rt")) { e.preventDefault(); nx.click(); return; }
+  if (e.key === "ArrowLeft" && $("#prev") && document.activeElement?.tagName !== "INPUT") { e.preventDefault(); goBack(); return; }
+  if (S.keys && document.activeElement?.tagName !== "INPUT") S.keys(e);
+  else if (S.keys && e.key === "Enter") S.keys(e);
+});
+
+// ---------- summary ----------
+function summary() {
+  const r = S.results, n = r.length;
+  const right = r.filter(x => x.q >= 3).length;
+  const shaky = r.filter(x => x.q <= 2).map(x => DB.cards[x.id]);
+  const next = {};
+  r.forEach(x => { const d = DB.cards[x.id].due; next[d] = (next[d] || 0) + 1; });
+  const fmt = d => new Date(d + "T12:00").toLocaleDateString(LANG === "en" ? "en-GB" : "da-DK", { weekday: "short", day: "numeric", month: "short" });
+  const title = S.title;
+  S = null;
+  $("#app").innerHTML = `<div class="narrow"><div class="sheet q" style="margin-top:28px">
+    <div class="kind">${t("r.done", esc(title))}</div>
+    ${n ? `<div class="row" style="align-items:baseline;margin-top:10px"><span class="score">${Math.round(100 * right / n)}%</span><span class="soft">${t("r.score", right, n)}</span></div>` : `<p>${t("r.practice")}</p>`}
+    ${shaky.length ? `<div class="block"><span class="lbl">${t("r.shaky")}</span><ul class="list">${shaky.map(c => `<li><b lang="da">${esc(c.word)}</b><span class="soft">${esc(c.meaning)}</span><span class="spacer"></span><span class="small soft">${t("r.tomorrow")}</span></li>`).join("")}</ul></div>` : n ? `<div class="block">${t("r.none")}</div>` : ""}
+    ${n ? `<div class="block"><span class="lbl">${t("r.next")}</span><ul class="list">${Object.keys(next).sort().map(d => `<li>${fmt(d)}<span class="spacer"></span><span class="soft">${t("r.cards", next[d])}</span></li>`).join("")}</ul></div>` : ""}
+    ${n ? `<p class="small soft block">${esc(t("r.coach"))}</p>` : ""}
+    <div class="row next"><button class="btn solid" id="home">${t("r.home")}</button></div></div></div>`;
+  $("#home").onclick = home;
+}
+
+load();
+</script>
+</body>
+</html>

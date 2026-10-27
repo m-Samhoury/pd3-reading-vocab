@@ -1,0 +1,178 @@
+# word	meaning	group	example	priority	note
+# Priority 1 = connectors/conjunctions (drilled first). 2 = words from real exam questions and L3 grids. 3 = other useful words.
+# note: SUB = underordnende konjunktion (ledsætning: subjekt – ikke – verbum) · ADV = konjunktionaladverbium (inversion i starten af sætningen)
+#       KOO = sideordnende konjunktion (ingen ændring) · PRÆP = efterfølges af navneord, ikke sætning
+fordi	because	årsag	Jeg bliver hjemme, fordi jeg ikke har det godt.	1	SUB
+da	because / when (once, in the past)	årsag	Da det regnede, blev vi hjemme.	1	SUB — årsag eller tid (fortid); konteksten afgør
+eftersom	since, as (reason)	årsag	Eftersom bussen ikke kom, tog vi en taxa.	1	SUB — mere formel end fordi
+idet	as, since / at the moment when	årsag	Han takkede nej, idet han ikke havde tid.	1	SUB — formel
+for	because, for	årsag	Hun blev hjemme, for hun var syg.	1	KOO — hovedsætningsordstilling (ikke som fordi)
+nemlig	you see / namely (gives the reason)	årsag	Han kom ikke. Han var nemlig syg.	1	ADV — står efter verbet: "Han var nemlig …"
+på grund af	because of	årsag	Toget var forsinket på grund af sneen.	1	PRÆP
+som følge af	as a result of	årsag	Som følge af krisen mistede mange deres job.	1	PRÆP
+at skyldes	to be due to	årsag	Stigningen skyldes, at der bliver flere ældre.	1	verbum: X skyldes Y
+derfor	therefore	konsekvens	Det regnede. Derfor blev vi hjemme.	1	ADV
+dermed	thereby, thus	konsekvens	Skatten stiger, og dermed falder forbruget.	1	ADV
+således	thus, in this way	konsekvens	Således kan man spare mange penge.	1	ADV — derfor ≈ således (L3: begge forkerte)
+følgelig	consequently	konsekvens	Der kom ingen bus; følgelig kom hun for sent.	1	ADV — formel
+derved	thereby, by doing so	konsekvens	Man cykler og sparer derved penge.	1	ADV
+af den grund	for that reason	konsekvens	Af den grund valgte hun at flytte.	1	ADV
+så	so (result)	konsekvens	Jeg var træt, så jeg gik i seng.	1	KOO — "så" = derfor; "så at" = formål
+hvilket betyder, at	which means that	konsekvens	Priserne stiger, hvilket betyder, at mange må spare.	1	SUB
+desuden	besides, furthermore	tilføjelse	Desuden er det billigt.	1	ADV
+derudover	in addition	tilføjelse	Derudover tilbyder kommunen gratis kurser.	1	ADV — ét ord
+endvidere	furthermore	tilføjelse	Endvidere skal man have en uddannelse.	1	ADV — formel
+ydermere	moreover	tilføjelse	Ydermere er der lange ventelister.	1	ADV — formel
+tilmed	even, on top of that	tilføjelse	Det var dyrt og tilmed dårligt.	1	ADV
+samt	as well as, and	tilføjelse	Prisen omfatter morgenmad samt aftensmad.	1	KOO — formel "og"
+blandt andet	among other things	tilføjelse	Han arbejder blandt andet med unge.	1	ADV — forkortes bl.a.
+ikke kun … men også	not only … but also	tilføjelse	Det er ikke kun dyrt, men også farligt.	1	fast udtryk
+både … og	both … and	tilføjelse	Både børn og voksne kan deltage.	1	KOO
+ligeledes	likewise, also	sammenligning	Eleverne skal ligeledes aflevere en rapport.	1	ADV
+tilsvarende	correspondingly, similarly	sammenligning	Tilsvarende er priserne steget i Sverige.	1	ADV
+ligesom	just like	sammenligning	Ligesom sidste år er der mange ansøgere.	1	SUB/PRÆP
+til sammenligning	by comparison	sammenligning	Til sammenligning tjener en lærer mindre.	1	ADV
+sammenlignet med	compared to	sammenligning	Sammenlignet med 1990 bruger vi mere energi.	1	PRÆP
+i forhold til	compared to / in relation to	sammenligning	Prisen er høj i forhold til kvaliteten.	1	PRÆP
+heller ikke	not … either	sammenligning	Jeg kan heller ikke lide kaffe.	1	negativ lighed
+hverken … eller	neither … nor	sammenligning	Hun har hverken tid eller penge.	1	negativ lighed
+men	but	kontrast	Det er dyrt, men det er godt.	1	KOO — komma før men
+imidlertid	however	kontrast	Planen er god; den er imidlertid dyr.	1	ADV — formel; IKKE "immediately"
+dog	however, though	kontrast	Det er dog ikke alle, der er enige.	1	ADV
+mens	while / whereas	kontrast	Hun læser, mens han laver mad.	1	SUB — tid ELLER modsætning
+hvorimod	whereas	kontrast	Byen vokser, hvorimod landsbyerne affolkes.	1	SUB
+derimod	on the other hand, by contrast	kontrast	Jens elsker sport. Mette derimod hader det.	1	ADV
+til gengæld	on the other hand, in return	kontrast	Lønnen er lav, til gengæld er arbejdstiden fleksibel.	1	ADV — noget negativt opvejes af noget positivt
+omvendt	conversely	kontrast	Omvendt kan det være en fordel for de unge.	1	ADV
+tværtimod	on the contrary	kontrast	Det er ikke billigt, tværtimod.	1	ADV
+i modsætning til	unlike, in contrast to	kontrast	I modsætning til sin bror er han meget stille.	1	PRÆP
+i stedet for	instead of	kontrast	Han tog cyklen i stedet for bilen.	1	PRÆP
+på den ene side … på den anden side	on the one hand … on the other hand	kontrast	På den ene side er det dyrt, på den anden side er det sundt.	1	ADV
+selvom	even though	indrømmelse	Selvom det regner, går vi en tur.	1	SUB — ét ord
+skønt	although	indrømmelse	Skønt han var træt, arbejdede han videre.	1	SUB — formel
+alligevel	nevertheless, anyway	indrømmelse	Det var dyrt, men vi købte det alligevel.	1	ADV
+ikke desto mindre	nonetheless	indrømmelse	Ikke desto mindre valgte han at blive.	1	ADV — formel
+ganske vist	admittedly	indrømmelse	Det er ganske vist dyrt, men det er pengene værd.	1	ADV — efterfølges ofte af "men"
+trods / på trods af	despite, in spite of	indrømmelse	På trods af regnen gik vi en tur.	1	PRÆP
+hvis	if	betingelse	Hvis det regner, bliver vi hjemme.	1	SUB
+såfremt	provided that, if	betingelse	Såfremt du består, kan du starte i august.	1	SUB — formel "hvis"
+forudsat at	provided that	betingelse	Vi kommer, forudsat at vejret er godt.	1	SUB
+medmindre	unless	betingelse	Vi går, medmindre det regner.	1	SUB
+ellers	otherwise	betingelse	Skynd dig, ellers kommer du for sent.	1	ADV — ≠ eller (or)
+for at	in order to	formål	Hun flyttede for at få et bedre job.	1	+ infinitiv
+så (at)	so that	formål	Han talte højt, så alle kunne høre det.	1	SUB
+med henblik på	with a view to	formål	Kurset er tilrettelagt med henblik på job.	1	PRÆP — formel
+undtagen	except	udelukkelse	Alle kom undtagen Peter.	1	PRÆP
+bortset fra	apart from	udelukkelse	Bortset fra vejret var turen god.	1	PRÆP
+frem for	rather than	udelukkelse	Mange vælger toget frem for bilen.	1	PRÆP
+snarere	rather	udelukkelse	Det er snarere et spørgsmål om penge.	1	ADV
+for eksempel (fx)	for example	præcisering	Mange sportsgrene, fx fodbold, er populære.	1	ADV — også f.eks.
+eksempelvis	for instance	præcisering	Eksempelvis kan man tage toget.	1	ADV
+især	especially	præcisering	Især unge bruger sociale medier.	1	ADV
+navnlig	in particular	præcisering	Navnlig ældre har brug for hjælp.	1	ADV — formel "især"
+det vil sige (dvs.)	that is, i.e.	præcisering	Han er pensionist, det vil sige, at han ikke arbejder.	1	fast udtryk
+med andre ord	in other words	præcisering	Med andre ord er der ingen penge.	1	ADV
+herunder	including	præcisering	Alle borgere, herunder børn, skal registreres.	1	ADV
+heldigvis	fortunately	holdning	Heldigvis kom ingen til skade.	1	ADV
+desværre	unfortunately	holdning	Desværre kan jeg ikke komme.	1	ADV
+naturligvis	naturally, of course	holdning	Naturligvis skal man betale skat.	1	ADV
+faktisk	actually, in fact	holdning	Det er faktisk ret billigt.	1	ADV
+overraskende nok	surprisingly	holdning	Overraskende nok var der få deltagere.	1	ADV
+når	when (whenever / future)	tid	Når jeg kommer hjem, ringer jeg.	1	SUB — gentaget eller fremtid; da = én gang i fortiden
+inden	before	tid	Ring, inden du kommer.	1	SUB
+efter at	after	tid	Efter at hun var flyttet, fik hun nyt job.	1	SUB
+efterhånden som	as (gradually)	tid	Efterhånden som man bliver ældre, får man brug for mere søvn.	1	SUB
+siden	since	tid	Siden han flyttede, har vi ikke set ham.	1	SUB/ADV
+derefter	after that, then	tid	Derefter tog vi hjem.	1	ADV
+herefter	after this	tid	Herefter skal man udfylde en formular.	1	ADV
+til sidst	finally, in the end	tid	Til sidst gav han op.	1	ADV
+endelig	finally / at last	tid	Endelig fik hun svar.	1	ADV
+alt i alt	all in all	konklusion	Alt i alt mener jeg, at fordelene vejer tungest.	1	ADV
+samlet set	overall	konklusion	Samlet set er det en god løsning.	1	ADV
+kort sagt	in short	konklusion	Kort sagt kan det ikke betale sig.	1	ADV
+for at konkludere	to conclude	konklusion	For at konkludere: Jeg synes, at …	1	fast udtryk
+næppe	hardly, barely	l1_ord	Jeg nåede det næppe (med nød og næppe).	2	≈ næsten ikke
+næsten ikke	hardly, almost not	l1_ord	Der er næsten ikke nogen, der kommer.	2
+eller	or	l1_ord	Vil du have kaffe eller te?	2	≠ ellers
+kunne	can / could (possibility, ability)	modalverbum	Man kan købe billetter online.	2	+ infinitiv uden "at"
+skulle	shall / have to / be supposed to	modalverbum	Man skal tilmelde sig senest 1. maj.	2	+ infinitiv uden "at"
+måtte	may (permission) / must	modalverbum	Man må ikke ryge på området.	2	må ikke = forbudt
+ville	will / want to	modalverbum	Hun vil gerne læse medicin.	2	+ infinitiv uden "at"
+at betyde	to mean / to matter	l1_verb	Det betyder meget for mig.	2
+at anbefale	to recommend	l1_verb	Vi anbefaler, at du bestiller i god tid.	2
+at fremhæve	to emphasise, highlight	l1_verb	Rapporten fremhæver tre problemer.	2
+at vare	to last	l1_verb	Kurset varer seks uger.	2
+at ansøge (om)	to apply (for)	l1_verb	Man kan ansøge om SU.	2
+at bestille	to book, order	l1_verb	Bestil bord på forhånd.	2
+at optage	to admit (to a programme)	l1_verb	Skolen optager 60 elever om året.	2
+at undlade	to refrain from, omit	l1_verb	Undlad at parkere foran porten.	2
+at udelukke	to exclude, rule out	l1_verb	Man kan ikke udelukke, at prisen stiger.	2	≈ ekskludere
+at omfatte	to include, cover	l1_verb	Prisen omfatter morgenmad.	2	≈ inkludere
+at uddele	to hand out	l1_verb	Der uddeles gratis frugt.	2
+at fordele	to distribute, divide	l1_verb	Opgaverne fordeles mellem deltagerne.	2
+et udsagn	a statement	l2_ord	Hvilket udsagn er i overensstemmelse med teksten?	2
+i overensstemmelse med	in accordance with	l2_ord	Svaret er i overensstemmelse med teksten.	2
+at give udtryk for	to express	l2_ord	Han giver udtryk for bekymring.	2
+at afgøre	to decide, determine	l2_ord	Det er svært at afgøre, hvem der har ret.	2
+afgørende	decisive, crucial	l2_ord	Uddannelse er afgørende for jobmulighederne.	2
+en årsag	a cause, reason	l2_ord	En af årsagerne er manglende tid.	2
+et vilkår	a condition, term	l2_ord	Arbejdsvilkårene er blevet bedre.	2
+et forhold	a relationship / circumstance	l2_ord	Der er mange forhold, der spiller ind.	2
+om / hvorvidt	whether	l2_ord	Det er usikkert, hvorvidt planen virker.	2	SUB
+at forhindre	to prevent	l3_forhindre	Hegnet forhindrer dyrene i at løbe væk.	2	forhindre nogen i at …
+at begrænse	to limit	l3_forhindre	Man vil begrænse biltrafikken.	2
+at forebygge	to prevent (in advance)	l3_forhindre	Motion forebygger sygdom.	2
+at undgå	to avoid	l3_forhindre	Vi skal undgå misforståelser.	2
+at medføre	to lead to, entail	l3_medfoere	Krisen medførte arbejdsløshed.	2	≈ føre til, resultere i
+at føre til	to lead to	l3_medfoere	Det kan føre til konflikter.	2
+at resultere i	to result in	l3_medfoere	Forsøget resulterede i bedre karakterer.	2
+at forårsage	to cause	l3_medfoere	Stormen forårsagede store skader.	2	≈ fremkalde
+at fremkalde	to provoke, bring about	l3_medfoere	Medicinen kan fremkalde allergi.	2
+at betinge	to condition, require	l3_medfoere	Succes er betinget af hårdt arbejde.	2
+at sikre	to ensure	l3_medfoere	Loven skal sikre lige rettigheder.	2
+at garantere	to guarantee	l3_medfoere	Vi kan ikke garantere et job.	2
+at understrege	to stress, underline	l3_forklare	Hun understreger, at det er frivilligt.	2
+at kræve	to demand, require	l3_forklare	Jobbet kræver erfaring.	2
+at påpege	to point out	l3_forklare	Forskeren påpeger, at der mangler data.	2
+at bekræfte	to confirm	l3_forklare	Undersøgelsen bekræfter tendensen.	2	≠ benægte
+at benægte	to deny	l3_forklare	Han benægter alt.	2
+at modsige	to contradict	l3_forklare	Resultaterne modsiger teorien.	2
+at afvise	to reject	l3_ord	Forslaget blev afvist.	2	= sige nej tak
+at indrømme	to admit	l3_ord	Han indrømmede fejlen.	2
+at fortryde	to regret	l3_ord	Hun fortryder, at hun flyttede.	2
+at beklage	to regret, apologise for	l3_ord	Vi beklager forsinkelsen.	2
+at opleve	to experience	l3_ord	Mange unge oplever stress.	2
+at reducere	to reduce	l3_ord	Målet er at reducere CO₂-udledningen.	2	≈ mindske, nedsætte
+at muliggøre	to make possible	l3_ord	Teknologien muliggør hjemmearbejde.	2
+at udvide	to expand	l3_ord	Butikken vil udvide sortimentet.	2
+at forlænge	to extend, lengthen	l3_ord	Åbningstiden forlænges.	2	≠ forkorte
+at forenkle	to simplify	l3_ord	Reglerne skal forenkles.	2
+at investere i	to invest in	l3_ord	Kommunen investerer i nye skoler.	2
+at offentliggøre	to publish, make public	l3_ord	Resultatet offentliggøres i dag.	2
+en mulighed	a possibility, option	l3_ord	Der er mange muligheder for at læse videre.	2
+en udfordring	a challenge	l3_ord	Det er en stor udfordring for kommunerne.	2
+et ansvar	a responsibility	l3_ord	Forældrene har ansvaret for barnet.	2	ansvar for
+et behov	a need	l3_ord	Der er behov for flere sygeplejersker.	2	behov for
+en modstand	resistance, opposition	l3_ord	Forslaget mødte stor modstand.	2	≠ opbakning
+en opbakning	support, backing	l3_ord	Planen har bred opbakning i befolkningen.	2	opbakning til
+en forudsætning	a precondition	l3_ord	Dansk er en forudsætning for jobbet.	2	forudsætning for
+en påstand	a claim	l3_ord	Det er en påstand uden beviser.	2
+en tendens	a trend, tendency	l3_ord	Der er en tendens til, at flere flytter til byerne.	2	tendens til
+en omkostning	a cost	l3_ord	Omkostningerne er steget.	2
+en undtagelse	an exception	l3_ord	Med undtagelse af søndag er der åbent.	2
+en målsætning	an objective, goal	l3_ord	Regeringens målsætning er at skabe flere job.	2
+en forklaring	an explanation	l3_ord	Der er flere forklaringer på det.	2	forklaring på
+typisk	typical(ly)	l3_ord	Det er typisk unge, der flytter.	2
+karakteristisk	characteristic	l3_ord	Det er karakteristisk for byen.	2	karakteristisk for
+sjældent	rarely	l3_ord	Det sker sjældent.	2	≠ ofte
+et formål med	a purpose of	praep	Hvad er formålet med kurset?	2
+problemer med	problems with	praep	Mange har problemer med at finde bolig.	2
+effekten af	the effect of	praep	Effekten af kampagnen var stor.	2
+indflydelse på	influence on	praep	Medierne har indflydelse på debatten.	2
+overraskende	surprising	adjektiv	Det er overraskende, at så få stemmer.	3
+logisk	logical	adjektiv	Det er en logisk konsekvens.	3
+forventeligt	as expected, predictable	adjektiv	Det var forventeligt, at priserne steg.	3
+nødvendigt	necessary	adjektiv	Det er nødvendigt at handle nu.	3
+hensigtsmæssig	appropriate, expedient	adjektiv	Det er ikke hensigtsmæssigt at vente.	3
+tvivlsomt	doubtful	adjektiv	Det er tvivlsomt, om det virker.	3
+bæredygtig	sustainable	adjektiv	En bæredygtig løsning.	3
