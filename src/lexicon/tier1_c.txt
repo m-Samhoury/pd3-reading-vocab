@@ -1,0 +1,251 @@
+# Tier 1 lexicon – part C: Tilføjelse, Udelukkelse, Holdning, Tid, Forklaring
+
+@ og
+wox: Det er dyrt, og det tager tid. || It is expensive and it takes time. (no inversion after og)
+S: tilfojelse | neutral | Forbinder ord, led eller sætninger, der står side om side. | And. | Man kan arrangere events og koncerter. | You can arrange events and concerts. | og så; og også; og derfor | samt; plus | eller
+S: konsekvens | neutral | Forbinder to sætninger, hvor den sidste er en følge af den første. | And (so) – result. | Han glemte sin nøgle, og han måtte vente udenfor. | He forgot his key, and so he had to wait outside. | og derfor; og så | så | -
+S: sammenligning | neutral | Mellem to ens komparativer: angiver en stadig stigende grad. | (more) and (more). | Flere og flere handler på nettet. | More and more people shop online. | mere og mere; flere og flere; længere og længere | stadig flere | -
+
+@ desuden
+wox: De har desuden tænkt grønne områder ind. / Desuden er … || In addition they have planned green areas. (fronted → inversion)
+S: tilfojelse | neutral | Ud over det, der lige er nævnt; derudover. | In addition; moreover; besides. | De har desuden tænkt flere grønne områder og pladser ind. | They have also planned in more green areas and squares. | og desuden; desuden er der | derudover; endvidere; ydermere; også | -
+S: tilfojelse | spoken | Tilføjer noget, man lige kommer i tanke om. | Besides; anyway. | Jeg gider ikke. Desuden er det for sent. | I don't feel like it. Besides, it is too late. | - | i øvrigt | -
+
+@ derudover
+wox: Derudover er øen kendt for flagermus. || In addition the island is known for bats. (fronted → inversion)
+S: tilfojelse | neutral | Ud over det netop nævnte. | In addition; furthermore. | Derudover er øen karakteriseret ved en stor mangfoldighed af flagermus. | In addition, the island is characterised by a great diversity of bats. | og derudover; derudover kommer | desuden; endvidere; herudover | -
+S: tilfojelse | neutral | Ud over et nævnt beløb eller antal. | On top of that (amount). | Lønnen er 30.000 kr., og derudover får man pension. | The salary is 30,000 kr., and on top of that you get a pension. | - | oveni | -
+
+@ herudover
+wox: Herudover tilbyder kommunen kurser. || In addition the municipality offers courses. (fronted → inversion)
+S: tilfojelse | formal | Ud over dette; derudover. | In addition to this; furthermore. | Herudover tilbyder kommunen kurser i jobsøgning. | In addition to this, the municipality offers courses in job seeking. | - | derudover; desuden; endvidere | -
+
+@ endvidere
+wox: Brosten markerer endvidere, hvor tilbygningerne lå. || Cobblestones furthermore mark where the extensions were.
+S: tilfojelse | bookish | Desuden; derudover (formelt). | Furthermore; moreover. | Brosten i plænen markerer endvidere, hvor den gamle kirkes tilbygninger lå. | Cobblestones in the lawn furthermore mark where the old church's extensions were. | - | desuden; derudover; ydermere | -
+
+@ ydermere
+wox: Ydermere er prisen steget. || Furthermore the price has risen. (fronted → inversion)
+S: tilfojelse | bookish | Som noget yderligere ud over det nævnte. | Furthermore; moreover. | Vindmøller er dyre. Ydermere er de svære at placere. | Wind turbines are expensive. Furthermore, they are hard to place. | - | desuden; endvidere; derudover | -
+S: tilfojelse | formal | Oven i købet (om noget negativt eller irriterende). | What is more; on top of that (negative). | Toget var forsinket, og ydermere var det overfyldt. | The train was late, and what is more it was overcrowded. | - | oven i købet | -
+
+@ samtidig
+wox: Samtidig er de kommet tættere på Tyskland. || At the same time they have come closer to Germany. (fronted → inversion)
+S: tid | neutral | På samme tid som noget andet. | At the same time; simultaneously. | Museet skal sikre skibene, og samtidig skal udstillingerne moderniseres. | The museum must protect the ships, and at the same time the exhibitions must be modernised. | samtidig med; samtidig med at | på samme tid; imens | -
+S: tilfojelse | neutral | Som noget ekstra; også (fremhæver en anden side af sagen). | At the same time; also. | Burgundia er det latinske navn for Bornholm og samtidig navnet på et skib. | Burgundia is the Latin name for Bornholm and at the same time the name of a ship. | men samtidig | også; derudover | -
+S: tid | neutral | (adjektiv) Som foregår eller lever på samme tid. | Simultaneous; contemporary. | Der var flere samtidige protester. | There were several simultaneous protests. | samtidige kilder | - | -
+
+@ i øvrigt
+wox: Trelleborg er i øvrigt den eneste med forborg. || Trelleborg is, incidentally, the only one with an outer bailey.
+S: tilfojelse | neutral | Ud over det netop nævnte; desuden. | Moreover; besides. | Trelleborg er den bedst bevarede og i øvrigt den eneste med en befæstet forborg. | Trelleborg is the best preserved and moreover the only one with a fortified outer bailey. | - | desuden; derudover | -
+S: tilfojelse | spoken | Tilføjer noget, man lige kommer i tanke om; apropos. | By the way; incidentally. | I øvrigt – har du set min nøgle? | By the way – have you seen my key? | - | forresten; apropos | -
+S: udelukkelse | formal | I andre henseender; bortset fra det. | Otherwise; in other respects. | Huset er lille, men i øvrigt i god stand. | The house is small but otherwise in good condition. | - | ellers | -
+
+@ samt
+wox: syv bygninger samt parken || seven buildings as well as the park
+S: tilfojelse | formal | Og (formelt; især i opremsninger). | And; as well as. | Museets udstillinger findes i syv bygninger samt i parken og skoven. | The museum's exhibitions are found in seven buildings as well as in the park and the forest. | - | og; tillige med | -
+
+@ ikke alene … men også
+wox: Problemet er ikke alene konkurrencen, men også huslejen. || The problem is not only the competition but also the rent.
+S: tilfojelse | formal | Både det ene og (oven i købet) det andet. | Not only … but also. | Problemet er ikke alene konkurrencen fra nethandlen og storcentrene. | The problem is not only the competition from online shopping and shopping centres. | ikke kun … men også; ikke bare … men også | både … og | -
+
+@ blandt andet
+wox: De kan blandt andet tilbyde samme service. || They can, among other things, offer the same service.
+S: tilfojelse | neutral | Som et af flere eksempler; bl.a. | Among other things; for instance. | De kan blandt andet tilbyde den samme service som netbutikkerne. | Among other things, they can offer the same service as the online shops. | bl.a.; blandt andre (om personer) | for eksempel; herunder; især | -
+
+@ for eksempel
+wox: Man kan fx reducere antallet af studiepladser. || You can, for example, reduce the number of places.
+S: tilfojelse | neutral | Bruges for at give et eksempel (fx, f.eks.). | For example. | Man kan fx reducere antallet af studiepladser på uddannelser med høj ledighed. | You can, for example, reduce the number of study places on programmes with high unemployment. | fx; f.eks.; som for eksempel | eksempelvis; blandt andet; såsom | -
+
+@ eksempelvis
+wox: Det kan eksempelvis være at læse. || It can, for example, be reading.
+S: tilfojelse | formal | For eksempel; som eksempel. | For example; for instance. | Det kan eksempelvis være aktiviteter som at hygge med familien eller læse. | It can, for example, be activities such as spending cosy time with the family or reading. | - | for eksempel; blandt andet | -
+
+@ især
+wox: Hvad er hun især glad for? || What is she particularly happy about?
+S: tilfojelse | neutral | Fremhæver det, der gælder i særlig høj grad. | Especially; particularly. | Hvad har især været overraskende for Susan Nielsen? | What has especially surprised Susan Nielsen? | især fordi; især når; men især | særligt; specielt; navnlig; først og fremmest | -
+
+@ endda
+wox: Den blev endda den mest sete julekalender. || It even became the most watched Christmas calendar.
+S: tilfojelse | neutral | Fremhæver noget ekstra, som er overraskende. | Even. | Jul i Valhal blev endda den julekalender med det største seertal. | Jul i Valhal even became the Christmas calendar with the highest ratings. | og endda; måske endda | oven i købet; tilmed | -
+S: holdning | spoken | Udtrykker, at noget gik bedre end ventet eller frygtet. | Actually; (even) quite – better than feared. | Eksamen gik endda meget godt. | The exam actually went rather well. | endda meget godt | faktisk | -
+
+@ frem for
+wox: Hun foretrækker romaner frem for faglitteratur. || She prefers novels to non-fiction. (+ noun / at-infinitive)
+S: udelukkelse | neutral | Hellere end; i stedet for. | Rather than; instead of; over. | Hvorfor foretrækker Ditte Simonsen skønlitteratur frem for managementlitteratur? | Why does Ditte Simonsen prefer fiction to management literature? | foretrække noget frem for; frem for at | i stedet for; snarere end; hellere end | -
+S: tilfojelse | formal | (frem for alt) Mere end alt andet; især. | Above all. | Frem for alt skal man være ærlig. | Above all, you must be honest. | frem for alt | først og fremmest; især | -
+
+@ uden (at)
+wox: Hun kan klare sig uden at tage et studiejob. || She can manage without taking a student job. (+ infinitive / at-clause)
+S: udelukkelse | neutral | Angiver, at noget ikke sker eller ikke er til stede. | Without (doing). | Hun kan klare sig uden at tage et studiejob. | She can manage without taking a student job. | uden at; uden problemer; ikke uden | - | med
+S: udelukkelse | neutral | (præposition) Som mangler; ikke med. | Without. | Mennesker uden et handicap kom hurtigere i arbejde. | People without a disability got into work faster. | uden for; uden om | - | med
+S: udelukkelse | formal | Ikke medregnet; bortset fra. | Excluding; except. | Prisen er 500 kr. uden moms. | The price is 500 kr. excluding VAT. | uden moms | eksklusive; undtagen | inklusive
+
+@ enten … eller
+wox: Man går enten lørdag eller søndag. || You walk either Saturday or Sunday.
+S: udelukkelse | neutral | Understreger, at der er to (eller flere) muligheder, men kun én gælder. | Either … or. | Rundkirken har en kerne, der enten er rund eller ottekantet. | The round church has a core that is either round or octagonal. | enten … eller også | - | både … og
+S: indrommelse | neutral | (enten man vil det eller ej) Uanset hvad. | Whether … or not. | Enten man vil det eller ej, skal man betale skat. | Whether you like it or not, you have to pay tax. | enten man vil eller ej | uanset | -
+
+@ eller
+wox: Det kan forsinke eller forhindre processen. || It can delay or prevent the process.
+S: udelukkelse | neutral | Forbinder led, der er alternativer til hinanden. | Or. | Det er ikke kun borgernes modstand, der kan forsinke eller forhindre processen. | It is not only the citizens' opposition that can delay or prevent the process. | eller også; eller noget; enten … eller | - | og
+S: betingelse | neutral | Ellers; hvis ikke. | Or (else). | Skynd dig, eller vi kommer for sent. | Hurry up, or we'll be late. | eller også | ellers | -
+S: forklaring | neutral | Angiver en anden måde at sige det samme på; eller rettere. | Or (rather); that is. | Humaniora, eller de humanistiske fag, er populære. | The humanities, or the humanistic subjects, are popular. | eller rettere; eller snarere | det vil sige | -
+
+@ heldigvis
+wox: Men heldigvis er der mange, der har fået arbejde. || But fortunately there are many who have found work.
+S: holdning | neutral | Udtrykker, at noget er godt eller til held for nogen. | Fortunately; luckily. | Men heldigvis er der mange, der har fået et helt almindeligt arbejde. | But fortunately there are many who have got a completely ordinary job. | men heldigvis; og heldigvis | til alt held | desværre
+
+@ desværre
+wox: Det var desværre ikke tilfældet. || Unfortunately that was not the case.
+S: holdning | neutral | Udtrykker beklagelse: det er synd eller ærgerligt. | Unfortunately; sadly. | Det samme var desværre ikke tilfældet for dem med et handicap. | Unfortunately the same was not the case for those with a disability. | men desværre; desværre ikke | beklageligvis; ærgerligt nok | heldigvis
+S: holdning | formal | Høflig formel ved afslag eller dårlige nyheder. | I'm afraid; regrettably. | Vi må desværre meddele, at stillingen er besat. | We regret to inform you that the position has been filled. | vi må desværre | beklageligvis | -
+
+@ faktisk
+wox: Der kunne faktisk være en fordel ved det. || There could actually be an advantage in it.
+S: holdning | neutral | Understreger eller bekræfter, at noget virkelig er sådan (ofte overraskende). | Actually; in fact. | De fleste oplever, at de ved at være aktive faktisk får mere energi. | Most people find that by being active they actually get more energy. | faktisk ikke; rent faktisk; det er faktisk | i virkeligheden; egentlig | -
+S: holdning | neutral | (adjektiv) Som findes eller gælder i virkeligheden. | Actual; real. | Den faktiske pris var højere. | The actual price was higher. | de faktiske forhold | virkelig; reel | formodet
+
+@ selvfølgelig
+wox: Det er selvfølgelig ærgerligt. || It is of course a pity.
+S: holdning | neutral | Udtrykker, at noget er naturligt og forventeligt. | Of course; naturally. | Dertil kommer selvfølgelig andre sygemeldinger. | On top of that there are of course other cases of sick leave. | ja selvfølgelig; men selvfølgelig | naturligvis; selvsagt | -
+S: indrommelse | neutral | En svag indrømmelse før en modsigelse. | Of course (… but). | Det er selvfølgelig dyrt, men det er pengene værd. | It is of course expensive, but it is worth the money. | selvfølgelig … men | ganske vist; godt nok | -
+S: holdning | neutral | (en selvfølgelighed) Adjektiv: som anses for helt naturlig. | Self-evident; taken for granted. | Det er ikke en selvfølgelig ret. | It is not a right that can be taken for granted. | en selvfølgelig del af | naturlig; indlysende | -
+
+@ naturligvis
+wox: De fleste har naturligvis begået fejl. || Most have naturally made mistakes.
+S: holdning | formal | Udtrykker, at noget er selvfølgeligt eller forståeligt. | Naturally; of course. | De fleste har naturligvis begået nogle begynderfejl undervejs. | Most have naturally made some beginner's mistakes along the way. | - | selvfølgelig; selvsagt | -
+S: indrommelse | formal | En svag indrømmelse før en modsigelse. | Of course (… but). | Det er naturligvis dyrt, men nødvendigt. | It is of course expensive, but necessary. | naturligvis … men | ganske vist | -
+
+@ måske
+wox: Måske er det grunden til … / Det lyder måske banalt. || Perhaps that is the reason … (fronted → inversion)
+S: holdning | neutral | Udtrykker mulighed eller usikkerhed. | Maybe; perhaps. | Måske er professionaliseringen af fritiden også grunden til, at vi oftere skifter hobby. | Perhaps the professionalisation of leisure is also the reason we change hobbies more often. | måske ikke; måske endda; måske fordi | muligvis; eventuelt; formentlig | sikkert
+S: holdning | spoken | Indrømmer noget, før man siger noget andet (Det lyder måske banalt, men …). | It may (sound …), but. | Det lyder måske banalt, men mange har ikke haft et studiejob. | It may sound banal, but many have not had a student job. | måske … men | ganske vist | -
+
+@ sandsynligvis
+wox: Den er sandsynligvis den yngste. || It is probably the youngest.
+S: holdning | neutral | Med stor sandsynlighed; formentlig. | Probably; most likely. | Nyker Rundkirke er den mindste og sandsynligvis også den yngste. | Nyker Round Church is the smallest and probably also the youngest. | - | formentlig; nok; antagelig | næppe
+
+@ egentlig
+wox: Man skal egentlig bare have et CVR-nummer. || Actually you just need a CVR number.
+S: holdning | neutral | I grunden; når det kommer til stykket; i virkeligheden. | Actually; really. | Man skal egentlig bare have et CVR-nummer, og så er man i gang. | Actually you just need a CVR number, and then you are up and running. | egentlig ikke; egentlig bare | faktisk; i grunden; i virkeligheden | -
+S: holdning | spoken | Nedtoner et synspunkt eller indrømmer noget forsigtigt. | Actually (softening). | Jeg har egentlig ikke lyst. | I don't really feel like it. | - | sådan set | -
+S: forklaring | formal | (adjektiv) Den centrale, rigtige eller oprindelige del. | Actual; real; proper. | Det egentlige problem er huslejen. | The real problem is the rent. | det egentlige formål | reel; virkelig | -
+
+@ i hvert fald
+wox: Det mener i hvert fald Dansk Erhverv. || That, at any rate, is what Dansk Erhverv thinks.
+S: holdning | neutral | Under alle omstændigheder; i det mindste (begrænser et udsagn). | At least; at any rate. | Det mener i hvert fald Dansk Erhverv. | That, at least, is what Dansk Erhverv thinks. | i hvert fald ikke | i det mindste; under alle omstændigheder | -
+
+@ ifølge
+wox: Ifølge HK kan en fire-dages uge løse problemerne. || According to HK a four-day week can solve the problems. (fronted → inversion)
+S: holdning | neutral | Efter hvad nogen eller noget siger; som kilde. | According to. | Ifølge fagforeningen HK kan en fire-dages arbejdsuge være et godt værktøj. | According to the trade union HK, a four-day working week can be a good tool. | ifølge teksten; ifølge undersøgelsen; ifølge eksperter | efter; i følge | -
+S: sammenligning | formal | I overensstemmelse med (en regel, lov o.l.). | In accordance with; under. | Ifølge loven skal man have tilladelse. | Under the law you must have a permit. | ifølge loven; ifølge reglerne | i overensstemmelse med | -
+
+@ umiddelbart
+wox: Det kan umiddelbart virke ulogisk. || At first sight it may seem illogical.
+S: holdning | neutral | Ved første øjekast; uden nærmere eftertanke. | At first sight; on the face of it. | Det kan umiddelbart virke ulogisk at nedsætte arbejdstiden. | At first sight it may seem illogical to reduce working hours. | umiddelbart virke; umiddelbart set | ved første øjekast; tilsyneladende | -
+S: tid | neutral | Straks; lige efter; direkte. | Immediately; directly. | Umiddelbart efter mødet tog hun hjem. | Immediately after the meeting she went home. | umiddelbart efter; umiddelbart før | straks; lige | -
+S: holdning | neutral | (adjektiv) Spontan, naturlig og åben. | Spontaneous; unaffected. | Han er en meget umiddelbar person. | He is a very spontaneous person. | - | spontan; naturlig | -
+
+@ i virkeligheden
+wox: I virkeligheden bevæger Bornholm sig ikke meget. || In reality Bornholm does not move much. (fronted → inversion)
+S: holdning | neutral | Når man ser bort fra, hvordan det ser ud; faktisk. | In reality; actually. | I virkeligheden bevæger Bornholm sig ikke meget. | In reality, Bornholm does not move much. | - | faktisk; egentlig; rent faktisk | tilsyneladende
+
+@ tilfældigvis
+wox: Hun var tilfældigvis i byen. || She happened to be in town.
+S: holdning | neutral | Uden plan; ved et tilfælde. | By chance; happen to. | Jeg mødte tilfældigvis min gamle chef i toget. | I happened to meet my old boss on the train. | helt tilfældigvis | ved et tilfælde | bevidst; med vilje
+S: holdning | spoken | Ironisk: antyder, at noget ikke er så tilfældigt. | Just happen to (ironic). | Han havde tilfældigvis glemt sin pung igen. | He had "just happened" to forget his wallet again. | - | - | -
+
+@ næppe
+wox: Det vil næppe ske. || That will hardly happen.
+S: holdning | formal | Med stor sandsynlighed ikke; formodentlig ikke. | Hardly; scarcely; unlikely. | Prisen vil næppe falde de næste år. | The price is unlikely to fall in the coming years. | næppe nogen; næppe sandsynligt | næsten ikke; formentlig ikke | sandsynligvis
+S: tid | bookish | Kun lige; knap (næppe … før). | Barely; scarcely (… when). | Han var næppe kommet ind, før telefonen ringede. | He had barely come in when the phone rang. | næppe … før | knap; lige akkurat | -
+
+@ overraskende nok
+wox: Overraskende nok kunne 15 ud af 18 fortælle … || Surprisingly, 15 out of 18 could say … (fronted → inversion)
+S: holdning | neutral | Det er overraskende, at … (kommenterer hele sætningen). | Surprisingly. | Overraskende nok kunne 15 ud af 18 fortælle, at deres handicap har lille betydning. | Surprisingly, 15 out of 18 said their disability has little significance. | - | mod forventning | som ventet
+
+@ generelt
+wox: Vi er generelt mere åbne. || We are generally more open.
+S: holdning | neutral | I almindelighed; som hovedregel; for de fleste. | Generally; in general. | Med andre ord er vi generelt mere åbne over for at prøve noget nyt. | In other words, we are generally more open to trying something new. | generelt set; helt generelt | almindeligvis; overordnet; typisk | specifikt
+S: holdning | neutral | (adjektiv: generel) Som gælder alle eller det hele. | General. | Der er en generel mangel på arbejdskraft. | There is a general shortage of labour. | generelle regler; en generel tendens | almen; overordnet | specifik
+
+@ først
+wox: Først læste vi teksten. / Den var først færdig i 1300. || First we read the text. / It was not finished until 1300.
+S: tid | neutral | Før alt andet; som det første. | First. | Først læser man teksten, og så ser man på spørgsmålene. | First you read the text, and then you look at the questions. | først … så; først og fremmest | i begyndelsen | til sidst
+S: tid | neutral | Ikke før; så sent som (først i 1300-tallet). | Not until; only (then). | Hammershus var først færdig i slutningen af 1200-tallet. | Hammershus was not finished until the end of the 13th century. | først da; først nu; først efter | ikke før | -
+
+@ for det første
+wox: For det første er det dyrt. For det andet … || Firstly it is expensive. Secondly … (inversion)
+S: tid | neutral | Indleder første punkt i en opremsning af argumenter. | Firstly; in the first place. | For det første er det dyrt, og for det andet tager det tid. | Firstly it is expensive, and secondly it takes time. | for det andet; for det tredje | først og fremmest | -
+
+@ først og fremmest
+wox: Det er først og fremmest hårdt arbejde. || It is first and foremost hard work.
+S: tilfojelse | neutral | Som det vigtigste; frem for alt. | First and foremost; above all. | De fleste ved godt, at det at starte sit eget først og fremmest er hårdt arbejde. | Most people know that starting your own business is first and foremost hard work. | - | især; frem for alt; primært | -
+
+@ herefter
+wox: Byen blev herefter kaldt Viborg. || The town was thereafter called Viborg.
+S: tid | formal | Efter dette tidspunkt; fra nu af. | After this; thereafter. | Der blev bygget en borg, og byen blev herefter kaldt Viborg. | A castle was built, and the town was thereafter called Viborg. | - | derefter; siden; fremover | -
+S: tid | formal | Umiddelbart efter dette i en rækkefølge. | Next; after this. | Herefter følger en gennemgang af resultaterne. | Next follows a review of the results. | - | dernæst | -
+
+@ til sidst
+wox: Til sidst valgte han at starte sit eget. || In the end he chose to start his own business. (inversion)
+S: tid | neutral | Som afslutning på et forløb; endelig. | In the end; finally; at last. | Derfor valgte han til sidst at starte sit eget snedkerværksted. | That is why he finally chose to start his own joinery workshop. | helt til sidst | endelig; til slut | først
+S: tid | neutral | (lige) til et tidsrum slutter. | To the very end. | Hun kæmpede til sidst. | She fought to the very end. | til det sidste | - | -
+
+@ endelig
+wox: Endelig har butikkerne også en fordel. || Finally, the shops also have an advantage. (fronted → inversion)
+S: tilfojelse | neutral | Som det sidste punkt i en opremsning. | Finally; lastly. | Endelig har de lokale butikker også en fordel, som man ikke skal undervurdere. | Finally, the local shops also have an advantage that should not be underestimated. | og endelig | til sidst; sluttelig | for det første
+S: tid | neutral | Efter lang tid eller venten. | At last; finally. | Det har arbejdsgiverne endelig fået øjnene op for. | The employers have finally opened their eyes to that. | endelig fik | omsider; til sidst | -
+S: holdning | spoken | Forstærker en opfordring eller betingelse (hvis de endelig fik et). | By all means; if ever. | Gå endelig ikke! / … hvis de endelig fik et job. | Please don't go! / … if they ever got a job. | endelig ikke | - | -
+S: tid | formal | (adjektiv) Som er den sidste og afgørende. | Final; definitive. | Den endelige beslutning er ikke taget. | The final decision has not been made. | den endelige afgørelse | definitiv | foreløbig
+
+@ efterhånden
+wox: Efterhånden bruger man internettet til alt. || Gradually people use the internet for everything. (fronted → inversion)
+S: tid | neutral | Gradvis, lidt efter lidt over et stykke tid. | Gradually; by now; little by little. | Efterhånden bruger man internettet til alting. | By now people use the internet for everything. | efterhånden som | gradvist; lidt efter lidt; med tiden | pludselig
+
+@ efter at
+wox: Efter at vi havde spist, gik vi. || After we had eaten we left. (fronted clause → inversion)
+S: tid | neutral | Indleder en ledsætning eller infinitiv om noget, der er sket før. | After (doing / having done). | Sønderjylland blev dansk efter at have været under tysk herredømme i 56 år. | Southern Jutland became Danish after having been under German rule for 56 years. | efter at have + participium | da; når | før
+
+@ før
+wox: Der er meget at overveje, før man går i gang. || There is a lot to consider before you start. (subordinate order)
+S: tid | neutral | Tidligere end det tidspunkt da. | Before. | Der er nok at overveje, før man går i gang. | There is plenty to consider before you get started. | lige før; længe før; før i tiden | inden | efter
+S: tid | neutral | (præposition/adverbium) Tidligere end; i fortiden. | Before; earlier. | Kaffebordet var en vigtig del af fællesskabet før 1920. | The coffee table was an important part of the community before 1920. | før i tiden; som før | tidligere | senere
+S: betingelse | neutral | Hvis ikke; medmindre (… før man …). | Unless; until. | Du får ikke dessert, før du har spist op. | You won't get dessert until you have finished. | ikke … før | medmindre | -
+
+@ inden
+wox: … inden der i morgen er premiere. || … before the premiere tomorrow. (subordinate order)
+S: tid | neutral | Tidligere end det tidspunkt da; før. | Before. | Jeg ville ikke have sagt mit job op, inden jeg havde opbygget et netværk. | I would not have quit my job before I had built up a network. | inden da; i god tid inden | før | efter
+S: tid | neutral | (præposition) I løbet af; senest ved. | Within; by. | Ansøgningen skal sendes inden 1. maj. | The application must be sent by 1 May. | inden længe; inden for | senest | -
+
+@ indtil
+wox: De ville beholde jobbet, indtil de havde kunder nok. || They would keep the job until they had enough customers. (subordinate order)
+S: tid | neutral | Frem til det tidspunkt hvor. | Until. | De ville beholde deres tidligere arbejde, indtil de havde fået tilstrækkeligt med kunder. | They would keep their previous job until they had enough customers. | indtil nu; indtil videre; indtil da | til | siden
+S: sammenligning | formal | Op til et vist antal eller en grænse. | Up to. | Der kan deltage indtil 50 personer. | Up to 50 people can take part. | - | op til | -
+
+@ hidtil
+wox: Det er den hidtil mest ambitiøse udstilling. || It is the most ambitious exhibition so far.
+S: tid | formal | Indtil nu; indtil det tidspunkt, der tales om. | So far; until now; hitherto. | Udstillingen er den hidtil mest ambitiøse på Sønderborg Slot. | The exhibition is the most ambitious at Sønderborg Castle so far. | hidtil ukendt | indtil nu; til dato | fremover
+
+@ med andre ord
+wox: Med andre ord er vi mere åbne. || In other words we are more open. (fronted → inversion)
+S: forklaring | neutral | Udtrykt på en anden og enklere måde; det vil sige. | In other words. | Med andre ord er vi generelt mere åbne over for at prøve noget nyt. | In other words, we are generally more open to trying something new. | - | det vil sige; altså; kort sagt | -
+S: konsekvens | neutral | Som man kan slutte af det foregående. | In other words; so (conclusion). | Prisen steg 30 %. Med andre ord har mange ikke råd. | The price rose 30%. In other words, many cannot afford it. | - | altså; dermed | -
+
+@ det vil sige
+wox: …, det vil sige danske statsborgere med tysk identitet. || …, that is, Danish citizens with a German identity.
+S: forklaring | neutral | Indleder en præcisering eller forklaring (dvs.). | That is (to say); i.e. | De opfatter sig som tyske nordslesvigere, det vil sige som danske statsborgere med tysk identitet. | They see themselves as German North Schleswigers, that is, as Danish citizens with a German identity. | dvs.; hvad vil det sige | altså; nemlig; med andre ord | -
+S: forklaring | neutral | (hvad det vil sige) Hvad noget betyder. | What it means. | Det kan være svært at definere, hvad det vil sige. | It can be hard to define what it means. | hvad vil det sige at | betyde | -
+
+@ som nævnt
+wox: Det forventes som nævnt, at … || As mentioned, it is expected that …
+S: forklaring | neutral | Henviser til noget, der er sagt tidligere i teksten. | As mentioned. | Det forventes som nævnt, at nye medarbejdere ikke arbejder hjemme. | As mentioned, new employees are expected not to work from home. | som tidligere nævnt; som nævnt ovenfor | som sagt | -
+
+@ kort sagt
+wox: Kort sagt er udstillingen for alle. || In short, the exhibition is for everyone. (fronted → inversion)
+S: forklaring | neutral | Sammenfatter det foregående med få ord. | In short; in brief. | Kort fortalt er udstillingen både for børn og voksne. | In short, the exhibition is for both children and adults. | kort fortalt | med andre ord; sammenfattende | -
+
+@ i form af
+wox: en central magt i form af skiftende konger || a central power in the form of changing kings
+S: forklaring | formal | Som består af eller viser sig som det følgende. | In the form of. | I vikingetiden var der en central magt i form af skiftende konger. | In the Viking Age there was a central power in the form of changing kings. | - | som; bestående af | -

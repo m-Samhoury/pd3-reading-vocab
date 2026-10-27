@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PD3 Flashcards</title>
+<meta name="description" content="PD3 reading vocabulary flashcards with spaced repetition and 10-question tests modelled on the exam tasks.">
+<style>
+{{CSS}}
+main { padding-bottom: 40px; }
+.modes { display: inline-flex; gap: 2px; margin-top: 16px; padding: 4px; border-radius: 14px; background: color-mix(in srgb, var(--rule) 70%, var(--paper)); }
+.modes [role="tab"] { min-height: 42px; padding: 8px 22px; border: 0; border-radius: 10px; background: transparent; cursor: pointer;
+  font-weight: 600; font-size: 1rem; color: var(--soft); }
+.modes [role="tab"][aria-selected="true"] { background: var(--sheet); color: var(--ink); box-shadow: var(--shadow); }
+.panel { padding-top: 16px; }
+.setup { display: grid; gap: 10px; grid-template-columns: 1fr; }
+@media (min-width: 680px) { .setup { grid-template-columns: 2fr auto auto; align-items: end; } }
+.mastery { display: flex; flex-wrap: wrap; gap: 10px 24px; margin: 16px 0 6px; }
+.mastery .m { min-width: 150px; flex: 1 1 150px; }
+.mastery .m { padding: 14px 16px; background: var(--sheet); border: 1px solid var(--rule); border-radius: 14px; }
+.mastery .m b { font-size: 1.3rem; font-weight: 700; letter-spacing: -.02em; }
+.mastery .bar { margin-top: 6px; }
+.counter { display: flex; justify-content: space-between; color: var(--soft); font-size: .9rem; margin: 14px 0 6px; }
+.flash { position: relative; margin: 10px 0 14px; box-shadow: var(--shadow-lg); border-radius: 20px; touch-action: pan-y; user-select: none; -webkit-user-select: none;
+  transition: transform .18s ease, border-color .15s; cursor: pointer; }
+.flash .front { min-height: 320px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 10px; padding: 28px 20px; }
+.flash .front .big { font-family: var(--head); font-size: clamp(2rem, 8vw, 2.9rem); font-weight: 700; letter-spacing: -.03em; line-height: 1.1; }
+.flash .front .defn { font-size: 1.15rem; font-weight: 600; max-width: 34ch; }
+.flash .front .tap { color: var(--faint); font-size: .88rem; margin-top: 8px; }
+.flash .back { max-height: min(62vh, 640px); overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; cursor: auto; }
+.flash .back .entry { padding: 18px 18px 22px; }
+.flash.go-right { border-color: var(--ok); }
+.flash.go-left { border-color: var(--bad); }
+.grade { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.grade .btn { min-height: 58px; flex-direction: column; gap: 0; border-color: transparent; border-radius: 14px; }
+.grade .btn small { font-weight: 500; opacity: .7; }
+.grade .no { color: var(--bad); background: var(--bad-bg); }
+.grade .almost { color: #9a6400; background: #fff5dc; }
+.grade .yes { color: var(--ok); background: var(--ok-bg); }
+.grade .btn:hover { border-color: currentColor; }
+@media (prefers-color-scheme: dark) { .grade .almost { color: #f2c15a; background: #33280f; } }
+.tools-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 18px; }
+.done { padding: 34px 20px; text-align: center; }
+.done h2 { font-size: 1.3rem; margin-bottom: 6px; }
+/* test */
+.q { padding: 20px 18px; margin-top: 12px; }
+.q .prompt { margin: 6px 0 0; color: var(--soft); }
+.q .stem { margin: 12px 0 4px; font-size: 1.15rem; font-weight: 600; }
+.q .gap { display: inline-block; min-width: 4.5em; border-bottom: 2.5px solid var(--accent); text-align: center; color: transparent; }
+.opts { display: grid; gap: 8px; margin-top: 16px; }
+.opt { justify-content: flex-start; text-align: left; min-height: 54px; font-weight: 500; border-radius: 12px; }
+.opt:hover:not(:disabled) { border-color: var(--accent); background: var(--accent-soft); }
+.opt .k { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 8px; background: var(--paper); color: var(--soft); font-weight: 700; font-size: .85rem; flex: 0 0 auto; }
+.opt.correct { background: var(--ok-bg); border-color: var(--ok); }
+.opt.wrong { background: var(--bad-bg); border-color: var(--bad); }
+.feedback { margin-top: 14px; padding: 12px 14px; border-radius: 12px; }
+.feedback.ok { background: var(--ok-bg); } .feedback.bad { background: var(--bad-bg); }
+.feedback h3 { font-size: 1rem; margin-bottom: 4px; }
+.feedback p { margin: 4px 0; }
+table.hist { width: 100%; border-collapse: collapse; font-size: .9rem; }
+table.hist th, table.hist td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--rule); }
+table.hist th { color: var(--faint); font-weight: 600; font-size: .8rem; text-transform: uppercase; letter-spacing: .04em; }
+.review { padding-left: 20px; }
+.review li { margin: 14px 0; }
+.score { font-family: var(--head); font-size: 3.4rem; font-weight: 700; letter-spacing: -.03em; line-height: 1; color: var(--accent); }
+h2.sub { font-size: 1.1rem; margin: 26px 0 8px; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" href="index.html"><span class="logo" aria-hidden="true">Pd</span><span data-i18n="brand">PD3 ordforråd</span></a>
+    <nav class="nav" aria-label="Pages">
+      <a href="index.html" data-i18n="nav.overview">Overblik</a>
+      <a href="study-sheet.html" data-i18n="nav.study">Studieark</a>
+      <a href="flashcards.html#learn" id="nav-learn" data-i18n="nav.flash">Flashcards</a>
+      <a href="flashcards.html#test" id="nav-test" data-i18n="nav.test">Test</a>
+    </nav>
+  </div>
+</header>
+<div class="wrap top">
+  <h1 data-i18n="fl.title">Flashcards</h1>
+  <div class="modes" role="tablist" aria-label="Mode">
+    <button role="tab" id="tab-learn" aria-controls="learn" aria-selected="true" data-i18n="tab.learn">Lær</button>
+    <button role="tab" id="tab-test" aria-controls="test" aria-selected="false" tabindex="-1" data-i18n="tab.test">Test</button>
+  </div>
+</div>
+
+<main class="wrap">
+  <section id="learn" role="tabpanel" aria-labelledby="tab-learn" class="panel">
+    <div class="setup">
+      <label class="field"><span data-i18n="fl.deck">Bunke</span> <select id="deck"></select></label>
+      <label class="check"><input type="checkbox" id="shuffle"> <span data-i18n="fl.shuffle">Bland</span></label>
+      <label class="check"><input type="checkbox" id="reverse"> <span data-i18n="fl.reverse">Omvendt (definition → dansk)</span></label>
+    </div>
+    <div class="mastery" id="mastery" aria-label="Mastery per tier"></div>
+    <div class="counter"><span id="cnt"></span><span id="due"></span></div>
+    <div class="bar" aria-hidden="true"><span id="bar"></span></div>
+    <div class="sheet flash" id="card" tabindex="0" role="button" aria-label="Flashcard – press Space to flip"></div>
+    <div class="grade" id="grade" aria-label="How well did you know it?">
+      <button class="btn no" type="button" data-g="1"><span data-i18n="g.no">Kan ikke</span> <small>1 · swipe ←</small></button>
+      <button class="btn almost" type="button" data-g="3"><span data-i18n="g.almost">Næsten</span> <small>2</small></button>
+      <button class="btn yes" type="button" data-g="5"><span data-i18n="g.yes">Kan den</span> <small>3 · swipe →</small></button>
+    </div>
+    <p class="small soft" data-i18n="fl.keys">Mellemrum/Enter vender kortet · 1 / 2 / 3 giver karakter · på mobil: tryk for at vende, swipe → (kan den) eller ← (kan ikke).</p>
+    <div class="tools-row">
+      <button class="btn quiet" type="button" id="export" data-i18n="fl.export">Eksportér fremskridt</button>
+      <label class="btn quiet" for="importFile" data-i18n="fl.import">Importér</label>
+      <input class="sr-only" type="file" id="importFile" accept="application/json,.json">
+      <button class="btn quiet" type="button" id="reset" data-i18n="fl.reset">Nulstil</button>
+    </div>
+    <p class="small soft" id="storageNote" hidden data-i18n="fl.storage">Din browser gemmer ikke data her, så fremskridt forsvinder, når siden lukkes. Brug Eksportér for at gemme dem.</p>
+  </section>
+
+  <section id="test" role="tabpanel" aria-labelledby="tab-test" class="panel" hidden>
+    <div id="setup">
+      <div class="setup">
+        <label class="field"><span data-i18n="t.scope">Ord i testen</span> <select id="scope"></select></label>
+        <span></span>
+        <button class="btn solid" type="button" id="newTest" data-i18n="t.new">Ny test · 10 spørgsmål</button>
+      </div>
+      <p class="small soft" data-i18n="t.info">Standard: 50 % Tier 1, 30 % Tier 2, 20 % Tier 3 – ord du ofte svarer forkert på, kommer oftere.
+        Udfyld-hullet-spørgsmål bruger de rigtige sætninger og svarmuligheder fra Læseforståelse 3, når det er muligt.</p>
+      <h2 class="sub" data-i18n="t.results">Resultater</h2>
+      <div id="hist"></div>
+    </div>
+    <div id="quiz" hidden>
+      <div class="counter"><span id="qcnt"></span><span id="qscore"></span></div>
+      <div class="bar" aria-hidden="true"><span id="qbar"></span></div>
+      <div class="sheet q" id="qcard"></div>
+    </div>
+    <div id="result" hidden></div>
+  </section>
+</main>
+<footer class="wrap foot" id="foot"></footer>
+
+<script type="application/json" id="pd3-data">{{DATA}}</script>
+<script>
+{{COMMON_JS}}
+</script>
+<script>
+(() => {
+  const { words, groups, byId, groupById, el, gstyle, groupName, metaLine, highlight, entry, wordOrderNote,
+          store, shuffle, priority, displayLemma } = PD3;
+  const $ = s => document.querySelector(s);
+  const DAY = 86400000;
+  const FKEY = "pd3.flash.v1", TKEY = "pd3.test.v1";
+  $("#foot").textContent = t("footer");
+  const storageOk = store.set("pd3.probe", 1); store.del("pd3.probe");
+  if (!storageOk) $("#storageNote").hidden = false;
+
+  /* ───────────── tabs ───────────── */
+  const tabs = [$("#tab-learn"), $("#tab-test")];
+  function selectTab(i) {
+    tabs.forEach((t, j) => { t.setAttribute("aria-selected", String(i === j)); t.tabIndex = i === j ? 0 : -1;
+      document.getElementById(t.getAttribute("aria-controls")).hidden = i !== j; });
+    try { history.replaceState(null, "", i ? "#test" : "#learn"); } catch (e) { /* file:// */ }
+    $("#nav-learn").toggleAttribute("aria-current", i === 0); $("#nav-test").toggleAttribute("aria-current", i === 1);
+    if (i === 0) $("#nav-learn").setAttribute("aria-current", "page"); else $("#nav-test").setAttribute("aria-current", "page");
+    if (i === 1) renderHistory();
+  }
+  window.addEventListener("hashchange", () => selectTab(location.hash === "#test" ? 1 : 0));
+  tabs.forEach((t, i) => {
+    t.addEventListener("click", () => selectTab(i));
+    t.addEventListener("keydown", e => { if (e.key === "ArrowRight" || e.key === "ArrowLeft") { const j = (i + 1) % 2; selectTab(j); tabs[j].focus(); } });
+  });
+
+  /* ───────────── LEARN: state & scheduler (SM-2) ───────────── */
+  const F = Object.assign({ cards: {}, settings: { deck: "t1", shuffle: false, reverse: false } }, store.get(FKEY, {}));
+  const saveF = () => store.set(FKEY, F);
+  const st = id => F.cards[id] || (F.cards[id] = { ef: 2.5, interval: 0, reps: 0, due: 0, last: 0, seen: 0, lapses: 0 });
+  const isKnown = id => F.cards[id] && F.cards[id].last === 5;
+  const isDue = id => F.cards[id] && F.cards[id].seen && F.cards[id].due <= Date.now();
+
+  function schedule(id, q) {
+    const s = st(id);
+    s.seen++; s.last = q;
+    if (q < 3) { s.reps = 0; s.interval = 0; s.lapses++; s.due = Date.now(); }
+    else {
+      s.reps++;
+      s.interval = s.reps === 1 ? 1 : s.reps === 2 ? 3 : Math.round(s.interval * s.ef);
+      if (q === 3) s.interval = Math.max(1, Math.round(s.interval * 0.6));
+      s.due = Date.now() + s.interval * DAY;
+    }
+    s.ef = Math.max(1.3, s.ef + (0.1 - (5 - q) * (0.08 + (5 - q) * 0.02)));
+    saveF();
+  }
+
+  const deckSel = $("#deck");
+  const o = (v, t) => el("option", { value: v }, t);
+  deckSel.append(o("t1", t("deck.t1")), o("t12", t("deck.t12")), o("all", t("deck.all")), o("due", t("deck.due")));
+  for (const tier of [1, 2, 3]) {
+    const gs = groups.filter(g => g.tier === tier && g.words.length);
+    if (gs.length) deckSel.append(el("optgroup", { label: t("deck.groups", tier) }, ...gs.map(g => o("g:" + g.id, `${g.name_da} (${g.words.length})`))));
+  }
+  deckSel.value = [...deckSel.options].some(x => x.value === F.settings.deck) ? F.settings.deck : "t1";
+  $("#shuffle").checked = !!F.settings.shuffle;
+  $("#reverse").checked = !!F.settings.reverse;
+
+  function deckWords(deck) {
+    let ws;
+    if (deck === "t1") ws = words.filter(w => w.tier === 1);
+    else if (deck === "t12") ws = words.filter(w => w.tier <= 2);
+    else if (deck === "all" || deck === "due") ws = words.slice();
+    else if (deck.startsWith("g:")) { const g = groupById[deck.slice(2)]; ws = g ? g.words.map(id => byId[id]) : []; }
+    else ws = words.filter(w => w.tier === 1);
+    if (deck === "due") ws = ws.filter(w => isDue(w.id));
+    return ws.sort(priority);
+  }
+
+  let queue = [], qi = 0, flipped = false, sessionTotal = 0, practiseAll = false;
+  function buildSession() {
+    const ws = deckWords(deckSel.value);
+    const due = ws.filter(w => isDue(w.id));
+    const fresh = ws.filter(w => !F.cards[w.id] || !F.cards[w.id].seen);
+    let q = deckSel.value === "due" ? due : practiseAll ? ws : [...due, ...fresh];
+    if ($("#shuffle").checked) q = shuffle(q.slice());
+    queue = q.map(w => w.id); qi = 0; sessionTotal = queue.length; flipped = false;
+    renderCard(); renderMastery();
+  }
+
+  function renderMastery() {
+    const box = $("#mastery"); box.textContent = "";
+    for (const tier of [1, 2, 3]) {
+      const ws = words.filter(w => w.tier === tier);
+      if (!ws.length) continue;
+      const known = ws.filter(w => isKnown(w.id)).length;
+      const learning = ws.filter(w => F.cards[w.id] && F.cards[w.id].seen && !isKnown(w.id)).length;
+      box.append(el("div", { class: "m" },
+        el("div", { class: "meta" }, `Tier ${tier}`),
+        el("b", null, `${known} / ${ws.length}`), el("span", { class: "soft small" }, t("m.known")),
+        el("div", { class: "small soft" }, t("m.learning", learning, ws.filter(w => isDue(w.id)).length)),
+        el("div", { class: "bar" }, el("span", { style: `width:${(100 * known / ws.length).toFixed(1)}%` }))));
+    }
+    const dueAll = words.filter(w => isDue(w.id)).length;
+    $("#due").textContent = t("due.today", dueAll);
+  }
+
+  function front(w) {
+    const g = groupById[w.primary_group];
+    if ($("#reverse").checked) {
+      const s = w.senses[0];
+      return el("div", { class: "front" },
+        el("div", { class: "meta" }, `Tier ${w.tier} · ${w.word_class}`),
+        el("div", { class: "defn" }, s.en_definition),
+        el("div", { class: "soft", lang: "da" }, s.da_definition),
+        w.senses.length > 1 ? el("div", { class: "meta" }, t("front.sense", w.senses.length)) : null,
+        el("div", { class: "tap" }, t("front.which")));
+    }
+    return el("div", { class: "front" },
+      el("div", { class: "ghead", style: gstyle(w.primary_group) }, el("span", { class: "meta" }, g ? g.name_da : "")),
+      el("div", { class: "big", lang: "da" }, displayLemma(w)),
+      el("div", { class: "soft" }, w.word_class + (w.grammar ? " · " + w.grammar : "")),
+      metaLine(w, { freq: false }),
+      el("div", { class: "tap" }, t("front.tap")));
+  }
+  function back(w) {
+    const b = el("div", { class: "back", tabindex: "0", "aria-label": "Card back – scrollable" }, entry(w, { tag: "div" }));
+    return b;
+  }
+  function renderCard() {
+    const card = $("#card"); card.textContent = ""; card.className = "sheet flash";
+    const grade = $("#grade");
+    if (qi >= queue.length) {
+      const anyDeck = deckWords(deckSel.value).length;
+      card.append(el("div", { class: "done" },
+        el("h2", null, sessionTotal ? t("done.h") : t("none.h")),
+        el("p", { class: "soft" }, sessionTotal ? t("done.p", sessionTotal) : t("none.p")),
+        anyDeck ? el("button", { class: "btn solid", type: "button", onclick: e => { e.stopPropagation(); practiseAll = true; buildSession(); practiseAll = false; } }, t("practise")) : null));
+      grade.hidden = true; $("#cnt").textContent = ""; $("#bar").style.width = "100%";
+      return;
+    }
+    const w = byId[queue[qi]];
+    card.append(flipped ? back(w) : front(w));
+    card.setAttribute("aria-label", flipped ? t("card.backAria", w.lemma) : t("card.aria"));
+    grade.hidden = !flipped;
+    $("#cnt").textContent = t("card.count", Math.min(qi + 1, queue.length), queue.length);
+    $("#bar").style.width = `${(100 * qi / Math.max(1, queue.length)).toFixed(1)}%`;
+  }
+  function flip() { if (qi < queue.length) { flipped = !flipped; renderCard(); if (flipped) $("#card .back")?.focus({ preventScroll: true }); } }
+  function grade(q) {
+    if (!flipped || qi >= queue.length) return;
+    const id = queue[qi];
+    schedule(id, q);
+    if (q === 1) queue.splice(Math.min(queue.length, qi + 4), 0, id);
+    else if (q === 3 && !queue.slice(qi + 1).includes(id)) queue.splice(Math.min(queue.length, qi + 9), 0, id);
+    qi++; flipped = false; renderCard(); renderMastery(); $("#card").focus({ preventScroll: true });
+  }
+  const card = $("#card");
+  card.addEventListener("click", e => { if (e.target.closest(".back") && flipped) return; if (!e.target.closest("button")) flip(); });
+  card.addEventListener("dblclick", e => { if (flipped) flip(); });
+  card.addEventListener("keydown", e => {
+    if (e.key === " " || e.key === "Enter") { e.preventDefault(); flip(); }
+  });
+  document.addEventListener("keydown", e => {
+    if ($("#learn").hidden || e.target.matches("input, select, textarea")) return;
+    if (["1", "2", "3"].includes(e.key)) grade({ 1: 1, 2: 3, 3: 5 }[e.key]);
+    if ((e.key === " ") && e.target === document.body) { e.preventDefault(); flip(); }
+  });
+  $("#grade").addEventListener("click", e => { const b = e.target.closest("[data-g]"); if (b) grade(+b.dataset.g); });
+  // swipe (horizontal only, so vertical scrolling of the card back still works)
+  let sx = 0, sy = 0, tracking = false;
+  card.addEventListener("touchstart", e => { const t = e.touches[0]; sx = t.clientX; sy = t.clientY; tracking = true; }, { passive: true });
+  card.addEventListener("touchmove", e => {
+    if (!tracking || !flipped) return;
+    const t = e.touches[0], dx = t.clientX - sx, dy = t.clientY - sy;
+    if (Math.abs(dx) > 30 && Math.abs(dx) > 2 * Math.abs(dy)) {
+      card.style.transform = `translateX(${dx * 0.35}px) rotate(${dx * 0.02}deg)`;
+      card.classList.toggle("go-right", dx > 80); card.classList.toggle("go-left", dx < -80);
+    }
+  }, { passive: true });
+  card.addEventListener("touchend", e => {
+    if (!tracking) return; tracking = false;
+    const t = e.changedTouches[0], dx = t.clientX - sx, dy = t.clientY - sy;
+    card.style.transform = ""; card.classList.remove("go-right", "go-left");
+    if (flipped && Math.abs(dx) > 80 && Math.abs(dx) > 2 * Math.abs(dy)) { e.preventDefault(); grade(dx > 0 ? 5 : 1); }
+  });
+
+  deckSel.addEventListener("change", () => { F.settings.deck = deckSel.value; saveF(); buildSession(); });
+  $("#shuffle").addEventListener("change", e => { F.settings.shuffle = e.target.checked; saveF(); buildSession(); });
+  $("#reverse").addEventListener("change", e => { F.settings.reverse = e.target.checked; saveF(); flipped = false; renderCard(); });
+
+  // export / import / reset
+  $("#export").addEventListener("click", () => {
+    const blob = new Blob([JSON.stringify({ app: "pd3-flashcards", version: 1, exported: new Date().toISOString(),
+      flash: F, test: store.get(TKEY, null) }, null, 1)], { type: "application/json" });
+    const a = el("a", { href: URL.createObjectURL(blob), download: `pd3-progress-${new Date().toISOString().slice(0, 10)}.json` });
+    document.body.append(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+  });
+  $("#importFile").addEventListener("change", async e => {
+    const f = e.target.files[0]; if (!f) return;
+    try {
+      const d = JSON.parse(await f.text());
+      if (d.app !== "pd3-flashcards" || !d.flash || typeof d.flash.cards !== "object") throw new Error(t("imp.notfile"));
+      if (!confirm(t("imp.confirm"))) return;
+      F.cards = d.flash.cards; F.settings = Object.assign(F.settings, d.flash.settings || {}); saveF();
+      if (d.test) store.set(TKEY, d.test);
+      alert(t("imp.done", Object.keys(F.cards).length)); buildSession(); renderHistory();
+    } catch (err) { alert(t("imp.fail", err.message)); }
+    e.target.value = "";
+  });
+  $("#reset").addEventListener("click", () => {
+    if (!confirm(t("reset.confirm"))) return;
+    F.cards = {}; saveF(); buildSession();
+  });
+
+  /* ───────────── TEST ───────────── */
+  const T = Object.assign({ history: [], words: {} }, store.get(TKEY, {}));
+  const saveT = () => store.set(TKEY, T);
+  const scopeSel = $("#scope");
+  scopeSel.append(o("mix", t("scope.mix")), o("connectors", t("scope.conn")), o("t1", "Tier 1"), o("t2", "Tier 2"), o("t3", "Tier 3"));
+  for (const tier of [1, 2, 3]) {
+    const gs = groups.filter(g => g.tier === tier && g.words.length >= 4);
+    if (gs.length) scopeSel.append(el("optgroup", { label: t("deck.groups", tier) }, ...gs.map(g => o("g:" + g.id, g.name_da))));
+  }
+  const L3 = PD3.raw.meta.l3_items;           // real Læseforståelse 3 items, mapped to word ids
+  const l3ByWord = {};
+  for (const it of L3) if (it.word_id) (l3ByWord[it.word_id] ||= []).push(it);
+
+  const norm = s => s.toLowerCase().replace(/\s+/g, " ").trim();
+  const syn = w => new Set(w.senses.flatMap(s => s.synonyms.map(norm)));
+  function related(a, b) {                     // near-synonyms must never be distractors
+    if (a.id === b.id || norm(a.lemma) === norm(b.lemma)) return true;
+    return syn(a).has(norm(b.lemma)) || syn(b).has(norm(a.lemma));
+  }
+  const famOf = w => w.tier === 1 ? "conn" : w.word_class.split(" ")[0];
+  const pickN = (arr, n) => shuffle(arr.slice()).slice(0, n);
+
+  const GENERIC = new Set(["og", "eller", "samt", "også", "men"]);   // fit almost any gap → never distractors
+  function distractors(w, n, { sameGroup = false, avoidGroup = null, sameOrder = false } = {}) {
+    let pool = words.filter(x => !related(w, x) && famOf(x) === famOf(w) && !GENERIC.has(x.lemma));
+    if (w.tier === 1) {
+      const rel = avoidGroup || w.primary_group;
+      pool = pool.filter(x => !x.groups.includes(rel) && !x.relations?.includes(rel));
+      if (sameOrder) { const so = pool.filter(x => x.word_order?.type === w.word_order?.type); if (so.length >= n) pool = so; }
+    } else if (sameGroup) {
+      const sg = pool.filter(x => x.groups.some(g => w.groups.includes(g)));
+      if (sg.length >= n) pool = sg;
+    }
+    return pickN(pool, n);
+  }
+  const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
+
+  // ── question builders: each returns {type, word, prompt, stem, options:[{label, correct}], explain} or null
+  function qDefinition(w) {
+    const s = w.senses[0];
+    const ds = distractors(w, 3, { sameGroup: true });
+    if (ds.length < 3) return null;
+    return { type: 1, word: w, prompt: t("q.def"),
+      stem: [el("div", null, s.da_definition), el("div", { class: "soft small" }, s.en_definition)],
+      options: shuffle([{ label: displayLemma(w), correct: true }, ...ds.map(d => ({ label: displayLemma(d), correct: false }))]) };
+  }
+  function qL3(w) {
+    const items = l3ByWord[w.id]; if (!items) return null;
+    const it = items[Math.floor(Math.random() * items.length)];
+    const parts = it.gap_sentence.split("____");
+    if (parts.length !== 2) return null;
+    return { type: 2, word: w, real: it, prompt: t("q.l3", it.exam, it.n),
+      stem: [el("span", { lang: "da" }, parts[0], el("span", { class: "gap" }, "?"), parts[1])],
+      options: ["A", "B", "C", "D"].map(k => ({ label: it.options[k], correct: k === it.answer })) };
+  }
+  function findForm(w, text) {
+    // returns {index, form, slot} of the word inside the sentence
+    const forms = w.forms && w.forms.length ? w.forms : [w.lemma];
+    let best = null;
+    forms.forEach((f, slot) => {
+      if (!f) return;
+      const re = new RegExp(`(^|[^\\wæøåÆØÅ])(${f.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")})(?![\\wæøåÆØÅ])`, "i");
+      const m = re.exec(text);
+      if (m && (!best || f.length > best.form.length)) best = { index: m.index + m[1].length, form: m[2], slot };
+    });
+    return best;
+  }
+  function qGap(w) {
+    if (l3ByWord[w.id] && Math.random() < 0.7) { const r = qL3(w); if (r) return r; }
+    if (w.word_order && w.word_order.type === "corr") return null;
+    for (const s of shuffle(w.senses.slice())) {
+      const hit = findForm(w, s.example_da);
+      if (!hit) continue;
+      const atStart = hit.index === 0;
+      const ds = distractors(w, 3, { sameGroup: true, sameOrder: true, avoidGroup: s.group });
+      if (ds.length < 3) continue;
+      const inflect = d => {
+        const f = (d.forms && d.forms[hit.slot]) || (d.forms && d.forms[0]) || d.lemma;
+        return atStart ? cap(f) : f;
+      };
+      const correct = atStart ? cap(hit.form) : hit.form;
+      const opts = [{ label: correct, correct: true }, ...ds.map(d => ({ label: inflect(d), correct: false }))];
+      const before = s.example_da.slice(0, hit.index), after = s.example_da.slice(hit.index + hit.form.length);
+      return { type: 2, word: w, sense: s, prompt: t("q.gap"),
+        stem: [el("span", { lang: "da" }, before, el("span", { class: "gap" }, "?"), after)], options: shuffle(opts) };
+    }
+    return null;
+  }
+  function qRelation(w) {
+    if (w.tier !== 1) return null;
+    const rel = w.primary_group, g = groupById[rel];
+    const pool = words.filter(x => x.tier === 1 && x.id !== w.id && !x.groups.includes(rel) && !(x.relations || []).includes(rel) && !related(w, x));
+    const ds = pickN(pool, 3);
+    if (ds.length < 3) return null;
+    return { type: 3, word: w, prompt: t("q.rel"),
+      stem: [el("div", null, LANG === "en" ? `${g.name_en} – ${g.name_da}` : `${g.name_da} – ${g.name_en}`)],
+      options: shuffle([{ label: displayLemma(w), correct: true }, ...ds.map(d => ({ label: displayLemma(d), correct: false }))]) };
+  }
+  function qEnglish(w) {
+    const pool = words.filter(x => x.id !== w.id && !related(w, x) && !x.groups.some(g => w.groups.includes(g)));
+    const ds = pickN(pool.filter(x => x.tier === w.tier).length >= 3 ? pool.filter(x => x.tier === w.tier) : pool, 3);
+    if (ds.length < 3) return null;
+    const labels = new Set([norm(w.senses[0].en_definition)]);
+    const opts = [{ label: w.senses[0].en_definition, correct: true }];
+    for (const d of ds) { const l = d.senses[0].en_definition; if (labels.has(norm(l))) return null; labels.add(norm(l)); opts.push({ label: l, correct: false }); }
+    return { type: 4, word: w, prompt: t("q.en"),
+      stem: [el("div", { lang: "da", style: "font-family:var(--head);font-size:1.6rem;font-weight:800" }, displayLemma(w)), el("div", { class: "soft small" }, w.word_class)],
+      options: shuffle(opts) };
+  }
+  function qSense(w) {
+    if (w.senses.length < 2) return null;
+    const i = Math.floor(Math.random() * w.senses.length), s = w.senses[i];
+    const hit = findForm(w, s.example_da);
+    let others = w.senses.filter((x, j) => j !== i);
+    others = shuffle(others).slice(0, 3);
+    const opts = [s, ...others].map(x => ({ label: x.da_definition, sub: x.en_definition, correct: x === s }));
+    if (new Set(opts.map(x => norm(x.label))).size !== opts.length) return null;
+    const stem = hit ? [el("span", { lang: "da" }, s.example_da.slice(0, hit.index), el("mark", { class: "hl" }, hit.form), s.example_da.slice(hit.index + hit.form.length))]
+                     : [el("span", { lang: "da" }, s.example_da)];
+    return { type: 5, word: w, sense: s, prompt: t("q.sense", displayLemma(w)), stem, options: shuffle(opts) };
+  }
+  const BUILDERS = { 1: qDefinition, 2: qGap, 3: qRelation, 4: qEnglish, 5: qSense };
+
+  function validate(q) {
+    if (!q || !q.options || q.options.length < 2) return "no options";
+    if ([1, 2, 3, 4].includes(q.type) && q.options.length !== 4) return "needs 4 options";
+    if (q.options.filter(x => x.correct).length !== 1) return "not exactly one correct";
+    const labels = q.options.map(x => norm(x.label));
+    if (new Set(labels).size !== labels.length) return "duplicate options";
+    if (labels.some(l => !l)) return "empty option";
+    return null;
+  }
+  function makeQuestion(w, scope) {
+    let types = w.tier === 1 ? [1, 2, 3, 4, 5] : [1, 2, 4, 5];
+    if (scope === "connectors") types = [2, 2, 3, 3, 1, 5];
+    if (l3ByWord[w.id]) types = types.concat([2, 2]);
+    for (const t of shuffle(types.slice())) {
+      const q = BUILDERS[t](w);
+      if (q && !validate(q)) return q;
+    }
+    return null;
+  }
+
+  function weight(w) {
+    const s = T.words[w.id], f = F.cards[w.id];
+    const wrongRate = s && s.seen ? s.wrong / s.seen : 0;
+    return 1 + 3 * wrongRate + (f ? Math.min(3, f.lapses * 0.5) : 0) + (s ? 0 : 0.3);
+  }
+  function weightedPick(pool, n, taken) {
+    const out = [];
+    const cand = pool.filter(w => !taken.has(w.id));
+    while (out.length < n && cand.length) {
+      const tot = cand.reduce((a, w) => a + weight(w), 0);
+      let r = Math.random() * tot, k = 0;
+      for (; k < cand.length; k++) { r -= weight(cand[k]); if (r <= 0) break; }
+      const w = cand.splice(Math.min(k, cand.length - 1), 1)[0];
+      out.push(w); taken.add(w.id);
+    }
+    return out;
+  }
+  function chooseWords(scope, n = 10, only = null) {
+    const taken = new Set();
+    if (only) return shuffle(only.map(id => byId[id]).filter(Boolean)).slice(0, n);
+    if (scope === "mix") {
+      const want = { 1: 5, 2: 3, 3: 2 };
+      let out = [];
+      for (const t of [1, 2, 3]) out = out.concat(weightedPick(words.filter(w => w.tier === t), want[t], taken));
+      if (out.length < n) out = out.concat(weightedPick(words, n - out.length, taken));
+      return shuffle(out);
+    }
+    let pool = scope === "connectors" || scope === "t1" ? words.filter(w => w.tier === 1)
+      : scope === "t2" ? words.filter(w => w.tier === 2) : scope === "t3" ? words.filter(w => w.tier === 3)
+      : scope.startsWith("g:") ? (groupById[scope.slice(2)]?.words || []).map(id => byId[id]) : words;
+    return weightedPick(pool, n, taken);
+  }
+
+  let quiz = null;
+  function startTest(only = null) {
+    const scope = scopeSel.value;
+    const ws = chooseWords(scope, 10, only);
+    const qs = [];
+    const used = new Set();
+    for (const w of ws) { const q = makeQuestion(w, scope); if (q) { qs.push(q); used.add(w.id); } }
+    // top up if a word could not produce a valid question
+    if (!only) for (const w of shuffle(words.slice())) {
+      if (qs.length >= 10) break;
+      if (used.has(w.id) || (scope !== "mix" && scope !== "all" && !ws.length)) continue;
+      if (scope === "t1" || scope === "connectors") { if (w.tier !== 1) continue; }
+      else if (scope === "t2" && w.tier !== 2) continue; else if (scope === "t3" && w.tier !== 3) continue;
+      else if (scope.startsWith("g:") && !w.groups.includes(scope.slice(2))) continue;
+      const q = makeQuestion(w, scope); if (q) { qs.push(q); used.add(w.id); }
+    }
+    if (!qs.length) { alert(t("t.notenough")); return; }
+    quiz = { scope, qs, i: 0, answers: [] };
+    $("#setup").hidden = true; $("#result").hidden = true; $("#quiz").hidden = false;
+    renderQ();
+  }
+  function explain(q) {
+    const w = q.word, s = q.sense || w.senses[0];
+    return el("div", null,
+      el("p", null, el("strong", { lang: "da" }, displayLemma(w)), " ", el("span", { class: "soft" }, `(${w.word_class})`),
+        " – ", s.da_definition, el("span", { class: "soft" }, " · " + s.en_definition)),
+      el("p", { class: "small" }, el("em", { lang: "da" }, ...highlight(s.example_da, w)), el("span", { class: "soft" }, " – " + s.example_en)),
+      q.real ? el("p", { class: "small soft" }, t("ex.key", q.real.answer, q.real.exam, q.real.n)) : null,
+      w.tier === 1 ? el("p", { class: "small", style: "margin:4px 0" }, el("b", null, t("ex.relation")), groupName(w.primary_group), ". ",
+        el("b", null, t("ex.wo")), LANG === "en" ? w.word_order.note_en : w.word_order.note_da) : null);
+  }
+  function renderQ() {
+    const q = quiz.qs[quiz.i], box = $("#qcard"); box.textContent = "";
+    $("#qcnt").textContent = t("q.count", quiz.i + 1, quiz.qs.length);
+    $("#qscore").textContent = t("q.right", quiz.answers.filter(a => a.ok).length);
+    $("#qbar").style.width = `${100 * quiz.i / quiz.qs.length}%`;
+    const TYPE = n => t("type." + n);
+    const fb = el("div", { class: "feedback", hidden: true, "aria-live": "assertive" });
+    const next = el("button", { class: "btn solid", type: "button", hidden: true, style: "margin-top:12px" },
+      quiz.i + 1 < quiz.qs.length ? t("q.next") : t("q.result"));
+    const opts = el("div", { class: "opts", role: "group", "aria-label": t("q.optsAria") });
+    q.options.forEach((op, k) => {
+      const b = el("button", { class: "btn opt", type: "button", "data-k": k },
+        el("span", { class: "k" }, String.fromCharCode(65 + k)), el("span", null, el("span", { lang: "da" }, op.label),
+          op.sub ? el("div", { class: "small soft", style: "font-weight:500" }, op.sub) : null));
+      b.addEventListener("click", () => answer(k));
+      opts.append(b);
+    });
+    function answer(k) {
+      if (quiz.answers.length > quiz.i) return;
+      const ok = q.options[k].correct;
+      quiz.answers.push({ ok, chosen: q.options[k].label, correct: q.options.find(x => x.correct).label });
+      opts.querySelectorAll(".opt").forEach((b, j) => { b.disabled = true;
+        if (q.options[j].correct) b.classList.add("correct"); else if (j === k) b.classList.add("wrong"); });
+      const s = (T.words[q.word.id] ||= { seen: 0, wrong: 0 }); s.seen++; if (!ok) s.wrong++; saveT();
+      fb.className = "feedback " + (ok ? "ok" : "bad"); fb.hidden = false;
+      fb.append(el("h3", null, ok ? t("fb.ok") : t("fb.bad", quiz.answers[quiz.i].correct)), explain(q));
+      next.hidden = false; next.focus();
+    }
+    next.addEventListener("click", () => { quiz.i++; quiz.i < quiz.qs.length ? renderQ() : finish(); });
+    box.append(el("div", { class: "meta" }, `${TYPE(q.type)} · Tier ${q.word.tier}` + (PD3.parts(q.word).length ? " · " + PD3.parts(q.word).join(" ") : "")),
+      el("p", { class: "prompt" }, q.prompt), el("div", { class: "stem" }, ...q.stem), opts, fb, next);
+    box._answer = answer; box._next = next;
+    opts.querySelector(".opt").focus({ preventScroll: true });
+  }
+  document.addEventListener("keydown", e => {
+    if ($("#test").hidden || $("#quiz").hidden || e.target.matches("input, select")) return;
+    const box = $("#qcard");
+    if (/^[1-4]$/.test(e.key) && quiz && quiz.answers.length === quiz.i && +e.key <= quiz.qs[quiz.i].options.length) box._answer(+e.key - 1);
+  });
+  function finish() {
+    const perTier = {};
+    quiz.qs.forEach((q, i) => { const tr = q.word.tier; perTier[tr] ||= { c: 0, t: 0 }; perTier[tr].t++; if (quiz.answers[i].ok) perTier[tr].c++; });
+    const score = quiz.answers.filter(a => a.ok).length;
+    const mistakes = quiz.qs.map((q, i) => ({ q, a: quiz.answers[i] })).filter(x => !x.a.ok);
+    T.history.unshift({ ts: Date.now(), scope: quiz.scope, score, total: quiz.qs.length, perTier, mistakes: mistakes.map(m => m.q.word.id) });
+    T.history = T.history.slice(0, 100); saveT();
+    $("#quiz").hidden = true;
+    const r = $("#result"); r.hidden = false; r.textContent = "";
+    r.append(el("div", { class: "sheet q", style: "text-align:center" },
+      el("div", { class: "score" }, `${score}/${quiz.qs.length}`),
+      el("p", { class: "soft" }, Object.entries(perTier).map(([tr, v]) => `Tier ${tr}: ${v.c}/${v.t}`).join("  ·  ")),
+      el("div", { class: "tools-row", style: "justify-content:center;margin-top:16px" },
+        mistakes.length ? el("button", { class: "btn solid", type: "button", onclick: () => startTest(mistakes.map(m => m.q.word.id)) }, t("res.retry", mistakes.length)) : null,
+        el("button", { class: "btn", type: "button", onclick: () => startTest() }, t("res.new")),
+        el("button", { class: "btn quiet", type: "button", onclick: () => { r.hidden = true; $("#setup").hidden = false; renderHistory(); } }, t("res.back")))));
+    if (mistakes.length) r.append(el("div", { class: "sheet q" }, el("h2", { style: "font-size:1.1rem" }, t("res.review")),
+      el("ol", { class: "review" }, ...mistakes.map(m => el("li", null,
+        el("div", { class: "small soft" }, m.q.prompt),
+        el("div", null, ...m.q.stem.map(n => n.cloneNode(true))),
+        el("div", { class: "small" }, t("res.your"), el("span", { style: "color:var(--bad);font-weight:700" }, m.a.chosen),
+          t("res.correct"), el("span", { style: "color:var(--ok);font-weight:700" }, m.a.correct)),
+        explain(m.q))))));
+    r.querySelector("button")?.focus();
+  }
+  function renderHistory() {
+    const box = $("#hist"); box.textContent = "";
+    if (!T.history.length) { box.append(el("p", { class: "soft" }, t("hist.none"))); return; }
+    const agg = {};
+    for (const h of T.history) for (const [tr, v] of Object.entries(h.perTier)) { agg[tr] ||= { c: 0, t: 0 }; agg[tr].c += v.c; agg[tr].t += v.t; }
+    box.append(el("p", { class: "soft" }, t("hist.acc") + Object.entries(agg).map(([tr, v]) =>
+      `Tier ${tr} ${Math.round(100 * v.c / v.t)} % (${v.c}/${v.t})`).join("  ·  ")));
+    box.append(el("table", { class: "hist" }, el("thead", null, el("tr", null, el("th", null, t("hist.date")), el("th", null, t("hist.scope")), el("th", null, t("hist.score")), el("th", null, t("hist.tier")))),
+      el("tbody", null, ...T.history.slice(0, 15).map(h => el("tr", null,
+        el("td", null, new Date(h.ts).toLocaleString(LANG === "en" ? "en-GB" : "da-DK")), el("td", null, h.scope), el("td", null, `${h.score}/${h.total}`),
+        el("td", null, Object.entries(h.perTier).map(([tr, v]) => `T${tr} ${v.c}/${v.t}`).join(" · ")))))));
+    box.append(el("button", { class: "btn quiet", type: "button", style: "margin-top:8px", onclick: () => {
+      if (confirm(t("hist.confirm"))) { T.history = []; T.words = {}; saveT(); renderHistory(); } } }, t("hist.clear")));
+  }
+  $("#newTest").addEventListener("click", () => startTest());
+
+  // self-test hook used by the verification script: generate many questions and report invalid ones
+  window.PD3_SELFTEST = (n = 2000) => {
+    const res = { generated: 0, invalid: 0, nulls: 0, byType: {}, problems: [] };
+    for (let i = 0; i < n; i++) {
+      const w = words[i % words.length];
+      for (const t of [1, 2, 3, 4, 5]) {
+        const q = BUILDERS[t](w);
+        if (!q) { res.nulls++; continue; }
+        res.generated++; res.byType[t] = (res.byType[t] || 0) + 1;
+        const err = validate(q);
+        if (err) { res.invalid++; if (res.problems.length < 20) res.problems.push({ word: w.lemma, type: t, err, options: q.options.map(x => x.label) }); }
+      }
+    }
+    return res;
+  };
+  window.PD3_DEBUG = { startTest, get quiz() { return quiz; }, grade, flip, buildSession, F, T };
+
+  buildSession();
+  if (location.hash === "#test") selectTab(1);
+})();
+</script>
+</body>
+</html>

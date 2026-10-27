@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PD3 Study Sheet</title>
+<meta name="description" content="PD3 reading vocabulary (Nov 2022 – May 2024 exams): connectors, question words and text words, grouped by meaning.">
+<style>
+{{CSS}}
+.tools { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--paper) 88%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--rule); margin-top: 14px; }
+.tools .row { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; padding-top: 10px; padding-bottom: 10px; }
+.tools .search { flex: 1 1 260px; }
+.tools .jumpsel { flex: 1 1 200px; }
+.filters { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); padding-bottom: 12px; }
+.layout { display: grid; gap: 28px; grid-template-columns: 1fr; padding-top: 18px; }
+.layout > main { min-width: 0; }
+.toc { display: none; }
+@media (min-width: 960px) {
+  .layout { grid-template-columns: 230px 1fr; }
+  .toc { display: block; position: sticky; top: 76px; align-self: start; max-height: calc(100vh - 96px); overflow-y: auto; padding-bottom: 20px; }
+  .tools .jumpsel { display: none; }
+}
+.toc h2 { font-size: .75rem; text-transform: uppercase; letter-spacing: .08em; color: var(--faint); margin: 18px 0 6px; font-weight: 600; }
+.toc h2:first-child { margin-top: 0; }
+.toc a { display: flex; align-items: center; gap: 8px; min-height: 36px; padding: 2px 6px; border-radius: 8px; text-decoration: none; color: var(--ink); font-size: .92rem; }
+.toc a:hover { background: var(--sheet); box-shadow: var(--shadow); }
+.toc a .n { margin-left: auto; color: var(--faint); font-size: .8rem; }
+.tier { margin-bottom: 34px; }
+.tier > header { margin-bottom: 14px; }
+.tier > header h2 { font-size: 1.6rem; letter-spacing: -.03em; }
+.tier > header p { margin: 2px 0 0; color: var(--soft); }
+section.group { margin-bottom: 22px; scroll-margin-top: 80px; }
+section.group > .ghead { padding: 4px 0 10px; flex-wrap: wrap; row-gap: 2px; }
+section.group > .ghead h3 { font-size: 1.15rem; }
+section.group > .ghead .count { color: var(--soft); font-size: .78rem; font-weight: 600; background: var(--sheet); border: 1px solid var(--rule); border-radius: 999px; padding: 2px 10px; }
+section.group > .ghead button { margin-left: auto; }
+.entry { scroll-margin-top: 90px; }
+.xref { padding: 12px 18px; font-size: .92rem; color: var(--soft); }
+.xref + .entry, .entry + .xref, .xref + .xref { border-top: 1px solid var(--rule); }
+.xref a { font-weight: 700; }
+details.fromexam { margin-top: 8px; }
+details.fromexam summary { cursor: pointer; min-height: 40px; display: inline-flex; align-items: center; color: var(--soft); font-weight: 600; font-size: .9rem; }
+details.fromexam ul { margin: 2px 0 0; padding-left: 18px; }
+details.fromexam li { margin: 6px 0; font-size: .92rem; }
+.empty { padding: 40px 0; text-align: center; color: var(--soft); }
+.collapsed > .sheet { display: none; }
+@media print {
+  .tools, .toc, .nav, .no-print, section.group > .ghead button { display: none !important; }
+  .layout { display: block; }
+  body { background: #fff; color: #000; font-size: 10.5pt; }
+  .sheet { border-color: #ccc; }
+  .collapsed > .sheet { display: block; }
+  .entry { break-inside: avoid; }
+  details.fromexam:not([open]) { display: none; }
+  .tier { break-before: page; }
+  .tier:first-child { break-before: auto; }
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" href="index.html"><span class="logo" aria-hidden="true">Pd</span><span data-i18n="brand">PD3 ordforråd</span></a>
+    <nav class="nav no-print" aria-label="Pages">
+      <a href="index.html" data-i18n="nav.overview">Overblik</a>
+      <a href="study-sheet.html" aria-current="page" data-i18n="nav.study">Studieark</a>
+      <a href="flashcards.html#learn" data-i18n="nav.flash">Flashcards</a>
+      <a href="flashcards.html#test" data-i18n="nav.test">Test</a>
+    </nav>
+  </div>
+</header>
+<div class="wrap top">
+  <h1 data-i18n="study.title">Studieark</h1>
+  <p id="intro"></p>
+</div>
+
+<div class="tools">
+  <div class="wrap">
+    <div class="row">
+      <label class="search"><span class="sr-only">Search</span>
+        <input id="q" type="search" placeholder="Søg ord, betydning eller eksempel…" data-i18n-ph="study.search" autocomplete="off"></label>
+      <label class="jumpsel"><span class="sr-only">Jump to group</span><select id="jump"></select></label>
+      <div class="pick" role="group" aria-label="Tier">
+        <button type="button" data-tier="all" aria-pressed="true" data-i18n="study.all">Alle</button>
+        <button type="button" data-tier="1" aria-pressed="false">Tier 1</button>
+        <button type="button" data-tier="2" aria-pressed="false">Tier 2</button>
+        <button type="button" data-tier="3" aria-pressed="false">Tier 3</button>
+      </div>
+      <button class="btn quiet" type="button" id="toggleFilters" aria-expanded="false" aria-controls="filters" data-i18n="study.filters">Filtre</button>
+    </div>
+    <div class="filters" id="filters" hidden>
+      <label class="field"><span data-i18n="f.group">Gruppe</span> <select id="fGroup"></select></label>
+      <label class="field"><span data-i18n="f.class">Ordklasse</span> <select id="fClass"></select></label>
+      <label class="field"><span data-i18n="f.exam">Prøve</span> <select id="fExam"></select></label>
+      <label class="field"><span data-i18n="f.part">Del</span> <select id="fPart"></select></label>
+      <label class="field"><span data-i18n="f.ddo">Tjek i DDO</span> <select id="fVer"><option value="" data-i18n="f.any">Alle</option><option value="yes" data-i18n="f.verified">Verificeret</option><option value="no" data-i18n="f.unverified">Ikke verificeret</option></select></label>
+      <label class="check"><input type="checkbox" id="hideEn"> <span data-i18n="f.hideEn">Skjul engelsk</span></label>
+      <label class="check"><input type="checkbox" id="hideDa"> <span data-i18n="f.hideDa">Skjul dansk</span></label>
+      <div style="display:flex;gap:6px;align-items:end;flex-wrap:wrap">
+        <button class="btn quiet" type="button" id="expand" data-i18n="f.expand">Fold alle ud</button>
+        <button class="btn quiet" type="button" id="collapse" data-i18n="f.collapse">Fold sammen</button>
+        <button class="btn quiet" type="button" onclick="window.print()" data-i18n="f.print">Print</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap layout">
+  <nav class="toc" id="toc" aria-label="Groups"></nav>
+  <main id="main" aria-live="polite"></main>
+</div>
+<footer class="wrap foot" id="foot"></footer>
+
+<script type="application/json" id="pd3-data">{{DATA}}</script>
+<script>
+{{COMMON_JS}}
+</script>
+<script>
+(() => {
+  const { words, groups, byId, el, gstyle, groupName, displayLemma, entry, store, EXAMS } = PD3;
+  const KEY = "pd3.study.v1";
+  const prefs = Object.assign({ tier: "all", hideEn: false, hideDa: false }, store.get(KEY, {}));
+  const $ = s => document.querySelector(s);
+  const main = $("#main");
+  const n = tr => words.filter(w => w.tier === tr).length;
+  $("#intro").textContent = t("study.intro", words.length, EXAMS.length, n(1), n(2), n(3));
+  $("#foot").textContent = t("footer");
+
+  const opt = (v, t) => el("option", { value: v }, t);
+  $("#fGroup").append(opt("", t("f.allGroups")), ...groups.map(g => opt(g.id, `${LANG === "en" ? g.name_en : g.name_da} (Tier ${g.tier})`)));
+  const classes = [...new Set(words.map(w => w.word_class.split(" (")[0].split(" / ")[0]))].sort((a, b) => a.localeCompare(b, "da"));
+  $("#fClass").append(opt("", t("f.allClasses")), ...classes.map(c => opt(c, c)));
+  $("#fExam").append(opt("", t("f.allExams")), ...EXAMS.map(e => opt(e, e)));
+  $("#fPart").append(opt("", t("f.allParts")), ...PD3.PARTS.map(p => opt(p, p)));
+
+  const TIER = { 1: [t("tier1.h"), t("tier1.p")], 2: [t("tier2.h"), t("tier2.p")], 3: [t("tier3.h"), t("tier3.p")] };
+  const hay = Object.fromEntries(words.map(w => [w.id, [w.lemma, w.display, w.word_class, ...w.senses.flatMap(s =>
+    [s.da_definition, s.en_definition, s.example_da, s.example_en, ...s.collocations, ...s.synonyms, ...s.antonyms])].join(" ").toLowerCase()]));
+
+  const sections = [];
+  for (const tr of [1, 2, 3]) {
+    const gs = groups.filter(g => g.tier === tr);
+    if (!gs.length) continue;
+    const tierBox = el("div", { class: "tier", "data-tier": tr },
+      el("header", null, el("h2", null, TIER[tr][0]), el("p", null, TIER[tr][1])));
+    for (const g of gs) {
+      const sheet = el("div", { class: "sheet" });
+      for (const id of g.words) {
+        const w = byId[id];
+        if (w.primary_group === g.id) sheet.append(entry(w, { id: w.id }));
+        else sheet.append(el("div", { class: "xref", "data-id": w.id },
+          el("a", { href: "#" + w.id }, displayLemma(w)), " – ",
+          w.senses.filter(s => s.group === g.id).map(s => s.en_definition).join("; "),
+          el("span", { class: "meta" }, "  " + t("grp.see", groupName(w.primary_group).split(" · ")[0]))));
+      }
+      const toggle = el("button", { class: "btn quiet small", type: "button", "aria-expanded": "true" }, t("grp.hide"));
+      const sec = el("section", { class: "group", id: "g-" + g.id, style: gstyle(g.id), "data-group": g.id },
+        el("div", { class: "ghead" }, el("h3", null, LANG === "en" ? g.name_en : g.name_da), el("span", { class: "soft" }, LANG === "en" ? g.name_da : g.name_en),
+          el("span", { class: "count" }, ""), toggle), sheet);
+      toggle.addEventListener("click", () => setOpen(sec, sec.classList.contains("collapsed")));
+      tierBox.append(sec);
+      sections.push({ g, sec });
+    }
+    main.append(tierBox);
+  }
+  const empty = el("p", { class: "empty", hidden: true }, t("study.empty"));
+  main.append(empty);
+  function setOpen(sec, open) {
+    sec.classList.toggle("collapsed", !open);
+    const b = sec.querySelector(".ghead button"); b.textContent = open ? t("grp.hide") : t("grp.show"); b.setAttribute("aria-expanded", String(open));
+  }
+
+  function apply() {
+    const q = $("#q").value.trim().toLowerCase();
+    const f = { group: $("#fGroup").value, cls: $("#fClass").value, exam: $("#fExam").value, part: $("#fPart").value, ver: $("#fVer").value };
+    const tier = prefs.tier;
+    let shown = 0;
+    const toc = $("#toc"), jump = $("#jump");
+    toc.textContent = ""; jump.textContent = ""; jump.append(opt("", t("study.jump")));
+    const tierShown = {};
+    let lastTier = 0;
+    for (const { g, sec } of sections) {
+      let cnt = 0;
+      for (const item of sec.querySelectorAll("[data-id]")) {
+        const w = byId[item.dataset.id];
+        const ok = (tier === "all" || String(w.tier) === tier) && (!q || hay[w.id].includes(q))
+          && (!f.group || g.id === f.group) && (!f.cls || w.word_class.startsWith(f.cls))
+          && (!f.exam || w.frequency.exam_list.includes(f.exam)) && (!f.part || w.frequency.by_part[f.part])
+          && (!f.ver || (f.ver === "yes") === (w.verified && w.senses.every(s => s.verified)));
+        item.hidden = !ok;
+        if (ok) cnt++;
+      }
+      sec.hidden = cnt === 0;
+      sec.querySelector(".count").textContent = t("count.words", cnt);
+      if (cnt) {
+        shown += cnt; tierShown[g.tier] = true;
+        if (g.tier !== lastTier) { toc.append(el("h2", null, TIER[g.tier][0])); lastTier = g.tier; }
+        const gname = LANG === "en" ? g.name_en : g.name_da;
+        toc.append(el("a", { href: "#g-" + g.id, style: gstyle(g.id) }, el("span", { class: "gdot" }), gname, el("span", { class: "n" }, String(cnt))));
+        jump.append(opt("g-" + g.id, `${gname} (${cnt})`));
+      }
+    }
+    main.querySelectorAll(".tier").forEach(x => { x.hidden = !tierShown[x.dataset.tier]; });
+    empty.hidden = shown > 0;
+    document.body.classList.toggle("hide-en", prefs.hideEn);
+    document.body.classList.toggle("hide-da", prefs.hideDa);
+    document.querySelectorAll(".pick [data-tier]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.tier === tier)));
+    store.set(KEY, prefs);
+  }
+  let timer;
+  $("#q").addEventListener("input", () => { clearTimeout(timer); timer = setTimeout(apply, 120); });
+  ["#fGroup", "#fClass", "#fExam", "#fPart", "#fVer"].forEach(s => $(s).addEventListener("change", apply));
+  $("#jump").addEventListener("change", e => { const x = document.getElementById(e.target.value); if (x) { setOpen(x, true); x.scrollIntoView(); } e.target.value = ""; });
+  document.querySelectorAll(".pick [data-tier]").forEach(b => b.addEventListener("click", () => { prefs.tier = b.dataset.tier; apply(); }));
+  $("#hideEn").checked = prefs.hideEn; $("#hideDa").checked = prefs.hideDa;
+  $("#hideEn").addEventListener("change", e => { prefs.hideEn = e.target.checked; if (prefs.hideEn) { prefs.hideDa = false; $("#hideDa").checked = false; } apply(); });
+  $("#hideDa").addEventListener("change", e => { prefs.hideDa = e.target.checked; if (prefs.hideDa) { prefs.hideEn = false; $("#hideEn").checked = false; } apply(); });
+  $("#toggleFilters").addEventListener("click", e => { const f = $("#filters"); f.hidden = !f.hidden; e.currentTarget.setAttribute("aria-expanded", String(!f.hidden)); });
+  $("#expand").addEventListener("click", () => sections.forEach(s => setOpen(s.sec, true)));
+  $("#collapse").addEventListener("click", () => sections.forEach(s => setOpen(s.sec, false)));
+  apply();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+# Tier 1 lexicon – part B: Indrømmelse, Sammenligning, Betingelse & formål, om/hvorvidt
+
+@ selvom
+wox: Mange vælger humaniora, selvom lønnen er dårligere. / Selvom lønnen er dårligere, vælger mange … || …, even though the pay is worse. (subordinate order; fronted → inversion)
+S: indrommelse | neutral | Indleder en ledsætning med en kendsgerning, som man kunne tro ville forhindre det, hovedsætningen siger. | Although; even though. | Mange danske unge vælger en humanistisk uddannelse, selvom jobmulighederne og lønnen er dårligere. | Many young Danes choose a humanities degree even though job prospects and pay are worse. | også selvom; selvom det; heller ikke selvom | skønt; trods (det at); om end | fordi
+S: indrommelse | neutral | Selv i det tilfælde at; også hvis (om noget muligt eller tænkt). | Even if. | Det er et forsøg værd, selvom ingen af initiativerne kan garantere succes. | It is worth a try even if neither of the initiatives can guarantee success. | selv om det skulle | selv hvis; uanset om | -
+
+@ alligevel
+wox: Alligevel begyndte 6.000 unge på humaniora. || Nevertheless 6,000 young people started on the humanities. (fronted → inversion)
+S: indrommelse | neutral | Modsat det man ville forvente ud fra det, der lige er sagt. | Nevertheless; still; even so. | Alligevel begyndte knap 6.000 unge på en humanistisk bacheloruddannelse i 2021. | Nevertheless, almost 6,000 young people started a humanities bachelor's degree in 2021. | men alligevel; og alligevel; alligevel ikke | ikke desto mindre; dog; trods det | derfor
+S: holdning | neutral | Under alle omstændigheder; uanset hvad (ofte: når man nu alligevel …). | Anyway; in any case. | Jeg skal alligevel i byen, så jeg kan købe det. | I am going into town anyway, so I can buy it. | når nu alligevel; alligevel skal | under alle omstændigheder; i forvejen | -
+S: holdning | spoken | Forstærker et udtryk for overraskelse eller forargelse. | Really! (surprise or indignation). | Det er alligevel for meget! | That really is too much! | det er alligevel | - | -
+
+@ ikke desto mindre
+wox: Ikke desto mindre valgte mange at blive. || Nonetheless many chose to stay. (fronted → inversion)
+S: indrommelse | bookish | Til trods for dette; alligevel. | Nonetheless; nevertheless. | Det var et hårdt år. Ikke desto mindre valgte de fleste at fortsætte. | It was a hard year. Nonetheless most chose to continue. | men ikke desto mindre | alligevel; trods det; dog | -
+
+@ uanset
+wox: Uanset job oplever de fleste mere energi. / Uanset om du vil eller ej, … || Regardless of job, most people experience more energy. (fronted → inversion)
+S: indrommelse | neutral | (præposition) Uden at tage hensyn til; ligegyldigt hvilken. | Regardless of; irrespective of. | Uanset job oplever de fleste, at de ved at være aktive får mere energi. | Regardless of job, most people find that being active gives them more energy. | uanset hvad; uanset hvor; uanset om | ligegyldigt; trods | -
+S: betingelse | neutral | (uanset om/hvad/hvor) Ligegyldigt hvordan det forholder sig. | No matter whether/what/where. | Uanset om man bor i byen eller på landet, er det dyrt at bo. | No matter whether you live in the city or the countryside, housing is expensive. | uanset om; uanset hvad der sker | ligegyldigt om; hvad enten | -
+
+@ ganske vist
+wox: Ingen ved ganske vist, hvordan maden smagte, men … || Admittedly nobody knows how the food tasted, but …
+S: indrommelse | formal | Indrømmer noget, som efterfølges af et forbehold (ofte med "men"). | Admittedly; it is true that. | Ingen ved ganske vist, hvordan vikingernes mad smagte, men man har gode bud. | Admittedly, nobody knows how the Vikings' food tasted, but there are good guesses. | ganske vist … men | godt nok; rigtignok | -
+
+@ stadig(væk)
+wox: Det er stadig medarbejderne, der udfører opgaverne. || It is still the employees who carry out the tasks.
+S: tid | neutral | Nu som før; ligesom tidligere. | Still. | Jeg brænder stadig for at kommunikere på forskellige platforme. | I am still passionate about communicating on different platforms. | stadig væk; stadig flere; stadig mere | fortsat; endnu | ikke længere
+S: indrommelse | neutral | Gælder fortsat, til trods for noget andet. | Still; even so. | Den daglige drift er ledernes ansvar, men det er stadig medarbejderne, der udfører opgaverne. | Day-to-day operations are the managers' responsibility, but it is still the employees who do the tasks. | men stadig | alligevel; trods det | -
+S: sammenligning | neutral | (stadig + komparativ) I stigende grad; mere og mere. | Increasingly; ever (more). | Stadig flere vælger at handle på nettet. | More and more people choose to shop online. | stadig flere; stadig større | mere og mere | -
+
+@ trods alt
+wox: Jeg havde jo trods alt været glad for at være der. || After all, I had been happy to be there.
+S: indrommelse | neutral | Når man tager alt i betragtning; på trods af det negative. | After all; all the same. | Jeg havde jo trods alt været glad for at være der. | After all, I had been happy to be there. | jo trods alt; men trods alt | alligevel; dog; når alt kommer til alt | -
+
+@ også selvom
+wox: … også selvom det ikke altid er let. || … even though it is not always easy.
+S: indrommelse | neutral | Forstærket "selvom": selv i det tilfælde at; også hvis. | Even though; even if. | De trives med ansvar for medarbejdere – også selvom det ikke altid er lige let. | They thrive on being responsible for staff – even though it is not always easy. | - | selvom; selv om; selv hvis | -
+
+@ også
+wox: Det er også grunden til … / Der er også en fordel. || That is also the reason …
+S: tilfojelse | neutral | Ud over det allerede nævnte; derudover. | Also; too; as well. | Endelig har de lokale butikker også en fordel, som man ikke skal undervurdere. | Finally, the local shops also have an advantage that should not be underestimated. | ikke kun … men også; men også; og også | desuden; ligeledes; derudover | heller ikke
+S: sammenligning | neutral | På samme måde som noget andet; i lighed med. | Also; likewise. | Den faldende handel bekymrer mange, også politikerne. | The falling trade worries many, the politicians too. | også selvom; ligesom også | ligeledes; tilsvarende | -
+S: konsekvens | neutral | Betegner en naturlig følge eller forklaring (og det er da også …). | (and) indeed; as a result. | Han træner hver dag, og han er da også i god form. | He trains every day, and he is indeed in good shape. | og det er da også; det var også derfor | derfor; jo | -
+
+@ ligesom
+wox: Ligesom man i Danmark havde arbejdet hårdt, havde man fra tysk side … || Just as people in Denmark had worked hard, the Germans had … (fronted clause → inversion)
+S: sammenligning | neutral | På samme måde som; i lighed med. | Just as; like. | Ligesom man i Danmark havde arbejdet hårdt på det, havde man fra tysk side gjort alt for at gøre Sønderjylland tysk. | Just as people in Denmark had worked hard for it, the Germans had done everything to make Southern Jutland German. | ligesom med; ligesom også | på samme måde som; ligeledes | i modsætning til
+S: holdning | spoken | Udtrykker tøven: på en måde; nærmest. | Kind of; sort of. | Det var ligesom lidt mærkeligt. | It was kind of strange. | - | på en måde; nærmest | -
+
+@ ligeledes
+wox: Ligeledes er det vigtigt at … || Likewise it is important to … (fronted → inversion)
+S: sammenligning | formal | På samme måde som det, der er nævnt før; også. | Likewise; similarly. | Mange vælger at studere i København. Ligeledes er Aarhus populær. | Many choose to study in Copenhagen. Likewise, Aarhus is popular. | - | også; tilsvarende; på samme måde | derimod; omvendt
+
+@ til sammenligning
+wox: Til sammenligning var tallet 10 % i 2010. || By comparison the figure was 10% in 2010. (fronted → inversion)
+S: sammenligning | formal | For at sætte noget i perspektiv ved at sammenligne med noget andet (ofte tal). | By comparison; for comparison. | 81 % af dem uden handicap kom i arbejde. Til sammenligning gjaldt det kun 60 % af dem med handicap. | 81% of those without a disability got a job. By comparison, this applied to only 60% of those with a disability. | - | sammenlignet med; i forhold til | -
+
+@ i forhold til
+wox: I forhold til sidste år er prisen steget. || Compared to last year the price has risen. (+ noun phrase / at-infinitive)
+S: sammenligning | neutral | I sammenligning med; når man tager noget i betragtning. | Compared to; in relation to. | Jeg reflekterer over, hvordan jeg selv er i forhold til mine medarbejdere. | I reflect on how I myself am in relation to my employees. | i forhold til tidligere; i forhold til andre | sammenlignet med; til sammenligning | -
+S: forklaring | formal | Med hensyn til; angående; hvad angår. | With regard to; regarding. | Tilflytterservice har været en kæmpe støtte i forhold til at skabe netværk. | The newcomer service has been a huge support with regard to building networks. | i forhold til at + infinitiv | med hensyn til; angående; vedrørende | -
+
+@ på samme måde
+wox: På samme måde var der tysksindede i Danmark. || In the same way there were German-minded people in Denmark. (fronted → inversion)
+S: sammenligning | neutral | Ligesådan; i lighed med det, der lige er nævnt. | In the same way; likewise. | På samme måde var der også tysksindede, der havnede nord for grænsen. | In the same way, there were also German-minded people who ended up north of the border. | på samme måde som | ligeledes; tilsvarende; ligesom | på en anden måde
+
+@ tilsvarende
+wox: Nedbøren er tilsvarende lille. || Precipitation is correspondingly low.
+S: sammenligning | formal | (adverbium) På en måde, der passer til eller svarer til det nævnte. | Correspondingly; similarly. | Om foråret er Østersøen kold og nedbørsmængderne tilsvarende små. | In spring the Baltic is cold and the amounts of rain correspondingly small. | - | ligeledes; på samme måde | -
+S: sammenligning | formal | (adjektiv) Som svarer til eller ligner noget andet. | Corresponding; equivalent. | Der findes ikke en tilsvarende ordning i Sverige. | There is no equivalent scheme in Sweden. | en tilsvarende stigning | lignende; parallel | forskellig
+
+@ heller ikke
+wox: Der er heller ikke storcentre. / Heller ikke selvom … || There are no shopping centres either. (heller ikke after the finite verb)
+S: sammenligning | neutral | Ligesom i det foregående tilfælde gælder det ikke (negativ lighed). | Not … either; neither; nor. | I de mindre byer er der heller ikke storcentre. | In the smaller towns there are no shopping centres either. | heller ikke selvom; og heller ikke | - | også
+
+@ både … og
+wox: både staten, regionerne og kommunerne || both the state, the regions and the municipalities (links two or more equal parts)
+S: tilfojelse | neutral | Forbinder to (eller flere) led for at sige, at det gælder dem alle. | Both … and. | Både staten, regionerne og kommunerne skal lægge flere indkøb i små virksomheder. | The state, the regions and the municipalities should all place more purchases with small firms. | både … og også | såvel … som | hverken … eller
+S: holdning | spoken | (både og) Svar: delvis ja og delvis nej. | Both yes and no. | "Kan du lide dit job?" "Både og." | "Do you like your job?" "Yes and no." | både og | - | -
+
+@ hverken … eller
+wox: Hverken nettet eller centrene kan konkurrere. || Neither the internet nor the centres can compete.
+S: udelukkelse | neutral | Ikke det ene og heller ikke det andet. | Neither … nor. | Det er en kulisse, som hverken nettet eller et moderne shoppingcenter kan konkurrere med. | It is a backdrop that neither the internet nor a modern shopping centre can compete with. | hverken … eller; hverken fugl eller fisk | - | både … og
+
+@ end
+wox: Vi er mere åbne, end vi var tidligere. || We are more open than we were before. (end-clause: subordinate order)
+S: sammenligning | neutral | Indleder det andet led i en sammenligning (efter komparativ, "anden", "andre"). | Than. | Vi er generelt mere åbne over for at prøve noget nyt, end vi var tidligere. | We are generally more open to trying something new than we were before. | mere end; mindre end; andre end; snarere end; hellere end | - | -
+
+@ som om
+wox: Det er, som om naturen søger hævn. || It is as if nature is seeking revenge. (subordinate order)
+S: sammenligning | neutral | Indleder en sammenligning med noget, der ligner, men ikke nødvendigvis er sandt. | As if; as though. | Det er, som om naturen søger hævn. | It is as if nature is seeking revenge. | det er som om; lade som om | ligesom | -
+
+@ hvis
+wox: Hvis butikkerne lukker, forringes livskvaliteten. || If the shops close, the quality of life gets worse. (fronted if-clause → inversion)
+S: betingelse | neutral | Indleder en ledsætning med en betingelse (virkelig eller tænkt). | If. | Det kan forringe livskvaliteten for borgerne, hvis butikkerne i bymidterne lukker. | It can reduce the citizens' quality of life if the shops in the town centres close. | hvis … så; hvis ikke; selv hvis; kun hvis | såfremt; i tilfælde af; når | medmindre
+S: holdning | spoken | Indleder en høflig opfordring eller et ønske. | If (polite request) / if only. | Hvis du lige vil vente et øjeblik. | If you would just wait a moment. | hvis bare | - | -
+S: forklaring | formal | (relativt pronomen) Hvem/hvad … tilhører. | Whose. | Vi talte med kvinden, hvis søn arbejder her. | We spoke with the woman whose son works here. | - | - | -
+
+@ når
+wox: Når borgere klager, forlænges sagsbehandlingen. || When citizens complain, the processing is prolonged. (fronted clause → inversion)
+S: tid | neutral | På det tidspunkt hvor; hver gang (i nutid og fremtid, eller gentaget i fortid). | When; whenever. | Når flere virksomheder indfører en fire-dages arbejdsuge, skal kunderne vænne sig til det. | When more companies introduce a four-day working week, customers must get used to it. | når som helst; hver gang når; når … så | hver gang; idet | -
+S: betingelse | neutral | Under den betingelse at; hvis. | If; provided that. | Når borgere klager, kan det forlænge kommunernes sagsbehandling. | If citizens complain, it can prolong the municipalities' processing of cases. | - | hvis; såfremt | -
+S: arsag | neutral | I betragtning af at; når nu. | Since; seeing that. | Hvorfor skal jeg betale, når jeg ikke har brugt det? | Why should I pay, when I have not used it? | når nu | eftersom; da | -
+
+@ om (konj.)
+wox: Hun overvejede, om jobbet var det rigtige. || She considered whether the job was the right one. (subordinate order)
+S: forklaring | neutral | Indleder et indirekte ja/nej-spørgsmål: hvorvidt. | Whether; if. | Hvorfor begyndte Pia Lehmann at overveje, om lærerjobbet var det rigtige for hende? | Why did Pia Lehmann begin to consider whether the teaching job was right for her? | spørge om; overveje om; undersøge om; om … eller | hvorvidt | -
+S: betingelse | formal | Under forudsætning af at; hvis (gammeldags eller i faste udtryk). | If (formal / fixed expressions). | Om nødvendigt kan vi flytte mødet. | If necessary, we can move the meeting. | om nødvendigt; om muligt; selv om | hvis; såfremt | -
+S: indrommelse | formal | (om end; nok så) Selv om; uanset hvor meget. | However (much); even though. | Han lærte ikke noget, om han så læste hele natten. | He learned nothing, even if he read all night. | om end; om så; nok så | selvom; uanset | -
+
+@ hvorvidt
+wox: Det er uklart, hvorvidt planen virker. || It is unclear whether the plan works. (subordinate order)
+S: forklaring | bookish | Indleder et indirekte spørgsmål (formelt ord for "om"). | Whether. | Undersøgelsen skal afgøre, hvorvidt vindmøllerne skader naturen. | The study must determine whether the wind turbines harm nature. | afgøre hvorvidt; vurdere hvorvidt | om | -
+
+@ for at
+wox: For at lykkes er det nødvendigt at øge produktionen. || In order to succeed it is necessary to increase production. (+ infinitive; fronted → inversion)
+S: betingelse | neutral | Med det formål at; i den hensigt at (efterfølges af infinitiv). | In order to; to. | For at lykkes med omstillingen er det nødvendigt at øge produktionen af grøn energi. | In order to succeed with the transition, it is necessary to increase the production of green energy. | for at kunne; for ikke at; for dermed at | så (at); med henblik på | -
+S: forklaring | neutral | (for at sige det …) Fast udtryk, der fortæller, hvordan man vælger at formulere sig. | To put it (mildly / plainly). | Resultatet var, for at sige det mildt, skuffende. | The result was, to put it mildly, disappointing. | for at sige det mildt; for at sige det, som det er | - | -

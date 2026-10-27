@@ -1,0 +1,180 @@
+# Tier 1 lexicon – part A: Årsag, Konsekvens, Modsætning
+# Format:
+#   @ lemma                      (must match tier1_inventory lemma)
+#   wox: word-order example DA || EN
+#   S: group | register | da_definition | en_definition | example_da | example_en | collocations | synonyms | antonyms
+# Lists inside a field are separated by ";". "-" = none. A leading "?" on the da_definition marks a sense
+# that could not be matched to DDO (verified=false).
+
+@ fordi
+wox: Butikkerne lukker, fordi kunderne ikke kommer. || The shops close because the customers do not come. (subject – ikke – verb)
+S: arsag | neutral | Indleder en ledsætning, der fortæller grunden eller årsagen til noget. | Because – introduces a clause giving the reason or cause. | Det kan have en positiv effekt på humøret, fordi vi som mennesker har brug for sociale relationer. | It can have a positive effect on your mood because we as humans need social relationships. | netop fordi; bare fordi; ikke fordi … men fordi; måske fordi | da; eftersom; idet; for | -
+S: indrommelse | spoken | Bruges i nægtende sætninger: at én ting er sand, betyder ikke, at en anden også er det (bare fordi … behøver …). | Just because … (doesn't mean) – denies that one fact leads to another. | Bare fordi man er træt, behøver man ikke at blive hjemme. | Just because you are tired, you don't have to stay at home. | bare fordi; ikke fordi | selvom | -
+
+@ da
+wox: Jeg blev hjemme, da jeg var syg. / Da jeg var syg, blev jeg hjemme. || I stayed at home as I was ill. (main clause after a fronted da-clause is inverted)
+S: arsag | formal | Indleder en ledsætning med en grund, som ofte er kendt eller logisk. | As; since – introduces a (known, logical) reason. | Der er udfordringer ved fleksible arbejdsforhold, da medarbejdere har forskellige behov. | There are challenges with flexible working conditions, as employees have different needs. | da det er sådan; netop da | fordi; eftersom; idet | -
+S: tid | neutral | Indleder en ledsætning om et bestemt tidspunkt eller en enkelt hændelse i fortiden. | When – one specific occasion in the past. | Rundkirkerne fungerede ikke kun som kirker, da de blev bygget. | The round churches did not only serve as churches when they were built. | dengang da; lige da | dengang; i det øjeblik | -
+S: tid | neutral | (adverbium) På det tidspunkt, man lige har nævnt; dengang eller så. | Then; at that time. | I 1920 blev Sønderjylland dansk. Da var området blevet delt. | In 1920 Southern Jutland became Danish. By then the area had been divided. | først da; netop da | dengang; så | -
+
+@ idet
+wox: Resultatet var omvendt, idet 80 procent stemte tysk. || The result was the opposite, as 80 percent voted German. (subordinate-clause order)
+S: arsag | bookish | Indleder en ledsætning, der forklarer eller begrunder det, der lige er sagt. | As; since; in that – gives an explaining reason. | Her var resultatet lige omvendt, idet 80 procent stemte for at forblive tysk. | Here the result was exactly the opposite, as 80 percent voted to remain German. | idet at (talesprog) | da; fordi; eftersom | -
+S: tid | formal | I samme øjeblik som; samtidig med at. | Just as; at the moment when. | Telefonen ringede, idet hun gik ud ad døren. | The phone rang just as she walked out the door. | lige idet | netop som; samtidig med at | -
+
+@ siden
+wox: Siden fagforeningerne opstod, har man diskuteret arbejdstiden. || Since the trade unions arose, working hours have been debated. (fronted clause → inversion: har man)
+S: tid | neutral | Fra et tidspunkt i fortiden og frem til nu. | Since – from a point in the past until now. | Siden fagforeningernes opkomst har man diskuteret lønmodtagernes arbejdstid. | Since the rise of the trade unions, employees' working hours have been debated. | lige siden; længe siden; for … siden | fra … af | -
+S: arsag | formal | Af den grund at; når nu (ofte en grund, som alle kender). | Since; seeing that – a reason. | Siden du alligevel skal i byen, kan du så købe mælk? | Since you are going into town anyway, can you buy milk? | - | når nu; eftersom; da | -
+S: tid | neutral | (adverbium) Senere; efter det tidspunkt. | Later; afterwards. | Han flyttede til Aarhus og har siden boet der. | He moved to Aarhus and has lived there since. | siden hen; kort tid siden | senere; sidenhen | før
+
+@ for
+wox: Det gik ikke som håbet, for jeg var ikke god nok. || It did not go as hoped, for I was not good enough. (no inversion after for)
+S: arsag | formal | Sideordnende konjunktion: det følgende er en begrundelse eller forklaring på det foregående. | For; because – adds an explanation as a new main clause. | Det gik ikke som håbet, for jeg var ikke god nok til at inddrage mine medarbejdere. | It did not go as hoped, for I was not good enough at involving my employees. | for det; for så | fordi; nemlig | -
+S: betingelse | formal | (for at) Med det formål; i den hensigt at. Se også "for at". | In order to (in "for at"). | De forsøger at påvirke politikerne for at få bedre vilkår. | They try to influence the politicians in order to get better conditions. | for at | så; med henblik på | -
+
+@ nemlig
+wox: Det kan nemlig forringe livskvaliteten. || That is because it can reduce the quality of life. (nemlig after the finite verb – never first)
+S: arsag | neutral | Viser, at sætningen er en forklaring eller begrundelse for det, der lige er sagt. | You see; that is because – marks the sentence as an explanation. | Det kan nemlig generelt forringe livskvaliteten for borgerne, hvis butikkerne lukker. | That is because it can generally reduce the citizens' quality of life if the shops close. | det er nemlig sådan, at; der er nemlig | fordi; for; jo | -
+S: forklaring | neutral | Indleder en præcisering: det vil sige, mere præcist. | Namely; that is – introduces a specification. | Borgen blev bygget af en senere ærkebiskop, nemlig Jens Grand. | The castle was built by a later archbishop, namely Jens Grand. | - | det vil sige; mere præcist | -
+S: holdning | spoken | Bruges som svar for at give fuldstændig ret. | Exactly! – full agreement. | "Så det er altså for dyrt?" "Nemlig!" | "So it is too expensive, then?" "Exactly!" | - | netop; præcis | -
+
+@ på grund af
+wox: På grund af stress bliver mange sygemeldt. || Because of stress many go on sick leave. (+ noun phrase; fronted → inversion)
+S: arsag | neutral | Som følge af; forårsaget af (efterfølges af et substantiv). | Because of; due to. | Der er andet fravær på grund af almindelig nedslidning. | There is other absence because of general wear and tear. | på grund af det; netop på grund af | som følge af; pga.; takket være | trods
+S: betingelse | formal | Af hensyn til nogen eller noget. | For the sake of; out of consideration for. | Mødet blev flyttet på grund af de ansatte, der havde ferie. | The meeting was moved for the sake of the staff who were on holiday. | - | af hensyn til | -
+
+@ som følge af
+wox: Som følge af stress er mange sygemeldte. || As a result of stress many are on sick leave. (+ noun phrase)
+S: arsag | formal | På grund af; fordi noget er sket (efterfølges af et substantiv). | As a result of; owing to. | Der er hver dag 35.000 sygemeldinger som følge af stress. | Every day there are 35,000 sick-leave cases as a result of stress. | som en følge af; direkte følge af | på grund af; forårsaget af | -
+
+@ af den grund
+wox: Af den grund har landsdelen en anden historie. || For that reason the region has a different history. (fronted → inversion)
+S: konsekvens | formal | Derfor; på grund af det, der lige er nævnt. | For that reason. | Af den grund har landsdelen på flere områder en historie, som afviger fra resten af Danmarks. | For that reason, the region in several respects has a history that differs from the rest of Denmark's. | netop af den grund; af samme grund | derfor; således; følgelig | -
+
+@ så
+wox: Jeg var syg, så jeg blev hjemme. (no inversion) / Så gik vi hjem. (adverb: inversion) || I was ill, so I stayed at home. / Then we went home.
+S: konsekvens | neutral | Sideordnende konjunktion: det følgende er en følge eller konklusion af det foregående. | So; therefore – introduces a consequence. | En opdatering kan indeholde skadelige filer, så det er vigtigt at være forsigtig. | An update can contain harmful files, so it is important to be careful. | så derfor (talesprog); så altså | derfor; dermed; altså | -
+S: betingelse | neutral | (så / så at) Med det formål at; for at. | So that – purpose. | De ville tage et kursus, så de var godt forberedt. | They would take a course so that they were well prepared. | så at; sådan at | for at | -
+S: tid | neutral | (adverbium) Derefter; bagefter; i næste trin. | Then; next. | Først læser man teksten, og så ser man på spørgsmålene. | First you read the text, and then you look at the questions. | og så; først … så | derefter; bagefter; dernæst | -
+S: betingelse | neutral | (adverbium) Indleder hovedsætningen efter en hvis- eller når-sætning. | Then (after a conditional clause). | Hvis man har et CVR-nummer, så er man i gang. | If you have a CVR number, then you are up and running. | hvis … så; når … så | - | -
+S: sammenligning | neutral | (adverbium) I en sådan grad; i lige så høj grad. | So; as – degree (så stor, lige så … som). | Det var ikke så svært at starte op, som mange frygter. | It was not as hard to start up as many fear. | lige så … som; ikke så … som; så meget | - | -
+S: tilfojelse | spoken | (adverbium) Desuden; oven i det. | Also; on top of that. | Der er mange spændende udfordringer, og så er huslejen billig. | There are many exciting challenges, and on top of that the rent is cheap. | og så | desuden; også | -
+
+@ derfor
+wox: Derfor er der sat vindmøller op. / Man ser derfor flere tomme butikker. || That is why wind turbines have been put up. / You therefore see more empty shops.
+S: konsekvens | neutral | Af den grund; som en følge af det, der lige er sagt. | Therefore; that is why. | Derfor er der i de senere år sat vindmøller op overalt i Danmark. | That is why wind turbines have been put up all over Denmark in recent years. | netop derfor; og derfor; derfor er det vigtigt at | således; dermed; følgelig; af den grund; altså | alligevel
+S: indrommelse | spoken | (ikke … derfor) Til trods for det; alligevel (i nægtende sætninger). | Not … for all that; still. | Han er gammel, men han er ikke derfor dårlig til computere. | He is old, but that does not make him bad at computers. | ikke derfor; derfor kan man godt | alligevel | -
+
+@ dermed
+wox: Dermed er sagen afgjort. / De træner for dermed at være effektive. || Thus the matter is settled.
+S: konsekvens | formal | Som følge af det netop nævnte; på den måde. | Thereby; thus; as a result. | Mange topledere dyrker sport for at holde sig i form og for dermed at være effektive på arbejdet. | Many top managers do sports to keep fit and thereby be effective at work. | og dermed; dermed være sagt | således; derved; derfor | -
+S: tid | formal | Med det, der lige er sagt eller gjort (og så slut). | With that; whereupon. | Dermed sluttede mødet. | With that, the meeting ended. | dermed basta | hermed | -
+S: forklaring | formal | (dermed ikke sagt) Det betyder ikke, at … | That is not to say (that). | Han har fejlet, men dermed ikke sagt, at han er dårlig. | He has failed, but that is not to say he is bad. | dermed ikke sagt | - | -
+
+@ således
+wox: Der er således udviklere, der arbejder på det. / Således står vi i dag med … || There are thus developers who work on it.
+S: konsekvens | formal | Som følge af det netop nævnte; altså; derfor. | Thus; consequently. | Der er således professionelle udviklere, der hele tiden arbejder på at forhindre uønsket adgang. | There are thus professional developers constantly working to prevent unwanted access. | og således; således at | derfor; dermed; følgelig; altså | -
+S: sammenligning | formal | På den måde; sådan. | In this way; like this. | Opgaven skal løses således, at alle får en chance. | The task must be solved in such a way that everyone gets a chance. | således at; således som | sådan; på den måde | -
+S: tilfojelse | formal | Som eksempel på det, der lige er sagt. | For instance; thus (giving an example). | Mange regler blev strammet. Det var således ikke tilladt at nyde alkohol. | Many rules were tightened. Thus it was not permitted to drink alcohol. | - | for eksempel; eksempelvis | -
+
+@ følgelig
+wox: Prisen steg, og følgelig faldt salget. || The price rose and consequently sales fell. (inversion: faldt salget)
+S: konsekvens | bookish | Som en naturlig følge af det; derfor. | Consequently; as a result. | Der var mangel på arbejdskraft, og følgelig steg lønningerne. | There was a labour shortage, and consequently wages rose. | og følgelig | derfor; dermed; således; af den grund | -
+
+@ hermed
+wox: Hermed slutter vi. || With this we conclude. (fronted → inversion)
+S: konsekvens | formal | Som følge af dette; på den måde. | Hereby; with this; thus. | Loven blev vedtaget, og hermed blev reglerne strammet. | The law was passed, and with this the rules were tightened. | og hermed | dermed; derved | -
+S: tid | formal | Med disse ord eller denne handling (ofte i breve). | Herewith; hereby. | Hermed sender jeg dig de ønskede papirer. | Herewith I send you the requested papers. | hermed bekræftes; hermed tak | - | -
+
+@ hvorfor
+wox: Lauenborg blev tysk i 1876, hvorfor det ikke ses på kortet. || …, which is why it is not on the map. (subordinate-clause order)
+S: konsekvens | bookish | (efter komma) Af hvilken grund; og derfor. | Which is why. | Lauenborg blev indlemmet i Slesvig-Holsten i 1876, hvorfor hertugdømmet ikke fremgår af kortet. | Lauenborg was incorporated into Schleswig-Holstein in 1876, which is why the duchy is not on the map. | - | og derfor | -
+S: arsag | neutral | (spørgende) Af hvilken grund? | Why? | Hvorfor er vikingernes guder gjort menneskelige? | Why have the Viking gods been made human? | hvorfor ikke | af hvilken grund | -
+
+@ hvilket
+wox: De har 800.000 ansatte, hvilket svarer til 40 %. || They have 800,000 employees, which corresponds to 40%. (relative clause, subordinate order)
+S: konsekvens | formal | Relativt pronomen, der henviser til hele den foregående sætning. | Which (referring to the whole previous clause). | De har over 800.000 fuldtidsansatte, hvilket svarer til næsten 40 % af alle fuldtidsansatte. | They have over 800,000 full-time employees, which corresponds to almost 40% of all full-time employees. | hvilket betyder; hvilket viser; hvilket skyldes | hvad; noget som | -
+S: forklaring | neutral | (hvilken/hvilket/hvilke) Spørgende: hvad for en/et. | Which (question word). | Hvilket udsagn er i overensstemmelse med teksten? | Which statement is in accordance with the text? | hvilken af følgende | hvad for et | -
+
+@ altså
+wox: Der er altså meget, man selv kan gøre. || So there is a lot you can do yourself. (after the finite verb, or first with inversion)
+S: konsekvens | neutral | Viser en logisk følge eller konklusion af det foregående. | So; consequently; thus. | Som internetbruger er der altså meget, man selv kan gøre for at undgå it-kriminalitet. | As an internet user, there is thus a lot you can do yourself to avoid cybercrime. | altså at; det vil altså sige | derfor; således; dermed | -
+S: forklaring | neutral | Uddyber eller præciserer det, der lige er sagt. | That is; I mean. | Preusserne slog os (altså danskerne) ved Dybbøl. | The Prussians beat us (that is, the Danes) at Dybbøl. | - | det vil sige; nemlig | -
+S: holdning | spoken | Understreger, at noget forholder sig på en bestemt måde. | Really; you know (emphasis). | Det er altså ikke i orden! | That is really not okay! | - | virkelig; jo | -
+
+@ det betyder (at)
+wox: Det betyder, at processen er miljøvenlig. || That means that the process is environmentally friendly. (+ at-clause)
+S: konsekvens | neutral | Fast udtryk: det har som følge, at …; det medfører, at … | That means (that); as a result. | Jeg bruger plantefarver, og det betyder, at det bliver en meget miljøvenlig proces. | I use plant dyes, and that means it becomes a very eco-friendly process. | hvilket betyder; det betyder blandt andet | det medfører; det indebærer; derfor | -
+
+@ men
+wox: Det er dyrt, men det er ikke den eneste udfordring. || It is expensive, but it is not the only challenge. (no inversion after men)
+S: modsaetning | neutral | Forbinder to sætninger eller led, hvor der er en modsætning. | But. | Det er dyrt, men det er ikke den eneste udfordring. | It is expensive, but it is not the only challenge. | men alligevel; men også; ikke … men | dog; imidlertid; derimod | og
+S: udelukkelse | neutral | (ikke … men) Retter noget: ikke det ene, men i stedet det andet. | But (rather) – correcting. | Nye medarbejdere arbejder ikke hjemme, men møder altid ind på arbejdspladsen. | New employees do not work from home but always come in to the workplace. | ikke … men | derimod; snarere | -
+S: forklaring | neutral | Indleder en overgang til det egentlige emne (efter undskyldning, indrømmelse osv.). | But (introducing the main point). | Undskyld, men har du et øjeblik? | Excuse me, but do you have a moment? | undskyld, men | - | -
+S: modsaetning | neutral | (et men) Substantiv: en indvending eller et forbehold. | A "but"; an objection. | Planen er god, men der er et men: den er dyr. | The plan is good, but there is a "but": it is expensive. | der er et men; ingen men | indvending; forbehold | -
+
+@ imidlertid
+wox: Der er imidlertid nogle ulemper. / Imidlertid er der ulemper. || There are, however, some drawbacks.
+S: modsaetning | formal | Viser en (svag) modsætning mellem det netop sagte og det, der kommer. | However. | Der er imidlertid nogle ulemper forbundet med vindmøller. | There are, however, some drawbacks associated with wind turbines. | er imidlertid; der er imidlertid | dog; men; på den anden side | derfor
+
+@ dog
+wox: Det er dog ikke kun borgerne. / Man må dog ikke overse … || It is not only the citizens, though. (usually after the finite verb)
+S: modsaetning | neutral | Udtrykker en modsætning eller begrænsning af det, der lige er sagt. | However; though; yet. | Det er dog ikke kun borgernes modstand, der kan forsinke processen. | However, it is not only the citizens' opposition that can delay the process. | dog ikke; men dog; dog kun | imidlertid; men; alligevel | -
+S: indrommelse | neutral | Under alle omstændigheder; trods alt; i det mindste. | After all; at least. | Hun fik dog en god løn ud af det. | She did at least get a good salary out of it. | i hvert fald; dog i det mindste | trods alt; i det mindste | -
+S: holdning | spoken | Forstærker et udråb, en opfordring eller irritation. | (emphasis) – surely; do …! | Kom dog ind! | Do come in! | hvor er det dog …; så kom dog | jo | -
+
+@ derimod
+wox: Om foråret er Østersøen derimod kold. / Derimod er … || In spring, by contrast, the Baltic is cold.
+S: modsaetning | formal | I modsætning til det, der lige er nævnt (sammenligner to ting). | On the other hand; by contrast. | Om foråret er Østersøen derimod kold og nedbørsmængderne små. | In spring, by contrast, the Baltic Sea is cold and precipitation is low. | men derimod; derimod er | til gengæld; omvendt; i modsætning hertil | ligeledes
+
+@ til gengæld
+wox: Til gengæld behøver de ikke være komplekse. || On the other hand they need not be complex. (fronted → inversion)
+S: modsaetning | neutral | På den anden side; derimod (fremhæver en fordel over for en ulempe). | On the other hand; in return – balances a disadvantage with an advantage. | Forskellige enheder skal have forskellige passwords. Til gengæld behøver de ikke være så komplekse. | Different devices must have different passwords. On the other hand, they do not need to be so complex. | men til gengæld | derimod; på den anden side | -
+S: tilfojelse | neutral | Som modydelse; som tak for noget. | In return; in exchange. | Hun hjalp mig, og til gengæld lavede jeg mad til hende. | She helped me, and in return I cooked for her. | få noget til gengæld; give noget til gengæld | som modydelse; som tak | -
+
+@ omvendt
+wox: Omvendt kan man også … / Det forholder sig omvendt. || Conversely, one can also …
+S: modsaetning | neutral | På den modsatte måde; set fra den anden side. | Conversely; the other way round. | Her var resultatet lige omvendt: 80 procent stemte for at forblive tysk. | Here the result was exactly the opposite: 80 percent voted to remain German. | lige omvendt; og omvendt; det omvendte | modsat; tværtimod; derimod | ligeledes
+S: modsaetning | neutral | (adjektiv) Vendt om; med den anden side opad eller forrest. | Upside down; reversed. | Bogen lå omvendt på bordet. | The book lay upside down on the table. | den omvendte rækkefølge | på hovedet | -
+
+@ i modsætning til
+wox: I modsætning til nettet rummer byerne gamle huse. || Unlike the internet, the towns contain old houses. (+ noun phrase; inversion)
+S: modsaetning | neutral | Til forskel fra; anderledes end (efterfølges af et substantiv). | Unlike; in contrast to. | I modsætning til de fleste andre værksteder satser jeg ikke på nye møbler. | Unlike most other workshops, I do not focus on new furniture. | i modsætning til andre; i modsætning hertil | til forskel fra; modsat | ligesom
+
+@ hvorimod
+wox: Han elsker sport, hvorimod hun foretrækker bøger. || He loves sport, whereas she prefers books. (subordinate-clause order)
+S: modsaetning | formal | Indleder en ledsætning med en modsætning til hovedsætningen. | Whereas. | Mange unge vælger humaniora, hvorimod færre vælger en teknisk uddannelse. | Many young people choose the humanities, whereas fewer choose a technical education. | - | mens; derimod | -
+
+@ mens
+wox: 6.000 begyndte på humaniora, mens 3.000 begyndte på teknik. || …, while 3,000 started on technical studies. (subordinate order)
+S: modsaetning | neutral | Indleder en ledsætning, der står i modsætning til hovedsætningen. | While; whereas. | Knap 6.000 unge begyndte på en humanistisk uddannelse, mens knap 3.000 begyndte på en teknisk. | Almost 6,000 young people started a humanities degree, while almost 3,000 started a technical one. | mens derimod | hvorimod; derimod | -
+S: tid | neutral | Samtidig med at; i den tid hvor. | While; during the time that. | Mange studerende tror noget andet, mens de læser. | Many students think otherwise while they are studying. | mens det står på; mens tid er | imens; samtidig med at | -
+
+@ imens
+wox: Hun lavede mad, og imens læste han avis. || She cooked, and meanwhile he read the paper. (adverb → inversion)
+S: tid | neutral | (adverbium) I den samme tid, som noget andet foregår; i mellemtiden. | Meanwhile; in the meantime. | Hun lavede mad, og imens læste han avis. | She cooked, and meanwhile he read the newspaper. | og imens | i mellemtiden; samtidig | -
+S: modsaetning | neutral | (konjunktion) Samme betydning som "mens". | While (= mens). | Imens nogle arbejder hjemme, møder andre ind hver dag. | While some work from home, others come in every day. | - | mens | -
+
+@ på den ene side
+wox: På den ene side er det dyrt, på den anden side er det nødvendigt. || On the one hand it is expensive, on the other it is necessary. (inversion)
+S: modsaetning | neutral | Indleder det første af to forhold, der står over for hinanden (følges af "på den anden side"). | On the one hand. | På den ene side er vindmøller grønne, på den anden side er de støjende. | On the one hand wind turbines are green, on the other hand they are noisy. | på den ene side … på den anden side | - | -
+
+@ på den anden side
+wox: På den anden side kan det betale sig. || On the other hand it can pay off. (fronted → inversion)
+S: modsaetning | neutral | Indleder et modsat synspunkt eller forhold. | On the other hand. | Det er dyrt at starte op. På den anden side er man sin egen chef. | It is expensive to start up. On the other hand, you are your own boss. | men på den anden side | til gengæld; derimod; omvendt | -
+S: modsaetning | neutral | Bogstaveligt: på den modsatte side af noget. | On the other side (literally). | Butikken ligger på den anden side af gaden. | The shop is on the other side of the street. | på den anden side af | over for | -
+
+@ tværtimod
+wox: Han føler tværtimod, at han er skabt til noget stort. || On the contrary, he feels he is made for something great.
+S: modsaetning | neutral | I direkte modsætning til det, der lige er sagt; lige det modsatte. | On the contrary. | Han er ikke skuffet. Han føler tværtimod, at han er skabt til noget stort. | He is not disappointed. On the contrary, he feels he is made for something great. | snarere tværtimod; tværtimod! | omvendt; derimod | -
+
+@ modsat
+wox: Modsat er det i byerne. / Det modsatte er tilfældet. || The opposite is the case in the towns.
+S: modsaetning | neutral | (adverbium) På den anden side; derimod; omvendt. | Conversely; by contrast. | Mange flytter til byen. Modsat vælger nogle at flytte på landet. | Many move to the city. Conversely, some choose to move to the countryside. | lige modsat; modsat af | omvendt; derimod | -
+S: modsaetning | neutral | (adjektiv) Helt forskellig fra; den anden retning eller side. | Opposite. | Det fik den stik modsatte effekt. | It had the exact opposite effect. | stik modsat; den modsatte effekt; det modsatte køn | omvendt | samme
+
+@ i stedet (for)
+wox: I stedet køber jeg gamle møbler. / I stedet for et sideskib har kirken … || Instead I buy old furniture. (fronted → inversion)
+S: modsaetning | neutral | Som erstatning for noget andet; i den andens sted. | Instead (of). | I stedet køber jeg gamle unikke møbler på loppemarkeder. | Instead I buy old unique furniture at flea markets. | i stedet for at; i stedet for et | til erstatning for; frem for | -
+S: udelukkelse | neutral | (i stedet for + at/substantiv) Ikke det ene, men det andet. | Instead of (excluding one option). | I stedet for et sideskib har rundkirken en central kerne. | Instead of a side aisle, the round church has a central core. | i stedet for at gøre noget | frem for; snarere end | -
