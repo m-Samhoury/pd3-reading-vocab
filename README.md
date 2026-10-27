@@ -14,7 +14,9 @@ Progress is stored in the browser (localStorage). Use Export/Import on the flash
 
 **Open it: https://m-samhoury.github.io/pd3-reading-vocab/assisted-learning.html**
 
-A guided page for the PD3 coach's 174-card deck (connectors first). New words come in batches of five from
+It is also in the top bar of every page (*Guidet læring*) and has a card on the overview.
+
+A guided page in the same design (and the same Dansk/English switch) for the PD3 coach's 174-card deck (connectors first). New words come in batches of five from
 one relation group and are taught before they're tested: word-order rule (SUB/ADV/KOO/PRÆP), example,
 real sentences from the 2004–2024 reading texts, the Den Danske Ordbog entry and the confusable partner.
 Then six rotating exercises (meaning, typing, relation, gap-fill, word-order tiles, L3 pair), a

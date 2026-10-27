@@ -4,6 +4,7 @@ const I18N = {
   // shared
   "nav.overview": ["Overblik", "Overview"], "nav.study": ["Studieark", "Study sheet"],
   "nav.flash": ["Flashcards", "Flashcards"], "nav.test": ["Test", "Test"],
+  "nav.assisted": ["Guidet læring", "Assisted learning"],
   "lang.button": ["English", "Dansk"], "lang.title": ["Skift sprog til engelsk", "Switch language to Danish"],
   "freq.one": ["{0} prøve · {1}×", "{0} exam · {1}×"], "freq.many": ["{0} prøver · {1}×", "{0} exams · {1}×"],
   "freq.guide": ["fra guiden", "from the guide"],
@@ -126,6 +127,8 @@ const I18N = {
   "idx.chip.b": ["Nyt", "New"], "idx.chip": ["Tier 1 · forbinderord er klar", "Tier 1 · connectors are ready"],
   "idx.cta1": ["Start flashcards", "Start flashcards"], "idx.cta2": ["Tag en test", "Take a test"],
   "idx.open": ["Åbn", "Open"],
+  "idx.al.p": ["Lær forbinderordene trin for trin: forklaring, ordstilling og eksempler fra prøverne – så test og gentagelse.",
+               "Learn the connectors step by step: explanation, word order and exam examples – then test and review."],
   "idx.t1": ["Tier 1 · forbinderord", "Tier 1 · connectors"], "idx.t2": ["Tier 2 · ord fra opgaverne", "Tier 2 · question words"], "idx.t3": ["Tier 3 · ord fra teksterne", "Tier 3 · text words"],
 };
 const LANG = (() => { try { return localStorage.getItem("pd3.lang") === "en" ? "en" : "da"; } catch (e) { return "da"; } })();
