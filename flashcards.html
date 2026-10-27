@@ -195,8 +195,9 @@ main { padding-bottom: 40px; }
 .flash .front .tap { color: var(--faint); font-size: .88rem; margin-top: 8px; }
 .flash .back { max-height: min(62vh, 640px); overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; cursor: auto; }
 .flash .back .entry { padding: 18px 18px 22px; }
-.flash.go-right { border-color: var(--ok); }
-.flash.go-left { border-color: var(--bad); }
+.stepper { display: flex; justify-content: space-between; gap: 8px; margin: 0 0 12px; }
+.stepper .btn { flex: 1 1 0; max-width: 200px; }
+.ghelp { margin: 8px 0 0; }
 .grade { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
 .grade .btn { min-height: 58px; flex-direction: column; gap: 0; border-color: transparent; border-radius: 14px; }
 .grade .btn small { font-weight: 500; opacity: .7; }
@@ -263,11 +264,16 @@ h2.sub { font-size: 1.1rem; margin: 26px 0 8px; }
     <div class="counter"><span id="cnt"></span><span id="due"></span></div>
     <div class="bar" aria-hidden="true"><span id="bar"></span></div>
     <div class="sheet flash" id="card" tabindex="0" role="button" aria-label="Flashcard – press Space to flip"></div>
-    <div class="grade" id="grade" aria-label="How well did you know it?">
-      <button class="btn no" type="button" data-g="1"><span data-i18n="g.no">Kan ikke</span> <small>1 · swipe ←</small></button>
-      <button class="btn almost" type="button" data-g="3"><span data-i18n="g.almost">Næsten</span> <small>2</small></button>
-      <button class="btn yes" type="button" data-g="5"><span data-i18n="g.yes">Kan den</span> <small>3 · swipe →</small></button>
+    <div class="stepper">
+      <button class="btn" type="button" id="prev"><span aria-hidden="true">←</span> <span data-i18n="nav.prev">Forrige</span></button>
+      <button class="btn" type="button" id="next"><span data-i18n="nav.next">Næste</span> <span aria-hidden="true">→</span></button>
     </div>
+    <div class="grade" id="grade" aria-label="How well did you know it?">
+      <button class="btn no" type="button" data-g="1"><span data-i18n="g.no">Kan ikke</span> <small>1</small></button>
+      <button class="btn almost" type="button" data-g="3"><span data-i18n="g.almost">Næsten</span> <small>2</small></button>
+      <button class="btn yes" type="button" data-g="5"><span data-i18n="g.yes">Kan den</span> <small>3</small></button>
+    </div>
+    <p class="small soft ghelp" id="ghelp" data-i18n="g.help" hidden></p>
     <p class="small soft" data-i18n="fl.keys">Mellemrum/Enter vender kortet · 1 / 2 / 3 giver karakter · på mobil: tryk for at vende, swipe → (kan den) eller ← (kan ikke).</p>
     <div class="tools-row">
       <button class="btn quiet" type="button" id="export" data-i18n="fl.export">Eksportér fremskridt</button>
@@ -351,9 +357,12 @@ const I18N = {
   "done.p": ["Du har gennemgået {0} kort.", "You reviewed {0} cards."], "none.p": ["Alle kort i bunken er planlagt til senere.", "All cards in this deck are scheduled for later."],
   "practise": ["Øv hele bunken alligevel", "Practise the whole deck anyway"],
   "g.no": ["Kan ikke", "Don't know"], "g.almost": ["Næsten", "Almost"], "g.yes": ["Kan den", "Know it"],
-  "fl.keys": ["Mellemrum/Enter vender kortet · 1 / 2 / 3 giver karakter · på mobil: tryk for at vende, swipe → (kan den) eller ← (kan ikke).",
-              "Space/Enter flips the card · 1 / 2 / 3 grades it · on mobile: tap to flip, swipe → (know it) or ← (don't know)."],
+  "fl.keys": ["Mellemrum/Enter vender kortet · ← / → går til forrige/næste ord · 1 / 2 / 3 giver karakter · på mobil: tryk for at vende, swipe for forrige/næste.",
+               "Space/Enter flips the card · ← / → go to the previous/next word · 1 / 2 / 3 grade it · on mobile: tap to flip, swipe for previous/next."],
   "fl.export": ["Eksportér fremskridt", "Export progress"], "fl.import": ["Importér", "Import"], "fl.reset": ["Nulstil", "Reset"],
+  "nav.prev": ["Forrige", "Previous"], "nav.next": ["Næste", "Next"],
+  "g.help": ["Karakteren styrer, hvornår ordet kommer igen: Kan ikke = om lidt, Næsten = snart igen, Kan den = om nogle dage.",
+             "Your grade decides when the word comes back: Don't know = in a moment, Almost = again soon, Know it = in a few days."],
   "fl.storage": ["Din browser gemmer ikke data her, så fremskridt forsvinder, når siden lukkes. Brug Eksportér for at gemme dem.",
                  "Your browser does not store data here, so progress is lost when the page closes. Use Export to keep it."],
   "imp.notfile": ["Ikke en PD3-fil med fremskridt", "Not a PD3 progress file"],
@@ -707,17 +716,25 @@ const PD3 = (() => {
         el("h2", null, sessionTotal ? t("done.h") : t("none.h")),
         el("p", { class: "soft" }, sessionTotal ? t("done.p", sessionTotal) : t("none.p")),
         anyDeck ? el("button", { class: "btn solid", type: "button", onclick: e => { e.stopPropagation(); practiseAll = true; buildSession(); practiseAll = false; } }, t("practise")) : null));
-      grade.hidden = true; $("#cnt").textContent = ""; $("#bar").style.width = "100%";
+      grade.hidden = true; $("#ghelp").hidden = true; $("#cnt").textContent = "";
+      $("#prev").disabled = !queue.length; $("#next").disabled = true; $("#bar").style.width = "100%";
       return;
     }
     const w = byId[queue[qi]];
     card.append(flipped ? back(w) : front(w));
     card.setAttribute("aria-label", flipped ? t("card.backAria", w.lemma) : t("card.aria"));
-    grade.hidden = !flipped;
+    grade.hidden = !flipped; $("#ghelp").hidden = !flipped;
+    $("#prev").disabled = qi === 0; $("#next").disabled = false;
     $("#cnt").textContent = t("card.count", Math.min(qi + 1, queue.length), queue.length);
     $("#bar").style.width = `${(100 * qi / Math.max(1, queue.length)).toFixed(1)}%`;
   }
   function flip() { if (qi < queue.length) { flipped = !flipped; renderCard(); if (flipped) $("#card .back")?.focus({ preventScroll: true }); } }
+  /** move through the session without grading (the word keeps its schedule) */
+  function step(d) {
+    const to = qi + d;
+    if (to < 0 || to > queue.length || (d > 0 && qi >= queue.length)) return;
+    qi = to; flipped = false; renderCard(); $("#card").focus({ preventScroll: true });
+  }
   function grade(q) {
     if (!flipped || qi >= queue.length) return;
     const id = queue[qi];
@@ -736,24 +753,29 @@ const PD3 = (() => {
     if ($("#learn").hidden || e.target.matches("input, select, textarea")) return;
     if (["1", "2", "3"].includes(e.key)) grade({ 1: 1, 2: 3, 3: 5 }[e.key]);
     if ((e.key === " ") && e.target === document.body) { e.preventDefault(); flip(); }
+    if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
+      if (e.target.closest("[role=tablist]")) return;
+      e.preventDefault(); step(e.key === "ArrowRight" ? 1 : -1);
+    }
   });
   $("#grade").addEventListener("click", e => { const b = e.target.closest("[data-g]"); if (b) grade(+b.dataset.g); });
-  // swipe (horizontal only, so vertical scrolling of the card back still works)
+  $("#prev").addEventListener("click", () => step(-1));
+  $("#next").addEventListener("click", () => step(1));
+  // swipe left = next word, right = previous (horizontal only, so vertical scrolling of the card back still works)
   let sx = 0, sy = 0, tracking = false;
   card.addEventListener("touchstart", e => { const t = e.touches[0]; sx = t.clientX; sy = t.clientY; tracking = true; }, { passive: true });
   card.addEventListener("touchmove", e => {
-    if (!tracking || !flipped) return;
+    if (!tracking) return;
     const t = e.touches[0], dx = t.clientX - sx, dy = t.clientY - sy;
     if (Math.abs(dx) > 30 && Math.abs(dx) > 2 * Math.abs(dy)) {
       card.style.transform = `translateX(${dx * 0.35}px) rotate(${dx * 0.02}deg)`;
-      card.classList.toggle("go-right", dx > 80); card.classList.toggle("go-left", dx < -80);
     }
   }, { passive: true });
   card.addEventListener("touchend", e => {
     if (!tracking) return; tracking = false;
     const t = e.changedTouches[0], dx = t.clientX - sx, dy = t.clientY - sy;
-    card.style.transform = ""; card.classList.remove("go-right", "go-left");
-    if (flipped && Math.abs(dx) > 80 && Math.abs(dx) > 2 * Math.abs(dy)) { e.preventDefault(); grade(dx > 0 ? 5 : 1); }
+    card.style.transform = "";
+    if (Math.abs(dx) > 80 && Math.abs(dx) > 2 * Math.abs(dy)) { e.preventDefault(); step(dx < 0 ? 1 : -1); }
   });
 
   deckSel.addEventListener("change", () => { F.settings.deck = deckSel.value; saveF(); buildSession(); });
