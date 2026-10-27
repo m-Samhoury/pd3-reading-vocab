@@ -353,7 +353,8 @@ const I18N = {
   // session
   "s.session": ["Session", "Session"], "s.conf": ["Forvekslingsord", "Confusables"], "s.end": ["Afslut", "End"],
   "s.count": ["{0} / {1}", "{0} / {1}"],
-  "k.new": ["Nye ord", "New words"], "k.learn": ["Lær", "Learn"],
+  "k.new": ["Nye ord", "New words"], "k.back": ["Tilbageblik", "Looking back"],
+  "b.prev": ["Forrige", "Back"], "b.prev.t": ["Se det forrige ord igen (←). Svar, du har givet, tæller stadig.", "See the previous word again (←). Answers you gave still count."], "k.learn": ["Lær", "Learn"],
   "k.practice": ["Øvelse", "Practice"], "k.first": ["Nyt", "New"], "k.review": ["Gentagelse", "Review"],
   "x.meaning": ["Betydning", "Meaning"], "x.produce": ["Skriv det på dansk", "Say it in Danish"], "x.cloze": ["Udfyld hullet", "Fill the gap"],
   "x.relation": ["Hvilken relation?", "Which relation?"], "x.order": ["Ordstilling", "Word order"], "x.odd": ["L3: find parret", "L3: find the pair"],
@@ -511,7 +512,7 @@ function chrome() {
   dlg.className = "info"; dlg.setAttribute("aria-labelledby", "infoTitle");
   dlg.innerHTML = `<div class="ib"><div class="ih"><h2 id="infoTitle">${t("info.title")}</h2><button type="button" class="btn quiet" id="infoClose">${t("info.close")}</button></div>
     <h3>${t("info.how")}</h3><p>${t("info.p1")}</p><p>${t("info.p2")}</p><p>${t("info.p3")}</p>
-    <h3>${t("info.keys")}</h3><dl class="keylist"><dt>1 – 4</dt><dd>${t("key.num")}</dd><dt>Enter</dt><dd>${t("key.enter")}</dd></dl>
+    <h3>${t("info.keys")}</h3><dl class="keylist"><dt>1 – 4</dt><dd>${t("key.num")}</dd><dt>Enter</dt><dd>${t("key.enter")}</dd><dt>←</dt><dd>${t("b.prev.t")}</dd></dl>
     <h3>${t("info.grades")}</h3><dl class="keylist">${[5, 4, 3, 2, 1, 0].map(g => `<dt>${g}</dt><dd>${t("gr." + g)}</dd>`).join("")}</dl></div>`;
   dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
   document.body.append(dlg);
@@ -777,15 +778,40 @@ function startConfusables() {
 
 // ---------- step rendering ----------
 function frame(kindLabel, inner) {
-  const done = S.i, total = S.queue.length;
+  const done = S.i - (S.back || 0), total = S.queue.length;
   $("#app").innerHTML = `<div class="narrow">
-    <div class="counter"><span>${esc(S.title)} · ${t("s.count", done + 1, total)}</span><button class="btn quiet" id="quit">✕ ${t("s.end")}</button></div>
+    <div class="counter"><span>${esc(S.title)} · ${t("s.count", done + 1, total)}</span>
+      <span class="row" style="gap:4px">${prevIndex() >= 0 ? `<button class="btn quiet" id="prev" title="${esc(t("b.prev.t"))}">← ${t("b.prev")}</button>` : ""}<button class="btn quiet" id="quit">✕ ${t("s.end")}</button></span></div>
     <div class="bar sessionbar" aria-hidden="true"><span style="width:${100 * done / total}%"></span></div>
     <div class="sheet q"><div class="kind">${esc(kindLabel)}</div>${inner}</div></div>`;
   $("#quit").onclick = () => S.results.length ? summary() : home();
+  if ($("#prev")) $("#prev").onclick = goBack;
   window.scrollTo(0, 0);
 }
+// ---------- going back ----------
+// Earlier steps are shown again as their word's lesson card (read-only): answers already given keep their grade.
+// S.back counts how many steps behind the current one (S.i) the screen is.
+const reviewable = it => it && (it.kind === "intro" || it.kind === "teach" || it.kind === "ex");
+function prevIndex() {
+  for (let j = S.i - (S.back || 0) - 1; j >= 0; j--) if (reviewable(S.queue[j])) return j;
+  return -1;
+}
+function goBack() {
+  if (S.pending && !S.back) { flushPending(); S.i++; }  // an answer on screen counts before leaving it
+  const j = prevIndex();
+  if (j < 0) return;
+  S.back = S.i - j;
+  step();
+}
+function goForward() {
+  do S.back--; while (S.back > 0 && !reviewable(S.queue[S.i - S.back]));
+  step();
+}
 function step() {
+  if (S.back > 0) {
+    const it = S.queue[S.i - S.back];
+    return it.kind === "intro" ? renderIntro(it, true) : renderTeach(DB.cards[it.id], true);
+  }
   if (S.i >= S.queue.length) return summary();
   const it = S.queue[S.i];
   if (it.kind === "intro") return renderIntro(it);
@@ -795,14 +821,14 @@ function step() {
 }
 function advance() { S.i++; step(); }
 
-function renderIntro(it) {
+function renderIntro(it, review) {
   const cs = it.ids.map(id => DB.cards[id]);
-  frame(t("k.new"), `
+  frame(review ? t("k.back") : t("k.new"), `
     <h2 style="font-size:1.6rem;margin-top:6px">${[...new Set(cs.map(c => c.group))].map(g => esc(glabel(g))).join("<br>")}</h2>
     <p class="prompt">${t("intro.p", cs.length)}</p>
     <div class="words" lang="da">${cs.map(c => `<span class="word">${esc(c.word)}</span>`).join("")}</div>
-    <button class="btn solid next" id="nx">${t("b.start")}</button>`);
-  bindNext(advance);
+    <button class="btn solid next" id="nx">${review ? t("b.next") + " →" : t("b.start")}</button>`);
+  bindNext(review ? goForward : advance);
 }
 
 function ruleBlock(c) {
@@ -812,12 +838,12 @@ function ruleBlock(c) {
 }
 // the word-type label is shown as a tag already
 function noteText(c) { return (c.note || "").replace(/^(SUB\/PRÆP|SUB\/ADV|SUB|ADV|KOO|PRÆP)\s*(—\s*)?/, ""); }
-function renderTeach(c) {
+function renderTeach(c, review) {
   const ex = examSentences(c).slice(0, 2);
   const d = c.dict;
   const pairs = partnerPairs(c.id);
   const extraNote = noteText(c);
-  frame(t("k.learn"), `
+  frame(review ? t("k.back") : t("k.learn"), `
     <div class="head" style="margin-top:6px"><span class="big" lang="da">${esc(c.word)}</span>${wtype(c) ? `<span class="tag">${esc(wtype(c))}</span>` : ""}<span class="badge t${prio(c.group)}">${esc(glabel(c.group))}</span></div>
     <div class="meaning">${esc(c.meaning)}</div>
     ${extraNote ? `<div class="soft" lang="da" style="margin-top:4px">${esc(extraNote)}</div>` : ""}
@@ -826,9 +852,9 @@ function renderTeach(c) {
     ${ex.length ? `<div class="block"><span class="lbl">${t("t.exam")}</span>${ex.map(e => `<div class="ex" lang="da"><span class="tag">${esc(e.src)}</span>${hlSentence(c, e.s, e.m)}</div>`).join("")}</div>` : ""}
     ${d ? `<div class="block"><div class="ddo"><span class="lbl">${t("t.ddo")}</span><div class="soft small">${esc(d.pos)}</div>${d.senses.slice(0, 2).map((s, i) => `<div lang="da">${d.senses.length > 1 ? `<b>${i + 1}.</b> ` : ""}${esc(s)}</div>`).join("")}${d.cite.slice(0, 1).map(x => `<blockquote lang="da">${esc(x)}</blockquote>`).join("")}<div class="cite"><a href="${esc(d.url)}" target="_blank" rel="noopener">ordnet.dk ↗</a></div></div></div>` : ""}
     ${pairs.map(p => { const o = DB.cards[p[0] === c.id ? p[1] : p[0]]; return `<div class="block"><div class="warnbox"><b>${t("t.mix")}</b> <span lang="da">${esc(c.word)} / ${esc(o.word)}</span> — ${esc(tip(p))}</div></div>`; }).join("")}
-    <div class="row next"><button class="btn solid" id="nx">${t("b.got")}</button><button class="btn quiet morebtn" id="more">${t("b.more")}</button></div>`);
+    <div class="row next"><button class="btn solid" id="nx">${review ? t("b.next") + " →" : t("b.got")}</button><button class="btn quiet morebtn" id="more">${t("b.more")}</button></div>`);
   $("#more").onclick = () => explain(c);
-  bindNext(advance);
+  bindNext(review ? goForward : advance);
 }
 
 // ---------- exercises ----------
@@ -1060,10 +1086,14 @@ function feedback(c, it, q, ok, body, severity, headText, canOverride, retype) {
   bindNext(commit);
 }
 function commit() {
-  const p = S.pending;
-  if (!p) return advance();
-  S.pending = null;
   $("#nx") && ($("#nx").disabled = true);
+  flushPending();
+  advance();
+}
+function flushPending() {
+  const p = S.pending;
+  if (!p) return;
+  S.pending = null;
   if (!p.practice) {
     grade(p.id, p.q);
     S.graded.add(p.id);
@@ -1075,7 +1105,6 @@ function commit() {
       if (pr && !S.queue.some(x => x.kind === "pair" && x.pair === pr)) S.queue.splice(Math.min(S.i + 2, S.queue.length), 0, { kind: "pair", pair: pr });
     }
   }
-  advance();
 }
 
 function renderPair(it) {
@@ -1306,6 +1335,7 @@ document.addEventListener("keydown", e => {
   if (!S || document.querySelector("dialog[open]")) return;
   const nx = $("#nx");
   if (e.key === "Enter" && nx && !nx.disabled && (document.activeElement?.tagName !== "INPUT" || document.activeElement.id === "rt")) { e.preventDefault(); nx.click(); return; }
+  if (e.key === "ArrowLeft" && $("#prev") && document.activeElement?.tagName !== "INPUT") { e.preventDefault(); goBack(); return; }
   if (S.keys && document.activeElement?.tagName !== "INPUT") S.keys(e);
   else if (S.keys && e.key === "Enter") S.keys(e);
 });
