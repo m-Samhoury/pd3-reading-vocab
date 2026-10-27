@@ -374,6 +374,7 @@ const I18N = {
   "b.clear": ["Ryd", "Clear"], "b.show": ["Vis mig", "Show me"], "b.idk": ["Ved ikke", "I don't know"],
   "b.override": ["Jeg havde ret – tæl det med", "I was right, count it"], "b.skip": ["Spring over", "Skip retype"],
   "t.order": ["Ordstilling", "Word order"], "t.example": ["Eksempel", "Example"], "t.exam": ["Fra prøverne", "From the exams"],
+  "t.under": ["Fra opslaget", "From the entry"],
   "t.senses": ["Betydninger", "Meanings"], "t.senses.s": ["ordet har mere end én betydning", "this word has more than one meaning"],
   "t.sense1": ["Betydning", "Meaning"], "s.noexam": ["Ingen eksempler i læseteksterne 2004–2024.", "No examples in the 2004–2024 reading texts."],
   "b.more": ["📖 Forklar mere", "📖 Explain more"], "m.title": ["Mere om ordet", "More about this word"],
@@ -844,6 +845,11 @@ function renderIntro(it, review) {
 }
 
 // DDO definitions with the English translation in small print under each
+// which DDO headword the definition comes from, when it isn't the card's own word (blandt andet → blandt)
+function ddoHead(c, d) {
+  const own = !d.head || norm(d.head) === norm(c.word.replace(/^(at|en|et) /, ""));
+  return `${own ? "" : `${t("t.under")} <b lang="da">${esc(d.head)}</b> · `}${esc(d.pos)}`;
+}
 function ddoSenses(d, n) {
   return d.senses.slice(0, n).map((s, i) => `<div lang="da" style="margin-top:4px">${d.senses.length > 1 ? `<b>${i + 1}.</b> ` : ""}${esc(s)}</div>${
     d.senses_en && d.senses_en[i] ? `<div class="en-def" lang="en">${esc(d.senses_en[i])}</div>` : ""}`).join("");
@@ -880,7 +886,7 @@ function renderTeach(c, review) {
     ${DB.senses[c.id] ? `<div class="block"><span class="lbl">${DB.senses[c.id].senses.length > 1 ? `${t("t.senses")} · ${t("t.senses.s")}` : t("t.sense1")}</span>${senseBlocks(c, 1, false)}</div>` : `
     <div class="block"><div class="eg"><span class="lbl">${t("t.example")}</span><div class="sentence" lang="da">${hlSentence(c, c.example)}</div></div></div>
     ${ex.length ? `<div class="block"><span class="lbl">${t("t.exam")}</span>${ex.map(e => `<div class="ex" lang="da"><span class="tag">${esc(e.src)}</span>${hlSentence(c, e.s, e.m)}</div>`).join("")}</div>` : ""}`}
-    ${d ? `<div class="block"><div class="ddo"><span class="lbl">${t("t.ddo")}</span><div class="soft small">${esc(d.pos)}</div>${ddoSenses(d, 2)}${d.cite.slice(0, 1).map(x => `<blockquote lang="da">${esc(x)}</blockquote>`).join("")}<div class="cite"><a href="${esc(d.url)}" target="_blank" rel="noopener">ordnet.dk ↗</a></div></div></div>` : ""}
+    ${d ? `<div class="block"><div class="ddo"><span class="lbl">${t("t.ddo")}</span><div class="soft small">${ddoHead(c, d)}</div>${ddoSenses(d, 2)}${d.cite.slice(0, 1).map(x => `<blockquote lang="da">${esc(x)}</blockquote>`).join("")}<div class="cite"><a href="${esc(d.url)}" target="_blank" rel="noopener">ordnet.dk ↗</a></div></div></div>` : ""}
     ${pairs.map(p => { const o = DB.cards[p[0] === c.id ? p[1] : p[0]]; return `<div class="block"><div class="warnbox"><b>${t("t.mix")}</b> <span lang="da">${esc(c.word)} / ${esc(o.word)}</span> — ${esc(tip(p))}</div></div>`; }).join("")}
     <div class="row next"><button class="btn solid" id="nx">${review ? t("b.next") + " →" : t("b.got")}</button><button class="btn quiet morebtn" id="more">${t("b.more")}</button></div>`);
   $("#more").onclick = () => explain(c);
@@ -1338,7 +1344,7 @@ function explain(c) {
     ${DB.senses[c.id] ? "" : `<div class="block"><div class="eg"><span class="lbl">${t("t.example")}</span><div class="ex" lang="da"><span class="sentence">${hlSentence(c, c.example)}</span>${trLink(c.example)}</div></div></div>`}
     ${wtype(c) ? `<h3>${t("t.order")}</h3>${ruleBlock(c)}` : ""}
     <h3>${t("m.senses")} <span class="soft">· ${t("t.ddo")}</span></h3>
-    ${d ? `<div class="ddo"><div class="soft small">${esc(d.pos)}</div>${ddoSenses(d, 99)}
+    ${d ? `<div class="ddo"><div class="soft small">${ddoHead(c, d)}</div>${ddoSenses(d, 99)}
       ${d.cite.length ? `<span class="lbl" style="margin-top:12px">${t("m.cites")}</span>${d.cite.map(x => `<blockquote lang="da"><span>${esc(x)}</span>${trLink(x)}</blockquote>`).join("")}` : ""}
       <div class="cite"><a href="${esc(d.url)}" target="_blank" rel="noopener">ordnet.dk ↗</a></div></div>`
       : `<p>${t("m.nodict")} <a href="${esc(lookup)}" target="_blank" rel="noopener">${t("m.lookup")}</a></p>`}
