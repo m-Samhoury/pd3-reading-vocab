@@ -38,7 +38,7 @@ Adding words found in practice: `pd3.py vocab add "at fastholde" "to retain" --g
 cards graded on the page don't show up in `vocab due` or `status`. Cards never reviewed on the page start from the deck's schedule.
 It follows this file: batches of 5 new words from one group (taught first: word-order rule, example, real exam sentences,
 DDO entry, confusable partner), max 15 new a day, rotating exercise types (meaning, production, relation, cloze, word-order
-tiles with a retype after an error, L3 pair), the confusable pairs above drilled when one lapses, and a group map.
+tiles with a retype after an error, L3 pair), the confusable pairs above drilled when one lapses, group chips above the session buttons (pick one or more groups; none = all, remembered per browser), and a progress map per group.
 **Explain more** (button on the teach card, after every answer, and on any word in the group map) opens a panel with all
 DDO senses and citations, every stored exam sentence with a translate link, the word-order rule, confusables, and the
 other words in the group (same-meaning ones first); it ends by pointing to the coach in chat for a custom explanation.
