@@ -40,7 +40,7 @@ It follows this file: batches of 5 new words from one group (taught first: word-
 DDO entry, confusable partner), max 15 new a day, rotating exercise types (meaning, production, relation, cloze, word-order
 tiles with a retype after an error, L3 pair), the confusable pairs above drilled when one lapses, group chips above the session buttons (pick one or more groups; none = all, remembered per browser), and a progress map per group.
 **Explain more** (button on the teach card, after every answer, and on any word in the group map) opens a panel with all
-DDO senses and citations, every stored exam sentence with a translate link, the word-order rule, confusables, and the
+DDO senses and citations, every stored exam sentence, a translate button on each sentence and citation (English shown inline: Google translate endpoint, MyMemory as fallback, cached in the browser), the word-order rule, confusables, and the
 other words in the group (same-meaning ones first); it ends by pointing to the coach in chat for a custom explanation.
 Grades (same SM-2 as `pd3.py`): 5 instant · 4 correct · 3 typo / second try · 2 recognised when shown · 1 wrong · 0 "I don't know".
 

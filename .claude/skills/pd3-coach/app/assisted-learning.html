@@ -84,7 +84,10 @@ dialog.explain .ih { position: sticky; top: 0; background: var(--sheet); padding
 dialog.explain .ih .big { font-size: 1.8rem; }
 dialog.explain h3 .soft { font-weight: 400; font-size: .85rem; }
 dialog.explain .ex { display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
-dialog.explain .ex .tr { margin-left: auto; font-size: .8rem; white-space: nowrap; }
+dialog.explain .tr { margin-left: auto; font-size: .8rem; white-space: nowrap; }
+dialog.explain blockquote { display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: baseline; }
+.trl { flex-basis: 100%; font-style: normal; font-size: .92rem; color: var(--soft); padding: 4px 0 2px 10px; border-left: 2px solid var(--blue); }
+.trl.err a { color: var(--accent-text); }
 .mates { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 8px; }
 .mate { text-align: left; font: inherit; color: inherit; cursor: pointer; background: var(--paper); border: 1px solid var(--rule); border-radius: 10px; padding: 8px 11px; }
 .mate:hover { border-color: var(--accent); }
@@ -337,7 +340,8 @@ const I18N = {
   "t.order": ["Ordstilling", "Word order"], "t.example": ["Eksempel", "Example"], "t.exam": ["Fra prøverne", "From the exams"],
   "b.more": ["📖 Forklar mere", "📖 Explain more"], "m.title": ["Mere om ordet", "More about this word"],
   "m.senses": ["Alle betydninger", "All meanings"], "m.cites": ["Brugt i ordbogen", "Used in the dictionary"],
-  "m.exam": ["Flere sætninger fra prøverne", "More sentences from the exams"], "m.tr": ["oversæt ↗", "translate ↗"],
+  "m.exam": ["Flere sætninger fra prøverne", "More sentences from the exams"], "m.tr": ["oversæt", "translate"], "m.tr.hide": ["skjul", "hide"], "m.tr.wait": ["oversætter…", "translating…"],
+  "m.tr.err": ["Kunne ikke oversætte lige nu.", "Couldn't translate right now."], "m.tr.open": ["Åbn i Google Translate ↗", "Open in Google Translate ↗"],
   "m.mates": ["Ord i samme gruppe", "Words in the same group"], "m.mates.s": ["(tryk for at se dem)", "(tap one to open it)"],
   "m.same": ["samme betydning", "same meaning"], "m.nodict": ["Ordet er ikke slået op i Den Danske Ordbog her.", "This word has no dictionary entry in the deck."],
   "m.lookup": ["Slå op på ordnet.dk ↗", "Look it up on ordnet.dk ↗"],
@@ -1069,7 +1073,40 @@ function renderPair(it) {
 }
 
 // ---------- explain more ----------
-function trLink(s) { return `<a class="tr" href="https://translate.google.com/?sl=da&tl=${LANG === "da" ? "en" : LANG}&op=translate&text=${encodeURIComponent(s)}" target="_blank" rel="noopener">${t("m.tr")}</a>`; }
+// translation into English, shown under the sentence; cached per browser so each sentence is fetched once
+const TR_KEY = "pd3-assisted-learning:tr:v1";
+let TR = {};
+try { TR = JSON.parse(localStorage.getItem(TR_KEY) || "{}"); } catch (e) { TR = {}; }
+async function translate(s) {
+  if (TR[s]) return TR[s];
+  const q = encodeURIComponent(s);
+  const tries = [
+    async () => (await (await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=da&tl=en&dt=t&q=${q}`)).json())[0].map(x => x[0]).join(""),
+    async () => { const r = await (await fetch(`https://api.mymemory.translated.net/get?q=${q}&langpair=da|en`)).json(); if (r.responseStatus !== 200) throw 0; return r.responseData.translatedText; },
+  ];
+  for (const f of tries) {
+    try {
+      const out = (await f() || "").trim();
+      if (out) { TR[s] = out; try { localStorage.setItem(TR_KEY, JSON.stringify(TR)); } catch (e) { /* ignore */ } return out; }
+    } catch (e) { /* try the next one */ }
+  }
+  throw new Error("no translation");
+}
+function trLink(s) { return `<button type="button" class="linkbtn tr" data-s="${esc(s)}">${t("m.tr")}</button>`; }
+function bindTr(root) {
+  root.querySelectorAll("button.tr").forEach(b => b.onclick = async () => {
+    const box = b.parentElement, open = box.querySelector(":scope > .trl");
+    if (open) { open.remove(); b.textContent = t("m.tr"); return; }
+    const s = b.dataset.s, line = document.createElement("div");
+    line.className = "trl"; line.lang = "en"; line.setAttribute("aria-live", "polite");
+    line.textContent = t("m.tr.wait"); box.append(line); b.textContent = t("m.tr.hide");
+    try { line.textContent = await translate(s); }
+    catch (e) {
+      line.classList.add("err");
+      line.innerHTML = `${t("m.tr.err")} <a href="https://translate.google.com/?sl=da&tl=en&op=translate&text=${encodeURIComponent(s)}" target="_blank" rel="noopener">${t("m.tr.open")}</a>`;
+    }
+  });
+}
 function explain(c) {
   let dlg = $("#explain");
   if (!dlg) {
@@ -1092,7 +1129,7 @@ function explain(c) {
     ${wtype(c) ? `<h3>${t("t.order")}</h3>${ruleBlock(c)}` : ""}
     <h3>${t("m.senses")} <span class="soft">· ${t("t.ddo")}</span></h3>
     ${d ? `<div class="ddo"><div class="soft small">${esc(d.pos)}</div>${d.senses.map((s, i) => `<div lang="da" style="margin-top:4px">${d.senses.length > 1 ? `<b>${i + 1}.</b> ` : ""}${esc(s)}</div>`).join("")}
-      ${d.cite.length ? `<span class="lbl" style="margin-top:12px">${t("m.cites")}</span>${d.cite.map(x => `<blockquote lang="da">${esc(x)}</blockquote>`).join("")}` : ""}
+      ${d.cite.length ? `<span class="lbl" style="margin-top:12px">${t("m.cites")}</span>${d.cite.map(x => `<blockquote lang="da"><span>${esc(x)}</span>${trLink(x)}</blockquote>`).join("")}` : ""}
       <div class="cite"><a href="${esc(d.url)}" target="_blank" rel="noopener">ordnet.dk ↗</a></div></div>`
       : `<p>${t("m.nodict")} <a href="${esc(lookup)}" target="_blank" rel="noopener">${t("m.lookup")}</a></p>`}
     ${ex.length ? `<h3>${t("m.exam")} <span class="soft">· ${ex.length}</span></h3>${ex.map(e => `<div class="ex" lang="da"><span class="tag">${esc(e.src)}</span><span>${hlSentence(c, e.s, e.m)}</span>${trLink(e.s)}</div>`).join("")}` : ""}
@@ -1101,6 +1138,7 @@ function explain(c) {
       <div class="mates">${mates.map(x => `<button type="button" class="mate${same(x) ? " same" : ""}" data-id="${esc(x.id)}"><b lang="da">${esc(x.word)}</b><span>${esc(x.meaning)}${same(x) ? ` · ${t("m.same")}` : ""}</span></button>`).join("")}</div>` : ""}
     <p class="small" style="margin-top:18px">${t("m.coach", esc(c.word))}</p></div>`;
   $("#exClose").onclick = () => dlg.close();
+  bindTr(dlg);
   dlg.querySelectorAll(".mate").forEach(b => { b.onclick = () => explain(DB.cards[b.dataset.id]); });
   if (!dlg.open) dlg.showModal();
   dlg.scrollTop = 0;
