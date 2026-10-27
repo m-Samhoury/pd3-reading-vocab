@@ -345,8 +345,7 @@
         "pos": "verbum",
         "head": "vare",
         "senses": [
-          "have en vis udstrækning i tid",
-          "fortsætte i længere tid"
+          "have en vis udstrækning i tid"
         ],
         "cite": [
           "Forhandlingerne varede hele dagen og en god del af aftenen med",
@@ -370,21 +369,16 @@
       "priority": 2,
       "dict": {
         "source": "DDO",
-        "pos": "konjunktion",
+        "pos": "verbum",
+        "head": "ansøge",
         "senses": [
-          "bruges til at indlede en ledsætning som indeholder et indirekte spørgsmål, eller som udtrykker usikkerhed eller tvivl",
-          "på den betingelse at; under den forudsætning at",
-          "bruges som indledning i en sætning der udtrykker et ønske"
+          "formelt og oftest skriftligt udtrykke et ønske om at opnå noget bestemt, fx en tilladelse, en stilling eller et stipendium"
         ],
         "cite": [
           "Hun spurgte, om jeg ville have en kop kaffe",
-          "Han prøvede om han kunne rokke stenen",
-          "Om alt går vel under prøverne, får hun sin debut den 22. januar",
-          "De er stolte folk, der om nødvendigt slås for deres ære",
-          "Åh, om han ville kysse mig",
-          "Om det bare var så let og enkelt!"
+          "Han prøvede om han kunne rokke stenen"
         ],
-        "url": "https://ordnet.dk/ddo/ordbog?query=om"
+        "url": "https://ordnet.dk/ddo/ordbog?query=ans%C3%B8ge"
       }
     },
     "at_bestille": {
@@ -702,12 +696,11 @@
       "dict": {
         "source": "DDO",
         "pos": "adjektiv",
+        "head": "afgørende",
         "senses": [
-          "se afgøre",
           "meget væsentlig, evt. udslagsgivende"
         ],
         "cite": [
-          "Står stemmerne lige, er formandens stemme afgørende",
           "Avisen bragte ingen afgørende nyheder",
           "Det afgørende i skolen er ikke om man politisk er orienteret i den ene eller den anden retning, det afgørende er at lærere og elever engagerer sig"
         ],
@@ -1273,14 +1266,17 @@
       "note": "ADV",
       "dict": {
         "source": "DDO",
-        "pos": "",
+        "pos": "adjektiv",
+        "head": "omvendt",
         "senses": [
-          "vendt om; placeret anderledes end normalt, især modsat",
-          "se omvende"
+          "som foregår eller udvikler sig på den modsatte måde i forhold til noget andet der sammenlignes med",
+          "bruges for at vise at to led i den ytrede sætning kan ombyttes så det modsatte forhold udtrykkes"
         ],
         "cite": [
-          "Hovedbeklædningen ligner en omvendt urtepotte",
-          "Han så meget forvirret ud og havde taget sin sweater omvendt på"
+          "Bussen tager det første hold med hjem, og det andet hold vil så opleve samme indhold på turen som det første – bare i omvendt rækkefølge",
+          "Modne mænd bliver tit tiltrukket af Birgitta, eller er det omvendt?",
+          "Han elsker dig – og omvendt",
+          "Jeg foretrækker ikke film frem for teatret eller omvendt. Man skal kunne det hele"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=omvendt"
       }
@@ -1333,8 +1329,7 @@
         "source": "DDO",
         "pos": "",
         "senses": [
-          "bruges som indledning til en ledsætning der udtrykker en modsætning",
-          "imod hvem eller hvilken"
+          "bruges som indledning til en ledsætning der udtrykker en modsætning"
         ],
         "cite": [
           "Stalin gik ind for \"socialisme i ét land\", hvorimod Trotskij var fortaler for \"permanent revolution\""
@@ -1834,19 +1829,16 @@
       "dict": {
         "source": "DDO",
         "pos": "verbum",
+        "head": "kræve",
         "senses": [
           "stille krav om at noget bestemt gennemføres, sættes i værk, bevilges el.lign.; forlange at et ønske opfyldes",
-          "være af en sådan beskaffenhed eller i en sådan tilstand at tilstedeværelsen, fremskaffelsen eller gennemførelsen af noget bestemt er nødvendig",
-          "stille krav om indbetaling af et (skyldigt) pengebeløb; indsamle et pengebeløb",
-          "stille krav om at få noget i store mængder uden selv at ville bidrage"
+          "forudsætte; være betinget af",
+          "være af en sådan beskaffenhed eller i en sådan tilstand at tilstedeværelsen, fremskaffelsen eller gennemførelsen af noget bestemt er nødvendig"
         ],
         "cite": [
-          "Edb-firmaet kræves idømt en bøde på 100.000 kroner",
-          "loven kræver dæk med samme mønster på henholdsvis de to forhjul og de to baghjul",
+          "Lyst er noget, man selv kan skabe, men det kræver, at man overvinder den første lille smule dovenskab eller sløv, passiv vane",
           "Børn er aldrig i ro, hele tiden i bevægelse – i fuld gang med ting, der kræver kræfter og energi",
-          "Et sådant [: handicappet] barn kræver langt mere opmærksomhed og hjælp end et normalt barn",
-          "det [er] jo noget sludder at påstå, at skatterne vil falde. Man kræver dem bare ind på andre områder",
-          "Arbejdsgiverne beskyldte lønmodtagerne for at kræve uhæmmet ind uden at ville give noget igen"
+          "Et sådant [: handicappet] barn kræver langt mere opmærksomhed og hjælp end et normalt barn"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=kr%C3%A6ve"
       }
@@ -2081,20 +2073,17 @@
       "priority": 2,
       "dict": {
         "source": "DDO",
-        "pos": "substantiv, fælleskøn",
+        "pos": "substantiv",
+        "head": "indflydelse",
         "senses": [
-          "mulighed for at kontrollere eller styre personer og begivenheder i kraft af éns position eller resurser",
           "evne til at påvirke nogens eller nogets egenskaber, fremtræden eller udvikling",
-          "udsat for en (holdningsmæssig) påvirkning fra",
-          "påvirket af et rusmiddel"
+          "mulighed for at kontrollere eller styre personer og begivenheder i kraft af éns position eller resurser"
         ],
         "cite": [
-          "På samme måde som kvinder får mere indflydelse i samfundet, får de det også i politiet",
-          "Med et JA til traktaten vil Danmark få øget indflydelse",
           "jeg er holdt op med at ryge! Jeg tror, du har en god indflydelse på mig!",
           "rå mælk fra et rent landbrug har en gavnlig indflydelse på allergi og andre skavanker",
-          "Broderen er under indflydelse af en nazistisk lærer",
-          "Jeg tror, Martin må have været under indflydelse af hash eller alkohol"
+          "På samme måde som kvinder får mere indflydelse i samfundet, får de det også i politiet",
+          "Med et JA til traktaten vil Danmark få øget indflydelse"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=indflydelse"
       }
@@ -2203,8 +2192,7 @@
         "source": "DDO",
         "pos": "konjunktion",
         "senses": [
-          "bruges for at udtrykke at det følgende skal opfattes som begrundelse af eller forklaring på det foregående",
-          "med det formål; i den hensigt"
+          "bruges for at udtrykke at det følgende skal opfattes som begrundelse af eller forklaring på det foregående"
         ],
         "cite": [
           "stuegangen er afskaffet, for det er ikke meningen, at overlægen skal gribe ind i behandlingen",
@@ -2475,9 +2463,9 @@
       "dict": {
         "source": "DDO",
         "pos": "konjunktion",
+        "head": "samt",
         "senses": [
-          "bruges for at forbinde ord og sætningsled i sideordnet rækkefølge",
-          "tillige med; i følgeskab med"
+          "bruges for at forbinde ord og sætningsled i sideordnet rækkefølge"
         ],
         "cite": [
           "Små og store dyr samt alskens ting og sager tilbydes fra de mange kræmmeres stande på markedet",
@@ -2960,11 +2948,10 @@
       "history": [],
       "dict": {
         "source": "DDO",
-        "pos": "",
+        "pos": "adverbium",
+        "head": "ikke desto mindre (under desto)",
         "senses": [
-          "se desto 1",
-          "til trods for dette; alligevel",
-          "se desto 1"
+          "til trods for dette; alligevel"
         ],
         "cite": [
           "Det var indlysende at der ikke kunne blive en seriøs studerende ud af ham. Ikke desto mindre blev han indskrevet på universitetet"
@@ -3412,8 +3399,7 @@
         "source": "DDO",
         "pos": "adverbium",
         "senses": [
-          "bruges for at fremhæve det som har særlig betydning, eller det som udsagnet særlig gælder",
-          "den enkelte betragtet for sig"
+          "bruges for at fremhæve det som har særlig betydning, eller det som udsagnet særlig gælder"
         ],
         "cite": [
           "Kalk i kosten findes især i grove, grønne grøntsager, rodfrugter og bønner",
@@ -3628,11 +3614,15 @@
       "history": [],
       "dict": {
         "source": "DDO",
-        "pos": "",
+        "pos": "adjektiv",
+        "head": "faktisk",
         "senses": [
+          "bruges for at bekræfte, understrege eller indrømme at noget bestemt er gældende, evt. i modsætning til hvad man skulle forvente",
           "som findes, foregår eller gælder i virkeligheden"
         ],
         "cite": [
+          "Det var ved at være tusmørke, og jeg havde faktisk mest lyst til at vende om",
+          "Jeg ved faktisk ikke, hvad der er foregået, selv om jeg sidder i bestyrelsen for den lokale handelsforening",
           "der er opsat særskilte målere, så beboernes faktiske forbrug kan aflæses",
           "Hvis der f.eks. i et brev står \"jeg\", så forventer vi, at dette \"jeg\" refererer til forfatterens faktiske jeg"
         ],
@@ -3701,16 +3691,14 @@
       "history": [],
       "dict": {
         "source": "DDO",
-        "pos": "konjunktion",
+        "pos": "adverbium",
+        "head": "inden",
         "senses": [
-          "tidligere end det tidspunkt da",
-          "før jeg (han, ..) forstår noget som helst; uden at kende det mindste til sagen; uden at være forberedt"
+          "tidsmæssigt placeret (et vist tidsrum) forud for noget"
         ],
         "cite": [
           "Regnen silede ned, og inden hun nåede Vesterport, var hun gennemvåd",
-          "det varede længe, inden han faldt i søvn",
-          "Inden vi ved et ord af det er det forår",
-          "Før jeg vidste et ord af det, lå jeg i en gummibåd og mærkede, hvor gennemblødt jeg var"
+          "det varede længe, inden han faldt i søvn"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=inden"
       }
@@ -4277,19 +4265,13 @@
       "dict": {
         "source": "DDO",
         "pos": "verbum",
+        "head": "udvide",
         "senses": [
           "gøre større ved at lægge noget til",
-          "gøre et hul, rumfang eller areal større ved at trække eller presse siderne udad",
-          "blive større i omfang (idet siderne eller overfladen bevæger sig udad)",
-          "blive bredere"
+          "gøre mere omfattende; give en større dækningsgrad"
         ],
         "cite": [
-          "Under Karl den Store udvidedes Frankerriget voldsomt",
-          "Biblioteket udvider åbningstiden og holder morgenåbning for avislæsning",
-          "Når du trækker vejret ind, udvides brystkassen",
-          "det er den voksne, der skal sætte grænser for hvad barnet må og ikke må. Disse grænser skal selvfølgelig udvides i takt med, at børnene bliver ældre",
-          "Universet udvider sig stadig efter eksplosionen, og udvidelsen vil ifølge teorien fortsætte i det uendelige",
-          "hendes næsebor udvidede sig og trak sig sammen flere gange efter hinanden"
+          "Folketinget har vedtaget en barselorlovsreform, så barselorlovsperioden forlænges og udvides til også at omfatte fædrene"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=udvide"
       }
@@ -4474,20 +4456,14 @@
       "history": [],
       "dict": {
         "source": "DDO",
-        "pos": "substantiv, intetkøn",
+        "pos": "substantiv",
+        "head": "ansvar",
         "senses": [
-          "juridisk eller moralsk forpligtelse til at stå til regnskab, garantere eller sørge for noget eller nogen",
-          "andelsselskab hvor den enkelte andelshaver kun hæfter med sin egen andel",
-          "kræve at nogen afgiver forklaring og evt. påtager sig skylden for noget samt accepterer de eventuelle (juridiske) konsekvenser i form af fx straf eller erstatningsudbetaling; gøre nogen ansvarlig for noget",
-          "gøre nogen juridisk ansvarlig for noget"
+          "juridisk eller moralsk forpligtelse til at stå til regnskab, garantere eller sørge for noget eller nogen"
         ],
         "cite": [
           "Forretningsudvalget forestår foreningens daglige ledelse under ansvar over for hovedbestyrelsen",
-          "Jeg ved godt, at det var dumt af mig at lade mig udskrive på eget ansvar fra hospitalet i mandags",
-          "Den 14-årige er under den kriminelle lavalder og kan ikke strafferetsligt drages til ansvar for voldtægten",
-          "domstolen [har ikke] fundet grundlag for, at der søges gjort strafferetligt, disciplinært eller erstatningsretligt ansvar gældende",
-          "Virksomheder og laboratorier kan også blive pålagt objektivt ansvar, hvilket vil sige, at ansvaret på forhånd er fastlagt",
-          "ejerne kommer til at stå til ansvar for deres hunds gerninger"
+          "Jeg ved godt, at det var dumt af mig at lade mig udskrive på eget ansvar fra hospitalet i mandags"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=ansvar"
       }
