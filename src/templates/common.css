@@ -121,33 +121,69 @@ div.meta { display: flex; }
 
 /* cards & entries */
 .sheet { background: var(--sheet); border: 1px solid var(--rule); border-radius: var(--r); box-shadow: var(--shadow); }
-.entry { padding: 18px 20px; overflow-wrap: anywhere; }
+.entry { padding: 22px 20px 18px; overflow-wrap: anywhere; display: grid; gap: 18px; }
 .entry + .entry { border-top: 1px solid var(--rule); }
-.entry .hw { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
-.entry .lemma { font-family: var(--head); font-size: 1.3rem; font-weight: 700; letter-spacing: -.02em; }
-.entry .cls { color: var(--faint); font-size: .9rem; }
-.entry .gram { color: var(--soft); font-size: .88rem; }
-.entry .hw .meta { margin-left: auto; align-self: center; }
-ol.senses { list-style: none; margin: 10px 0 0; padding: 0; counter-reset: s; }
-ol.senses > li { counter-increment: s; position: relative; padding: 8px 0 8px 32px; }
-ol.senses > li::before { content: counter(s); position: absolute; left: 0; top: 9px; width: 22px; height: 22px; border-radius: 7px;
-  background: var(--accent-soft); color: var(--accent-text); font-size: .75rem; font-weight: 700; display: grid; place-items: center; }
+.entry p { margin: 0; }
+.lbl { display: block; font-size: .72rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--faint); margin-bottom: 6px; }
+/* headword */
+.hw { display: grid; gap: 4px; }
+.hw-top { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
+.hw-top .meta { margin-left: auto; }
+.entry .lemma { font-family: var(--head); font-size: 1.6rem; font-weight: 700; letter-spacing: -.025em; line-height: 1.15; }
+.gender { display: inline-grid; place-items: center; min-width: 30px; height: 26px; padding: 0 8px; border-radius: 8px;
+  background: var(--blue-soft); color: var(--blue-text); font-weight: 700; font-size: .9rem; }
+.hw-sub { display: flex; flex-wrap: wrap; gap: 4px 12px; color: var(--soft); font-size: .92rem; }
+.hw-sub .cls { font-style: italic; }
+.en-head { display: flex; align-items: baseline; gap: 8px; font-size: 1.05rem; font-weight: 500; margin-top: 4px !important; }
+.en-head .lbl { flex: 0 0 auto; white-space: nowrap; display: inline-block; margin: 0; padding: 1px 6px; border-radius: 5px; background: var(--paper); border: 1px solid var(--rule); font-size: .66rem; }
+/* facts (bøjning) */
+dl.facts, dl.rel { margin: 0; display: grid; gap: 8px; }
+dl .row { display: grid; grid-template-columns: 96px 1fr; gap: 10px; align-items: baseline; }
+dl .row dt { font-size: .8rem; font-weight: 600; color: var(--faint); }
+dl .row dd { margin: 0; }
+dl.facts { padding: 12px 14px; background: var(--paper); border-radius: 12px; }
+.forms { display: inline-flex; flex-wrap: wrap; gap: 6px; }
+.form { padding: 2px 9px; border-radius: 7px; background: var(--sheet); border: 1px solid var(--rule); font-weight: 600; font-size: .92rem; }
+.fsep { color: var(--faint); }
+/* senses */
+ol.senses { list-style: none; margin: 0; padding: 0; counter-reset: s; display: grid; gap: 0; }
+ol.senses > li { counter-increment: s; position: relative; padding: 16px 0 16px 38px; display: grid; gap: 12px; }
+ol.senses > li + li { border-top: 1px dashed var(--rule-strong); }
+ol.senses > li:first-child { padding-top: 4px; }
+ol.senses > li::before { content: counter(s); position: absolute; left: 0; top: 16px; width: 26px; height: 26px; border-radius: 8px;
+  background: var(--accent-soft); color: var(--accent-text); font-size: .82rem; font-weight: 700; display: grid; place-items: center; }
+ol.senses > li:first-child::before { top: 4px; }
 ol.senses.single > li { padding-left: 0; }
 ol.senses.single > li::before { display: none; }
-.def { margin: 0; }
-.def .da { font-weight: 600; }
-.def .en { display: block; color: var(--soft); }
-.eg { margin: 8px 0 0; padding-left: 12px; border-left: 2px solid var(--rule-strong); }
-.eg .da { font-style: italic; }
-.eg .en { display: block; color: var(--soft); font-size: .92rem; }
+.def { display: grid; gap: 3px; }
+.def .da { font-size: 1.06rem; font-weight: 600; line-height: 1.45; }
+.def .en { color: var(--soft); }
+.eg { padding: 12px 14px; border-radius: 12px; background: var(--paper); border-left: 3px solid var(--accent); }
+.eg .lbl { margin-bottom: 4px; }
+.eg .da { font-style: italic; font-size: 1.02rem; line-height: 1.5; }
+.eg .en { color: var(--soft); font-size: .92rem; margin-top: 4px; }
+dl.rel { font-size: .93rem; }
+dl.rel dd { color: var(--ink); }
 mark.hl { background: var(--hl); color: var(--hl-ink); padding: 0 3px; border-radius: 4px; font-style: normal; font-weight: 600; }
-.extra { margin: 8px 0 0; font-size: .9rem; color: var(--soft); }
-.extra b { color: var(--ink); font-weight: 600; }
-.reg { font-size: .75rem; color: var(--faint); margin-left: 6px; }
-.note { margin-top: 12px; padding: 12px 14px; background: var(--blue-soft); border-radius: 12px; font-size: .92rem; }
-.note b { color: var(--blue-text); }
-.note .en { display: block; color: var(--soft); }
+.reg { font-size: .75rem; color: var(--faint); }
+.note { padding: 12px 14px; background: var(--blue-soft); border-radius: 12px; font-size: .94rem; display: grid; gap: 4px; }
+.note .lbl { color: var(--blue-text); }
+.note .en { color: var(--soft); }
 .note .ex { margin-top: 4px; font-style: italic; }
+/* DDO verbatim (private build only) */
+.ddo { padding: 14px 16px; border: 1px solid var(--rule-strong); border-radius: 12px; }
+.ddo-senses { margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; }
+.ddo-def { font-weight: 500; }
+.ddo-ex { color: var(--soft); margin-top: 2px !important; }
+.ddo blockquote { margin: 6px 0 0; padding-left: 10px; border-left: 2px solid var(--rule-strong); color: var(--soft); font-style: italic; font-size: .92rem; }
+.ddo .cite { margin-top: 12px; font-size: .8rem; color: var(--faint); }
+.links { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; }
+.links .lbl { margin: 0 6px 0 0; }
+.links .btn { min-height: 38px; padding: 6px 10px; font-size: .88rem; color: var(--link); }
+details.fromexam summary { cursor: pointer; min-height: 40px; display: inline-flex; align-items: center; color: var(--soft); font-weight: 600; font-size: .9rem; }
+details.fromexam ul { margin: 4px 0 0; padding-left: 18px; }
+details.fromexam li { margin: 8px 0; font-size: .93rem; }
+@media (max-width: 480px) { dl .row { grid-template-columns: 1fr; gap: 2px; } ol.senses > li { padding-left: 34px; } }
 .hide-en .en, .hide-da .da { display: none !important; }
 
 /* help dialog (ⓘ in the top bar) */

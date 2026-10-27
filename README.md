@@ -38,3 +38,15 @@ python3 src/scripts/render.py       # data + templates → *.html
 ```
 
 After editing only templates or UI strings, `render.py` alone is enough.
+
+Dictionary data (cached outside the repo, under `$PD3_EXAMS/work/`):
+
+```bash
+python3 src/scripts/ddo_entries.py   # word class, en/et, bøjning (+ DDO senses for the private build)
+python3 src/scripts/wiktionary.py    # English headword glosses from Wiktionary (CC BY-SA 4.0)
+python3 src/scripts/render.py --private   # private/ – same pages plus DDO's definitions verbatim
+```
+
+`private/` is git-ignored: Den Danske Ordbog's wording is copyrighted, so it is only
+used in the local copy and never published. The public pages link to DDO, ordbogen.com
+and Wiktionary for every word.
