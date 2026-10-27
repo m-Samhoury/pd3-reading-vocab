@@ -1,188 +1,387 @@
 <!doctype html>
-<html lang="en">
+<html lang="da">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Assisted Learning</title>
+<title>Guidet læring · PD3 ordforråd</title>
+<meta name="description" content="Guided teach → test → spaced review for the PD3 coach's vocabulary deck, connectors first.">
 <style>
+/* Design tokens and shared components follow pd3-reading-vocab's src/templates/common.css, so this page
+   looks like the rest of that site (white sheets, soft grey page, one orange accent; light/dark by system). */
 :root {
-  --bg: #f6f4ef; --surface: #ffffff; --surface-2: #f0ede6; --line: #e2ddd2;
-  --text: #1f1d1a; --muted: #6b665d; --accent: #c8102e; --accent-ink: #ffffff;
-  --ok: #2f7d4f; --ok-bg: #e6f3eb; --bad: #b3261e; --bad-bg: #fbe9e7; --warn: #9a6400; --warn-bg: #fdf3dc;
-  --s-new: #d9d4c9; --s-learn: #e8a33d; --s-known: #5b8fd1; --s-master: #2f7d4f;
-  --radius: 14px; --shadow: 0 1px 2px rgba(0,0,0,.04), 0 4px 16px rgba(0,0,0,.05);
+  --paper: #f7f7f9; --sheet: #ffffff; --ink: #15161b; --soft: #5d606b; --faint: #8b8e99;
+  --rule: #ebebef; --rule-strong: #dcdce2; --hl: #ffd9c7; --hl-ink: #15161b;
+  --accent: #ec6a3c; --accent-ink: #ffffff; --accent-soft: #fff1ea; --accent-text: #c4481c;
+  --blue: #3b7bf6; --blue-soft: #eaf1ff; --blue-text: #2457c5;
+  --violet: #7b5cf0; --violet-soft: #f0ecff; --violet-text: #5a3fc9;
+  --link: #2457c5; --ok: #1f8a4c; --ok-bg: #e6f6ec; --bad: #c8412c; --bad-bg: #fdeceb;
+  --warn: #9a6400; --warn-bg: #fff5dc; --focus: #ec6a3c;
+  --shadow: 0 1px 2px rgba(20, 22, 30, .04), 0 6px 20px rgba(20, 22, 30, .05);
+  --shadow-lg: 0 2px 4px rgba(20, 22, 30, .04), 0 18px 40px rgba(20, 22, 30, .08);
+  --head: "Inter", "SF Pro Display", -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --body: "Inter", "SF Pro Text", -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --r: 16px; --gutter: 16px;
+  /* learning states in the group map */
+  --s-new: var(--rule-strong); --s-learn: var(--accent); --s-known: var(--blue); --s-master: var(--ok);
+  color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #161513; --surface: #1f1e1b; --surface-2: #2a2825; --line: #37342f;
-    --text: #ece8e1; --muted: #a39d92; --accent: #ef4b5f; --accent-ink: #160a0c;
-    --ok: #6cc28f; --ok-bg: #1d3326; --bad: #f28b82; --bad-bg: #3a1f1d; --warn: #f0bf63; --warn-bg: #3a2f17;
-    --s-new: #4a4640; --s-learn: #d69332; --s-known: #6c9ee0; --s-master: #5bb582;
-    --shadow: none;
+    --paper: #0f1014; --sheet: #17181e; --ink: #f1f1f4; --soft: #a9abb6; --faint: #7f828e;
+    --rule: #26272f; --rule-strong: #34353f; --hl: #6a3420; --hl-ink: #fff3ec;
+    --accent: #ff7b4d; --accent-ink: #1a0c05; --accent-soft: #2d1a12; --accent-text: #ff9b75;
+    --blue: #5b93ff; --blue-soft: #16223a; --blue-text: #93b6ff;
+    --violet: #9b83ff; --violet-soft: #221c3a; --violet-text: #b9a8ff;
+    --link: #93b6ff; --ok: #6fd59a; --ok-bg: #14291d; --bad: #ff8b78; --bad-bg: #36191a;
+    --warn: #f2c15a; --warn-bg: #33280f; --focus: #ff7b4d;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3); --shadow-lg: 0 10px 30px rgba(0, 0, 0, .4);
+    color-scheme: dark;
   }
 }
 * { box-sizing: border-box; }
-html, body { margin: 0; }
-body { background: var(--bg); color: var(--text); font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; }
-main { max-width: 780px; margin: 0 auto; padding: 24px 16px 64px; }
-h1 { font-size: 28px; margin: 0; letter-spacing: -.01em; }
-h2 { font-size: 18px; margin: 32px 0 12px; }
-h3 { font-size: 15px; margin: 0 0 8px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
-button { font: inherit; color: inherit; cursor: pointer; }
-.muted { color: var(--muted); }
-.small { font-size: 14px; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.55 var(--body); -webkit-font-smoothing: antialiased; }
+h1, h2, h3 { font-family: var(--head); line-height: 1.2; margin: 0; letter-spacing: -.02em; font-weight: 700; }
+a { color: var(--link); text-underline-offset: 3px; }
+button, input { font: inherit; color: inherit; }
+:focus-visible { outline: 3px solid color-mix(in srgb, var(--focus) 60%, transparent); outline-offset: 2px; border-radius: 10px; }
+[hidden] { display: none !important; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-left: var(--gutter); padding-right: var(--gutter); }
+.narrow { max-width: 780px; margin: 0 auto; }
+
+/* top bar: logo · links · help · language (as on the other pages) */
+.topbar { background: var(--sheet); border-bottom: 1px solid var(--rule); }
+.topbar-in { display: flex; flex-wrap: wrap; align-items: center; gap: 0 24px; min-height: 64px; }
+.brand { order: 0; display: inline-flex; align-items: center; gap: 10px; min-height: 56px; text-decoration: none; color: var(--ink); font-weight: 700; letter-spacing: -.01em; }
+.logo { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 9px; background: var(--accent-soft);
+  color: var(--accent); font-weight: 800; font-size: .95rem; letter-spacing: -.04em; }
+.nav { display: flex; align-items: center; gap: 2px 4px; flex: 1 1 auto; flex-wrap: wrap; order: 1; }
+.nav a { display: inline-flex; align-items: center; min-height: 40px; padding: 0 12px; border-radius: 10px; text-decoration: none;
+  color: var(--soft); font-weight: 500; font-size: .95rem; }
+.nav a:hover { color: var(--ink); background: var(--paper); }
+.nav a[aria-current="page"] { color: var(--ink); font-weight: 600; background: var(--paper); }
+.iconbtn { order: 2; margin-left: auto; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%;
+  border: 1px solid var(--rule-strong); background: var(--sheet); color: var(--soft); cursor: pointer; }
+.iconbtn:hover { color: var(--ink); border-color: var(--ink); }
+.langbtn { order: 2; margin-left: 8px; min-height: 38px; padding: 6px 16px; border-radius: 10px; border: 1px solid var(--rule-strong);
+  background: var(--sheet); color: var(--ink); font-weight: 600; font-size: .9rem; cursor: pointer; }
+.langbtn:hover { border-color: var(--ink); }
+@media (max-width: 640px) {
+  .topbar-in { padding-bottom: 8px; }
+  .nav { order: 3; flex-basis: 100%; margin-left: -10px; }
+  .nav a { padding: 0 10px; }
+}
+dialog.info { border: 0; border-radius: 18px; padding: 0; width: min(580px, calc(100vw - 32px)); max-height: calc(100vh - 48px);
+  background: var(--sheet); color: var(--ink); box-shadow: var(--shadow-lg); overflow: auto; }
+dialog.info::backdrop { background: rgba(15, 16, 20, .45); }
+dialog.info .ib { padding: 14px 20px 22px; }
+dialog.info .ih { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+dialog.info .ih h2 { font-size: 1.3rem; }
+dialog.info h3 { font-size: 1rem; margin: 18px 0 6px; }
+dialog.info p { margin: 6px 0; color: var(--soft); font-size: .93rem; }
+dl.keylist { display: grid; grid-template-columns: max-content 1fr; gap: 6px 14px; margin: 0; font-size: .9rem; color: var(--soft); }
+dl.keylist dt { font-weight: 600; color: var(--ink); }
+dl.keylist dd { margin: 0; }
+
+/* page heading */
+.top { padding-top: 44px; padding-bottom: 8px; }
+.top h1 { font-size: clamp(1.9rem, 6vw, 2.6rem); font-weight: 700; letter-spacing: -.03em; }
+.top h1 .light { font-weight: 400; display: block; }
+.top > p { margin: 10px 0 0; color: var(--soft); max-width: 62ch; }
+.chip { display: inline-flex; align-items: center; gap: 8px; padding: 4px 12px 4px 4px; border-radius: 999px; background: var(--sheet);
+  border: 1px solid var(--rule); box-shadow: var(--shadow); font-size: .85rem; font-weight: 500; color: var(--ink); margin-bottom: 16px; }
+.chip b { padding: 2px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-text); font-weight: 600; font-size: .8rem; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.section { margin-top: 40px; }
+.section > h2 { font-size: 1.35rem; margin-bottom: 14px; }
+.soft { color: var(--soft); }
+.small { font-size: .88rem; }
+.lbl { display: block; font-size: .72rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--faint); margin-bottom: 6px; }
+footer.foot { padding-top: 40px; padding-bottom: 48px; color: var(--faint); font-size: .85rem; }
+
+/* controls */
+.btn {
+  min-height: 44px; padding: 9px 18px; border-radius: 10px; border: 1px solid var(--rule-strong);
+  background: var(--sheet); color: var(--ink); cursor: pointer; font-weight: 600; font-size: .95rem;
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none;
+  transition: border-color .15s, background .15s, box-shadow .15s;
+}
+.btn:hover { border-color: var(--ink); }
+.btn.solid { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); box-shadow: 0 6px 16px color-mix(in srgb, var(--accent) 28%, transparent); }
+.btn.solid:hover { background: color-mix(in srgb, var(--accent) 88%, black); border-color: transparent; }
+.btn.quiet { border-color: transparent; background: transparent; color: var(--soft); }
+.btn.quiet:hover { color: var(--ink); background: var(--sheet); border-color: var(--rule); }
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+.btn.solid:disabled:hover { background: var(--accent); }
 .row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
 .spacer { flex: 1; }
-.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); }
-.btn { border: 1px solid var(--line); background: var(--surface); border-radius: 10px; padding: 10px 16px; font-weight: 600; }
-.btn:hover { background: var(--surface-2); }
-.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
-.btn.primary:hover { filter: brightness(1.05); }
-.btn:disabled { opacity: .45; cursor: default; }
-.link { background: none; border: 0; padding: 0; color: var(--muted); text-decoration: underline; font-size: 14px; }
-.chip { display: inline-block; font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 99px; background: var(--surface-2); color: var(--muted); }
-.badge { display: inline-block; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 6px; background: var(--text); color: var(--bg); letter-spacing: .03em; }
+.badge { display: inline-flex; align-items: center; min-height: 22px; padding: 1px 9px; border-radius: 999px; font-size: .75rem; font-weight: 600; white-space: nowrap; }
+.badge.t1 { background: var(--accent-soft); color: var(--accent-text); }
+.badge.t2 { background: var(--blue-soft); color: var(--blue-text); }
+.badge.t3 { background: var(--violet-soft); color: var(--violet-text); }
+.tag { display: inline-flex; align-items: center; min-height: 22px; padding: 0 7px; border-radius: 6px; border: 1px solid var(--rule-strong);
+  font-size: .72rem; font-weight: 600; color: var(--soft); letter-spacing: .02em; }
+.sheet { background: var(--sheet); border: 1px solid var(--rule); border-radius: var(--r); box-shadow: var(--shadow); }
+.bar { height: 8px; background: var(--rule); border-radius: 999px; overflow: hidden; display: flex; }
+.bar > span { display: block; height: 100%; transition: width .25s; }
+mark.hl { background: var(--hl); color: var(--hl-ink); padding: 0 3px; border-radius: 4px; font-style: normal; font-weight: 600; }
+.err { background: var(--bad-bg); color: var(--bad); border-radius: 12px; padding: 14px 16px; }
+code { background: var(--paper); border: 1px solid var(--rule); border-radius: 6px; padding: 1px 6px; font-size: .88em; }
 
-/* header + stats */
-.top { display: flex; align-items: flex-end; gap: 12px; flex-wrap: wrap; }
-.countdown { margin-left: auto; text-align: right; }
-.countdown b { font-size: 22px; }
-.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 20px; }
-.stat { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; }
-.stat .n { font-size: 26px; font-weight: 700; line-height: 1.1; }
-.stat .l { font-size: 13px; color: var(--muted); }
-.actions { margin-top: 16px; }
+/* progress band (as on the overview page) */
+.band { background: var(--blue); color: #fff; border-radius: 20px; padding: 22px; box-shadow: 0 14px 30px color-mix(in srgb, var(--blue) 25%, transparent); }
+@media (prefers-color-scheme: dark) { .band { background: #2a4fa8; } }
+.prog { display: grid; gap: 18px 28px; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+.prog .m .lbl { font-size: .82rem; font-weight: 600; opacity: .85; color: inherit; letter-spacing: 0; text-transform: none; margin: 0; }
+.prog .m b { display: block; font-size: 1.9rem; font-weight: 700; letter-spacing: -.02em; line-height: 1.15; }
+.prog .m .s { font-size: .85rem; opacity: .85; }
+.prog .bar { margin-top: 8px; background: rgba(255,255,255,.25); }
+.prog .bar > span { background: #fff; }
 
 /* group map */
-.legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 13px; color: var(--muted); margin-bottom: 10px; }
-.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 5px; vertical-align: -1px; }
-.groups { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 10px; }
-.group { text-align: left; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; }
-.group:hover, .group.open { border-color: var(--muted); }
-.group .gn { font-weight: 650; }
-.group .ge { font-size: 13px; color: var(--muted); }
-.bar { display: flex; height: 8px; border-radius: 4px; overflow: hidden; margin-top: 8px; background: var(--s-new); }
-.bar span { display: block; height: 100%; }
-.group .due { font-size: 12px; color: var(--accent); font-weight: 600; }
-.detail { grid-column: 1 / -1; background: var(--surface-2); border-radius: 12px; padding: 14px; }
-.words { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 12px; }
-.word { font-size: 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 3px 8px; }
-.word i { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; }
+.tierlabel { display: flex; align-items: center; gap: 8px; margin: 22px 0 10px; font-size: .9rem; font-weight: 600; color: var(--soft); }
+.legend { display: flex; gap: 6px 16px; flex-wrap: wrap; font-size: .85rem; color: var(--soft); }
+.legend i, .word i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; vertical-align: -1px; }
+.groups { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+.group { text-align: left; padding: 14px 16px; cursor: pointer; color: inherit; transition: box-shadow .15s, transform .15s, border-color .15s; }
+.group:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+.group.open { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft), var(--shadow); }
+.group .gn { font-weight: 600; }
+.group .ge { font-size: .85rem; color: var(--soft); }
+.group .due { font-size: .75rem; font-weight: 600; color: var(--accent-text); background: var(--accent-soft); border-radius: 999px; padding: 1px 8px; }
+.group .bar { margin-top: 10px; background: var(--s-new); }
+.detail { grid-column: 1 / -1; padding: 16px; }
+.words { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 14px; }
+.word { font-size: .9rem; background: var(--paper); border: 1px solid var(--rule); border-radius: 8px; padding: 3px 9px; }
 
 /* session */
-.sbar { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
-.progress { flex: 1; height: 6px; background: var(--line); border-radius: 3px; overflow: hidden; }
-.progress span { display: block; height: 100%; background: var(--accent); transition: width .25s; }
-.kind { font-size: 13px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
-.prompt { font-size: 15px; color: var(--muted); margin: 6px 0 14px; }
-.big { font-size: 34px; font-weight: 700; letter-spacing: -.01em; line-height: 1.2; }
-.meaning { font-size: 20px; margin-top: 4px; }
-.sentence { font-size: 19px; line-height: 1.55; }
-.gap { display: inline-block; min-width: 90px; border-bottom: 2px solid var(--accent); margin: 0 2px; }
-.hl { background: var(--warn-bg); box-shadow: 0 0 0 2px var(--warn-bg); border-radius: 3px; font-weight: 650; }
-.options { display: grid; gap: 10px; margin-top: 16px; }
-.opt { text-align: left; border: 1.5px solid var(--line); background: var(--surface); border-radius: 12px; padding: 12px 14px; display: flex; gap: 12px; align-items: baseline; }
-.opt:hover:not(:disabled) { border-color: var(--muted); }
-.opt .k { font-size: 12px; color: var(--muted); font-weight: 700; min-width: 14px; }
-.opt.sel { border-color: var(--text); }
-.opt.right { border-color: var(--ok); background: var(--ok-bg); }
-.opt.wrong { border-color: var(--bad); background: var(--bad-bg); }
-.opt:disabled { cursor: default; }
-input.answer { width: 100%; font: inherit; font-size: 20px; padding: 12px 14px; border: 1.5px solid var(--line); border-radius: 12px; background: var(--surface); color: var(--text); margin-top: 14px; }
-input.answer:focus { outline: none; border-color: var(--text); }
-.letters { display: flex; gap: 6px; margin-top: 8px; }
-.letters button { border: 1px solid var(--line); background: var(--surface); border-radius: 8px; width: 38px; height: 34px; font-size: 16px; }
+.counter { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 2px 12px; color: var(--soft); font-size: .9rem; margin: 22px 0 8px; }
+.sessionbar { background: var(--rule); }
+.sessionbar > span { background: var(--accent); border-radius: 999px; }
+.q { padding: 22px 20px; margin-top: 14px; box-shadow: var(--shadow-lg); border-radius: 20px; }
+.kind { font-size: .72rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--faint); }
+.prompt { margin: 6px 0 14px; color: var(--soft); }
+.big { font-family: var(--head); font-size: clamp(2rem, 7vw, 2.6rem); font-weight: 700; letter-spacing: -.03em; line-height: 1.1; }
+.meaning { font-size: 1.2rem; font-weight: 600; margin-top: 6px; }
+.sentence { font-size: 1.15rem; font-weight: 500; line-height: 1.55; }
+.gap { display: inline-block; min-width: 4.5em; border-bottom: 2.5px solid var(--accent); margin: 0 2px; }
+.opts { display: grid; gap: 8px; margin-top: 16px; }
+.opt { justify-content: flex-start; text-align: left; min-height: 62px; font-size: 1.05rem; font-weight: 500; border-radius: 14px; padding: 12px 16px; }
+.opt:hover:not(:disabled) { border-color: var(--accent); background: var(--accent-soft); }
+.opt .k { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 8px; background: var(--paper); color: var(--soft); font-weight: 700; font-size: .85rem; flex: 0 0 auto; }
+.opt.sel { border-color: var(--accent); background: var(--accent-soft); }
+.opt.right { background: var(--ok-bg); border-color: var(--ok); }
+.opt.wrong { background: var(--bad-bg); border-color: var(--bad); }
+.opt:disabled { cursor: default; opacity: 1; }
+input.answer { width: 100%; min-height: 52px; font-size: 1.15rem; padding: 10px 14px; border: 1px solid var(--rule-strong); border-radius: 12px; background: var(--sheet); margin-top: 14px; }
+input.answer:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); outline: none; }
+.letters { display: flex; gap: 6px; margin-top: 8px; align-items: center; }
+.letters button { min-width: 40px; min-height: 36px; border-radius: 9px; border: 1px solid var(--rule-strong); background: var(--sheet); cursor: pointer; font-size: 1rem; }
+.letters button:hover { border-color: var(--ink); }
 .tiles, .built { display: flex; flex-wrap: wrap; gap: 8px; }
-.built { min-height: 54px; border: 1.5px dashed var(--line); border-radius: 12px; padding: 10px; margin: 14px 0 12px; align-content: flex-start; }
-.tile { border: 1.5px solid var(--line); background: var(--surface); border-radius: 9px; padding: 6px 12px; font-size: 18px; }
-.tile.fixed { background: var(--surface-2); cursor: default; }
+.built { min-height: 58px; border: 1.5px dashed var(--rule-strong); border-radius: 14px; padding: 10px; margin: 14px 0 12px; align-content: flex-start; background: var(--paper); }
+.tile { border: 1px solid var(--rule-strong); background: var(--sheet); border-radius: 10px; padding: 7px 13px; font-size: 1.05rem; font-weight: 500; cursor: pointer; }
+.tile:hover:not(:disabled) { border-color: var(--accent); }
+.tile.fixed { background: var(--accent-soft); border-color: transparent; color: var(--accent-text); cursor: default; font-weight: 600; }
 .tile.used { visibility: hidden; }
 .shake { animation: shake .35s; }
 @keyframes shake { 25% { transform: translateX(-6px); } 75% { transform: translateX(6px); } }
-.feedback { margin-top: 18px; border-radius: 12px; padding: 14px 16px; }
-.feedback.ok { background: var(--ok-bg); }
-.feedback.bad { background: var(--bad-bg); }
-.feedback .head { font-weight: 700; font-size: 17px; }
-.feedback .why { margin-top: 6px; font-size: 15px; }
-.sev { font-size: 12px; font-weight: 700; padding: 1px 7px; border-radius: 6px; margin-right: 6px; }
-.sev.critical { background: var(--bad); color: var(--bg); }
-.sev.moderate { background: var(--warn); color: var(--bg); }
-.sev.minor { background: var(--ok); color: var(--bg); }
+.feedback { margin-top: 14px; padding: 12px 14px; border-radius: 12px; }
+.feedback.ok { background: var(--ok-bg); } .feedback.bad { background: var(--bad-bg); }
+.feedback h3 { font-size: 1rem; margin-bottom: 4px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.feedback .why { margin-top: 4px; }
+.sev { font-size: .72rem; font-weight: 700; padding: 1px 8px; border-radius: 999px; }
+.sev.critical { background: var(--bad); color: var(--sheet); }
+.sev.moderate { background: var(--warn-bg); color: var(--warn); }
+.sev.minor { background: var(--sheet); color: var(--ok); }
 .next { margin-top: 16px; }
 
 /* teach card */
-.teach .head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
-.block { margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--line); }
-.rule { background: var(--surface-2); border-radius: 10px; padding: 10px 12px; margin-top: 6px; }
-.rule .demo { margin-top: 4px; font-size: 15px; }
-.cite { font-style: italic; color: var(--muted); margin-top: 4px; }
-.warnbox { background: var(--warn-bg); border-radius: 10px; padding: 10px 12px; }
-.ex { margin: 6px 0; }
-.ex .src { font-size: 12px; color: var(--muted); font-weight: 600; margin-right: 6px; }
+.head { display: flex; align-items: center; gap: 8px 10px; flex-wrap: wrap; }
+.block { margin-top: 18px; }
+.eg { padding: 12px 14px; border-radius: 12px; background: var(--paper); border-left: 3px solid var(--accent); }
+.eg .sentence { font-style: italic; font-size: 1.05rem; }
+.note { padding: 12px 14px; background: var(--blue-soft); border-radius: 12px; font-size: .94rem; display: grid; gap: 4px; margin-top: 8px; }
+.note b.t { color: var(--blue-text); }
+.note .demo { font-style: italic; }
+.ex { margin: 8px 0; font-size: 1rem; }
+.ex .tag { margin-right: 8px; }
+.ddo { padding: 14px 16px; border: 1px solid var(--rule-strong); border-radius: 12px; }
+.ddo blockquote { margin: 6px 0 0; padding-left: 10px; border-left: 2px solid var(--rule-strong); color: var(--soft); font-style: italic; font-size: .92rem; }
+.ddo .cite { margin-top: 8px; font-size: .8rem; color: var(--faint); }
+.warnbox { padding: 12px 14px; border-radius: 12px; background: var(--accent-soft); font-size: .94rem; }
+.warnbox b { color: var(--accent-text); }
 .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px; }
-.pair > div { background: var(--surface-2); border-radius: 10px; padding: 10px 12px; }
+.pair > div { background: var(--sheet); border-radius: 10px; padding: 10px 12px; }
 
 /* summary */
-.score { font-size: 48px; font-weight: 800; }
-.list { margin: 8px 0 0; padding: 0; list-style: none; }
-.list li { padding: 8px 0; border-bottom: 1px solid var(--line); display: flex; gap: 10px; align-items: baseline; }
+.score { font-family: var(--head); font-size: 3.4rem; font-weight: 700; letter-spacing: -.03em; line-height: 1; color: var(--accent); }
+.list { margin: 0; padding: 0; list-style: none; }
+.list li { padding: 10px 0; border-bottom: 1px solid var(--rule); display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
 .list li:last-child { border-bottom: 0; }
-.err { background: var(--bad-bg); color: var(--bad); border-radius: 12px; padding: 16px; }
-code { background: var(--surface-2); border-radius: 6px; padding: 2px 6px; font-size: 14px; }
-kbd { font: 12px ui-monospace, monospace; border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 4px; padding: 0 4px; color: var(--muted); }
-.btn.primary kbd { border-color: rgba(255,255,255,.4); color: inherit; opacity: .8; margin-left: 4px; }
 
-@media (max-width: 600px) {
-  .stats { grid-template-columns: repeat(2, 1fr); }
-  .big { font-size: 28px; }
-  .pair { grid-template-columns: 1fr; }
-  .countdown { margin-left: 0; text-align: left; }
-}
+@media (max-width: 600px) { .pair { grid-template-columns: 1fr; } .q { padding: 18px 16px; } }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
 </style>
 </head>
 <body>
-<main id="app"><p class="muted">Loading your deck…</p></main>
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" href="index.html" data-site><span class="logo" aria-hidden="true">Pd</span><span data-i18n="brand">PD3 ordforråd</span></a>
+    <nav class="nav" aria-label="Pages">
+      <a href="index.html" data-site data-i18n="nav.overview">Overblik</a>
+      <a href="study-sheet.html" data-site data-i18n="nav.study">Studieark</a>
+      <a href="flashcards.html#learn" data-site data-i18n="nav.flash">Flashcards</a>
+      <a href="flashcards.html#test" data-site data-i18n="nav.test">Test</a>
+      <a href="assisted-learning.html" aria-current="page" data-i18n="nav.assisted">Guidet læring</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap" id="app"><p class="soft">…</p></main>
+<footer class="wrap foot" id="foot"></footer>
 <script>window.PD3_DECK = null; /*DECK*/</script>
 <script>
 "use strict";
+// ---------- interface language (shared with the other pages via localStorage "pd3.lang") ----------
+const LANG = (() => { try { return localStorage.getItem("pd3.lang") === "en" ? "en" : "da"; } catch (e) { return "da"; } })();
+const I18N = {
+  "brand": ["PD3 ordforråd", "PD3 vocabulary"],
+  "nav.overview": ["Overblik", "Overview"], "nav.study": ["Studieark", "Study sheet"], "nav.flash": ["Flashcards", "Flashcards"],
+  "nav.test": ["Test", "Test"], "nav.assisted": ["Guidet læring", "Assisted learning"],
+  "lang.button": ["English", "Dansk"], "lang.title": ["Skift sprog til engelsk", "Switch language to Danish"],
+  "info.open": ["Hjælp", "Help"], "info.title": ["Hjælp", "Help"], "info.close": ["Luk", "Close"],
+  "info.how": ["Sådan virker det", "How it works"],
+  "info.p1": ["Nye ord kommer fem ad gangen fra én gruppe. Først ser du ordet med ordstilling, eksempel, rigtige sætninger fra prøverne og ordbogsopslaget; bagefter bliver du testet.",
+              "New words come five at a time from one group. First you see each word with its word order, example, real exam sentences and the dictionary entry; then you're tested."],
+  "info.p2": ["Gentagelse med mellemrum (SM-2): hvert svar giver en karakter 0–5, som bestemmer, hvornår ordet kommer igen. Højst 15 nye ord om dagen.",
+              "Spaced repetition (SM-2): every answer gets a grade 0–5 that decides when the word comes back. At most 15 new words a day."],
+  "info.p3": ["Fremskridt gemmes kun i denne browser på denne enhed.", "Progress is stored only in this browser on this device."],
+  "info.keys": ["Taster", "Keys"],
+  "key.num": ["Vælg svar", "Pick an answer"], "key.enter": ["Tjek / Næste", "Check / Next"],
+  "info.grades": ["Karakterer", "Grades"],
+  "gr.5": ["med det samme og rigtigt", "instant and right"], "gr.4": ["rigtigt", "right"], "gr.3": ["stavefejl eller andet forsøg", "typo or second try"],
+  "gr.2": ["genkendt, da du så svaret", "recognised when shown"], "gr.1": ["forkert", "wrong"], "gr.0": ["ved ikke", "don't know"],
+  "foot": ["Ordforrådet fra PD3-coachen: forbinderord først. Eksempelsætninger fra Prøve i Dansk 3, Læseforståelse 2004–2024 (SIRI). Definitioner fra Den Danske Ordbog (ordnet.dk). Fremskridt gemmes kun i denne browser.",
+           "The PD3 coach's vocabulary: connectors first. Example sentences from Prøve i Dansk 3, Læseforståelse 2004–2024 (SIRI). Definitions from Den Danske Ordbog (ordnet.dk). Progress is stored only in this browser."],
+  "nodeck": ["Ingen ordliste i denne fil. Det er skabelonen; byg siden fra projektmappen:", "No deck in this file. This is the template; build the page from the project folder:"],
+  // home
+  "h.chip.days": ["{0} dage", "{0} days"], "h.chip": ["til den skriftlige prøve", "to the written exam"],
+  "h.h1a": ["Lær, test og gentag", "Learn, test and review"], "h.h1b": ["Guidet læring", "Assisted learning"],
+  "h.intro": ["{0} ord fra PD3-coachen, forbinderordene først. Hvert nyt ord bliver forklaret, før du bliver testet i det.",
+              "{0} words from the PD3 coach, connectors first. Every new word is taught before you're tested on it."],
+  "h.go": ["Start session", "Start session"], "h.learn": ["Lær {0} nye", "Learn {0} new"], "h.review": ["Kun gentagelser", "Reviews only"],
+  "h.conf": ["Forvekslingsord", "Confusables drill"],
+  "h.blurb": ["En session = {0}. Fremskridt gemmes i denne browser.", "A session = {0}. Progress is saved in this browser."],
+  "h.blurb.r": ["{0} gentagelser", "{0} reviews"], "h.blurb.r1": ["1 gentagelse", "1 review"],
+  "h.blurb.n": ["{0} nye ord (forklaret, så testet)", "{0} new words (taught, then tested)"],
+  "h.nothing": ["Intet at gentage, og dagens nye ord er brugt. Kom igen i morgen, eller vælg en gruppe nedenfor for ekstra øvelse.",
+                "Nothing due and today's new words are used up. Come back tomorrow, or pick a group below for extra practice."],
+  "h.storage": ["Din browser gemmer ikke data her (privat vindue?), så fremskridt forsvinder, når siden lukkes.",
+                "This browser isn't storing data here (private window?), so progress is lost when the page closes."],
+  "h.progress": ["Dit fremskridt", "Your progress"],
+  "m.due": ["Skal gentages", "Due"], "m.due.s": ["i dag", "today"], "m.new": ["Nye ord", "New words"], "m.new.s": ["tilbage i dag", "left today"],
+  "m.learn": ["I gang", "Learning"], "m.learn.s": ["ord du øver", "words in progress"], "m.master": ["Kan du", "Mastered"], "m.master.s": ["21+ dage", "21+ days"],
+  "h.groups": ["Grupper", "Groups"],
+  "st.new": ["ny", "new"], "st.learn": ["i gang", "learning"], "st.known": ["kendt (6+ dage)", "known (6+ days)"], "st.master": ["kan du (21+ dage)", "mastered (21+ days)"],
+  "p.1": ["Forbinderord", "Connectors"], "p.2": ["Ord fra prøven", "Exam words"], "p.3": ["Andre nyttige ord", "Other useful words"],
+  "g.due": ["{0} skal gentages", "{0} due"], "g.words": ["{0} ord", "{0} words"], "g.next": ["næste gang {0}", "next {0}"],
+  "g.study": ["Øv denne gruppe", "Study this group"],
+  "g.study.s": ["Ord, der skal gentages, først, så op til {0} nye; ellers ekstra øvelse.", "Due cards first, then up to {0} new ones; extra practice if nothing is due."],
+  "g.empty": ["Intet at øve i denne gruppe endnu.", "Nothing in this group to study yet."], "h.empty": ["Intet at gentage lige nu.", "Nothing due right now."],
+  // session
+  "s.session": ["Session", "Session"], "s.conf": ["Forvekslingsord", "Confusables"], "s.end": ["Afslut", "End"],
+  "s.count": ["{0} / {1}", "{0} / {1}"],
+  "k.new": ["Nye ord", "New words"], "k.learn": ["Lær", "Learn"],
+  "k.practice": ["Øvelse", "Practice"], "k.first": ["Nyt", "New"], "k.review": ["Gentagelse", "Review"],
+  "x.meaning": ["Betydning", "Meaning"], "x.produce": ["Skriv det på dansk", "Say it in Danish"], "x.cloze": ["Udfyld hullet", "Fill the gap"],
+  "x.relation": ["Hvilken relation?", "Which relation?"], "x.order": ["Ordstilling", "Word order"], "x.odd": ["L3: find parret", "L3: find the pair"],
+  "intro.p": ["{0} nye ord fra én gruppe. Først ser du hvert ord med ordstilling, rigtige sætninger fra prøverne og ordbogsopslaget; så en kort test i dem alle.",
+              "{0} new words from one group. First you'll see each one with its word order, real exam sentences and the dictionary entry; then a quick test on all of them."],
+  "b.start": ["Start", "Start"], "b.got": ["Forstået", "Got it"], "b.next": ["Næste", "Next"], "b.check": ["Tjek", "Check"],
+  "b.clear": ["Ryd", "Clear"], "b.show": ["Vis mig", "Show me"], "b.idk": ["Ved ikke", "I don't know"],
+  "b.override": ["Jeg havde ret – tæl det med", "I was right, count it"], "b.skip": ["Spring over", "Skip retype"],
+  "t.order": ["Ordstilling", "Word order"], "t.example": ["Eksempel", "Example"], "t.exam": ["Fra prøverne", "From the exams"],
+  "t.ddo": ["Den Danske Ordbog", "Den Danske Ordbog"], "t.mix": ["Forveksl ikke:", "Don't mix up:"],
+  "q.meaning": ["Hvad betyder det?", "What does it mean?"], "q.relation": ["Hvilken relation udtrykker forbinderordet?", "Which relation does this connector express?"],
+  "q.cloze": ["Hvilket ord passer i hullet?", "Which word fits the gap?"], "q.base": [" (grundform)", " (options in base form)"],
+  "q.odd": ["To af dem hører til samme relation, så i en L3-opgave ville de udelukke hinanden. Vælg de to.",
+            "Two of these belong to the same relation, so in an L3 grid they'd cancel each other out. Pick the two."],
+  "q.produce": ["Skriv det danske ord eller udtryk.", "Type the Danish word or phrase."], "q.ph": ["dansk…", "Danish…"],
+  "q.order": ["Sæt ordene i den rigtige rækkefølge. Det er ordstillingen, censor tjekker ved {0}.", "Put the words in the right order. Word order is what the examiners check with {0}."],
+  "q.pair": ["Sætning {0} af {1}: hvilket ord passer?", "Sentence {0} of {1}: which one fits?"],
+  "f.right": ["✅ Rigtigt", "✅ Right"], "f.wrong": ["❌ Ikke denne gang", "❌ Not this time"], "f.almost": ["Næsten", "Almost"],
+  "f.counted": ["✅ Talt med som rigtigt", "✅ Counted as right"], "f.its": ["❌ Det er {0}", "❌ It's {0}"],
+  "f.spelling": ["Stavning: {0} (du skrev “{1}”)", "Spelling: {0} (you wrote “{1}”)"], "f.wrote": ["Du skrev “{0}”. ", "You wrote “{0}”. "],
+  "f.twin": ["✅ {0} passer også", "✅ {0} works too"], "f.twin.p": ["Dette kort er et andet ord med samme betydning. Prøv igen.", "This card is a different word with the same meaning. Try once more."],
+  "f.both": ["{0} og {1} hører begge til {2}.", "{0} and {1} are both {2}."],
+  "f.retry": ["Ikke helt – prøv én gang til.", "Not quite, one more try."], "f.retry.p": ["Se på, hvor verbet står efter {0}.", "Check where the verb goes after {0}."],
+  "f.retype": ["Skriv den rigtige sætning", "Retype the correct sentence"], "f.retype.s": ["(så hånden husker den)", "(motor memory)"],
+  "f.practice": ["øvelse – ingen karakter", "practice: not graded"], "f.grade": ["karakter {0}/5", "grade {0}/5"],
+  "f.rule": ["Tommelfingerregel:", "Rule of thumb:"],
+  "sev.critical": ["🔴 kritisk", "🔴 critical"], "sev.moderate": ["🟡 middel", "🟡 moderate"], "sev.minor": ["🟢 lille", "🟢 minor"],
+  // summary
+  "r.done": ["{0} · færdig", "{0} · done"], "r.score": ["{0} af {1} kort rigtige", "{0} of {1} graded cards right"],
+  "r.practice": ["Kun øvelse: ingen karakterer, så din plan er uændret.", "Practice only: nothing was graded, so your schedule didn't change."],
+  "r.shaky": ["Stadig usikre", "Still shaky"], "r.tomorrow": ["igen i morgen", "back tomorrow"], "r.none": ["Ingen usikre ord denne gang. 🎯", "Nothing shaky this time. 🎯"],
+  "r.next": ["Næste gang du ser dem", "Next time you'll see them"], "r.cards": ["{0} kort", "{0} cards"],
+  "r.coach": ["Vil du have feedback på en fri sætning? Spørg coachen i chatten (/pd3-coach vocab) om opgaven “skriv én sætning med 3 af dagens forbinderord”.",
+              "Want feedback on a free sentence? Ask the coach in chat (/pd3-coach vocab) for the “write one sentence with 3 of today's connectors” task."],
+  "r.home": ["Tilbage til oversigten", "Back to overview"],
+};
+function t(key, ...args) {
+  const e = I18N[key];
+  let s = e ? e[LANG === "en" ? 1 : 0] : key;
+  args.forEach((a, i) => { s = s.split(`{${i}}`).join(String(a)); });
+  return s;
+}
+
 // ---------- reference data (mirrors references/connectors.md and vocab.md) ----------
+// id: [English name, Danish name, priority]
 const GROUPS = {
-  "årsag": ["Cause", 1], "konsekvens": ["Result", 1], "kontrast": ["Contrast", 1], "indrømmelse": ["Concession", 1],
-  "tilføjelse": ["Addition", 1], "betingelse": ["Condition", 1], "formål": ["Purpose", 1], "tid": ["Time / order", 1],
-  "sammenligning": ["Comparison", 1], "præcisering": ["Example / precision", 1], "udelukkelse": ["Exclusion", 1],
-  "konklusion": ["Conclusion", 1], "holdning": ["Attitude", 1],
-  "l1_ord": ["L1 key words", 2], "l1_verb": ["L1 verbs", 2], "l2_ord": ["L2 question words", 2], "modalverbum": ["Modal verbs", 2],
-  "l3_medfoere": ["L3: lead to / cause", 2], "l3_forhindre": ["L3: prevent / limit", 2], "l3_forklare": ["L3: say / claim", 2],
-  "l3_ord": ["L3 words", 2], "praep": ["Fixed prepositions", 2], "adjektiv": ["Adjectives", 3],
+  "årsag": ["Cause", "Årsag", 1], "konsekvens": ["Result", "Konsekvens", 1], "kontrast": ["Contrast", "Kontrast", 1],
+  "indrømmelse": ["Concession", "Indrømmelse", 1], "tilføjelse": ["Addition", "Tilføjelse", 1], "betingelse": ["Condition", "Betingelse", 1],
+  "formål": ["Purpose", "Formål", 1], "tid": ["Time / order", "Tid / rækkefølge", 1], "sammenligning": ["Comparison", "Sammenligning", 1],
+  "præcisering": ["Example / precision", "Præcisering", 1], "udelukkelse": ["Exclusion", "Udelukkelse", 1],
+  "konklusion": ["Conclusion", "Konklusion", 1], "holdning": ["Attitude", "Holdning", 1],
+  "l1_ord": ["L1 key words", "L1-nøgleord", 2], "l1_verb": ["L1 verbs", "L1-verber", 2], "l2_ord": ["L2 question words", "L2-spørgeord", 2],
+  "modalverbum": ["Modal verbs", "Modalverber", 2], "l3_medfoere": ["L3: lead to / cause", "L3: føre til / forårsage", 2],
+  "l3_forhindre": ["L3: prevent / limit", "L3: forhindre / begrænse", 2], "l3_forklare": ["L3: say / claim", "L3: sige / påstå", 2],
+  "l3_ord": ["L3 words", "L3-ord", 2], "praep": ["Fixed prepositions", "Faste præpositioner", 2], "adjektiv": ["Adjectives", "Adjektiver", 3],
 };
 const GROUP_ORDER = Object.keys(GROUPS);
-const PRIORITY_NAMES = { 1: "Connectors (forbinderord)", 2: "Exam words", 3: "Other useful words" };
 
+// [title, English rule, Danish rule, demo]
 const RULES = {
-  SUB: ["Underordnende konjunktion · SUB", "Starts a sub-clause: subject – <i>ikke</i> – verb. When the sub-clause comes first, the main clause inverts (verb before subject).",
+  SUB: ["Underordnende konjunktion · SUB",
+        "Starts a sub-clause: subject – <i>ikke</i> – verb. When the sub-clause comes first, the main clause inverts (verb before subject).",
+        "Starter en ledsætning: subjekt – <i>ikke</i> – verbum. Står ledsætningen først, bliver der inversion i hovedsætningen (verbum før subjekt).",
         "…, fordi han <b>ikke har</b> tid. · Selvom det regner, <b>går vi</b> en tur."],
-  ADV: ["Konjunktionaladverbium · ADV", "At the start of a sentence it takes the first slot, so the verb comes next, then the subject (inversion).",
-        "Derfor <b>er det</b> vigtigt … — never <s>Derfor det er</s>."],
+  ADV: ["Konjunktionaladverbium · ADV",
+        "At the start of a sentence it takes the first slot, so the verb comes next, then the subject (inversion).",
+        "Først i sætningen tager det første plads, så verbet kommer lige efter og derefter subjektet (inversion).",
+        "Derfor <b>er det</b> vigtigt … — aldrig <s>Derfor det er</s>."],
   KOO: ["Sideordnende konjunktion · KOO", "Joins two main clauses. Normal word order on both sides.",
-        "Det regnede, men <b>vi gik</b> ud."],
-  "PRÆP": ["Præposition · PRÆP", "Followed by a noun phrase, not by a clause.",
-        "på grund af <b>regnen</b> — but fordi <b>det regner</b>."],
+        "Binder to hovedsætninger sammen. Normal ordstilling på begge sider.", "Det regnede, men <b>vi gik</b> ud."],
+  "PRÆP": ["Præposition · PRÆP", "Followed by a noun phrase, not by a clause.", "Efterfølges af et navneord, ikke af en sætning.",
+           "på grund af <b>regnen</b> — men fordi <b>det regner</b>."],
 };
+const rule = k => RULES[k] && RULES[k][LANG === "en" ? 1 : 2];
 
-// Pairs learners mix up; drilled side by side when one of them lapses (vocab.md)
+// Pairs learners mix up; drilled side by side when one of them lapses (vocab.md). [a, b, English tip, Danish tip]
 const CONFUSABLES = [
-  ["da", "når", "da = one time in the past (or because) · når = repeated or future"],
-  ["for", "fordi", "for = main-clause word order · fordi = sub-clause order (ikke before the verb)"],
-  ["eller", "ellers", "eller = or · ellers = otherwise"],
-  ["derfor", "derimod", "derfor = therefore (result) · derimod = by contrast"],
-  ["selvom", "alligevel", "same idea, different word order: Selvom det regner, går vi · Det regner, men vi går alligevel"],
-  ["på_grund_af", "fordi", "på grund af + noun · fordi + clause"],
-  ["derfor", "således", "both mean result: in L3 they cancel each other out"],
-  ["mens", "hvorimod", "mens = while (time) or whereas · hvorimod = only whereas"],
-  ["at_bekræfte", "at_benægte", "bekræfte = confirm · benægte = deny"],
-  ["en_modstand", "en_opbakning", "modstand = opposition · opbakning = support"],
-  ["næppe", "næsten_ikke", "same meaning: næppe is the formal one"],
+  ["da", "når", "da = one time in the past (or because) · når = repeated or future", "da = én gang i fortiden (eller fordi) · når = gentaget eller fremtid"],
+  ["for", "fordi", "for = main-clause word order · fordi = sub-clause order (ikke before the verb)", "for = hovedsætningsordstilling · fordi = ledsætningsordstilling (ikke før verbet)"],
+  ["eller", "ellers", "eller = or · ellers = otherwise", "eller = or · ellers = ellers/i modsat fald"],
+  ["derfor", "derimod", "derfor = therefore (result) · derimod = by contrast", "derfor = konsekvens · derimod = modsætning"],
+  ["selvom", "alligevel", "same idea, different word order: Selvom det regner, går vi · Det regner, men vi går alligevel", "samme idé, forskellig ordstilling: Selvom det regner, går vi · Det regner, men vi går alligevel"],
+  ["på_grund_af", "fordi", "på grund af + noun · fordi + clause", "på grund af + navneord · fordi + sætning"],
+  ["derfor", "således", "both mean result: in L3 they cancel each other out", "begge udtrykker konsekvens: i L3 udelukker de hinanden"],
+  ["mens", "hvorimod", "mens = while (time) or whereas · hvorimod = only whereas", "mens = tid eller modsætning · hvorimod = kun modsætning"],
+  ["at_bekræfte", "at_benægte", "bekræfte = confirm · benægte = deny", "bekræfte = sige ja til · benægte = sige nej til"],
+  ["en_modstand", "en_opbakning", "modstand = opposition · opbakning = support", "modstand = man er imod · opbakning = man støtter"],
+  ["næppe", "næsten_ikke", "same meaning: næppe is the formal one", "samme betydning: næppe er det formelle"],
 ];
+const tip = p => p[LANG === "en" ? 2 : 3];
 
 // Connectors with a second relation: never offer that one as a wrong answer
 const ALSO = { da: ["tid"], mens: ["tid", "kontrast"], siden: ["årsag", "tid"], "så": ["formål"], "så_at": ["konsekvens"], "nemlig": ["præcisering"] };
@@ -221,12 +420,42 @@ function writeProgress(id) {
 }
 const iso = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
 
+// ---------- page chrome: language, help, links ----------
+// Opened from disk, the other pages aren't next to this file: send their links to the published site.
+const SITE = "https://m-samhoury.github.io/pd3-reading-vocab/";
+function chrome() {
+  document.documentElement.lang = LANG;
+  document.title = `${t("nav.assisted")} · ${t("brand")}`;
+  document.querySelectorAll("[data-i18n]").forEach(n => { n.textContent = t(n.dataset.i18n); });
+  if (location.protocol === "file:") document.querySelectorAll("a[data-site]").forEach(a => { a.href = SITE + a.getAttribute("href"); });
+  const bar = $(".topbar-in");
+  const info = document.createElement("button");
+  info.type = "button"; info.className = "iconbtn"; info.title = t("info.open"); info.setAttribute("aria-label", t("info.open"));
+  info.innerHTML = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M12 11v6"/><circle cx="12" cy="7.5" r=".6" fill="currentColor"/></svg>';
+  const dlg = document.createElement("dialog");
+  dlg.className = "info"; dlg.setAttribute("aria-labelledby", "infoTitle");
+  dlg.innerHTML = `<div class="ib"><div class="ih"><h2 id="infoTitle">${t("info.title")}</h2><button type="button" class="btn quiet" id="infoClose">${t("info.close")}</button></div>
+    <h3>${t("info.how")}</h3><p>${t("info.p1")}</p><p>${t("info.p2")}</p><p>${t("info.p3")}</p>
+    <h3>${t("info.keys")}</h3><dl class="keylist"><dt>1 – 4</dt><dd>${t("key.num")}</dd><dt>Enter</dt><dd>${t("key.enter")}</dd></dl>
+    <h3>${t("info.grades")}</h3><dl class="keylist">${[5, 4, 3, 2, 1, 0].map(g => `<dt>${g}</dt><dd>${t("gr." + g)}</dd>`).join("")}</dl></div>`;
+  dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
+  document.body.append(dlg);
+  $("#infoClose").onclick = () => dlg.close();
+  info.onclick = () => dlg.showModal();
+  const lang = document.createElement("button");
+  lang.type = "button"; lang.className = "langbtn"; lang.lang = LANG === "en" ? "da" : "en";
+  lang.textContent = t("lang.button"); lang.title = t("lang.title");
+  lang.onclick = () => { try { localStorage.setItem("pd3.lang", LANG === "en" ? "da" : "en"); } catch (e) { /* ignore */ } location.reload(); };
+  bar.append(info, lang);
+  $("#foot").textContent = t("foot");
+}
+
 function load() {
+  chrome();
   // the deck is embedded by `pd3.py page` (window.PD3_DECK), so the built file opens straight from disk
   const deck = window.PD3_DECK;
   if (!deck) {
-    $("#app").innerHTML = `<div class="err"><b>No deck in this file.</b><br>This is the template. Build the page from the project folder:<br><br>
-      <code>python3 -I .claude/skills/pd3-coach/scripts/pd3.py page</code><br><br>then open <code>assisted-learning.html</code> in the project folder.</div>`;
+    $("#app").innerHTML = `<div class="err" style="margin-top:32px">${t("nodeck")}<br><br><code>python3 -I .claude/skills/pd3-coach/scripts/pd3.py page</code></div>`;
     return;
   }
   DB = { today: iso(new Date()), profile: deck.profile || {}, sentences: deck.sentences || {}, cards: {} };
@@ -265,7 +494,6 @@ function stateOf(c) {
   return c.interval >= 21 ? "master" : c.interval >= 6 ? "known" : "learn";
 }
 function variants(word) {
-  let w = norm(word.replace(/\(.*?\)/g, m => " " + m + " "));
   const base = norm(word.replace(/\(.*?\)/g, ""));
   const out = [norm(word), base, ...[...word.matchAll(/\((.*?)\)/g)].map(m => norm(m[1]))];
   base.split(/\s*\/\s*/).forEach(p => out.push(p.trim()));
@@ -304,13 +532,14 @@ function findSpan(c, s) {
 function hlSentence(c, s, span) {
   span = span || findSpan(c, s);
   if (!span) return esc(s);
-  return esc(s.slice(0, span[0])) + `<span class="hl">${esc(s.slice(span[0], span[1]))}</span>` + esc(s.slice(span[1]));
+  return esc(s.slice(0, span[0])) + `<mark class="hl">${esc(s.slice(span[0], span[1]))}</mark>` + esc(s.slice(span[1]));
 }
 function examSentences(c) { return DB.sentences[c.id] || []; }
 function partnerPairs(id) { return CONFUSABLES.filter(p => (p[0] === id || p[1] === id) && DB.cards[p[0]] && DB.cards[p[1]]); }
-function gname(g) { return (GROUPS[g] || [g])[0]; }
-// connector groups keep their Danish relation name (it is what L3 and the writing guide use); exam-word groups only need the English label
-function glabel(g) { return (GROUPS[g] || [])[1] === 1 ? `${g} · ${gname(g)}` : gname(g); }
+function gname(g) { return GROUPS[g] ? GROUPS[g][LANG === "en" ? 0 : 1] : g; }
+// both languages, the page language first (as the other pages name their groups)
+function glabel(g) { return GROUPS[g] ? (LANG === "en" ? `${GROUPS[g][0]} · ${GROUPS[g][1]}` : `${GROUPS[g][1]} · ${GROUPS[g][0]}`) : g; }
+const prio = g => (GROUPS[g] || [])[2] || 3;
 
 // ---------- home ----------
 function daysTo(d) { return d ? Math.round((new Date(d) - new Date(DB.today)) / 864e5) : null; }
@@ -330,33 +559,36 @@ function counts() {
 function home() {
   S = null;
   const k = counts(), p = DB.profile || {};
-  const dW = daysTo(p.exam_date), dO = daysTo(p.oral_date);
+  const dW = daysTo(p.exam_date);
   const groupsBy = {};
   cards().forEach(c => (groupsBy[c.group] = groupsBy[c.group] || []).push(c));
-  const tiles = pr => GROUP_ORDER.filter(g => GROUPS[g][1] === pr && groupsBy[g]).map(g => groupTile(g, groupsBy[g])).join("");
+  const tiles = pr => GROUP_ORDER.filter(g => prio(g) === pr && groupsBy[g]).map(g => groupTile(g, groupsBy[g])).join("");
+  const metric = (l, n, s, pct) => `<div class="m"><div class="lbl">${l}</div><b>${n}</b><span class="s">${s}</span>${pct != null ? `<div class="bar"><span style="width:${pct.toFixed(1)}%"></span></div>` : ""}</div>`;
+  const newLeft = Math.min(k.newLeft, k.fresh);
   $("#app").innerHTML = `
     <div class="top">
-      <div><h1>Assisted learning</h1><div class="muted">PD3 vocabulary · connectors first · teach → test → spaced review</div></div>
-      <div class="countdown">${dW != null ? `<div><b>${dW}</b> days to the written exam</div>` : ""}${dO != null ? `<div class="muted small">${dO} days to the oral</div>` : ""}</div>
+      ${dW != null && dW >= 0 ? `<span class="chip"><b>${t("h.chip.days", dW)}</b><span>${t("h.chip")}</span></span>` : ""}
+      <h1><span class="light">${t("h.h1a")}</span>${t("h.h1b")}</h1>
+      <p>${t("h.intro", k.total)}</p>
+      <div class="hero-cta">
+        <button class="btn solid" id="go">${t("h.go")}</button>
+        <button class="btn" id="learn" ${newLeft ? "" : "disabled"}>${t("h.learn", BATCH)}</button>
+        <button class="btn" id="review" ${k.due ? "" : "disabled"}>${t("h.review")}</button>
+        <button class="btn" id="conf">${t("h.conf")}</button>
+      </div>
+      <p class="soft small" style="margin-top:12px">${sessionBlurb(k)}</p>
+      ${storageOK ? "" : `<div class="err small">${t("h.storage")}</div>`}
     </div>
-    <div class="stats">
-      <div class="stat"><div class="n">${k.due}</div><div class="l">reviews due</div></div>
-      <div class="stat"><div class="n">${Math.min(k.newLeft, k.fresh)}</div><div class="l">new words left today</div></div>
-      <div class="stat"><div class="n">${k.learning}</div><div class="l">learning</div></div>
-      <div class="stat"><div class="n">${k.mastered}<span class="muted small"> / ${k.total}</span></div><div class="l">mastered (21+ days)</div></div>
-    </div>
-    <div class="row actions">
-      <button class="btn primary" id="go">Start session</button>
-      <button class="btn" id="learn" ${k.newLeft && k.fresh ? "" : "disabled"}>Learn ${BATCH} new</button>
-      <button class="btn" id="review" ${k.due ? "" : "disabled"}>Reviews only</button>
-      <button class="btn" id="conf">Confusables drill</button>
-    </div>
-    <p class="muted small">${sessionBlurb(k)}</p>
-    ${storageOK ? "" : `<div class="err small">This browser is blocking storage (private window?), so progress won't be kept after you close the page.</div>`}
-    <h2>Group map</h2>
-    <div class="legend"><span><i style="background:var(--s-new)"></i>new</span><span><i style="background:var(--s-learn)"></i>learning</span><span><i style="background:var(--s-known)"></i>known (6+ days)</span><span><i style="background:var(--s-master)"></i>mastered (21+ days)</span></div>
-    ${[1, 2, 3].map(pr => `<h3 style="margin-top:18px">${PRIORITY_NAMES[pr]}</h3><div class="groups" data-pr="${pr}">${tiles(pr)}</div>`).join("")}
-  `;
+    <div class="section"><h2>${t("h.progress")}</h2><div class="band"><div class="prog">
+      ${metric(t("m.due"), k.due, t("m.due.s"))}
+      ${metric(t("m.new"), newLeft, t("m.new.s"), 100 * newLeft / NEW_PER_DAY)}
+      ${metric(t("m.learn"), k.learning, t("m.learn.s"))}
+      ${metric(t("m.master"), `${k.mastered} / ${k.total}`, t("m.master.s"), 100 * k.mastered / k.total)}
+    </div></div></div>
+    <div class="section"><h2>${t("h.groups")}</h2>
+      <div class="legend">${["new", "learn", "known", "master"].map(s => `<span><i style="background:var(--s-${s})"></i>${t("st." + s)}</span>`).join("")}</div>
+      ${[1, 2, 3].map(pr => `<div class="tierlabel"><span class="badge t${pr}">${t("p." + pr)}</span></div><div class="groups" data-pr="${pr}">${tiles(pr)}</div>`).join("")}
+    </div>`;
   $("#go").onclick = () => startSession({});
   $("#learn").onclick = () => startSession({ reviews: 0 });
   $("#review").onclick = () => startSession({ fresh: 0 });
@@ -366,32 +598,34 @@ function home() {
 }
 function sessionBlurb(k) {
   const r = Math.min(k.due, REVIEW_LIMIT), n = Math.min(BATCH, k.newLeft, k.fresh);
-  if (!r && !n) return "Nothing due and today's new-word budget is used. Come back tomorrow, or open a group below for extra practice.";
-  return `A session = ${r ? `${r} review${r > 1 ? "s" : ""}` : ""}${r && n ? " + " : ""}${n ? `${n} new words (taught, then tested)` : ""}. Progress is saved in this browser on this device.`;
+  if (!r && !n) return t("h.nothing");
+  const parts = [r ? (r === 1 ? t("h.blurb.r1") : t("h.blurb.r", r)) : null, n ? t("h.blurb.n", n) : null].filter(Boolean);
+  return t("h.blurb", parts.join(" + "));
 }
 function groupTile(g, cs) {
   const n = { new: 0, learn: 0, known: 0, master: 0 };
   cs.forEach(c => n[stateOf(c)]++);
   const due = cs.filter(c => c.history.length && c.due <= DB.today).length;
-  const seg = (s, v) => n[s] ? `<span style="width:${100 * n[s] / cs.length}%;background:var(--s-${v})"></span>` : "";
-  return `<button class="group${openGroup === g ? " open" : ""}" data-g="${esc(g)}">
-    <div class="row"><span class="gn">${esc(GROUPS[g][1] === 1 ? g : gname(g))}</span><span class="spacer"></span>${due ? `<span class="due">${due} due</span>` : ""}</div>
-    <div class="ge">${GROUPS[g][1] === 1 ? esc(gname(g)) + " · " : ""}${cs.length} words</div>
-    <div class="bar">${seg("master", "master")}${seg("known", "known")}${seg("learn", "learn")}</div></button>`;
+  const seg = s => n[s] ? `<span style="width:${100 * n[s] / cs.length}%;background:var(--s-${s})"></span>` : "";
+  const other = GROUPS[g] ? GROUPS[g][LANG === "en" ? 1 : 0] : "";
+  return `<button class="sheet group${openGroup === g ? " open" : ""}" data-g="${esc(g)}">
+    <div class="row"><span class="gn">${esc(gname(g))}</span><span class="spacer"></span>${due ? `<span class="due">${t("g.due", due)}</span>` : ""}</div>
+    <div class="ge">${esc(other)} · ${t("g.words", cs.length)}</div>
+    <div class="bar">${seg("master")}${seg("known")}${seg("learn")}</div></button>`;
 }
 function showGroupDetail(g, cs) {
-  const grid = $(`.groups[data-pr="${GROUPS[g][1]}"]`);
-  const tiles = [...grid.children], idx = tiles.findIndex(t => t.dataset.g === g);
+  const grid = $(`.groups[data-pr="${prio(g)}"]`);
+  const tiles = [...grid.children], idx = tiles.findIndex(x => x.dataset.g === g);
   // place the panel after the last tile in the clicked tile's row
   const top = tiles[idx].offsetTop;
   let last = idx; while (tiles[last + 1] && tiles[last + 1].offsetTop === top) last++;
   const d = document.createElement("div");
-  d.className = "detail";
+  d.className = "sheet detail";
   const order = { new: 3, learn: 0, known: 1, master: 2 };
   d.innerHTML = `<b>${esc(glabel(g))}</b>
     <div class="words">${cs.slice().sort((a, b) => order[stateOf(a)] - order[stateOf(b)]).map(c =>
-      `<span class="word" title="${esc(c.meaning)}${c.history.length ? " · next " + c.due : ""}"><i style="background:var(--s-${stateOf(c)})"></i>${esc(c.word)}</span>`).join("")}</div>
-    <div class="row"><button class="btn primary" id="gstudy">Study this group</button><span class="muted small">Due cards first, then up to ${BATCH} new ones; extra practice if nothing is due.</span></div>`;
+      `<span class="word" lang="da" title="${esc(c.meaning)}${c.history.length ? " · " + t("g.next", c.due) : ""}"><i style="background:var(--s-${stateOf(c)})"></i>${esc(c.word)}</span>`).join("")}</div>
+    <div class="row"><button class="btn solid" id="gstudy">${t("g.study")}</button><span class="soft small">${t("g.study.s", BATCH)}</span></div>`;
   tiles[last].after(d);
   $("#gstudy").onclick = () => startSession({ group: g });
 }
@@ -420,22 +654,23 @@ function startSession({ group = null, reviews = REVIEW_LIMIT, fresh = BATCH }) {
     shuffle(batch).forEach(c => q.push({ kind: "ex", id: c.id, first: true }));
   }
   practice.forEach(c => q.push({ kind: "ex", id: c.id, practice: true }));
-  if (!q.length) { alert(group ? "Nothing in this group to study yet." : "Nothing due right now."); return; }
-  S = { queue: q, i: 0, results: [], lastType: null, graded: new Set(), title: group ? glabel(group) : "Session" };
+  if (!q.length) { alert(group ? t("g.empty") : t("h.empty")); return; }
+  S = { queue: q, i: 0, results: [], lastType: null, graded: new Set(), title: group ? glabel(group) : t("s.session") };
   step();
 }
 function startConfusables() {
   const pairs = shuffle(CONFUSABLES.filter(p => DB.cards[p[0]] && DB.cards[p[1]])).slice(0, 5);
-  S = { queue: pairs.map(p => ({ kind: "pair", pair: p })), i: 0, results: [], lastType: null, graded: new Set(), title: "Confusables" };
+  S = { queue: pairs.map(p => ({ kind: "pair", pair: p })), i: 0, results: [], lastType: null, graded: new Set(), title: t("s.conf") };
   step();
 }
 
 // ---------- step rendering ----------
 function frame(kindLabel, inner) {
   const done = S.i, total = S.queue.length;
-  $("#app").innerHTML = `
-    <div class="sbar"><button class="link" id="quit">✕ End</button><div class="progress"><span style="width:${100 * done / total}%"></span></div><span class="muted small">${done + 1} / ${total}</span></div>
-    <div class="card"><div class="kind">${esc(kindLabel)}</div>${inner}</div>`;
+  $("#app").innerHTML = `<div class="narrow">
+    <div class="counter"><span>${esc(S.title)} · ${t("s.count", done + 1, total)}</span><button class="btn quiet" id="quit">✕ ${t("s.end")}</button></div>
+    <div class="bar sessionbar" aria-hidden="true"><span style="width:${100 * done / total}%"></span></div>
+    <div class="sheet q"><div class="kind">${esc(kindLabel)}</div>${inner}</div></div>`;
   $("#quit").onclick = () => S.results.length ? summary() : home();
   window.scrollTo(0, 0);
 }
@@ -451,35 +686,34 @@ function advance() { S.i++; step(); }
 
 function renderIntro(it) {
   const cs = it.ids.map(id => DB.cards[id]);
-  const g = cs[0].group;
-  frame("New words", `
-    <div class="big" style="font-size:26px">${esc(glabel(g))}</div>
-    <p class="prompt">${cs.length} new words from one relation group. First you'll see each one with its word order, real exam sentences and the dictionary entry; then a quick test on all of them.</p>
-    <div class="words">${cs.map(c => `<span class="word">${esc(c.word)}</span>`).join("")}</div>
-    <button class="btn primary next" id="nx">Start <kbd>Enter</kbd></button>`);
+  frame(t("k.new"), `
+    <h2 style="font-size:1.6rem;margin-top:6px">${esc(glabel(cs[0].group))}</h2>
+    <p class="prompt">${t("intro.p", cs.length)}</p>
+    <div class="words" lang="da">${cs.map(c => `<span class="word">${esc(c.word)}</span>`).join("")}</div>
+    <button class="btn solid next" id="nx">${t("b.start")}</button>`);
   bindNext(advance);
 }
 
 function ruleBlock(c) {
-  const t = wtype(c);
-  if (!t) return "";
-  return t.split("/").map(k => RULES[k] ? `<div class="rule"><b>${RULES[k][0]}</b><div>${RULES[k][1]}</div><div class="demo">${RULES[k][2]}</div></div>` : "").join("");
+  const w = wtype(c);
+  if (!w) return "";
+  return w.split("/").map(k => RULES[k] ? `<div class="note"><b class="t">${RULES[k][0]}</b><div>${rule(k)}</div><div class="demo" lang="da">${RULES[k][3]}</div></div>` : "").join("");
 }
 function renderTeach(c) {
   const ex = examSentences(c).slice(0, 2);
   const d = c.dict;
   const pairs = partnerPairs(c.id);
   const extraNote = (c.note || "").replace(/^(SUB\/PRÆP|SUB\/ADV|SUB|ADV|KOO|PRÆP)\s*(—\s*)?/, "");
-  frame("Learn", `<div class="teach">
-    <div class="head"><span class="big">${esc(c.word)}</span>${wtype(c) ? `<span class="badge">${esc(wtype(c))}</span>` : ""}<span class="chip">${esc(glabel(c.group))}</span></div>
+  frame(t("k.learn"), `
+    <div class="head" style="margin-top:6px"><span class="big" lang="da">${esc(c.word)}</span>${wtype(c) ? `<span class="tag">${esc(wtype(c))}</span>` : ""}<span class="badge t${prio(c.group)}">${esc(glabel(c.group))}</span></div>
     <div class="meaning">${esc(c.meaning)}</div>
-    ${extraNote ? `<div class="muted" style="margin-top:4px">${esc(extraNote)}</div>` : ""}
-    ${wtype(c) ? `<div class="block"><h3>Word order</h3>${ruleBlock(c)}</div>` : ""}
-    <div class="block"><h3>Example</h3><div class="sentence">${hlSentence(c, c.example)}</div></div>
-    ${ex.length ? `<div class="block"><h3>In real PD3 reading texts</h3>${ex.map(e => `<div class="ex"><span class="src">${esc(e.src)}</span>${hlSentence(c, e.s, e.m)}</div>`).join("")}</div>` : ""}
-    ${d ? `<div class="block"><h3>Den Danske Ordbog</h3><div class="small muted">${esc(d.pos)}</div>${d.senses.map((s, i) => `<div>${d.senses.length > 1 ? `<b>${i + 1}.</b> ` : ""}${esc(s)}</div>`).join("")}${d.cite.slice(0, 1).map(x => `<div class="cite">“${esc(x)}”</div>`).join("")}<a class="small muted" href="${esc(d.url)}" target="_blank" rel="noopener">ordnet.dk ↗</a></div>` : ""}
-    ${pairs.map(p => { const o = DB.cards[p[0] === c.id ? p[1] : p[0]]; return `<div class="block"><div class="warnbox"><b>Don't mix up:</b> ${esc(c.word)} / ${esc(o.word)} — ${esc(p[2])}</div></div>`; }).join("")}
-    <button class="btn primary next" id="nx">Got it <kbd>Enter</kbd></button></div>`);
+    ${extraNote ? `<div class="soft" lang="da" style="margin-top:4px">${esc(extraNote)}</div>` : ""}
+    ${wtype(c) ? `<div class="block"><span class="lbl">${t("t.order")}</span>${ruleBlock(c)}</div>` : ""}
+    <div class="block"><div class="eg"><span class="lbl">${t("t.example")}</span><div class="sentence" lang="da">${hlSentence(c, c.example)}</div></div></div>
+    ${ex.length ? `<div class="block"><span class="lbl">${t("t.exam")}</span>${ex.map(e => `<div class="ex" lang="da"><span class="tag">${esc(e.src)}</span>${hlSentence(c, e.s, e.m)}</div>`).join("")}</div>` : ""}
+    ${d ? `<div class="block"><div class="ddo"><span class="lbl">${t("t.ddo")}</span><div class="soft small">${esc(d.pos)}</div>${d.senses.map((s, i) => `<div lang="da">${d.senses.length > 1 ? `<b>${i + 1}.</b> ` : ""}${esc(s)}</div>`).join("")}${d.cite.slice(0, 1).map(x => `<blockquote lang="da">${esc(x)}</blockquote>`).join("")}<div class="cite"><a href="${esc(d.url)}" target="_blank" rel="noopener">ordnet.dk ↗</a></div></div></div>` : ""}
+    ${pairs.map(p => { const o = DB.cards[p[0] === c.id ? p[1] : p[0]]; return `<div class="block"><div class="warnbox"><b>${t("t.mix")}</b> <span lang="da">${esc(c.word)} / ${esc(o.word)}</span> — ${esc(tip(p))}</div></div>`; }).join("")}
+    <button class="btn solid next" id="nx">${t("b.got")}</button>`);
   bindNext(advance);
 }
 
@@ -487,7 +721,7 @@ function renderTeach(c) {
 function orderTokens(c) {
   const s = c.example || "";
   if (/[…:;()]|\.\s|\?\s/.test(s.slice(0, -1))) return null;
-  const toks = s.replace(/[.!?]$/, "").split(/\s+/).map(t => t.replace(/,$/, "")).filter(Boolean);
+  const toks = s.replace(/[.!?]$/, "").split(/\s+/).map(x => x.replace(/,$/, "")).filter(Boolean);
   return toks.length >= 4 && toks.length <= 11 ? toks : null;
 }
 function clozeSource(c) {
@@ -501,22 +735,22 @@ function clozeSource(c) {
   return srcs.length ? pick(srcs.slice(0, 3)) : null;
 }
 function eligibleTypes(c, first) {
-  const t = [["meaning", 1], ["produce", 2]];
-  if (clozeSource(c)) t.push(["cloze", 2]);
+  const ts = [["meaning", 1], ["produce", 2]];
+  if (clozeSource(c)) ts.push(["cloze", 2]);
   if (c.priority === 1) {
-    t.push(["relation", 1]);
-    if (cards().filter(x => x.group === c.group).length > 1) t.push(["odd", 1]);
-    if (wtype(c) && orderTokens(c)) t.push(["order", 3]);
+    ts.push(["relation", 1]);
+    if (cards().filter(x => x.group === c.group).length > 1) ts.push(["odd", 1]);
+    if (wtype(c) && orderTokens(c)) ts.push(["order", 3]);
   }
   // a brand-new word is tested with recognition first
-  return first ? t.filter(([k]) => ["meaning", "cloze", "relation"].includes(k)) : t;
+  return first ? ts.filter(([k]) => ["meaning", "cloze", "relation"].includes(k)) : ts;
 }
 function chooseType(c, first) {
-  let t = eligibleTypes(c, first).filter(([k]) => k !== S.lastType);
-  if (!t.length) t = eligibleTypes(c, first);
-  let r = Math.random() * t.reduce((a, [, w]) => a + w, 0);
-  for (const [k, w] of t) if ((r -= w) < 0) return k;
-  return t[0][0];
+  let ts = eligibleTypes(c, first).filter(([k]) => k !== S.lastType);
+  if (!ts.length) ts = eligibleTypes(c, first);
+  let r = Math.random() * ts.reduce((a, [, w]) => a + w, 0);
+  for (const [k, w] of ts) if ((r -= w) < 0) return k;
+  return ts[0][0];
 }
 function distractors(c, n, filter) {
   const pool = shuffle(cards().filter(x => x.id !== c.id && x.group !== c.group && filter(x)));
@@ -536,12 +770,12 @@ function renderExercise(it) {
   it.type = type;
   S.lastType = type;
   S.t0 = performance.now();
-  const label = (it.practice ? "Practice · " : it.first ? "New · " : "Review · ") + { meaning: "Meaning", produce: "Say it in Danish", cloze: "Fill the gap", relation: "Which relation?", order: "Word order", odd: "L3: find the pair" }[type];
+  const label = t(it.practice ? "k.practice" : it.first ? "k.first" : "k.review") + " · " + t("x." + type);
   ({ meaning: exMeaning, produce: exProduce, cloze: exCloze, relation: exRelation, order: exOrder, odd: exOdd })[type](c, label, it);
 }
 
 function mc(label, head, options, correctIdx, onDone) {
-  frame(label, `${head}<div class="options">${options.map((o, i) => `<button class="opt" data-i="${i}"><span class="k">${i + 1}</span><span>${o}</span></button>`).join("")}</div><div id="fb"></div>`);
+  frame(label, `${head}<div class="opts">${options.map((o, i) => `<button class="btn opt" data-i="${i}"><span class="k">${i + 1}</span><span>${o}</span></button>`).join("")}</div><div id="fb"></div>`);
   const btns = [...document.querySelectorAll(".opt")];
   const choose = i => {
     if (btns[0].disabled) return;
@@ -557,16 +791,16 @@ const quick = () => performance.now() - S.t0 < 6000;
 
 function exMeaning(c, label, it) {
   const opts = shuffle([c, ...distractors(c, 3, x => (x.priority || 3) === (c.priority || 3))]);
-  mc(label, `<p class="prompt">What does it mean?</p><div><span class="big">${esc(c.word)}</span></div>`,
+  mc(label, `<p class="prompt">${t("q.meaning")}</p><div class="big" lang="da">${esc(c.word)}</div>`,
     opts.map(o => esc(o.meaning)), opts.indexOf(c),
-    ok => feedback(c, it, ok ? (quick() ? 5 : 4) : 2, ok, ok ? "" : `<b>${esc(c.word)}</b> = ${esc(c.meaning)}`, ok ? null : "moderate"));
+    ok => feedback(c, it, ok ? (quick() ? 5 : 4) : 2, ok, ok ? "" : `<b lang="da">${esc(c.word)}</b> = ${esc(c.meaning)}`, ok ? null : "moderate"));
 }
 
 function exRelation(c, label, it) {
-  const groups = shuffle([c.group, ...shuffle(GROUP_ORDER.filter(g => GROUPS[g][1] === 1 && g !== c.group && !(ALSO[c.id] || []).includes(g))).slice(0, 3)]);
-  mc(label, `<p class="prompt">Which relation does this connector express?</p><div><span class="big">${esc(c.word)}</span></div>`,
-    groups.map(g => `<b>${esc(g)}</b> <span class="muted">· ${esc(gname(g))}</span>`), groups.indexOf(c.group),
-    ok => feedback(c, it, ok ? 4 : 2, ok, `<b>${esc(c.word)}</b> (${esc(c.meaning)}) → ${esc(c.group)} · ${esc(gname(c.group))}`, ok ? null : "moderate"));
+  const groups = shuffle([c.group, ...shuffle(GROUP_ORDER.filter(g => prio(g) === 1 && g !== c.group && !(ALSO[c.id] || []).includes(g))).slice(0, 3)]);
+  mc(label, `<p class="prompt">${t("q.relation")}</p><div class="big" lang="da">${esc(c.word)}</div>`,
+    groups.map(g => esc(glabel(g))), groups.indexOf(c.group),
+    ok => feedback(c, it, ok ? 4 : 2, ok, `<b lang="da">${esc(c.word)}</b> (${esc(c.meaning)}) → ${esc(glabel(c.group))}`, ok ? null : "moderate"));
 }
 
 function exCloze(c, label, it) {
@@ -577,10 +811,10 @@ function exCloze(c, label, it) {
   const [a, b] = src.span;
   const gapped = `${esc(src.s.slice(0, a))}<span class="gap">&nbsp;</span>${esc(src.s.slice(b))}`;
   const inflected = norm(src.s.slice(a, b)) !== norm(c.word.replace(/^(at|en|et) /, ""));
-  mc(label, `<p class="prompt">Which word fits the gap?${inflected ? " (options in base form)" : ""} ${src.src !== "example" ? `<span class="chip">${esc(src.src)}</span>` : ""}</p><div class="sentence">${gapped}</div>`,
-    opts.map(o => esc(o.word)), opts.indexOf(c),
+  mc(label, `<p class="prompt">${t("q.cloze")}${inflected ? t("q.base") : ""} ${src.src !== "example" ? `<span class="tag">${esc(src.src)}</span>` : ""}</p><div class="sentence" lang="da">${gapped}</div>`,
+    opts.map(o => `<span lang="da">${esc(o.word)}</span>`), opts.indexOf(c),
     ok => feedback(c, it, ok ? (quick() ? 5 : 4) : 2, ok,
-      `<div class="sentence" style="font-size:17px">${hlSentence(c, src.s, src.span)}</div><div class="small">${esc(c.word)} = ${esc(c.meaning)}</div>`, ok ? null : "moderate"));
+      `<div class="sentence" lang="da">${hlSentence(c, src.s, src.span)}</div><div class="small"><span lang="da">${esc(c.word)}</span> = ${esc(c.meaning)}</div>`, ok ? null : "moderate"));
 }
 
 function exOdd(c, label, it) {
@@ -588,8 +822,8 @@ function exOdd(c, label, it) {
   const others = [];
   shuffle(cards().filter(x => x.priority === 1 && x.group !== c.group)).forEach(x => { if (others.length < 2 && !others.some(o => o.group === x.group)) others.push(x); });
   const opts = shuffle([c, mate, ...others]);
-  frame(label, `<p class="prompt">Two of these belong to the same relation, so in an L3 grid they'd cancel each other out. Pick the two.</p>
-    <div class="options">${opts.map((o, i) => `<button class="opt" data-i="${i}"><span class="k">${i + 1}</span><span>${esc(o.word)}</span></button>`).join("")}</div><div id="fb"></div>`);
+  frame(label, `<p class="prompt">${t("q.odd")}</p>
+    <div class="opts">${opts.map((o, i) => `<button class="btn opt" data-i="${i}"><span class="k">${i + 1}</span><span lang="da">${esc(o.word)}</span></button>`).join("")}</div><div id="fb"></div>`);
   const btns = [...document.querySelectorAll(".opt")], sel = new Set();
   const toggle = i => {
     if (btns[0].disabled) return;
@@ -598,27 +832,29 @@ function exOdd(c, label, it) {
     if (sel.size < 2) return;
     btns.forEach(b => b.disabled = true);
     const ok = [...sel].every(j => opts[j].group === c.group);
-    opts.forEach((o, j) => { if (o.group === c.group) btns[j].classList.add("right"); else if (sel.has(j)) btns[j].classList.add("wrong"); });
-    feedback(c, it, ok ? 4 : 2, ok, `<b>${esc(c.word)}</b> and <b>${esc(mate.word)}</b> are both ${esc(c.group)} (${esc(gname(c.group))}). ${opts.filter(o => o.group !== c.group).map(o => `${esc(o.word)} = ${esc(o.group)}`).join(" · ")}`, ok ? null : "moderate");
+    opts.forEach((o, j) => { btns[j].classList.remove("sel"); if (o.group === c.group) btns[j].classList.add("right"); else if (sel.has(j)) btns[j].classList.add("wrong"); });
+    feedback(c, it, ok ? 4 : 2, ok, t("f.both", `<b lang="da">${esc(c.word)}</b>`, `<b lang="da">${esc(mate.word)}</b>`, esc(glabel(c.group))) + " " +
+      opts.filter(o => o.group !== c.group).map(o => `<span lang="da">${esc(o.word)}</span> = ${esc(gname(o.group))}`).join(" · "), ok ? null : "moderate");
   };
   btns.forEach(b => b.onclick = () => toggle(+b.dataset.i));
   S.keys = e => { const n = +e.key; if (n >= 1 && n <= 4) toggle(n - 1); };
 }
 
-function letters() { return `<div class="letters">${["æ", "ø", "å"].map(l => `<button type="button" data-l="${l}">${l}</button>`).join("")}<span class="muted small" style="align-self:center;margin-left:6px">Enter to check</span></div>`; }
+function letters() { return `<div class="letters">${["æ", "ø", "å"].map(l => `<button type="button" data-l="${l}">${l}</button>`).join("")}</div>`; }
 function bindLetters(input) {
   document.querySelectorAll("[data-l]").forEach(b => b.onclick = () => {
     const p = input.selectionStart ?? input.value.length;
     input.value = input.value.slice(0, p) + b.dataset.l + input.value.slice(input.selectionEnd ?? p);
     input.focus(); input.setSelectionRange(p + 1, p + 1);
+    input.dispatchEvent(new Event("input"));
   });
 }
 function exProduce(c, label, it) {
-  frame(label, `<p class="prompt">Type the Danish word or phrase.</p>
-    <div class="meaning" style="font-size:24px;font-weight:650">${esc(c.meaning)}</div>
-    <div class="small muted">${esc(glabel(c.group))}${wtype(c) ? " · " + esc(wtype(c)) : ""}</div>
-    <input class="answer" id="ans" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="dansk…">${letters()}
-    <div class="row next"><button class="btn primary" id="chk">Check</button><button class="link" id="idk">I don't know</button></div><div id="fb"></div>`);
+  frame(label, `<p class="prompt">${t("q.produce")}</p>
+    <div class="meaning" style="font-size:1.5rem">${esc(c.meaning)}</div>
+    <div class="soft small">${esc(glabel(c.group))}${wtype(c) ? " · " + esc(wtype(c)) : ""}</div>
+    <input class="answer" id="ans" lang="da" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="${t("q.ph")}">${letters()}
+    <div class="row next"><button class="btn solid" id="chk">${t("b.check")}</button><button class="btn quiet" id="idk">${t("b.idk")}</button></div><div id="fb"></div>`);
   const input = $("#ans");
   input.focus(); bindLetters(input);
   const check = give => {
@@ -629,15 +865,15 @@ function exProduce(c, label, it) {
     const gloss = s => new Set(s.toLowerCase().split(/[,/;()]+/).map(x => x.trim()).filter(Boolean));
     const twin = !give && !isAnswer(c, v) && cards().find(x => x.id !== c.id && isAnswer(x, v) && [...gloss(x.meaning)].some(g => gloss(c.meaning).has(g)));
     if (twin) {
-      $("#fb").innerHTML = `<div class="feedback ok"><div class="head">✅ ${esc(twin.word)} works too</div><div class="why">This card is a different word with the same meaning. Try once more.</div></div>`;
+      $("#fb").innerHTML = `<div class="feedback ok"><h3>${t("f.twin", esc(twin.word))}</h3><div class="why">${t("f.twin.p")}</div></div>`;
       input.value = ""; input.focus();
       return;
     }
     input.disabled = true; $("#chk").remove(); $("#idk").remove();
-    const answer = `<b>${esc(c.word)}</b><div class="small">${hlSentence(c, c.example)}</div>`;
+    const answer = `<b lang="da">${esc(c.word)}</b><div class="small" lang="da">${hlSentence(c, c.example)}</div>`;
     if (!give && isAnswer(c, v)) return feedback(c, it, performance.now() - S.t0 < 9000 ? 5 : 4, true, answer);
-    if (!give && nearMiss(c, v)) return feedback(c, it, 3, true, `Spelling: <b>${esc(c.word)}</b> (you wrote “${esc(v)}”)`, "minor", "Almost");
-    feedback(c, it, give ? 0 : 1, false, (v ? `You wrote “${esc(v)}”. ` : "") + answer, give ? null : "moderate", null, !give);
+    if (!give && nearMiss(c, v)) return feedback(c, it, 3, true, t("f.spelling", `<b lang="da">${esc(c.word)}</b>`, esc(v)), "minor", t("f.almost"));
+    feedback(c, it, give ? 0 : 1, false, (v ? t("f.wrote", esc(v)) : "") + answer, give ? null : "moderate", null, !give);
   };
   $("#chk").onclick = () => check(false);
   $("#idk").onclick = () => check(true);
@@ -647,13 +883,13 @@ function exProduce(c, label, it) {
 function exOrder(c, label, it) {
   const toks = orderTokens(c);
   const rest = toks.slice(1);
-  let tiles = shuffle(rest.map((t, i) => ({ t, i })));
+  let tiles = shuffle(rest.map((x, i) => ({ t: x, i })));
   for (let n = 0; n < 5 && tiles.map(x => x.t).join(" ") === rest.join(" "); n++) tiles = shuffle(tiles);
   const placed = [];
   let tries = 0;
-  frame(label, `<p class="prompt">Put the words in the right order. Word order is what the examiners check with <b>${esc(c.word)}</b> <span class="badge">${esc(wtype(c))}</span>.</p>
-    <div class="built" id="built"></div><div class="tiles" id="tiles"></div>
-    <div class="row next"><button class="btn primary" id="chk" disabled>Check</button><button class="link" id="clr">Clear</button><button class="link" id="idk">Show me</button></div><div id="fb"></div>`);
+  frame(label, `<p class="prompt">${t("q.order", `<b lang="da">${esc(c.word)}</b> <span class="tag">${esc(wtype(c))}</span>`)}</p>
+    <div class="built" id="built" lang="da"></div><div class="tiles" id="tiles" lang="da"></div>
+    <div class="row next"><button class="btn solid" id="chk" disabled>${t("b.check")}</button><button class="btn quiet" id="clr">${t("b.clear")}</button><button class="btn quiet" id="idk">${t("b.show")}</button></div><div id="fb"></div>`);
   const draw = () => {
     $("#built").innerHTML = `<span class="tile fixed">${esc(toks[0])}</span>` + placed.map((x, k) => `<button class="tile" data-k="${k}">${esc(x.t)}</button>`).join("");
     $("#tiles").innerHTML = tiles.map((x, k) => `<button class="tile${placed.includes(x) ? " used" : ""}" data-t="${k}">${esc(x.t)}</button>`).join("");
@@ -662,11 +898,11 @@ function exOrder(c, label, it) {
     $("#chk").disabled = placed.length !== rest.length;
   };
   draw();
-  const right = `<div class="sentence" style="font-size:18px">${hlSentence(c, c.example)}</div>`;
+  const right = `<div class="sentence" lang="da">${hlSentence(c, c.example)}</div>`;
   const finish = (q, ok, sev) => {
     ["#chk", "#clr", "#idk"].forEach(s => $(s)?.remove());
     document.querySelectorAll(".tile").forEach(b => b.disabled = true);
-    feedback(c, it, q, ok, right + `<div class="why">${RULES[wtype(c).split("/")[0]]?.[1] || ""}</div>`, sev, null, false, ok ? null : c.example);
+    feedback(c, it, q, ok, right + `<div class="why">${rule(wtype(c).split("/")[0]) || ""}</div>`, sev, null, false, ok ? null : c.example);
   };
   $("#chk").onclick = () => {
     const ok = placed.map(x => x.t.toLowerCase()).join(" ") === rest.join(" ").toLowerCase();
@@ -674,7 +910,7 @@ function exOrder(c, label, it) {
     if (ok) return finish(tries === 1 ? 5 : 3, true);
     if (tries === 1) {
       $("#built").classList.remove("shake"); void $("#built").offsetWidth; $("#built").classList.add("shake");
-      $("#fb").innerHTML = `<div class="feedback bad"><div class="head">Not quite, one more try.</div><div class="why">Check where the verb goes after <b>${esc(c.word)}</b>.</div></div>`;
+      $("#fb").innerHTML = `<div class="feedback bad"><h3>${t("f.retry")}</h3><div class="why">${t("f.retry.p", `<b lang="da">${esc(c.word)}</b>`)}</div></div>`;
       return;
     }
     finish(1, false, "critical");
@@ -688,23 +924,23 @@ function exOrder(c, label, it) {
 // q follows vocab.md: 5 instant · 4 after hesitation · 3 small slip · 2 recognised when shown · 1 vaguely · 0 blank
 function feedback(c, it, q, ok, body, severity, headText, canOverride, retype) {
   S.pending = { id: c.id, q, ok, practice: it.practice || S.graded.has(c.id) };
-  const why = c.note ? `<div class="why muted small">${esc(c.note)}</div>` : "";
-  const sevTag = severity ? `<span class="sev ${severity}">${severity === "critical" ? "🔴 critical" : severity === "moderate" ? "🟡 moderate" : "🟢 minor"}</span>` : "";
+  const why = c.note ? `<div class="why soft small" lang="da">${esc(c.note)}</div>` : "";
+  const sevTag = severity ? `<span class="sev ${severity}">${t("sev." + severity)}</span>` : "";
   $("#fb").innerHTML = `<div class="feedback ${ok ? "ok" : "bad"}">
-      <div class="head">${sevTag}${headText || (ok ? "✅ Right" : "❌ Not this time")}</div>
+      <h3>${sevTag}${headText || (ok ? t("f.right") : t("f.wrong"))}</h3>
       <div class="why">${body}</div>${why}
-      ${retype ? `<div class="block" style="border-color:transparent;margin-top:10px;padding-top:0"><div class="small"><b>Retype the correct sentence</b> (motor memory):</div><input class="answer" id="rt" autocomplete="off" spellcheck="false" style="font-size:17px;margin-top:6px">${letters()}</div>` : ""}
+      ${retype ? `<div style="margin-top:12px"><div class="small"><b>${t("f.retype")}</b> ${t("f.retype.s")}</div><input class="answer" id="rt" lang="da" autocomplete="off" spellcheck="false" style="margin-top:6px">${letters()}</div>` : ""}
     </div>
-    <div class="row next"><button class="btn primary" id="nx" ${retype ? "disabled" : ""}>Next <kbd>Enter</kbd></button>
-      ${canOverride ? `<button class="link" id="ov">I was right, count it</button>` : ""}
-      ${retype ? `<button class="link" id="skip">Skip retype</button>` : ""}
-      <span class="spacer"></span>${S.pending.practice ? `<span class="muted small">practice: not graded</span>` : `<span class="muted small">grade ${q}/5</span>`}</div>`;
+    <div class="row next"><button class="btn solid" id="nx" ${retype ? "disabled" : ""}>${t("b.next")}</button>
+      ${canOverride ? `<button class="btn quiet" id="ov">${t("b.override")}</button>` : ""}
+      ${retype ? `<button class="btn quiet" id="skip">${t("b.skip")}</button>` : ""}
+      <span class="spacer"></span><span class="soft small">${S.pending.practice ? t("f.practice") : t("f.grade", q)}</span></div>`;
   if (retype) {
     const r = $("#rt"); r.focus(); bindLetters(r);
     r.oninput = () => { $("#nx").disabled = norm(r.value) !== norm(retype); if (!$("#nx").disabled) $("#nx").focus(); };
     $("#skip").onclick = () => { $("#nx").disabled = false; $("#nx").focus(); };
   }
-  if (canOverride) $("#ov").onclick = () => { S.pending.q = 4; S.pending.ok = true; $(".feedback").className = "feedback ok"; $(".feedback .head").textContent = "✅ Counted as right"; $("#ov").remove(); };
+  if (canOverride) $("#ov").onclick = () => { S.pending.q = 4; S.pending.ok = true; $(".feedback").className = "feedback ok"; $(".feedback h3").textContent = t("f.counted"); $("#ov").remove(); };
   bindNext(commit);
 }
 function commit() {
@@ -727,26 +963,25 @@ function commit() {
 }
 
 function renderPair(it) {
-  const [a, b, tip] = it.pair;
+  const [a, b] = it.pair;
   const A = DB.cards[a], B = DB.cards[b];
   const items = shuffle([A, B]).map(c => {
     const s = (c.example && findSpan(c, c.example)) ? { s: c.example, span: findSpan(c, c.example) } :
       examSentences(c)[0] ? { s: examSentences(c)[0].s, span: examSentences(c)[0].m } : null;
     return s && { c, ...s };
   }).filter(Boolean);
-  let k = 0, right = 0;
+  let k = 0;
   const one = () => {
     if (k >= items.length) return;
     const x = items[k], opts = [A, B];
     const gapped = `${esc(x.s.slice(0, x.span[0]))}<span class="gap">&nbsp;</span>${esc(x.s.slice(x.span[1]))}`;
-    mc(`Confusables · ${A.word} / ${B.word}`, `<p class="prompt">Sentence ${k + 1} of ${items.length}: which one fits?</p><div class="sentence">${gapped}</div>`,
-      opts.map(o => `<b>${esc(o.word)}</b> <span class="muted">· ${esc(o.meaning)}</span>`), opts.indexOf(x.c), ok => {
-        right += ok;
-        $("#fb").innerHTML = `<div class="feedback ${ok ? "ok" : "bad"}"><div class="head">${ok ? "✅ Right" : "❌ It's " + esc(x.c.word)}</div>
-          <div class="why sentence" style="font-size:17px">${hlSentence(x.c, x.s, x.span)}</div>
-          ${k === items.length - 1 ? `<div class="pair"><div><b>${esc(A.word)}</b><br>${esc(A.meaning)}<div class="small muted">${esc(A.note || "")}</div></div><div><b>${esc(B.word)}</b><br>${esc(B.meaning)}<div class="small muted">${esc(B.note || "")}</div></div></div><div class="why"><b>Rule of thumb:</b> ${esc(tip)}</div>` : ""}
-          </div><div class="row next"><button class="btn primary" id="nx">Next <kbd>Enter</kbd></button><span class="spacer"></span><span class="muted small">practice: not graded</span></div>`;
-        bindNext(() => { k++; if (k < items.length) one(); else { S.results.pairs = (S.results.pairs || 0) + 1; advance(); } });
+    mc(`${t("s.conf")} · ${A.word} / ${B.word}`, `<p class="prompt">${t("q.pair", k + 1, items.length)}</p><div class="sentence" lang="da">${gapped}</div>`,
+      opts.map(o => `<b lang="da">${esc(o.word)}</b> <span class="soft">· ${esc(o.meaning)}</span>`), opts.indexOf(x.c), ok => {
+        $("#fb").innerHTML = `<div class="feedback ${ok ? "ok" : "bad"}"><h3>${ok ? t("f.right") : t("f.its", esc(x.c.word))}</h3>
+          <div class="why sentence" lang="da">${hlSentence(x.c, x.s, x.span)}</div>
+          ${k === items.length - 1 ? `<div class="pair"><div><b lang="da">${esc(A.word)}</b><br>${esc(A.meaning)}<div class="small soft" lang="da">${esc(A.note || "")}</div></div><div><b lang="da">${esc(B.word)}</b><br>${esc(B.meaning)}<div class="small soft" lang="da">${esc(B.note || "")}</div></div></div><div class="why"><b>${t("f.rule")}</b> ${esc(tip(it.pair))}</div>` : ""}
+          </div><div class="row next"><button class="btn solid" id="nx">${t("b.next")}</button><span class="spacer"></span><span class="soft small">${t("f.practice")}</span></div>`;
+        bindNext(() => { k++; if (k < items.length) one(); else advance(); });
       });
   };
   if (!items.length) return advance();
@@ -761,7 +996,7 @@ function bindNext(fn) {
   S.next = fn;
 }
 document.addEventListener("keydown", e => {
-  if (!S) return;
+  if (!S || document.querySelector("dialog[open]")) return;
   const nx = $("#nx");
   if (e.key === "Enter" && nx && !nx.disabled && (document.activeElement?.tagName !== "INPUT" || document.activeElement.id === "rt")) { e.preventDefault(); nx.click(); return; }
   if (S.keys && document.activeElement?.tagName !== "INPUT") S.keys(e);
@@ -775,16 +1010,16 @@ function summary() {
   const shaky = r.filter(x => x.q <= 2).map(x => DB.cards[x.id]);
   const next = {};
   r.forEach(x => { const d = DB.cards[x.id].due; next[d] = (next[d] || 0) + 1; });
-  const fmt = d => new Date(d + "T12:00").toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short" });
+  const fmt = d => new Date(d + "T12:00").toLocaleDateString(LANG === "en" ? "en-GB" : "da-DK", { weekday: "short", day: "numeric", month: "short" });
   const title = S.title;
   S = null;
-  $("#app").innerHTML = `<div class="card">
-    <div class="kind">${esc(title)} · done</div>
-    ${n ? `<div class="row" style="align-items:baseline"><span class="score">${Math.round(100 * right / n)}%</span><span class="muted">${right} of ${n} graded cards right</span></div>` : `<p>Practice only: nothing was graded, so your schedule didn't change.</p>`}
-    ${shaky.length ? `<div class="block"><h3>Still shaky</h3><ul class="list">${shaky.map(c => `<li><b>${esc(c.word)}</b><span class="muted">${esc(c.meaning)}</span><span class="spacer"></span><span class="small muted">back tomorrow</span></li>`).join("")}</ul></div>` : n ? `<div class="block">Nothing shaky this time. 🎯</div>` : ""}
-    ${n ? `<div class="block"><h3>Next time you'll see them</h3><ul class="list">${Object.keys(next).sort().map(d => `<li>${fmt(d)}<span class="spacer"></span><span class="muted">${next[d]} card${next[d] > 1 ? "s" : ""}</span></li>`).join("")}</ul></div>` : ""}
-    ${n ? `<div class="block small muted">Want feedback on a free sentence? Ask the coach in chat (<code>/pd3-coach vocab</code>) for the closing “write one sentence with 3 of today's connectors” task.</div>` : ""}
-    <div class="row next"><button class="btn primary" id="home">Back to overview</button></div></div>`;
+  $("#app").innerHTML = `<div class="narrow"><div class="sheet q" style="margin-top:28px">
+    <div class="kind">${t("r.done", esc(title))}</div>
+    ${n ? `<div class="row" style="align-items:baseline;margin-top:10px"><span class="score">${Math.round(100 * right / n)}%</span><span class="soft">${t("r.score", right, n)}</span></div>` : `<p>${t("r.practice")}</p>`}
+    ${shaky.length ? `<div class="block"><span class="lbl">${t("r.shaky")}</span><ul class="list">${shaky.map(c => `<li><b lang="da">${esc(c.word)}</b><span class="soft">${esc(c.meaning)}</span><span class="spacer"></span><span class="small soft">${t("r.tomorrow")}</span></li>`).join("")}</ul></div>` : n ? `<div class="block">${t("r.none")}</div>` : ""}
+    ${n ? `<div class="block"><span class="lbl">${t("r.next")}</span><ul class="list">${Object.keys(next).sort().map(d => `<li>${fmt(d)}<span class="spacer"></span><span class="soft">${t("r.cards", next[d])}</span></li>`).join("")}</ul></div>` : ""}
+    ${n ? `<p class="small soft block">${esc(t("r.coach"))}</p>` : ""}
+    <div class="row next"><button class="btn solid" id="home">${t("r.home")}</button></div></div></div>`;
   $("#home").onclick = home;
 }
 
