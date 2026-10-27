@@ -79,6 +79,20 @@ dialog.info .ih { display: flex; align-items: center; justify-content: space-bet
 dialog.info .ih h2 { font-size: 1.3rem; }
 dialog.info h3 { font-size: 1rem; margin: 18px 0 6px; }
 dialog.info p { margin: 6px 0; color: var(--soft); font-size: .93rem; }
+dialog.explain { width: min(680px, calc(100vw - 32px)); }
+dialog.explain .ih { position: sticky; top: 0; background: var(--sheet); padding: 14px 0 10px; margin-top: -14px; border-bottom: 1px solid var(--rule); z-index: 1; }
+dialog.explain .ih .big { font-size: 1.8rem; }
+dialog.explain h3 .soft { font-weight: 400; font-size: .85rem; }
+dialog.explain .ex { display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+dialog.explain .ex .tr { margin-left: auto; font-size: .8rem; white-space: nowrap; }
+.mates { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 8px; }
+.mate { text-align: left; font: inherit; color: inherit; cursor: pointer; background: var(--paper); border: 1px solid var(--rule); border-radius: 10px; padding: 8px 11px; }
+.mate:hover { border-color: var(--accent); }
+.mate b { display: block; } .mate span { font-size: .85rem; color: var(--soft); }
+.mate.same { border-color: var(--blue); }
+button.word { cursor: pointer; font: inherit; font-size: .9rem; color: inherit; }
+button.word:hover { border-color: var(--accent); }
+.morebtn { margin-left: auto; }
 dl.keylist { display: grid; grid-template-columns: max-content 1fr; gap: 6px 14px; margin: 0; font-size: .9rem; color: var(--soft); }
 dl.keylist dt { font-weight: 600; color: var(--ink); }
 dl.keylist dd { margin: 0; }
@@ -301,6 +315,13 @@ const I18N = {
   "b.clear": ["Ryd", "Clear"], "b.show": ["Vis mig", "Show me"], "b.idk": ["Ved ikke", "I don't know"],
   "b.override": ["Jeg havde ret – tæl det med", "I was right, count it"], "b.skip": ["Spring over", "Skip retype"],
   "t.order": ["Ordstilling", "Word order"], "t.example": ["Eksempel", "Example"], "t.exam": ["Fra prøverne", "From the exams"],
+  "b.more": ["📖 Forklar mere", "📖 Explain more"], "m.title": ["Mere om ordet", "More about this word"],
+  "m.senses": ["Alle betydninger", "All meanings"], "m.cites": ["Brugt i ordbogen", "Used in the dictionary"],
+  "m.exam": ["Flere sætninger fra prøverne", "More sentences from the exams"], "m.tr": ["oversæt ↗", "translate ↗"],
+  "m.mates": ["Ord i samme gruppe", "Words in the same group"], "m.mates.s": ["(tryk for at se dem)", "(tap one to open it)"],
+  "m.same": ["samme betydning", "same meaning"], "m.nodict": ["Ordet er ikke slået op i Den Danske Ordbog her.", "This word has no dictionary entry in the deck."],
+  "m.lookup": ["Slå op på ordnet.dk ↗", "Look it up on ordnet.dk ↗"],
+  "m.coach": ["Stadig uklart? Spørg coachen i chatten, fx “/pd3-coach forklar {0} med flere eksempler”.", "Still unclear? Ask the coach in chat, e.g. “/pd3-coach explain {0} with more examples”."],
   "t.ddo": ["Den Danske Ordbog", "Den Danske Ordbog"], "t.mix": ["Forveksl ikke:", "Don't mix up:"],
   "q.meaning": ["Hvad betyder det?", "What does it mean?"], "q.relation": ["Hvilken relation udtrykker forbinderordet?", "Which relation does this connector express?"],
   "q.cloze": ["Hvilket ord passer i hullet?", "Which word fits the gap?"], "q.base": [" (grundform)", " (options in base form)"],
@@ -624,10 +645,11 @@ function showGroupDetail(g, cs) {
   const order = { new: 3, learn: 0, known: 1, master: 2 };
   d.innerHTML = `<b>${esc(glabel(g))}</b>
     <div class="words">${cs.slice().sort((a, b) => order[stateOf(a)] - order[stateOf(b)]).map(c =>
-      `<span class="word" lang="da" title="${esc(c.meaning)}${c.history.length ? " · " + t("g.next", c.due) : ""}"><i style="background:var(--s-${stateOf(c)})"></i>${esc(c.word)}</span>`).join("")}</div>
+      `<button type="button" class="word" data-id="${esc(c.id)}" lang="da" title="${esc(c.meaning)}${c.history.length ? " · " + t("g.next", c.due) : ""}"><i style="background:var(--s-${stateOf(c)})"></i>${esc(c.word)}</button>`).join("")}</div>
     <div class="row"><button class="btn solid" id="gstudy">${t("g.study")}</button><span class="soft small">${t("g.study.s", BATCH)}</span></div>`;
   tiles[last].after(d);
   $("#gstudy").onclick = () => startSession({ group: g });
+  d.querySelectorAll("button.word").forEach(b => { b.onclick = () => explain(DB.cards[b.dataset.id]); });
 }
 
 // ---------- session building ----------
@@ -699,11 +721,13 @@ function ruleBlock(c) {
   if (!w) return "";
   return w.split("/").map(k => RULES[k] ? `<div class="note"><b class="t">${RULES[k][0]}</b><div>${rule(k)}</div><div class="demo" lang="da">${RULES[k][3]}</div></div>` : "").join("");
 }
+// the word-type label is shown as a tag already
+function noteText(c) { return (c.note || "").replace(/^(SUB\/PRÆP|SUB\/ADV|SUB|ADV|KOO|PRÆP)\s*(—\s*)?/, ""); }
 function renderTeach(c) {
   const ex = examSentences(c).slice(0, 2);
   const d = c.dict;
   const pairs = partnerPairs(c.id);
-  const extraNote = (c.note || "").replace(/^(SUB\/PRÆP|SUB\/ADV|SUB|ADV|KOO|PRÆP)\s*(—\s*)?/, "");
+  const extraNote = noteText(c);
   frame(t("k.learn"), `
     <div class="head" style="margin-top:6px"><span class="big" lang="da">${esc(c.word)}</span>${wtype(c) ? `<span class="tag">${esc(wtype(c))}</span>` : ""}<span class="badge t${prio(c.group)}">${esc(glabel(c.group))}</span></div>
     <div class="meaning">${esc(c.meaning)}</div>
@@ -711,9 +735,10 @@ function renderTeach(c) {
     ${wtype(c) ? `<div class="block"><span class="lbl">${t("t.order")}</span>${ruleBlock(c)}</div>` : ""}
     <div class="block"><div class="eg"><span class="lbl">${t("t.example")}</span><div class="sentence" lang="da">${hlSentence(c, c.example)}</div></div></div>
     ${ex.length ? `<div class="block"><span class="lbl">${t("t.exam")}</span>${ex.map(e => `<div class="ex" lang="da"><span class="tag">${esc(e.src)}</span>${hlSentence(c, e.s, e.m)}</div>`).join("")}</div>` : ""}
-    ${d ? `<div class="block"><div class="ddo"><span class="lbl">${t("t.ddo")}</span><div class="soft small">${esc(d.pos)}</div>${d.senses.map((s, i) => `<div lang="da">${d.senses.length > 1 ? `<b>${i + 1}.</b> ` : ""}${esc(s)}</div>`).join("")}${d.cite.slice(0, 1).map(x => `<blockquote lang="da">${esc(x)}</blockquote>`).join("")}<div class="cite"><a href="${esc(d.url)}" target="_blank" rel="noopener">ordnet.dk ↗</a></div></div></div>` : ""}
+    ${d ? `<div class="block"><div class="ddo"><span class="lbl">${t("t.ddo")}</span><div class="soft small">${esc(d.pos)}</div>${d.senses.slice(0, 2).map((s, i) => `<div lang="da">${d.senses.length > 1 ? `<b>${i + 1}.</b> ` : ""}${esc(s)}</div>`).join("")}${d.cite.slice(0, 1).map(x => `<blockquote lang="da">${esc(x)}</blockquote>`).join("")}<div class="cite"><a href="${esc(d.url)}" target="_blank" rel="noopener">ordnet.dk ↗</a></div></div></div>` : ""}
     ${pairs.map(p => { const o = DB.cards[p[0] === c.id ? p[1] : p[0]]; return `<div class="block"><div class="warnbox"><b>${t("t.mix")}</b> <span lang="da">${esc(c.word)} / ${esc(o.word)}</span> — ${esc(tip(p))}</div></div>`; }).join("")}
-    <button class="btn solid next" id="nx">${t("b.got")}</button>`);
+    <div class="row next"><button class="btn solid" id="nx">${t("b.got")}</button><button class="btn quiet morebtn" id="more">${t("b.more")}</button></div>`);
+  $("#more").onclick = () => explain(c);
   bindNext(advance);
 }
 
@@ -934,7 +959,9 @@ function feedback(c, it, q, ok, body, severity, headText, canOverride, retype) {
     <div class="row next"><button class="btn solid" id="nx" ${retype ? "disabled" : ""}>${t("b.next")}</button>
       ${canOverride ? `<button class="btn quiet" id="ov">${t("b.override")}</button>` : ""}
       ${retype ? `<button class="btn quiet" id="skip">${t("b.skip")}</button>` : ""}
+      <button class="btn quiet" id="more">${t("b.more")}</button>
       <span class="spacer"></span><span class="soft small">${S.pending.practice ? t("f.practice") : t("f.grade", q)}</span></div>`;
+  $("#more").onclick = () => explain(c);
   if (retype) {
     const r = $("#rt"); r.focus(); bindLetters(r);
     r.oninput = () => { $("#nx").disabled = norm(r.value) !== norm(retype); if (!$("#nx").disabled) $("#nx").focus(); };
@@ -980,12 +1007,51 @@ function renderPair(it) {
         $("#fb").innerHTML = `<div class="feedback ${ok ? "ok" : "bad"}"><h3>${ok ? t("f.right") : t("f.its", esc(x.c.word))}</h3>
           <div class="why sentence" lang="da">${hlSentence(x.c, x.s, x.span)}</div>
           ${k === items.length - 1 ? `<div class="pair"><div><b lang="da">${esc(A.word)}</b><br>${esc(A.meaning)}<div class="small soft" lang="da">${esc(A.note || "")}</div></div><div><b lang="da">${esc(B.word)}</b><br>${esc(B.meaning)}<div class="small soft" lang="da">${esc(B.note || "")}</div></div></div><div class="why"><b>${t("f.rule")}</b> ${esc(tip(it.pair))}</div>` : ""}
-          </div><div class="row next"><button class="btn solid" id="nx">${t("b.next")}</button><span class="spacer"></span><span class="soft small">${t("f.practice")}</span></div>`;
+          </div><div class="row next"><button class="btn solid" id="nx">${t("b.next")}</button><button class="btn quiet" id="more">${t("b.more")}: <span lang="da">${esc(x.c.word)}</span></button><span class="spacer"></span><span class="soft small">${t("f.practice")}</span></div>`;
+        $("#more").onclick = () => explain(x.c);
         bindNext(() => { k++; if (k < items.length) one(); else advance(); });
       });
   };
   if (!items.length) return advance();
   one();
+}
+
+// ---------- explain more ----------
+function trLink(s) { return `<a class="tr" href="https://translate.google.com/?sl=da&tl=${LANG === "da" ? "en" : LANG}&op=translate&text=${encodeURIComponent(s)}" target="_blank" rel="noopener">${t("m.tr")}</a>`; }
+function explain(c) {
+  let dlg = $("#explain");
+  if (!dlg) {
+    dlg = document.createElement("dialog");
+    dlg.className = "info explain"; dlg.id = "explain"; dlg.setAttribute("aria-labelledby", "exTitle");
+    dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
+    document.body.append(dlg);
+  }
+  const d = c.dict, ex = examSentences(c), pairs = partnerPairs(c.id);
+  const same = x => norm(x.meaning) === norm(c.meaning);
+  const mates = Object.values(DB.cards).filter(x => x.group === c.group && x.id !== c.id)
+    .sort((a, b) => same(b) - same(a) || a.word.localeCompare(b.word, "da"));
+  const lookup = d ? d.url : `https://ordnet.dk/ddo/ordbog?query=${encodeURIComponent(variants(c.word).filter(v => !/^(at|en|et) /.test(v)).pop() || c.word)}`;
+  dlg.innerHTML = `<div class="ib">
+    <div class="ih"><div><span class="lbl" id="exTitle">${t("m.title")}</span><div class="head"><span class="big" lang="da">${esc(c.word)}</span>${wtype(c) ? `<span class="tag">${esc(wtype(c))}</span>` : ""}</div></div>
+      <button type="button" class="btn quiet" id="exClose">${t("info.close")}</button></div>
+    <div class="meaning" style="margin-top:12px">${esc(c.meaning)}</div>
+    ${noteText(c) ? `<div class="soft" lang="da" style="margin-top:4px">${esc(noteText(c))}</div>` : ""}
+    <div class="block"><div class="eg"><span class="lbl">${t("t.example")}</span><div class="ex" lang="da"><span class="sentence">${hlSentence(c, c.example)}</span>${trLink(c.example)}</div></div></div>
+    ${wtype(c) ? `<h3>${t("t.order")}</h3>${ruleBlock(c)}` : ""}
+    <h3>${t("m.senses")} <span class="soft">· ${t("t.ddo")}</span></h3>
+    ${d ? `<div class="ddo"><div class="soft small">${esc(d.pos)}</div>${d.senses.map((s, i) => `<div lang="da" style="margin-top:4px">${d.senses.length > 1 ? `<b>${i + 1}.</b> ` : ""}${esc(s)}</div>`).join("")}
+      ${d.cite.length ? `<span class="lbl" style="margin-top:12px">${t("m.cites")}</span>${d.cite.map(x => `<blockquote lang="da">${esc(x)}</blockquote>`).join("")}` : ""}
+      <div class="cite"><a href="${esc(d.url)}" target="_blank" rel="noopener">ordnet.dk ↗</a></div></div>`
+      : `<p>${t("m.nodict")} <a href="${esc(lookup)}" target="_blank" rel="noopener">${t("m.lookup")}</a></p>`}
+    ${ex.length ? `<h3>${t("m.exam")} <span class="soft">· ${ex.length}</span></h3>${ex.map(e => `<div class="ex" lang="da"><span class="tag">${esc(e.src)}</span><span>${hlSentence(c, e.s, e.m)}</span>${trLink(e.s)}</div>`).join("")}` : ""}
+    ${pairs.map(p => { const o = DB.cards[p[0] === c.id ? p[1] : p[0]]; return `<div class="block"><div class="warnbox"><b>${t("t.mix")}</b> <span lang="da">${esc(c.word)} / ${esc(o.word)}</span> (${esc(o.meaning)}) — ${esc(tip(p))}</div></div>`; }).join("")}
+    ${mates.length ? `<h3>${t("m.mates")} <span class="soft">· ${esc(gname(c.group))} ${t("m.mates.s")}</span></h3>
+      <div class="mates">${mates.map(x => `<button type="button" class="mate${same(x) ? " same" : ""}" data-id="${esc(x.id)}"><b lang="da">${esc(x.word)}</b><span>${esc(x.meaning)}${same(x) ? ` · ${t("m.same")}` : ""}</span></button>`).join("")}</div>` : ""}
+    <p class="small" style="margin-top:18px">${t("m.coach", esc(c.word))}</p></div>`;
+  $("#exClose").onclick = () => dlg.close();
+  dlg.querySelectorAll(".mate").forEach(b => { b.onclick = () => explain(DB.cards[b.dataset.id]); });
+  if (!dlg.open) dlg.showModal();
+  dlg.scrollTop = 0;
 }
 
 // ---------- keyboard ----------

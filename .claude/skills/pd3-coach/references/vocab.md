@@ -39,9 +39,12 @@ cards graded on the page don't show up in `vocab due` or `status`. Cards never r
 It follows this file: batches of 5 new words from one group (taught first: word-order rule, example, real exam sentences,
 DDO entry, confusable partner), max 15 new a day, rotating exercise types (meaning, production, relation, cloze, word-order
 tiles with a retype after an error, L3 pair), the confusable pairs above drilled when one lapses, and a group map.
+**Explain more** (button on the teach card, after every answer, and on any word in the group map) opens a panel with all
+DDO senses and citations, every stored exam sentence with a translate link, the word-order rule, confusables, and the
+other words in the group (same-meaning ones first); it ends by pointing to the coach in chat for a custom explanation.
 Grades (same SM-2 as `pd3.py`): 5 instant · 4 correct · 3 typo / second try · 2 recognised when shown · 1 wrong · 0 "I don't know".
 
-Data it uses: `card.dict` (from `pd3.py vocab enrich ddo_entries.json t23_facts.json`, DDO definitions + citations)
-and `pd3-data/exam-sentences.json` (from `pd3.py sentences`: up to 4 real sentences per card from the reading texts).
+Data it uses: `card.dict` (from `pd3.py vocab enrich ddo_entries.json t23_facts.json`: up to 4 DDO senses + 6 citations)
+and `pd3-data/exam-sentences.json` (from `pd3.py sentences`: up to 8 real sentences per card from the reading texts).
 After adding cards, re-run both so new words get definitions and exam sentences.
 The free "write one sentence with 3 connectors" task stays in chat (it needs grading by you).

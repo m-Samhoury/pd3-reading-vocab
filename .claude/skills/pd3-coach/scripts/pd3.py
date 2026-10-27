@@ -441,8 +441,8 @@ def enrich(vocab, files):
             # numbered senses are the main meanings; unnumbered ones are idioms
             senses = [s for s in x["senses"] if s.get("no")] or x["senses"]
             entry = {"source": "DDO", "pos": x.get("pos") or x.get("class") or "",
-                     "senses": [(s.get("definition") or s.get("def") or "")[:220] for s in senses[:2]],
-                     "cite": [c[:180] for s in senses for c in s.get("citations", [])][:2],
+                     "senses": [(s.get("definition") or s.get("def") or "")[:220] for s in senses[:4]],
+                     "cite": [c[:180] for s in senses for c in s.get("citations", [])][:6],
                      "url": x.get("url") or f"https://ordnet.dk/ddo/ordbog?query={x.get('query') or k}"}
             keys = {nfc(k.split("-", 1)[-1]).lower(), nfc(x.get("query") or "").lower(), nfc(x.get("head") or "").lower()}
             for key in keys - {""}:
@@ -535,7 +535,7 @@ def cmd_sentences(a):
             if m and s not in seen:
                 seen.add(s)
                 hits.append({"s": s, "src": src, "m": [m.start(), m.end()]})
-            if len(hits) >= 4:
+            if len(hits) >= 8:
                 break
         if hits:
             out[cid] = hits
