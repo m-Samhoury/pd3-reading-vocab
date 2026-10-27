@@ -47,7 +47,7 @@ Grades (same SM-2 as `pd3.py`): 5 instant · 4 correct · 3 typo / second try ·
 Data it uses: `card.dict` (from `pd3.py vocab enrich ddo_entries.json t23_facts.json`: up to 4 DDO senses + 6 citations)
 and `pd3-data/exam-sentences.json` (from `pd3.py sentences`: up to 8 real sentences per card from the reading texts).
 After adding cards, re-run both so new words get definitions and exam sentences.
-`pd3-data/tips.json` holds bullet tips (word order · register · construction, Danish + English) for every card without a confusable pair; the page shows them on the lesson card and in Forklar mere.
+`pd3-data/tips.json` holds bullet tips (word order · register · construction, Danish + English) for every card, and a `prep` label for the 76 words learnt with a fixed preposition or construction (shown as "Med: …" under the word and in exercise feedback); the page shows them on the lesson card and in Forklar mere.
 `pd3-data/senses.json` holds words with more than one meaning (da, mens, for, siden, så): each sense (English,
 Danish label, own example) and hand-picked exam sentences labelled with their sense. `pd3.py sentences` uses those
 instead of pattern matches, and the page shows one block per meaning. When adding such a word, label its sentences
