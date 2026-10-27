@@ -3,5 +3,6 @@
 !/.gitignore
 !/.claude/
 !/pd3-data/
+!/assisted-learning.html
 /.claude/worktrees/
 /pd3-data/cache/

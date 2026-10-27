@@ -142,6 +142,7 @@ kbd { font: 12px ui-monospace, monospace; border: 1px solid var(--line); border-
 </head>
 <body>
 <main id="app"><p class="muted">Loading your deck…</p></main>
+<script>window.PD3_DECK = null; /*DECK*/</script>
 <script>
 "use strict";
 // ---------- reference data (mirrors references/connectors.md and vocab.md) ----------
@@ -200,7 +201,7 @@ const pick = a => a[Math.floor(Math.random() * a.length)];
 const norm = s => String(s).normalize("NFC").toLowerCase().replace(/[.,!?;:"«»()…]/g, " ").replace(/\s+/g, " ").trim();
 const cards = () => Object.values(DB.cards);
 
-// The deck comes from static files (pd3.py serve, or any static host); review progress lives in this
+// The deck is embedded in the built page (no server needed); review progress lives in this
 // browser's localStorage, so it survives closing the page. Cards never reviewed here keep the deck's own schedule.
 const STORE = "pd3-assisted-learning:progress:v1";
 const SRS_FIELDS = ["ef", "interval", "reps", "due", "lapses", "history", "introduced"];
@@ -220,20 +221,20 @@ function writeProgress(id) {
 }
 const iso = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
 
-async function load() {
-  try {
-    const get = async (f, fallback) => { const r = await fetch(f, { cache: "no-store" }); if (r.ok) return r.json(); if (fallback !== undefined) return fallback; throw new Error(f + ": " + r.status); };
-    const [vocab, sent, profile] = await Promise.all([get("data/vocab.json"), get("data/exam-sentences.json", {}), get("data/profile.json", {})]);
-    DB = { today: iso(new Date()), profile, sentences: sent.sentences || {}, cards: {} };
-    const saved = readProgress();
-    for (const [id, c] of Object.entries(vocab.cards)) DB.cards[id] = { id, ...c, history: c.history || [], ...(saved[id] || {}) };
-    // ask the browser not to clear this site's storage when space runs low (Chrome/Firefox; Safari decides itself)
-    if (navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(() => {});
-    home();
-  } catch (e) {
-    $("#app").innerHTML = `<div class="err"><b>Can't load the deck.</b><br>Start the server from the project folder:<br><br>
-      <code>python3 -I .claude/skills/pd3-coach/scripts/pd3.py serve</code><br><br>then open <code>http://localhost:8770</code>.</div>`;
+function load() {
+  // the deck is embedded by `pd3.py page` (window.PD3_DECK), so the built file opens straight from disk
+  const deck = window.PD3_DECK;
+  if (!deck) {
+    $("#app").innerHTML = `<div class="err"><b>No deck in this file.</b><br>This is the template. Build the page from the project folder:<br><br>
+      <code>python3 -I .claude/skills/pd3-coach/scripts/pd3.py page</code><br><br>then open <code>assisted-learning.html</code> in the project folder.</div>`;
+    return;
   }
+  DB = { today: iso(new Date()), profile: deck.profile || {}, sentences: deck.sentences || {}, cards: {} };
+  const saved = readProgress();
+  for (const [id, c] of Object.entries(deck.cards)) DB.cards[id] = { id, ...c, history: c.history || [], ...(saved[id] || {}) };
+  // ask the browser not to clear this page's storage when space runs low (Chrome/Firefox; Safari decides itself)
+  if (navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(() => {});
+  home();
 }
 
 // SM-2, same maths as sm2() in pd3.py

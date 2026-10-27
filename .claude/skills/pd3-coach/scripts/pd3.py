@@ -26,7 +26,8 @@ Usage (run with python3 -I):
   pd3.py vocab enrich JSON [JSON ...]  # copy DDO definitions + citations onto matching cards
                                        #   (ddo_entries.json or t23_facts.json format)
   pd3.py sentences                     # find real exam sentences for every card -> exam-sentences.json
-  pd3.py serve [--port 8770]           # Assisted Learning page at http://localhost:PORT (progress kept in the browser)
+  pd3.py page                          # rebuild <project>/assisted-learning.html (also automatic when the deck
+                                       #   changes); open it from disk, progress is kept in the browser
   pd3.py mistake add PATTERN --category C [--severity critical|moderate|minor] [--example E]
   pd3.py mistake fixed PATTERN         # learner got it right in a drill
   pd3.py mistake list
@@ -88,6 +89,8 @@ def save(name, obj):
     with open(tmp, "w", encoding="utf-8") as f:
         json.dump(obj, f, ensure_ascii=False, indent=2)
     os.replace(tmp, p)
+    if name in ("vocab.json", "profile.json", "exam-sentences.json"):
+        build_page()
 
 
 def sessions():
@@ -543,40 +546,22 @@ def cmd_sentences(a):
 
 # ---------- Assisted Learning page ----------
 
-def cmd_serve(a):
-    """Static server for the page and the deck files it reads; review progress is kept in the browser."""
-    from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
-    page = os.path.join(SKILL_DIR, "app", "assisted-learning.html")
-    files = {"/data/vocab.json", "/data/exam-sentences.json", "/data/profile.json"}
+PAGE = os.path.join(ROOT, "assisted-learning.html")
 
-    class Handler(BaseHTTPRequestHandler):
-        def send(self, code, data, ctype):
-            self.send_response(code)
-            self.send_header("Content-Type", ctype)
-            self.send_header("Content-Length", str(len(data)))
-            self.send_header("Cache-Control", "no-store")
-            self.end_headers()
-            self.wfile.write(data)
 
-        def do_GET(self):
-            path = self.path.split("?")[0]
-            if path in ("/", "/index.html", "/assisted-learning.html"):
-                return self.send(200, open(page, "rb").read(), "text/html; charset=utf-8")
-            src = os.path.join(DATA, os.path.basename(path))
-            if path in files and os.path.exists(src):
-                return self.send(200, open(src, "rb").read(), "application/json; charset=utf-8")
-            self.send(404, b"not found", "text/plain")
-
-        def log_message(self, fmt, *args):
-            pass
-
-    srv = ThreadingHTTPServer(("127.0.0.1", a.port), Handler)
-    print(f"Assisted Learning: http://localhost:{a.port}  (deck: {os.path.join(DATA, 'vocab.json')}; "
-          f"progress is saved in the browser; Ctrl+C to stop)", flush=True)
-    try:
-        srv.serve_forever()
-    except KeyboardInterrupt:
-        pass
+def build_page():
+    """Write <project>/assisted-learning.html: the page template with the deck embedded, so it opens from disk."""
+    tpl = os.path.join(SKILL_DIR, "app", "assisted-learning.html")
+    if not os.path.exists(tpl):
+        return None
+    deck = {"cards": load("vocab.json", {"cards": {}})["cards"], "profile": load("profile.json", {}),
+            "sentences": load("exam-sentences.json", {}).get("sentences", {}), "built": TODAY.isoformat()}
+    js = "window.PD3_DECK = " + json.dumps(deck, ensure_ascii=False).replace("</", "<\\/") + ";"
+    html = open(tpl, encoding="utf-8").read().replace("window.PD3_DECK = null; /*DECK*/", js)
+    with open(PAGE + ".tmp", "w", encoding="utf-8") as f:
+        f.write(html)
+    os.replace(PAGE + ".tmp", PAGE)
+    return PAGE
 
 
 # ---------- mistakes ----------
@@ -634,7 +619,7 @@ def main():
     vs.add_parser("groups")
     q = vs.add_parser("enrich"); q.add_argument("files", nargs="+")
     sp.add_parser("sentences")
-    p = sp.add_parser("serve"); p.add_argument("--port", type=int, default=8770)
+    sp.add_parser("page")
     p = sp.add_parser("mistake"); ms = p.add_subparsers(dest="mcmd", required=True)
     q = ms.add_parser("add"); q.add_argument("pattern"); q.add_argument("--category", required=True)
     q.add_argument("--severity", default="moderate", choices=["critical", "moderate", "minor"]); q.add_argument("--example")
@@ -643,7 +628,8 @@ def main():
     a = ap.parse_args()
     {"init": cmd_init, "status": cmd_status, "index": lambda a: print(f"{len(build_index())} sittings indexed"),
      "sittings": cmd_sittings, "pick": cmd_pick, "get": cmd_get, "log": cmd_log,
-     "vocab": cmd_vocab, "mistake": cmd_mistake, "sentences": cmd_sentences, "serve": cmd_serve}[a.cmd](a)
+     "vocab": cmd_vocab, "mistake": cmd_mistake, "sentences": cmd_sentences,
+     "page": lambda a: print(build_page() or "template missing")}[a.cmd](a)
 
 
 if __name__ == "__main__":

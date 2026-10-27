@@ -34,7 +34,7 @@ python3 -I "$SKILL/scripts/pd3.py" <command>     # see the docstring at the top 
 | `mail` `essay` | Writing task per `writing.md`. `essay` asks 2A or 2B (the learner's plan is built for 2B; suggest alternating). |
 | `oral1` `oral2` | Oral rehearsal per `oral.md`. |
 | `vocab` | Spaced review per `vocab.md`: connectors/conjunctions first, word-order exercises, one card at a time, `vocab grade ID Q` after each. |
-| `learn` | Open the **Assisted Learning** page for self-study: `pd3.py serve` (background), then show http://localhost:8770. Same cards; progress is saved in the browser, not in `vocab.json` (see "Assisted Learning page" in `vocab.md`). |
+| `learn` | Point the learner to the **Assisted Learning** page: `<project>/assisted-learning.html`, opened straight from disk (no server). `pd3.py page` rebuilds it (also automatic whenever the deck changes). Same cards; progress is saved in the browser, not in `vocab.json` (see "Assisted Learning page" in `vocab.md`). |
 | `mistakes` | `pd3.py mistake list`, then targeted drills: 3 isolated exercises + 1 in context per pattern. After a correct production, `mistake fixed PATTERN` (3 in a row → fixed). |
 | `mock` | Full exam simulation: reading (90 min), writing (2½ h), oral (10 min). Offer to split across days. Grade each, give the final average. |
 
