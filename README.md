@@ -6,7 +6,7 @@ exam sittings Nov 2022 – May 2024. Standalone pages, no install needed, work o
 - `index.html` – overview, progress and word groups
 - `study-sheet.html` – every word with meanings, examples, collocations and word order; search, filter, print
 - `flashcards.html` – spaced-repetition flashcards (`#learn`) and a 10-question exam-style test (`#test`)
-- `assisted-learning.html` – guided teach → test → review for the PD3 coach deck ([open](https://m-samhoury.github.io/pd3-reading-vocab/assisted-learning.html))
+- `assisted-learning.html` – guided teach → test → review for the PD3 coach deck ([open](https://m-samhoury.github.io/pd3-reading-vocab/assisted-learning.html)), plus *Find ord*, a word → group lookup ([open](https://m-samhoury.github.io/pd3-reading-vocab/assisted-learning.html#find))
 
 Progress is stored in the browser (localStorage). Use Export/Import on the flashcards page to move it.
 
@@ -22,6 +22,10 @@ real sentences from the 2004–2024 reading texts, the Den Danske Ordbog entry a
 Then six rotating exercises (meaning, typing, relation, gap-fill, word-order tiles, L3 pair), a
 confusables drill (*da/når*, *for/fordi* …), SM-2 spaced repetition and a group map.
 Progress is saved in the browser on each device (localStorage) and survives closing the page.
+
+**Find ord** (top bar, https://m-samhoury.github.io/pd3-reading-vocab/assisted-learning.html#find) looks up a word
+and shows its group in Guidet læring and on the study sheet (`data/words.json`). It accepts bent forms
+(*medfører*), abbreviations (*bl.a.*, *pga*), English meanings, and suggests the closest word for a typo.
 
 `assisted-learning.html` is a single self-contained file built by the pd3-coach skill in the
 PD3 samples collection project (`python3 -I .claude/skills/pd3-coach/scripts/pd3.py page`); to update it,

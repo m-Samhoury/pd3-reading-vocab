@@ -4,7 +4,7 @@ const I18N = {
   // shared
   "nav.overview": ["Overblik", "Overview"], "nav.study": ["Studieark", "Study sheet"],
   "nav.flash": ["Flashcards", "Flashcards"], "nav.test": ["Test", "Test"],
-  "nav.assisted": ["Guidet læring", "Assisted learning"],
+  "nav.assisted": ["Guidet læring", "Assisted learning"], "nav.find": ["Find ord", "Find a word"],
   "lang.button": ["English", "Dansk"], "lang.title": ["Skift sprog til engelsk", "Switch language to Danish"],
   "freq.one": ["{0} prøve · {1}×", "{0} exam · {1}×"], "freq.many": ["{0} prøver · {1}×", "{0} exams · {1}×"],
   "freq.guide": ["fra guiden", "from the guide"],
