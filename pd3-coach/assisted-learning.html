@@ -367,6 +367,13 @@ const I18N = {
   "b.prev": ["Forrige", "Back"], "b.prev.t": ["Se det forrige ord igen (←). Svar, du har givet, tæller stadig.", "See the previous word again (←). Answers you gave still count."], "k.learn": ["Lær", "Learn"],
   "k.practice": ["Øvelse", "Practice"], "k.first": ["Nyt", "New"], "k.review": ["Gentagelse", "Review"],
   "x.meaning": ["Betydning", "Meaning"], "x.produce": ["Skriv det på dansk", "Say it in Danish"], "x.cloze": ["Udfyld hullet", "Fill the gap"],
+  "x.sense": ["Betydning i teksten", "Meaning in context"], "x.def": ["Ordbogens definition", "Dictionary definition"],
+  "q.def": ["Hvilken definition fra Den Danske Ordbog passer til ordet?", "Which Den Danske Ordbog definition fits the word?"],
+  "q.sense": ["Hvad betyder {0} i denne sætning fra prøven?", "What does {0} mean in this exam sentence?"],
+  "q.relctx": ["Hvilken relation udtrykker {0} i sætningen?", "Which relation does {0} express in the sentence?"],
+  "q.gap": ["Skriv det ord, der mangler. Ledetråd: ordbogens definition.", "Type the missing word. Clue: the dictionary definition."],
+  "b.hint": ["Vis engelsk (giver lavere karakter)", "Show English (lowers the grade)"], "f.hinted": ["med engelsk hjælp", "with the English hint"],
+  "h.conf.none": ["Ingen forvekslingspar i de valgte grupper.", "No confusable pairs in the selected groups."],
   "x.relation": ["Hvilken relation?", "Which relation?"], "x.order": ["Ordstilling", "Word order"], "x.odd": ["L3: find parret", "L3: find the pair"],
   "intro.p": ["{0} nye ord fra én gruppe. Først ser du hvert ord med ordstilling, rigtige sætninger fra prøverne og ordbogsopslaget; så en kort test i dem alle.",
               "{0} new words from one group. First you'll see each one with its word order, real exam sentences and the dictionary entry; then a quick test on all of them."],
@@ -687,7 +694,7 @@ function home() {
         <button class="btn solid" id="go">${t("h.go")}${sel ? ` · ${sel.length === 1 ? esc(gname(sel[0])) : t("s.groups", sel.length)}` : ""}</button>
         <button class="btn" id="learn" ${canNew ? "" : "disabled"}>${t("h.learn", BATCH)}</button>
         <button class="btn" id="review" ${canDue ? "" : "disabled"} title="${esc(canDue ? t("h.review.t") : t("h.review.off"))}">${t("h.review")}</button>
-        <button class="btn" id="conf">${t("h.conf")}</button>
+        <button class="btn" id="conf" ${confusablePairs(sel).length ? "" : `disabled title="${esc(t("h.conf.none"))}"`}>${t("h.conf")}${sel ? ` · ${confusablePairs(sel).length}` : ""}</button>
       </div>
       <p class="soft small" style="margin-top:12px">${sessionBlurb(k, canDue, canNew)}</p>
       ${storageOK ? "" : `<div class="err small">${t("h.storage")}</div>`}
@@ -712,7 +719,7 @@ function home() {
     const y = window.scrollY; home(); window.scrollTo(0, y);
     $(`.pchip[data-g="${CSS.escape(g)}"]`)?.focus();
   });
-  $("#conf").onclick = () => startConfusables();
+  $("#conf").onclick = () => startConfusables(sel);
   document.querySelectorAll(".group").forEach(b => b.onclick = () => { openGroup = openGroup === b.dataset.g ? null : b.dataset.g; const y = window.scrollY; home(); window.scrollTo(0, y); });
   if (openGroup && groupsBy[openGroup]) showGroupDetail(openGroup, groupsBy[openGroup]);
 }
@@ -783,8 +790,13 @@ function startSession({ groups = null, reviews = REVIEW_LIMIT, fresh = BATCH }) 
   S = { queue: q, i: 0, results: [], lastType: null, graded: new Set(), title };
   step();
 }
-function startConfusables() {
-  const pairs = shuffle(CONFUSABLES.filter(p => DB.cards[p[0]] && DB.cards[p[1]])).slice(0, 5);
+// pairs with at least one word in the selected groups (all pairs when none are selected)
+function confusablePairs(groups) {
+  return CONFUSABLES.filter(p => DB.cards[p[0]] && DB.cards[p[1]] && (!groups || [p[0], p[1]].some(id => groups.includes(DB.cards[id].group))));
+}
+function startConfusables(groups) {
+  const pairs = shuffle(confusablePairs(groups)).slice(0, 5);
+  if (!pairs.length) { alert(t("h.conf.none")); return; }
   S = { queue: pairs.map(p => ({ kind: "pair", pair: p })), i: 0, results: [], lastType: null, graded: new Set(), title: t("s.conf") };
   step();
 }
@@ -894,12 +906,31 @@ function renderTeach(c, review) {
 }
 
 // ---------- exercises ----------
-function orderTokens(c) {
-  const s = c.example || "";
-  if (/[…:;()]|\.\s|\?\s/.test(s.slice(0, -1))) return null;
+// word-order tiles: the connector's clause from a real exam sentence (PD3 length), else the card's example
+function clauseTokens(s) {
+  if (/[…:;()”"–]|\.\s|\?\s/.test(s.slice(0, -1))) return null;
   const toks = s.replace(/[.!?]$/, "").split(/\s+/).map(x => x.replace(/,$/, "")).filter(Boolean);
-  return toks.length >= 4 && toks.length <= 11 ? toks : null;
+  return toks.length >= 4 && toks.length <= 14 ? toks : null;
 }
+function orderSource(c) {
+  if (!wtype(c)) return null;
+  const cands = [];
+  for (const e of examSentences(c)) {
+    const [a] = e.m;
+    let part = null;
+    if (a === 0) part = e.s;                                   // "Derfor er det …" / "Da jeg var barn, …"
+    else if (/,\s$/.test(e.s.slice(0, a))) part = e.s.slice(a).split(/,\s/)[0];   // "…, da de følger de … ruter"
+    const toks = part && clauseTokens(part);
+    if (toks && toks.length >= 6) cands.push({ toks, s: part.replace(/[,.]$/, "") + (/[.!?]$/.test(part) ? "" : "."), src: e.src });
+  }
+  if (cands.length) return pick(cands.slice(0, 4));
+  const toks = c.example && clauseTokens(c.example);
+  return toks ? { toks, s: c.example, src: null } : null;
+}
+function orderTokens(c) { return orderSource(c)?.toks || null; }
+const defOf = x => x.dict && x.dict.senses && x.dict.senses[0];
+const posKey = x => ((x.dict && x.dict.pos) || "").split(/[ ,]/)[0];
+const ctxSentence = c => { const ex = examSentences(c).filter(e => !e.sense || !DB.senses[c.id]); return ex.length ? pick(ex.slice(0, 4)) : null; };
 function clozeSource(c) {
   if (c.word.includes("…")) return null;
   const sp = c.example && findSpan(c, c.example);
@@ -913,13 +944,15 @@ function clozeSource(c) {
 function eligibleTypes(c, first) {
   const ts = [["meaning", 1], ["produce", 2]];
   if (clozeSource(c)) ts.push(["cloze", 2]);
+  // multi-meaning words (da, mens, så, siden): read the meaning off a real exam sentence
+  if (DB.senses[c.id] && DB.senses[c.id].senses.length > 1 && examSentences(c).some(e => e.sense)) ts.push(["sense", 3]);
   if (c.priority === 1) {
     ts.push(["relation", 1]);
     if (cards().filter(x => x.group === c.group).length > 1) ts.push(["odd", 1]);
     if (wtype(c) && orderTokens(c)) ts.push(["order", 3]);
   }
   // a brand-new word is tested with recognition first
-  return first ? ts.filter(([k]) => ["meaning", "cloze", "relation"].includes(k)) : ts;
+  return first ? ts.filter(([k]) => ["meaning", "cloze", "relation", "sense"].includes(k)) : ts;
 }
 function chooseType(c, first) {
   let ts = eligibleTypes(c, first).filter(([k]) => k !== S.lastType);
@@ -947,7 +980,7 @@ function renderExercise(it) {
   S.lastType = type;
   S.t0 = performance.now();
   const label = t(it.practice ? "k.practice" : it.first ? "k.first" : "k.review") + " · " + t("x." + type);
-  ({ meaning: exMeaning, produce: exProduce, cloze: exCloze, relation: exRelation, order: exOrder, odd: exOdd })[type](c, label, it);
+  ({ meaning: exMeaning, produce: exProduce, cloze: exCloze, relation: exRelation, order: exOrder, odd: exOdd, sense: exSense })[type](c, label, it);
 }
 
 function mc(label, head, options, correctIdx, onDone) {
@@ -963,9 +996,23 @@ function mc(label, head, options, correctIdx, onDone) {
   btns.forEach(b => b.onclick = () => choose(+b.dataset.i));
   S.keys = e => { const n = +e.key; if (n >= 1 && n <= options.length) choose(n - 1); };
 }
-const quick = () => performance.now() - S.t0 < 6000;
+// real exam sentences take longer to read than a single word
+const quick = (ms = 6000) => performance.now() - S.t0 < ms;
 
 function exMeaning(c, label, it) {
+  // PD3 level: pick the Danish dictionary definition, with the word met in a real exam sentence
+  if (defOf(c)) {
+    const others = distractors(c, 3, x => defOf(x) && norm(defOf(x)) !== norm(defOf(c)) && (posKey(c) ? posKey(x) === posKey(c) : sameKind(c)(x)));
+    if (others.length === 3) {
+      const opts = shuffle([c, ...others]), ctx = ctxSentence(c);
+      const clip = x => { const d = defOf(x); return d.length > 150 ? d.slice(0, 147) + "…" : d; };
+      return mc(label.replace(t("x.meaning"), t("x.def")), `<p class="prompt">${t("q.def")}</p><div class="big" lang="da">${esc(c.word)}</div>
+        ${ctx ? `<div class="ex" lang="da" style="margin-top:8px"><span class="tag">${esc(ctx.src)}</span>${hlSentence(c, ctx.s, ctx.m)}</div>` : ""}`,
+        opts.map(o => `<span lang="da">${esc(clip(o))}</span>`), opts.indexOf(c),
+        ok => feedback(c, it, ok ? (quick(12000) ? 5 : 4) : 2, ok,
+          `<b lang="da">${esc(c.word)}</b> = ${esc(c.meaning)}<div class="small" lang="da">${esc(defOf(c))}</div>${c.dict.senses_en?.[0] ? `<div class="en-def">${esc(c.dict.senses_en[0])}</div>` : ""}`, ok ? null : "moderate"));
+    }
+  }
   const opts = shuffle([c, ...distractors(c, 3, x => (x.priority || 3) === (c.priority || 3))]);
   mc(label, `<p class="prompt">${t("q.meaning")}</p><div class="big" lang="da">${esc(c.word)}</div>`,
     opts.map(o => esc(o.meaning)), opts.indexOf(c),
@@ -974,22 +1021,36 @@ function exMeaning(c, label, it) {
 
 function exRelation(c, label, it) {
   const groups = shuffle([c.group, ...shuffle(GROUP_ORDER.filter(g => prio(g) === 1 && g !== c.group && !(ALSO[c.id] || []).includes(g))).slice(0, 3)]);
-  mc(label, `<p class="prompt">${t("q.relation")}</p><div class="big" lang="da">${esc(c.word)}</div>`,
+  const ctx = ctxSentence(c);
+  mc(label, ctx ? `<p class="prompt">${t("q.relctx", `<b lang="da">${esc(c.word)}</b>`)}</p><div class="sentence" lang="da">${hlSentence(c, ctx.s, ctx.m)}</div><div style="margin-top:6px"><span class="tag">${esc(ctx.src)}</span></div>`
+    : `<p class="prompt">${t("q.relation")}</p><div class="big" lang="da">${esc(c.word)}</div>`,
     groups.map(g => esc(glabel(g))), groups.indexOf(c.group),
     ok => feedback(c, it, ok ? 4 : 2, ok, `<b lang="da">${esc(c.word)}</b> (${esc(c.meaning)}) → ${esc(glabel(c.group))}`, ok ? null : "moderate"));
+}
+
+function exSense(c, label, it) {
+  const info = DB.senses[c.id];
+  const e = pick(examSentences(c).filter(x => x.sense));
+  const opts = info.senses;
+  mc(label, `<p class="prompt">${t("q.sense", `<b lang="da">${esc(c.word)}</b>`)}</p><div class="sentence" lang="da">${hlSentence(c, e.s, e.m)}</div><div style="margin-top:6px"><span class="tag">${esc(e.src)}</span></div>`,
+    opts.map(sn => `<span lang="da">${esc(sn.da)}</span> <span class="soft">· ${esc(sn.en)}</span>`), opts.findIndex(sn => sn.id === e.sense),
+    ok => feedback(c, it, ok ? (quick(12000) ? 5 : 4) : 2, ok, (info.note ? `<div class="small" lang="da">${esc(info.note)}</div>` : ""), ok ? null : "critical"));
 }
 
 function exCloze(c, label, it) {
   const src = clozeSource(c);
   // same word class (and same word-order type for connectors), so the choice is about meaning, not grammar
-  const opts = shuffle([c, ...distractors(c, 3, x => sameKind(c)(x) && !x.word.includes("…") && (!wtype(c) || wtype(x) === wtype(c)))]);
+  // a confusable partner (da/når, for/fordi) is the hardest distractor, so it goes in first when it fits the gap
+  const partner = partnerPairs(c.id).map(p => DB.cards[p[0] === c.id ? p[1] : p[0]]).find(x => sameKind(c)(x) && (!wtype(c) || wtype(x) === wtype(c)));
+  const rest = distractors(c, partner ? 2 : 3, x => x !== partner && sameKind(c)(x) && !x.word.includes("…") && (!wtype(c) || wtype(x) === wtype(c)));
+  const opts = shuffle([c, ...(partner ? [partner] : []), ...rest]);
   if (opts.length < 3) { it.type = "meaning"; return exMeaning(c, label, it); }
   const [a, b] = src.span;
   const gapped = `${esc(src.s.slice(0, a))}<span class="gap">&nbsp;</span>${esc(src.s.slice(b))}`;
   const inflected = norm(src.s.slice(a, b)) !== norm(c.word.replace(/^(at|en|et) /, ""));
   mc(label, `<p class="prompt">${t("q.cloze")}${inflected ? t("q.base") : ""} ${src.src !== "example" ? `<span class="tag">${esc(src.src)}</span>` : ""}</p><div class="sentence" lang="da">${gapped}</div>`,
     opts.map(o => `<span lang="da">${esc(o.word)}</span>`), opts.indexOf(c),
-    ok => feedback(c, it, ok ? (quick() ? 5 : 4) : 2, ok,
+    ok => feedback(c, it, ok ? (quick(src.src === "example" ? 6000 : 10000) ? 5 : 4) : 2, ok,
       `<div class="sentence" lang="da">${hlSentence(c, src.s, src.span)}</div><div class="small"><span lang="da">${esc(c.word)}</span> = ${esc(c.meaning)}</div>`, ok ? null : "moderate"));
 }
 
@@ -1026,28 +1087,38 @@ function bindLetters(input) {
   });
 }
 function exProduce(c, label, it) {
-  frame(label, `<p class="prompt">${t("q.produce")}</p>
+  // PD3 level: the word is missing from a real exam sentence and the clue is Danish; English only on request
+  const ctx = !c.word.includes("…") && defOf(c) && ctxSentence(c);
+  const gapForm = ctx ? ctx.s.slice(ctx.m[0], ctx.m[1]) : "";
+  let hinted = false;
+  frame(label, (ctx ? `<p class="prompt">${t("q.gap")}</p>
+    <div class="sentence" lang="da">${esc(ctx.s.slice(0, ctx.m[0]))}<span class="gap">&nbsp;</span>${esc(ctx.s.slice(ctx.m[1]))}</div>
+    <div style="margin-top:6px"><span class="tag">${esc(ctx.src)}</span></div>
+    <div class="ddo" style="margin-top:12px" lang="da">${esc(defOf(c))}</div>
+    <div class="row" style="margin-top:8px"><button class="btn quiet" id="hint">${t("b.hint")}</button><span id="hinttxt" class="soft"></span></div>` : `<p class="prompt">${t("q.produce")}</p>
     <div class="meaning" style="font-size:1.5rem">${esc(c.meaning)}</div>
-    <div class="soft small">${esc(glabel(c.group))}${wtype(c) ? " · " + esc(wtype(c)) : ""}</div>
+    <div class="soft small">${esc(glabel(c.group))}${wtype(c) ? " · " + esc(wtype(c)) : ""}</div>`) + `
     <input class="answer" id="ans" lang="da" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="${t("q.ph")}">${letters()}
     <div class="row next"><button class="btn solid" id="chk">${t("b.check")}</button><button class="btn quiet" id="idk">${t("b.idk")}</button></div><div id="fb"></div>`);
   const input = $("#ans");
   input.focus(); bindLetters(input);
+  if ($("#hint")) $("#hint").onclick = () => { hinted = true; $("#hinttxt").textContent = c.meaning; $("#hint").remove(); input.focus(); };
+  const isRight = v => isAnswer(c, v) || (gapForm && norm(v) === norm(gapForm));
   const check = give => {
     if (input.disabled) return;
     const v = input.value.trim();
     if (!v && !give) return;
     // another deck word with an overlapping meaning (however → dog / imidlertid): not wrong, ask for the other one
     const gloss = s => new Set(s.toLowerCase().split(/[,/;()]+/).map(x => x.trim()).filter(Boolean));
-    const twin = !give && !isAnswer(c, v) && cards().find(x => x.id !== c.id && isAnswer(x, v) && [...gloss(x.meaning)].some(g => gloss(c.meaning).has(g)));
+    const twin = !give && !isRight(v) && cards().find(x => x.id !== c.id && isAnswer(x, v) && [...gloss(x.meaning)].some(g => gloss(c.meaning).has(g)));
     if (twin) {
       $("#fb").innerHTML = `<div class="feedback ok"><h3>${t("f.twin", esc(twin.word))}</h3><div class="why">${t("f.twin.p")}</div></div>`;
       input.value = ""; input.focus();
       return;
     }
     input.disabled = true; $("#chk").remove(); $("#idk").remove();
-    const answer = `<b lang="da">${esc(c.word)}</b><div class="small" lang="da">${hlSentence(c, c.example)}</div>`;
-    if (!give && isAnswer(c, v)) return feedback(c, it, performance.now() - S.t0 < 9000 ? 5 : 4, true, answer);
+    const answer = `<b lang="da">${esc(c.word)}</b>${gapForm && norm(gapForm) !== norm(c.word.replace(/^(at|en|et) /, "")) ? ` (<span lang="da">${esc(gapForm)}</span>)` : ""} = ${esc(c.meaning)}<div class="small" lang="da">${ctx ? hlSentence(c, ctx.s, ctx.m) : hlSentence(c, c.example)}</div>`;
+    if (!give && isRight(v)) return feedback(c, it, hinted ? 3 : quick(ctx ? 15000 : 9000) ? 5 : 4, true, answer + (hinted ? `<div class="soft small">${t("f.hinted")}</div>` : ""));
     if (!give && nearMiss(c, v)) return feedback(c, it, 3, true, t("f.spelling", `<b lang="da">${esc(c.word)}</b>`, esc(v)), "minor", t("f.almost"));
     feedback(c, it, give ? 0 : 1, false, (v ? t("f.wrote", esc(v)) : "") + answer, give ? null : "moderate", null, !give);
   };
@@ -1057,7 +1128,9 @@ function exProduce(c, label, it) {
 }
 
 function exOrder(c, label, it) {
-  const toks = orderTokens(c);
+  const os = it.os || (it.os = orderSource(c));
+  if (!os) { it.type = "cloze"; return clozeSource(c) ? exCloze(c, label, it) : exMeaning(c, label, it); }
+  const toks = os.toks;
   const rest = toks.slice(1);
   let tiles = shuffle(rest.map((x, i) => ({ t: x, i })));
   for (let n = 0; n < 5 && tiles.map(x => x.t).join(" ") === rest.join(" "); n++) tiles = shuffle(tiles);
@@ -1074,11 +1147,11 @@ function exOrder(c, label, it) {
     $("#chk").disabled = placed.length !== rest.length;
   };
   draw();
-  const right = `<div class="sentence" lang="da">${hlSentence(c, c.example)}</div>`;
+  const right = `<div class="sentence" lang="da">${hlSentence(c, os.s)}</div>${os.src ? `<span class="tag">${esc(os.src)}</span>` : ""}`;
   const finish = (q, ok, sev) => {
     ["#chk", "#clr", "#idk"].forEach(s => $(s)?.remove());
     document.querySelectorAll(".tile").forEach(b => b.disabled = true);
-    feedback(c, it, q, ok, right + `<div class="why">${rule(wtype(c).split("/")[0]) || ""}</div>`, sev, null, false, ok ? null : c.example);
+    feedback(c, it, q, ok, right + `<div class="why">${rule(wtype(c).split("/")[0]) || ""}</div>`, sev, null, false, ok ? null : os.s);
   };
   $("#chk").onclick = () => {
     const ok = placed.map(x => x.t.toLowerCase()).join(" ") === rest.join(" ").toLowerCase();
