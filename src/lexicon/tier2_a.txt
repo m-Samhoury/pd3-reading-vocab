@@ -1,0 +1,446 @@
+# Tier 2 lexicon – part A (words from questions, answer options and L3 gaps)
+# Format as tier1_*.txt, without the wox line:
+#   @ lemma
+#   S: group | register | da_definition | en_definition | example_da | example_en | collocations | synonyms | antonyms
+# class, forms, grammar and the DDO query are added from DDO by src/scripts/t23_lexicon.py (see selection_t23.txt).
+# Definitions follow DDO's senses in our own words; examples are taken or adapted from the exam texts where the word occurs.
+
+@ tidligere
+forms: tidligere
+class: adjektiv
+ddo: tidlig
+S: t2-egenskab | neutral | (adverbium) På et tidspunkt før nu eller før det tidspunkt, man taler om. | Earlier; previously; before. | Vi er mere åbne over for at prøve noget nyt, end vi var tidligere. | We are more open to trying something new than we were before. | tidligere end; som tidligere nævnt | før; førhen | senere
+S: t2-egenskab | neutral | (adjektiv) Som var det, man var engang, men ikke er mere; forhenværende. | Former; previous. | Hun er tidligere jobkonsulent og arbejder nu som selvstændig. | She is a former job consultant and now works for herself. | den tidligere minister; i tidligere tider | forhenværende; fhv. | nuværende
+
+@ følge
+forms: følge, følger, fulgte, fulgt, følges, følgende
+class: verbum
+S: t2-aarsag | neutral | Bevæge sig efter nogen eller noget; gå med nogen. | To follow; to accompany. | Ruten følger den gamle hærvej gennem Jylland. | The route follows the old army road through Jutland. | følge efter; følge med; følge nogen hjem | gå efter | -
+S: t2-aarsag | neutral | Holde øje med en udvikling eller et forløb over tid. | To follow (developments); to keep up with. | Mange følger debatten om vindmøller tæt. | Many people follow the debate about wind turbines closely. | følge med i; følge nøje | holde øje med | -
+S: t2-aarsag | neutral | Gøre, som nogen anbefaler eller en regel siger. | To follow (advice, rules). | Han valgte at følge lægens råd. | He chose to follow the doctor's advice. | følge et råd; følge reglerne | rette sig efter; overholde | ignorere
+S: t2-aarsag | neutral | (en følge af) En virkning eller et resultat af noget, der er sket før. | (noun) Consequence; result. | Det kan fx være en følge af det danske velfærdssamfund. | It may, for example, be a consequence of the Danish welfare society. | være en følge af; som følge af | konsekvens; resultat | årsag
+
+@ følgende
+forms: følgende
+class: adjektiv
+ddo: følge
+S: t2-egenskab | formal | Som kommer lige efter; som nu bliver nævnt. | Following; the following. | Hvilket af følgende udsagn er i overensstemmelse med teksten? | Which of the following statements agrees with the text? | følgende udsagn; den følgende dag; i det følgende | næste; nedenstående | foregående
+
+@ fordel
+forms: fordel, fordelen, fordele, fordelene, fordels, fordelens, fordeles, fordelenes
+class: substantiv
+S: t2-fordel | neutral | Noget ved en sag eller situation, der er positivt eller giver et plus. | Advantage; benefit. | Det kunne være en fordel for faget, at det blev udbudt på færre universiteter. | It could be an advantage for the subject if it were offered at fewer universities. | en fordel ved; have fordel af; fordele og ulemper | plus; gevinst | ulempe
+S: t2-fordel | formal | (til fordel for) Så det gavner eller støtter nogen eller noget; i stedet for noget andet. | In favour of; for the benefit of. | Mange fravælger bilen til fordel for cyklen. | Many people give up the car in favour of the bicycle. | til fordel for; være til fordel for | til gavn for | til skade for
+
+@ mulighed
+forms: mulighed, muligheden, muligheder, mulighederne, muligheds, mulighedens, muligheders, mulighedernes
+class: substantiv
+S: t2-fordel | neutral | Det, at noget kan ske eller kan lade sig gøre. | Possibility. | Der er en mulighed for, at planen bliver opgivet. | There is a possibility that the plan will be abandoned. | der er mulighed for; en reel mulighed | chance; sandsynlighed | umulighed
+S: t2-fordel | neutral | Forhold, der gør det muligt for nogen at gøre noget; et valg, man har. | Opportunity; option. | Gæsterne skal have mulighed for at stille deres cykler et sikkert sted. | The guests must have the opportunity to leave their bicycles somewhere safe. | have mulighed for; give mulighed for; forskellige muligheder | chance; lejlighed; valg | -
+
+@ grund
+forms: grund, grunden, grunde, grundene, grunds, grundens, grundes, grundenes
+class: substantiv
+S: t2-aarsag | neutral | Det, der får noget til at ske; forklaringen på noget. | Reason; cause. | Måske er det også grunden til, at vi oftere skifter fritidsinteresser i dag. | Perhaps that is also the reason why we change our hobbies more often today. | grunden til; af den grund; der er god grund til; på grund af | årsag; anledning | følge
+S: t2-aarsag | neutral | Et stykke jord, hvor man kan bygge et hus. | Plot (of land); site. | De har købt en grund uden for byen. | They have bought a plot outside the town. | købe en grund; byggegrund | -  | -
+S: t2-aarsag | neutral | Det faste grundlag, som noget bygger på. | Basis; foundation; ground. | Undersøgelsen danner grund for de nye regler. | The study forms the basis for the new rules. | danne grund for; i bund og grund | grundlag; basis | -
+
+@ forskellig
+forms: forskellig, forskelligt, forskellige
+class: adjektiv
+S: t2-egenskab | neutral | Som ikke er ens; som adskiller sig fra hinanden. | Different. | Medarbejdere har forskellige behov. | Employees have different needs. | forskellig fra; meget forskellige | anderledes; ulig | ens; samme
+S: t2-egenskab | neutral | (i flertal) Flere af en slags; diverse. | Various; several. | Der er forskellige muligheder for at få flere unge ind på uddannelsen. | There are various ways of getting more young people onto the programme. | forskellige muligheder; på forskellige måder | diverse; flere; adskillige | -
+
+@ udfordring
+forms: udfordring, udfordringen, udfordringer, udfordringerne, udfordrings, udfordringens, udfordringers, udfordringernes
+class: substantiv
+S: t2-fordel | neutral | En opgave eller situation, der er svær og kræver noget af én. | Challenge. | Det er dyrt, men det er ikke den eneste udfordring. | It is expensive, but it is not the only challenge. | stå over for en udfordring; en stor udfordring; tage en udfordring op | problem; vanskelighed | -
+
+@ afvise
+forms: afvise, afviser, afviste, afvist, afvises, afvisende
+class: verbum
+S: t2-argument | neutral | Ikke ville godkende, tage imod eller give ret i noget. | To reject; to refuse; to dismiss. | Det vil jeg slet ikke afvise. | I certainly would not rule that out. | afvise et forslag; afvise en ansøgning; afvise kritikken | afslå; forkaste; benægte | acceptere; godkende
+S: t2-argument | neutral | Ikke lukke nogen ind; sende nogen væk. | To turn away (someone). | Gæster uden billet blev afvist ved døren. | Guests without tickets were turned away at the door. | afvise nogen ved døren | - | lukke ind
+
+@ moderne
+forms: moderne
+class: adjektiv
+S: t2-egenskab | neutral | Som hører til eller er typisk for vores tid. | Modern; contemporary. | Hverken nettet eller et moderne shoppingcenter kan konkurrere med det. | Neither the internet nor a modern shopping centre can compete with it. | moderne teknologi; det moderne samfund | nutidig; tidssvarende | gammeldags
+S: t2-egenskab | neutral | Som følger tidens mode; ny og populær. | Fashionable; in fashion. | Den slags tøj er meget moderne i år. | That kind of clothing is very fashionable this year. | være moderne | populær; på mode | umoderne
+
+@ fysisk
+forms: fysisk, fysiske
+class: adjektiv
+S: t2-egenskab | neutral | Som har med kroppen at gøre. | Physical (of the body). | De fleste får mere energi af at være fysisk aktive. | Most people get more energy from being physically active. | fysisk aktiv; fysisk arbejde; fysisk sundhed | kropslig | psykisk; mental
+S: t2-egenskab | neutral | Som findes konkret og kan ses eller røres. | Physical; tangible. | Butikken findes både på nettet og som fysisk butik. | The shop exists both online and as a physical shop. | en fysisk butik; fysisk fremmøde | konkret; håndgribelig | digital; virtuel
+
+@ modstand
+forms: modstand, modstanden, modstande, modstandene, modstands, modstandens, modstandes, modstandenes
+class: substantiv
+S: t2-holdning | neutral | Det at prøve at forhindre noget med argumenter eller handling. | Opposition; resistance. | Borgernes modstand mod vindmøller kan forsinke processen. | Citizens' opposition to wind turbines can delay the process. | modstand mod; møde modstand; gøre modstand | opposition; protest | opbakning; støtte
+S: t2-holdning | neutral | Det at kæmpe imod en angriber eller en påvirkning. | Resistance (physical, armed). | Under krigen gjorde mange modstand mod besættelsesmagten. | During the war many people resisted the occupying power. | gøre modstand; modstandsbevægelsen | - | -
+
+@ behov
+forms: behov, behovet, behovene, behovs, behovets, behovenes
+class: substantiv
+S: t2-aarsag | neutral | Noget, man har brug for og må have opfyldt. | Need. | Hun har ikke behov for at tage et arbejde ved siden af studiet. | She has no need to take a job alongside her studies. | have behov for; efter behov; dække et behov; der er behov for | brug; nødvendighed | -
+
+@ mental
+forms: mental, mentalt, mentale
+class: adjektiv
+S: t2-egenskab | neutral | Som har med tanker, psyke og sind at gøre. | Mental. | Som topleder er det vigtigt at være mentalt og fysisk på toppen. | As a top manager it is important to be mentally and physically at your best. | mental sundhed; mentalt overskud; mentalt og fysisk | psykisk; åndelig | fysisk
+
+@ opleve
+forms: opleve, oplever, oplevede, oplevet, opleves, oplevende
+class: verbum
+S: t2-holdning | neutral | Være med til eller mærke noget med sine egne sanser; føle, at noget er sådan. | To experience; to find (that something is so). | De fleste oplever, at de får mere energi af at være aktive. | Most people find that they get more energy from being active. | opleve at; opleve noget nyt; opleve naturen | erfare; mærke; føle | -
+
+@ oplevelse
+forms: oplevelse, oplevelsen, oplevelser, oplevelserne, oplevelses, oplevelsens, oplevelsers, oplevelsernes
+class: substantiv
+S: t2-holdning | neutral | Noget, man oplever, især noget særligt eller mindeværdigt. | Experience (event). | Arkitekturen er i sig selv en kunstnerisk oplevelse. | The architecture is an artistic experience in itself. | en stor oplevelse; en god oplevelse; oplevelser i naturen | begivenhed; indtryk | -
+S: t2-holdning | neutral | Det at opleve noget; ens indtryk af det. | Experience; perception (of something). | Hans oplevelse af mødet var meget positiv. | His experience of the meeting was very positive. | oplevelsen af | indtryk; opfattelse | -
+
+@ årsag
+forms: årsag, årsagen, årsager, årsagerne, årsags, årsagens, årsagers, årsagernes
+class: substantiv
+S: t2-aarsag | formal | Det, der direkte får noget til at ske eller være, som det er. | Cause; reason. | Hvad var den primære årsag til, at hun måtte sygemelde sig? | What was the main reason why she had to go on sick leave? | årsagen til; af den årsag; årsag og virkning; ingen årsag | grund; anledning | virkning; følge
+
+@ overensstemmelse
+forms: overensstemmelse, overensstemmelsen, overensstemmelser, overensstemmelserne, overensstemmelses, overensstemmelsens, overensstemmelsers, overensstemmelsernes
+class: substantiv
+S: t2-argument | formal | Det, at noget passer med eller svarer til noget andet. | Agreement; accordance. | Hvilket udsagn er i overensstemmelse med det, hun giver udtryk for? | Which statement agrees with what she expresses? | i overensstemmelse med; være i overensstemmelse med | samklang; enighed | modstrid; uoverensstemmelse
+
+@ mål
+forms: mål, målet, målene, måls, målets, målenes
+class: substantiv
+S: t2-aarsag | neutral | Det, man arbejder for at nå; det, man stræber efter. | Goal; aim; target. | Målet skal nås ved at omstille energiforbruget til grøn energi. | The goal is to be reached by converting energy consumption to green energy. | nå et mål; sætte sig et mål; have som mål at | formål; målsætning; hensigt | -
+S: t2-aarsag | neutral | Det sted, man er på vej hen til. | Destination. | Efter fem dages vandring nåede de deres mål. | After five days of hiking they reached their destination. | nå sit mål; rejsens mål | bestemmelsessted | udgangspunkt
+S: t2-aarsag | neutral | Størrelse målt i længde, bredde, højde osv. | Measurement; dimension. | Skriv rummets mål ned, før du køber møbler. | Write down the room's measurements before you buy furniture. | tage mål; i stor målestok | størrelse | -
+S: t2-aarsag | neutral | Den ramme på en boldbane, som man skal score i; en scoring. | Goal (in sport). | Holdet scorede to mål i anden halvleg. | The team scored two goals in the second half. | score et mål; stå på mål | - | -
+
+@ forklaring
+forms: forklaring, forklaringen, forklaringer, forklaringerne, forklarings, forklaringens, forklaringers, forklaringernes
+class: substantiv
+S: t2-argument | neutral | Det, man siger eller skriver for at gøre noget klart og vise sammenhængen. | Explanation. | Det er måske en af forklaringerne på, at mange topledere dyrker sport. | That may be one of the explanations for why many top managers do sport. | forklaringen på; en mulig forklaring; give en forklaring | begrundelse; redegørelse | -
+
+@ forklare
+forms: forklare, forklarer, forklarede, forklaret, forklares, forklarende
+class: verbum
+S: t2-argument | neutral | Gøre noget klart for andre ved at beskrive eller fortælle om det. | To explain. | Hun forklarer, at danske unge er i en anden situation end unge fra andre lande. | She explains that Danish young people are in a different situation from young people in other countries. | forklare hvorfor; forklare noget for nogen | redegøre for; beskrive; begrunde | -
+
+@ sjælden
+forms: sjælden, sjældent, sjældne, sjældnere, sjældnest
+class: adjektiv
+S: t2-egenskab | neutral | Som ikke sker ret tit. | Rare; infrequent. | Det er forholdsvis sjældent, at journalister skifter til et helt andet område. | It is relatively rare for journalists to switch to a completely different field. | det er sjældent; sjældent eller aldrig; ikke sjældent | usædvanlig | hyppig; almindelig
+S: t2-egenskab | neutral | Som der kun findes få af. | Rare; scarce. | Her lever flere sjældne fuglearter. | Several rare bird species live here. | sjældne arter; en sjælden gang | - | almindelig; udbredt
+
+@ forudsætning
+forms: forudsætning, forudsætningen, forudsætninger, forudsætningerne, forudsætnings, forudsætningens, forudsætningers, forudsætningernes
+class: substantiv
+S: t2-aarsag | formal | Noget, der skal være til stede, før noget andet kan ske. | Prerequisite; precondition. | Gode cykelstier er en forudsætning for, at flere cykler til arbejde. | Good cycle paths are a precondition for more people cycling to work. | en forudsætning for; på den forudsætning at | betingelse; krav | -
+S: t2-aarsag | formal | Det, man går ud fra, er sandt; ens udgangspunkt. | Assumption; starting point. | Han har andre forudsætninger end sine kolleger. | He has a different background from his colleagues. | gode forudsætninger; ud fra den forudsætning | antagelse; baggrund | -
+
+@ omkostning
+forms: omkostning, omkostningen, omkostninger, omkostningerne, omkostnings, omkostningens, omkostningers, omkostningernes
+class: substantiv
+S: t2-samfund | formal | Penge, man må bruge for at drive eller lave noget; en udgift. | Cost; expense. | Omkostningerne ved at sætte vindmøller op på havet er høje. | The costs of putting up wind turbines at sea are high. | høje omkostninger; omkostninger ved; dække omkostningerne | udgift | indtægt
+
+@ formål
+forms: formål, formålet, formålene, formåls, formålets, formålenes
+class: substantiv
+S: t2-aarsag | formal | Det, man ønsker at opnå med noget; hensigten. | Purpose; aim. | Formålet med bymidterne skal tænkes bredere end handel. | The purpose of town centres must be thought of more broadly than retail. | formålet med; med det formål at; til dette formål | hensigt; mål | -
+
+@ forhindre
+forms: forhindre, forhindrer, forhindrede, forhindret, forhindres, forhindrende
+class: verbum
+S: t2-aendring | neutral | Sørge for, at noget ikke kan ske. | To prevent; to stop. | Borgernes modstand kan forsinke eller forhindre processen. | Citizens' opposition can delay or prevent the process. | forhindre at; forhindre nogen i at | hindre; stoppe; afværge | muliggøre
+
+@ klage
+forms: klage, klager, klagede, klaget, klages, klagende
+class: verbum
+S: t2-holdning | neutral | Officielt sige til en myndighed eller ansvarlig, at man er utilfreds med noget. | To complain; to file a complaint. | Når borgere klager, kan det forlænge sagsbehandlingen. | When citizens complain, it can prolong the processing of the case. | klage over; klage til kommunen | beklage sig; protestere | rose
+S: t2-holdning | neutral | Give udtryk for, at noget er utilstrækkeligt eller dårligt. | To complain; to grumble. | Han klager altid over vejret. | He always complains about the weather. | klage over; klage sin nød | brokke sig | -
+
+@ husleje
+forms: husleje, huslejen, huslejer, huslejerne, huslejes, huslejens, huslejers, huslejernes
+class: substantiv
+S: t2-samfund | neutral | Det beløb, man betaler fast for at leje en bolig eller et lokale. | Rent. | Ejerne af erhvervslokalerne kræver høje huslejer. | The owners of the commercial premises demand high rents. | betale husleje; høj husleje; huslejen stiger | leje | -
+
+@ livskvalitet
+forms: livskvalitet, livskvaliteten, livskvaliteter, livskvaliteterne, livskvalitets, livskvalitetens, livskvaliteters, livskvaliteternes
+class: substantiv
+S: t2-samfund | neutral | Hvor godt et menneske har det med sit liv. | Quality of life. | Det kan forringe livskvaliteten for borgerne, hvis butikkerne lukker. | It can reduce citizens' quality of life if the shops close. | høj livskvalitet; forbedre livskvaliteten | trivsel; velvære | -
+
+@ bekræfte
+forms: bekræfte, bekræfter, bekræftede, bekræftet, bekræftes, bekræftende
+class: verbum
+S: t2-argument | neutral | Vise eller sige, at noget er rigtigt. | To confirm. | En undersøgelse kan bekræfte, at vindmøller kan skade naturen. | A study may confirm that wind turbines can harm nature. | bekræfte at; bekræfte en mistanke | stadfæste; underbygge | afkræfte; benægte
+S: t2-argument | neutral | Sige ja til eller acceptere noget. | To confirm (a booking, an agreement). | Husk at bekræfte din tilmelding. | Remember to confirm your registration. | bekræfte en aftale; bekræfte modtagelsen | godkende | aflyse
+
+@ nødvendig
+forms: nødvendig, nødvendigt, nødvendige, nødvendigere, nødvendigst
+class: adjektiv
+S: t2-egenskab | neutral | Som man absolut må have eller gøre; som man ikke kan undvære. | Necessary. | For at lykkes er det nødvendigt at øge produktionen af grøn energi. | To succeed it is necessary to increase the production of green energy. | det er nødvendigt at; nødvendig for; hvis nødvendigt | påkrævet; uundværlig | unødvendig; overflødig
+
+@ konsekvens
+forms: konsekvens, konsekvensen, konsekvenser, konsekvenserne, konsekvensens, konsekvensers, konsekvensernes
+class: substantiv
+S: t2-aarsag | formal | Det, der logisk sker som følge af en handling eller begivenhed. | Consequence. | Det kan være en konsekvens af, at hobbyer spiller en vigtigere rolle for os. | It may be a consequence of hobbies playing a more important role for us. | en konsekvens af; få konsekvenser for; drage konsekvensen | følge; resultat; virkning | årsag
+
+@ udskifte
+forms: udskifte, udskifter, udskiftede, udskiftet, udskiftes, udskiftende
+class: verbum
+S: t2-aendring | neutral | Fjerne noget og sætte noget andet i stedet. | To replace; to change. | Vi udskifter oftere vores fritidsinteresser i dag. | We change our leisure interests more often today. | udskifte med; udskifte de gamle vinduer | erstatte; skifte | beholde
+
+@ problematik
+forms: problematik, problematikken, problematikker, problematikkerne, problematiks, problematikkens, problematikkers, problematikkernes
+class: substantiv
+S: t2-argument | formal | En række problemer, der hænger sammen omkring en bestemt sag. | Set of problems; issue. | Problematikken er, at vindmøller er dyrere at sætte op på havet. | The issue is that wind turbines are more expensive to put up at sea. | problematikken er; en kompleks problematik | problem; problemstilling | -
+
+@ forlænge
+forms: forlænge, forlænger, forlængede, forlænget, forlænges, forlængende
+class: verbum
+S: t2-aendring | neutral | Få noget til at vare længere tid. | To extend; to prolong. | Når borgere klager, kan det forlænge sagsbehandlingen. | When citizens complain, it can prolong the processing of the case. | forlænge en aftale; forlænge fristen | - | forkorte
+S: t2-aendring | neutral | Gøre noget længere i udstrækning. | To lengthen; to extend (physically). | Kommunen vil forlænge cykelstien til nabobyen. | The municipality wants to extend the cycle path to the neighbouring town. | forlænge en vej | - | forkorte
+
+@ reducere
+forms: reducere, reducerer, reducerede, reduceret, reduceres, reducerende
+class: verbum
+S: t2-aendring | formal | Gøre mindre i omfang, antal eller grad. | To reduce; to cut. | Man kan reducere antallet af studiepladser på uddannelser med høj ledighed. | You can reduce the number of study places on programmes with high unemployment. | reducere antallet; reducere udgifterne; reducere med | mindske; nedsætte; skære ned | øge; forøge
+
+@ garantere
+forms: garantere, garanterer, garanterede, garanteret, garanteres, garanterende
+class: verbum
+S: t2-argument | formal | Love, at noget vil ske, og tage ansvaret for det. | To guarantee. | Ingen af de to initiativer kan garantere, at de unge vælger anderledes. | Neither of the two initiatives can guarantee that the young people will choose differently. | garantere at; garantere for | love; sikre | -
+
+@ påpege
+forms: påpege, påpeger, påpegede, påpeget, påpeges, påpegende
+class: verbum
+S: t2-argument | formal | Gøre tydeligt opmærksom på noget vigtigt. | To point out. | Han påpeger, at det ikke er muligt at forudsige fremtiden. | He points out that it is not possible to predict the future. | påpege at; påpege et problem | understrege; fremhæve; gøre opmærksom på | -
+
+@ tendens
+forms: tendens, tendensen, tendenser, tendenserne, tendensens, tendensers, tendensernes
+class: substantiv
+S: t2-fordel | formal | En udvikling, der går i en bestemt retning. | Trend. | Den faldende handel i bymidterne er en tendens, der bekymrer mange. | The falling trade in town centres is a trend that worries many. | en tendens til; en stigende tendens; vende tendensen | udvikling; retning | -
+S: t2-fordel | formal | Det, at nogen ofte handler eller tænker på en bestemt måde. | Tendency. | Han har en tendens til at komme for sent. | He has a tendency to be late. | have en tendens til | tilbøjelighed | -
+
+@ ansvar
+forms: ansvar, ansvaret, ansvars, ansvarets
+class: substantiv
+S: t2-arbejde | neutral | Det at have pligt til at sørge for noget eller nogen og stå til regnskab for det. | Responsibility. | De trives med at have indflydelse og ansvar for medarbejdere. | They thrive on having influence and responsibility for staff. | have ansvar for; tage ansvar; påtage sig ansvaret; stå til ansvar | forpligtelse; pligt | -
+
+@ opbakning
+forms: opbakning, opbakningen, opbakninger, opbakningerne, opbaknings, opbakningens, opbakningers, opbakningernes
+class: substantiv
+S: t2-holdning | neutral | Støtte til en person, en idé eller et initiativ. | Support; backing. | Vindmøller har generelt både politisk og folkelig opbakning. | Wind turbines generally have both political and popular support. | opbakning til; få opbakning; bred opbakning | støtte; tilslutning | modstand
+
+@ evne
+forms: evne, evnen, evner, evnerne, evnes, evnens, evners, evnernes
+class: substantiv
+S: t2-arbejde | neutral | Det at kunne noget; et talent eller en færdighed. | Ability; skill. | Her bruger jeg mine evner på alle mulige måder. | Here I use my abilities in all sorts of ways. | evnen til; efter bedste evne; gode evner | færdighed; talent; kompetence | -
+
+@ målsætning
+forms: målsætning, målsætningen, målsætninger, målsætningerne, målsætnings, målsætningens, målsætningers, målsætningernes
+class: substantiv
+S: t2-aarsag | formal | Det, man har bestemt skal være målet for en aktivitet eller et projekt. | Objective; target. | Hvor mange unge skal ifølge målsætningen deltage i 2026? | According to the objective, how many young people should take part in 2026? | have som målsætning; nå sin målsætning | mål; formål | -
+
+@ krav
+forms: krav, kravet, kravene, kravs, kravets, kravenes
+class: substantiv
+S: t2-aarsag | neutral | Noget, der skal opfyldes; en betingelse. | Requirement; demand. | Socialisterne gik på gaden med krav om, at kongen skulle afsættes. | The socialists took to the streets demanding that the king be deposed. | krav om; stille krav; leve op til kravene; have krav på | betingelse; fordring | -
+S: t2-aarsag | formal | Penge eller ret, som man mener at have til gode. | Claim; entitlement. | Du har krav på erstatning. | You are entitled to compensation. | have krav på | ret | -
+
+@ typisk
+forms: typisk, typiske
+class: adjektiv
+S: t2-egenskab | neutral | Som særlig ofte gælder for en bestemt slags personer eller ting. | Typical; typically. | Som topleder har man typisk en travl og krævende arbejdsdag. | As a top manager you typically have a busy and demanding working day. | typisk for; typisk dansk | karakteristisk; normal | usædvanlig; atypisk
+
+@ udvalg
+forms: udvalg, udvalget, udvalgene, udvalgs, udvalgets, udvalgenes
+class: substantiv
+S: t2-samfund | neutral | De varer, kurser eller muligheder, man kan vælge imellem. | Selection; range. | Man skal tilpasse udvalget af uddannelser efter behovet. | The range of programmes should be adjusted to the need. | et stort udvalg; udvalget af | sortiment | -
+S: t2-samfund | formal | En gruppe personer, der er valgt til at tage sig af en bestemt opgave. | Committee. | Sagen skal behandles i kommunens udvalg. | The matter is to be dealt with by the municipal committee. | sidde i et udvalg; nedsætte et udvalg | komité | -
+
+@ karakteristisk
+forms: karakteristisk, karakteristiske
+class: adjektiv
+S: t2-egenskab | formal | Som er særlig kendetegnende for nogen eller noget. | Characteristic; distinctive. | Man kommer forbi Hærvejens karakteristiske gamle broer. | You pass the Army Road's characteristic old bridges. | karakteristisk for | typisk; kendetegnende | -
+
+@ udvide
+forms: udvide, udvider, udvidede, udvidet, udvides, udvidende
+class: verbum
+S: t2-aendring | neutral | Gøre større ved at lægge noget til. | To expand; to extend. | Afdelingen er i dag udvidet med oliekridt og farvekridt. | The department has today been expanded with oil pastels and crayons. | udvide med; udvide sortimentet | forstørre; øge | indskrænke
+S: t2-aendring | neutral | (udvide sig) Blive større i omfang. | To expand (oneself); to grow. | Byen har udvidet sig mod syd. | The town has expanded southwards. | udvide sig | vokse | -
+
+@ reklame
+forms: reklame, reklamen, reklamer, reklamerne, reklames, reklamens, reklamers, reklamernes
+class: substantiv
+S: t2-samfund | neutral | Det at gøre folk opmærksomme på en vare eller et firma for at sælge noget; en annonce. | Advertising; advertisement. | Vikinger har længe været populære i reklamer og logoer. | Vikings have long been popular in advertisements and logos. | reklame for; lave reklame; reklamer på tv | annonce; markedsføring | -
+
+@ kontrast
+forms: kontrast, kontrasten, kontraster, kontrasterne, kontrasts, kontrastens, kontrasters, kontrasternes
+class: substantiv
+S: t2-argument | formal | Det, at to ting står som modsætninger eller er meget forskellige. | Contrast. | Han viser kontrasten mellem barnets åbne sind og de voksnes verden. | He shows the contrast between the child's open mind and the adult world. | kontrasten mellem; i kontrast til; stå i kontrast til | modsætning | lighed
+
+@ omtale
+forms: omtale, omtaler, omtalte, omtalt, omtales, omtalende
+class: verbum
+S: t2-argument | neutral | Nævne, beskrive eller fortælle om noget. | To mention; to discuss; to describe. | I Tyskland omtaler man det på en anden måde. | In Germany it is referred to in a different way. | omtale som; den omtalte sag | nævne; beskrive | -
+S: t2-argument | neutral | Tale om nogen eller noget på en bestemt måde. | To speak of (in a certain way). | Hun omtales ofte som en dygtig leder. | She is often spoken of as a capable leader. | omtale positivt; omtale som | betegne; kalde | -
+
+@ kvalitet
+forms: kvalitet, kvaliteten, kvaliteter, kvaliteterne, kvalitets, kvalitetens, kvaliteters, kvaliteternes
+class: substantiv
+S: t2-egenskab | neutral | Hvor gode egenskaber noget har. | Quality. | Musikerne viser kvaliteten af det bornholmske musikliv. | The musicians show the quality of Bornholm's music scene. | høj kvalitet; af god kvalitet; kvaliteten af | standard | -
+S: t2-egenskab | neutral | En god egenskab ved noget eller nogen. | (good) Quality; strength. | En af hans kvaliteter er, at han lytter. | One of his qualities is that he listens. | gode kvaliteter | styrke; egenskab | svaghed
+
+@ påstand
+forms: påstand, påstanden, påstande, påstandene, påstands, påstandens, påstandes, påstandenes
+class: substantiv
+S: t2-argument | formal | Noget, man siger er sandt, uden at bevise det. | Claim; assertion. | Det er en påstand, der ikke holder. | That is a claim that does not hold up. | fremsætte en påstand; påstanden om; påstand mod påstand | udsagn; postulat | bevis
+
+@ ansøgning
+forms: ansøgning, ansøgningen, ansøgninger, ansøgningerne, ansøgnings, ansøgningens, ansøgningers, ansøgningernes
+class: substantiv
+S: t2-arbejde | formal | Det at søge om noget; den tekst, man skriver, når man søger. | Application. | Juryen var imponeret over den bornholmske ansøgning. | The jury was impressed by the Bornholm application. | sende en ansøgning; ansøgning om; skrive en ansøgning | anmodning | -
+
+@ investere
+forms: investere, investerer, investerede, investeret, investeres, investerende
+class: verbum
+S: t2-samfund | formal | Sætte penge i noget for at få et økonomisk udbytte senere. | To invest. | Private firmaer har fået større interesse for at investere i vindmøller. | Private firms have become more interested in investing in wind turbines. | investere i; investere penge | - | -
+
+@ vejledning
+forms: vejledning, vejledningen, vejledninger, vejledningerne, vejlednings, vejledningens, vejledningers, vejledningernes
+class: substantiv
+S: t2-arbejde | neutral | Råd og hjælp fra en, der ved meget om et emne. | Guidance; advice. | Man kan opleve naturen under kompetent vejledning. | You can experience nature under expert guidance. | under vejledning; få vejledning; studievejledning | rådgivning | -
+S: t2-arbejde | neutral | En tekst med råd eller instruktioner. | Instructions; guide. | Læs vejledningen, før du bruger maskinen. | Read the instructions before you use the machine. | følge vejledningen; brugsvejledning | instruktion; anvisning | -
+
+@ forslag
+forms: forslag, forslaget, forslagene, forslags, forslagets, forslagenes
+class: substantiv
+S: t2-argument | neutral | En idé eller plan, som man foreslår, at andre tager stilling til. | Proposal; suggestion. | Et af forslagene er at tilbyde dem et kursus i jobsøgning. | One of the proposals is to offer them a course in job seeking. | komme med et forslag; forslag til; vedtage et forslag | idé; anbefaling | -
+
+@ informere
+forms: informere, informerer, informerede, informeret, informeres, informerende
+class: verbum
+S: t2-argument | formal | Give oplysninger om noget. | To inform. | Man kunne informere mere om mistænkelige mails. | You could provide more information about suspicious e-mails. | informere om; holde nogen informeret | oplyse; underrette | -
+
+@ undtagelse
+forms: undtagelse, undtagelsen, undtagelser, undtagelserne, undtagelses, undtagelsens, undtagelsers, undtagelsernes
+class: substantiv
+S: t2-fordel | formal | Noget eller nogen, som en regel ikke gælder for. | Exception. | Vi har vandret sammen i 25 år med undtagelse af nogle få år. | We have hiked together for 25 years with the exception of a few years. | med undtagelse af; en undtagelse fra; uden undtagelse | - | regel
+
+@ beklage
+forms: beklage, beklager, beklagede, beklaget, beklages, beklagende
+class: verbum
+S: t2-holdning | formal | Sige, at man er ked af noget, man har gjort. | To apologise; to regret. | Vi beklager forsinkelsen. | We apologise for the delay. | beklage at; vi beklager | undskylde | -
+S: t2-holdning | formal | Sige, at man er skuffet eller ked af noget, der er sket. | To regret; to deplore. | Mange beklager, at butikkerne lukker. | Many people regret that the shops are closing. | beklage at | - | glæde sig over
+S: t2-holdning | neutral | (beklage sig) Give udtryk for utilfredshed. | To complain. | Han beklagede sig over larmen. | He complained about the noise. | beklage sig over | klage; brokke sig | -
+
+@ fortryde
+forms: fortryde, fortryder, fortrød, fortrudt, fortrydes, fortrydende, fortrudte
+class: verbum
+S: t2-holdning | neutral | Ønske, at man ikke havde gjort eller sagt noget. | To regret. | Hun valgte livet som selvstændig, og det har hun ikke fortrudt. | She chose to be self-employed, and she has not regretted it. | fortryde at; fortryde noget | angre | -
+
+@ kulturel
+forms: kulturel, kulturelt, kulturelle
+class: adjektiv
+S: t2-egenskab | neutral | Som har med kultur at gøre, fx kunst, musik og et folks levevis. | Cultural. | Lokalerne udlejes til andre aktiviteter, primært kulturelle. | The premises are rented out for other activities, mainly cultural ones. | kulturelle tilbud; kulturel arv; kulturelle forskelle | - | -
+
+@ arbejdsmæssig
+forms: arbejdsmæssig, arbejdsmæssigt, arbejdsmæssige
+class: adjektiv
+S: t2-arbejde | neutral | Som har med ens arbejde eller job at gøre. | Work-related; professional. | Arbejdsmæssigt set var det et godt år. | Work-wise, it was a good year. | arbejdsmæssigt set; arbejdsmæssige udfordringer | faglig; jobmæssig | privat
+
+@ advarsel
+forms: advarsel, advarslen(elleruofficielform:advarselen), advarsler, advarslerne, advarsels, advarslen(elleruofficielform:advarselen)s, advarslers, advarslernes
+class: substantiv
+S: t2-holdning | neutral | Besked om en fare eller noget ubehageligt, som man bør undgå. | Warning. | Lægen gav ham en advarsel om at stoppe med at ryge. | The doctor gave him a warning to stop smoking. | en advarsel om; give en advarsel; trods advarsler | varsel | -
+
+@ idyllisere
+forms: idyllisere, idylliserer, idylliserede, idylliseret, idylliseres, idylliserende
+class: verbum
+S: t2-holdning | bookish | Fremstille noget som mere harmonisk og konfliktfrit, end det er. | To idealise; to romanticise. | Bogen idylliserer livet på landet. | The book romanticises life in the countryside. | idyllisere fortiden | forskønne; romantisere | -
+
+@ betingelse
+forms: betingelse, betingelsen, betingelser, betingelserne, betingelses, betingelsens, betingelsers, betingelsernes
+class: substantiv
+S: t2-aarsag | formal | Et krav, der skal opfyldes, før noget kan ske. | Condition (requirement). | Du kan få lånet på den betingelse, at du betaler hver måned. | You can have the loan on condition that you pay every month. | på den betingelse at; stille betingelser; på betingelse af | krav; forudsætning | -
+S: t2-aarsag | formal | (betingelser) De forhold, noget foregår under. | Conditions; circumstances. | Planterne vokser under gode betingelser. | The plants grow under good conditions. | gode betingelser; under disse betingelser | vilkår; forhold | -
+
+@ forenkle
+forms: forenkle, forenkler, forenklede, forenklet, forenkles, forenklende
+class: verbum
+S: t2-aendring | formal | Gøre noget enklere og lettere at forstå. | To simplify. | Kommunen vil forenkle reglerne for at bygge vindmøller. | The municipality wants to simplify the rules for building wind turbines. | forenkle reglerne; forenklet | simplificere | komplicere
+
+@ forkorte
+forms: forkorte, forkorter, forkortede, forkortet, forkortes, forkortende
+class: verbum
+S: t2-aendring | neutral | Gøre noget kortere i tid. | To shorten (in time). | Man kan forkorte sagsbehandlingen ved at begrænse klagemulighederne. | You can shorten case processing by limiting the options for complaint. | forkorte tiden; forkorte arbejdstiden | afkorte; reducere | forlænge
+S: t2-aendring | neutral | Gøre en tekst eller en ting kortere. | To shorten; to abridge. | Artiklen blev forkortet til en side. | The article was shortened to one page. | forkorte en tekst | - | forlænge
+
+@ udelukke
+forms: udelukke, udelukker, udelukkede, udelukket, udelukkes, udelukkende
+class: verbum
+S: t2-argument | formal | Afvise noget som en mulighed. | To rule out. | Man kan ikke udelukke, at planerne bliver opgivet. | It cannot be ruled out that the plans will be abandoned. | kan ikke udelukke; udelukke muligheden | afvise | -
+S: t2-argument | formal | Nægte nogen at være med i noget. | To exclude. | Spilleren blev udelukket fra holdet. | The player was excluded from the team. | udelukke fra | ekskludere | inkludere
+
+@ modsige
+forms: modsige, modsiger, modsagde, modsagt, modsiges, modsigende, modsagte
+class: verbum
+S: t2-argument | formal | Sige, at man er uenig med nogen eller i noget. | To contradict (someone). | Hun modsagde sin chef på mødet. | She contradicted her boss at the meeting. | modsige nogen | - | give ret
+S: t2-argument | formal | Ikke stemme overens med noget. | To contradict (a fact, a claim). | Resultaterne modsiger den tidligere undersøgelse. | The results contradict the earlier study. | modsige sig selv | stride mod | bekræfte
+
+@ logisk
+forms: logisk, logiske
+class: adjektiv
+S: t2-argument | neutral | Som følger en fornuftig tankegang; som er let at forstå. | Logical. | Det er logisk, at prisen stiger, når efterspørgslen stiger. | It is logical that the price rises when demand rises. | logisk set; en logisk forklaring | fornuftig; naturlig | ulogisk
+
+@ beregne
+forms: beregne, beregner, beregnede, beregnet, beregnes, beregnende
+class: verbum
+S: t2-samfund | formal | Finde frem til et tal eller en størrelse ved at regne. | To calculate. | Man har beregnet, hvor meget strøm møllerne kan producere. | It has been calculated how much power the turbines can produce. | beregne prisen; beregne at | udregne | -
+S: t2-samfund | formal | (beregnet til/på) Planlagt til et bestemt formål. | Intended (for). | Lokalet er beregnet til 50 personer. | The room is intended for 50 people. | beregnet til; beregnet på | tiltænkt | -
+
+@ offentliggøre
+forms: offentliggøre, offentliggør, ..gjorde, ..gjort, offentliggøres, offentliggørende, ..gjorte
+class: verbum
+S: t2-samfund | formal | Gøre noget kendt for offentligheden. | To publish; to announce. | Resultaterne af undersøgelsen blev offentliggjort i går. | The results of the study were published yesterday. | offentliggøre en rapport; offentliggøre resultaterne | publicere; meddele | hemmeligholde
+
+@ muliggøre
+forms: muliggøre, muliggør, ..gjorde, ..gjort, muliggøres, muliggørende, ..gjorte
+class: verbum
+S: t2-aendring | formal | Gøre det muligt, at noget kan ske. | To make possible; to enable. | Ny teknologi muliggør større vindmøller. | New technology makes larger wind turbines possible. | muliggøre at | gøre muligt | forhindre
+
+@ problemstilling
+forms: problemstilling, problemstillingen, problemstillinger, problemstillingerne, problemstillings, problemstillingens, problemstillingers, problemstillingernes
+class: substantiv
+S: t2-argument | formal | Et problem, som man beskriver eller arbejder med. | Issue; question (under discussion). | Teksten tager en vigtig problemstilling op. | The text addresses an important issue. | tage en problemstilling op; en kompleks problemstilling | problem; problematik; spørgsmål | -
+
+@ barriere
+forms: barriere, barrieren, barrierer, barriererne, barrieres, barrierens, barrierers, barrierernes
+class: substantiv
+S: t2-fordel | formal | Noget, der gør det svært eller umuligt at komme videre. | Barrier; obstacle. | Prisen er den største barriere for mange. | The price is the biggest barrier for many. | en barriere for; nedbryde barrierer | forhindring; hindring | -
+
+@ gentage
+forms: gentage, gentager, gentog, gentaget, gentagenellergentaget, gentagne, gentages, gentagende
+class: verbum
+S: t2-aendring | neutral | Gøre eller sige noget igen. | To repeat. | Hun gentog spørgsmålet. | She repeated the question. | gentage sig; gentage en fejl | - | -
+S: t2-aendring | neutral | (gentage sig) Ske igen. | To happen again; to recur. | Vi håber ikke, at det gentager sig. | We hope it does not happen again. | historien gentager sig | - | -
+
+@ benægte
+forms: benægte, benægter, benægtede, benægtet, benægtes, benægtende
+class: verbum
+S: t2-argument | formal | Sige, at en påstand eller anklage ikke er rigtig. | To deny. | Han benægter, at han kendte til planerne. | He denies that he knew about the plans. | benægte at; benægte en anklage | afvise; nægte | indrømme; bekræfte
+
+@ forsikring
+forms: forsikring, forsikringen, forsikringer, forsikringerne, forsikrings, forsikringens, forsikringers, forsikringernes
+class: substantiv
+S: t2-samfund | neutral | En aftale, hvor et selskab betaler erstatning, hvis der sker skade eller ulykke. | Insurance. | Husk at tegne en forsikring, før du rejser. | Remember to take out insurance before you travel. | tegne en forsikring; forsikringen dækker | - | -
+S: t2-samfund | formal | En erklæring om, at noget er sandt eller vil ske. | Assurance. | Vi fik forsikringer om, at alt ville gå godt. | We were given assurances that everything would go well. | give forsikring om | løfte | -
+
+@ udbetaling
+forms: udbetaling, udbetalingen, udbetalinger, udbetalingerne, udbetalings, udbetalingens, udbetalingers, udbetalingernes
+class: substantiv
+S: t2-samfund | formal | Det at betale et beløb ud til nogen. | Payment; payout. | Udbetalingen af løn sker den sidste dag i måneden. | Salaries are paid on the last day of the month. | udbetaling af; få en udbetaling | - | indbetaling

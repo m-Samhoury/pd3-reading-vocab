@@ -51,7 +51,9 @@ def dictionary_info(w, ddo_e, wikt, private):
     info = {"ddo_url": d.get("url") or "https://ordnet.dk/ddo/ordbog?query=" + urllib.parse.quote(q),
             "ordbogen_url": "https://www.ordbogen.com/da/search/classic?query=" + urllib.parse.quote(q) + "&dictionaryId=ordbogen-daen"}
     if d.get("same_class"):
-        info.update({"gender": d.get("gender"), "inflection": d.get("inflection", ""), "forms": d.get("forms", []),
+        # DDO's tables list the inflected forms; show the headword first (en virksomhed · virksomheden …)
+        forms = [[w["lemma"]] + fs for fs in d.get("forms", [])]
+        info.update({"gender": d.get("gender"), "inflection": d.get("inflection", ""), "forms": forms,
                      "invariable": not d.get("inflection")})
     if w["id"] in wikt:
         info["en"] = wikt[w["id"]]["glosses"]

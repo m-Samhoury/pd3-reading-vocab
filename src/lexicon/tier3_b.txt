@@ -1,0 +1,394 @@
+# Tier 3 lexicon – part B. Format: see tier2_a.txt.
+
+@ populær
+forms: populær, populært, populære, populærere, populærest
+class: adjektiv
+S: t3-beskrivelse | neutral | Som mange mennesker kan lide. | Popular. | Vikingeaktiviteter er blevet populære som turistattraktioner. | Viking activities have become popular as tourist attractions. | populær blandt; meget populær | yndet; efterspurgt | upopulær
+
+@ arkæologisk
+forms: arkæologisk, arkæologiske
+class: adjektiv
+S: t3-sted | formal | Som har med arkæologi og fortidens fund at gøre. | Archaeological. | Arkæologiske udgravninger giver et godt billede af vikingetiden. | Archaeological excavations give a good picture of the Viking Age. | arkæologiske fund; arkæologiske udgravninger | - | -
+
+@ inspirere
+forms: inspirere, inspirerer, inspirerede, inspireret, inspireres, inspirerende
+class: verbum
+S: t3-tanke | neutral | Give nogen lyst og idéer til at skabe eller gøre noget. | To inspire. | Litteraturen inspirerer hende mere end managementbøger. | Literature inspires her more than management books. | inspirere til; blive inspireret af | stimulere | -
+
+@ marked
+forms: marked, markedet, markeder, markederne, markeds, markedets, markeders, markedernes
+class: substantiv
+S: t3-arbejde | neutral | Det økonomiske område, hvor der handles med varer og tjenester. | Market (economy). | Produkterne skal præsenteres for et marked. | The products must be presented to a market. | på markedet; arbejdsmarkedet; markedet for | - | -
+S: t3-sted | neutral | En plads, hvor man sælger varer fra boder, ofte på faste dage. | Market (place). | Folk mødtes på torve og markeder for at handle. | People met at squares and markets to trade. | gå på marked; et julemarked | torv | -
+
+@ arv
+forms: arv, arven, arvs, arvens
+class: substantiv
+S: t3-samfund | neutral | Traditioner, tanker og kultur, som vi har fået fra tidligere generationer. | Heritage; legacy. | Teksten handler om arven fra vikingerne. | The text is about the legacy of the Vikings. | kulturarv; social arv; arven fra | eftermæle | -
+S: t3-samfund | neutral | Penge og ting, man får, når et familiemedlem dør. | Inheritance. | Hun fik huset i arv. | She inherited the house. | få i arv; arv og gæld | - | -
+
+@ central
+forms: central, centralt, centrale
+class: adjektiv
+S: t3-beskrivelse | neutral | Som ligger i eller nær midten. | Central; centrally located. | Hun bor centralt i Haderslev. | She lives centrally in Haderslev. | centralt beliggende; bo centralt | - | perifer
+S: t3-beskrivelse | formal | Meget vigtig. | Central; key. | Kongen havde en central magt i vikingetiden. | The king had central power in the Viking Age. | en central rolle; et centralt spørgsmål | vigtig; væsentlig | perifer
+
+@ omfatte
+forms: omfatte, omfatter, omfattede, omfattet, omfattes, omfattende
+class: verbum
+S: t3-forhold | formal | Have noget som en del af sig; gælde for. | To include; to cover. | Zonen omfattede blandt andet Flensborg. | The zone included Flensburg, among other places. | omfatte både; være omfattet af | indeholde; dække | udelukke
+
+@ samling
+forms: samling, samlingen, samlinger, samlingerne, samlings, samlingens, samlingers, samlingernes
+class: substantiv
+S: t3-sted | neutral | Mange genstande af samme slags, som nogen har samlet. | Collection. | Museet har en stor samling værker af landskabsmaleren. | The museum has a large collection of works by the landscape painter. | en samling af; museets samling | - | -
+S: t3-samfund | neutral | Det at samle noget, der var delt. | Union; reunification. | Genforeningen var en samling af landet. | The Reunification was a uniting of the country. | - | forening | deling
+
+@ bekymring
+forms: bekymring, bekymringen, bekymringer, bekymringerne, bekymrings, bekymringens, bekymringers, bekymringernes
+class: substantiv
+S: t3-tanke | neutral | En følelse af uro over, at noget kan gå galt. | Concern; worry. | Det er en almindelig bekymring for nye ledere. | It is a common concern for new managers. | bekymring for; give anledning til bekymring | uro; ængstelse | -
+
+@ landskab
+forms: landskab, landskabet, landskaber, landskaberne, landskabs, landskabets, landskabers, landskabernes
+class: substantiv
+S: t3-sted | neutral | Den natur, man kan se i et område, med fx marker, skove og bakker. | Landscape; scenery. | Museet ligger i et af Danmarks flotteste landskaber. | The museum lies in one of Denmark's finest landscapes. | et smukt landskab; et afvekslende landskab | natur; egn | -
+
+@ baggrund
+forms: baggrund, baggrunden, baggrunde, baggrundene, baggrunds, baggrundens, baggrundes, baggrundenes
+class: substantiv
+S: t3-forhold | neutral | De forhold eller begivenheder, som forklarer noget. | Background; reason. | Der er flere baggrunde for beslutningen. | There are several reasons behind the decision. | på baggrund af; baggrunden for | grundlag; årsag | -
+S: t3-forhold | neutral | Det, der er bag ved noget, man ser på. | Background (visual). | Mindesmærket ses med møllen i baggrunden. | The memorial is seen with the mill in the background. | i baggrunden | - | forgrund
+S: t3-forhold | neutral | Ens uddannelse, familie og livshistorie. | Background (personal). | Hun har en baggrund som sygeplejerske. | She has a background as a nurse. | social baggrund; anden etnisk baggrund | - | -
+
+@ overhovedet
+forms: overhovedet
+class: adverbium
+S: t3-beskrivelse | neutral | Bruges til at forstærke i nægtende og spørgende sætninger; i det hele taget. | At all; in the first place. | De var bekymrede for, om de overhovedet kunne få et job. | They were worried about whether they could get a job at all. | overhovedet ikke; hvis overhovedet | i det hele taget; slet | -
+
+@ såkaldt
+forms: såkaldt, såkaldte
+class: adjektiv
+S: t3-beskrivelse | formal | Som har den nævnte betegnelse (som ikke altid er helt rigtig). | So-called. | Der blev stemt i den såkaldte nordlige zone. | Votes were cast in the so-called northern zone. | den såkaldte | - | -
+
+@ seværdighed
+forms: seværdighed, seværdigheden, seværdigheder, seværdighederne, seværdigheds, seværdighedens, seværdigheders, seværdighedernes
+class: substantiv
+S: t3-sted | neutral | En bygning, et kunstværk eller et sted, som turister gerne vil se. | Sight; attraction. | Ruten byder på historiske huse og kuriøse seværdigheder. | The route offers historic houses and curious sights. | byens seværdigheder; se seværdighederne | attraktion | -
+
+@ sammenhold
+forms: sammenhold, sammenholdet, sammenholds, sammenholdets
+class: substantiv
+S: t3-samfund | neutral | Det, at en gruppe holder sammen og hjælper hinanden. | Solidarity; togetherness. | Det var specielt at fejre så mange års sammenhold. | It was special to celebrate so many years of togetherness. | et stærkt sammenhold | fællesskab; solidaritet | -
+
+@ adgang
+forms: adgang, adgangen, adgange, adgangene, adgangs, adgangens, adganges, adgangenes
+class: substantiv
+S: t3-forhold | neutral | Mulighed for eller ret til at komme ind et sted eller få noget. | Access; admission. | Jeg har også gratis adgang til de fleste koncerter. | I also have free admission to most concerts. | adgang til; gratis adgang; få adgang | indgang | -
+
+@ genstand
+forms: genstand, genstanden, genstande, genstandene, genstands, genstandens, genstandes, genstandenes
+class: substantiv
+S: t3-sted | neutral | En fysisk ting. | Object; item. | Foredrag foregår med historiske fotos og originale genstande. | Talks take place with historical photos and original objects. | originale genstande; en genstand fra | ting; objekt | -
+S: t3-tanke | formal | Det, som en følelse eller handling er rettet mod. | Subject; object (of). | Sagen blev genstand for en heftig debat. | The matter became the subject of a heated debate. | være genstand for | emne | -
+
+@ tillid
+forms: tillid, tilliden, tillids, tillidens
+class: substantiv
+S: t3-samfund | neutral | Følelsen af at kunne stole på nogen eller noget. | Trust; confidence. | Bankerne skal kunne tage en risiko, hvis de har tillid til en iværksætter. | Banks should be able to take a risk if they trust an entrepreneur. | have tillid til; vise tillid; miste tilliden | tiltro | mistillid
+
+@ præcis
+forms: præcis, præcist, præcise, præcisere
+class: adjektiv
+S: t3-beskrivelse | neutral | Helt nøjagtig og korrekt. | Exact; precise. | Det er svært at fastslå det præcise antal. | It is difficult to establish the exact number. | det præcise antal; præcis hvad | nøjagtig; eksakt | upræcis
+S: t3-beskrivelse | neutral | Som kommer til tiden. | Punctual; on time. | Toget var præcis. | The train was on time. | komme præcis | punktlig | forsinket
+
+@ håndværk
+forms: håndværk, håndværket, håndværkene, håndværks, håndværkets, håndværkenes
+class: substantiv
+S: t3-sted | neutral | Arbejde, hvor man laver ting med hænder og redskaber. | Craft; craftsmanship. | Prøv kræfter med vikingernes håndværk og daglige gøremål. | Try your hand at the Vikings' crafts and daily chores. | kunsthåndværk; et godt håndværk | fag | -
+
+@ anbefale
+forms: anbefale, anbefaler, anbefalede, anbefalet, anbefales, anbefalende
+class: verbum
+S: t3-handling | neutral | Foreslå noget og sige, at det er godt. | To recommend. | Jeg kan kun anbefale at blive frivillig. | I can only recommend becoming a volunteer. | anbefale at; anbefale nogen noget; kan varmt anbefales | foreslå; råde til | fraråde
+
+@ resultat
+forms: resultat, resultatet, resultater, resultaterne, resultats, resultatets, resultaters, resultaternes
+class: substantiv
+S: t3-forhold | neutral | Det, noget fører til; udfaldet. | Result; outcome. | Resultaterne af afstemningerne betød, at Sønderjylland kom tilbage til Danmark. | The results of the referendums meant that Southern Jutland returned to Denmark. | resultatet af; et godt resultat; som resultat af | udfald; følge; konsekvens | årsag
+
+@ beliggenhed
+forms: beliggenhed, beliggenheden, beliggenheder, beliggenhederne, beliggenheds, beliggenhedens, beliggenheders, beliggenhedernes
+class: substantiv
+S: t3-sted | formal | Det sted, hvor en by, bygning eller lignende ligger. | Location; situation. | Bornholms østlige beliggenhed giver en anden geologi. | Bornholm's easterly location gives a different geology. | en central beliggenhed; en smuk beliggenhed | placering | -
+
+@ institution
+forms: institution, institutionen, institutioner, institutionerne, institutions, institutionens, institutioners, institutionernes
+class: substantiv
+S: t3-samfund | formal | En organisation, der løser bestemte opgaver for samfundet, fx et hospital eller en skole. | Institution. | En række statslige institutioner kom til byen. | A number of state institutions came to the town. | offentlige institutioner; en daginstitution | organisation; anstalt | -
+
+@ afvekslende
+forms: afvekslende
+class: adjektiv
+ddo: afveksle
+S: t3-beskrivelse | neutral | Varieret, så der kommer noget nyt hele tiden. | Varied. | Man går gennem et afvekslende landskab med skove og enge. | You walk through a varied landscape with forests and meadows. | et afvekslende landskab; afvekslende arbejde | varieret | ensformig
+
+@ undervejs
+forms: undervejs
+class: adverbium
+S: t3-beskrivelse | neutral | Mens man er på vej; i løbet af et forløb. | On the way; along the way. | De fleste har begået nogle begynderfejl undervejs. | Most have made some beginner's mistakes along the way. | undervejs mod; stoppe undervejs | på vejen | -
+
+@ anlægge
+forms: anlægge, anlægger, anlagde, anlagt, anlægges, anlæggende, anlagte
+class: verbum
+S: t3-handling | formal | Planlægge og bygge noget, fx en vej, en park eller en bane. | To construct; to lay out. | Der anlægges en skøjtebane midt i parken om vinteren. | An ice rink is laid out in the middle of the park in winter. | anlægge en vej; anlægge en have | bygge; etablere | -
+S: t3-handling | formal | Starte en retssag mod nogen. | To bring (a lawsuit). | Hun anlagde sag mod sin arbejdsgiver. | She brought a case against her employer. | anlægge sag mod | - | -
+
+@ etablere
+forms: etablere, etablerer, etablerede, etableret, etableres, etablerende
+class: verbum
+S: t3-arbejde | formal | Starte og opbygge noget, fx en virksomhed eller et samarbejde. | To establish; to set up. | Han har etableret sit eget værksted i udkanten af Aalborg. | He has set up his own workshop on the outskirts of Aalborg. | etablere en virksomhed; etablere sig | grundlægge; oprette; starte | nedlægge
+
+@ indtryk
+forms: indtryk, indtrykket, indtrykkene, indtryks, indtrykkets, indtrykkenes
+class: substantiv
+S: t3-tanke | neutral | Den opfattelse eller følelse, man får af noget eller nogen. | Impression. | Navnet giver et indtryk af solide og holdbare produkter. | The name gives an impression of solid and durable products. | give et indtryk af; gøre indtryk på; få det indtryk at | opfattelse; fornemmelse | -
+
+@ opbygge
+forms: opbygge, opbygger, opbyggede, opbygget, opbygges, opbyggende
+class: verbum
+S: t3-handling | neutral | Bygge noget op lidt efter lidt. | To build up. | Han ville have beholdt sit job, til han havde opbygget sin virksomhed. | He would have kept his job until he had built up his business. | opbygge en virksomhed; opbygge erfaring | udvikle; etablere | nedbryde
+
+@ arbejdsopgave
+forms: arbejdsopgave, arbejdsopgaven, arbejdsopgaver, arbejdsopgaverne, arbejdsopgaves, arbejdsopgavens, arbejdsopgavers, arbejdsopgavernes
+class: substantiv
+S: t3-arbejde | neutral | Et bestemt stykke arbejde, der skal laves. | Work task; duty. | Hendes nye leder var tydelig omkring hendes arbejdsopgaver. | Her new manager was clear about her tasks. | fordele arbejdsopgaverne; nye arbejdsopgaver | opgave | -
+
+@ identitet
+forms: identitet, identiteten, identiteter, identiteterne, identitets, identitetens, identiteters, identiteternes
+class: substantiv
+S: t3-samfund | neutral | Ens opfattelse af, hvem man er, og hvad der gør én særlig. | Identity. | Hobbyerne er en del af vores identitet. | Our hobbies are part of our identity. | national identitet; ens identitet | selvforståelse | -
+S: t3-samfund | formal | Det at være en bestemt person, fx med navn og CPR-nummer. | Identity (official). | Du skal bevise din identitet med pas. | You must prove your identity with a passport. | - | - | -
+
+@ begivenhed
+forms: begivenhed, begivenheden, begivenheder, begivenhederne, begivenheds, begivenhedens, begivenheders, begivenhedernes
+class: substantiv
+S: t3-samfund | neutral | Noget vigtigt eller særligt, der sker. | Event. | Fortællingerne kunne godt tage udgangspunkt i rigtige begivenheder. | The stories could well be based on real events. | en historisk begivenhed; årets begivenhed | hændelse; arrangement | -
+
+@ fornemmelse
+forms: fornemmelse, fornemmelsen, fornemmelser, fornemmelserne, fornemmelses, fornemmelsens, fornemmelsers, fornemmelsernes
+class: substantiv
+S: t3-tanke | neutral | En følelse eller et indtryk, som man ikke helt kan forklare. | Feeling; sense. | Måske har du lidt på fornemmelsen, hvad jeg taler om. | Perhaps you have some sense of what I am talking about. | have på fornemmelsen; en god fornemmelse | følelse; indtryk | -
+
+@ undgå
+forms: undgå, undgår, undgik, undgået, undgås, undgående
+class: verbum
+S: t3-handling | neutral | Bevidst lade være med at gøre noget eller komme ud for noget. | To avoid. | Man kan selv gøre meget for at undgå at blive offer for it-kriminalitet. | You can do a lot yourself to avoid becoming a victim of cybercrime. | undgå at; kan ikke undgå | - | opsøge
+
+@ forplejning
+forms: forplejning, forplejningen, forplejninger, forplejningerne, forplejnings, forplejningens, forplejningers, forplejningernes
+class: substantiv
+S: t3-sted | formal | Den mad og drikke, man får på fx en tur eller et kursus. | Catering; meals. | Man kan købe tilvalg i forhold til indkvartering og forplejning. | You can buy extras for accommodation and meals. | fuld forplejning; inklusive forplejning | mad; kost | -
+
+@ enestående
+forms: enestående
+class: adjektiv
+S: t3-beskrivelse | formal | Helt særlig og i en klasse for sig. | Unique; outstanding. | Man kan opleve områdets enestående bygningskultur. | You can experience the area's outstanding architecture. | en enestående mulighed; enestående natur | unik; fremragende | almindelig
+
+@ funktion
+forms: funktion, funktionen, funktioner, funktionerne, funktions, funktionens, funktioners, funktionernes
+class: substantiv
+S: t3-forhold | formal | Den opgave eller rolle, noget har. | Function; purpose. | Modellerne giver et indtryk af borgens funktion. | The models give an impression of the fortress's function. | have en funktion; borgens funktion | rolle; opgave | -
+S: t3-forhold | neutral | En mulighed i en maskine eller et program. | Function; feature. | Telefonen har mange funktioner. | The phone has many features. | - | - | -
+
+@ element
+forms: element, elementet, elementer, elementerne, elements, elementets, elementers, elementernes
+class: substantiv
+S: t3-forhold | formal | En del af en større helhed. | Element; feature. | Elementer fra vikingetiden bliver vist med historisk præcision. | Elements from the Viking Age are shown with historical precision. | et vigtigt element; elementer af | del; bestanddel | helhed
+
+@ fremstille
+forms: fremstille, fremstiller, fremstillede, fremstillet, fremstilles, fremstillende
+class: verbum
+S: t3-handling | neutral | Lave eller producere en vare. | To make; to produce. | De fremstiller pølser, som man ikke havde i resten af Danmark. | They make sausages that were not found in the rest of Denmark. | fremstille varer | producere; lave | -
+S: t3-tanke | formal | Beskrive eller vise noget på en bestemt måde. | To portray; to depict. | Vikinger fremstilles ofte som krigere. | Vikings are often portrayed as warriors. | fremstille som | skildre; portrættere | -
+
+@ indflydelse
+forms: indflydelse, indflydelsen, indflydelser, indflydelserne, indflydelses, indflydelsens, indflydelsers, indflydelsernes
+class: substantiv
+S: t3-samfund | neutral | Mulighed for at påvirke eller bestemme over noget. | Influence. | De trives med at have indflydelse og ansvar. | They thrive on having influence and responsibility. | have indflydelse på; få indflydelse; under indflydelse af | magt; påvirkning | -
+
+@ kombinere
+forms: kombinere, kombinerer, kombinerede, kombineret, kombineres, kombinerende
+class: verbum
+S: t3-handling | neutral | Sætte flere ting sammen til en helhed. | To combine. | Kirkerne er bygget som kombinerede kirker og forsvarsværker. | The churches were built as combined churches and fortifications. | kombinere med; i kombination med | forene; blande | adskille
+
+@ indsats
+forms: indsats, indsatsen, indsatser, indsatserne, indsatseellerindsatser, indsatseneellerindsatserne, indsatsens, indsatsers, indsatsernes, indsatseellerindsatsers, indsatseneellerindsatsernes
+class: substantiv
+S: t3-handling | neutral | Den energi og det arbejde, man lægger i at opnå noget. | Effort; contribution. | Det er ikke kun politisk, der kan gøres en indsats. | It is not only in politics that an effort can be made. | gøre en indsats; en stor indsats; indsatsen for | anstrengelse; bidrag | -
+
+@ inspiration
+forms: inspiration, inspirationen, inspirationer, inspirationerne, inspirations, inspirationens, inspirationers, inspirationernes
+class: substantiv
+S: t3-tanke | neutral | Det, der giver én idéer og lyst til at skabe noget. | Inspiration. | Hun bruger skønlitteratur som inspiration til at blive en bedre leder. | She uses fiction as inspiration to become a better leader. | hente inspiration; inspiration til; en kilde til inspiration | - | -
+
+@ afstand
+forms: afstand, afstanden, afstande, afstandene, afstands, afstandens, afstandes, afstandenes
+class: substantiv
+S: t3-forhold | neutral | Hvor langt der er mellem to steder eller ting. | Distance. | De store vindmøller kan ses på lang afstand. | The large wind turbines can be seen from a long distance. | på lang afstand; holde afstand; i gå-afstand | - | nærhed
+S: t3-tanke | formal | (tage afstand fra) Vise, at man ikke er enig i noget. | (distance oneself from) Disagreement. | Partiet tog afstand fra udtalelsen. | The party distanced itself from the statement. | tage afstand fra | - | støtte
+
+@ attraktiv
+forms: attraktiv, attraktivt, attraktive
+class: adjektiv
+S: t3-beskrivelse | neutral | Som mange gerne vil have eller være en del af. | Attractive (desirable). | Det har været attraktivt at have en butik i centrum. | It has been attractive to have a shop in the centre. | en attraktiv arbejdsplads; attraktive priser | tiltrækkende; eftertragtet | uattraktiv
+
+@ rekruttere
+forms: rekruttere, rekrutterer, rekrutterede, rekrutteret, rekrutteres, rekrutterende
+class: verbum
+S: t3-arbejde | formal | Finde og ansætte nye medarbejdere eller medlemmer. | To recruit. | Mange bliver ledere i den virksomhed, de er rekrutteret i. | Many become managers in the company they were recruited into. | rekruttere medarbejdere; rekruttere fra | ansætte; hverve | fyre
+
+@ sundhed
+forms: sundhed, sundheden, sundheds, sundhedens
+class: substantiv
+S: t3-samfund | neutral | Det at have et godt helbred. | Health. | Der er events om alt fra klima til mental sundhed. | There are events about everything from climate to mental health. | mental sundhed; sundhed og trivsel; folkesundhed | helbred | sygdom
+
+@ strækning
+forms: strækning, strækningen, strækninger, strækningerne, stræknings, strækningens, strækningers, strækningernes
+class: substantiv
+S: t3-sted | neutral | Et stykke af en vej eller rute. | Stretch; section (of a route). | På den bredeste strækning er der masser af klitter. | On the widest stretch there are plenty of dunes. | en lang strækning; strækningen mellem | stykke; del | -
+
+@ interesse
+forms: interesse, interessen, interesser, interesserne, interesses, interessens, interessers, interessernes
+class: substantiv
+S: t3-tanke | neutral | Opmærksomhed og lyst til at vide eller gøre mere. | Interest. | Interessen for den firedages arbejdsuge vokser. | Interest in the four-day working week is growing. | interesse for; vise interesse; vække interesse | - | ligegyldighed
+S: t3-tanke | neutral | Noget, man gerne beskæftiger sig med i fritiden. | Interest; hobby. | Vi skifter oftere fritidsinteresser i dag. | We change our hobbies more often today. | fritidsinteresser | hobby | -
+S: t3-samfund | formal | Det, der er til fordel for en person eller gruppe. | Interest (advantage). | Det er i alles interesse at løse problemet. | It is in everyone's interest to solve the problem. | i ens interesse; varetage ens interesser | fordel | -
+
+@ forbindelse
+forms: forbindelse, forbindelsen, forbindelser, forbindelserne, forbindelses, forbindelsens, forbindelsers, forbindelsernes
+class: substantiv
+S: t3-forhold | neutral | (i forbindelse med) Det at noget hænger sammen med eller sker sammen med noget andet. | Connection; (in connection with). | Hvad var overraskende i forbindelse med at blive selvstændig? | What was surprising in connection with becoming self-employed? | i forbindelse med; forbindelsen mellem | sammenhæng | -
+S: t3-forhold | neutral | Kontakt mellem personer eller steder. | Contact; link; connection (transport). | Der er god forbindelse med tog til Aarhus. | There are good train connections to Aarhus. | holde forbindelsen; komme i forbindelse med | kontakt | -
+
+@ sikre
+forms: sikre, sikrer, sikrede, sikret, sikres, sikrende
+class: verbum
+S: t3-handling | neutral | Sørge for, at noget bliver sådan. | To ensure; to secure. | Ambitionen er at sikre, at en femtedel af deltagerne er unge. | The ambition is to ensure that a fifth of the participants are young. | sikre at; sikre sig | garantere; sørge for | -
+S: t3-handling | neutral | Beskytte mod fare eller skade. | To protect; to secure. | Husk at sikre din computer med opdateringer. | Remember to protect your computer with updates. | sikre mod | beskytte | -
+
+@ forhold
+forms: forhold, forholdet, forholdene, forholds, forholdets, forholdenes
+class: substantiv
+S: t3-forhold | neutral | En omstændighed eller et vilkår, der har betydning for noget. | Condition; circumstance; factor. | Forholdene på arbejdspladsen er blevet bedre. | Conditions at the workplace have improved. | under disse forhold; sociale forhold; økonomiske forhold | vilkår; omstændighed | -
+S: t3-forhold | neutral | Den måde, man har det med nogen eller noget på. | Relationship (to). | Tre danskere fortæller om deres forhold til vikinger. | Three Danes talk about their relationship with Vikings. | forholdet til; et godt forhold; et kærlighedsforhold | relation | -
+S: t3-forhold | formal | Hvor stort noget er sammenlignet med noget andet. | Proportion; ratio. | (i forhold til) Prisen er høj i forhold til kvaliteten. | The price is high in relation to the quality. | i forhold til; i forholdet 1:3 | - | -
+
+@ samfund
+forms: samfund, samfundet, samfundene, samfunds, samfundets, samfundenes
+class: substantiv
+S: t3-samfund | neutral | En stor gruppe mennesker, der lever sammen i et land eller område med fælles regler. | Society; community. | Humanister kan bidrage med viden om mennesker og samfund. | Humanities graduates can contribute knowledge about people and society. | det danske samfund; i samfundet; velfærdssamfundet | - | -
+
+@ antal
+forms: antal, antallet, antallene, antals, antallets, antallenes
+class: substantiv
+S: t3-forhold | neutral | Hvor mange der er af noget. | Number. | Man kan reducere antallet af studiepladser. | You can reduce the number of study places. | et stort antal; antallet af; et vist antal | mængde | -
+
+@ række
+forms: række, rækken, rækker, rækkerne, rækkes, rækkens, rækkers, rækkernes
+class: substantiv
+S: t3-forhold | neutral | (en række) Flere ting af samme slags. | A number of; a range of. | Man kan købe en række tilvalg. | You can buy a number of extras. | en række; en hel række | flere; antal | -
+S: t3-forhold | neutral | Ting eller personer, der står ved siden af eller efter hinanden. | Row; line. | Vi sad på første række. | We sat in the front row. | på række; i rækkefølge | - | -
+
+@ egentlig
+forms: egentlig
+class: adverbium
+S: t3-beskrivelse | neutral | I virkeligheden; inderst inde. | Actually; really. | Flere, der egentlig ønskede en humanistisk uddannelse, måtte vælge noget andet. | Several who actually wanted a humanities degree had to choose something else. | egentlig ikke; hvad er det egentlig | faktisk; i grunden | -
+S: t3-beskrivelse | neutral | (adjektiv) Som er det rigtige eller virkelige. | Actual; real; proper. | Det er ikke et egentligt brancheskifte. | It is not a real change of industry. | i egentlig forstand | reel; virkelig | -
+
+@ styrke
+forms: styrke, styrken, styrker, styrkerne, styrkes, styrkens, styrkers, styrkernes
+class: substantiv
+S: t3-forhold | neutral | Noget, man er god til; en god side. | Strength (quality). | Hans styrke ligger i evnen til at vise kontraster. | His strength lies in the ability to show contrasts. | styrker og svagheder; ens styrke | kvalitet | svaghed
+S: t3-forhold | neutral | Fysisk eller psykisk kraft. | Strength; force. | Det kræver styrke at bære de tunge sten. | It takes strength to carry the heavy stones. | med fuld styrke; styrken af | kraft | -
+
+@ tillade
+forms: tillade, tillader, tillod, tilladt, tillades, tilladende, tilladte
+class: verbum
+S: t3-handling | neutral | Give lov til noget. | To allow; to permit. | Hvis man tillader automatiske opdateringer, bliver det sværere for kriminelle. | If you allow automatic updates, it becomes harder for criminals. | tillade at; det er tilladt | give lov til; acceptere | forbyde
+
+@ ansat
+forms: ansat, ansats
+class: substantiv
+ddo: ansætte
+S: t3-arbejde | neutral | En person, der arbejder for en arbejdsgiver mod løn. | Employee. | Der bliver ansat flere humanister i private virksomheder. | More humanities graduates are being employed in private companies. | de ansatte; være ansat som; nyansat | medarbejder; lønmodtager | arbejdsgiver
+
+@ foregå
+forms: foregå, foregår, ..gik, foregået, foregås, foregående
+class: verbum
+S: t3-handling | neutral | Finde sted på et bestemt tidspunkt eller sted. | To take place; to happen. | Foredrag foregår i foredragssalen. | Talks take place in the lecture hall. | foregå i; hvad foregår der | finde sted; ske | -
+
+@ magt
+forms: magt, magten, magter, magterne, magts, magtens, magters, magternes
+class: substantiv
+S: t3-samfund | neutral | Det at kunne bestemme over andre eller over hvad der sker. | Power. | I vikingetiden var der en central magt i form af konger. | In the Viking Age there was a central power in the form of kings. | have magt over; komme til magten; magt og indflydelse | indflydelse | afmagt
+
+@ befolkning
+forms: befolkning, befolkningen, befolkninger, befolkningerne, befolknings, befolkningens, befolkningers, befolkningernes
+class: substantiv
+S: t3-samfund | neutral | Alle de mennesker, der bor i et område eller land. | Population. | Den danske befolkning voksede betydeligt i 1920. | The Danish population grew considerably in 1920. | befolkningen i; en stor del af befolkningen | indbyggere | -
+
+@ opstå
+forms: opstå, opstår, opstod, opstået, opstås, opstående
+class: verbum
+S: t3-handling | neutral | Begynde at være der; komme frem. | To arise; to originate. | Traditionen med de mange kager er opstået her. | The tradition of the many cakes originated here. | opstå af; der opstod et problem | begynde; dukke op | forsvinde
+
+@ udføre
+forms: udføre, udfører, udførte, udført, udføres, udførende
+class: verbum
+S: t3-handling | neutral | Gøre en opgave eller et stykke arbejde. | To carry out; to perform. | Her kan man se imponerende arbejde udført med håndkraft. | Here you can see impressive work carried out by hand. | udføre en opgave; udføre arbejde | gennemføre; lave | -
+
+@ inddrage
+forms: inddrage, inddrager, inddrog, inddraget, inddragenellerinddraget, inddragedeellerinddragne, inddrages, inddragende
+class: verbum
+S: t3-handling | formal | Lade nogen være med i en sag eller beslutning. | To involve; to include. | Nu inddrager jeg alle medarbejdere i beslutningerne. | Now I involve all the employees in the decisions. | inddrage nogen i; inddrage borgerne | involvere | udelukke
+
+@ eksistere
+forms: eksistere, eksisterer, eksisterede, eksisteret, eksisteres, eksisterende
+class: verbum
+S: t3-handling | formal | Findes eller være til. | To exist. | Hvor længe eksisterede Frøslevlejren? | How long did the Frøslev camp exist? | eksistere endnu; ophøre med at eksistere | findes | -
+
+@ lønmodtager
+forms: lønmodtager, lønmodtageren, lønmodtagere, lønmodtagerne, lønmodtagers, lønmodtagerens, lønmodtageres, lønmodtagernes
+class: substantiv
+S: t3-arbejde | formal | En person, der er ansat og får løn for sit arbejde. | Wage earner; employee. | Man har længe diskuteret lønmodtagernes arbejdstid. | Wage earners' working hours have long been debated. | lønmodtagere og arbejdsgivere | ansat; medarbejder | selvstændig; arbejdsgiver
+
+@ betragte
+forms: betragte, betragter, betragtede, betragtet, betragtes, betragtende
+class: verbum
+S: t3-tanke | formal | (betragte som) Opfatte eller regne nogen eller noget som noget bestemt. | To regard (as); to consider. | Jellingstenen betragtes som Danmarks dåbsattest. | The Jelling stone is regarded as Denmark's birth certificate. | betragte som; blive betragtet som | anse for; opfatte som | -
+S: t3-tanke | formal | Se grundigt eller længe på noget. | To look at; to observe. | Hun stod og betragtede maleriet. | She stood looking at the painting. | - | iagttage | -
+
+@ præsentere
+forms: præsentere, præsenterer, præsenterede, præsenteret, præsenteres, præsenterende
+class: verbum
+S: t3-handling | formal | Vise eller lægge noget frem for andre. | To present. | Produkterne skal præsenteres for et marked. | The products must be presented to a market. | præsentere for; præsentere en idé | fremlægge; vise | -
+S: t3-handling | formal | Fortælle andre, hvem nogen er. | To introduce (a person). | Må jeg præsentere min kollega? | May I introduce my colleague? | præsentere sig | introducere | -
+
+@ undvære
+forms: undvære, undværer, undværede, undværet, undværes, undværende
+class: verbum
+S: t3-handling | neutral | Klare sig uden nogen eller noget. | To do without. | Traditionen med at vandre i Viborg vil vi slet ikke undvære. | We would never want to be without the tradition of hiking in Viborg. | kan ikke undvære; kan undværes | - | -
+
+@ mangle
+forms: mangle, mangler, manglede, manglet, mangles, manglende
+class: verbum
+S: t3-handling | neutral | Ikke have noget, man har brug for. | To lack; to be short of. | Der mangler arbejdskraft i Danmark. | There is a shortage of labour in Denmark. | mangle noget; der mangler; manglende | savne | have
+S: t3-handling | neutral | Ikke være til stede, selvom det burde. | To be missing. | Der mangler to stole. | Two chairs are missing. | - | - | -
+
+@ afholde
+forms: afholde, afholder, afholdt, afholdes, afholdende, afholdte
+class: verbum
+S: t3-handling | formal | Arrangere og lade noget finde sted. | To hold (an event). | Marchen afholdes altid den sidste weekend i juni. | The march is always held on the last weekend in June. | afholde et møde; afholde en fest | holde; arrangere | aflyse
+S: t3-handling | formal | (afholde sig fra) Lade være med at gøre noget. | To refrain (from). | Han afholdt sig fra at kommentere sagen. | He refrained from commenting on the matter. | afholde sig fra | undlade | -

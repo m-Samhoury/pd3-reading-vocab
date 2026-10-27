@@ -1,0 +1,35 @@
+# Tier 2 lexicon – part C, incl. bookish words named in the Sokolova guide (source: guide). Format: see tier2_a.txt.
+
+@ kræve
+forms: kræve, kræver, krævede, krævet, kræves, krævende
+class: verbum
+S: t2-aarsag | neutral | Forlange, at noget bliver gjort eller givet. | To demand. | Ejerne af erhvervslokalerne kræver høje huslejer. | The owners of the commercial premises demand high rents. | kræve at; kræve penge; kræve noget af nogen | forlange | -
+S: t2-aarsag | neutral | Være nødvendigt for, at noget kan lade sig gøre. | To require; to take. | Det kræver tid at lære et nyt sprog. | It takes time to learn a new language. | det kræver; kræve meget af | behøve; fordre | -
+
+@ afgøre
+forms: afgøre, afgør, afgjorde, afgjort, afgøres, afgørende, afgjorte
+class: verbum
+source: guide
+S: t2-argument | formal | Træffe den endelige beslutning om noget, der er tvivl eller uenighed om. | To decide; to settle. | Det er op til kommunen at afgøre sagen. | It is up to the municipality to decide the case. | afgøre en sag; det er svært at afgøre | beslutte; bestemme | -
+S: t2-argument | formal | Være det, der bestemmer udfaldet. | To determine; to be decisive for. | Vejret kan afgøre, om turen bliver en succes. | The weather can determine whether the trip is a success. | afgøre udfaldet | bestemme | -
+
+@ vilkår
+forms: vilkår, vilkåret, vilkårene, vilkårs, vilkårets, vilkårenes
+class: substantiv
+source: guide
+S: t2-aarsag | formal | De forhold og omstændigheder, som noget foregår under. | Conditions; terms. | De forsøger at påvirke politikerne for at få bedre vilkår. | They try to influence the politicians in order to get better conditions. | på lige vilkår; gode vilkår; vilkårene for | forhold; betingelser | -
+S: t2-aarsag | formal | Et krav eller en betingelse i en aftale. | Term; condition (of an agreement). | Du skal acceptere vilkårene, før du kan købe billetten. | You must accept the terms before you can buy the ticket. | vilkår og betingelser; på ingen vilkår | betingelse | -
+
+@ fremhæve
+forms: fremhæve, fremhæver, fremhævede, fremhævet, fremhæves, fremhævende
+class: verbum
+source: guide
+S: t2-argument | formal | Lægge vægt på noget og gøre opmærksom på, at det er vigtigt. | To emphasise; to highlight. | Hvad fremhæves ved vikingeborgen Trelleborg? | What is highlighted about the Viking fortress of Trelleborg? | fremhæve at; fremhæve noget som | understrege; påpege | nedtone
+S: t2-argument | formal | Gøre noget mere synligt, fx med farve eller fed skrift. | To highlight (visually). | De vigtigste ord er fremhævet med fed. | The most important words are highlighted in bold. | fremhævet med fed | markere | -
+
+@ undlade
+forms: undlade, undlader, undlod, undladt, undlades, undladende, undladte
+class: verbum
+source: guide
+S: t2-aendring | formal | Lade være med at gøre noget. | To refrain from; to fail to. | Mange undlader at skifte karriere, selvom de ikke er glade for deres arbejde. | Many refrain from changing careers even though they are not happy with their work. | undlade at | lade være med; afholde sig fra | -
+S: t2-aendring | formal | Lade være med at tage noget med. | To leave out; to omit. | Han undlod at nævne prisen. | He omitted to mention the price. | - | udelade | medtage

@@ -26,8 +26,8 @@ def _articles(page):
     for kind, a in zip(parts[0::2], parts[1::2]):
         h1 = re.search(r'<h([12]) class="modern-match">(.*?)</h\1>', a, re.S)
         head = re.sub(r"\s*\d+$", "", _t(h1.group(2))) if h1 else ""
-        pos = re.search(r'class="part-of-speech"[^>]*>(.*?)</span>', a, re.S)
-        pos = _t(pos.group(1)) if pos else ""
+        pos = re.search(r'class="part-of-speech"[^>]*>(.*?)</span>([^<]*)', a, re.S)
+        pos = (_t(pos.group(1)) + _t(pos.group(2))).strip(" ,") if pos else ""   # "substantiv, fælleskøn"
         boj = re.search(r'id="id-boj">(.*?)</div>', a, re.S)
         inflection, forms = "", []
         if boj:

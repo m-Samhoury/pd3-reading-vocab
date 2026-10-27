@@ -1,0 +1,16 @@
+# Tier 2/3 meaning groups: id | name_da | name_en | tier
+t2-arbejde | Arbejde & arbejdsliv | Work & working life | 2
+t2-samfund | Samfund & økonomi | Society & economy | 2
+t2-argument | Påstand, argument & forklaring | Claims, arguments & explanations | 2
+t2-aarsag | Årsag, mål & betingelse | Cause, aim & condition | 2
+t2-aendring | Ændring & handling | Change & action | 2
+t2-holdning | Følelse & holdning | Feelings & attitudes | 2
+t2-egenskab | Egenskab & beskrivelse | Qualities & description | 2
+t2-fordel | Fordel, ulempe & mulighed | Pros, cons & options | 2
+t3-samfund | Samfund & fællesskab | Society & community | 3
+t3-arbejde | Arbejde & organisation | Work & organisation | 3
+t3-sted | Kultur, historie & steder | Culture, history & places | 3
+t3-tanke | Tanke & indtryk | Thoughts & impressions | 3
+t3-handling | Handling & proces | Actions & processes | 3
+t3-beskrivelse | Beskrivelse & grad | Description & degree | 3
+t3-forhold | Forhold & sammenhæng | Relations & context | 3

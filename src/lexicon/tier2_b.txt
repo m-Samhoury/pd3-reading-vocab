@@ -1,0 +1,243 @@
+# Tier 2 lexicon – part B. Format: see tier2_a.txt.
+
+@ argument
+forms: argument, argumentet, argumenter, argumenterne, arguments, argumentets, argumenters, argumenternes
+class: substantiv
+S: t2-argument | neutral | En begrundelse, man giver for eller imod en påstand eller beslutning. | Argument; reason (for or against). | Et vigtigt argument for vindmøller er, at de giver grøn energi. | An important argument for wind turbines is that they provide green energy. | et argument for; et argument imod; komme med argumenter | begrundelse; grund | -
+
+@ velstand
+forms: velstand, velstanden, velstands, velstandens
+class: substantiv
+S: t2-samfund | formal | Det at have gode økonomiske forhold. | Prosperity; affluence. | Velstanden i Danmark er steget meget siden 1960'erne. | Prosperity in Denmark has risen a great deal since the 1960s. | stigende velstand; leve i velstand | rigdom; velfærd | fattigdom
+
+@ virksomhed
+forms: virksomhed, virksomheden, virksomheder, virksomhederne, virksomheds, virksomhedens, virksomheders, virksomhedernes
+class: substantiv
+S: t2-arbejde | neutral | Et firma, der producerer eller sælger varer eller tjenester. | Company; business; firm. | Mange bliver ledere i den samme virksomhed, som de er rekrutteret i. | Many become managers in the same company they were recruited into. | starte en virksomhed; en privat virksomhed; drive virksomhed | firma; selskab; foretagende | -
+S: t2-arbejde | formal | Det at arbejde med eller beskæftige sig med noget. | Activity; operation. | Museet har en omfattende virksomhed med skoletjeneste. | The museum runs an extensive programme for schools. | sætte i virksomhed; være i virksomhed | aktivitet; drift | -
+
+@ medarbejder
+forms: medarbejder, medarbejderen, medarbejdere, medarbejderne, medarbejders, medarbejderens, medarbejderes, medarbejdernes
+class: substantiv
+S: t2-arbejde | neutral | En person, der arbejder sammen med andre et sted, typisk mod løn. | Employee; member of staff. | Nogle virksomheder tilbyder deres medarbejdere en firedages arbejdsuge. | Some companies offer their employees a four-day working week. | nye medarbejdere; medarbejdere og ledere | ansat; kollega | arbejdsgiver; chef
+
+@ borger
+forms: borger, borgeren, borgere, borgerne, borgers, borgerens, borgeres, borgernes
+class: substantiv
+S: t2-samfund | neutral | En person, der bor i en by, en kommune eller et land. | Citizen; resident. | Borgernes modstand kan forsinke processen. | Citizens' opposition can delay the process. | borgerne i kommunen; ældre borgere | indbygger; beboer | -
+
+@ kommune
+forms: kommune, kommunen, kommuner, kommunerne, kommunes, kommunens, kommuners, kommunernes
+class: substantiv
+S: t2-samfund | neutral | Den mindste offentlige enhed i Danmark med et folkevalgt byråd, som bl.a. har ansvar for skoler og ældrepleje. | Municipality; local authority. | Når borgere klager, kan det forlænge kommunernes sagsbehandling. | When citizens complain, it can prolong the municipalities' processing of cases. | i kommunen; kommunens borgere; kontakte kommunen | - | stat
+
+@ undersøgelse
+forms: undersøgelse, undersøgelsen, undersøgelser, undersøgelserne, undersøgelses, undersøgelsens, undersøgelsers, undersøgelsernes
+class: substantiv
+S: t2-argument | neutral | Det at prøve at finde sikker viden om et spørgsmål, fx med interviews eller målinger. | Study; survey; investigation. | En undersøgelse kan bekræfte, at vindmøller kan skade naturen. | A study may confirm that wind turbines can harm nature. | en undersøgelse viser; lave en undersøgelse; ifølge en undersøgelse | analyse; forskning | -
+S: t2-argument | neutral | Det at se nøje og grundigt på noget eller nogen, fx hos lægen. | Examination; check. | Lægen foretog en grundig undersøgelse. | The doctor carried out a thorough examination. | gå til undersøgelse; en lægeundersøgelse | eftersyn; kontrol | -
+
+@ almindelig
+forms: almindelig, almindeligt, almindelige, almindeligtelleralmindelig, almindeligere, almindeligst
+class: adjektiv
+S: t2-egenskab | neutral | Som ikke er anderledes end det normale. | Ordinary; normal; common. | Hvad er den mest almindelige grund til, at nogle ikke skifter karriere? | What is the most common reason why some people do not change careers? | helt almindelig; den mest almindelige; almindelige mennesker | normal; sædvanlig; udbredt | usædvanlig; sjælden
+S: t2-egenskab | formal | Som gælder eller angår alle. | General; universal. | Der er almindelig enighed om, at noget må gøres. | There is general agreement that something must be done. | almindelig enighed; i almindelighed | generel; fælles | særlig
+
+@ grad
+forms: grad, graden, grader, graderne, grads, gradens, graders, gradernes
+class: substantiv
+S: t2-egenskab | neutral | Hvor meget noget er; et trin på en skala. | Degree; extent. | Ordningerne er til en vis grad finansieret af staten. | The schemes are to some extent funded by the state. | til en vis grad; i høj grad; i nogen grad; i stigende grad | omfang; niveau | -
+S: t2-egenskab | neutral | Enhed til at måle temperatur eller vinkler. | Degree (temperature, angle). | Det var 25 grader i skyggen. | It was 25 degrees in the shade. | minus fem grader; en vinkel på 90 grader | - | -
+S: t2-egenskab | formal | Trin i en rangorden, fx en akademisk titel. | Degree; rank. | Hun har en grad i økonomi. | She has a degree in economics. | tage en grad; en akademisk grad | titel; eksamen | -
+
+@ social
+forms: social, socialt, sociale
+class: adjektiv
+S: t2-samfund | neutral | Som har med samvær og kontakt med andre mennesker at gøre. | Social (contact, relations). | Vi har som mennesker brug for sociale relationer. | As humans we need social relationships. | sociale relationer; socialt samvær; sociale medier | - | -
+S: t2-samfund | neutral | Som har med samfundet og forholdet mellem grupper i det at gøre. | Social (society, class). | Romanen handler om en ung kvindes forsøg på at bryde sin sociale arv. | The novel is about a young woman's attempt to break with her social inheritance. | social arv; social ulighed; sociale forhold | samfundsmæssig | -
+S: t2-samfund | formal | Som har med velfærd og hjælp til borgere at gøre. | Social (welfare). | Hun arbejder på det sociale område. | She works in the social welfare sector. | social sikring; sociale ydelser; socialrådgiver | - | -
+
+@ effekt
+forms: effekt, effekten, effekter, effekterne, effekts, effektens, effekters, effekternes
+class: substantiv
+S: t2-aarsag | neutral | Den virkning eller det resultat, noget har. | Effect; impact. | Det fik faktisk den stik modsatte effekt. | It actually had the exact opposite effect. | have en effekt på; en positiv effekt; den modsatte effekt | virkning; resultat; følge | årsag
+
+@ relation
+forms: relation, relationen, relationer, relationerne, relations, relationens, relationers, relationernes
+class: substantiv
+S: t2-fordel | formal | Kontakt eller forbindelse mellem mennesker eller grupper. | Relationship; relation. | Vi har brug for sociale relationer. | We need social relationships. | gode relationer; relationer til andre | forhold; forbindelse | -
+S: t2-fordel | formal | Sammenhæng mellem to eller flere ting. | Connection; relation (to something). | Museet rummer kunst med relation til Bornholm. | The museum holds art with a connection to Bornholm. | med relation til; i relation til | sammenhæng; tilknytning | -
+
+@ positiv
+forms: positiv, positivt, positive, positivere
+class: adjektiv
+S: t2-holdning | neutral | God og gavnlig; som man er glad for. | Positive; good. | Hvad synes hun især er positivt ved at være frivillig? | What does she particularly think is positive about being a volunteer? | en positiv effekt; positive sider | god; gavnlig | negativ
+S: t2-holdning | neutral | Som er venligt stemt og støtter en idé eller et forslag. | Positive (attitude); in favour. | De fleste er positive over for vindmøller. | Most people are positive about wind turbines. | positiv over for; en positiv holdning | velvillig | negativ; afvisende
+
+@ udstilling
+forms: udstilling, udstillingen, udstillinger, udstillingerne, udstillings, udstillingens, udstillingers, udstillingernes
+class: substantiv
+S: t2-samfund | neutral | Et arrangement, hvor man viser kunst eller genstande frem for et publikum. | Exhibition. | På den nye udstilling på Sønderborg Slot kan man se film på tre vægge. | At the new exhibition at Sønderborg Castle you can watch films on three walls. | en udstilling om; en særudstilling; åbne en udstilling | - | -
+
+@ indeholde
+forms: indeholde, indeholder, indeholdt, indeholdes, indeholdende, indeholdte
+class: verbum
+S: t2-egenskab | neutral | Have noget inden i sig. | To contain. | Pølserne indeholder få eller ingen tilsætningsstoffer. | The sausages contain few or no additives. | indeholde mange vitaminer | rumme | -
+S: t2-egenskab | formal | Have noget som en del af sig; betyde. | To include; to involve. | Aftalen indeholder også et krav om bedre arbejdsforhold. | The agreement also includes a requirement for better working conditions. | - | indebære; omfatte | -
+
+@ beskrive
+forms: beskrive, beskriver, beskrev, beskrevet, beskrevenellerbeskrevet, beskrevne, beskrives, beskrivende
+class: verbum
+S: t2-argument | neutral | Fortælle, hvordan noget er, ser ud eller foregår. | To describe. | Romanen beskriver arbejderbevægelsens udvikling. | The novel describes the development of the labour movement. | beskrive hvordan; beskrive nærmere | skildre; fremstille | -
+
+@ forsøge
+forms: forsøge, forsøger, forsøgte, forsøgt, forsøges, forsøgende
+class: verbum
+S: t2-aendring | neutral | Prøve at opnå eller gennemføre noget, uden at være sikker på at lykkes. | To try; to attempt. | Hvordan forsøger skuespillerne at få serien til at virke mere autentisk? | How do the actors try to make the series seem more authentic? | forsøge at; forsøge sig med | prøve | opgive
+
+@ tilbyde
+forms: tilbyde, tilbyder, tilbød, tilbudt, tilbydes, tilbydende, tilbudte
+class: verbum
+S: t2-aendring | neutral | Give nogen mulighed for at få eller tage imod noget. | To offer. | Butikkerne kan tilbyde den samme service som netbutikkerne. | The shops can offer the same service as the online shops. | tilbyde nogen noget; tilbyde hjælp; tilbyde at | byde på | -
+S: t2-aendring | neutral | (tilbyde sig) Sige, at man gerne vil gøre noget; (om lejlighed) opstå. | To volunteer; to arise (of an opportunity). | Hun tilbød sig at hjælpe. | She offered to help. | tilbyde sig at; når lejligheden tilbyder sig | - | -
+
+@ periode
+forms: periode, perioden, perioder, perioderne, periodes, periodens, perioders, periodernes
+class: substantiv
+S: t2-egenskab | neutral | Et afgrænset stykke tid. | Period. | Hun måtte sygemelde sig i en længere periode. | She had to go on sick leave for a long period. | i en periode; en kortere periode; i perioden fra … til | tidsrum; tid | -
+
+@ udtryk
+forms: udtryk, udtrykket, udtrykkene, udtryks, udtrykkets, udtrykkenes
+class: substantiv
+S: t2-argument | neutral | (give udtryk for) Den måde, man viser tanker eller følelser på. | Expression (of feelings, opinions). | Hvilket udsagn passer med det, hun giver udtryk for? | Which statement fits what she expresses? | give udtryk for; komme til udtryk; være udtryk for | ytring | -
+S: t2-argument | neutral | En fast forbindelse af ord. | Expression; phrase. | "Med andre ord" er et almindeligt udtryk. | "In other words" is a common expression. | et fast udtryk | vending; frase | -
+S: t2-argument | neutral | Det en persons ansigt viser om følelser. | Expression (of the face). | Hun havde et træt udtryk i ansigtet. | She had a tired expression on her face. | ansigtsudtryk | mine | -
+
+@ foretrække
+forms: foretrække, foretrækker, foretrak, foretrukket, foretrukkenellerforetrukket, foretrukne, foretrækkes, foretrækkende
+class: verbum
+S: t2-holdning | neutral | Hellere ville have eller vælge noget frem for noget andet. | To prefer. | Hvorfor foretrækker hun skønlitteratur frem for managementlitteratur? | Why does she prefer fiction to management literature? | foretrække frem for; foretrække at | - | -
+
+@ påvirke
+forms: påvirke, påvirker, påvirkede, påvirket, påvirkes, påvirkende
+class: verbum
+S: t2-aendring | neutral | Have en virkning på nogen eller noget og ofte ændre det. | To influence; to affect. | Humanister kan tænke over, hvordan teknologi påvirker mennesker. | Humanities graduates can think about how technology affects people. | påvirke nogen; blive påvirket af | influere | -
+
+@ definere
+forms: definere, definerer, definerede, defineret, defineres, definerende
+class: verbum
+S: t2-argument | formal | Beskrive præcist, hvad noget er eller omfatter. | To define. | Der er ikke nogen, der definerer ens arbejdsopgaver. | Nobody defines your work tasks. | definere et begreb; definere sig selv som | afgrænse; bestemme | -
+
+@ produktion
+forms: produktion, produktionen, produktioner, produktionerne, produktions, produktionens, produktioners, produktionernes
+class: substantiv
+S: t2-samfund | neutral | Det at fremstille noget, fx varer eller energi. | Production. | Det er nødvendigt at øge produktionen af grøn energi. | It is necessary to increase the production of green energy. | produktionen af; øge produktionen | fremstilling | forbrug
+S: t2-samfund | formal | En film eller forestilling; en kunstners samlede værker. | Production (film, play); body of work. | Teatret viser en ny produktion af stykket. | The theatre is showing a new production of the play. | en dansk produktion | værk | -
+
+@ historisk
+forms: historisk, historiske
+class: adjektiv
+S: t2-egenskab | neutral | Som har med fortiden og historien at gøre. | Historical; historically. | Historisk har det været attraktivt at have en butik i centrum. | Historically it has been attractive to have a shop in the centre. | historisk set; historiske bygninger | - | moderne
+S: t2-egenskab | formal | Som er så vigtig, at den vil blive husket. | Historic. | Det var en historisk dag for Sønderjylland. | It was a historic day for Southern Jutland. | en historisk begivenhed | skelsættende | -
+
+@ konkurrence
+forms: konkurrence, konkurrencen, konkurrencer, konkurrencerne, konkurrences, konkurrencens, konkurrencers, konkurrencernes
+class: substantiv
+S: t2-samfund | neutral | Situation, hvor firmaer eller andre kæmper om at være bedst eller få flest kunder. | Competition (between firms). | Problemet er ikke kun konkurrencen fra nethandlen. | The problem is not only the competition from online shopping. | konkurrencen fra; hård konkurrence; være i konkurrence med | rivalisering | samarbejde
+S: t2-samfund | neutral | En aktivitet, hvor man dyster om at blive den bedste. | Contest; competition. | Hun vandt en konkurrence i fotografering. | She won a photography competition. | vinde en konkurrence; deltage i en konkurrence | dyst; turnering | -
+
+@ overveje
+forms: overveje, overvejer, overvejede, overvejet, overvejes, overvejende
+class: verbum
+S: t2-holdning | neutral | Tænke grundigt over noget og vurdere, hvad der taler for og imod. | To consider; to think about. | Hvorfor begyndte hun at overveje, om lærerjobbet var det rigtige? | Why did she start to consider whether the teaching job was right for her? | overveje at; overveje om; nøje overveje | tænke over; overtænke | -
+
+@ opmærksom
+forms: opmærksom, opmærksomt, opmærksomme
+class: adjektiv
+S: t2-holdning | neutral | Som er klar over noget og holder øje med det. | Aware; attentive. | Vær opmærksom på, at ramperne kan være tilsandede. | Be aware that the ramps may be covered in sand. | være opmærksom på; gøre nogen opmærksom på | bevidst om; agtpågivende | uopmærksom
+S: t2-holdning | neutral | Som viser omtanke for andre. | Considerate; thoughtful. | Personalet var meget opmærksomt over for gæsterne. | The staff were very attentive to the guests. | opmærksom over for | omsorgsfuld; betænksom | -
+
+@ arbejdskraft
+forms: arbejdskraft, arbejdskraften, arbejdskrafts, arbejdskraftens
+class: substantiv
+S: t2-arbejde | neutral | De personer, der kan udføre et arbejde; mangel eller behov for arbejdere. | Labour; workforce. | Der mangler arbejdskraft i Danmark. | There is a shortage of labour in Denmark. | mangel på arbejdskraft; udenlandsk arbejdskraft | arbejdere | -
+
+@ kvalificeret
+forms: kvalificeret
+class: adjektiv
+ddo: kvalificere
+S: t2-arbejde | neutral | Som har den uddannelse eller de evner, der skal til. | Qualified. | Hun syntes ikke, hun var kvalificeret til at lave administrative opgaver. | She did not think she was qualified to do administrative tasks. | kvalificeret til; kvalificeret arbejdskraft | egnet; kompetent | ukvalificeret
+S: t2-arbejde | neutral | (kvalificere sig) Opnå ret til at fortsætte i en turnering. | To qualify (in sport). | Holdet kvalificerede sig til finalen. | The team qualified for the final. | kvalificere sig til | - | -
+
+@ kompetence
+forms: kompetence, kompetencen, kompetencer, kompetencerne, kompetences, kompetencens, kompetencers, kompetencernes
+class: substantiv
+S: t2-arbejde | formal | Det at have de evner og den viden, der skal til på et område. | Competence; skill. | De tvivler på deres egne kompetencer inden for et nyt område. | They doubt their own skills in a new field. | faglige kompetencer; udvikle sine kompetencer | kvalifikation; evne | -
+S: t2-arbejde | formal | Ret eller myndighed til at bestemme noget. | Authority; power. | Kommunen har kompetence til at give tilladelse. | The municipality has the authority to grant permission. | have kompetence til | myndighed; bemyndigelse | -
+
+@ arbejdsforhold
+forms: arbejdsforhold, arbejdsforholdet, arbejdsforholdene, arbejdsforholds, arbejdsforholdets, arbejdsforholdenes
+class: substantiv
+S: t2-arbejde | neutral | De vilkår, man arbejder under. | Working conditions. | Fleksible arbejdsforhold giver både fordele og udfordringer. | Flexible working conditions bring both advantages and challenges. | gode arbejdsforhold; forbedre arbejdsforholdene | arbejdsvilkår | -
+S: t2-arbejde | formal | Det at være ansat hos en arbejdsgiver. | Employment. | Hans arbejdsforhold ophørte i maj. | His employment ended in May. | et fast arbejdsforhold | ansættelse | -
+
+@ udsagn
+forms: udsagn, udsagnet, udsagnene, udsagns, udsagnets, udsagnenes
+class: substantiv
+S: t2-argument | formal | Noget, nogen siger eller skriver, som indeholder en oplysning eller påstand. | Statement. | Hvilket af følgende udsagn passer med teksten? | Which of the following statements fits the text? | følgende udsagn; et udsagn om | udtalelse; påstand | -
+
+@ støtte
+forms: støtte, støtter, støttede, støttet, støttes, støttende
+class: verbum
+S: t2-holdning | neutral | Hjælpe nogen moralsk, økonomisk eller på anden måde. | To support. | Hvad har tilflytterservice støttet med ud over at finde job? | What has the newcomer service supported with besides finding jobs? | støtte nogen; støtte et forslag; støtte økonomisk | hjælpe; bakke op | modarbejde
+S: t2-holdning | neutral | Holde noget oppe eller læne sig mod noget. | To support; to lean (on). | Han støttede sig til stokken. | He leaned on his stick. | støtte sig til | - | -
+
+@ relativt
+forms: relativt
+class: adverbium
+ddo: relativ
+S: t2-egenskab | neutral | Når man sammenligner med noget andet; forholdsvis. | Relatively; comparatively. | Udbuddet af stillinger er relativt lavt. | The supply of positions is relatively low. | relativt lavt; relativt mange; relativt set | forholdsvis; temmelig | absolut
+
+@ deltager
+forms: deltager, deltageren, deltagere, deltagerne, deltagers, deltagerens, deltageres, deltagernes
+class: substantiv
+S: t2-samfund | neutral | En person, der er med i en aktivitet. | Participant. | En stor andel af deltagerne skal være unge. | A large share of the participants should be young people. | deltagerne i; antallet af deltagere | - | tilskuer
+
+@ original
+forms: original, originalt, originale, originalere, originalest
+class: adjektiv
+S: t2-egenskab | neutral | Som er den første eller oprindelige; ikke en kopi. | Original; genuine. | På museet kan man opleve originale vikingeskibe. | At the museum you can experience original Viking ships. | originale genstande; i original | oprindelig; ægte | kopi
+S: t2-egenskab | neutral | Som er ny og anderledes på en kreativ måde. | Original; unusual. | Nancy er en stilsikker, original dansk roman. | Nancy is a stylish, original Danish novel. | en original idé | nyskabende; særpræget | konventionel
+
+@ materiale
+forms: materiale, materialet, materialer, materialerne, materiales, materialets, materialers, materialernes
+class: substantiv
+S: t2-egenskab | neutral | Det stof, noget er lavet af. | Material. | Hvilke materialer er kunsthåndværket baseret på? | Which materials is the craft based on? | naturlige materialer; byggematerialer | stof; råvare | -
+S: t2-egenskab | formal | Indsamlede oplysninger, tekster eller data, som man arbejder med. | Material (information). | Hun har samlet materiale til sin bog. | She has collected material for her book. | samle materiale; undervisningsmateriale | stof; kildemateriale | -
+
+@ officiel
+forms: officiel, officielt, officielle
+class: adjektiv
+S: t2-samfund | formal | Som er godkendt eller arrangeret af staten eller en anden myndighed. | Official. | Hvad hedder det officielt godkendte asatrossamfund? | What is the name of the officially recognised Ásatrú community? | officielt godkendt; et officielt besøg | formel; offentlig | uofficiel
+S: t2-samfund | formal | Meget formel og stiv. | Formal; stiff. | Stemningen var meget officiel. | The atmosphere was very formal. | - | formel | uformel
+
+@ karriere
+forms: karriere, karrieren, karrierer, karriererne, karrieres, karrierens, karrierers, karrierernes
+class: substantiv
+S: t2-arbejde | neutral | Den vej, ens arbejdsliv tager inden for et fag eller område. | Career. | Hvorfor skifter nogle ikke karriere, selvom de er utilfredse? | Why do some people not change careers even though they are dissatisfied? | skifte karriere; gøre karriere; en karriere som | løbebane | -
+
+@ ulempe
+forms: ulempe, ulempen, ulemper, ulemperne, ulempes, ulempens, ulempers, ulempernes
+class: substantiv
+S: t2-fordel | neutral | En dårlig side ved noget; noget, der giver besvær. | Disadvantage; drawback. | Der er nogle ulemper forbundet med vindmøller. | There are some drawbacks associated with wind turbines. | fordele og ulemper; ulemper ved; være til ulempe | minus | fordel
+
+@ rolle
+forms: rolle, rollen, roller, rollerne, rolles, rollens, rollers, rollernes
+class: substantiv
+S: t2-fordel | neutral | Den plads eller funktion, nogen eller noget har i en større sammenhæng. | Role; part. | Vores hobbyer spiller en vigtigere rolle for os end tidligere. | Our hobbies play a more important role for us than before. | spille en rolle; en vigtig rolle; det spiller ingen rolle | funktion; betydning | -
+S: t2-fordel | neutral | En figur, som en skuespiller spiller. | Role (in a play or film). | Hun har hovedrollen i filmen. | She has the leading role in the film. | spille rollen som; hovedrolle | part | -
+
+@ primær
+forms: primær, primært, primære
+class: adjektiv
+S: t2-egenskab | formal | Som er den første eller vigtigste. | Primary; main. | Hvad var den primære årsag til, at hun måtte sygemelde sig? | What was the primary reason why she had to go on sick leave? | den primære årsag; primært | vigtigst; hoved- | sekundær
