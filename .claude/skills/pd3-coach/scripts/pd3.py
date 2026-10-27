@@ -26,6 +26,8 @@ Usage (run with python3 -I):
   pd3.py vocab enrich JSON [JSON ...]  # copy DDO definitions + citations onto matching cards
                                        #   (ddo_entries.json or t23_facts.json format)
   pd3.py sentences                     # find real exam sentences for every card -> exam-sentences.json
+                                       #   (cards in senses.json use its hand-labelled sentences instead)
+  pd3.py translate                     # English for every DDO definition (Google Translate) -> translations.json
   pd3.py page                          # rebuild <project>/assisted-learning.html (also automatic when the deck
                                        #   changes); open it from disk, progress is kept in the browser
   pd3.py mistake add PATTERN --category C [--severity critical|moderate|minor] [--example E]
@@ -89,7 +91,7 @@ def save(name, obj):
     with open(tmp, "w", encoding="utf-8") as f:
         json.dump(obj, f, ensure_ascii=False, indent=2)
     os.replace(tmp, p)
-    if name in ("vocab.json", "profile.json", "exam-sentences.json"):
+    if name in ("vocab.json", "profile.json", "exam-sentences.json", "translations.json"):
         build_page()
 
 
@@ -540,6 +542,10 @@ def cmd_sentences(a):
         if hits:
             out[cid] = hits
             found += 1
+    # words with more than one meaning: hand-picked sentences, each labelled with its sense (senses.json)
+    for cid, entry in load("senses.json", {}).items():
+        if cid in cards:
+            out[cid] = [x for x in (labelled_sentence(cards[cid], e) for e in entry.get("sentences", [])) if x]
     save("exam-sentences.json", {"built": TODAY.isoformat(), "sentences": out})
     print(f"{found} of {len(cards)} cards have real exam sentences -> {os.path.join(DATA, 'exam-sentences.json')}")
 
@@ -549,12 +555,46 @@ def cmd_sentences(a):
 PAGE = os.path.join(ROOT, "assisted-learning.html")
 
 
+def labelled_sentence(card, e):
+    pat = card_pattern(card)
+    m = (pat and pat.search(e["s"])) or re.search(r"(?<![\wæøå])" + re.escape(nfc(card["word"])) + r"(?![\wæøå])", e["s"], re.I)
+    return m and {"s": e["s"], "src": e["src"], "m": [m.start(), m.end()], "sense": e["sense"]}
+
+
+def google_translate(text, src="da", dest="en"):
+    import urllib.parse, urllib.request
+    url = "https://translate.googleapis.com/translate_a/single?" + urllib.parse.urlencode(
+        {"client": "gtx", "sl": src, "tl": dest, "dt": "t", "q": text})
+    with urllib.request.urlopen(url, timeout=20) as r:
+        return "".join(part[0] for part in json.load(r)[0]).strip()
+
+
+def cmd_translate(a):
+    cache = load("translations.json", {})
+    todo = sorted({s for c in load("vocab.json", {"cards": {}})["cards"].values()
+                   for s in (c.get("dict") or {}).get("senses", []) if s and s not in cache})
+    for i, text in enumerate(todo):
+        try:
+            cache[text] = google_translate(text)
+        except Exception as e:
+            print(f"failed: {text[:60]} ({e})", file=sys.stderr)
+        if i % 25 == 24:
+            save("translations.json", cache)
+    save("translations.json", cache)
+    print(f"{len(todo)} new translations; {len(cache)} in {os.path.join(DATA, 'translations.json')}")
+
+
 def build_page():
     """Write <project>/assisted-learning.html: the page template with the deck embedded, so it opens from disk."""
     tpl = os.path.join(SKILL_DIR, "app", "assisted-learning.html")
     if not os.path.exists(tpl):
         return None
-    deck = {"cards": load("vocab.json", {"cards": {}})["cards"], "profile": load("profile.json", {}),
+    cards, tr = load("vocab.json", {"cards": {}})["cards"], load("translations.json", {})
+    for c in cards.values():
+        if c.get("dict"):
+            c["dict"]["senses_en"] = [tr.get(s, "") for s in c["dict"]["senses"]]
+    senses = {cid: {k: v for k, v in e.items() if k != "sentences"} for cid, e in load("senses.json", {}).items()}
+    deck = {"cards": cards, "profile": load("profile.json", {}), "senses": senses,
             "sentences": load("exam-sentences.json", {}).get("sentences", {}), "built": TODAY.isoformat()}
     js = "window.PD3_DECK = " + json.dumps(deck, ensure_ascii=False).replace("</", "<\\/") + ";"
     html = open(tpl, encoding="utf-8").read().replace("window.PD3_DECK = null; /*DECK*/", js)
@@ -618,7 +658,7 @@ def main():
     q = vs.add_parser("list"); q.add_argument("--group"); q.add_argument("--priority", type=int)
     vs.add_parser("groups")
     q = vs.add_parser("enrich"); q.add_argument("files", nargs="+")
-    sp.add_parser("sentences")
+    sp.add_parser("sentences"); sp.add_parser("translate")
     sp.add_parser("page")
     p = sp.add_parser("mistake"); ms = p.add_subparsers(dest="mcmd", required=True)
     q = ms.add_parser("add"); q.add_argument("pattern"); q.add_argument("--category", required=True)
@@ -628,7 +668,7 @@ def main():
     a = ap.parse_args()
     {"init": cmd_init, "status": cmd_status, "index": lambda a: print(f"{len(build_index())} sittings indexed"),
      "sittings": cmd_sittings, "pick": cmd_pick, "get": cmd_get, "log": cmd_log,
-     "vocab": cmd_vocab, "mistake": cmd_mistake, "sentences": cmd_sentences,
+     "vocab": cmd_vocab, "mistake": cmd_mistake, "sentences": cmd_sentences, "translate": cmd_translate,
      "page": lambda a: print(build_page() or "template missing")}[a.cmd](a)
 
 

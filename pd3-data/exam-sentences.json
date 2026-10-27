@@ -3343,44 +3343,13 @@
     ],
     "da": [
       {
-        "s": "Da jeg var barn, gik jeg tit tur sammen med min bedstefar, der gik ved hjælp af sin elskede stok.",
-        "src": "2024s L1",
+        "s": "Hun er begyndt at løbe, da det giver hende energi.",
+        "src": "2019s L2",
         "m": [
-          0,
-          2
-        ]
-      },
-      {
-        "s": "Da Hærvejsmarchen så første gang blev holdt, var jeg ikke i tvivl om, at jeg skulle være med, og det har jeg så været lige siden.",
-        "src": "2024s L1",
-        "m": [
-          0,
-          2
-        ]
-      },
-      {
-        "s": "Da de blev større, gik jeg med igen, og børnene har også været med flere gange.",
-        "src": "2024s L1",
-        "m": [
-          0,
-          2
-        ]
-      },
-      {
-        "s": "Men i dag er bymidterne truet, da butikkerne i bymidterne har svært ved at klare sig i konkurrencen med nethandlen og storcentrene, og kunderne svigter.",
-        "src": "2024s L2",
-        "m": [
-          31,
-          33
-        ]
-      },
-      {
-        "s": "Da vandføringen i de bornholmske vandløb svinger meget med årstiden, gør vand- faldene sig bedst efter snesmeltningen i det tidlige forår.",
-        "src": "2023v L1",
-        "m": [
-          0,
-          2
-        ]
+          24,
+          26
+        ],
+        "sense": "because"
       },
       {
         "s": "De anbefalede tures numre er ikke skiltet i naturen, da de følger de nationale og regionale ruter.",
@@ -3388,23 +3357,62 @@
         "m": [
           53,
           55
-        ]
+        ],
+        "sense": "because"
       },
       {
-        "s": "Hvad dette store er, går først op for ham, da han som ung nyudlært skomager slår sig ned i København.",
-        "src": "2023v L1",
+        "s": "Ingen ved ganske vist, hvordan vikingernes mad smagte, da der ikke er bevaret opskrifter fra den tid.",
+        "src": "2022v L1",
         "m": [
-          43,
-          45
-        ]
+          55,
+          57
+        ],
+        "sense": "because"
       },
       {
-        "s": "Det får man allerede tidligt i romanen en fornemmelse af, da fortælleren redegør for, hvordan Bornholm ligger stille om dagen, men har det med at bevæge sig en lille smule om natten.",
-        "src": "2023v L1",
+        "s": "Da det er uddannede tjenere, der serverer, kan man som gæst være sikker på en professionel håndtering af mad, vin og gæster.",
+        "src": "2021v L1",
         "m": [
-          58,
-          60
-        ]
+          0,
+          2
+        ],
+        "sense": "because"
+      },
+      {
+        "s": "Da jeg var barn, gik jeg tit tur sammen med min bedstefar, der gik ved hjælp af sin elskede stok.",
+        "src": "2024s L1",
+        "m": [
+          0,
+          2
+        ],
+        "sense": "when"
+      },
+      {
+        "s": "Men vi blev positivt overraskede, da vi besøgte Fejø.",
+        "src": "2022s L1",
+        "m": [
+          34,
+          36
+        ],
+        "sense": "when"
+      },
+      {
+        "s": "Han slog sig ikke alvorligt, da han faldt, men han satte sig lettere chokeret på en stol.",
+        "src": "2017s L2",
+        "m": [
+          29,
+          31
+        ],
+        "sense": "when"
+      },
+      {
+        "s": "Da Andrei Vasilescu boede i Rumænien, arbejdede han med drift og udvikling af it-systemer.",
+        "src": "2019v L2",
+        "m": [
+          0,
+          2
+        ],
+        "sense": "when"
       }
     ],
     "idet": [
@@ -3435,52 +3443,13 @@
     ],
     "for": [
       {
-        "s": "Og det er ikke så underligt, for her kan man virkelig få gang i fantasien og opleve den bornholmske historie.",
-        "src": "2023v L1",
-        "m": [
-          29,
-          32
-        ]
-      },
-      {
-        "s": "For mange unge mennesker er en verden uden internet faktisk helt utænkelig.",
-        "src": "2023v L2",
-        "m": [
-          0,
-          3
-        ]
-      },
-      {
-        "s": "For mange af disse it-kriminelle er svindel blevet en levevej.",
-        "src": "2023v L2",
-        "m": [
-          0,
-          3
-        ]
-      },
-      {
-        "s": "For eksempel er uddannelse gratis, og studerende kan få SU, og efter endt uddannelse kan man som nyuddannet også modtage dagpenge.",
-        "src": "2023v L2",
-        "m": [
-          0,
-          3
-        ]
-      },
-      {
         "s": "Den forholdsvis lave søgning til de tekniske bacheloruddannelser er et problem, for der er faktisk mangel på unge med den type uddannelse.",
         "src": "2023v L2",
         "m": [
           80,
           83
-        ]
-      },
-      {
-        "s": "For ikke så mange årtier siden mente de fleste nok ikke, at det var relevant at læse kinesisk, mens de fleste er af den modsatte opfattelse i dag.",
-        "src": "2023v L2",
-        "m": [
-          0,
-          3
-        ]
+        ],
+        "sense": "because"
       },
       {
         "s": "At kalde det et ’kaffebord’ er måske lidt misvisende, for det er i langt højere grad kagerne end kaffen, der stjæler billedet.",
@@ -3488,15 +3457,44 @@
         "m": [
           54,
           57
-        ]
+        ],
+        "sense": "because"
       },
       {
-        "s": "Der blev ikke givet spiritusbevilling til forsamlingshuse, for på den måde forsøgte de tyske myndigheder at forhindre disse møder.",
-        "src": "2023s L1",
+        "s": "Og så går jeg også til dans på øen, for man lærer bedst et nyt sprog ved at komme ud blandt lokale.",
+        "src": "2022s L1",
+        "m": [
+          36,
+          39
+        ],
+        "sense": "because"
+      },
+      {
+        "s": "Det gik dog ikke helt, som hun havde forventet på studiet, for hun fik problemer med at følge med.",
+        "src": "2019s L2",
         "m": [
           59,
           62
-        ]
+        ],
+        "sense": "because"
+      },
+      {
+        "s": "Hans forældre mente imidlertid, at det ville være bedst for ham at flytte, for de var ikke tilfredse med undervisningen.",
+        "src": "2016s L2",
+        "m": [
+          75,
+          78
+        ],
+        "sense": "because"
+      },
+      {
+        "s": "Jeg har ikke evig dårlig samvittighed, når jeg spiser noget forbudt, for jeg må jo spise helt normalt på fem af ugens syv dage.",
+        "src": "2014v L2",
+        "m": [
+          69,
+          72
+        ],
+        "sense": "because"
       }
     ],
     "på_grund_af": [
@@ -3626,63 +3624,71 @@
         "m": [
           50,
           52
-        ]
+        ],
+        "sense": "result"
       },
       {
-        "s": "Når Viborg spiller på hjemmebane, så er jeg altid på stadion for at støtte dem.",
-        "src": "2024s L1",
+        "s": "Men forsamlingshusene fik ikke alkoholbevilling, så der kom kaffe på bordet.",
+        "src": "2023s L1",
         "m": [
-          34,
-          36
-        ]
+          49,
+          51
+        ],
+        "sense": "result"
       },
       {
-        "s": "Jeg ser nogle gange deres kampe, dog kun på tv, så det er ikke kun fodbold, jeg følger.",
-        "src": "2024s L1",
+        "s": "Restauranten er velbesøgt, så det er en god ide at reservere bord.",
+        "src": "2019v L1",
         "m": [
-          48,
-          50
-        ]
+          27,
+          29
+        ],
+        "sense": "result"
       },
       {
-        "s": "Så det er ikke kun mig, der er vild med Borgvold, det er børnene også.",
-        "src": "2024s L1",
+        "s": "Der er ingen bilparkering i forbindelse med NorthSide, så man må gå, cykle eller tage offentlig transport, hvis man vil til festival.",
+        "src": "2019s L1",
         "m": [
-          0,
-          2
-        ]
+          55,
+          57
+        ],
+        "sense": "result"
       },
       {
-        "s": "Jeg har også gratis adgang til de fleste koncerter, så jeg kan kun anbefale at blive frivillig på Paletten.",
-        "src": "2024s L1",
+        "s": "Kom i god tid, så du kan nyde vores smukke bygning indefra en halv time før forestillingens start.",
+        "src": "2021s L1",
         "m": [
-          52,
-          54
-        ]
+          15,
+          17
+        ],
+        "sense": "purpose"
       },
       {
-        "s": "Det er derfor en stor opgave for en virksomhed at organisere arbejdslivet mere fleksibelt, så der bliver taget hensyn til alle.",
-        "src": "2024s L2",
+        "s": "Der skal laves regnskab, så man har helt styr på indtægter og udgifter.",
+        "src": "2022v L2",
         "m": [
-          91,
-          93
-        ]
+          25,
+          27
+        ],
+        "sense": "purpose"
       },
       {
-        "s": "Gennem hundrede millioner af år har bevægelser langs forkastninger brudt Bornholm op i et stort antal forkastningsblokke, så aflejringer fra flere geologiske tider er blevet blottet.",
-        "src": "2023v L1",
+        "s": "Samtidig modtager mange voksne, både danskere og flygtninge/indvandrere, undervisning hos AOF, så de kan lære at læse det, som de har brug for i deres hverdag.",
+        "src": "2020v L1",
         "m": [
-          122,
-          124
-        ]
+          95,
+          97
+        ],
+        "sense": "purpose"
       },
       {
-        "s": "Vandet er klart og rent – og med mange revler, så der både er lavt og dybt tæt på kysten.",
-        "src": "2023v L1",
+        "s": "Vi vil sammen arbejde med mønstre og tilrette dem, så de passer godt til dig.",
+        "src": "2020v L1",
         "m": [
-          47,
-          49
-        ]
+          51,
+          53
+        ],
+        "sense": "purpose"
       }
     ],
     "hvilket_betyder_at": [
@@ -4360,15 +4366,8 @@
         "m": [
           69,
           73
-        ]
-      },
-      {
-        "s": "De stejle klippevægge i nord byder på flere gode klatreruter, mens den sydlige del af øen rummer en række gode og populære badestrande.",
-        "src": "2023v L1",
-        "m": [
-          62,
-          66
-        ]
+        ],
+        "sense": "time"
       },
       {
         "s": "Midt i det hele står den 25-årige Nancy, som arbejder på et bosted for udsatte, mens hun går på HF.",
@@ -4376,15 +4375,26 @@
         "m": [
           80,
           84
-        ]
+        ],
+        "sense": "time"
       },
       {
-        "s": "For ikke så mange årtier siden mente de fleste nok ikke, at det var relevant at læse kinesisk, mens de fleste er af den modsatte opfattelse i dag.",
-        "src": "2023v L2",
+        "s": "Forældrene kan ikke opdrage deres børn, mens børnene er i skole.",
+        "src": "2016s L2",
         "m": [
-          95,
-          99
-        ]
+          40,
+          44
+        ],
+        "sense": "time"
+      },
+      {
+        "s": "Mens du er på skolen, kan du vælge at bo på skolehjemmet.",
+        "src": "2013s L1",
+        "m": [
+          0,
+          4
+        ],
+        "sense": "time"
       },
       {
         "s": "I zone 1 var der tydeligt dansk flertal, mens der i zone 2 var tysk flertal.",
@@ -4392,31 +4402,35 @@
         "m": [
           41,
           45
-        ]
+        ],
+        "sense": "contrast"
       },
       {
-        "s": "En tredjedel af dem mente, allerede mens de var studerende, at deres handicap ville få en betydning for, om de overhovedet kunne få et job.",
-        "src": "2023s L2",
+        "s": "Nogle træffer små beslutninger, mens andre lægger hele deres livsstil om.",
+        "src": "2021s L2",
         "m": [
-          36,
-          40
-        ]
+          32,
+          36
+        ],
+        "sense": "contrast"
       },
       {
-        "s": "Men det er selvfølgelig ærgerligt, at der er så mange studerende med et handicap, der tror noget andet, mens de læser.",
-        "src": "2023s L2",
+        "s": "En undersøgelse kan pege på, at mobiltelefoner ikke er skadelige for helbredet, mens en anden kan vise det modsatte.",
+        "src": "2020s L2",
         "m": [
-          104,
-          108
-        ]
+          80,
+          84
+        ],
+        "sense": "contrast"
       },
       {
-        "s": "Af disse er Aggersborg den største, mens Trelleborg er langt den bedst bevarede og i øvrigt den eneste med en befæstet forborg.",
-        "src": "2022v L1",
+        "s": "Nogle lande har ladet sig påvirke af den vestlige verden, mens andre lande har en stærk østlig identitet.",
+        "src": "2016s L1",
         "m": [
-          36,
-          40
-        ]
+          58,
+          62
+        ],
+        "sense": "contrast"
       }
     ],
     "tværtimod": [
@@ -5835,28 +5849,40 @@
     ],
     "siden": [
       {
-        "s": "Ved siden af caféen ligger flagermuslegepladsen, hvor børnene kan klatre og lege på de fem flagermusarter, der overvintrer i kalkgruberne.",
-        "src": "2024s L1",
+        "s": "Siden disse omkostninger varierer utroligt meget, er det svært at give et gennemsnit herpå.",
+        "src": "2016s L1",
         "m": [
-          4,
-          9
-        ]
+          0,
+          5
+        ],
+        "sense": "cause"
       },
       {
-        "s": "Da Hærvejsmarchen så første gang blev holdt, var jeg ikke i tvivl om, at jeg skulle være med, og det har jeg så været lige siden.",
-        "src": "2024s L1",
+        "s": "Peter er siden rykket til Sønderborg Kommune, hvor han nu fungerer som økonomikonsulent.",
+        "src": "2023s L1",
         "m": [
-          123,
-          128
-        ]
+          9,
+          14
+        ],
+        "sense": "then"
       },
       {
-        "s": "Vi havde så for nogle år siden en halvtredsårs jubilæumsfest, og det var en meget stor og helt særlig oplevelse for mig og mine venner.",
-        "src": "2024s L1",
+        "s": "Nordisk Films tidlige succes viste sig at være langtidsholdbar, og selskabet har siden haft en central placering i den danske filmbranche.",
+        "src": "2019v L1",
         "m": [
-          25,
-          30
-        ]
+          81,
+          86
+        ],
+        "sense": "then"
+      },
+      {
+        "s": "Siden er der kommet mange nye børnehaver, skoler, gymnasier og andre uddannelsessteder, som beskæftiger beboerne.",
+        "src": "2021v L1",
+        "m": [
+          0,
+          5
+        ],
+        "sense": "then"
       },
       {
         "s": "Siden fagforeningernes opkomst i slutningen af det 19. århundrede har man diskuteret lønmodtagernes arbejdstid.",
@@ -5864,31 +5890,8 @@
         "m": [
           0,
           5
-        ]
-      },
-      {
-        "s": "De enkelte Helligdomsklipper har siden fået tildelt romantiske navne som Lyseklippen, Mågetårnet, Måneskinsklipperne og Kærlighedsbænken.",
-        "src": "2023v L1",
-        "m": [
-          33,
-          38
-        ]
-      },
-      {
-        "s": "Børneruten har de fleste steder plads til, at man kan køre ved siden af hinanden og også have cykelanhænger med.",
-        "src": "2023v L1",
-        "m": [
-          63,
-          68
-        ]
-      },
-      {
-        "s": "For ikke så mange årtier siden mente de fleste nok ikke, at det var relevant at læse kinesisk, mens de fleste er af den modsatte opfattelse i dag.",
-        "src": "2023v L2",
-        "m": [
-          25,
-          30
-        ]
+        ],
+        "sense": "prep"
       },
       {
         "s": "Hærvejen er Danmarks ældste landevej, som siden oldtiden har fragtet soldater og folk fra Dannevirke i syd til Viborg i nord og den modsatte vej.",
@@ -5896,7 +5899,26 @@
         "m": [
           42,
           47
-        ]
+        ],
+        "sense": "prep"
+      },
+      {
+        "s": "For fire år siden besluttede Marianne og hendes mand, Torben Bruun, at lægge deres livsstil helt om.",
+        "src": "2021s L2",
+        "m": [
+          12,
+          17
+        ],
+        "sense": "ago"
+      },
+      {
+        "s": "For to år siden flyttede den nu 22-årige Anne Puggaard til Odense fra København for at læse matematik på Syddansk Universitet.",
+        "src": "2019s L2",
+        "m": [
+          10,
+          15
+        ],
+        "sense": "ago"
       }
     ],
     "derefter": [

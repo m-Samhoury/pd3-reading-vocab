@@ -84,6 +84,7 @@ dialog.explain .ih { position: sticky; top: 0; background: var(--sheet); padding
 dialog.explain .ih .big { font-size: 1.8rem; }
 dialog.explain h3 .soft { font-weight: 400; font-size: .85rem; }
 dialog.explain .ex { display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+dialog.explain .ex > span:not(.tag) { flex: 1 1 240px; min-width: 0; }
 dialog.explain .tr { margin-left: auto; font-size: .8rem; white-space: nowrap; }
 dialog.explain blockquote { display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: baseline; }
 .trl { flex-basis: 100%; font-style: normal; font-size: .92rem; color: var(--soft); padding: 4px 0 2px 10px; border-left: 2px solid var(--blue); }
@@ -252,6 +253,15 @@ input.answer:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--ac
 .ddo { padding: 14px 16px; border: 1px solid var(--rule-strong); border-radius: 12px; }
 .ddo blockquote { margin: 6px 0 0; padding-left: 10px; border-left: 2px solid var(--rule-strong); color: var(--soft); font-style: italic; font-size: .92rem; }
 .ddo .cite { margin-top: 8px; font-size: .8rem; color: var(--faint); }
+.en-def { font-size: .8rem; line-height: 1.4; color: var(--soft); margin: 1px 0 6px; }
+.sense { margin-top: 14px; }
+.sense:first-of-type { margin-top: 8px; }
+.sense .sh { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 8px; margin-bottom: 6px; }
+.sense .sh .num { display: inline-grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--accent-soft); color: var(--accent-text); font-weight: 700; font-size: .78rem; align-self: center; }
+.sense .sh b { font-size: 1.02rem; }
+.sense .eg { margin-bottom: 6px; }
+.sense .none { font-size: .85rem; color: var(--faint); font-style: italic; }
+.sensenote { margin-top: 12px; padding: 10px 14px; background: var(--blue-soft); border-radius: 12px; font-size: .9rem; }
 .warnbox { padding: 12px 14px; border-radius: 12px; background: var(--accent-soft); font-size: .94rem; }
 .warnbox b { color: var(--accent-text); }
 .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px; }
@@ -364,6 +374,8 @@ const I18N = {
   "b.clear": ["Ryd", "Clear"], "b.show": ["Vis mig", "Show me"], "b.idk": ["Ved ikke", "I don't know"],
   "b.override": ["Jeg havde ret – tæl det med", "I was right, count it"], "b.skip": ["Spring over", "Skip retype"],
   "t.order": ["Ordstilling", "Word order"], "t.example": ["Eksempel", "Example"], "t.exam": ["Fra prøverne", "From the exams"],
+  "t.senses": ["Betydninger", "Meanings"], "t.senses.s": ["ordet har mere end én betydning", "this word has more than one meaning"],
+  "t.sense1": ["Betydning", "Meaning"], "s.noexam": ["Ingen eksempler i læseteksterne 2004–2024.", "No examples in the 2004–2024 reading texts."],
   "b.more": ["📖 Forklar mere", "📖 Explain more"], "m.title": ["Mere om ordet", "More about this word"],
   "m.senses": ["Alle betydninger", "All meanings"], "m.cites": ["Brugt i ordbogen", "Used in the dictionary"],
   "m.exam": ["Flere sætninger fra prøverne", "More sentences from the exams"], "m.tr": ["oversæt", "translate"], "m.tr.hide": ["skjul", "hide"], "m.tr.wait": ["oversætter…", "translating…"],
@@ -534,7 +546,7 @@ function load() {
     $("#app").innerHTML = `<div class="err" style="margin-top:32px">${t("nodeck")}<br><br><code>python3 -I .claude/skills/pd3-coach/scripts/pd3.py page</code></div>`;
     return;
   }
-  DB = { today: iso(new Date()), profile: deck.profile || {}, sentences: deck.sentences || {}, cards: {} };
+  DB = { today: iso(new Date()), profile: deck.profile || {}, sentences: deck.sentences || {}, senses: deck.senses || {}, cards: {} };
   const saved = readProgress();
   for (const [id, c] of Object.entries(deck.cards)) DB.cards[id] = { id, ...c, history: c.history || [], ...(saved[id] || {}) };
   // ask the browser not to clear this page's storage when space runs low (Chrome/Firefox; Safari decides itself)
@@ -831,6 +843,23 @@ function renderIntro(it, review) {
   bindNext(review ? goForward : advance);
 }
 
+// DDO definitions with the English translation in small print under each
+function ddoSenses(d, n) {
+  return d.senses.slice(0, n).map((s, i) => `<div lang="da" style="margin-top:4px">${d.senses.length > 1 ? `<b>${i + 1}.</b> ` : ""}${esc(s)}</div>${
+    d.senses_en && d.senses_en[i] ? `<div class="en-def" lang="en">${esc(d.senses_en[i])}</div>` : ""}`).join("");
+}
+// words with more than one meaning (senses.json): one block per meaning with its own example and exam sentences
+function senseBlocks(c, perSense, withTr) {
+  const info = DB.senses[c.id];
+  const ex = examSentences(c);
+  const exLine = e => `<div class="ex" lang="da"><span class="tag">${esc(e.src)}</span><span>${hlSentence(c, e.s, e.m)}</span>${withTr ? trLink(e.s) : ""}</div>`;
+  return info.senses.map((sn, i) => {
+    const mine = ex.filter(e => e.sense === sn.id).slice(0, perSense);
+    return `<div class="sense"><div class="sh">${info.senses.length > 1 ? `<span class="num">${i + 1}</span>` : ""}<b lang="en">${esc(sn.en)}</b><span class="soft" lang="da">${esc(sn.da)}</span></div>
+      <div class="eg"><div class="ex" lang="da"><span class="sentence">${hlSentence(c, sn.example)}</span>${withTr ? trLink(sn.example) : ""}</div></div>
+      ${mine.length ? mine.map(exLine).join("") : `<div class="none">${t("s.noexam")}</div>`}</div>`;
+  }).join("") + (info.note ? `<div class="sensenote" lang="da">${esc(info.note)}</div>` : "");
+}
 function ruleBlock(c) {
   const w = wtype(c);
   if (!w) return "";
@@ -848,9 +877,10 @@ function renderTeach(c, review) {
     <div class="meaning">${esc(c.meaning)}</div>
     ${extraNote ? `<div class="soft" lang="da" style="margin-top:4px">${esc(extraNote)}</div>` : ""}
     ${wtype(c) ? `<div class="block"><span class="lbl">${t("t.order")}</span>${ruleBlock(c)}</div>` : ""}
+    ${DB.senses[c.id] ? `<div class="block"><span class="lbl">${DB.senses[c.id].senses.length > 1 ? `${t("t.senses")} · ${t("t.senses.s")}` : t("t.sense1")}</span>${senseBlocks(c, 1, false)}</div>` : `
     <div class="block"><div class="eg"><span class="lbl">${t("t.example")}</span><div class="sentence" lang="da">${hlSentence(c, c.example)}</div></div></div>
-    ${ex.length ? `<div class="block"><span class="lbl">${t("t.exam")}</span>${ex.map(e => `<div class="ex" lang="da"><span class="tag">${esc(e.src)}</span>${hlSentence(c, e.s, e.m)}</div>`).join("")}</div>` : ""}
-    ${d ? `<div class="block"><div class="ddo"><span class="lbl">${t("t.ddo")}</span><div class="soft small">${esc(d.pos)}</div>${d.senses.slice(0, 2).map((s, i) => `<div lang="da">${d.senses.length > 1 ? `<b>${i + 1}.</b> ` : ""}${esc(s)}</div>`).join("")}${d.cite.slice(0, 1).map(x => `<blockquote lang="da">${esc(x)}</blockquote>`).join("")}<div class="cite"><a href="${esc(d.url)}" target="_blank" rel="noopener">ordnet.dk ↗</a></div></div></div>` : ""}
+    ${ex.length ? `<div class="block"><span class="lbl">${t("t.exam")}</span>${ex.map(e => `<div class="ex" lang="da"><span class="tag">${esc(e.src)}</span>${hlSentence(c, e.s, e.m)}</div>`).join("")}</div>` : ""}`}
+    ${d ? `<div class="block"><div class="ddo"><span class="lbl">${t("t.ddo")}</span><div class="soft small">${esc(d.pos)}</div>${ddoSenses(d, 2)}${d.cite.slice(0, 1).map(x => `<blockquote lang="da">${esc(x)}</blockquote>`).join("")}<div class="cite"><a href="${esc(d.url)}" target="_blank" rel="noopener">ordnet.dk ↗</a></div></div></div>` : ""}
     ${pairs.map(p => { const o = DB.cards[p[0] === c.id ? p[1] : p[0]]; return `<div class="block"><div class="warnbox"><b>${t("t.mix")}</b> <span lang="da">${esc(c.word)} / ${esc(o.word)}</span> — ${esc(tip(p))}</div></div>`; }).join("")}
     <div class="row next"><button class="btn solid" id="nx">${review ? t("b.next") + " →" : t("b.got")}</button><button class="btn quiet morebtn" id="more">${t("b.more")}</button></div>`);
   $("#more").onclick = () => explain(c);
@@ -1305,14 +1335,15 @@ function explain(c) {
       <button type="button" class="btn quiet" id="exClose">${t("info.close")}</button></div>
     <div class="meaning" style="margin-top:12px">${esc(c.meaning)}</div>
     ${noteText(c) ? `<div class="soft" lang="da" style="margin-top:4px">${esc(noteText(c))}</div>` : ""}
-    <div class="block"><div class="eg"><span class="lbl">${t("t.example")}</span><div class="ex" lang="da"><span class="sentence">${hlSentence(c, c.example)}</span>${trLink(c.example)}</div></div></div>
+    ${DB.senses[c.id] ? "" : `<div class="block"><div class="eg"><span class="lbl">${t("t.example")}</span><div class="ex" lang="da"><span class="sentence">${hlSentence(c, c.example)}</span>${trLink(c.example)}</div></div></div>`}
     ${wtype(c) ? `<h3>${t("t.order")}</h3>${ruleBlock(c)}` : ""}
     <h3>${t("m.senses")} <span class="soft">· ${t("t.ddo")}</span></h3>
-    ${d ? `<div class="ddo"><div class="soft small">${esc(d.pos)}</div>${d.senses.map((s, i) => `<div lang="da" style="margin-top:4px">${d.senses.length > 1 ? `<b>${i + 1}.</b> ` : ""}${esc(s)}</div>`).join("")}
+    ${d ? `<div class="ddo"><div class="soft small">${esc(d.pos)}</div>${ddoSenses(d, 99)}
       ${d.cite.length ? `<span class="lbl" style="margin-top:12px">${t("m.cites")}</span>${d.cite.map(x => `<blockquote lang="da"><span>${esc(x)}</span>${trLink(x)}</blockquote>`).join("")}` : ""}
       <div class="cite"><a href="${esc(d.url)}" target="_blank" rel="noopener">ordnet.dk ↗</a></div></div>`
       : `<p>${t("m.nodict")} <a href="${esc(lookup)}" target="_blank" rel="noopener">${t("m.lookup")}</a></p>`}
-    ${ex.length ? `<h3>${t("m.exam")} <span class="soft">· ${ex.length}</span></h3>${ex.map(e => `<div class="ex" lang="da"><span class="tag">${esc(e.src)}</span><span>${hlSentence(c, e.s, e.m)}</span>${trLink(e.s)}</div>`).join("")}` : ""}
+    ${DB.senses[c.id] ? `<h3>${t("t.senses")} <span class="soft">· ${t("m.exam")}</span></h3>${senseBlocks(c, 99, true)}` :
+      ex.length ? `<h3>${t("m.exam")} <span class="soft">· ${ex.length}</span></h3>${ex.map(e => `<div class="ex" lang="da"><span class="tag">${esc(e.src)}</span><span>${hlSentence(c, e.s, e.m)}</span>${trLink(e.s)}</div>`).join("")}` : ""}
     ${pairs.map(p => { const o = DB.cards[p[0] === c.id ? p[1] : p[0]]; return `<div class="block"><div class="warnbox"><b>${t("t.mix")}</b> <span lang="da">${esc(c.word)} / ${esc(o.word)}</span> (${esc(o.meaning)}) — ${esc(tip(p))}</div></div>`; }).join("")}
     ${mates.length ? `<h3>${t("m.mates")} <span class="soft">· ${esc(gname(c.group))} ${t("m.mates.s")}</span></h3>
       <div class="mates">${mates.map(x => `<button type="button" class="mate${same(x) ? " same" : ""}" data-id="${esc(x.id)}"><b lang="da">${esc(x.word)}</b><span>${esc(x.meaning)}${same(x) ? ` · ${t("m.same")}` : ""}</span></button>`).join("")}</div>` : ""}

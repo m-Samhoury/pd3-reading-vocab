@@ -47,4 +47,10 @@ Grades (same SM-2 as `pd3.py`): 5 instant · 4 correct · 3 typo / second try ·
 Data it uses: `card.dict` (from `pd3.py vocab enrich ddo_entries.json t23_facts.json`: up to 4 DDO senses + 6 citations)
 and `pd3-data/exam-sentences.json` (from `pd3.py sentences`: up to 8 real sentences per card from the reading texts).
 After adding cards, re-run both so new words get definitions and exam sentences.
+`pd3-data/senses.json` holds words with more than one meaning (da, mens, for, siden, så): each sense (English,
+Danish label, own example) and hand-picked exam sentences labelled with their sense. `pd3.py sentences` uses those
+instead of pattern matches, and the page shows one block per meaning. When adding such a word, label its sentences
+by reading them: a pattern can't tell *da* = because from *da* = when, or the connector *for* from the preposition.
+`pd3-data/translations.json` (`pd3.py translate`, Google Translate, then checked by hand) gives the English shown in
+small print under each DDO definition. It only fills missing entries, so hand corrections stay.
 The free "write one sentence with 3 connectors" task stays in chat (it needs grading by you).
