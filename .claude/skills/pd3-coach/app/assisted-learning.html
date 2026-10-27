@@ -335,6 +335,9 @@ const I18N = {
               "{0} words from the PD3 coach, connectors first. Every new word is taught before you're tested on it."],
   "h.go": ["Start session", "Start session"], "h.learn": ["Lær {0} nye", "Learn {0} new"], "h.review": ["Kun gentagelser", "Reviews only"],
   "h.conf": ["Forvekslingsord", "Confusables drill"],
+  "h.ex": ["Øvelse", "Exercise"], "h.ex.t": ["B2-øvelser i de ord, du allerede har lært i de valgte grupper. Påvirker ikke din plan.", "B2 exercises on the words you've already learnt in the selected groups. Doesn't change your schedule."],
+  "h.ex.none": ["Ingen lærte ord i de valgte grupper endnu. Lær nogle ord først.", "No learnt words in the selected groups yet. Learn some words first."],
+  "r.ex": ["Øvelse: dine svar ændrer ikke, hvornår ordene skal gentages.", "Exercise: your answers don't change when the words come up for review."],
   "h.blurb": ["En session = {0}. Fremskridt gemmes i denne browser.", "A session = {0}. Progress is saved in this browser."],
   "h.review.t": ["Kun ord, der skal gentages i dag – ingen nye ord.", "Only words due today, no new words."],
   "h.review.off": ["Intet skal gentages i dag. Ord, du har lært, kommer tilbage her, når de skal gentages.", "Nothing is due today. Words you've learnt come back here when they're due."],
@@ -741,6 +744,7 @@ function home() {
         <button class="btn" id="learn" ${canNew ? "" : "disabled"}>${t("h.learn", BATCH)}</button>
         <button class="btn" id="review" ${canDue ? "" : "disabled"} title="${esc(canDue ? t("h.review.t") : t("h.review.off"))}">${t("h.review")}</button>
         <button class="btn" id="conf" ${confusablePairs(sel).length ? "" : `disabled title="${esc(t("h.conf.none"))}"`}>${t("h.conf")}${sel ? ` · ${confusablePairs(sel).length}` : ""}</button>
+        <button class="btn" id="exer" ${learnedIn(sel).length ? `title="${esc(t("h.ex.t"))}"` : `disabled title="${esc(t("h.ex.none"))}"`}>${t("h.ex")} · ${learnedIn(sel).length}</button>
       </div>
       <p class="soft small" style="margin-top:12px">${sessionBlurb(k, canDue, canNew)}</p>
       ${storageOK ? "" : `<div class="err small">${t("h.storage")}</div>`}
@@ -766,6 +770,7 @@ function home() {
     $(`.pchip[data-g="${CSS.escape(g)}"]`)?.focus();
   });
   $("#conf").onclick = () => startConfusables(sel);
+  $("#exer").onclick = () => startExercise(sel);
   document.querySelectorAll(".group").forEach(b => b.onclick = () => { openGroup = openGroup === b.dataset.g ? null : b.dataset.g; const y = window.scrollY; home(); window.scrollTo(0, y); });
   if (openGroup && groupsBy[openGroup]) showGroupDetail(openGroup, groupsBy[openGroup]);
 }
@@ -834,6 +839,18 @@ function startSession({ groups = null, reviews = REVIEW_LIMIT, fresh = BATCH }) 
   if (!q.length) { alert(groups ? t("g.empty") : t("h.empty")); return; }
   const title = !groups ? t("s.session") : groups.length === 1 ? glabel(groups[0]) : groups.length <= 3 ? groups.map(gname).join(" · ") : t("s.groups", groups.length);
   S = { queue: q, i: 0, results: [], lastType: null, graded: new Set(), title };
+  step();
+}
+// ---------- Øvelse: extra B2 practice on words already learnt ----------
+// words reviewed at least once, in the selected groups (all when none are selected)
+function learnedIn(groups) { return cards().filter(c => c.history.length && (!groups || groups.includes(c.group))); }
+function startExercise(groups) {
+  const pool = learnedIn(groups);
+  if (!pool.length) { alert(t("h.ex.none")); return; }
+  // weakest first (lapses, then ease), so the practice goes where it is needed; then mixed
+  const pickd = pool.slice().sort((a, b) => (b.lapses || 0) - (a.lapses || 0) || (a.ef || 2.5) - (b.ef || 2.5) || Math.random() - .5).slice(0, 15);
+  S = { queue: shuffle(pickd).map(c => ({ kind: "ex", id: c.id, practice: true })), exercise: true, practiceResults: [], i: 0, results: [], lastType: null, graded: new Set(),
+        title: t("h.ex") + (groups ? ` · ${groups.length === 1 ? gname(groups[0]) : t("s.groups", groups.length)}` : "") };
   step();
 }
 // pairs with at least one word in the selected groups (all pairs when none are selected)
@@ -1282,6 +1299,7 @@ function flushPending() {
   const p = S.pending;
   if (!p) return;
   S.pending = null;
+  if (p.practice && S.exercise) S.practiceResults.push({ id: p.id, q: p.q });
   if (!p.practice) {
     grade(p.id, p.q);
     S.graded.add(p.id);
@@ -1583,19 +1601,21 @@ document.addEventListener("keydown", e => {
 
 // ---------- summary ----------
 function summary() {
-  const r = S.results, n = r.length;
+  const ex = S.exercise;
+  const r = ex ? S.practiceResults : S.results, n = r.length;
   const right = r.filter(x => x.q >= 3).length;
   const shaky = r.filter(x => x.q <= 2).map(x => DB.cards[x.id]);
   const next = {};
-  r.forEach(x => { const d = DB.cards[x.id].due; next[d] = (next[d] || 0) + 1; });
+  if (!ex) r.forEach(x => { const d = DB.cards[x.id].due; next[d] = (next[d] || 0) + 1; });
   const fmt = d => new Date(d + "T12:00").toLocaleDateString(LANG === "en" ? "en-GB" : "da-DK", { weekday: "short", day: "numeric", month: "short" });
   const title = S.title;
   S = null;
   $("#app").innerHTML = `<div class="narrow"><div class="sheet q" style="margin-top:28px">
     <div class="kind">${t("r.done", esc(title))}</div>
     ${n ? `<div class="row" style="align-items:baseline;margin-top:10px"><span class="score">${Math.round(100 * right / n)}%</span><span class="soft">${t("r.score", right, n)}</span></div>` : `<p>${t("r.practice")}</p>`}
-    ${shaky.length ? `<div class="block"><span class="lbl">${t("r.shaky")}</span><ul class="list">${shaky.map(c => `<li><b lang="da">${esc(c.word)}</b><span class="soft">${esc(c.meaning)}</span><span class="spacer"></span><span class="small soft">${t("r.tomorrow")}</span></li>`).join("")}</ul></div>` : n ? `<div class="block">${t("r.none")}</div>` : ""}
-    ${n ? `<div class="block"><span class="lbl">${t("r.next")}</span><ul class="list">${Object.keys(next).sort().map(d => `<li>${fmt(d)}<span class="spacer"></span><span class="soft">${t("r.cards", next[d])}</span></li>`).join("")}</ul></div>` : ""}
+    ${shaky.length ? `<div class="block"><span class="lbl">${t("r.shaky")}</span><ul class="list">${shaky.map(c => `<li><b lang="da">${esc(c.word)}</b><span class="soft">${esc(c.meaning)}</span><span class="spacer"></span><span class="small soft">${ex ? "" : t("r.tomorrow")}</span></li>`).join("")}</ul></div>` : n ? `<div class="block">${t("r.none")}</div>` : ""}
+    ${ex ? `<p class="small soft block">${t("r.ex")}</p>` : ""}
+    ${n && !ex ? `<div class="block"><span class="lbl">${t("r.next")}</span><ul class="list">${Object.keys(next).sort().map(d => `<li>${fmt(d)}<span class="spacer"></span><span class="soft">${t("r.cards", next[d])}</span></li>`).join("")}</ul></div>` : ""}
     ${n ? `<p class="small soft block">${esc(t("r.coach"))}</p>` : ""}
     <div class="row next"><button class="btn solid" id="home">${t("r.home")}</button></div></div></div>`;
   $("#home").onclick = home;
