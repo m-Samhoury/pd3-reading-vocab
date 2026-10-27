@@ -373,6 +373,10 @@ const I18N = {
   "q.def": ["Hvilken definition fra Den Danske Ordbog passer til ordet?", "Which Den Danske Ordbog definition fits the word?"],
   "q.sense": ["Hvad betyder {0} i denne sætning fra prøven?", "What does {0} mean in this exam sentence?"],
   "q.relctx": ["Hvilken relation udtrykker {0} i sætningen?", "Which relation does {0} express in the sentence?"],
+  "q.pair2": ["Skriv {0} eller {1} – i den form sætningen kræver.", "Type {0} or {1}, in the form the sentence needs."],
+  "f.bothfit": ["Rigtigt – her passer {0} også.", "Right: {0} fits here too."],
+  "x.same": ["samme betydning", "same meaning"],
+  "q.same": ["To af ordene betyder det samme, så i en L3-opgave ville de udelukke hinanden. Vælg de to.", "Two of these mean the same, so in an L3 grid they'd cancel each other out. Pick the two."],
   "q.def2": ["Hvilket ord passer til definitionen? Skriv det på dansk.", "Which word fits the definition? Type it in Danish."],
   "f.form": ["Rigtigt ord, men sætningen kræver formen {0}.", "Right word, but the sentence needs the form {0}."],
   "q.gap": ["Skriv det ord, der mangler, i den form sætningen kræver. Ledetråd: ordbogens definition.", "Type the missing word in the form the sentence needs. Clue: the dictionary definition."],
@@ -799,9 +803,9 @@ function confusablePairs(groups) {
   return CONFUSABLES.filter(p => DB.cards[p[0]] && DB.cards[p[1]] && (!groups || [p[0], p[1]].some(id => groups.includes(DB.cards[id].group))));
 }
 function startConfusables(groups) {
-  const pairs = shuffle(confusablePairs(groups)).slice(0, 5);
+  const pairs = shuffle(confusablePairs(groups)).slice(0, 4);
   if (!pairs.length) { alert(t("h.conf.none")); return; }
-  S = { queue: pairs.map(p => ({ kind: "pair", pair: p })), i: 0, results: [], lastType: null, graded: new Set(), title: t("s.conf") };
+  S = { queue: pairs.flatMap(p => pairItems(p, 3)), drill: true, i: 0, results: [], lastType: null, graded: new Set(), title: t("s.conf") };
   step();
 }
 
@@ -845,7 +849,9 @@ function step() {
   const it = S.queue[S.i];
   if (it.kind === "intro") return renderIntro(it);
   if (it.kind === "teach") return renderTeach(DB.cards[it.id]);
-  if (it.kind === "pair") return renderPair(it);
+  if (it.kind === "pair") { S.queue.splice(S.i, 1, ...pairItems(it.pair, 1)); return step(); }
+  if (it.kind === "pairq") return renderPairQ(it);
+  if (it.kind === "pairsame") return renderPairSame(it);
   return renderExercise(it);
 }
 function advance() { S.i++; step(); }
@@ -1227,7 +1233,7 @@ function flushPending() {
     grade(p.id, p.q);
     S.graded.add(p.id);
     S.results.push({ id: p.id, q: p.q });
-    if (p.q < 3) {
+    if (p.q < 3 && !S.drill) {
       // relearn later in this session with another exercise type, and drill its confusable partner
       S.queue.splice(Math.min(S.i + 4, S.queue.length), 0, { kind: "ex", id: p.id, practice: true });
       const pr = partnerPairs(p.id)[0];
@@ -1236,222 +1242,81 @@ function flushPending() {
   }
 }
 
-function renderPair(it) {
-  const [a, b] = it.pair;
-  const A = DB.cards[a], B = DB.cards[b];
-  const items = shuffle([A, B]).map(c => {
-    const s = (c.example && findSpan(c, c.example)) ? { s: c.example, span: findSpan(c, c.example) } :
-      examSentences(c)[0] ? { s: examSentences(c)[0].s, span: examSentences(c)[0].m } : null;
-    return s && { c, ...s };
-  }).filter(Boolean);
-  let k = 0;
-  const one = () => {
-    if (k >= items.length) return;
-    const x = items[k], opts = [A, B];
-    const gapped = `${esc(x.s.slice(0, x.span[0]))}<span class="gap">&nbsp;</span>${esc(x.s.slice(x.span[1]))}`;
-    mc(`${t("s.conf")} · ${A.word} / ${B.word}`, `<p class="prompt">${t("q.pair", k + 1, items.length)}</p><div class="sentence" lang="da">${gapped}</div>`,
-      opts.map(o => `<b lang="da">${esc(o.word)}</b>`), opts.indexOf(x.c), ok => {
-        $("#fb").innerHTML = `<div class="feedback ${ok ? "ok" : "bad"}"><h3>${ok ? t("f.right") : t("f.its", esc(x.c.word))}</h3>
-          <div class="why sentence" lang="da">${hlSentence(x.c, x.s, x.span)}</div>
-          ${k === items.length - 1 ? `<div class="pair"><div><b lang="da">${esc(A.word)}</b><br>${esc(A.meaning)}<div class="small soft" lang="da">${esc(A.note || "")}</div></div><div><b lang="da">${esc(B.word)}</b><br>${esc(B.meaning)}<div class="small soft" lang="da">${esc(B.note || "")}</div></div></div><div class="why"><b>${t("f.rule")}</b> ${esc(tip(it.pair))}</div>` : ""}
-          </div><div class="row next"><button class="btn solid" id="nx">${t("b.next")}</button><button class="btn quiet" id="more">${t("b.more")}: <span lang="da">${esc(x.c.word)}</span></button><span class="spacer"></span><span class="soft small">${t("f.practice")}</span></div>`;
-        $("#more").onclick = () => explain(x.c);
-        bindNext(() => { k++; if (k < items.length) one(); else advance(); });
-      });
-  };
-  if (!items.length) return advance();
-  one();
-}
-
-// ---------- find a word ----------
-// the study sheet's own list (data/words.json on the site) has its own groups; it's fetched once when the finder opens
-let SITE_WORDS = null;   // null = not loaded, false = failed, else {words, groups}
-async function loadSiteWords() {
-  if (SITE_WORDS !== null) return SITE_WORDS;
-  const base = location.protocol === "file:" ? SITE : "";
-  try {
-    const [w, g] = await Promise.all(["data/words.json", "data/groups.json"].map(async u => { const r = await fetch(base + u); if (!r.ok) throw 0; return r.json(); }));
-    SITE_WORDS = { words: w, groups: Object.fromEntries(g.map(x => [x.id, x])) };
-  } catch (e) { SITE_WORDS = false; }
-  return SITE_WORDS;
-}
-const fold = s => norm(s).replace(/æ/g, "ae").replace(/ø/g, "oe").replace(/å/g, "aa").replace(/aa/g, "a");
-// one entry per Danish word, merging the coach deck and the study sheet
-let WI = null, WI_SITE;
-function wordIndex() {
-  if (WI && WI_SITE === SITE_WORDS) return WI;
-  const idx = new Map();
-  const get = key => { if (!idx.has(key)) idx.set(key, { key, word: null, meaning: "", card: null, site: null, forms: new Set(), en: "" }); return idx.get(key); };
-  for (const c of cards()) {
-    const e = get(fold(c.word)); e.word = c.word; e.card = c; e.meaning = c.meaning; e.en += " " + c.meaning;
-    variants(c.word).forEach(v => e.forms.add(v));
-  }
-  for (const w of SITE_WORDS ? SITE_WORDS.words : []) {
-    const k = fold(w.display);
-    // join to a coach card when one of its look-up forms is this word
-    const hit = [...idx.values()].find(e => e.card && [...e.forms].some(f => fold(f) === k));
-    const e = hit || get(k);
-    e.site = w; e.word = e.word || w.display;
-    const en = (w.senses || []).map(s => s.en_definition || "").join(" ");
-    e.en += " " + en;
-    if (!e.meaning) e.meaning = ((w.senses || [])[0]?.en_definition || "").replace(/\s+[–-]\s+.*$/, "");
-    [w.display, w.lemma, ...(w.forms || [])].filter(Boolean).forEach(v => e.forms.add(norm(v)));
-  }
-  WI_SITE = SITE_WORDS;
-  return (WI = [...idx.values()]);
-}
-const ABBR = { "bl a": "blandt andet", "fx": "for eksempel", "f eks": "for eksempel", "dvs": "det vil sige", "mht": "med hensyn til",
-  "pga": "på grund af", "ift": "i forhold til", "osv": "og så videre", "evt": "eventuelt", "ca": "cirka", "iflg": "ifølge", "vha": "ved hjælp af" };
-// bare stems of a typed word, so "medfører", "medførte", "konsekvenser" find "at medføre", "konsekvens"
-function stems(f) {
-  const out = new Set([f]);
-  for (const end of ["ede", "ende", "erne", "ene", "er", "en", "et", "ne", "de", "te", "r", "e", "s"])
-    if (f.endsWith(end) && f.length - end.length >= 3) { const b = f.slice(0, -end.length); out.add(b); out.add(b + "e"); }
-  return out;
-}
-function searchWords(q) {
-  q = ABBR[norm(q).replace(/\.$/, "")] || q;
-  const f = fold(q);
-  if (!f) return [];
-  const fs = stems(f);
+// ---------- confusables drill ----------
+// pairs that mean the same thing can't be tested with a gap (either word fits): they get an L3-style check instead
+const SAME_MEANING = new Set(["derfor|således", "næppe|næsten_ikke"]);
+// per pair: which of a word's labelled senses to use, and senses where the partner also fits (counted right, with a note)
+const PAIR_SENSES = { "mens|hvorimod": { mens: { both: ["contrast"] }, hvorimod: { skip: true } } };
+const RELATED = { "konsekvens": ["årsag", "formål", "konklusion"], "årsag": ["konsekvens", "formål"], "kontrast": ["indrømmelse"], "indrømmelse": ["kontrast"] };
+const pairKey = p => `${p[0]}|${p[1]}`;
+function pairItems(pair, perWord) {
+  if (SAME_MEANING.has(pairKey(pair))) return [{ kind: "pairsame", pair }];
+  const rule = PAIR_SENSES[pairKey(pair)] || {};
   const out = [];
-  for (const e of wordIndex()) {
-    let best = null;
-    for (const v of e.forms) {
-      const fv = fold(v);
-      const sc = fv === f ? 0 : fv.startsWith(f) ? 1 : fs.has(fv) ? 1.5 : (f.length >= 3 && fv.includes(f)) ? 2 : null;
-      if (sc !== null && (!best || sc < best.sc)) best = { sc, form: v };
-    }
-    if (!best && f.length >= 3 && new RegExp(`\\b${f.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`).test(fold(e.en))) best = { sc: 3, en: true };
-    if (best) out.push({ e, ...best });
+  for (const id of [pair[0], pair[1]]) {
+    const c = DB.cards[id], r = rule[id] || {}, other = id === pair[0] ? pair[1] : pair[0];
+    if (r.skip) continue;
+    let srcs = examSentences(c).filter(e => e.s.length < 230).map(e => ({ s: e.s, span: e.m, src: e.src, sense: e.sense }));
+    if (!srcs.length && c.example && findSpan(c, c.example)) srcs = [{ s: c.example, span: findSpan(c, c.example), src: null }];
+    shuffle(srcs).slice(0, perWord).forEach(x => out.push({ kind: "pairq", pair, id, other, ...x, both: (r.both || []).includes(x.sense) }));
   }
-  return out.sort((a, b) => a.sc - b.sc || a.e.word.length - b.e.word.length).slice(0, 12);
+  return shuffle(out);
 }
-function nearWords(q) {
-  const f = fold(q);
-  return wordIndex().map(e => ({ e, d: Math.min(...[...e.forms].map(v => lev(fold(v), f))) }))
-    .filter(x => x.d <= Math.max(2, Math.floor(f.length / 3))).sort((a, b) => a.d - b.d).slice(0, 6).map(x => x.e);
-}
-function hitCard(x) {
-  const e = x.e, c = e.card, w = e.site;
-  const sg = w ? (w.groups || [w.primary_group]).map(id => SITE_WORDS.groups[id]).filter(Boolean) : [];
-  const via = x.en ? t("f.viaen") : (x.form && fold(x.form) !== fold(e.word) && x.sc === 0) ? t("f.viaform", x.form) : "";
-  return `<div class="sheet hit">
-    <div class="head"><span class="big" lang="da">${esc(e.word)}</span>${c && wtype(c) ? `<span class="tag">${esc(wtype(c))}</span>` : w ? `<span class="tag">${esc(w.word_class || "")}</span>` : ""}</div>
-    ${e.meaning ? `<div class="meaning">${esc(e.meaning)}</div>` : ""}${via ? `<div class="via">${esc(via)}</div>` : ""}
-    <div class="cats">
-      <div class="cat"><span class="src">${t("f.al")}</span>${c ? `<span class="badge t${prio(c.group)}">${esc(t("p." + prio(c.group)))}</span><span class="gname">${esc(gname(c.group))} <small>· ${esc(GROUPS[c.group] ? GROUPS[c.group][LANG === "en" ? 1 : 0] : "")}</small></span>` : `<span class="soft">${t("f.notal")}</span>`}</div>
-      ${SITE_WORDS ? `<div class="cat"><span class="src">${t("f.site")}</span>${sg.length ? sg.map((g, i) => `<span class="gname">${esc(LANG === "en" ? g.name_en : g.name_da)} <small>· ${esc(LANG === "en" ? g.name_da : g.name_en)}</small></span>`).join(`<span class="soft">+</span>`) : `<span class="soft">${t("f.notsite")}</span>`}</div>` : ""}
-    </div>
-    ${c ? `<div class="row"><button class="btn" data-explain="${esc(c.id)}">${t("b.more")}</button><button class="btn quiet" data-practise="${esc(c.group)}">${t("f.pract")} →</button></div>` : ""}
-  </div>`;
-}
-async function findView(q0) {
-  S = null;
-  const k = counts();
-  $("#app").innerHTML = `<div class="narrow">
-    <div class="top"><h1><span class="light">${t("f.h1a")}</span>${t("f.h1b")}</h1><p>${t("f.intro")}</p>
-      <div class="finder"><input id="fq" type="search" lang="da" autocomplete="off" spellcheck="false" placeholder="${esc(t("f.ph"))}" aria-label="${esc(t("nav.find"))}">${letters()}</div>
-      <p class="soft small" id="fmeta" style="margin-top:8px"></p></div>
-    <div class="hits" id="hits" aria-live="polite"></div></div>`;
-  const input = $("#fq"); bindLetters(input);
-  input.value = q0 || ""; input.focus();
-  const meta = () => { $("#fmeta").textContent = SITE_WORDS === null ? t("f.loading") : SITE_WORDS === false ? t("f.offline") : t("f.count", k.total, SITE_WORDS.words.length); };
-  const draw = () => {
-    const q = input.value.trim();
-    history.replaceState(null, "", "#find" + (q ? "=" + encodeURIComponent(q) : ""));
-    if (!q) { $("#hits").innerHTML = ""; return; }
-    const hits = searchWords(q);
-    if (hits.length) $("#hits").innerHTML = hits.map(hitCard).join("");
-    else {
-      const near = nearWords(q);
-      // a close spelling is most likely what was meant: show it in full, the rest as chips
-      $("#hits").innerHTML = `<div class="sheet hit"><b>${esc(t("f.none", q))}</b>
-        ${near.length > 1 ? `<div class="row"><span class="soft">${t("f.near")}</span>${near.map(e => `<button type="button" class="pchip" data-q="${esc(e.word)}" lang="da">${esc(e.word)}</button>`).join("")}</div>` : ""}
-        <p class="small" style="margin-top:12px"><a href="https://ordnet.dk/ddo/ordbog?query=${encodeURIComponent(q)}" target="_blank" rel="noopener">${esc(t("f.ddo", q))}</a></p></div>
-        ${near.length ? `<span class="lbl" style="margin:6px 0 -4px">${t("f.near")}</span>${hitCard({ e: near[0] })}` : ""}`;
-    }
-    $("#hits").querySelectorAll("[data-explain]").forEach(b => b.onclick = () => explain(DB.cards[b.dataset.explain]));
-    $("#hits").querySelectorAll("[data-practise]").forEach(b => b.onclick = () => { setPicked([b.dataset.practise]); location.hash = ""; });
-    $("#hits").querySelectorAll("[data-q]").forEach(b => b.onclick = () => { input.value = b.dataset.q; draw(); input.focus(); });
+function renderPairQ(it) {
+  const c = DB.cards[it.id], o = DB.cards[it.other], [A, B] = [DB.cards[it.pair[0]], DB.cards[it.pair[1]]];
+  const gapForm = it.s.slice(it.span[0], it.span[1]);
+  frame(`${t("s.conf")} · ${A.word} / ${B.word}`, `<p class="prompt">${t("q.pair2", `<b lang="da">${esc(A.word)}</b>`, `<b lang="da">${esc(B.word)}</b>`)}</p>
+    <div class="sentence" lang="da">${esc(it.s.slice(0, it.span[0]))}<span class="gap">&nbsp;</span>${esc(it.s.slice(it.span[1]))}</div>
+    ${it.src ? `<div style="margin-top:6px"><span class="tag">${esc(it.src)}</span></div>` : ""}
+    <input class="answer" id="ans" lang="da" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="${t("q.ph")}">${letters()}
+    <div class="row next"><button class="btn solid" id="chk">${t("b.check")}</button><button class="btn quiet" id="idk">${t("b.idk")}</button></div><div id="fb"></div>`);
+  const input = $("#ans");
+  input.focus(); bindLetters(input);
+  const check = give => {
+    if (input.disabled) return;
+    const v = input.value.trim();
+    if (!v && !give) return;
+    input.disabled = true; $("#chk").remove(); $("#idk").remove();
+    const body = `<div class="sentence" lang="da">${hlSentence(c, it.s, it.span)}</div>
+      <div class="why"><b>${t("f.rule")}</b> ${esc(tip(it.pair))}</div>
+      <div class="pair"><div><b lang="da">${esc(A.word)}</b><br>${esc(A.meaning)}</div><div><b lang="da">${esc(B.word)}</b><br>${esc(B.meaning)}</div></div>`;
+    const exact = norm(v) === norm(gapForm);
+    if (!give && exact) return feedback(c, it, quick(10000) ? 5 : 4, true, body);
+    if (!give && it.both && isAnswer(o, v)) return feedback(c, it, 4, true, `<div class="why">${t("f.bothfit", `<b lang="da">${esc(o.word)}</b>`)}</div>` + body);
+    if (!give && isAnswer(c, v)) return feedback(c, it, 3, true, t("f.form", `<b lang="da">${esc(gapForm)}</b>`) + body, "minor", t("f.almost"));
+    if (!give && isAnswer(o, v)) return feedback(c, it, 1, false, body, "critical", t("f.its", esc(gapForm)));
+    if (!give && nearMiss(c, v)) return feedback(c, it, 3, true, t("f.spelling", `<b lang="da">${esc(gapForm)}</b>`, esc(v)) + body, "minor", t("f.almost"));
+    feedback(c, it, give ? 0 : 1, false, (v ? t("f.wrote", esc(v)) : "") + body, give ? null : "moderate", t("f.its", esc(gapForm)));
   };
-  input.oninput = draw;
-  meta(); draw();
-  await loadSiteWords();
-  if ($("#fq") === input) { meta(); draw(); }
+  $("#chk").onclick = () => check(false);
+  $("#idk").onclick = () => check(true);
+  S.keys = e => { if (e.key === "Enter" && document.activeElement === input) { e.preventDefault(); check(false); } };
 }
-
-// ---------- explain more ----------
-// translation into English, shown under the sentence; cached per browser so each sentence is fetched once
-const TR_KEY = "pd3-assisted-learning:tr:v1";
-let TR = {};
-try { TR = JSON.parse(localStorage.getItem(TR_KEY) || "{}"); } catch (e) { TR = {}; }
-async function translate(s) {
-  if (TR[s]) return TR[s];
-  const q = encodeURIComponent(s);
-  const tries = [
-    async () => (await (await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=da&tl=en&dt=t&q=${q}`)).json())[0].map(x => x[0]).join(""),
-    async () => { const r = await (await fetch(`https://api.mymemory.translated.net/get?q=${q}&langpair=da|en`)).json(); if (r.responseStatus !== 200) throw 0; return r.responseData.translatedText; },
-  ];
-  for (const f of tries) {
-    try {
-      const out = (await f() || "").trim();
-      if (out) { TR[s] = out; try { localStorage.setItem(TR_KEY, JSON.stringify(TR)); } catch (e) { /* ignore */ } return out; }
-    } catch (e) { /* try the next one */ }
-  }
-  throw new Error("no translation");
-}
-function trLink(s) { return `<button type="button" class="linkbtn tr" data-s="${esc(s)}">${t("m.tr")}</button>`; }
-function bindTr(root) {
-  root.querySelectorAll("button.tr").forEach(b => b.onclick = async () => {
-    const box = b.parentElement, open = box.querySelector(":scope > .trl");
-    if (open) { open.remove(); b.textContent = t("m.tr"); return; }
-    const s = b.dataset.s, line = document.createElement("div");
-    line.className = "trl"; line.lang = "en"; line.setAttribute("aria-live", "polite");
-    line.textContent = t("m.tr.wait"); box.append(line); b.textContent = t("m.tr.hide");
-    try { line.textContent = await translate(s); }
-    catch (e) {
-      line.classList.add("err");
-      line.innerHTML = `${t("m.tr.err")} <a href="https://translate.google.com/?sl=da&tl=en&op=translate&text=${encodeURIComponent(s)}" target="_blank" rel="noopener">${t("m.tr.open")}</a>`;
-    }
-  });
-}
-function explain(c) {
-  let dlg = $("#explain");
-  if (!dlg) {
-    dlg = document.createElement("dialog");
-    dlg.className = "info explain"; dlg.id = "explain"; dlg.setAttribute("aria-labelledby", "exTitle");
-    dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
-    document.body.append(dlg);
-  }
-  const d = c.dict, ex = examSentences(c), pairs = partnerPairs(c.id);
-  const same = x => norm(x.meaning) === norm(c.meaning);
-  const mates = Object.values(DB.cards).filter(x => x.group === c.group && x.id !== c.id)
-    .sort((a, b) => same(b) - same(a) || a.word.localeCompare(b.word, "da"));
-  const lookup = d ? d.url : `https://ordnet.dk/ddo/ordbog?query=${encodeURIComponent(variants(c.word).filter(v => !/^(at|en|et) /.test(v)).pop() || c.word)}`;
-  dlg.innerHTML = `<div class="ib">
-    <div class="ih"><div><span class="lbl" id="exTitle">${t("m.title")}</span><div class="head"><span class="big" lang="da">${esc(c.word)}</span>${wtype(c) ? `<span class="tag">${esc(wtype(c))}</span>` : ""}</div></div>
-      <button type="button" class="btn quiet" id="exClose">${t("info.close")}</button></div>
-    <div class="meaning" style="margin-top:12px">${esc(c.meaning)}</div>
-    ${noteText(c) ? `<div class="soft" lang="da" style="margin-top:4px">${esc(noteText(c))}</div>` : ""}
-    ${DB.senses[c.id] ? "" : `<div class="block"><div class="eg"><span class="lbl">${t("t.example")}</span><div class="ex" lang="da"><span class="sentence">${hlSentence(c, c.example)}</span>${trLink(c.example)}</div></div></div>`}
-    ${wtype(c) ? `<h3>${t("t.order")}</h3>${ruleBlock(c)}` : ""}
-    <h3>${t("m.senses")} <span class="soft">· ${t("t.ddo")}</span></h3>
-    ${d ? `<div class="ddo"><div class="soft small">${ddoHead(c, d)}</div>${ddoSenses(d, 99)}
-      ${d.cite.length ? `<span class="lbl" style="margin-top:12px">${t("m.cites")}</span>${d.cite.map(x => `<blockquote lang="da"><span>${esc(x)}</span>${trLink(x)}</blockquote>`).join("")}` : ""}
-      <div class="cite"><a href="${esc(d.url)}" target="_blank" rel="noopener">ordnet.dk ↗</a></div></div>`
-      : `<p>${t("m.nodict")} <a href="${esc(lookup)}" target="_blank" rel="noopener">${t("m.lookup")}</a></p>`}
-    ${DB.senses[c.id] ? `<h3>${t("t.senses")} <span class="soft">· ${t("m.exam")}</span></h3>${senseBlocks(c, 99, true)}` :
-      ex.length ? `<h3>${t("m.exam")} <span class="soft">· ${ex.length}</span></h3>${ex.map(e => `<div class="ex" lang="da"><span class="tag">${esc(e.src)}</span><span>${hlSentence(c, e.s, e.m)}</span>${trLink(e.s)}</div>`).join("")}` : ""}
-    ${pairs.map(p => { const o = DB.cards[p[0] === c.id ? p[1] : p[0]]; return `<div class="block"><div class="warnbox"><b>${t("t.mix")}</b> <span lang="da">${esc(c.word)} / ${esc(o.word)}</span> (${esc(o.meaning)}) — ${esc(tip(p))}</div></div>`; }).join("")}
-    ${mates.length ? `<h3>${t("m.mates")} <span class="soft">· ${esc(gname(c.group))} ${t("m.mates.s")}</span></h3>
-      <div class="mates">${mates.map(x => `<button type="button" class="mate${same(x) ? " same" : ""}" data-id="${esc(x.id)}"><b lang="da">${esc(x.word)}</b><span>${esc(x.meaning)}${same(x) ? ` · ${t("m.same")}` : ""}</span></button>`).join("")}</div>` : ""}
-    <p class="small" style="margin-top:18px">${t("m.coach", esc(c.word))}</p></div>`;
-  $("#exClose").onclick = () => dlg.close();
-  bindTr(dlg);
-  dlg.querySelectorAll(".mate").forEach(b => { b.onclick = () => explain(DB.cards[b.dataset.id]); });
-  if (!dlg.open) dlg.showModal();
-  dlg.scrollTop = 0;
+// same-meaning pair: pick the two words that say the same thing (they cancel each other out in an L3 grid)
+function renderPairSame(it) {
+  const [A, B] = [DB.cards[it.pair[0]], DB.cards[it.pair[1]]];
+  const others = [];
+  // wrong options come from clearly different relations (not cause/result/purpose next to derfor)
+  const near = new Set([A.group, B.group, ...(ALSO[A.id] || []), ...(ALSO[B.id] || []), ...(RELATED[A.group] || [])]);
+  shuffle(cards().filter(x => !near.has(x.group) && (x.priority || 3) === (A.priority || 3) && !x.word.includes("…") && norm(x.meaning) !== norm(A.meaning)))
+    .forEach(x => { if (others.length < 2 && !others.some(y => y.group === x.group)) others.push(x); });
+  const opts = shuffle([A, B, ...others]);
+  frame(`${t("s.conf")} · ${t("x.same")}`, `<p class="prompt">${t("q.same")}</p>
+    <div class="opts">${opts.map((x, i) => `<button class="btn opt" data-i="${i}"><span class="k">${i + 1}</span><span lang="da">${esc(x.word)}</span></button>`).join("")}</div><div id="fb"></div>`);
+  const btns = [...document.querySelectorAll(".opt")], sel = new Set();
+  const toggle = i => {
+    if (btns[0].disabled) return;
+    sel.has(i) ? sel.delete(i) : sel.add(i);
+    btns[i].classList.toggle("sel");
+    if (sel.size < 2) return;
+    btns.forEach(b => b.disabled = true);
+    const ok = [...sel].every(j => opts[j] === A || opts[j] === B);
+    opts.forEach((x, j) => { btns[j].classList.remove("sel"); if (x === A || x === B) btns[j].classList.add("right"); else if (sel.has(j)) btns[j].classList.add("wrong"); });
+    feedback(A, it, ok ? 4 : 2, ok, `<div class="why"><b>${t("f.rule")}</b> ${esc(tip(it.pair))}</div>
+      <div class="small">${opts.map(x => `<span lang="da">${esc(x.word)}</span> = ${esc(x.meaning)}`).join(" · ")}</div>`, ok ? null : "moderate");
+  };
+  btns.forEach(b => b.onclick = () => toggle(+b.dataset.i));
+  S.keys = e => { const n = +e.key; if (n >= 1 && n <= 4) toggle(n - 1); };
 }
 
 // ---------- keyboard ----------
