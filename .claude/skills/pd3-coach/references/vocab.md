@@ -29,3 +29,18 @@ Confusable pairs to drill side by side when either one lapses: *da/når* · *for
 
 Adding words found in practice: `pd3.py vocab add "at fastholde" "to retain" --group l3_ord --priority 2 --example "…" --note "…"`
 (opt-in — ask the learner which words to keep). Bulk: `pd3.py vocab import file.tsv` (columns: word, meaning, group, example, priority, note).
+
+## Assisted Learning page (self-study between coach sessions)
+`pd3.py serve [--port 8770]` serves `app/assisted-learning.html` at http://localhost:8770 together with the deck files it reads
+(`data/vocab.json`, `data/exam-sentences.json`, `data/profile.json`; any static host with those files works too).
+**Review progress is kept in the browser** (localStorage, per device; it survives closing the page), not in `vocab.json`:
+cards graded on the page don't show up in `vocab due` or `status`. Cards never reviewed on the page start from the deck's schedule.
+It follows this file: batches of 5 new words from one group (taught first: word-order rule, example, real exam sentences,
+DDO entry, confusable partner), max 15 new a day, rotating exercise types (meaning, production, relation, cloze, word-order
+tiles with a retype after an error, L3 pair), the confusable pairs above drilled when one lapses, and a group map.
+Grades (same SM-2 as `pd3.py`): 5 instant · 4 correct · 3 typo / second try · 2 recognised when shown · 1 wrong · 0 "I don't know".
+
+Data it uses: `card.dict` (from `pd3.py vocab enrich ddo_entries.json t23_facts.json`, DDO definitions + citations)
+and `pd3-data/exam-sentences.json` (from `pd3.py sentences`: up to 4 real sentences per card from the reading texts).
+After adding cards, re-run both so new words get definitions and exam sentences.
+The free "write one sentence with 3 connectors" task stays in chat (it needs grading by you).

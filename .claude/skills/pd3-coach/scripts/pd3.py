@@ -23,6 +23,10 @@ Usage (run with python3 -I):
   pd3.py vocab grade ID QUALITY        # QUALITY 0-5 (SM-2)
   pd3.py vocab list [--group G] [--priority P]
   pd3.py vocab groups                  # cards and due counts per group
+  pd3.py vocab enrich JSON [JSON ...]  # copy DDO definitions + citations onto matching cards
+                                       #   (ddo_entries.json or t23_facts.json format)
+  pd3.py sentences                     # find real exam sentences for every card -> exam-sentences.json
+  pd3.py serve [--port 8770]           # Assisted Learning page at http://localhost:PORT (progress kept in the browser)
   pd3.py mistake add PATTERN --category C [--severity critical|moderate|minor] [--example E]
   pd3.py mistake fixed PATTERN         # learner got it right in a drill
   pd3.py mistake list
@@ -348,6 +352,7 @@ def import_tsv(vocab, path):
 
 
 def sm2(card, q):
+    card.setdefault("introduced", TODAY.isoformat())
     if q >= 3:
         card["interval"] = 1 if card["reps"] == 0 else 6 if card["reps"] == 1 else round(card["interval"] * card["ef"])
         card["reps"] += 1
@@ -402,6 +407,176 @@ def cmd_vocab(a):
             g[1] += c["due"] <= TODAY.isoformat()
         for (p, g), (n, d) in sorted(groups.items()):
             print(f"P{p} {g:16} {n:3} cards, {d:3} due")
+    elif a.vcmd == "enrich":
+        n = enrich(vocab, a.files)
+        save("vocab.json", vocab)
+        print(f"enriched {n} of {len(cards)} cards ({sum(1 for c in cards.values() if c.get('dict'))} have a definition)")
+
+
+def word_variants(word):
+    """Look-up forms of a card word: 'at ansøge (om)' -> ansøge, 'trods / på trods af' -> trods, på trods af, …"""
+    w = nfc(word).lower().strip()
+    out = [w, re.sub(r"\s*\(.*?\)", "", w).strip()]
+    out += [p.strip("() ") for p in re.findall(r"\((.*?)\)", w)]
+    for part in re.split(r"\s*/\s*|\s*…\s*", out[1]):
+        out.append(part.strip())
+    for v in list(out):
+        for art in ("at ", "en ", "et "):
+            if v.startswith(art):
+                out.append(v[len(art):])
+    out += [re.sub(r"\s+(i|med|af|på|til|for|om)$", "", v) for v in list(out)]
+    return [v for v in dict.fromkeys(out) if v]
+
+
+def enrich(vocab, files):
+    fold = lambda s: s.replace("æ", "ae").replace("ø", "oe").replace("å", "aa")
+    idx = {}
+    for path in files:
+        for k, x in json.load(open(path, encoding="utf-8")).items():
+            if x.get("found") is False or not x.get("senses"):
+                continue
+            # numbered senses are the main meanings; unnumbered ones are idioms
+            senses = [s for s in x["senses"] if s.get("no")] or x["senses"]
+            entry = {"source": "DDO", "pos": x.get("pos") or x.get("class") or "",
+                     "senses": [(s.get("definition") or s.get("def") or "")[:220] for s in senses[:2]],
+                     "cite": [c[:180] for s in senses for c in s.get("citations", [])][:2],
+                     "url": x.get("url") or f"https://ordnet.dk/ddo/ordbog?query={x.get('query') or k}"}
+            keys = {nfc(k.split("-", 1)[-1]).lower(), nfc(x.get("query") or "").lower(), nfc(x.get("head") or "").lower()}
+            for key in keys - {""}:
+                idx.setdefault(key, entry)
+                idx.setdefault(fold(key), entry)
+    n = 0
+    for c in vocab["cards"].values():
+        hit = next((idx.get(v) or idx.get(fold(v)) for v in word_variants(c["word"]) if idx.get(v) or idx.get(fold(v))), None)
+        if hit:
+            c["dict"] = hit
+            n += 1
+    return n
+
+
+# ---------- real exam sentences ----------
+
+READING_KINDS = ("L1_txt", "L2_txt", "L12_txt")
+
+
+def reading_text(sitting, kind, rel, i):
+    out = os.path.join(CACHE, f"{sitting}_{kind}{'_' + str(i + 1) if i else ''}.txt")
+    if not os.path.exists(out):
+        os.makedirs(CACHE, exist_ok=True)
+        try:
+            text = extract(os.path.join(EXAMS, rel))
+        except Exception as e:  # damaged or odd PDFs: skip, don't stop the whole run
+            print(f"skip {rel}: {e}", file=sys.stderr)
+            text = ""
+        with open(out, "w", encoding="utf-8") as f:
+            f.write(text)
+    return open(out, encoding="utf-8").read()
+
+
+def split_sentences(text):
+    paras = re.split(r"\n\s*\n", text)
+    for p in paras:
+        p = re.sub(r"\s+", " ", p).strip()
+        for s in re.split(r"(?<=[.!?])\s+(?=[A-ZÆØÅ«»\"„])", p):
+            words = s.split()
+            if 6 <= len(words) <= 32 and s[-1] in ".!?" and not re.search(r"\d{3,}|_{2,}|\.{3}|…|\(\d+\)|www|@", s):
+                yield s
+
+
+def card_pattern(card):
+    """Regex that finds a card word in running text; verbs and nouns get their common inflections."""
+    w = nfc(card["word"]).lower()
+    kind = "verb" if w.startswith("at ") else "noun" if w.startswith(("en ", "et ")) else \
+        "adj" if card.get("group") == "adjektiv" else "fixed"
+    ends = {"verb": r"(?:e|er|es|ede|edes|et|te|tes|t|de|des)?", "noun": r"(?:en|et|n|t|er|erne|e|ne|s)?",
+            "adj": r"(?:e|t)?", "fixed": ""}[kind]
+    alts = []
+    for v in word_variants(card["word"]):
+        if "…" in v or v.startswith(("at ", "en ", "et ")):
+            continue
+        toks = v.split()
+        if len(toks) == 1 and kind == "fixed":
+            # short connectors (da, for, så, når…) are too ambiguous mid-sentence: only after a comma or at the start
+            alts.append((r"(?:(?<=,\s)|^)" if v in ("da", "for", "så", "om", "når") else "") + re.escape(v))
+            continue
+        if len(toks) == 1 and len(v) < 5:
+            alts.append(re.escape(v) + "r?")  # short stems + full endings hit other words (vare -> var)
+            continue
+        head = re.escape(toks[0][:-1] if kind == "verb" and toks[0].endswith("e") else toks[0]) + ends
+        alts.append(r"\s+".join([head] + [re.escape(t) for t in toks[1:]]))
+    parts = [p.strip() for p in w.split("…")]
+    if len(parts) == 2 and all(parts):
+        alts.append(re.escape(parts[0]) + r"\b.{1,80}?\b" + re.escape(parts[1]))
+    if not alts:
+        return None
+    return re.compile(r"(?<![\wæøå])(?:" + "|".join(sorted(set(alts), key=len, reverse=True)) + r")(?![\wæøå])", re.I)
+
+
+def cmd_sentences(a):
+    idx = index()
+    pool = []
+    for sitting, e in sorted(idx.items(), key=lambda kv: (kv[0][:4], kv[0][4] == "v"), reverse=True):
+        for kind in READING_KINDS:
+            for i, rel in enumerate(e["files"].get(kind, [])):
+                if rel.lower().endswith(".pdf"):
+                    label = f"{sitting} {kind.split('_')[0].replace('L12', 'L1+2')}"
+                    pool += [(s, label) for s in split_sentences(reading_text(sitting, kind, rel, i))]
+    print(f"{len(pool)} sentences from the reading texts", file=sys.stderr)
+    cards = load("vocab.json", {"cards": {}})["cards"]
+    out, found = {}, 0
+    for cid, c in cards.items():
+        pat = card_pattern(c)
+        hits, seen = [], set()
+        for s, src in pool if pat else []:
+            m = pat.search(s)
+            if m and s not in seen:
+                seen.add(s)
+                hits.append({"s": s, "src": src, "m": [m.start(), m.end()]})
+            if len(hits) >= 4:
+                break
+        if hits:
+            out[cid] = hits
+            found += 1
+    save("exam-sentences.json", {"built": TODAY.isoformat(), "sentences": out})
+    print(f"{found} of {len(cards)} cards have real exam sentences -> {os.path.join(DATA, 'exam-sentences.json')}")
+
+
+# ---------- Assisted Learning page ----------
+
+def cmd_serve(a):
+    """Static server for the page and the deck files it reads; review progress is kept in the browser."""
+    from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+    page = os.path.join(SKILL_DIR, "app", "assisted-learning.html")
+    files = {"/data/vocab.json", "/data/exam-sentences.json", "/data/profile.json"}
+
+    class Handler(BaseHTTPRequestHandler):
+        def send(self, code, data, ctype):
+            self.send_response(code)
+            self.send_header("Content-Type", ctype)
+            self.send_header("Content-Length", str(len(data)))
+            self.send_header("Cache-Control", "no-store")
+            self.end_headers()
+            self.wfile.write(data)
+
+        def do_GET(self):
+            path = self.path.split("?")[0]
+            if path in ("/", "/index.html", "/assisted-learning.html"):
+                return self.send(200, open(page, "rb").read(), "text/html; charset=utf-8")
+            src = os.path.join(DATA, os.path.basename(path))
+            if path in files and os.path.exists(src):
+                return self.send(200, open(src, "rb").read(), "application/json; charset=utf-8")
+            self.send(404, b"not found", "text/plain")
+
+        def log_message(self, fmt, *args):
+            pass
+
+    srv = ThreadingHTTPServer(("127.0.0.1", a.port), Handler)
+    print(f"Assisted Learning: http://localhost:{a.port}  (deck: {os.path.join(DATA, 'vocab.json')}; "
+          f"progress is saved in the browser; Ctrl+C to stop)", flush=True)
+    try:
+        srv.serve_forever()
+    except KeyboardInterrupt:
+        pass
 
 
 # ---------- mistakes ----------
@@ -457,6 +632,9 @@ def main():
     q = vs.add_parser("grade"); q.add_argument("id"); q.add_argument("quality", type=int)
     q = vs.add_parser("list"); q.add_argument("--group"); q.add_argument("--priority", type=int)
     vs.add_parser("groups")
+    q = vs.add_parser("enrich"); q.add_argument("files", nargs="+")
+    sp.add_parser("sentences")
+    p = sp.add_parser("serve"); p.add_argument("--port", type=int, default=8770)
     p = sp.add_parser("mistake"); ms = p.add_subparsers(dest="mcmd", required=True)
     q = ms.add_parser("add"); q.add_argument("pattern"); q.add_argument("--category", required=True)
     q.add_argument("--severity", default="moderate", choices=["critical", "moderate", "minor"]); q.add_argument("--example")
@@ -465,7 +643,7 @@ def main():
     a = ap.parse_args()
     {"init": cmd_init, "status": cmd_status, "index": lambda a: print(f"{len(build_index())} sittings indexed"),
      "sittings": cmd_sittings, "pick": cmd_pick, "get": cmd_get, "log": cmd_log,
-     "vocab": cmd_vocab, "mistake": cmd_mistake}[a.cmd](a)
+     "vocab": cmd_vocab, "mistake": cmd_mistake, "sentences": cmd_sentences, "serve": cmd_serve}[a.cmd](a)
 
 
 if __name__ == "__main__":

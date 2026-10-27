@@ -1,6 +1,6 @@
 ---
 name: pd3-coach
-description: Personal coach for passing Prøve i Dansk 3 (PD3, Danish B2 exam). Runs timed past-paper drills from the local 2004–2024 exam collection (Læseforståelse 1, 2A, 2B, 3), grades them against the official answer keys, coaches and grades writing (Delprøve 1 mail, Delprøve 2A/2B essay) on the 7-point scale, rehearses the oral exam with real examiner questions, and keeps spaced-repetition vocabulary (connectors/conjunctions first), a mistake log and a progress/grade estimate. Follows the learner's own Battle Plan. Use whenever the user wants to practise or plan for PD3, Danish reading/writing/oral exam prep, forbinderord or PD3 vocabulary, or asks "how am I doing" for PD3. Args - today | status | plan | setup | l1 | l2a | l2b | l3 | reading | mail | essay | oral1 | oral2 | vocab | mistakes | mock
+description: Personal coach for passing Prøve i Dansk 3 (PD3, Danish B2 exam). Runs timed past-paper drills from the local 2004–2024 exam collection (Læseforståelse 1, 2A, 2B, 3), grades them against the official answer keys, coaches and grades writing (Delprøve 1 mail, Delprøve 2A/2B essay) on the 7-point scale, rehearses the oral exam with real examiner questions, and keeps spaced-repetition vocabulary (connectors/conjunctions first), a mistake log and a progress/grade estimate. Follows the learner's own Battle Plan. Use whenever the user wants to practise or plan for PD3, Danish reading/writing/oral exam prep, forbinderord or PD3 vocabulary, or asks "how am I doing" for PD3. Args - today | status | plan | setup | l1 | l2a | l2b | l3 | reading | mail | essay | oral1 | oral2 | vocab | learn | mistakes | mock
 ---
 
 # PD3 coach
@@ -34,6 +34,7 @@ python3 -I "$SKILL/scripts/pd3.py" <command>     # see the docstring at the top 
 | `mail` `essay` | Writing task per `writing.md`. `essay` asks 2A or 2B (the learner's plan is built for 2B; suggest alternating). |
 | `oral1` `oral2` | Oral rehearsal per `oral.md`. |
 | `vocab` | Spaced review per `vocab.md`: connectors/conjunctions first, word-order exercises, one card at a time, `vocab grade ID Q` after each. |
+| `learn` | Open the **Assisted Learning** page for self-study: `pd3.py serve` (background), then show http://localhost:8770. Same cards; progress is saved in the browser, not in `vocab.json` (see "Assisted Learning page" in `vocab.md`). |
 | `mistakes` | `pd3.py mistake list`, then targeted drills: 3 isolated exercises + 1 in context per pattern. After a correct production, `mistake fixed PATTERN` (3 in a row → fixed). |
 | `mock` | Full exam simulation: reading (90 min), writing (2½ h), oral (10 min). Offer to split across days. Grade each, give the final average. |
 
