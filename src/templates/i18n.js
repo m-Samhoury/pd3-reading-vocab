@@ -94,6 +94,17 @@ const I18N = {
   "idx.progress": ["Dit fremskridt", "Your progress"], "idx.groups": ["Grupper", "Groups"], "idx.sources": ["Kilder", "Sources"],
   "idx.tests": ["Tests", "Tests"], "idx.last": [" · seneste {0}/{1}", " · last {0}/{1}"], "idx.none": [" · ingen endnu", " · none yet"],
   "brand": ["PD3 ordforråd", "PD3 vocabulary"],
+  "info.open": ["Hjælp og forkortelser", "Help and abbreviations"], "info.title": ["Hjælp", "Help"],
+  "info.close": ["Luk", "Close"], "info.how": ["Sådan virker det", "How it works"],
+  "tab.learn.s": ["Flashcards: se ordet, vend kortet", "Flashcards: see the word, flip the card"],
+  "tab.test.s": ["10 spørgsmål som til prøven", "10 exam-style questions"],
+  "pick.title": ["Hvilke ord?", "Which words?"], "pick.count": ["{0} ord valgt", "{0} words selected"],
+  "pick.all": ["Alle", "All"], "pick.t1": ["Forbinderord", "Connectors"], "pick.t2": ["Ord fra opgaverne", "Question words"],
+  "pick.t3": ["Ord fra teksterne", "Text words"], "pick.groups": ["Vælg grupper", "Choose groups"],
+  "pick.none": ["Vælg mindst én gruppe ovenfor.", "Pick at least one group above."], "pick.ngroups": ["{0} grupper", "{0} groups"],
+  "sum": ["{0}/{1} kan du · {2} skal gentages", "{0}/{1} known · {2} due"],
+  "fl.more": ["Indstillinger og backup", "Settings and backup"],
+  "t.start": ["Start test · 10 spørgsmål", "Start test · 10 questions"],
   // legend of shorthands
   "lg.title": ["Forkortelser", "Abbreviations"],
   "lg.L1": ["Læseforståelse 1 · find oplysninger i korte tekster (15 spørgsmål)", "Reading 1 · find information in short texts (15 questions)"],
@@ -132,19 +143,25 @@ function applyI18n(root = document) {
       try { localStorage.setItem("pd3.lang", LANG === "en" ? "da" : "en"); } catch (e) { /* ignore */ }
       location.reload();
     });
-    (nav.closest(".topbar-in") || nav).append(b);
-    const anchor = document.querySelector(".top .hero-cta") || document.querySelector(".top #intro") || document.querySelector(".top h1");
-    if (anchor) anchor.after(legend());
+    (nav.closest(".topbar-in") || nav).append(...infoDialog(), b);
   }
 }
 
-/** small collapsible key for the L1/L2A/L2B/L3, Tier and frequency shorthands, placed under the page nav */
-function legend() {
-  const d = document.createElement("details");
-  d.className = "legend";
-  const sum = document.createElement("summary");
-  sum.textContent = t("lg.title");
-  const dl = document.createElement("dl");
+/** ⓘ button in the top bar that opens a help dialog: page-specific help (#infoExtra) + the abbreviations key */
+function infoDialog() {
+  const btn = document.createElement("button");
+  btn.type = "button"; btn.className = "iconbtn"; btn.title = t("info.open"); btn.setAttribute("aria-label", t("info.open"));
+  btn.innerHTML = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M12 11v6"/><circle cx="12" cy="7.5" r=".6" fill="currentColor"/></svg>';
+  const dlg = document.createElement("dialog");
+  dlg.className = "info"; dlg.setAttribute("aria-labelledby", "infoTitle");
+  const head = document.createElement("div"); head.className = "ih";
+  const h = document.createElement("h2"); h.id = "infoTitle"; h.textContent = t("info.title");
+  const x = document.createElement("button"); x.type = "button"; x.className = "btn quiet"; x.textContent = t("info.close");
+  x.addEventListener("click", () => dlg.close());
+  head.append(h, x);
+  const extra = document.createElement("div"); extra.id = "infoExtra";
+  const lh = document.createElement("h3"); lh.textContent = t("lg.title");
+  const dl = document.createElement("dl"); dl.className = "keylist";
   const rows = [["L1", "lg.L1"], ["L2A", "lg.L2A"], ["L2B", "lg.L2B"], ["L3", "lg.L3"],
                 ["Tier 1", "lg.T1"], ["Tier 2", "lg.T2"], ["Tier 3", "lg.T3"], [LANG === "en" ? "4 exams · 52×" : "4 prøver · 52×", "lg.freq"]];
   for (const [k, v] of rows) {
@@ -152,8 +169,11 @@ function legend() {
     const dd = document.createElement("dd"); dd.textContent = t(v);
     dl.append(dt, dd);
   }
-  d.append(sum, dl);
-  try { d.open = localStorage.getItem("pd3.legend") === "open"; } catch (e) { /* ignore */ }
-  d.addEventListener("toggle", () => { try { localStorage.setItem("pd3.legend", d.open ? "open" : ""); } catch (e) { /* ignore */ } });
-  return d;
+  const inner = document.createElement("div"); inner.className = "ib";   // full-size inner box, so only backdrop clicks hit the dialog itself
+  inner.append(head, extra, lh, dl);
+  dlg.append(inner);
+  dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });   // click on the backdrop
+  btn.addEventListener("click", () => dlg.showModal());
+  document.body.append(dlg);
+  return [btn];
 }

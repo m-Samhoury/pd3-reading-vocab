@@ -158,15 +158,37 @@ mark.hl { background: var(--hl); color: var(--hl-ink); padding: 0 3px; border-ra
 .note .ex { margin-top: 4px; font-style: italic; }
 .hide-en .en, .hide-da .da { display: none !important; }
 
-/* abbreviations key */
-.legend { margin-top: 12px; font-size: .86rem; color: var(--soft); }
-.legend summary { cursor: pointer; display: inline-flex; align-items: center; gap: 6px; min-height: 36px; font-weight: 600; color: var(--soft); }
-.legend summary:hover { color: var(--ink); }
-.legend dl { display: grid; grid-template-columns: max-content 1fr; gap: 6px 14px; margin: 4px 0 6px; padding: 14px 16px;
-  background: var(--sheet); border: 1px solid var(--rule); border-radius: 14px; box-shadow: var(--shadow); max-width: 660px; }
-.legend dt { font-weight: 600; color: var(--ink); }
-.legend dd { margin: 0; }
-@media print { .legend, .topbar { display: none; } }
+/* help dialog (ⓘ in the top bar) */
+.iconbtn { order: 2; margin-left: auto; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%;
+  border: 1px solid var(--rule-strong); background: var(--sheet); color: var(--soft); cursor: pointer; }
+.iconbtn:hover { color: var(--ink); border-color: var(--ink); }
+.iconbtn + .langbtn { margin-left: 8px; }
+dialog.info { border: 0; border-radius: 18px; padding: 0; width: min(580px, calc(100vw - 32px)); max-height: calc(100vh - 48px);
+  background: var(--sheet); color: var(--ink); box-shadow: var(--shadow-lg); overflow: auto; }
+dialog.info::backdrop { background: rgba(15, 16, 20, .45); }
+dialog.info .ib { padding: 14px 20px 22px; }
+dialog.info .ih { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+dialog.info .ih h2 { font-size: 1.3rem; }
+dialog.info h3 { font-size: 1rem; margin: 18px 0 6px; }
+dialog.info p { margin: 6px 0; color: var(--soft); font-size: .93rem; }
+dl.keylist { display: grid; grid-template-columns: max-content 1fr; gap: 6px 14px; margin: 0; font-size: .9rem; color: var(--soft); }
+dl.keylist dt { font-weight: 600; color: var(--ink); }
+dl.keylist dd { margin: 0; }
+
+/* selectable chips (multi-select) */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chipbtn { display: inline-flex; align-items: center; gap: 8px; min-height: 46px; padding: 8px 16px; border-radius: 999px;
+  border: 1.5px solid var(--rule-strong); background: var(--sheet); color: var(--ink); font-weight: 600; font-size: .95rem; cursor: pointer; }
+.chipbtn:hover { border-color: var(--ink); }
+.chipbtn .n { font-size: .78rem; font-weight: 600; color: var(--faint); }
+.chipbtn[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent); color: var(--accent-text); }
+.chipbtn[aria-pressed="true"] .n { color: var(--accent-text); opacity: .75; }
+.chipbtn[aria-pressed="true"]::before { content: "✓"; font-weight: 800; }
+.chipbtn[aria-pressed="mixed"] { border-color: var(--accent); border-style: dashed; }
+.chipbtn[aria-pressed="mixed"]::before { content: "–"; font-weight: 800; color: var(--accent-text); }
+.chipbtn.toggle { border-style: dashed; color: var(--soft); }
+.chipbtn.toggle[aria-expanded="true"] { border-style: solid; color: var(--ink); }
+@media print { .topbar, dialog.info { display: none; } }
 
 .bar { height: 8px; background: var(--rule); border-radius: 999px; overflow: hidden; }
 .bar > span { display: block; height: 100%; width: 0; background: var(--accent); border-radius: 999px; transition: width .25s; }
@@ -174,19 +196,26 @@ footer.foot { padding-top: 40px; padding-bottom: 48px; color: var(--faint); font
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
 
 main { padding-bottom: 40px; }
-.modes { display: inline-flex; gap: 2px; margin-top: 16px; padding: 4px; border-radius: 14px; background: color-mix(in srgb, var(--rule) 70%, var(--paper)); }
-.modes [role="tab"] { min-height: 42px; padding: 8px 22px; border: 0; border-radius: 10px; background: transparent; cursor: pointer;
-  font-weight: 600; font-size: 1rem; color: var(--soft); }
-.modes [role="tab"][aria-selected="true"] { background: var(--sheet); color: var(--ink); box-shadow: var(--shadow); }
+.top { padding-top: 22px; }
+.modes { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.mode { display: grid; grid-template-columns: auto 1fr; column-gap: 12px; align-items: center; text-align: left; padding: 16px;
+  min-height: 92px; border-radius: 18px; border: 1.5px solid var(--rule-strong); background: var(--sheet); color: var(--ink); cursor: pointer; }
+.mode:hover { border-color: var(--ink); }
+.mode .mi { grid-row: 1 / 3; display: grid; place-items: center; width: 46px; height: 46px; border-radius: 13px; background: var(--paper); color: var(--soft); }
+.mode .mt { font-size: 1.25rem; font-weight: 700; letter-spacing: -.02em; }
+.mode .ms { font-size: .85rem; color: var(--soft); line-height: 1.3; }
+.mode[aria-selected="true"] { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft), var(--shadow); }
+.mode[aria-selected="true"] .mi { background: var(--accent); color: #fff; }
+@media (max-width: 480px) {
+  .mode { grid-template-columns: 1fr; padding: 14px; row-gap: 2px; }
+  .mode .mi { grid-row: auto; width: 40px; height: 40px; margin-bottom: 6px; }
+}
+.picker { margin-top: 18px; }
+.pickhead { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 8px; }
+.ptitle { font-weight: 700; }
+#groupChips { margin-top: 8px; padding-top: 10px; border-top: 1px dashed var(--rule-strong); }
 .panel { padding-top: 16px; }
-.setup { display: grid; gap: 10px; grid-template-columns: 1fr; }
-@media (min-width: 680px) { .setup { grid-template-columns: 2fr auto auto; align-items: end; } }
-.mastery { display: flex; flex-wrap: wrap; gap: 10px 24px; margin: 16px 0 6px; }
-.mastery .m { min-width: 150px; flex: 1 1 150px; }
-.mastery .m { padding: 14px 16px; background: var(--sheet); border: 1px solid var(--rule); border-radius: 14px; }
-.mastery .m b { font-size: 1.3rem; font-weight: 700; letter-spacing: -.02em; }
-.mastery .bar { margin-top: 6px; }
-.counter { display: flex; justify-content: space-between; color: var(--soft); font-size: .9rem; margin: 14px 0 6px; }
+.counter { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 12px; color: var(--soft); font-size: .9rem; margin: 4px 0 6px; }
 .flash { position: relative; margin: 10px 0 14px; box-shadow: var(--shadow-lg); border-radius: 20px; touch-action: pan-y; user-select: none; -webkit-user-select: none;
   transition: transform .18s ease, border-color .15s; cursor: pointer; }
 .flash .front { min-height: 320px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 10px; padding: 28px 20px; }
@@ -195,12 +224,16 @@ main { padding-bottom: 40px; }
 .flash .front .tap { color: var(--faint); font-size: .88rem; margin-top: 8px; }
 .flash .back { max-height: min(62vh, 640px); overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; cursor: auto; }
 .flash .back .entry { padding: 18px 18px 22px; }
-.stepper { display: flex; justify-content: space-between; gap: 8px; margin: 0 0 12px; }
-.stepper .btn { flex: 1 1 0; max-width: 200px; }
-.ghelp { margin: 8px 0 0; }
+.stepper { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 0 0 12px; }
+.stepper .btn { min-height: 56px; font-size: 1.05rem; border-radius: 14px; }
+.more { margin-top: 22px; }
+.more summary { cursor: pointer; display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; color: var(--soft); }
+.more summary:hover { color: var(--ink); }
+.moreopts { display: grid; gap: 4px; padding: 6px 0 0; }
+.bigbtn { width: 100%; min-height: 64px; font-size: 1.15rem; border-radius: 16px; margin-top: 4px; }
+@media (min-width: 680px) { .bigbtn { width: auto; min-width: 360px; } }
 .grade { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
-.grade .btn { min-height: 58px; flex-direction: column; gap: 0; border-color: transparent; border-radius: 14px; }
-.grade .btn small { font-weight: 500; opacity: .7; }
+.grade .btn { min-height: 68px; font-size: 1.08rem; border-color: transparent; border-radius: 16px; }
 .grade .no { color: var(--bad); background: var(--bad-bg); }
 .grade .almost { color: #9a6400; background: #fff5dc; }
 .grade .yes { color: var(--ok); background: var(--ok-bg); }
@@ -215,7 +248,7 @@ main { padding-bottom: 40px; }
 .q .stem { margin: 12px 0 4px; font-size: 1.15rem; font-weight: 600; }
 .q .gap { display: inline-block; min-width: 4.5em; border-bottom: 2.5px solid var(--accent); text-align: center; color: transparent; }
 .opts { display: grid; gap: 8px; margin-top: 16px; }
-.opt { justify-content: flex-start; text-align: left; min-height: 54px; font-weight: 500; border-radius: 12px; }
+.opt { justify-content: flex-start; text-align: left; min-height: 62px; font-size: 1.05rem; font-weight: 500; border-radius: 14px; padding: 12px 16px; }
 .opt:hover:not(:disabled) { border-color: var(--accent); background: var(--accent-soft); }
 .opt .k { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 8px; background: var(--paper); color: var(--soft); font-weight: 700; font-size: .85rem; flex: 0 0 auto; }
 .opt.correct { background: var(--ok-bg); border-color: var(--ok); }
@@ -246,22 +279,23 @@ h2.sub { font-size: 1.1rem; margin: 26px 0 8px; }
   </div>
 </header>
 <div class="wrap top">
-  <h1 data-i18n="fl.title">Flashcards</h1>
+  <h1 class="sr-only" data-i18n="fl.title">Flashcards</h1>
   <div class="modes" role="tablist" aria-label="Mode">
-    <button role="tab" id="tab-learn" aria-controls="learn" aria-selected="true" data-i18n="tab.learn">Lær</button>
-    <button role="tab" id="tab-test" aria-controls="test" aria-selected="false" tabindex="-1" data-i18n="tab.test">Test</button>
+    <button class="mode" role="tab" id="tab-learn" aria-controls="learn" aria-selected="true">
+      <span class="mi"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="14" height="14" rx="2"/><path d="M7 3h12a2 2 0 0 1 2 2v12"/></svg></span><span class="mt" data-i18n="tab.learn">Lær</span><span class="ms" data-i18n="tab.learn.s">Flashcards: se ordet, vend kortet</span></button>
+    <button class="mode" role="tab" id="tab-test" aria-controls="test" aria-selected="false" tabindex="-1">
+      <span class="mi"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9"/></svg></span><span class="mt" data-i18n="tab.test">Test</span><span class="ms" data-i18n="tab.test.s">10 spørgsmål som til prøven</span></button>
+  </div>
+  <div class="picker" id="picker">
+    <div class="pickhead"><span class="ptitle" data-i18n="pick.title">Hvilke ord?</span><span class="soft small" id="pickCount"></span></div>
+    <div class="chips" id="tierChips"></div>
+    <div class="chips" id="groupChips" hidden></div>
   </div>
 </div>
 
 <main class="wrap">
   <section id="learn" role="tabpanel" aria-labelledby="tab-learn" class="panel">
-    <div class="setup">
-      <label class="field"><span data-i18n="fl.deck">Bunke</span> <select id="deck"></select></label>
-      <label class="check"><input type="checkbox" id="shuffle"> <span data-i18n="fl.shuffle">Bland</span></label>
-      <label class="check"><input type="checkbox" id="reverse"> <span data-i18n="fl.reverse">Omvendt (definition → dansk)</span></label>
-    </div>
-    <div class="mastery" id="mastery" aria-label="Mastery per tier"></div>
-    <div class="counter"><span id="cnt"></span><span id="due"></span></div>
+    <div class="counter"><span id="cnt"></span><span id="summary"></span></div>
     <div class="bar" aria-hidden="true"><span id="bar"></span></div>
     <div class="sheet flash" id="card" tabindex="0" role="button" aria-label="Flashcard – press Space to flip"></div>
     <div class="stepper">
@@ -269,32 +303,33 @@ h2.sub { font-size: 1.1rem; margin: 26px 0 8px; }
       <button class="btn" type="button" id="next"><span data-i18n="nav.next">Næste</span> <span aria-hidden="true">→</span></button>
     </div>
     <div class="grade" id="grade" aria-label="How well did you know it?">
-      <button class="btn no" type="button" data-g="1"><span data-i18n="g.no">Kan ikke</span> <small>1</small></button>
-      <button class="btn almost" type="button" data-g="3"><span data-i18n="g.almost">Næsten</span> <small>2</small></button>
-      <button class="btn yes" type="button" data-g="5"><span data-i18n="g.yes">Kan den</span> <small>3</small></button>
+      <button class="btn no" type="button" data-g="1"><span data-i18n="g.no">Kan ikke</span></button>
+      <button class="btn almost" type="button" data-g="3"><span data-i18n="g.almost">Næsten</span></button>
+      <button class="btn yes" type="button" data-g="5"><span data-i18n="g.yes">Kan den</span></button>
     </div>
-    <p class="small soft ghelp" id="ghelp" data-i18n="g.help" hidden></p>
-    <p class="small soft" data-i18n="fl.keys">Mellemrum/Enter vender kortet · 1 / 2 / 3 giver karakter · på mobil: tryk for at vende, swipe → (kan den) eller ← (kan ikke).</p>
-    <div class="tools-row">
-      <button class="btn quiet" type="button" id="export" data-i18n="fl.export">Eksportér fremskridt</button>
-      <label class="btn quiet" for="importFile" data-i18n="fl.import">Importér</label>
-      <input class="sr-only" type="file" id="importFile" accept="application/json,.json">
-      <button class="btn quiet" type="button" id="reset" data-i18n="fl.reset">Nulstil</button>
-    </div>
+    <details class="more">
+      <summary data-i18n="fl.more">Indstillinger og backup</summary>
+      <div class="moreopts">
+        <label class="check"><input type="checkbox" id="shuffle"> <span data-i18n="fl.shuffle">Bland</span></label>
+        <label class="check"><input type="checkbox" id="reverse"> <span data-i18n="fl.reverse">Omvendt (definition → dansk)</span></label>
+        <div class="tools-row">
+          <button class="btn" type="button" id="export" data-i18n="fl.export">Eksportér fremskridt</button>
+          <label class="btn" for="importFile" data-i18n="fl.import">Importér</label>
+          <input class="sr-only" type="file" id="importFile" accept="application/json,.json">
+          <button class="btn quiet" type="button" id="reset" data-i18n="fl.reset">Nulstil</button>
+        </div>
+      </div>
+    </details>
     <p class="small soft" id="storageNote" hidden data-i18n="fl.storage">Din browser gemmer ikke data her, så fremskridt forsvinder, når siden lukkes. Brug Eksportér for at gemme dem.</p>
   </section>
 
   <section id="test" role="tabpanel" aria-labelledby="tab-test" class="panel" hidden>
     <div id="setup">
-      <div class="setup">
-        <label class="field"><span data-i18n="t.scope">Ord i testen</span> <select id="scope"></select></label>
-        <span></span>
-        <button class="btn solid" type="button" id="newTest" data-i18n="t.new">Ny test · 10 spørgsmål</button>
-      </div>
-      <p class="small soft" data-i18n="t.info">Standard: 50 % Tier 1, 30 % Tier 2, 20 % Tier 3 – ord du ofte svarer forkert på, kommer oftere.
-        Udfyld-hullet-spørgsmål bruger de rigtige sætninger og svarmuligheder fra Læseforståelse 3, når det er muligt.</p>
-      <h2 class="sub" data-i18n="t.results">Resultater</h2>
-      <div id="hist"></div>
+      <button class="btn solid bigbtn" type="button" id="newTest" data-i18n="t.start">Start test · 10 spørgsmål</button>
+      <details class="more" id="histBox">
+        <summary data-i18n="t.results">Resultater</summary>
+        <div id="hist"></div>
+      </details>
     </div>
     <div id="quiz" hidden>
       <div class="counter"><span id="qcnt"></span><span id="qscore"></span></div>
@@ -404,6 +439,17 @@ const I18N = {
   "idx.progress": ["Dit fremskridt", "Your progress"], "idx.groups": ["Grupper", "Groups"], "idx.sources": ["Kilder", "Sources"],
   "idx.tests": ["Tests", "Tests"], "idx.last": [" · seneste {0}/{1}", " · last {0}/{1}"], "idx.none": [" · ingen endnu", " · none yet"],
   "brand": ["PD3 ordforråd", "PD3 vocabulary"],
+  "info.open": ["Hjælp og forkortelser", "Help and abbreviations"], "info.title": ["Hjælp", "Help"],
+  "info.close": ["Luk", "Close"], "info.how": ["Sådan virker det", "How it works"],
+  "tab.learn.s": ["Flashcards: se ordet, vend kortet", "Flashcards: see the word, flip the card"],
+  "tab.test.s": ["10 spørgsmål som til prøven", "10 exam-style questions"],
+  "pick.title": ["Hvilke ord?", "Which words?"], "pick.count": ["{0} ord valgt", "{0} words selected"],
+  "pick.all": ["Alle", "All"], "pick.t1": ["Forbinderord", "Connectors"], "pick.t2": ["Ord fra opgaverne", "Question words"],
+  "pick.t3": ["Ord fra teksterne", "Text words"], "pick.groups": ["Vælg grupper", "Choose groups"],
+  "pick.none": ["Vælg mindst én gruppe ovenfor.", "Pick at least one group above."], "pick.ngroups": ["{0} grupper", "{0} groups"],
+  "sum": ["{0}/{1} kan du · {2} skal gentages", "{0}/{1} known · {2} due"],
+  "fl.more": ["Indstillinger og backup", "Settings and backup"],
+  "t.start": ["Start test · 10 spørgsmål", "Start test · 10 questions"],
   // legend of shorthands
   "lg.title": ["Forkortelser", "Abbreviations"],
   "lg.L1": ["Læseforståelse 1 · find oplysninger i korte tekster (15 spørgsmål)", "Reading 1 · find information in short texts (15 questions)"],
@@ -442,19 +488,25 @@ function applyI18n(root = document) {
       try { localStorage.setItem("pd3.lang", LANG === "en" ? "da" : "en"); } catch (e) { /* ignore */ }
       location.reload();
     });
-    (nav.closest(".topbar-in") || nav).append(b);
-    const anchor = document.querySelector(".top .hero-cta") || document.querySelector(".top #intro") || document.querySelector(".top h1");
-    if (anchor) anchor.after(legend());
+    (nav.closest(".topbar-in") || nav).append(...infoDialog(), b);
   }
 }
 
-/** small collapsible key for the L1/L2A/L2B/L3, Tier and frequency shorthands, placed under the page nav */
-function legend() {
-  const d = document.createElement("details");
-  d.className = "legend";
-  const sum = document.createElement("summary");
-  sum.textContent = t("lg.title");
-  const dl = document.createElement("dl");
+/** ⓘ button in the top bar that opens a help dialog: page-specific help (#infoExtra) + the abbreviations key */
+function infoDialog() {
+  const btn = document.createElement("button");
+  btn.type = "button"; btn.className = "iconbtn"; btn.title = t("info.open"); btn.setAttribute("aria-label", t("info.open"));
+  btn.innerHTML = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M12 11v6"/><circle cx="12" cy="7.5" r=".6" fill="currentColor"/></svg>';
+  const dlg = document.createElement("dialog");
+  dlg.className = "info"; dlg.setAttribute("aria-labelledby", "infoTitle");
+  const head = document.createElement("div"); head.className = "ih";
+  const h = document.createElement("h2"); h.id = "infoTitle"; h.textContent = t("info.title");
+  const x = document.createElement("button"); x.type = "button"; x.className = "btn quiet"; x.textContent = t("info.close");
+  x.addEventListener("click", () => dlg.close());
+  head.append(h, x);
+  const extra = document.createElement("div"); extra.id = "infoExtra";
+  const lh = document.createElement("h3"); lh.textContent = t("lg.title");
+  const dl = document.createElement("dl"); dl.className = "keylist";
   const rows = [["L1", "lg.L1"], ["L2A", "lg.L2A"], ["L2B", "lg.L2B"], ["L3", "lg.L3"],
                 ["Tier 1", "lg.T1"], ["Tier 2", "lg.T2"], ["Tier 3", "lg.T3"], [LANG === "en" ? "4 exams · 52×" : "4 prøver · 52×", "lg.freq"]];
   for (const [k, v] of rows) {
@@ -462,10 +514,13 @@ function legend() {
     const dd = document.createElement("dd"); dd.textContent = t(v);
     dl.append(dt, dd);
   }
-  d.append(sum, dl);
-  try { d.open = localStorage.getItem("pd3.legend") === "open"; } catch (e) { /* ignore */ }
-  d.addEventListener("toggle", () => { try { localStorage.setItem("pd3.legend", d.open ? "open" : ""); } catch (e) { /* ignore */ } });
-  return d;
+  const inner = document.createElement("div"); inner.className = "ib";   // full-size inner box, so only backdrop clicks hit the dialog itself
+  inner.append(head, extra, lh, dl);
+  dlg.append(inner);
+  dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });   // click on the backdrop
+  btn.addEventListener("click", () => dlg.showModal());
+  document.body.append(dlg);
+  return [btn];
 }
 
 /* Shared helpers – data access, DOM building, entry rendering and safe storage. */
@@ -595,6 +650,7 @@ const PD3 = (() => {
   const DAY = 86400000;
   const FKEY = "pd3.flash.v1", TKEY = "pd3.test.v1";
   $("#foot").textContent = t("footer");
+  $("#infoExtra").append(el("h3", null, t("info.how")), el("p", null, t("g.help")), el("p", null, t("fl.keys")), el("p", null, t("t.info")));
   const storageOk = store.set("pd3.probe", 1); store.del("pd3.probe");
   if (!storageOk) $("#storageNote").hidden = false;
 
@@ -607,6 +663,7 @@ const PD3 = (() => {
     $("#nav-learn").toggleAttribute("aria-current", i === 0); $("#nav-test").toggleAttribute("aria-current", i === 1);
     if (i === 0) $("#nav-learn").setAttribute("aria-current", "page"); else $("#nav-test").setAttribute("aria-current", "page");
     if (i === 1) renderHistory();
+    $("#picker").hidden = i === 1 && $("#setup").hidden;
   }
   window.addEventListener("hashchange", () => selectTab(location.hash === "#test" ? 1 : 0));
   tabs.forEach((t, i) => {
@@ -635,54 +692,66 @@ const PD3 = (() => {
     saveF();
   }
 
-  const deckSel = $("#deck");
-  const o = (v, t) => el("option", { value: v }, t);
-  deckSel.append(o("t1", t("deck.t1")), o("t12", t("deck.t12")), o("all", t("deck.all")), o("due", t("deck.due")));
-  for (const tier of [1, 2, 3]) {
-    const gs = groups.filter(g => g.tier === tier && g.words.length);
-    if (gs.length) deckSel.append(el("optgroup", { label: t("deck.groups", tier) }, ...gs.map(g => o("g:" + g.id, `${g.name_da} (${g.words.length})`))));
-  }
-  deckSel.value = [...deckSel.options].some(x => x.value === F.settings.deck) ? F.settings.deck : "t1";
   $("#shuffle").checked = !!F.settings.shuffle;
   $("#reverse").checked = !!F.settings.reverse;
 
-  function deckWords(deck) {
-    let ws;
-    if (deck === "t1") ws = words.filter(w => w.tier === 1);
-    else if (deck === "t12") ws = words.filter(w => w.tier <= 2);
-    else if (deck === "all" || deck === "due") ws = words.slice();
-    else if (deck.startsWith("g:")) { const g = groupById[deck.slice(2)]; ws = g ? g.words.map(id => byId[id]) : []; }
-    else ws = words.filter(w => w.tier === 1);
-    if (deck === "due") ws = ws.filter(w => isDue(w.id));
-    return ws.sort(priority);
+  /* ───────────── word picker: category chips shared by Learn and Test ───────────── */
+  const live = groups.filter(g => g.words.length);
+  const TIERS = [1, 2, 3].filter(tr => live.some(g => g.tier === tr));
+  const tierGroups = tr => live.filter(g => g.tier === tr).map(g => g.id);
+  let sel = new Set((F.settings.groups || tierGroups(1)).filter(id => groupById[id]));
+  let showGroups = false;
+  /** words in any selected group, best-first */
+  function pool() { return words.filter(w => w.groups.some(g => sel.has(g))).sort(priority); }
+  function poolLabel() {
+    const full = TIERS.filter(tr => tierGroups(tr).every(id => sel.has(id)));
+    const covered = new Set(full.flatMap(tierGroups));
+    if ([...sel].every(id => covered.has(id)) && full.length) return full.map(tr => t("pick.t" + tr)).join(" + ");
+    return sel.size === 1 ? groupName([...sel][0]) : t("pick.ngroups", sel.size);
   }
+  function chip(label, n, pressed, onclick, extra = {}) {
+    return el("button", Object.assign({ class: "chipbtn", type: "button", "aria-pressed": String(pressed), onclick }, extra),
+      label, n !== null ? el("span", { class: "n" }, String(n)) : null);
+  }
+  function renderPicker() {
+    const tc = $("#tierChips"), gc = $("#groupChips"); tc.textContent = ""; gc.textContent = "";
+    if (TIERS.length > 1) {
+      const all = live.every(g => sel.has(g.id));
+      tc.append(chip(t("pick.all"), words.length, all, () => { sel = all ? new Set() : new Set(live.map(g => g.id)); changed(); }));
+    }
+    for (const tr of TIERS) {
+      const ids = tierGroups(tr), on = ids.filter(id => sel.has(id)).length;
+      const n = words.filter(w => w.tier === tr).length;
+      tc.append(chip(t("pick.t" + tr), n, on === ids.length ? true : on ? "mixed" : false, () => {
+        ids.forEach(id => on === ids.length ? sel.delete(id) : sel.add(id)); changed(); }));
+    }
+    tc.append(el("button", { class: "chipbtn toggle", type: "button", "aria-expanded": String(showGroups), "aria-controls": "groupChips",
+      onclick: () => { showGroups = !showGroups; renderPicker(); } }, t("pick.groups") + (showGroups ? " ▴" : " ▾")));
+    gc.hidden = !showGroups;
+    for (const g of live) gc.append(chip(el("span", { class: "gdot", style: gstyle(g.id) }), g.words.length, sel.has(g.id),
+      () => { sel.has(g.id) ? sel.delete(g.id) : sel.add(g.id); changed(); }, { title: groupName(g.id) }));
+    [...gc.children].forEach((b, i) => b.insertBefore(document.createTextNode(LANG === "en" ? live[i].name_en : live[i].name_da), b.querySelector(".n")));
+    $("#pickCount").textContent = t("pick.count", pool().length);
+  }
+  function changed() { F.settings.groups = [...sel]; saveF(); renderPicker(); buildSession(); }
+
+  function deckWords() { return pool(); }
 
   let queue = [], qi = 0, flipped = false, sessionTotal = 0, practiseAll = false;
   function buildSession() {
-    const ws = deckWords(deckSel.value);
+    const ws = deckWords();
     const due = ws.filter(w => isDue(w.id));
     const fresh = ws.filter(w => !F.cards[w.id] || !F.cards[w.id].seen);
-    let q = deckSel.value === "due" ? due : practiseAll ? ws : [...due, ...fresh];
+    let q = practiseAll ? ws : [...due, ...fresh];
     if ($("#shuffle").checked) q = shuffle(q.slice());
     queue = q.map(w => w.id); qi = 0; sessionTotal = queue.length; flipped = false;
     renderCard(); renderMastery();
   }
+  renderPicker();
 
   function renderMastery() {
-    const box = $("#mastery"); box.textContent = "";
-    for (const tier of [1, 2, 3]) {
-      const ws = words.filter(w => w.tier === tier);
-      if (!ws.length) continue;
-      const known = ws.filter(w => isKnown(w.id)).length;
-      const learning = ws.filter(w => F.cards[w.id] && F.cards[w.id].seen && !isKnown(w.id)).length;
-      box.append(el("div", { class: "m" },
-        el("div", { class: "meta" }, `Tier ${tier}`),
-        el("b", null, `${known} / ${ws.length}`), el("span", { class: "soft small" }, t("m.known")),
-        el("div", { class: "small soft" }, t("m.learning", learning, ws.filter(w => isDue(w.id)).length)),
-        el("div", { class: "bar" }, el("span", { style: `width:${(100 * known / ws.length).toFixed(1)}%` }))));
-    }
-    const dueAll = words.filter(w => isDue(w.id)).length;
-    $("#due").textContent = t("due.today", dueAll);
+    const ws = deckWords();
+    $("#summary").textContent = ws.length ? t("sum", ws.filter(w => isKnown(w.id)).length, ws.length, ws.filter(w => isDue(w.id)).length) : "";
   }
 
   function front(w) {
@@ -711,19 +780,19 @@ const PD3 = (() => {
     const card = $("#card"); card.textContent = ""; card.className = "sheet flash";
     const grade = $("#grade");
     if (qi >= queue.length) {
-      const anyDeck = deckWords(deckSel.value).length;
+      const anyDeck = deckWords().length;
       card.append(el("div", { class: "done" },
-        el("h2", null, sessionTotal ? t("done.h") : t("none.h")),
-        el("p", { class: "soft" }, sessionTotal ? t("done.p", sessionTotal) : t("none.p")),
+        el("h2", null, !sel.size ? t("pick.title") : sessionTotal ? t("done.h") : t("none.h")),
+        el("p", { class: "soft" }, !sel.size ? t("pick.none") : sessionTotal ? t("done.p", sessionTotal) : t("none.p")),
         anyDeck ? el("button", { class: "btn solid", type: "button", onclick: e => { e.stopPropagation(); practiseAll = true; buildSession(); practiseAll = false; } }, t("practise")) : null));
-      grade.hidden = true; $("#ghelp").hidden = true; $("#cnt").textContent = "";
+      grade.hidden = true; $("#cnt").textContent = "";
       $("#prev").disabled = !queue.length; $("#next").disabled = true; $("#bar").style.width = "100%";
       return;
     }
     const w = byId[queue[qi]];
     card.append(flipped ? back(w) : front(w));
     card.setAttribute("aria-label", flipped ? t("card.backAria", w.lemma) : t("card.aria"));
-    grade.hidden = !flipped; $("#ghelp").hidden = !flipped;
+    grade.hidden = !flipped;
     $("#prev").disabled = qi === 0; $("#next").disabled = false;
     $("#cnt").textContent = t("card.count", Math.min(qi + 1, queue.length), queue.length);
     $("#bar").style.width = `${(100 * qi / Math.max(1, queue.length)).toFixed(1)}%`;
@@ -778,7 +847,6 @@ const PD3 = (() => {
     if (Math.abs(dx) > 80 && Math.abs(dx) > 2 * Math.abs(dy)) { e.preventDefault(); step(dx < 0 ? 1 : -1); }
   });
 
-  deckSel.addEventListener("change", () => { F.settings.deck = deckSel.value; saveF(); buildSession(); });
   $("#shuffle").addEventListener("change", e => { F.settings.shuffle = e.target.checked; saveF(); buildSession(); });
   $("#reverse").addEventListener("change", e => { F.settings.reverse = e.target.checked; saveF(); flipped = false; renderCard(); });
 
@@ -809,12 +877,6 @@ const PD3 = (() => {
   /* ───────────── TEST ───────────── */
   const T = Object.assign({ history: [], words: {} }, store.get(TKEY, {}));
   const saveT = () => store.set(TKEY, T);
-  const scopeSel = $("#scope");
-  scopeSel.append(o("mix", t("scope.mix")), o("connectors", t("scope.conn")), o("t1", "Tier 1"), o("t2", "Tier 2"), o("t3", "Tier 3"));
-  for (const tier of [1, 2, 3]) {
-    const gs = groups.filter(g => g.tier === tier && g.words.length >= 4);
-    if (gs.length) scopeSel.append(el("optgroup", { label: t("deck.groups", tier) }, ...gs.map(g => o("g:" + g.id, g.name_da))));
-  }
   const L3 = PD3.raw.meta.l3_items;           // real Læseforståelse 3 items, mapped to word ids
   const l3ByWord = {};
   for (const it of L3) if (it.word_id) (l3ByWord[it.word_id] ||= []).push(it);
@@ -938,9 +1000,9 @@ const PD3 = (() => {
     if (labels.some(l => !l)) return "empty option";
     return null;
   }
-  function makeQuestion(w, scope) {
+  function makeQuestion(w, connectorsOnly) {
     let types = w.tier === 1 ? [1, 2, 3, 4, 5] : [1, 2, 4, 5];
-    if (scope === "connectors") types = [2, 2, 3, 3, 1, 5];
+    if (connectorsOnly) types = [2, 2, 3, 3, 1, 5];
     if (l3ByWord[w.id]) types = types.concat([2, 2]);
     for (const t of shuffle(types.slice())) {
       const q = BUILDERS[t](w);
@@ -966,41 +1028,35 @@ const PD3 = (() => {
     }
     return out;
   }
-  function chooseWords(scope, n = 10, only = null) {
+  /** 10 words from the selection; with several tiers selected, split about 50/30/20 by tier */
+  function chooseWords(ws, n = 10, only = null) {
     const taken = new Set();
     if (only) return shuffle(only.map(id => byId[id]).filter(Boolean)).slice(0, n);
-    if (scope === "mix") {
-      const want = { 1: 5, 2: 3, 3: 2 };
-      let out = [];
-      for (const t of [1, 2, 3]) out = out.concat(weightedPick(words.filter(w => w.tier === t), want[t], taken));
-      if (out.length < n) out = out.concat(weightedPick(words, n - out.length, taken));
-      return shuffle(out);
-    }
-    let pool = scope === "connectors" || scope === "t1" ? words.filter(w => w.tier === 1)
-      : scope === "t2" ? words.filter(w => w.tier === 2) : scope === "t3" ? words.filter(w => w.tier === 3)
-      : scope.startsWith("g:") ? (groupById[scope.slice(2)]?.words || []).map(id => byId[id]) : words;
-    return weightedPick(pool, n, taken);
+    const tiers = [1, 2, 3].filter(tr => ws.some(w => w.tier === tr));
+    if (tiers.length < 2) return weightedPick(ws, n, taken);
+    const share = { 1: 5, 2: 3, 3: 2 }, tot = tiers.reduce((a, tr) => a + share[tr], 0);
+    let out = [];
+    for (const tr of tiers) out = out.concat(weightedPick(ws.filter(w => w.tier === tr), Math.round(n * share[tr] / tot), taken));
+    if (out.length < n) out = out.concat(weightedPick(ws, n - out.length, taken));
+    return shuffle(out.slice(0, n));
   }
 
   let quiz = null;
   function startTest(only = null) {
-    const scope = scopeSel.value;
-    const ws = chooseWords(scope, 10, only);
-    const qs = [];
-    const used = new Set();
-    for (const w of ws) { const q = makeQuestion(w, scope); if (q) { qs.push(q); used.add(w.id); } }
-    // top up if a word could not produce a valid question
-    if (!only) for (const w of shuffle(words.slice())) {
+    const ws = pool();
+    const conn = ws.length > 0 && ws.every(w => w.tier === 1);
+    const picked = chooseWords(ws, 10, only);
+    const qs = [], used = new Set();
+    for (const w of picked) { const q = makeQuestion(w, conn); if (q) { qs.push(q); used.add(w.id); } }
+    // top up from the same selection if a word could not produce a valid question
+    if (!only) for (const w of shuffle(ws.slice())) {
       if (qs.length >= 10) break;
-      if (used.has(w.id) || (scope !== "mix" && scope !== "all" && !ws.length)) continue;
-      if (scope === "t1" || scope === "connectors") { if (w.tier !== 1) continue; }
-      else if (scope === "t2" && w.tier !== 2) continue; else if (scope === "t3" && w.tier !== 3) continue;
-      else if (scope.startsWith("g:") && !w.groups.includes(scope.slice(2))) continue;
-      const q = makeQuestion(w, scope); if (q) { qs.push(q); used.add(w.id); }
+      if (used.has(w.id)) continue;
+      const q = makeQuestion(w, conn); if (q) { qs.push(q); used.add(w.id); }
     }
-    if (!qs.length) { alert(t("t.notenough")); return; }
-    quiz = { scope, qs, i: 0, answers: [] };
-    $("#setup").hidden = true; $("#result").hidden = true; $("#quiz").hidden = false;
+    if (!qs.length) { alert(sel.size ? t("t.notenough") : t("pick.none")); return; }
+    quiz = { scope: poolLabel(), qs, i: 0, answers: [] };
+    $("#setup").hidden = true; $("#result").hidden = true; $("#quiz").hidden = false; $("#picker").hidden = true;
     renderQ();
   }
   function explain(q) {
@@ -1042,7 +1098,7 @@ const PD3 = (() => {
       next.hidden = false; next.focus();
     }
     next.addEventListener("click", () => { quiz.i++; quiz.i < quiz.qs.length ? renderQ() : finish(); });
-    box.append(el("div", { class: "meta" }, `${TYPE(q.type)} · Tier ${q.word.tier}` + (PD3.parts(q.word).length ? " · " + PD3.parts(q.word).join(" ") : "")),
+    box.append(el("div", { class: "meta" }, TYPE(q.type)),
       el("p", { class: "prompt" }, q.prompt), el("div", { class: "stem" }, ...q.stem), opts, fb, next);
     box._answer = answer; box._next = next;
     opts.querySelector(".opt").focus({ preventScroll: true });
@@ -1067,7 +1123,7 @@ const PD3 = (() => {
       el("div", { class: "tools-row", style: "justify-content:center;margin-top:16px" },
         mistakes.length ? el("button", { class: "btn solid", type: "button", onclick: () => startTest(mistakes.map(m => m.q.word.id)) }, t("res.retry", mistakes.length)) : null,
         el("button", { class: "btn", type: "button", onclick: () => startTest() }, t("res.new")),
-        el("button", { class: "btn quiet", type: "button", onclick: () => { r.hidden = true; $("#setup").hidden = false; renderHistory(); } }, t("res.back")))));
+        el("button", { class: "btn quiet", type: "button", onclick: () => { r.hidden = true; $("#setup").hidden = false; $("#picker").hidden = false; renderHistory(); } }, t("res.back")))));
     if (mistakes.length) r.append(el("div", { class: "sheet q" }, el("h2", { style: "font-size:1.1rem" }, t("res.review")),
       el("ol", { class: "review" }, ...mistakes.map(m => el("li", null,
         el("div", { class: "small soft" }, m.q.prompt),
