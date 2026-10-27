@@ -124,6 +124,7 @@ footer.foot { padding-top: 40px; padding-bottom: 48px; color: var(--faint); font
 .btn.solid { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); box-shadow: 0 6px 16px color-mix(in srgb, var(--accent) 28%, transparent); }
 .btn.solid:hover { background: color-mix(in srgb, var(--accent) 88%, black); border-color: transparent; }
 .btn.quiet { border-color: transparent; background: transparent; color: var(--soft); }
+.linkbtn { border: 0; background: none; padding: 0; font: inherit; color: var(--accent-text); text-decoration: underline; cursor: pointer; }
 .btn.quiet:hover { color: var(--ink); background: var(--sheet); border-color: var(--rule); }
 .btn:disabled { opacity: .5; cursor: not-allowed; }
 .btn.solid:disabled:hover { background: var(--accent); }
@@ -286,6 +287,8 @@ const I18N = {
   "h.go": ["Start session", "Start session"], "h.learn": ["Lær {0} nye", "Learn {0} new"], "h.review": ["Kun gentagelser", "Reviews only"],
   "h.conf": ["Forvekslingsord", "Confusables drill"],
   "h.blurb": ["En session = {0}. Fremskridt gemmes i denne browser.", "A session = {0}. Progress is saved in this browser."],
+  "h.picked": ["Valgt gruppe: {0}. Knapperne ovenfor øver kun den.", "Selected group: {0}. The buttons above practise only this group."],
+  "h.allg": ["Alle grupper", "All groups"], "h.pick": ["Vælg en gruppe nedenfor for kun at øve den.", "Pick a group below to practise only that one."],
   "h.blurb.r": ["{0} gentagelser", "{0} reviews"], "h.blurb.r1": ["1 gentagelse", "1 review"],
   "h.blurb.n": ["{0} nye ord (forklaret, så testet)", "{0} new words (taught, then tested)"],
   "h.nothing": ["Intet at gentage, og dagens nye ord er brugt. Kom igen i morgen, eller vælg en gruppe nedenfor for ekstra øvelse.",
@@ -412,7 +415,10 @@ const NEW_PER_DAY = 15, BATCH = 5, REVIEW_LIMIT = 12;
 // ---------- state ----------
 let DB = null;           // {today, profile, cards: {id: card}, sentences}
 let S = null;            // current session
+// the group picked in the group map; the top buttons then work on that group only (remembered per browser)
 let openGroup = null;
+try { openGroup = localStorage.getItem("pd3-assisted-learning:group") || null; } catch (e) { /* ignore */ }
+function setGroup(g) { openGroup = g; try { g ? localStorage.setItem("pd3-assisted-learning:group", g) : localStorage.removeItem("pd3-assisted-learning:group"); } catch (e) { /* ignore */ } }
 
 const $ = (sel, el = document) => el.querySelector(sel);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -586,18 +592,22 @@ function home() {
   const tiles = pr => GROUP_ORDER.filter(g => prio(g) === pr && groupsBy[g]).map(g => groupTile(g, groupsBy[g])).join("");
   const metric = (l, n, s, pct) => `<div class="m"><div class="lbl">${l}</div><b>${n}</b><span class="s">${s}</span>${pct != null ? `<div class="bar"><span style="width:${pct.toFixed(1)}%"></span></div>` : ""}</div>`;
   const newLeft = Math.min(k.newLeft, k.fresh);
+  if (openGroup && !groupsBy[openGroup]) setGroup(null);
+  const g = openGroup, gc = g ? groupsBy[g] : null;
+  const canNew = Math.min(k.newLeft, gc ? gc.filter(c => stateOf(c) === "new").length : k.fresh);
+  const canDue = gc ? gc.filter(c => c.history.length && c.due <= DB.today).length : k.due;
   $("#app").innerHTML = `
     <div class="top">
       ${dW != null && dW >= 0 ? `<span class="chip"><b>${t("h.chip.days", dW)}</b><span>${t("h.chip")}</span></span>` : ""}
       <h1><span class="light">${t("h.h1a")}</span>${t("h.h1b")}</h1>
       <p>${t("h.intro", k.total)}</p>
       <div class="hero-cta">
-        <button class="btn solid" id="go">${t("h.go")}</button>
-        <button class="btn" id="learn" ${newLeft ? "" : "disabled"}>${t("h.learn", BATCH)}</button>
-        <button class="btn" id="review" ${k.due ? "" : "disabled"}>${t("h.review")}</button>
+        <button class="btn solid" id="go">${t("h.go")}${g ? ` · ${esc(gname(g))}` : ""}</button>
+        <button class="btn" id="learn" ${canNew ? "" : "disabled"}>${t("h.learn", BATCH)}</button>
+        <button class="btn" id="review" ${canDue ? "" : "disabled"}>${t("h.review")}</button>
         <button class="btn" id="conf">${t("h.conf")}</button>
       </div>
-      <p class="soft small" style="margin-top:12px">${sessionBlurb(k)}</p>
+      ${g ? `<p class="small" style="margin-top:12px">${t("h.picked", `<b>${esc(glabel(g))}</b>`)} <button type="button" class="linkbtn" id="allg">${t("h.allg")}</button></p>` : `<p class="soft small" style="margin-top:12px">${sessionBlurb(k)} ${t("h.pick")}</p>`}
       ${storageOK ? "" : `<div class="err small">${t("h.storage")}</div>`}
     </div>
     <div class="section"><h2>${t("h.progress")}</h2><div class="band"><div class="prog">
@@ -610,11 +620,12 @@ function home() {
       <div class="legend">${["new", "learn", "known", "master"].map(s => `<span><i style="background:var(--s-${s})"></i>${t("st." + s)}</span>`).join("")}</div>
       ${[1, 2, 3].map(pr => `<div class="tierlabel"><span class="badge t${pr}">${t("p." + pr)}</span></div><div class="groups" data-pr="${pr}">${tiles(pr)}</div>`).join("")}
     </div>`;
-  $("#go").onclick = () => startSession({});
-  $("#learn").onclick = () => startSession({ reviews: 0 });
-  $("#review").onclick = () => startSession({ fresh: 0 });
+  $("#go").onclick = () => startSession({ group: g });
+  $("#learn").onclick = () => startSession({ group: g, reviews: 0 });
+  $("#review").onclick = () => startSession({ group: g, fresh: 0 });
+  if ($("#allg")) $("#allg").onclick = () => { setGroup(null); home(); };
   $("#conf").onclick = () => startConfusables();
-  document.querySelectorAll(".group").forEach(b => b.onclick = () => { openGroup = openGroup === b.dataset.g ? null : b.dataset.g; home(); });
+  document.querySelectorAll(".group").forEach(b => b.onclick = () => { setGroup(openGroup === b.dataset.g ? null : b.dataset.g); home(); });
   if (openGroup && groupsBy[openGroup]) showGroupDetail(openGroup, groupsBy[openGroup]);
 }
 function sessionBlurb(k) {
