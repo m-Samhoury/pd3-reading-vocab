@@ -53,7 +53,8 @@
   "construction": [
    "anbefale noget (til nogen) / anbefale nogen at …",
    "anbefale noget (til nogen) / anbefale nogen at …"
-  ]
+  ],
+  "prep": "anbefale noget til nogen"
  },
  "at_fremhæve": {
   "register": [
@@ -63,13 +64,15 @@
   "construction": [
    "fremhæve noget (som …)",
    "fremhæve noget (som …) = highlight something (as …)"
-  ]
+  ],
+  "prep": "fremhæve noget som"
  },
  "at_vare": {
   "construction": [
    "vare + tidsrum: Kurset varer to uger. ≠ en vare (a product).",
    "vare + a period: Kurset varer to uger. ≠ en vare (a product)."
-  ]
+  ],
+  "prep": "vare + tidsrum"
  },
  "at_ansøge_om": {
   "register": [
@@ -79,13 +82,15 @@
   "construction": [
    "ansøge om noget: ansøge om et job / et visum",
    "ansøge om + noun: ansøge om et job / et visum"
-  ]
+  ],
+  "prep": "ansøge om noget"
  },
  "at_bestille": {
   "construction": [
    "bestille noget (hos nogen); bestille tid hos lægen. ”Hvad bestiller du?” = hvad arbejder du med.",
    "bestille noget (hos nogen); bestille tid hos lægen. ”Hvad bestiller du?” = what do you do for a living."
-  ]
+  ],
+  "prep": "bestille tid hos"
  },
  "at_optage": {
   "register": [
@@ -95,7 +100,8 @@
   "construction": [
    "Ofte passiv: blive optaget på en uddannelse.",
    "Often passive: blive optaget på en uddannelse (be admitted to)."
-  ]
+  ],
+  "prep": "blive optaget på"
  },
  "at_undlade": {
   "register": [
@@ -105,7 +111,8 @@
   "construction": [
    "undlade at + infinitiv: Han undlod at svare.",
    "undlade at + infinitive: Han undlod at svare."
-  ]
+  ],
+  "prep": "undlade at + infinitiv"
  },
  "at_udelukke": {
   "register": [
@@ -115,7 +122,8 @@
   "construction": [
    "udelukke noget / udelukke nogen fra noget. ”Det kan ikke udelukkes” = det er muligt.",
    "udelukke noget / udelukke nogen fra noget. ”Det kan ikke udelukkes” = it's possible."
-  ]
+  ],
+  "prep": "udelukke nogen fra"
  },
  "at_omfatte": {
   "register": [
@@ -125,7 +133,8 @@
   "construction": [
    "omfatte noget; ofte passiv: omfattet af reglen",
    "omfatte noget; often passive: omfattet af reglen (covered by the rule)"
-  ]
+  ],
+  "prep": "omfattet af"
  },
  "at_uddele": {
   "register": [
@@ -135,13 +144,15 @@
   "construction": [
    "uddele noget (til nogen)",
    "uddele noget (til nogen)"
-  ]
+  ],
+  "prep": "uddele noget til nogen"
  },
  "at_fordele": {
   "construction": [
    "fordele noget mellem / blandt / på flere",
    "fordele noget mellem / blandt / på flere"
-  ]
+  ],
+  "prep": "fordele noget mellem / blandt"
  },
  "et_udsagn": {
   "register": [
@@ -151,7 +162,8 @@
   "construction": [
    "et udsagn om noget; flertal: udsagn",
    "et udsagn om noget; plural: udsagn"
-  ]
+  ],
+  "prep": "udsagn om"
  },
  "i_overensstemmelse_med": {
   "order": [
@@ -165,7 +177,8 @@
   "construction": [
    "være / stå i overensstemmelse med noget",
    "være / stå i overensstemmelse med noget"
-  ]
+  ],
+  "prep": "i overensstemmelse med noget"
  },
  "at_give_udtryk_for": {
   "register": [
@@ -175,7 +188,8 @@
   "construction": [
    "give udtryk for + navneord: give udtryk for en holdning",
    "give udtryk for + noun: give udtryk for en holdning"
-  ]
+  ],
+  "prep": "give udtryk for noget"
  },
  "at_afgøre": {
   "construction": [
@@ -191,13 +205,15 @@
   "construction": [
    "afgørende for noget: afgørende for resultatet",
    "afgørende for noget: afgørende for resultatet"
-  ]
+  ],
+  "prep": "afgørende for"
  },
  "en_årsag": {
   "construction": [
    "årsag til noget: årsagen til problemet",
    "årsag til noget: årsagen til problemet (the cause of)"
-  ]
+  ],
+  "prep": "årsag til"
  },
  "et_vilkår": {
   "register": [
@@ -207,13 +223,15 @@
   "construction": [
    "Ofte flertal: vilkårene; på lige vilkår; vilkår for noget",
    "Often plural: vilkårene; på lige vilkår; vilkår for noget"
-  ]
+  ],
+  "prep": "vilkår for"
  },
  "et_forhold": {
   "construction": [
    "forhold til nogen = relationship; forholdene (flertal) = circumstances",
    "forhold til nogen = relationship; forholdene (plural) = circumstances"
-  ]
+  ],
+  "prep": "forhold til"
  },
  "i_forhold_til": {
   "order": [
@@ -223,7 +241,8 @@
   "construction": [
    "Både sammenligning (compared to) og ”angående” (regarding).",
    "Both comparison (compared to) and ”regarding”."
-  ]
+  ],
+  "prep": "i forhold til + navneord"
  },
  "om_hvorvidt": {
   "order": [
@@ -237,7 +256,8 @@
   "construction": [
    "Efter vide, spørge, undersøge. Brug ikke ”hvis” her.",
    "After vide, spørge, undersøge. Don't use ”hvis” here."
-  ]
+  ],
+  "prep": "vide / spørge, om …"
  },
  "blandt_andet": {
   "order": [
@@ -251,7 +271,8 @@
   "construction": [
    "Fremhæver ét eksempel ud af flere.",
    "Picks out one example among several."
-  ]
+  ],
+  "prep": "blandt andet (bl.a.)"
  },
  "omvendt": {
   "order": [
@@ -307,7 +328,8 @@
   "construction": [
    "nødvendigt at + infinitiv / nødvendigt for nogen",
    "nødvendigt at + infinitive / nødvendigt for nogen"
-  ]
+  ],
+  "prep": "nødvendigt for / at"
  },
  "hensigtsmæssig": {
   "register": [
@@ -317,7 +339,8 @@
   "construction": [
    "hensigtsmæssig for / til noget",
    "hensigtsmæssig for / til noget"
-  ]
+  ],
+  "prep": "hensigtsmæssig for"
  },
  "tvivlsomt": {
   "register": [
@@ -327,7 +350,8 @@
   "construction": [
    "Det er tvivlsomt, om …",
    "Det er tvivlsomt, om … (It's doubtful whether …)"
-  ]
+  ],
+  "prep": "tvivlsomt, om …"
  },
  "bæredygtig": {
   "register": [
@@ -347,7 +371,8 @@
   "construction": [
    "føre til + navneord eller at-sætning: føre til problemer",
    "føre til + noun or that-clause: føre til problemer"
-  ]
+  ],
+  "prep": "føre til + navneord"
  },
  "at_betinge": {
   "register": [
@@ -357,7 +382,8 @@
   "construction": [
    "Ofte passiv: betinget af = afhængig af",
    "Often passive: betinget af = depending on"
-  ]
+  ],
+  "prep": "betinget af"
  },
  "at_understrege": {
   "register": [
@@ -373,7 +399,8 @@
   "construction": [
    "kræve noget (af nogen); det kræver, at …",
    "kræve noget (af nogen); det kræver, at …"
-  ]
+  ],
+  "prep": "kræve noget af nogen"
  },
  "at_fremkalde": {
   "register": [
@@ -383,7 +410,8 @@
   "construction": [
    "fremkalde en reaktion / følelse; også fremkalde billeder (photos)",
    "fremkalde en reaktion / følelse; also fremkalde billeder (develop photos)"
-  ]
+  ],
+  "prep": "fremkalde + navneord"
  },
  "at_skyldes": {
   "order": [
@@ -397,7 +425,8 @@
   "construction": [
    "skyldes + navneord eller at-sætning, uden præposition. ≠ skylde (owe).",
    "skyldes + noun or that-clause, no preposition. ≠ skylde (owe)."
-  ]
+  ],
+  "prep": "skyldes + navneord (ingen præposition)"
  },
  "at_indrømme": {
   "construction": [
@@ -413,25 +442,29 @@
   "construction": [
    "formålet med noget er at + infinitiv",
    "formålet med noget er at + infinitive"
-  ]
+  ],
+  "prep": "formålet med"
  },
  "problemer_med": {
   "construction": [
    "have problemer med noget / med at + infinitiv",
    "have problemer med noget / med at + infinitive"
-  ]
+  ],
+  "prep": "problemer med"
  },
  "effekten_af": {
   "construction": [
    "effekten af noget på noget: effekten af motion på helbredet",
    "effekten af noget på noget: effekten af motion på helbredet"
-  ]
+  ],
+  "prep": "effekten af … på …"
  },
  "indflydelse_på": {
   "construction": [
    "have indflydelse på noget (ikke ”til”)",
    "have indflydelse på noget (not ”til”)"
-  ]
+  ],
+  "prep": "indflydelse på"
  },
  "idet": {
   "order": [
@@ -459,7 +492,8 @@
   "construction": [
    "Med en hel sætning: fordi / da.",
    "With a whole clause use fordi / da."
-  ]
+  ],
+  "prep": "som følge af + navneord"
  },
  "af_den_grund": {
   "order": [
@@ -583,7 +617,8 @@
   "construction": [
    "≈ i forhold til",
    "≈ i forhold til"
-  ]
+  ],
+  "prep": "sammenlignet med + navneord"
  },
  "heller_ikke": {
   "order": [
@@ -633,7 +668,8 @@
   "construction": [
    "Med en hel sætning: mens / hvorimod.",
    "With a whole clause use mens / hvorimod."
-  ]
+  ],
+  "prep": "i modsætning til + navneord"
  },
  "på_den_ene_side_på_den_anden_side": {
   "order": [
@@ -667,7 +703,8 @@
   "construction": [
    "Med sætning: på trods af, at … / selvom",
    "With a clause: på trods af, at … / selvom"
-  ]
+  ],
+  "prep": "på trods af + navneord"
  },
  "for_at": {
   "order": [
@@ -677,7 +714,8 @@
   "construction": [
    "Samme subjekt; med nyt subjekt brug så (at).",
    "Same subject; with a new subject use så (at)."
-  ]
+  ],
+  "prep": "for at + infinitiv"
  },
  "så_at": {
   "order": [
@@ -697,7 +735,8 @@
   "register": [
    "Formelt.",
    "Formal."
-  ]
+  ],
+  "prep": "med henblik på + navneord / at"
  },
  "snarere": {
   "order": [
@@ -823,13 +862,15 @@
   "construction": [
    "påpege noget / påpege, at …",
    "påpege noget / påpege, at …"
-  ]
+  ],
+  "prep": "påpege, at …"
  },
  "at_modsige": {
   "construction": [
    "modsige nogen / noget; modsige sig selv",
    "modsige nogen / noget; modsige sig selv (contradict oneself)"
-  ]
+  ],
+  "prep": "modsige sig selv"
  },
  "at_fortryde": {
   "construction": [
@@ -845,13 +886,15 @@
   "construction": [
    "beklage noget / beklage sig over noget (complain)",
    "beklage noget / beklage sig over noget (complain about)"
-  ]
+  ],
+  "prep": "beklage sig over"
  },
  "at_opleve": {
   "construction": [
    "opleve noget / opleve, at …",
    "opleve noget / opleve, at …"
-  ]
+  ],
+  "prep": "opleve, at …"
  },
  "at_muliggøre": {
   "register": [
@@ -873,7 +916,8 @@
   "construction": [
    "investere i noget (penge, tid)",
    "investere i noget (money, time)"
-  ]
+  ],
+  "prep": "investere i"
  },
  "at_offentliggøre": {
   "register": [
@@ -889,25 +933,29 @@
   "construction": [
    "mulighed for noget / for at + infinitiv",
    "mulighed for noget / for at + infinitive"
-  ]
+  ],
+  "prep": "mulighed for"
  },
  "en_udfordring": {
   "construction": [
    "en udfordring for nogen; udfordringen er at …",
    "en udfordring for nogen; udfordringen er at …"
-  ]
+  ],
+  "prep": "udfordring for"
  },
  "et_ansvar": {
   "construction": [
    "ansvar for noget; have / tage ansvar",
    "ansvar for noget; have / tage ansvar"
-  ]
+  ],
+  "prep": "ansvar for"
  },
  "et_behov": {
   "construction": [
    "behov for noget / for at + infinitiv",
    "behov for noget / for at + infinitive"
-  ]
+  ],
+  "prep": "behov for"
  },
  "en_forudsætning": {
   "register": [
@@ -917,19 +965,22 @@
   "construction": [
    "forudsætning for noget",
    "forudsætning for noget"
-  ]
+  ],
+  "prep": "forudsætning for"
  },
  "en_påstand": {
   "construction": [
    "påstand om noget; fremsætte en påstand",
    "påstand om noget; fremsætte en påstand (make a claim)"
-  ]
+  ],
+  "prep": "påstand om"
  },
  "en_tendens": {
   "construction": [
    "tendens til noget / til at + infinitiv",
    "tendens til noget / til at + infinitive"
-  ]
+  ],
+  "prep": "tendens til"
  },
  "en_omkostning": {
   "register": [
@@ -939,13 +990,15 @@
   "construction": [
    "Oftest flertal: omkostninger ved noget",
    "Usually plural: omkostninger ved noget"
-  ]
+  ],
+  "prep": "omkostninger ved"
  },
  "en_undtagelse": {
   "construction": [
    "en undtagelse fra reglen; med undtagelse af",
    "en undtagelse fra reglen; med undtagelse af"
-  ]
+  ],
+  "prep": "undtagelse fra"
  },
  "en_målsætning": {
   "register": [
@@ -955,13 +1008,15 @@
   "construction": [
    "målsætning om / for noget",
    "målsætning om / for noget"
-  ]
+  ],
+  "prep": "målsætning om"
  },
  "en_forklaring": {
   "construction": [
    "forklaring på noget (ikke ”af”)",
    "forklaring på noget (not ”af”)"
-  ]
+  ],
+  "prep": "forklaring på"
  },
  "typisk": {
   "order": [
@@ -971,7 +1026,8 @@
   "construction": [
    "typisk for nogen / noget",
    "typisk for nogen / noget"
-  ]
+  ],
+  "prep": "typisk for"
  },
  "karakteristisk": {
   "register": [
@@ -981,7 +1037,8 @@
   "construction": [
    "karakteristisk for noget",
    "karakteristisk for noget"
-  ]
+  ],
+  "prep": "karakteristisk for"
  },
  "sjældent": {
   "order": [
@@ -992,5 +1049,794 @@
    "-t-form som adverbium (sjælden → sjældent)",
    "-t form as an adverb (sjælden → sjældent)"
   ]
+ },
+ "eller": {
+  "order": [
+   "KOO: forbinder led af samme slags: kaffe eller te",
+   "KOO: joins items of the same kind: kaffe eller te"
+  ],
+  "register": [
+   "Hverdag og formelt.",
+   "Everyday and formal."
+  ]
+ },
+ "ellers": {
+  "order": [
+   "ADV; først giver inversion: Skynd dig, ellers kommer du for sent.",
+   "ADV; first it causes inversion: Skynd dig, ellers kommer du for sent."
+  ],
+  "register": [
+   "Hverdag og formelt.",
+   "Everyday and formal."
+  ],
+  "construction": [
+   "Kan også betyde ”i øvrigt”: Hvordan går det ellers?",
+   "Can also mean ”otherwise / by the way”: Hvordan går det ellers?"
+  ]
+ },
+ "næppe": {
+  "order": [
+   "ADV, efter verbet: Han når det næppe.",
+   "ADV, after the verb: Han når det næppe."
+  ],
+  "register": [
+   "Formelt.",
+   "Formal."
+  ],
+  "construction": [
+   "Er selv negativt; brug ikke ”ikke”. Fast udtryk: med nød og næppe.",
+   "Already negative; don't add ”ikke”. Idiom: med nød og næppe (only just)."
+  ]
+ },
+ "næsten_ikke": {
+  "order": [
+   "Efter verbet: Der er næsten ikke nogen.",
+   "After the verb: Der er næsten ikke nogen."
+  ],
+  "register": [
+   "Hverdag.",
+   "Everyday."
+  ]
+ },
+ "derfor": {
+  "order": [
+   "ADV; først giver inversion: Derfor blev vi hjemme.",
+   "ADV; first it causes inversion: Derfor blev vi hjemme."
+  ],
+  "register": [
+   "Hverdag og formelt.",
+   "Everyday and formal."
+  ],
+  "construction": [
+   "”derfor, at …” / ”det er derfor, …” = that is why",
+   "”derfor, at …” / ”det er derfor, …” = that is why"
+  ]
+ },
+ "dermed": {
+  "order": [
+   "ADV; først giver inversion: Dermed er sagen afgjort.",
+   "ADV; first it causes inversion: Dermed er sagen afgjort."
+  ],
+  "register": [
+   "Formelt.",
+   "Formal."
+  ],
+  "construction": [
+   "Peger tilbage på det netop nævnte (= på den måde, som følge heraf).",
+   "Points back to what was just said (= in that way, as a result)."
+  ]
+ },
+ "således": {
+  "order": [
+   "ADV; først giver inversion: Således kan man spare penge.",
+   "ADV; first it causes inversion: Således kan man spare penge."
+  ],
+  "register": [
+   "Formelt.",
+   "Formal."
+  ],
+  "construction": [
+   "To betydninger: ”derfor” og ”på den måde”.",
+   "Two meanings: ”therefore” and ”in this way”."
+  ]
+ },
+ "følgelig": {
+  "order": [
+   "ADV; først giver inversion: Følgelig steg priserne.",
+   "ADV; first it causes inversion: Følgelig steg priserne."
+  ],
+  "register": [
+   "Formelt.",
+   "Formal."
+  ]
+ },
+ "desuden": {
+  "order": [
+   "ADV; først giver inversion: Desuden er det billigt.",
+   "ADV; first it causes inversion: Desuden er det billigt."
+  ],
+  "register": [
+   "Neutralt.",
+   "Neutral."
+  ]
+ },
+ "derudover": {
+  "order": [
+   "ADV; først giver inversion: Derudover tilbyder vi …",
+   "ADV; first it causes inversion: Derudover tilbyder vi …"
+  ],
+  "register": [
+   "Neutralt; skrives i ét ord.",
+   "Neutral; written as one word."
+  ]
+ },
+ "ligeledes": {
+  "order": [
+   "ADV, efter verbet: Prisen er ligeledes steget.",
+   "ADV, after the verb: Prisen er ligeledes steget."
+  ],
+  "register": [
+   "Formelt.",
+   "Formal."
+  ]
+ },
+ "fordi": {
+  "order": [
+   "SUB: ledsætningsordstilling: …, fordi han ikke har tid.",
+   "SUB: subordinate word order: …, fordi han ikke har tid."
+  ],
+  "register": [
+   "Hverdag og formelt.",
+   "Everyday and formal."
+  ],
+  "construction": [
+   "fordi + hel sætning (med verbum); med navneord: på grund af",
+   "fordi + whole clause (with a verb); with a noun use på grund af"
+  ]
+ },
+ "nemlig": {
+  "order": [
+   "ADV, efter verbet: Han kom ikke. Han var nemlig syg.",
+   "ADV, after the verb: Han kom ikke. Han var nemlig syg."
+  ],
+  "register": [
+   "Hverdag og formelt.",
+   "Everyday and formal."
+  ],
+  "construction": [
+   "Kan ikke stå først i sætningen; giver grunden til det før.",
+   "Can't come first in the sentence; gives the reason for what came before."
+  ]
+ },
+ "alligevel": {
+  "order": [
+   "ADV, efter verbet: Vi købte det alligevel.",
+   "ADV, after the verb: Vi købte det alligevel."
+  ],
+  "register": [
+   "Hverdag.",
+   "Everyday."
+  ]
+ },
+ "imidlertid": {
+  "order": [
+   "ADV, normalt efter verbet: Den er imidlertid dyr. Først giver inversion: Imidlertid er den dyr.",
+   "ADV, normally after the verb: Den er imidlertid dyr. First it causes inversion: Imidlertid er den dyr."
+  ],
+  "register": [
+   "Formelt, mest skriftligt; i tale: men / dog.",
+   "Formal, mostly written; in speech: men / dog."
+  ],
+  "construction": [
+   "Ingen præposition; knytter an til sætningen før. Betyder ikke ”immediately”.",
+   "No preposition; links to the sentence before. Doesn't mean ”immediately”."
+  ]
+ },
+ "derimod": {
+  "order": [
+   "ADV, ofte efter subjektet: Mette derimod hader det.",
+   "ADV, often after the subject: Mette derimod hader det."
+  ],
+  "register": [
+   "Neutralt.",
+   "Neutral."
+  ],
+  "construction": [
+   "Sætter to personer eller ting op mod hinanden.",
+   "Sets two people or things against each other."
+  ]
+ },
+ "selvom": {
+  "order": [
+   "SUB: ledsætningsordstilling. Står ledsætningen først, kommer der inversion: Selvom det regner, går vi en tur.",
+   "SUB: subordinate word order. If the clause comes first, the main clause inverts: Selvom det regner, går vi en tur."
+  ],
+  "register": [
+   "Hverdag; skrives i ét ord (også: selv om).",
+   "Everyday; written as one word (also: selv om)."
+  ]
+ },
+ "hvorimod": {
+  "order": [
+   "SUB: ledsætningsordstilling: …, hvorimod landsbyerne affolkes.",
+   "SUB: subordinate word order: …, hvorimod landsbyerne affolkes."
+  ],
+  "register": [
+   "Formelt.",
+   "Formal."
+  ],
+  "construction": [
+   "Kun modsætning (≠ mens, som også kan være tid).",
+   "Contrast only (unlike mens, which can also be time)."
+  ]
+ },
+ "at_forhindre": {
+  "register": [
+   "Neutralt.",
+   "Neutral."
+  ],
+  "construction": [
+   "forhindre noget / forhindre nogen i at + infinitiv",
+   "forhindre noget / forhindre nogen i at + infinitive"
+  ],
+  "prep": "forhindre nogen i at"
+ },
+ "at_begrænse": {
+  "register": [
+   "Neutralt.",
+   "Neutral."
+  ],
+  "construction": [
+   "begrænse noget; begrænset af (= bounded by); begrænse sig til",
+   "begrænse noget; begrænset af (= bounded by); begrænse sig til (limit oneself to)"
+  ],
+  "prep": "begrænset af"
+ },
+ "at_forebygge": {
+  "register": [
+   "Formelt.",
+   "Formal."
+  ],
+  "construction": [
+   "forebygge noget (sygdom, ulykker, problemer)",
+   "forebygge noget (illness, accidents, problems)"
+  ]
+ },
+ "at_undgå": {
+  "register": [
+   "Neutralt.",
+   "Neutral."
+  ],
+  "construction": [
+   "undgå noget / undgå at + infinitiv",
+   "undgå noget / undgå at + infinitive"
+  ],
+  "prep": "undgå at + infinitiv"
+ },
+ "at_medføre": {
+  "register": [
+   "Formelt.",
+   "Formal."
+  ],
+  "construction": [
+   "medføre noget (direkte objekt, ingen præposition) / medføre, at …",
+   "medføre noget (direct object, no preposition) / medføre, at …"
+  ],
+  "prep": "medføre + navneord (ingen præposition)"
+ },
+ "at_resultere_i": {
+  "register": [
+   "Formelt.",
+   "Formal."
+  ],
+  "construction": [
+   "resultere i + navneord: resultere i en stigning",
+   "resultere i + noun: resultere i en stigning"
+  ],
+  "prep": "resultere i + navneord"
+ },
+ "at_sikre": {
+  "register": [
+   "Neutralt.",
+   "Neutral."
+  ],
+  "construction": [
+   "sikre noget / sikre, at … / sikre sig noget",
+   "sikre noget / sikre, at … / sikre sig noget (secure for oneself)"
+  ],
+  "prep": "sikre sig noget"
+ },
+ "at_garantere": {
+  "register": [
+   "Neutralt.",
+   "Neutral."
+  ],
+  "construction": [
+   "garantere (for) noget / garantere, at …",
+   "garantere (for) noget / garantere, at …"
+  ],
+  "prep": "garantere (for) noget"
+ },
+ "at_forårsage": {
+  "register": [
+   "Formelt.",
+   "Formal."
+  ],
+  "construction": [
+   "forårsage noget (direkte objekt), ofte noget negativt",
+   "forårsage noget (direct object), often something negative"
+  ],
+  "prep": "forårsage + navneord"
+ },
+ "at_afvise": {
+  "register": [
+   "Neutralt.",
+   "Neutral."
+  ],
+  "construction": [
+   "afvise noget (et tilbud, et forslag) / afvise nogen",
+   "afvise noget (an offer, a proposal) / afvise nogen"
+  ]
+ },
+ "da": {
+  "order": [
+   "SUB: ledsætningsordstilling. Først giver inversion i hovedsætningen: Da det regnede, blev vi hjemme.",
+   "SUB: subordinate word order. First, it inverts the main clause: Da det regnede, blev vi hjemme."
+  ],
+  "register": [
+   "Hverdag og formelt.",
+   "Everyday and formal."
+  ],
+  "construction": [
+   "To betydninger: årsag (= fordi) og tid (én gang i fortiden).",
+   "Two meanings: reason (= because) and time (once, in the past)."
+  ]
+ },
+ "eftersom": {
+  "order": [
+   "SUB: ledsætningsordstilling; står ofte først: Eftersom bussen ikke kom, …",
+   "SUB: subordinate word order; often first: Eftersom bussen ikke kom, …"
+  ],
+  "register": [
+   "Formelt.",
+   "Formal."
+  ]
+ },
+ "for": {
+  "order": [
+   "KOO: hovedsætningsordstilling efter for: …, for hun var syg.",
+   "KOO: main-clause word order after for: …, for hun var syg."
+  ],
+  "register": [
+   "Lidt formelt / skriftligt.",
+   "Slightly formal / written."
+  ],
+  "construction": [
+   "Står efter komma, aldrig først i sætningen.",
+   "Comes after a comma, never first in the sentence."
+  ]
+ },
+ "på_grund_af": {
+  "order": [
+   "Præposition + navneord: på grund af regnen",
+   "Preposition + noun: på grund af regnen"
+  ],
+  "register": [
+   "Neutralt; forkortes pga.",
+   "Neutral; abbreviated pga."
+  ],
+  "construction": [
+   "Med en hel sætning: fordi.",
+   "With a whole clause use fordi."
+  ],
+  "prep": "på grund af + navneord"
+ },
+ "derved": {
+  "order": [
+   "ADV; først giver inversion: Derved sparer man tid.",
+   "ADV; first it causes inversion: Derved sparer man tid."
+  ],
+  "register": [
+   "Formelt.",
+   "Formal."
+  ]
+ },
+ "endvidere": {
+  "order": [
+   "ADV; først giver inversion: Endvidere viser undersøgelsen …",
+   "ADV; first it causes inversion: Endvidere viser undersøgelsen …"
+  ],
+  "register": [
+   "Formelt, skriftligt.",
+   "Formal, written."
+  ]
+ },
+ "ydermere": {
+  "order": [
+   "ADV; først giver inversion: Ydermere er det dyrt.",
+   "ADV; first it causes inversion: Ydermere er det dyrt."
+  ],
+  "register": [
+   "Formelt, skriftligt.",
+   "Formal, written."
+  ]
+ },
+ "ligesom": {
+  "order": [
+   "SUB eller PRÆP: ligesom sin far / ligesom vi gjorde sidste år",
+   "SUB or PREP: ligesom sin far / ligesom vi gjorde sidste år"
+  ],
+  "register": [
+   "Hverdag og formelt.",
+   "Everyday and formal."
+  ],
+  "construction": [
+   "ligesom + navneord eller sætning",
+   "ligesom + noun or clause"
+  ]
+ },
+ "dog": {
+  "order": [
+   "ADV, efter verbet: Det er dog dyrt. Først giver inversion: Dog er det dyrt.",
+   "ADV, after the verb: Det er dog dyrt. First it causes inversion: Dog er det dyrt."
+  ],
+  "register": [
+   "Neutralt.",
+   "Neutral."
+  ]
+ },
+ "mens": {
+  "order": [
+   "SUB: ledsætningsordstilling: …, mens han laver mad.",
+   "SUB: subordinate word order: …, mens han laver mad."
+  ],
+  "register": [
+   "Hverdag og formelt.",
+   "Everyday and formal."
+  ],
+  "construction": [
+   "To betydninger: tid (samtidig) og modsætning (whereas).",
+   "Two meanings: time (at the same time) and contrast (whereas)."
+  ]
+ },
+ "i_stedet_for": {
+  "order": [
+   "Præposition + navneord eller at + infinitiv: i stedet for at klage",
+   "Preposition + noun or at + infinitive: i stedet for at klage"
+  ],
+  "register": [
+   "Neutralt.",
+   "Neutral."
+  ],
+  "prep": "i stedet for + navneord / at"
+ },
+ "skønt": {
+  "order": [
+   "SUB: ledsætningsordstilling: …, skønt det regnede.",
+   "SUB: subordinate word order: …, skønt det regnede."
+  ],
+  "register": [
+   "Formelt (= selvom).",
+   "Formal (= selvom)."
+  ]
+ },
+ "ikke_desto_mindre": {
+  "order": [
+   "ADV; først giver inversion: Ikke desto mindre valgte de …",
+   "ADV; first it causes inversion: Ikke desto mindre valgte de …"
+  ],
+  "register": [
+   "Formelt.",
+   "Formal."
+  ]
+ },
+ "hvis": {
+  "order": [
+   "SUB: ledsætningsordstilling; først giver inversion: Hvis det regner, bliver vi hjemme.",
+   "SUB: subordinate word order; first, it inverts the main clause: Hvis det regner, bliver vi hjemme."
+  ],
+  "register": [
+   "Hverdag og formelt.",
+   "Everyday and formal."
+  ],
+  "construction": [
+   "Betingelse (if). Efter vide / spørge bruges om, ikke hvis.",
+   "Condition (if). After vide / spørge use om, not hvis."
+  ]
+ },
+ "såfremt": {
+  "order": [
+   "SUB: ledsætningsordstilling",
+   "SUB: subordinate word order"
+  ],
+  "register": [
+   "Formelt (= hvis).",
+   "Formal (= hvis)."
+  ]
+ },
+ "forudsat_at": {
+  "order": [
+   "SUB: ledsætningsordstilling: forudsat at vejret er godt",
+   "SUB: subordinate word order: forudsat at vejret er godt"
+  ],
+  "register": [
+   "Formelt.",
+   "Formal."
+  ]
+ },
+ "medmindre": {
+  "order": [
+   "SUB: ledsætningsordstilling: medmindre det regner",
+   "SUB: subordinate word order: medmindre det regner"
+  ],
+  "register": [
+   "Neutralt.",
+   "Neutral."
+  ],
+  "construction": [
+   "medmindre + hel sætning (= hvis ikke)",
+   "medmindre + whole clause (= if not)"
+  ]
+ },
+ "undtagen": {
+  "order": [
+   "Præposition + navneord: alle undtagen Peter",
+   "Preposition + noun: alle undtagen Peter"
+  ],
+  "register": [
+   "Neutralt.",
+   "Neutral."
+  ],
+  "prep": "undtagen + navneord"
+ },
+ "bortset_fra": {
+  "order": [
+   "Præposition + navneord: bortset fra prisen",
+   "Preposition + noun: bortset fra prisen"
+  ],
+  "register": [
+   "Neutralt.",
+   "Neutral."
+  ],
+  "prep": "bortset fra + navneord"
+ },
+ "frem_for": {
+  "order": [
+   "Præposition + navneord eller at + infinitiv: frem for at køre bil",
+   "Preposition + noun or at + infinitive: frem for at køre bil"
+  ],
+  "register": [
+   "Formelt.",
+   "Formal."
+  ],
+  "prep": "frem for + navneord / at"
+ },
+ "for_eksempel_fx": {
+  "order": [
+   "ADV, efter verbet eller foran eksemplet: Man kan for eksempel cykle.",
+   "ADV, after the verb or before the example: Man kan for eksempel cykle."
+  ],
+  "register": [
+   "Neutralt; forkortes fx / f.eks.",
+   "Neutral; abbreviated fx / f.eks."
+  ]
+ },
+ "eksempelvis": {
+  "order": [
+   "ADV, efter verbet: Man kan eksempelvis cykle.",
+   "ADV, after the verb: Man kan eksempelvis cykle."
+  ],
+  "register": [
+   "Formelt.",
+   "Formal."
+  ]
+ },
+ "især": {
+  "order": [
+   "ADV, foran det der fremhæves: især om vinteren",
+   "ADV, before what it highlights: især om vinteren"
+  ],
+  "register": [
+   "Neutralt.",
+   "Neutral."
+  ]
+ },
+ "navnlig": {
+  "order": [
+   "ADV, foran det der fremhæves: navnlig de unge",
+   "ADV, before what it highlights: navnlig de unge"
+  ],
+  "register": [
+   "Formelt.",
+   "Formal."
+  ]
+ },
+ "heldigvis": {
+  "order": [
+   "ADV, efter verbet: Det gik heldigvis godt. Først giver inversion.",
+   "ADV, after the verb: Det gik heldigvis godt. First it causes inversion."
+  ],
+  "register": [
+   "Hverdag.",
+   "Everyday."
+  ]
+ },
+ "desværre": {
+  "order": [
+   "ADV, efter verbet: Vi kan desværre ikke komme. Først giver inversion.",
+   "ADV, after the verb: Vi kan desværre ikke komme. First it causes inversion."
+  ],
+  "register": [
+   "Hverdag og formelt.",
+   "Everyday and formal."
+  ]
+ },
+ "når": {
+  "order": [
+   "SUB: ledsætningsordstilling; først giver inversion: Når jeg kommer hjem, ringer jeg.",
+   "SUB: subordinate word order; first, it inverts the main clause: Når jeg kommer hjem, ringer jeg."
+  ],
+  "register": [
+   "Hverdag og formelt.",
+   "Everyday and formal."
+  ],
+  "construction": [
+   "Gentaget eller fremtid; én gang i fortiden = da.",
+   "Repeated or future; once in the past = da."
+  ]
+ },
+ "inden": {
+  "order": [
+   "SUB: inden + ledsætning; eller PRÆP: inden mandag",
+   "SUB: inden + clause; or PREP: inden mandag"
+  ],
+  "register": [
+   "Neutralt.",
+   "Neutral."
+  ]
+ },
+ "efter_at": {
+  "order": [
+   "SUB: ledsætningsordstilling: efter at han var gået",
+   "SUB: subordinate word order: efter at han var gået"
+  ],
+  "register": [
+   "Neutralt.",
+   "Neutral."
+  ],
+  "construction": [
+   "efter at + sætning; med navneord kun efter: efter mødet",
+   "efter at + clause; with a noun just efter: efter mødet"
+  ],
+  "prep": "efter at + sætning"
+ },
+ "siden": {
+  "order": [
+   "SUB: siden + ledsætning; ADV: har siden …; PRÆP: siden 2019",
+   "SUB: siden + clause; ADV: har siden …; PREP: siden 2019"
+  ],
+  "register": [
+   "Neutralt.",
+   "Neutral."
+  ],
+  "construction": [
+   "for … siden = ago: for to år siden",
+   "for … siden = ago: for to år siden"
+  ]
+ },
+ "derefter": {
+  "order": [
+   "ADV; først giver inversion: Derefter gik vi hjem.",
+   "ADV; first it causes inversion: Derefter gik vi hjem."
+  ],
+  "register": [
+   "Neutralt.",
+   "Neutral."
+  ]
+ },
+ "herefter": {
+  "order": [
+   "ADV; først giver inversion: Herefter følger …",
+   "ADV; first it causes inversion: Herefter følger …"
+  ],
+  "register": [
+   "Formelt.",
+   "Formal."
+  ]
+ },
+ "alt_i_alt": {
+  "order": [
+   "ADV; først giver inversion: Alt i alt var det en god dag.",
+   "ADV; first it causes inversion: Alt i alt var det en god dag."
+  ],
+  "register": [
+   "Neutralt.",
+   "Neutral."
+  ]
+ },
+ "samlet_set": {
+  "order": [
+   "ADV; først giver inversion: Samlet set er resultatet godt.",
+   "ADV; first it causes inversion: Samlet set er resultatet godt."
+  ],
+  "register": [
+   "Formelt.",
+   "Formal."
+  ]
+ },
+ "at_bekræfte": {
+  "register": [
+   "Neutralt.",
+   "Neutral."
+  ],
+  "construction": [
+   "bekræfte noget / bekræfte, at …",
+   "bekræfte noget / bekræfte, at …"
+  ]
+ },
+ "at_benægte": {
+  "register": [
+   "Formelt.",
+   "Formal."
+  ],
+  "construction": [
+   "benægte noget / benægte, at …",
+   "benægte noget / benægte, at …"
+  ]
+ },
+ "at_reducere": {
+  "register": [
+   "Formelt (hverdag: skære ned på).",
+   "Formal (everyday: skære ned på)."
+  ],
+  "construction": [
+   "reducere noget (med 10 %)",
+   "reducere noget (med 10 %)"
+  ],
+  "prep": "reducere med"
+ },
+ "at_udvide": {
+  "register": [
+   "Neutralt.",
+   "Neutral."
+  ],
+  "construction": [
+   "udvide noget (med noget)",
+   "udvide noget (med noget)"
+  ],
+  "prep": "udvide med"
+ },
+ "at_forlænge": {
+  "register": [
+   "Neutralt.",
+   "Neutral."
+  ],
+  "construction": [
+   "forlænge noget (med en uge)",
+   "forlænge noget (med en uge)"
+  ],
+  "prep": "forlænge med"
+ },
+ "en_modstand": {
+  "register": [
+   "Neutralt.",
+   "Neutral."
+  ],
+  "construction": [
+   "modstand mod noget: modstand mod forslaget",
+   "modstand mod noget: modstand mod forslaget"
+  ],
+  "prep": "modstand mod"
+ },
+ "en_opbakning": {
+  "register": [
+   "Neutralt.",
+   "Neutral."
+  ],
+  "construction": [
+   "opbakning til noget / fra nogen: bred opbakning til planen",
+   "opbakning til noget / fra nogen: bred opbakning til planen"
+  ],
+  "prep": "opbakning til"
  }
 }

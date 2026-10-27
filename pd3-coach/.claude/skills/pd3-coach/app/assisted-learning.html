@@ -264,6 +264,9 @@ input.answer:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--ac
 .sense .eg { margin-bottom: 6px; }
 .sense .none { font-size: .85rem; color: var(--faint); font-style: italic; }
 .sensenote { margin-top: 12px; padding: 10px 14px; background: var(--blue-soft); border-radius: 12px; font-size: .9rem; }
+.prepline { display: inline-block; margin: 6px 0 2px; padding: 3px 10px; border-radius: 8px; background: var(--blue-soft); color: var(--blue-text); font-size: .9rem; }
+.prepline b { color: var(--ink); font-weight: 600; }
+.feedback .prepline { margin-top: 8px; }
 .tipbox { padding: 12px 14px; border-radius: 12px; background: var(--blue-soft); font-size: .94rem; }
 .tipbox b { color: var(--blue-text); }
 .tipbox ul { margin: 6px 0 0; padding-left: 18px; }
@@ -394,7 +397,7 @@ const I18N = {
   "b.clear": ["Ryd", "Clear"], "b.show": ["Vis mig", "Show me"], "b.idk": ["Ved ikke", "I don't know"],
   "b.override": ["Jeg havde ret – tæl det med", "I was right, count it"], "b.skip": ["Spring over", "Skip retype"],
   "t.order": ["Ordstilling", "Word order"], "t.example": ["Eksempel", "Example"], "t.exam": ["Fra prøverne", "From the exams"],
-  "tip.title": ["Tip", "Tip"], "tip.order": ["Ordstilling", "Word order"], "tip.register": ["Register", "Register"], "tip.construction": ["Konstruktion", "Construction"],
+  "prep.with": ["Med:", "Used with:"], "tip.title": ["Tip", "Tip"], "tip.order": ["Ordstilling", "Word order"], "tip.register": ["Register", "Register"], "tip.construction": ["Konstruktion", "Construction"],
   "t.under": ["Fra opslaget", "From the entry"],
   "t.senses": ["Betydninger", "Meanings"], "t.senses.s": ["ordet har mere end én betydning", "this word has more than one meaning"],
   "t.sense1": ["Betydning", "Meaning"], "s.noexam": ["Ingen eksempler i læseteksterne 2004–2024.", "No examples in the 2004–2024 reading texts."],
@@ -924,6 +927,11 @@ function senseBlocks(c, perSense, withTr) {
   }).join("") + (info.note ? `<div class="sensenote" lang="da">${esc(info.note)}</div>` : "");
 }
 // usage tips (tips.json) for words without a confusable pair: word order · register · construction
+// the construction a word is learnt with (resultere i + navneord, ansvar for): shown right under the word
+function prepLine(c) {
+  const pr = DB.tips[c.id] && DB.tips[c.id].prep;
+  return pr ? `<div class="prepline">${t("prep.with")} <b lang="da">${esc(pr)}</b></div>` : "";
+}
 function tipBlock(c) {
   const tp = DB.tips[c.id];
   if (!tp) return "";
@@ -945,6 +953,7 @@ function renderTeach(c, review) {
   const extraNote = noteText(c);
   frame(review ? t("k.back") : t("k.learn"), `
     <div class="head" style="margin-top:6px"><span class="big" lang="da">${esc(c.word)}</span>${wtype(c) ? `<span class="tag">${esc(wtype(c))}</span>` : ""}<span class="badge t${prio(c.group)}">${esc(glabel(c.group))}</span></div>
+    ${prepLine(c)}
     <div class="meaning">${esc(c.meaning)}</div>
     ${extraNote ? `<div class="soft" lang="da" style="margin-top:4px">${esc(extraNote)}</div>` : ""}
     ${wtype(c) ? `<div class="block"><span class="lbl">${t("t.order")}</span>${ruleBlock(c)}</div>` : ""}
@@ -1247,7 +1256,7 @@ function feedback(c, it, q, ok, body, severity, headText, canOverride, retype) {
   const sevTag = severity ? `<span class="sev ${severity}">${t("sev." + severity)}</span>` : "";
   $("#fb").innerHTML = `<div class="feedback ${ok ? "ok" : "bad"}">
       <h3>${sevTag}${headText || (ok ? t("f.right") : t("f.wrong"))}</h3>
-      <div class="why">${body}</div>${why}
+      <div class="why">${body}</div>${why}${prepLine(c)}
       ${retype ? `<div style="margin-top:12px"><div class="small"><b>${t("f.retype")}</b> ${t("f.retype.s")}</div><input class="answer" id="rt" lang="da" autocomplete="off" spellcheck="false" style="margin-top:6px">${letters()}</div>` : ""}
     </div>
     <div class="row next"><button class="btn solid" id="nx" ${retype ? "disabled" : ""}>${t("b.next")}</button>
@@ -1532,6 +1541,7 @@ function explain(c) {
   dlg.innerHTML = `<div class="ib">
     <div class="ih"><div><span class="lbl" id="exTitle">${t("m.title")}</span><div class="head"><span class="big" lang="da">${esc(c.word)}</span>${wtype(c) ? `<span class="tag">${esc(wtype(c))}</span>` : ""}</div></div>
       <button type="button" class="btn quiet" id="exClose">${t("info.close")}</button></div>
+    ${prepLine(c)}
     <div class="meaning" style="margin-top:12px">${esc(c.meaning)}</div>
     ${noteText(c) ? `<div class="soft" lang="da" style="margin-top:4px">${esc(noteText(c))}</div>` : ""}
     ${DB.senses[c.id] ? "" : `<div class="block"><div class="eg"><span class="lbl">${t("t.example")}</span><div class="ex" lang="da"><span class="sentence">${hlSentence(c, c.example)}</span>${trLink(c.example)}</div></div></div>`}
