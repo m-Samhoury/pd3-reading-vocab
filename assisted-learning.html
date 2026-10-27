@@ -371,7 +371,9 @@ const I18N = {
   "q.def": ["Hvilken definition fra Den Danske Ordbog passer til ordet?", "Which Den Danske Ordbog definition fits the word?"],
   "q.sense": ["Hvad betyder {0} i denne sætning fra prøven?", "What does {0} mean in this exam sentence?"],
   "q.relctx": ["Hvilken relation udtrykker {0} i sætningen?", "Which relation does {0} express in the sentence?"],
-  "q.gap": ["Skriv det ord, der mangler. Ledetråd: ordbogens definition.", "Type the missing word. Clue: the dictionary definition."],
+  "q.def2": ["Hvilket ord passer til definitionen? Skriv det på dansk.", "Which word fits the definition? Type it in Danish."],
+  "f.form": ["Rigtigt ord, men sætningen kræver formen {0}.", "Right word, but the sentence needs the form {0}."],
+  "q.gap": ["Skriv det ord, der mangler, i den form sætningen kræver. Ledetråd: ordbogens definition.", "Type the missing word in the form the sentence needs. Clue: the dictionary definition."],
   "b.hint": ["Vis engelsk (giver lavere karakter)", "Show English (lowers the grade)"], "f.hinted": ["med engelsk hjælp", "with the English hint"],
   "h.conf.none": ["Ingen forvekslingspar i de valgte grupper.", "No confusable pairs in the selected groups."],
   "x.relation": ["Hvilken relation?", "Which relation?"], "x.order": ["Ordstilling", "Word order"], "x.odd": ["L3: find parret", "L3: find the pair"],
@@ -910,7 +912,7 @@ function renderTeach(c, review) {
 function clauseTokens(s) {
   if (/[…:;()”"–]|\.\s|\?\s/.test(s.slice(0, -1))) return null;
   const toks = s.replace(/[.!?]$/, "").split(/\s+/).map(x => x.replace(/,$/, "")).filter(Boolean);
-  return toks.length >= 4 && toks.length <= 14 ? toks : null;
+  return toks.length >= 4 && toks.length <= 18 ? toks : null;
 }
 function orderSource(c) {
   if (!wtype(c)) return null;
@@ -929,6 +931,8 @@ function orderSource(c) {
 }
 function orderTokens(c) { return orderSource(c)?.toks || null; }
 const defOf = x => x.dict && x.dict.senses && x.dict.senses[0];
+// writing clue: the first two DDO meanings, since an exam sentence may use the second one (begrænset af = bounded by)
+const defClue = c => { const ss = c.dict.senses.slice(0, 2); return ss.length > 1 ? ss.map((d, i) => `<div><b>${i + 1}.</b> ${esc(d)}</div>`).join("") : esc(ss[0]); };
 const posKey = x => ((x.dict && x.dict.pos) || "").split(/[ ,]/)[0];
 const ctxSentence = c => { const ex = examSentences(c).filter(e => !e.sense || !DB.senses[c.id]); return ex.length ? pick(ex.slice(0, 4)) : null; };
 function clozeSource(c) {
@@ -942,8 +946,9 @@ function clozeSource(c) {
   return srcs.length ? pick(srcs.slice(0, 3)) : null;
 }
 function eligibleTypes(c, first) {
-  const ts = [["meaning", 1], ["produce", 2]];
-  if (clozeSource(c)) ts.push(["cloze", 2]);
+  // B2: once a word has been met, production (writing, word order, meaning in context) dominates
+  const ts = [["meaning", first ? 2 : 1], ["produce", 3]];
+  if (clozeSource(c)) ts.push(["cloze", first ? 2 : 1]);
   // multi-meaning words (da, mens, så, siden): read the meaning off a real exam sentence
   if (DB.senses[c.id] && DB.senses[c.id].senses.length > 1 && examSentences(c).some(e => e.sense)) ts.push(["sense", 3]);
   if (c.priority === 1) {
@@ -1002,14 +1007,21 @@ const quick = (ms = 6000) => performance.now() - S.t0 < ms;
 function exMeaning(c, label, it) {
   // PD3 level: pick the Danish dictionary definition, with the word met in a real exam sentence
   if (defOf(c)) {
-    const others = distractors(c, 3, x => defOf(x) && norm(defOf(x)) !== norm(defOf(c)) && (posKey(c) ? posKey(x) === posKey(c) : sameKind(c)(x)));
+    const fits = x => defOf(x) && norm(defOf(x)) !== norm(defOf(c)) && (posKey(c) ? posKey(x) === posKey(c) : sameKind(c)(x));
+    // B2: one wrong option comes from the word's own group (medføre vs forårsage), as long as its meaning
+    // and definition really differ; the rest from other groups
+    const words = x => new Set(norm(defOf(x)).split(" ").filter(w => w.length > 3));
+    const overlap = x => { const a = words(c), b = words(x); return [...b].filter(w => a.has(w)).length / Math.max(1, Math.min(a.size, b.size)); };
+    const glossSet = x => new Set(x.meaning.toLowerCase().split(/[,/;()]+/).map(g => g.trim()).filter(Boolean));
+    const near = shuffle(cards().filter(x => x.id !== c.id && x.group === c.group && fits(x) && overlap(x) < 0.5 && ![...glossSet(x)].some(g => glossSet(c).has(g))))[0];
+    const others = [...(near ? [near] : []), ...distractors(c, near ? 2 : 3, fits)];
     if (others.length === 3) {
       const opts = shuffle([c, ...others]), ctx = ctxSentence(c);
       const clip = x => { const d = defOf(x); return d.length > 150 ? d.slice(0, 147) + "…" : d; };
       return mc(label.replace(t("x.meaning"), t("x.def")), `<p class="prompt">${t("q.def")}</p><div class="big" lang="da">${esc(c.word)}</div>
         ${ctx ? `<div class="ex" lang="da" style="margin-top:8px"><span class="tag">${esc(ctx.src)}</span>${hlSentence(c, ctx.s, ctx.m)}</div>` : ""}`,
         opts.map(o => `<span lang="da">${esc(clip(o))}</span>`), opts.indexOf(c),
-        ok => feedback(c, it, ok ? (quick(12000) ? 5 : 4) : 2, ok,
+        ok => feedback(c, it, ok ? (quick(9000) ? 5 : 4) : 2, ok,
           `<b lang="da">${esc(c.word)}</b> = ${esc(c.meaning)}<div class="small" lang="da">${esc(defOf(c))}</div>${c.dict.senses_en?.[0] ? `<div class="en-def">${esc(c.dict.senses_en[0])}</div>` : ""}`, ok ? null : "moderate"));
     }
   }
@@ -1024,7 +1036,7 @@ function exRelation(c, label, it) {
   const ctx = ctxSentence(c);
   mc(label, ctx ? `<p class="prompt">${t("q.relctx", `<b lang="da">${esc(c.word)}</b>`)}</p><div class="sentence" lang="da">${hlSentence(c, ctx.s, ctx.m)}</div><div style="margin-top:6px"><span class="tag">${esc(ctx.src)}</span></div>`
     : `<p class="prompt">${t("q.relation")}</p><div class="big" lang="da">${esc(c.word)}</div>`,
-    groups.map(g => esc(glabel(g))), groups.indexOf(c.group),
+    groups.map(g => esc(GROUPS[g] ? GROUPS[g][1] : g)), groups.indexOf(c.group),
     ok => feedback(c, it, ok ? 4 : 2, ok, `<b lang="da">${esc(c.word)}</b> (${esc(c.meaning)}) → ${esc(glabel(c.group))}`, ok ? null : "moderate"));
 }
 
@@ -1033,8 +1045,8 @@ function exSense(c, label, it) {
   const e = pick(examSentences(c).filter(x => x.sense));
   const opts = info.senses;
   mc(label, `<p class="prompt">${t("q.sense", `<b lang="da">${esc(c.word)}</b>`)}</p><div class="sentence" lang="da">${hlSentence(c, e.s, e.m)}</div><div style="margin-top:6px"><span class="tag">${esc(e.src)}</span></div>`,
-    opts.map(sn => `<span lang="da">${esc(sn.da)}</span> <span class="soft">· ${esc(sn.en)}</span>`), opts.findIndex(sn => sn.id === e.sense),
-    ok => feedback(c, it, ok ? (quick(12000) ? 5 : 4) : 2, ok, (info.note ? `<div class="small" lang="da">${esc(info.note)}</div>` : ""), ok ? null : "critical"));
+    opts.map(sn => `<span lang="da">${esc(sn.da)}</span>`), opts.findIndex(sn => sn.id === e.sense),
+    ok => feedback(c, it, ok ? (quick(10000) ? 5 : 4) : 2, ok, `<b lang="da">${esc(info.senses.find(sn => sn.id === e.sense).da)}</b> · ${esc(info.senses.find(sn => sn.id === e.sense).en)}` + (info.note ? `<div class="small" lang="da">${esc(info.note)}</div>` : ""), ok ? null : "critical"));
 }
 
 function exCloze(c, label, it) {
@@ -1042,7 +1054,7 @@ function exCloze(c, label, it) {
   // same word class (and same word-order type for connectors), so the choice is about meaning, not grammar
   // a confusable partner (da/når, for/fordi) is the hardest distractor, so it goes in first when it fits the gap
   const partner = partnerPairs(c.id).map(p => DB.cards[p[0] === c.id ? p[1] : p[0]]).find(x => sameKind(c)(x) && (!wtype(c) || wtype(x) === wtype(c)));
-  const rest = distractors(c, partner ? 2 : 3, x => x !== partner && sameKind(c)(x) && !x.word.includes("…") && (!wtype(c) || wtype(x) === wtype(c)));
+  const rest = distractors(c, partner ? 3 : 4, x => x !== partner && sameKind(c)(x) && !x.word.includes("…") && (!wtype(c) || wtype(x) === wtype(c)));
   const opts = shuffle([c, ...(partner ? [partner] : []), ...rest]);
   if (opts.length < 3) { it.type = "meaning"; return exMeaning(c, label, it); }
   const [a, b] = src.span;
@@ -1050,7 +1062,7 @@ function exCloze(c, label, it) {
   const inflected = norm(src.s.slice(a, b)) !== norm(c.word.replace(/^(at|en|et) /, ""));
   mc(label, `<p class="prompt">${t("q.cloze")}${inflected ? t("q.base") : ""} ${src.src !== "example" ? `<span class="tag">${esc(src.src)}</span>` : ""}</p><div class="sentence" lang="da">${gapped}</div>`,
     opts.map(o => `<span lang="da">${esc(o.word)}</span>`), opts.indexOf(c),
-    ok => feedback(c, it, ok ? (quick(src.src === "example" ? 6000 : 10000) ? 5 : 4) : 2, ok,
+    ok => feedback(c, it, ok ? (quick(src.src === "example" ? 5000 : 8000) ? 5 : 4) : 2, ok,
       `<div class="sentence" lang="da">${hlSentence(c, src.s, src.span)}</div><div class="small"><span lang="da">${esc(c.word)}</span> = ${esc(c.meaning)}</div>`, ok ? null : "moderate"));
 }
 
@@ -1094,7 +1106,10 @@ function exProduce(c, label, it) {
   frame(label, (ctx ? `<p class="prompt">${t("q.gap")}</p>
     <div class="sentence" lang="da">${esc(ctx.s.slice(0, ctx.m[0]))}<span class="gap">&nbsp;</span>${esc(ctx.s.slice(ctx.m[1]))}</div>
     <div style="margin-top:6px"><span class="tag">${esc(ctx.src)}</span></div>
-    <div class="ddo" style="margin-top:12px" lang="da">${esc(defOf(c))}</div>
+    <div class="ddo" style="margin-top:12px" lang="da">${defClue(c)}</div>
+    <div class="row" style="margin-top:8px"><button class="btn quiet" id="hint">${t("b.hint")}</button><span id="hinttxt" class="soft"></span></div>` : defOf(c) ? `<p class="prompt">${t("q.def2")}</p>
+    <div class="ddo" lang="da">${defClue(c)}</div>
+    <div class="soft small" style="margin-top:6px" lang="da">${esc(GROUPS[c.group] ? GROUPS[c.group][1] : c.group)}${wtype(c) ? " · " + esc(wtype(c)) : ""}${c.dict.pos ? " · " + esc(c.dict.pos) : ""}</div>
     <div class="row" style="margin-top:8px"><button class="btn quiet" id="hint">${t("b.hint")}</button><span id="hinttxt" class="soft"></span></div>` : `<p class="prompt">${t("q.produce")}</p>
     <div class="meaning" style="font-size:1.5rem">${esc(c.meaning)}</div>
     <div class="soft small">${esc(glabel(c.group))}${wtype(c) ? " · " + esc(wtype(c)) : ""}</div>`) + `
@@ -1118,7 +1133,10 @@ function exProduce(c, label, it) {
     }
     input.disabled = true; $("#chk").remove(); $("#idk").remove();
     const answer = `<b lang="da">${esc(c.word)}</b>${gapForm && norm(gapForm) !== norm(c.word.replace(/^(at|en|et) /, "")) ? ` (<span lang="da">${esc(gapForm)}</span>)` : ""} = ${esc(c.meaning)}<div class="small" lang="da">${ctx ? hlSentence(c, ctx.s, ctx.m) : hlSentence(c, c.example)}</div>`;
-    if (!give && isRight(v)) return feedback(c, it, hinted ? 3 : quick(ctx ? 15000 : 9000) ? 5 : 4, true, answer + (hinted ? `<div class="soft small">${t("f.hinted")}</div>` : ""));
+    // B2: the gap needs the form the sentence asks for (skyldtes, not skyldes); the base form is the right word, wrong form
+    const exact = !gapForm || norm(v) === norm(gapForm) || norm(gapForm) === norm(c.word.replace(/^(at|en|et) /, ""));
+    if (!give && isRight(v) && !exact) return feedback(c, it, 3, true, t("f.form", `<b lang="da">${esc(gapForm)}</b>`) + `<div style="margin-top:6px">${answer}</div>`, "minor", t("f.almost"));
+    if (!give && isRight(v)) return feedback(c, it, hinted ? 3 : quick(ctx ? 12000 : 8000) ? 5 : 4, true, answer + (hinted ? `<div class="soft small">${t("f.hinted")}</div>` : ""));
     if (!give && nearMiss(c, v)) return feedback(c, it, 3, true, t("f.spelling", `<b lang="da">${esc(c.word)}</b>`, esc(v)), "minor", t("f.almost"));
     feedback(c, it, give ? 0 : 1, false, (v ? t("f.wrote", esc(v)) : "") + answer, give ? null : "moderate", null, !give);
   };
@@ -1230,7 +1248,7 @@ function renderPair(it) {
     const x = items[k], opts = [A, B];
     const gapped = `${esc(x.s.slice(0, x.span[0]))}<span class="gap">&nbsp;</span>${esc(x.s.slice(x.span[1]))}`;
     mc(`${t("s.conf")} · ${A.word} / ${B.word}`, `<p class="prompt">${t("q.pair", k + 1, items.length)}</p><div class="sentence" lang="da">${gapped}</div>`,
-      opts.map(o => `<b lang="da">${esc(o.word)}</b> <span class="soft">· ${esc(o.meaning)}</span>`), opts.indexOf(x.c), ok => {
+      opts.map(o => `<b lang="da">${esc(o.word)}</b>`), opts.indexOf(x.c), ok => {
         $("#fb").innerHTML = `<div class="feedback ${ok ? "ok" : "bad"}"><h3>${ok ? t("f.right") : t("f.its", esc(x.c.word))}</h3>
           <div class="why sentence" lang="da">${hlSentence(x.c, x.s, x.span)}</div>
           ${k === items.length - 1 ? `<div class="pair"><div><b lang="da">${esc(A.word)}</b><br>${esc(A.meaning)}<div class="small soft" lang="da">${esc(A.note || "")}</div></div><div><b lang="da">${esc(B.word)}</b><br>${esc(B.meaning)}<div class="small soft" lang="da">${esc(B.note || "")}</div></div></div><div class="why"><b>${t("f.rule")}</b> ${esc(tip(it.pair))}</div>` : ""}
