@@ -105,6 +105,18 @@ dl.keylist dd { margin: 0; }
 .chip { display: inline-flex; align-items: center; gap: 8px; padding: 4px 12px 4px 4px; border-radius: 999px; background: var(--sheet);
   border: 1px solid var(--rule); box-shadow: var(--shadow); font-size: .85rem; font-weight: 500; color: var(--ink); margin-bottom: 16px; }
 .chip b { padding: 2px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-text); font-weight: 600; font-size: .8rem; }
+.picker { margin-top: 22px; padding: 14px 16px 16px; }
+.picker .ph { display: flex; align-items: baseline; gap: 6px 12px; flex-wrap: wrap; }
+.picker .ph b { font-size: .95rem; }
+.picker .tier { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 10px; }
+.picker .tier .badge { margin-right: 4px; }
+.pchip { display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--rule-strong);
+  background: var(--sheet); color: var(--ink); font: inherit; font-size: .88rem; cursor: pointer; transition: border-color .15s, background .15s; }
+.pchip:hover { border-color: var(--accent); }
+.pchip[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent); color: var(--accent-text); font-weight: 600; }
+.pchip[aria-pressed="true"]::before { content: "✓"; }
+.pchip .n { font-size: .75rem; color: var(--faint); font-weight: 400; }
+.pchip .d { min-width: 18px; padding: 0 5px; border-radius: 999px; background: var(--accent); color: var(--accent-ink); font-size: .7rem; font-weight: 700; text-align: center; }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
 .section { margin-top: 40px; }
 .section > h2 { font-size: 1.35rem; margin-bottom: 14px; }
@@ -287,8 +299,13 @@ const I18N = {
   "h.go": ["Start session", "Start session"], "h.learn": ["Lær {0} nye", "Learn {0} new"], "h.review": ["Kun gentagelser", "Reviews only"],
   "h.conf": ["Forvekslingsord", "Confusables drill"],
   "h.blurb": ["En session = {0}. Fremskridt gemmes i denne browser.", "A session = {0}. Progress is saved in this browser."],
-  "h.picked": ["Valgt gruppe: {0}. Knapperne ovenfor øver kun den.", "Selected group: {0}. The buttons above practise only this group."],
-  "h.allg": ["Alle grupper", "All groups"], "h.pick": ["Vælg en gruppe nedenfor for kun at øve den.", "Pick a group below to practise only that one."],
+  "h.review.t": ["Kun ord, der skal gentages i dag – ingen nye ord.", "Only words due today, no new words."],
+  "h.review.off": ["Intet skal gentages i dag. Ord, du har lært, kommer tilbage her, når de skal gentages.", "Nothing is due today. Words you've learnt come back here when they're due."],
+  "pk.title": ["Hvad vil du øve?", "What do you want to practise?"],
+  "pk.all": ["Alle grupper – vælg en eller flere for kun at øve dem.", "All groups. Pick one or more to practise only those."],
+  "pk.some": ["{0} valgt · {1} ord", "{0} selected · {1} words"], "pk.clear": ["Ryd valg", "Clear"],
+  "pk.due": ["{0} skal gentages", "{0} due"], "s.groups": ["{0} grupper", "{0} groups"],
+  "h.map.s": ["Tryk på en gruppe for at se dens ord.", "Tap a group to see its words."],
   "h.blurb.r": ["{0} gentagelser", "{0} reviews"], "h.blurb.r1": ["1 gentagelse", "1 review"],
   "h.blurb.n": ["{0} nye ord (forklaret, så testet)", "{0} new words (taught, then tested)"],
   "h.nothing": ["Intet at gentage, og dagens nye ord er brugt. Kom igen i morgen, eller vælg en gruppe nedenfor for ekstra øvelse.",
@@ -298,13 +315,13 @@ const I18N = {
   "h.progress": ["Dit fremskridt", "Your progress"],
   "m.due": ["Skal gentages", "Due"], "m.due.s": ["i dag", "today"], "m.new": ["Nye ord", "New words"], "m.new.s": ["tilbage i dag", "left today"],
   "m.learn": ["I gang", "Learning"], "m.learn.s": ["ord du øver", "words in progress"], "m.master": ["Kan du", "Mastered"], "m.master.s": ["21+ dage", "21+ days"],
-  "h.groups": ["Grupper", "Groups"],
+  "h.groups": ["Fremskridt per gruppe", "Progress by group"],
   "st.new": ["ny", "new"], "st.learn": ["i gang", "learning"], "st.known": ["kendt (6+ dage)", "known (6+ days)"], "st.master": ["kan du (21+ dage)", "mastered (21+ days)"],
   "p.1": ["Forbinderord", "Connectors"], "p.2": ["Ord fra prøven", "Exam words"], "p.3": ["Andre nyttige ord", "Other useful words"],
   "g.due": ["{0} skal gentages", "{0} due"], "g.words": ["{0} ord", "{0} words"], "g.next": ["næste gang {0}", "next {0}"],
   "g.study": ["Øv denne gruppe", "Study this group"],
   "g.study.s": ["Ord, der skal gentages, først, så op til {0} nye; ellers ekstra øvelse.", "Due cards first, then up to {0} new ones; extra practice if nothing is due."],
-  "g.empty": ["Intet at øve i denne gruppe endnu.", "Nothing in this group to study yet."], "h.empty": ["Intet at gentage lige nu.", "Nothing due right now."],
+  "g.empty": ["Intet at øve i de valgte grupper endnu.", "Nothing in the selected groups to study yet."], "h.empty": ["Intet at gentage lige nu.", "Nothing due right now."],
   // session
   "s.session": ["Session", "Session"], "s.conf": ["Forvekslingsord", "Confusables"], "s.end": ["Afslut", "End"],
   "s.count": ["{0} / {1}", "{0} / {1}"],
@@ -415,10 +432,12 @@ const NEW_PER_DAY = 15, BATCH = 5, REVIEW_LIMIT = 12;
 // ---------- state ----------
 let DB = null;           // {today, profile, cards: {id: card}, sentences}
 let S = null;            // current session
-// the group picked in the group map; the top buttons then work on that group only (remembered per browser)
-let openGroup = null;
-try { openGroup = localStorage.getItem("pd3-assisted-learning:group") || null; } catch (e) { /* ignore */ }
-function setGroup(g) { openGroup = g; try { g ? localStorage.setItem("pd3-assisted-learning:group", g) : localStorage.removeItem("pd3-assisted-learning:group"); } catch (e) { /* ignore */ } }
+let openGroup = null;     // group whose word list is open in the progress map
+// groups picked in the chips above the session buttons; empty = all groups (remembered per browser)
+const PICK_KEY = "pd3-assisted-learning:groups";
+let picked = [];
+try { picked = JSON.parse(localStorage.getItem(PICK_KEY) || "[]"); } catch (e) { picked = []; }
+function setPicked(gs) { picked = GROUP_ORDER.filter(g => gs.includes(g)); try { localStorage.setItem(PICK_KEY, JSON.stringify(picked)); } catch (e) { /* ignore */ } }
 
 const $ = (sel, el = document) => el.querySelector(sel);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -592,22 +611,34 @@ function home() {
   const tiles = pr => GROUP_ORDER.filter(g => prio(g) === pr && groupsBy[g]).map(g => groupTile(g, groupsBy[g])).join("");
   const metric = (l, n, s, pct) => `<div class="m"><div class="lbl">${l}</div><b>${n}</b><span class="s">${s}</span>${pct != null ? `<div class="bar"><span style="width:${pct.toFixed(1)}%"></span></div>` : ""}</div>`;
   const newLeft = Math.min(k.newLeft, k.fresh);
-  if (openGroup && !groupsBy[openGroup]) setGroup(null);
-  const g = openGroup, gc = g ? groupsBy[g] : null;
-  const canNew = Math.min(k.newLeft, gc ? gc.filter(c => stateOf(c) === "new").length : k.fresh);
-  const canDue = gc ? gc.filter(c => c.history.length && c.due <= DB.today).length : k.due;
+  if (picked.some(g => !groupsBy[g])) setPicked(picked.filter(g => groupsBy[g]));
+  const sel = picked.length ? picked : null;
+  const pool = sel ? sel.flatMap(g => groupsBy[g]) : cards();
+  const dueIn = cs => cs.filter(c => c.history.length && c.due <= DB.today).length;
+  const canNew = Math.min(k.newLeft, pool.filter(c => stateOf(c) === "new").length);
+  const canDue = dueIn(pool);
+  const chips = pr => GROUP_ORDER.filter(g => prio(g) === pr && groupsBy[g]).map(g => {
+    const d = dueIn(groupsBy[g]);
+    return `<button type="button" class="pchip" data-g="${esc(g)}" aria-pressed="${picked.includes(g)}">${esc(gname(g))}<span class="n">${groupsBy[g].length}</span>${d ? `<span class="d" title="${esc(t("pk.due", d))}">${d}</span>` : ""}</button>`;
+  }).join("");
   $("#app").innerHTML = `
     <div class="top">
       ${dW != null && dW >= 0 ? `<span class="chip"><b>${t("h.chip.days", dW)}</b><span>${t("h.chip")}</span></span>` : ""}
       <h1><span class="light">${t("h.h1a")}</span>${t("h.h1b")}</h1>
       <p>${t("h.intro", k.total)}</p>
+      <div class="sheet picker" role="group" aria-labelledby="pkTitle">
+        <div class="ph"><b id="pkTitle">${t("pk.title")}</b>
+          <span class="soft small">${sel ? t("pk.some", sel.length, pool.length) : t("pk.all")}</span>
+          ${sel ? `<button type="button" class="linkbtn small" id="allg">${t("pk.clear")}</button>` : ""}</div>
+        ${[1, 2, 3].map(pr => `<div class="tier"><span class="badge t${pr}">${t("p." + pr)}</span>${chips(pr)}</div>`).join("")}
+      </div>
       <div class="hero-cta">
-        <button class="btn solid" id="go">${t("h.go")}${g ? ` · ${esc(gname(g))}` : ""}</button>
+        <button class="btn solid" id="go">${t("h.go")}${sel ? ` · ${sel.length === 1 ? esc(gname(sel[0])) : t("s.groups", sel.length)}` : ""}</button>
         <button class="btn" id="learn" ${canNew ? "" : "disabled"}>${t("h.learn", BATCH)}</button>
-        <button class="btn" id="review" ${canDue ? "" : "disabled"}>${t("h.review")}</button>
+        <button class="btn" id="review" ${canDue ? "" : "disabled"} title="${esc(canDue ? t("h.review.t") : t("h.review.off"))}">${t("h.review")}</button>
         <button class="btn" id="conf">${t("h.conf")}</button>
       </div>
-      ${g ? `<p class="small" style="margin-top:12px">${t("h.picked", `<b>${esc(glabel(g))}</b>`)} <button type="button" class="linkbtn" id="allg">${t("h.allg")}</button></p>` : `<p class="soft small" style="margin-top:12px">${sessionBlurb(k)} ${t("h.pick")}</p>`}
+      <p class="soft small" style="margin-top:12px">${sessionBlurb(k, canDue, canNew)}</p>
       ${storageOK ? "" : `<div class="err small">${t("h.storage")}</div>`}
     </div>
     <div class="section"><h2>${t("h.progress")}</h2><div class="band"><div class="prog">
@@ -616,20 +647,26 @@ function home() {
       ${metric(t("m.learn"), k.learning, t("m.learn.s"))}
       ${metric(t("m.master"), `${k.mastered} / ${k.total}`, t("m.master.s"), 100 * k.mastered / k.total)}
     </div></div></div>
-    <div class="section"><h2>${t("h.groups")}</h2>
+    <div class="section"><h2>${t("h.groups")}</h2><p class="soft small" style="margin:-4px 0 10px">${t("h.map.s")}</p>
       <div class="legend">${["new", "learn", "known", "master"].map(s => `<span><i style="background:var(--s-${s})"></i>${t("st." + s)}</span>`).join("")}</div>
       ${[1, 2, 3].map(pr => `<div class="tierlabel"><span class="badge t${pr}">${t("p." + pr)}</span></div><div class="groups" data-pr="${pr}">${tiles(pr)}</div>`).join("")}
     </div>`;
-  $("#go").onclick = () => startSession({ group: g });
-  $("#learn").onclick = () => startSession({ group: g, reviews: 0 });
-  $("#review").onclick = () => startSession({ group: g, fresh: 0 });
-  if ($("#allg")) $("#allg").onclick = () => { setGroup(null); home(); };
+  $("#go").onclick = () => startSession({ groups: sel });
+  $("#learn").onclick = () => startSession({ groups: sel, reviews: 0 });
+  $("#review").onclick = () => startSession({ groups: sel, fresh: 0 });
+  if ($("#allg")) $("#allg").onclick = () => { setPicked([]); home(); };
+  document.querySelectorAll(".pchip").forEach(b => b.onclick = () => {
+    const g = b.dataset.g;
+    setPicked(picked.includes(g) ? picked.filter(x => x !== g) : [...picked, g]);
+    const y = window.scrollY; home(); window.scrollTo(0, y);
+    $(`.pchip[data-g="${CSS.escape(g)}"]`)?.focus();
+  });
   $("#conf").onclick = () => startConfusables();
-  document.querySelectorAll(".group").forEach(b => b.onclick = () => { setGroup(openGroup === b.dataset.g ? null : b.dataset.g); home(); });
+  document.querySelectorAll(".group").forEach(b => b.onclick = () => { openGroup = openGroup === b.dataset.g ? null : b.dataset.g; const y = window.scrollY; home(); window.scrollTo(0, y); });
   if (openGroup && groupsBy[openGroup]) showGroupDetail(openGroup, groupsBy[openGroup]);
 }
-function sessionBlurb(k) {
-  const r = Math.min(k.due, REVIEW_LIMIT), n = Math.min(BATCH, k.newLeft, k.fresh);
+function sessionBlurb(k, due, fresh) {
+  const r = Math.min(due, REVIEW_LIMIT), n = Math.min(BATCH, fresh);
   if (!r && !n) return t("h.nothing");
   const parts = [r ? (r === 1 ? t("h.blurb.r1") : t("h.blurb.r", r)) : null, n ? t("h.blurb.n", n) : null].filter(Boolean);
   return t("h.blurb", parts.join(" + "));
@@ -659,26 +696,29 @@ function showGroupDetail(g, cs) {
       `<button type="button" class="word" data-id="${esc(c.id)}" lang="da" title="${esc(c.meaning)}${c.history.length ? " · " + t("g.next", c.due) : ""}"><i style="background:var(--s-${stateOf(c)})"></i>${esc(c.word)}</button>`).join("")}</div>
     <div class="row"><button class="btn solid" id="gstudy">${t("g.study")}</button><span class="soft small">${t("g.study.s", BATCH)}</span></div>`;
   tiles[last].after(d);
-  $("#gstudy").onclick = () => startSession({ group: g });
+  $("#gstudy").onclick = () => startSession({ groups: [g] });
   d.querySelectorAll("button.word").forEach(b => { b.onclick = () => explain(DB.cards[b.dataset.id]); });
 }
 
 // ---------- session building ----------
-function startSession({ group = null, reviews = REVIEW_LIMIT, fresh = BATCH }) {
+function startSession({ groups = null, reviews = REVIEW_LIMIT, fresh = BATCH }) {
   const k = counts();
-  const inGroup = c => !group || c.group === group;
+  const inGroup = c => !groups || groups.includes(c.group);
   const rank = c => [c.priority || 3, -(c.lapses || 0), c.reps || 0];
   const cmp = (a, b) => { const x = rank(a), y = rank(b); return x[0] - y[0] || x[1] - y[1] || x[2] - y[2]; };
   const due = cards().filter(c => inGroup(c) && c.history.length && c.due <= DB.today).sort(cmp).slice(0, reviews);
   const n = Math.min(fresh, k.newLeft);
   let batch = [];
   if (n > 0) {
-    const g = group || GROUP_ORDER.find(g => cards().some(c => c.group === g && stateOf(c) === "new"));
-    batch = cards().filter(c => c.group === g && stateOf(c) === "new").slice(0, n);
+    // taught group by group: fill the batch from the first (selected) group that still has new words, then the next
+    for (const g of GROUP_ORDER.filter(g => !groups || groups.includes(g))) {
+      if (batch.length >= n) break;
+      batch.push(...cards().filter(c => c.group === g && stateOf(c) === "new").slice(0, n - batch.length));
+    }
   }
   let practice = [];
-  if (group && !due.length && !batch.length) // nothing to grade: practise the group's learnt words without touching the schedule
-    practice = shuffle(cards().filter(c => c.group === group && c.history.length)).slice(0, 8);
+  if (groups && !due.length && !batch.length) // nothing to grade: practise the groups' learnt words without touching the schedule
+    practice = shuffle(cards().filter(c => inGroup(c) && c.history.length)).slice(0, 8);
   const q = [];
   due.forEach(c => q.push({ kind: "ex", id: c.id }));
   if (batch.length) {
@@ -687,8 +727,9 @@ function startSession({ group = null, reviews = REVIEW_LIMIT, fresh = BATCH }) {
     shuffle(batch).forEach(c => q.push({ kind: "ex", id: c.id, first: true }));
   }
   practice.forEach(c => q.push({ kind: "ex", id: c.id, practice: true }));
-  if (!q.length) { alert(group ? t("g.empty") : t("h.empty")); return; }
-  S = { queue: q, i: 0, results: [], lastType: null, graded: new Set(), title: group ? glabel(group) : t("s.session") };
+  if (!q.length) { alert(groups ? t("g.empty") : t("h.empty")); return; }
+  const title = !groups ? t("s.session") : groups.length === 1 ? glabel(groups[0]) : groups.length <= 3 ? groups.map(gname).join(" · ") : t("s.groups", groups.length);
+  S = { queue: q, i: 0, results: [], lastType: null, graded: new Set(), title };
   step();
 }
 function startConfusables() {
@@ -720,7 +761,7 @@ function advance() { S.i++; step(); }
 function renderIntro(it) {
   const cs = it.ids.map(id => DB.cards[id]);
   frame(t("k.new"), `
-    <h2 style="font-size:1.6rem;margin-top:6px">${esc(glabel(cs[0].group))}</h2>
+    <h2 style="font-size:1.6rem;margin-top:6px">${[...new Set(cs.map(c => c.group))].map(g => esc(glabel(g))).join("<br>")}</h2>
     <p class="prompt">${t("intro.p", cs.length)}</p>
     <div class="words" lang="da">${cs.map(c => `<span class="word">${esc(c.word)}</span>`).join("")}</div>
     <button class="btn solid next" id="nx">${t("b.start")}</button>`);
