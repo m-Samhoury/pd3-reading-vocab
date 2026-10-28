@@ -1553,19 +1553,23 @@ const pairKey = p => `${p[0]}|${p[1]}`;
 function pairItems(pair, perWord) {
   if (SAME_MEANING.has(pairKey(pair))) return [{ kind: "pairsame", pair }];
   const rule = PAIR_SENSES[pairKey(pair)] || {};
-  const out = [];
+  const sides = [];
   for (const id of [pair[0], pair[1]]) {
     const c = DB.cards[id], r = rule[id] || {}, other = id === pair[0] ? pair[1] : pair[0];
     if (r.skip) continue;
     let srcs = examSentences(c).filter(e => e.s.length < 230).map(e => ({ s: e.s, span: e.m, src: e.src, sense: e.sense }));
     if (!srcs.length && c.example && findSpan(c, c.example)) srcs = [{ s: c.example, span: findSpan(c, c.example), src: null }];
-    srcs.sort((a, b) => a.s.length - b.s.length);
-    shuffle(srcs.slice(0, Math.max(perWord, 4))).slice(0, perWord).forEach(x => out.push({ kind: "pairq", pair, id, other, ...x, both: (r.both || []).includes(x.sense) }));
+    if (srcs.length) sides.push({ id, other, r, srcs: srcs.sort((a, b) => a.s.length - b.s.length) });
   }
+  // each word is the answer equally often (a word with one sentence used to leave its partner the answer 3 times in 4),
+  // and the two words are listed in random order, so the answer can't be guessed from its place in "Skriv A eller B"
+  const n = Math.min(perWord, ...sides.map(x => x.srcs.length));
+  const out = sides.flatMap(({ id, other, r, srcs }) => shuffle(srcs.slice(0, Math.max(n, 4))).slice(0, n)
+    .map(x => ({ kind: "pairq", pair, id, other, ...x, both: (r.both || []).includes(x.sense), flip: Math.random() < .5 })));
   return shuffle(out);
 }
 function renderPairQ(it) {
-  const c = DB.cards[it.id], o = DB.cards[it.other], [A, B] = [DB.cards[it.pair[0]], DB.cards[it.pair[1]]];
+  const c = DB.cards[it.id], o = DB.cards[it.other], [A, B] = (it.flip ? [it.pair[1], it.pair[0]] : it.pair).map(id => DB.cards[id]);
   const gapForm = it.s.slice(it.span[0], it.span[1]);
   S.sent = it.s;
   frame(`${t("s.conf")} · ${A.word} / ${B.word}`, `<p class="prompt">${t("q.pair2", `<b lang="da">${esc(A.word)}</b>`, `<b lang="da">${esc(B.word)}</b>`)}</p>
