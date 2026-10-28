@@ -114,9 +114,31 @@ dl.keylist dd { margin: 0; }
 .chip { display: inline-flex; align-items: center; gap: 8px; padding: 4px 12px 4px 4px; border-radius: 999px; background: var(--sheet);
   border: 1px solid var(--rule); box-shadow: var(--shadow); font-size: .85rem; font-weight: 500; color: var(--ink); margin-bottom: 16px; }
 .chip b { padding: 2px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-text); font-weight: 600; font-size: .8rem; }
-.finder { margin-top: 22px; }
-.finder input { width: 100%; font: inherit; font-size: 1.25rem; padding: 14px 16px; border-radius: 14px; border: 1.5px solid var(--rule-strong); background: var(--sheet); color: var(--ink); }
+/* find bar: slides open under the top bar, over whichever screen is showing */
+.findbar { display: grid; grid-template-rows: 0fr; background: var(--sheet); border-bottom: 1px solid transparent;
+  transition: grid-template-rows .34s cubic-bezier(.2, .8, .2, 1), border-color .34s; }
+.findbar.open { grid-template-rows: 1fr; border-bottom-color: var(--rule); box-shadow: var(--shadow); }
+.findbar-in { min-height: 0; overflow: hidden; }
+.findbar .wrap { padding-top: 14px; padding-bottom: 16px; opacity: 0; transform: translateY(-10px); transition: opacity .24s, transform .34s cubic-bezier(.2, .8, .2, 1); }
+.findbar.open .wrap { opacity: 1; transform: none; transition-delay: .06s; }
+.finder { position: relative; clip-path: inset(0 0 0 70% round 14px); transition: clip-path .42s cubic-bezier(.2, .8, .2, 1); }
+.findbar.open .finder { clip-path: inset(-6px round 18px); }
+.finder .ficon { position: absolute; left: 16px; top: 50%; translate: 0 -50%; color: var(--faint); pointer-events: none; }
+.finder input { width: 100%; font: inherit; font-size: 1.2rem; padding: 13px 54px 13px 46px; border-radius: 14px; border: 1.5px solid var(--rule-strong); background: var(--sheet); color: var(--ink); }
+.finder input::-webkit-search-cancel-button { display: none; }
 .finder input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.fx { position: absolute; right: 8px; top: 50%; translate: 0 -50%; display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%;
+  border: 0; background: var(--paper); color: var(--soft); cursor: pointer; transform: rotate(-90deg) scale(.5); opacity: 0;
+  transition: transform .34s cubic-bezier(.2, .8, .2, 1) .1s, opacity .2s .1s, background .15s, color .15s; }
+.findbar.open .fx { transform: none; opacity: 1; }
+.fx:hover { background: var(--accent-soft); color: var(--accent-text); }
+.fsub { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 14px; }
+.fsub .letters { margin-top: 8px; }
+.fsub #fmeta { margin: 8px 0 0; }
+.findbar .hits { max-height: min(62vh, 600px); overflow-y: auto; overscroll-behavior: contain; margin-top: 14px; padding: 2px; }
+.findbar .hits:empty { display: none; }
+.findbar .hit { background: var(--paper); box-shadow: none; }
+.nav a[aria-expanded="true"] { color: var(--accent-text); font-weight: 600; background: var(--accent-soft); }
 .hits { display: grid; gap: 12px; margin-top: 18px; }
 .hit { padding: 16px 18px; }
 .hit .head .big { font-size: 1.6rem; }
@@ -303,10 +325,21 @@ input.answer:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--ac
       <a href="flashcards.html#learn" data-site data-i18n="nav.flash">Flashcards</a>
       <a href="flashcards.html#test" data-site data-i18n="nav.test">Test</a>
       <a href="assisted-learning.html" aria-current="page" data-i18n="nav.assisted" id="navAL">Guidet læring</a>
-      <a href="assisted-learning.html#find" data-i18n="nav.find" id="navFind">Find ord</a>
+      <a href="assisted-learning.html#find" data-i18n="nav.find" id="navFind" role="button" aria-controls="findbar" aria-expanded="false">Find ord</a>
     </nav>
   </div>
 </header>
+<div class="findbar" id="findbar" inert>
+  <div class="findbar-in"><div class="wrap narrow">
+    <div class="finder">
+      <svg class="ficon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="fq" type="search" lang="da" autocomplete="off" spellcheck="false" enterkeyhint="search">
+      <button type="button" class="fx" id="fqClose"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </div>
+    <div class="fsub"><div class="letters"><button type="button" data-l="æ">æ</button><button type="button" data-l="ø">ø</button><button type="button" data-l="å">å</button></div><p class="soft small" id="fmeta"></p></div>
+    <div class="hits" id="hits" aria-live="polite"></div>
+  </div></div>
+</div>
 <main class="wrap" id="app"><p class="soft">…</p></main>
 <footer class="wrap foot" id="foot"></footer>
 <script>window.PD3_DECK = null; /*DECK*/</script>
@@ -348,8 +381,7 @@ const I18N = {
   "h.review.t": ["Kun ord, der skal gentages i dag – ingen nye ord.", "Only words due today, no new words."],
   "h.review.off": ["Intet skal gentages i dag. Ord, du har lært, kommer tilbage her, når de skal gentages.", "Nothing is due today. Words you've learnt come back here when they're due."],
   "nav.find": ["Find ord", "Find a word"],
-  "f.h1a": ["Hvilken gruppe hører", "Which group does"], "f.h1b": ["ordet til?", "a word belong to?"],
-  "f.intro": ["Skriv et dansk ord (eller et engelsk) og se, hvilken gruppe det hører til – i Guidet læring og i studiearket.", "Type a Danish word (or an English one) to see which group it belongs to, in Assisted learning and on the study sheet."],
+  "f.close": ["Luk søgningen", "Close the search"],
   "f.ph": ["fx fordi, blandt andet, medføre …", "e.g. fordi, blandt andet, medføre …"],
   "f.al": ["Guidet læring", "Assisted learning"], "f.site": ["Studiearket", "Study sheet"],
   "f.notal": ["ikke i Guidet læring", "not in Assisted learning"], "f.notsite": ["ikke i studiearket", "not on the study sheet"],
@@ -622,15 +654,16 @@ function load() {
   for (const [id, c] of Object.entries(deck.cards)) DB.cards[id] = { id, ...c, history: c.history || [], ...(saved[id] || {}) };
   // ask the browser not to clear this page's storage when space runs low (Chrome/Firefox; Safari decides itself)
   if (navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(() => {});
-  route();
+  finder();
+  home(); route();
   window.addEventListener("hashchange", route);
 }
+// the site's other pages link to "#find" (or "#find=ord"): open the find bar over the home screen
 function route() {
-  const find = location.hash.startsWith("#find");
-  document.title = `${t(find ? "nav.find" : "nav.assisted")} · ${t("brand")}`;
-  $("#navAL").toggleAttribute("aria-current", !find); $("#navFind").toggleAttribute("aria-current", find);
-  if (find) { $("#navFind").setAttribute("aria-current", "page"); findView(decodeURIComponent(location.hash.slice(6))); }
-  else { $("#navAL").setAttribute("aria-current", "page"); home(); }
+  if (!location.hash.startsWith("#find")) return;
+  const q = decodeURIComponent(location.hash.slice(6));
+  history.replaceState(null, "", location.pathname + location.search);
+  findOpen(q);
 }
 
 // SM-2, same maths as sm2() in pd3.py
@@ -1238,8 +1271,8 @@ function exOdd(c, label, it) {
 }
 
 function letters() { return `<div class="letters">${["æ", "ø", "å"].map(l => `<button type="button" data-l="${l}">${l}</button>`).join("")}</div>`; }
-function bindLetters(input) {
-  document.querySelectorAll("[data-l]").forEach(b => b.onclick = () => {
+function bindLetters(input, root = $("#app")) {
+  root.querySelectorAll("[data-l]").forEach(b => b.onclick = () => {
     const p = input.selectionStart ?? input.value.length;
     input.value = input.value.slice(0, p) + b.dataset.l + input.value.slice(input.selectionEnd ?? p);
     input.focus(); input.setSelectionRange(p + 1, p + 1);
@@ -1557,20 +1590,41 @@ function hitCard(x) {
     ${c ? `<div class="row"><button class="btn" data-explain="${esc(c.id)}">${t("b.more")}</button><button class="btn quiet" data-practise="${esc(c.group)}">${t("f.pract")} →</button></div>` : ""}
   </div>`;
 }
-async function findView(q0) {
-  S = null;
-  const k = counts();
-  $("#app").innerHTML = `<div class="narrow">
-    <div class="top"><h1><span class="light">${t("f.h1a")}</span>${t("f.h1b")}</h1><p>${t("f.intro")}</p>
-      <div class="finder"><input id="fq" type="search" lang="da" autocomplete="off" spellcheck="false" placeholder="${esc(t("f.ph"))}" aria-label="${esc(t("nav.find"))}">${letters()}</div>
-      <p class="soft small" id="fmeta" style="margin-top:8px"></p></div>
-    <div class="hits" id="hits" aria-live="polite"></div></div>`;
-  const input = $("#fq"); bindLetters(input);
-  input.value = q0 || ""; input.focus();
+// the find bar lives under the top bar and opens over whatever screen is showing (home, a session, the summary)
+let findTimer;
+function finder() {
+  const bar = $("#findbar"), nav = $("#navFind"), input = $("#fq"), x = $("#fqClose");
+  input.placeholder = t("f.ph"); input.setAttribute("aria-label", t("nav.find"));
+  x.title = t("f.close"); x.setAttribute("aria-label", t("f.close"));
+  bindLetters(input, bar);
+  nav.onclick = e => { e.preventDefault(); bar.classList.contains("open") ? findClose() : findOpen(); };
+  x.onclick = findClose;
+  input.onkeydown = e => { if (e.key === "Escape") { e.preventDefault(); findClose(); } };
+}
+function findOpen(q0) {
+  const bar = $("#findbar"), input = $("#fq");
+  clearTimeout(findTimer);
+  bar.inert = false; bar.classList.add("open");
+  $("#navFind").setAttribute("aria-expanded", "true");
+  if (q0 !== undefined) input.value = q0;
+  input.focus({ preventScroll: true });
+  window.scrollTo({ top: 0, behavior: "smooth" });
+  findDraw();
+}
+function findClose() {
+  const bar = $("#findbar");
+  if (!bar.classList.contains("open")) return;
+  bar.classList.remove("open");
+  $("#navFind").setAttribute("aria-expanded", "false");
+  $("#navFind").focus({ preventScroll: true });
+  // empty it once the closing animation has run
+  findTimer = setTimeout(() => { bar.inert = true; $("#fq").value = ""; $("#hits").innerHTML = ""; }, 420);
+}
+async function findDraw() {
+  const input = $("#fq"), k = counts();
   const meta = () => { $("#fmeta").textContent = SITE_WORDS === null ? t("f.loading") : SITE_WORDS === false ? t("f.offline") : t("f.count", k.total, SITE_WORDS.words.length); };
   const draw = () => {
     const q = input.value.trim();
-    history.replaceState(null, "", "#find" + (q ? "=" + encodeURIComponent(q) : ""));
     if (!q) { $("#hits").innerHTML = ""; return; }
     const hits = searchWords(q);
     if (hits.length) $("#hits").innerHTML = hits.map(hitCard).join("");
@@ -1583,13 +1637,13 @@ async function findView(q0) {
         ${near.length ? `<span class="lbl" style="margin:6px 0 -4px">${t("f.near")}</span>${hitCard({ e: near[0] })}` : ""}`;
     }
     $("#hits").querySelectorAll("[data-explain]").forEach(b => b.onclick = () => explain(DB.cards[b.dataset.explain]));
-    $("#hits").querySelectorAll("[data-practise]").forEach(b => b.onclick = () => { setPicked([b.dataset.practise]); location.hash = ""; });
+    $("#hits").querySelectorAll("[data-practise]").forEach(b => b.onclick = () => { setPicked([b.dataset.practise]); findClose(); home(); });
     $("#hits").querySelectorAll("[data-q]").forEach(b => b.onclick = () => { input.value = b.dataset.q; draw(); input.focus(); });
   };
   input.oninput = draw;
   meta(); draw();
   await loadSiteWords();
-  if ($("#fq") === input) { meta(); draw(); }
+  if ($("#findbar").classList.contains("open")) { meta(); draw(); }
 }
 
 // ---------- explain more ----------
@@ -1675,7 +1729,7 @@ function bindNext(fn) {
   S.next = fn;
 }
 document.addEventListener("keydown", e => {
-  if (!S || document.querySelector("dialog[open]")) return;
+  if (!S || document.querySelector("dialog[open]") || e.target.closest?.("#findbar")) return;
   const nx = $("#nx");
   if (e.key === "Enter" && nx && !nx.disabled && (document.activeElement?.tagName !== "INPUT" || document.activeElement.id === "rt")) { e.preventDefault(); nx.click(); return; }
   if (e.key === "ArrowLeft" && $("#prev") && document.activeElement?.tagName !== "INPUT") { e.preventDefault(); goBack(); return; }
