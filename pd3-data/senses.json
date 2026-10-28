@@ -5,13 +5,19 @@
     "id": "because",
     "da": "årsag – som fordi",
     "en": "because / as",
-    "example": "Vi tog en taxa, da bussen ikke kom."
+    "example": "Vi tog en taxa, da bussen ikke kom.",
+    "test": "fordi",
+    "cue": "Sætningen giver en grund (svar på ”hvorfor?”).",
+    "cue_en": "The clause gives a reason (answers ”why?”)."
    },
    {
     "id": "when",
     "da": "tid – én gang i fortiden",
     "en": "when (once, in the past)",
-    "example": "Da jeg var barn, boede vi i Aarhus."
+    "example": "Da jeg var barn, boede vi i Aarhus.",
+    "test": "dengang",
+    "cue": "Sætningen fortæller hvornår: én gang i fortiden.",
+    "cue_en": "The clause says when: once, in the past."
    }
   ],
   "note": "Pladsen afgør ikke betydningen: ”Da …” først i sætningen kan også betyde årsag. Spørg: Er det en grund (= fordi)? Eller et tidspunkt i fortiden (= dengang)?",
@@ -64,13 +70,19 @@
     "id": "time",
     "da": "tid – samtidig",
     "en": "while (at the same time)",
-    "example": "Hun læser, mens han laver mad."
+    "example": "Hun læser, mens han laver mad.",
+    "test": "samtidig med at",
+    "cue": "To ting sker på samme tid.",
+    "cue_en": "Two things happen at the same time."
    },
    {
     "id": "contrast",
     "da": "modsætning",
     "en": "whereas",
-    "example": "Peter drikker kaffe, mens Eva foretrækker te."
+    "example": "Peter drikker kaffe, mens Eva foretrækker te.",
+    "test": "hvorimod",
+    "cue": "To forskellige ting stilles over for hinanden.",
+    "cue_en": "Two different things are set against each other."
    }
   ],
   "note": "Hvis de to ting sker samtidig, er det tid. Hvis de to sætninger sammenligner to forskellige ting, er det modsætning (L3: hører til kontrast).",
@@ -123,7 +135,10 @@
     "id": "because",
     "da": "årsag – sideordnende (hovedsætningsordstilling)",
     "en": "because, for",
-    "example": "Hun blev hjemme, for hun var syg."
+    "example": "Hun blev hjemme, for hun var syg.",
+    "test": null,
+    "cue": "…, for + hovedsætning giver grunden til det før.",
+    "cue_en": "…, for + main clause gives the reason for what came before."
    }
   ],
   "note": "Kun ”…, for + hovedsætning” er forbinderordet. ”For mange …”, ”for eksempel”, ”for to år siden” og ”glad for” er præpositionen for.",
@@ -166,31 +181,46 @@
     "id": "time",
     "da": "tid – ledsætning (fra det tidspunkt hvor)",
     "en": "since (time clause)",
-    "example": "Siden han flyttede, har vi ikke set ham."
+    "example": "Siden han flyttede, har vi ikke set ham.",
+    "test": "fra det tidspunkt hvor",
+    "cue": "siden + ledsætning om et tidspunkt.",
+    "cue_en": "siden + a clause about a point in time."
    },
    {
     "id": "cause",
     "da": "årsag – ledsætning (= eftersom), formelt",
     "en": "since, as (reason)",
-    "example": "Siden du alligevel er her, kan du hjælpe mig."
+    "example": "Siden du alligevel er her, kan du hjælpe mig.",
+    "test": "eftersom",
+    "cue": "siden + ledsætning, der giver en grund.",
+    "cue_en": "siden + a clause that gives a reason."
    },
    {
     "id": "then",
     "da": "adverbium – siden da, senere",
     "en": "since then, later",
-    "example": "Han flyttede til Aarhus og har boet der siden."
+    "example": "Han flyttede til Aarhus og har boet der siden.",
+    "test": "senere",
+    "cue": "siden står alene som adverbium (= senere, siden da).",
+    "cue_en": "siden stands alone as an adverb (= later, since then)."
    },
    {
     "id": "prep",
     "da": "præposition + tidspunkt",
     "en": "since + a point in time",
-    "example": "Jeg har boet her siden 2019."
+    "example": "Jeg har boet her siden 2019.",
+    "test": null,
+    "cue": "siden + et tidspunkt eller navneord: siden oldtiden, siden 2019.",
+    "cue_en": "siden + a time or noun: siden oldtiden, siden 2019."
    },
    {
     "id": "ago",
     "da": "for … siden",
     "en": "… ago",
-    "example": "Jeg flyttede hertil for to år siden."
+    "example": "Jeg flyttede hertil for to år siden.",
+    "test": null,
+    "cue": "for … siden = ago: for to år siden.",
+    "cue_en": "for … siden = ago: for to år siden."
    }
   ],
   "note": "I læseteksterne 2004–2024 er siden aldrig brugt som tids-ledsætning og kun én gang som årsag. Oftest står det som adverbium (har siden …) eller i ”for … siden” (= ago). ”Ved siden af” betyder next to.",
@@ -243,13 +273,19 @@
     "id": "result",
     "da": "følge (= derfor), sideordnende",
     "en": "so (result)",
-    "example": "Jeg var træt, så jeg gik i seng."
+    "example": "Jeg var træt, så jeg gik i seng.",
+    "test": "derfor",
+    "cue": "Det efter så er en følge af det før.",
+    "cue_en": "What follows så is a result of what came before."
    },
    {
     "id": "purpose",
     "da": "formål (= så at), ofte med kan/skal",
     "en": "so that (purpose)",
-    "example": "Kom i god tid, så du kan få en god plads."
+    "example": "Kom i god tid, så du kan få en god plads.",
+    "test": "så at",
+    "cue": "Det efter så er en hensigt, ofte med kan / skal.",
+    "cue_en": "What follows så is a purpose, often with kan / skal."
    }
   ],
   "note": "Efter så som følge kommer hovedsætningsordstilling: ”…, så jeg gik i seng”. Står der kan/skal/vil efter (”så du kan …”), er det tit formål. ”Når …, så …” er bare et fyldord.",
