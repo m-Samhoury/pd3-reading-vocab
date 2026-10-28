@@ -267,6 +267,9 @@ input.answer:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--ac
 .prepline { display: inline-block; margin: 6px 0 2px; padding: 3px 10px; border-radius: 8px; background: var(--blue-soft); color: var(--blue-text); font-size: .9rem; }
 .prepline b { color: var(--ink); font-weight: 600; }
 .feedback .prepline { margin-top: 8px; }
+.whybox { margin-top: 10px; padding: 10px 12px; border-radius: 10px; background: var(--sheet); border-left: 3px solid var(--accent); font-size: .94rem; }
+.whybox > b:first-child { color: var(--accent-text); }
+.whybox .test { margin-top: 6px; }
 .tipbox { padding: 12px 14px; border-radius: 12px; background: var(--blue-soft); font-size: .94rem; }
 .tipbox b { color: var(--blue-text); }
 .tipbox ul { margin: 6px 0 0; padding-left: 18px; }
@@ -400,6 +403,12 @@ const I18N = {
   "b.clear": ["Ryd", "Clear"], "b.show": ["Vis mig", "Show me"], "b.idk": ["Ved ikke", "I don't know"],
   "b.override": ["Jeg havde ret – tæl det med", "I was right, count it"], "b.skip": ["Spring over", "Skip retype"],
   "t.order": ["Ordstilling", "Word order"], "t.example": ["Eksempel", "Example"], "t.exam": ["Fra prøverne", "From the exams"],
+  "why.title": ["Hvorfor?", "Why?"], "why.def": ["Den definition, du valgte, hører til {0}.", "The definition you chose belongs to {0}."],
+  "why.chose": ["Du valgte {0}.", "You chose {0}."], "why.needs": ["Sætningen kræver {0}:", "The sentence needs {0}:"],
+  "why.chose2": ["Du valgte:", "You chose:"], "why.needs2": ["Sætningen kræver:", "The sentence needs:"],
+  "why.sub": ["Sæt et andet ord ind og se, hvad der giver mening:", "Put another word in and see which one makes sense:"],
+  "why.built": ["Du byggede:", "You built:"], "why.typed": ["Du skrev {0}, som betyder {1}.", "You typed {0}, which means {1}."],
+  "why.clue": ["Ledetråden passer til {0}:", "The clue fits {0}:"],
   "prep.with": ["Med:", "Used with:"], "tip.title": ["Tip", "Tip"], "tip.order": ["Ordstilling", "Word order"], "tip.register": ["Register", "Register"], "tip.construction": ["Konstruktion", "Construction"],
   "t.under": ["Fra opslaget", "From the entry"],
   "t.senses": ["Betydninger", "Meanings"], "t.senses.s": ["ordet har mere end én betydning", "this word has more than one meaning"],
@@ -943,6 +952,33 @@ function senseBlocks(c, perSense, withTr) {
       ${mine.length ? mine.map(exLine).join("") : `<div class="none">${t("s.noexam")}</div>`}</div>`;
   }).join("") + (info.note ? `<div class="sensenote" lang="da">${esc(info.note)}</div>` : "");
 }
+// ---------- "Hvorfor?": why the right answer is right, shown after a wrong answer ----------
+const GEX = {
+  "årsag": ["giver grunden – svar på ”hvorfor?”", "gives the reason (answers ”why?”)", "fordi, da, eftersom"],
+  "konsekvens": ["giver følgen – svar på ”hvad skete der så?”", "gives the result (answers ”so what happened?”)", "derfor, så, dermed"],
+  "kontrast": ["sætter to ting op mod hinanden", "sets two things against each other", "men, derimod, hvorimod"],
+  "indrømmelse": ["indrømmer noget, men konklusionen holder alligevel", "admits something, but the conclusion still holds", "selvom, alligevel, ganske vist"],
+  "tilføjelse": ["lægger noget mere til", "adds something more", "desuden, endvidere, blandt andet"],
+  "betingelse": ["noget gælder kun på en betingelse", "something holds only on a condition", "hvis, medmindre, forudsat at"],
+  "formål": ["fortæller hensigten – hvad noget skal føre til", "gives the purpose: what something is meant to achieve", "for at, så (at), med henblik på"],
+  "tid": ["fortæller hvornår eller i hvilken rækkefølge", "says when, or in what order", "når, inden, derefter"],
+  "sammenligning": ["sammenligner to ting", "compares two things", "ligesom, i forhold til, tilsvarende"],
+  "præcisering": ["giver et eksempel eller uddyber", "gives an example or explains further", "fx, især, dvs."],
+  "udelukkelse": ["undtager eller fravælger noget", "leaves something out", "undtagen, bortset fra, frem for"],
+  "konklusion": ["opsummerer", "sums up", "alt i alt, kort sagt"],
+  "holdning": ["viser skribentens holdning", "shows the writer's attitude", "heldigvis, desværre, faktisk"],
+};
+function whyBox(html) { return `<div class="whybox"><b>${t("why.title")}</b> ${html}</div>`; }
+function relWhy(g) {
+  const x = GEX[g];
+  return x ? `<b lang="da">${esc(GROUPS[g] ? GROUPS[g][1] : g)}</b> ${esc(x[0])} <span class="soft" lang="da">(${esc(x[2])})</span><div class="en-def">${esc(x[1])}</div>` : `<b lang="da">${esc(gname(g))}</b>`;
+}
+const wordLine = x => `<b lang="da">${esc(x.word)}</b> = ${esc(x.meaning)}`;
+// put another word into the gap: "…, fordi det giver hende energi"
+function swapIn(s, span, word) {
+  const w = span[0] === 0 ? word.charAt(0).toUpperCase() + word.slice(1) : word;
+  return `${esc(s.slice(0, span[0]))}<b>${esc(w)}</b>${esc(s.slice(span[1]))}`;
+}
 // usage tips (tips.json) for words without a confusable pair: word order · register · construction
 // the construction a word is learnt with (resultere i + navneord, ansvar for): shown right under the word
 function prepLine(c) {
@@ -1074,7 +1110,7 @@ function mc(label, head, options, correctIdx, onDone) {
     btns.forEach(b => b.disabled = true);
     btns[correctIdx].classList.add("right");
     if (i !== correctIdx) btns[i].classList.add("wrong");
-    onDone(i === correctIdx);
+    onDone(i === correctIdx, i);
   };
   btns.forEach(b => b.onclick = () => choose(+b.dataset.i));
   S.keys = e => { const n = +e.key; if (n >= 1 && n <= options.length) choose(n - 1); };
@@ -1099,14 +1135,15 @@ function exMeaning(c, label, it) {
       return mc(label.replace(t("x.meaning"), t("x.def")), `<p class="prompt">${t("q.def")}</p><div class="big" lang="da">${esc(c.word)}</div>
         ${ctx ? `<div class="ex" lang="da" style="margin-top:8px"><span class="tag">${esc(ctx.src)}</span>${hlSentence(c, ctx.s, ctx.m)}</div>` : ""}`,
         opts.map(o => `<span lang="da">${esc(clip(o))}</span>`), opts.indexOf(c),
-        ok => feedback(c, it, ok ? (quick(9000) ? 5 : 4) : 2, ok,
-          `<b lang="da">${esc(c.word)}</b> = ${esc(c.meaning)}<div class="small" lang="da">${esc(defOf(c))}</div>${c.dict.senses_en?.[0] ? `<div class="en-def">${esc(c.dict.senses_en[0])}</div>` : ""}`, ok ? null : "moderate"));
+        (ok, i) => feedback(c, it, ok ? (quick(9000) ? 5 : 4) : 2, ok,
+          `<b lang="da">${esc(c.word)}</b> = ${esc(c.meaning)}<div class="small" lang="da">${esc(defOf(c))}</div>${c.dict.senses_en?.[0] ? `<div class="en-def">${esc(c.dict.senses_en[0])}</div>` : ""}` +
+          (ok ? "" : whyBox(`${t("why.def", wordLine(opts[i]))}${opts[i].dict.senses_en?.[0] ? `<div class="en-def">${esc(opts[i].dict.senses_en[0])}</div>` : ""}`)), ok ? null : "moderate"));
     }
   }
   const opts = shuffle([c, ...distractors(c, 3, x => (x.priority || 3) === (c.priority || 3))]);
   mc(label, `<p class="prompt">${t("q.meaning")}</p><div class="big" lang="da">${esc(c.word)}</div>`,
     opts.map(o => esc(o.meaning)), opts.indexOf(c),
-    ok => feedback(c, it, ok ? (quick() ? 5 : 4) : 2, ok, ok ? "" : `<b lang="da">${esc(c.word)}</b> = ${esc(c.meaning)}`, ok ? null : "moderate"));
+    (ok, i) => feedback(c, it, ok ? (quick() ? 5 : 4) : 2, ok, ok ? "" : wordLine(c) + whyBox(t("why.chose", `“${esc(opts[i].meaning)}”`) + " = " + wordLine(opts[i])), ok ? null : "moderate"));
 }
 
 function exRelation(c, label, it) {
@@ -1115,7 +1152,8 @@ function exRelation(c, label, it) {
   mc(label, ctx ? `<p class="prompt">${t("q.relctx", `<b lang="da">${esc(c.word)}</b>`)}</p><div class="sentence" lang="da">${hlSentence(c, ctx.s, ctx.m)}</div><div style="margin-top:6px"><span class="tag">${esc(ctx.src)}</span></div>`
     : `<p class="prompt">${t("q.relation")}</p><div class="big" lang="da">${esc(c.word)}</div>`,
     groups.map(g => esc(GROUPS[g] ? GROUPS[g][1] : g)), groups.indexOf(c.group),
-    ok => feedback(c, it, ok ? 4 : 2, ok, `<b lang="da">${esc(c.word)}</b> (${esc(c.meaning)}) → ${esc(glabel(c.group))}`, ok ? null : "moderate"));
+    (ok, i) => feedback(c, it, ok ? 4 : 2, ok, `<b lang="da">${esc(c.word)}</b> (${esc(c.meaning)}) → ${esc(glabel(c.group))}` +
+      (ok ? "" : whyBox(`<div><span lang="da">${esc(c.word)}</span>: ${relWhy(c.group)}</div><div class="test">${t("why.chose2")} ${relWhy(groups[i])}</div>`)), ok ? null : "moderate"));
 }
 
 function exSense(c, label, it) {
@@ -1124,7 +1162,12 @@ function exSense(c, label, it) {
   const opts = info.senses;
   mc(label, `<p class="prompt">${t("q.sense", `<b lang="da">${esc(c.word)}</b>`)}</p><div class="sentence" lang="da">${hlSentence(c, e.s, e.m)}</div><div style="margin-top:6px"><span class="tag">${esc(e.src)}</span></div>`,
     opts.map(sn => `<span lang="da">${esc(sn.da)}</span>`), opts.findIndex(sn => sn.id === e.sense),
-    ok => feedback(c, it, ok ? (quick(10000) ? 5 : 4) : 2, ok, `<b lang="da">${esc(info.senses.find(sn => sn.id === e.sense).da)}</b> · ${esc(info.senses.find(sn => sn.id === e.sense).en)}` + (info.note ? `<div class="small" lang="da">${esc(info.note)}</div>` : ""), ok ? null : "critical"));
+    (ok, i) => {
+      const right = info.senses.find(sn => sn.id === e.sense), chose = opts[i];
+      const line = (sn, mark) => `<div class="test">${mark} <b lang="da">${esc(sn.da)}</b>: <span lang="da">${esc(sn.cue)}</span>${sn.test ? `<div class="sentence small" lang="da">${swapIn(e.s, e.m, sn.test)}</div>` : ""}<div class="en-def">${esc(sn.cue_en)}</div></div>`;
+      feedback(c, it, ok ? (quick(10000) ? 5 : 4) : 2, ok, `<b lang="da">${esc(right.da)}</b> · ${esc(right.en)}` +
+        (ok ? (info.note ? `<div class="small" lang="da">${esc(info.note)}</div>` : "") : whyBox(t("why.sub") + line(right, "✅") + line(chose, "❌"))), ok ? null : "critical");
+    });
 }
 
 function exCloze(c, label, it) {
@@ -1140,8 +1183,17 @@ function exCloze(c, label, it) {
   const inflected = norm(src.s.slice(a, b)) !== norm(c.word.replace(/^(at|en|et) /, ""));
   mc(label, `<p class="prompt">${t("q.cloze")}${inflected ? t("q.base") : ""} ${src.src !== "example" ? `<span class="tag">${esc(src.src)}</span>` : ""}</p><div class="sentence" lang="da">${gapped}</div>`,
     opts.map(o => `<span lang="da">${esc(o.word)}</span>`), opts.indexOf(c),
-    ok => feedback(c, it, ok ? (quick(src.src === "example" ? 5000 : 8000) ? 5 : 4) : 2, ok,
-      `<div class="sentence" lang="da">${hlSentence(c, src.s, src.span)}</div><div class="small"><span lang="da">${esc(c.word)}</span> = ${esc(c.meaning)}</div>`, ok ? null : "moderate"));
+    (ok, i) => {
+      const x = opts[i], pr = !ok && partnerPairs(c.id).find(p => p.includes(x.id));
+      const why = ok ? "" : whyBox(
+        `<div>${t("why.chose", wordLine(x))}</div>` +
+        (pr ? `<div class="test"><b>${t("f.rule")}</b> <span lang="da">${esc(tip(pr))}</span></div>` :
+          wtype(c) && x.group !== c.group ? `<div class="test">${t("why.needs2")} ${relWhy(c.group)}</div><div class="test">${esc(x.word)}: ${relWhy(x.group)}</div>` :
+          defOf(c) ? `<div class="test">${t("why.clue", `<b lang="da">${esc(c.word)}</b>`)} <span lang="da">${esc(defOf(c))}</span></div>` : "") +
+        (inflected || /^(at|en|et) /.test(c.word) ? "" : `<div class="test sentence small" lang="da">${swapIn(src.s, src.span, x.word.replace(/^(at|en|et) /, ""))} ❌</div>`));
+      feedback(c, it, ok ? (quick(src.src === "example" ? 5000 : 8000) ? 5 : 4) : 2, ok,
+        `<div class="sentence" lang="da">${hlSentence(c, src.s, src.span)}</div><div class="small"><span lang="da">${esc(c.word)}</span> = ${esc(c.meaning)}</div>` + why, ok ? null : "moderate");
+    });
 }
 
 function exOdd(c, label, it) {
@@ -1161,7 +1213,8 @@ function exOdd(c, label, it) {
     const ok = [...sel].every(j => opts[j].group === c.group);
     opts.forEach((o, j) => { btns[j].classList.remove("sel"); if (o.group === c.group) btns[j].classList.add("right"); else if (sel.has(j)) btns[j].classList.add("wrong"); });
     feedback(c, it, ok ? 4 : 2, ok, t("f.both", `<b lang="da">${esc(c.word)}</b>`, `<b lang="da">${esc(mate.word)}</b>`, esc(glabel(c.group))) + " " +
-      opts.filter(o => o.group !== c.group).map(o => `<span lang="da">${esc(o.word)}</span> = ${esc(gname(o.group))}`).join(" · "), ok ? null : "moderate");
+      opts.filter(o => o.group !== c.group).map(o => `<span lang="da">${esc(o.word)}</span> = ${esc(gname(o.group))}`).join(" · ") +
+      (ok ? "" : whyBox(opts.map(o => `<div class="test"><span lang="da">${esc(o.word)}</span>: ${relWhy(o.group)}</div>`).join(""))), ok ? null : "moderate");
   };
   btns.forEach(b => b.onclick = () => toggle(+b.dataset.i));
   S.keys = e => { const n = +e.key; if (n >= 1 && n <= 4) toggle(n - 1); };
@@ -1216,7 +1269,11 @@ function exProduce(c, label, it) {
     if (!give && isRight(v) && !exact) return feedback(c, it, 3, true, t("f.form", `<b lang="da">${esc(gapForm)}</b>`) + `<div style="margin-top:6px">${answer}</div>`, "minor", t("f.almost"));
     if (!give && isRight(v)) return feedback(c, it, hinted ? 3 : quick(ctx ? 12000 : 8000) ? 5 : 4, true, answer + (hinted ? `<div class="soft small">${t("f.hinted")}</div>` : ""));
     if (!give && nearMiss(c, v)) return feedback(c, it, 3, true, t("f.spelling", `<b lang="da">${esc(c.word)}</b>`, esc(v)), "minor", t("f.almost"));
-    feedback(c, it, give ? 0 : 1, false, (v ? t("f.wrote", esc(v)) : "") + answer, give ? null : "moderate", null, !give);
+    const other = v && cards().find(x => x.id !== c.id && isAnswer(x, v));
+    const why = give ? "" : whyBox((other ? `<div>${t("why.typed", `<b lang="da">${esc(v)}</b>`, esc(other.meaning))}</div>` : "") +
+      (defOf(c) ? `<div class="test">${t("why.clue", `<b lang="da">${esc(c.word)}</b>`)} <span lang="da">${esc(defOf(c))}</span></div>` : `<div class="test">${wordLine(c)}</div>`) +
+      (other && wtype(other) && wtype(c) && other.group !== c.group ? `<div class="test">${relWhy(c.group)}</div>` : ""));
+    feedback(c, it, give ? 0 : 1, false, (v ? t("f.wrote", esc(v)) : "") + answer + why, give ? null : "moderate", null, !give);
   };
   $("#chk").onclick = () => check(false);
   $("#idk").onclick = () => check(true);
@@ -1247,7 +1304,9 @@ function exOrder(c, label, it) {
   const finish = (q, ok, sev) => {
     ["#chk", "#clr", "#idk"].forEach(s => $(s)?.remove());
     document.querySelectorAll(".tile").forEach(b => b.disabled = true);
-    feedback(c, it, q, ok, right + `<div class="why">${rule(wtype(c).split("/")[0]) || ""}</div>`, sev, null, false, ok ? null : os.s);
+    const built = [toks[0], ...placed.map(x => x.t)].join(" ");
+    feedback(c, it, q, ok, right + (ok ? `<div class="why">${rule(wtype(c).split("/")[0]) || ""}</div>` :
+      whyBox(`${placed.length ? `<div>${t("why.built")} <span lang="da" style="text-decoration:line-through">${esc(built)}</span></div>` : ""}<div class="test">${rule(wtype(c).split("/")[0]) || ""}</div>`)), sev, null, false, ok ? null : os.s);
   };
   $("#chk").onclick = () => {
     const ok = placed.map(x => x.t.toLowerCase()).join(" ") === rest.join(" ").toLowerCase();
@@ -1355,7 +1414,7 @@ function renderPairQ(it) {
     if (!give && exact) return feedback(c, it, quick(10000) ? 5 : 4, true, body);
     if (!give && it.both && isAnswer(o, v)) return feedback(c, it, 4, true, `<div class="why">${t("f.bothfit", `<b lang="da">${esc(o.word)}</b>`)}</div>` + body);
     if (!give && isAnswer(c, v)) return feedback(c, it, 3, true, t("f.form", `<b lang="da">${esc(gapForm)}</b>`) + body, "minor", t("f.almost"));
-    if (!give && isAnswer(o, v)) return feedback(c, it, 1, false, body, "critical", t("f.its", esc(gapForm)));
+    if (!give && isAnswer(o, v)) return feedback(c, it, 1, false, whyBox(`${t("why.chose", wordLine(o))}<div class="test sentence small" lang="da">${swapIn(it.s, it.span, v)} ❌</div><div class="test"><b>${t("f.rule")}</b> <span lang="da">${esc(tip(it.pair))}</span></div>`) + body, "critical", t("f.its", esc(gapForm)));
     if (!give && nearMiss(c, v)) return feedback(c, it, 3, true, t("f.spelling", `<b lang="da">${esc(gapForm)}</b>`, esc(v)) + body, "minor", t("f.almost"));
     feedback(c, it, give ? 0 : 1, false, (v ? t("f.wrote", esc(v)) : "") + body, give ? null : "moderate", t("f.its", esc(gapForm)));
   };
