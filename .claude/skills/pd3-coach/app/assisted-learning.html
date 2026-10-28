@@ -305,6 +305,37 @@ input.answer:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--ac
 .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px; }
 .pair > div { background: var(--sheet); border-radius: 10px; padding: 10px 12px; }
 
+/* flashcards: a card that flips in 3D; practice only */
+.fctop { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-top: 24px; }
+.seg { display: inline-flex; padding: 3px; border-radius: 11px; background: var(--paper); border: 1px solid var(--rule); }
+.seg button { border: 0; background: none; padding: 6px 12px; border-radius: 8px; cursor: pointer; font-size: .85rem; font-weight: 600; color: var(--soft); }
+.seg button[aria-pressed="true"] { background: var(--sheet); color: var(--ink); box-shadow: var(--shadow); }
+.fcprog { display: flex; align-items: center; gap: 12px; margin-top: 14px; }
+.fcprog .bar { flex: 1; }
+.fcard { display: block; width: 100%; margin-top: 14px; perspective: 1400px; cursor: pointer; border: 0; padding: 0; background: none; text-align: left; color: inherit;
+  animation: fcIn .32s cubic-bezier(.2, .8, .2, 1); }
+.fcard:focus-visible { outline: none; }
+.fcard:focus-visible .face { box-shadow: 0 0 0 3px var(--accent-soft), var(--shadow-lg); border-color: var(--accent); }
+@keyframes fcIn { from { opacity: 0; transform: translateY(14px) scale(.98); } }
+.fcin { display: grid; transform-style: preserve-3d; transition: transform .55s cubic-bezier(.3, .9, .3, 1); }
+.fcin.flipped { transform: rotateY(180deg); }
+.face { grid-area: 1 / 1; min-height: 340px; backface-visibility: hidden; -webkit-backface-visibility: hidden; display: flex; flex-direction: column;
+  padding: 26px 24px 20px; border-radius: 22px; background: var(--sheet); border: 1px solid var(--rule); box-shadow: var(--shadow-lg); }
+.face.back { transform: rotateY(180deg); }
+.face.front { align-items: center; justify-content: center; text-align: center; }
+.face.front .big { font-size: clamp(2.2rem, 9vw, 3.2rem); }
+.face.front .fcq { font-size: clamp(1.5rem, 6vw, 2rem); font-weight: 700; font-family: var(--head); letter-spacing: -.02em; }
+.face .fchint { margin-top: auto; padding-top: 22px; font-size: .82rem; color: var(--faint); }
+.face.back .meaning { font-size: 1.45rem; margin-top: 4px; }
+.face .prepline { align-self: flex-start; }
+.face.front .prepline { align-self: center; }
+.fcw { font-family: var(--head); font-size: 1.6rem; font-weight: 700; letter-spacing: -.02em; }
+.face.back .block { margin-top: 14px; }
+.face.back .en { color: var(--soft); font-size: .9rem; }
+.fcbtns { margin-top: 16px; justify-content: center; }
+.fcbtns .btn { min-width: 150px; }
+.fcno { color: var(--bad); }
+.fcno:hover { border-color: var(--bad); }
 /* summary */
 .score { font-family: var(--head); font-size: 3.4rem; font-weight: 700; letter-spacing: -.03em; line-height: 1; color: var(--accent); }
 .list { margin: 0; padding: 0; list-style: none; }
@@ -374,6 +405,14 @@ const I18N = {
               "{0} words from the PD3 coach, connectors first. Every new word is taught before you're tested on it."],
   "h.go": ["Start session", "Start session"], "h.learn": ["Lær {0} nye", "Learn {0} new"], "h.review": ["Kun gentagelser", "Reviews only"],
   "h.conf": ["Forvekslingsord", "Confusables drill"],
+  "h.fc": ["Flashcards", "Flashcards"], "h.fc.t": ["Vend kortene i de valgte grupper, og sig selv, om du kunne ordet. Påvirker ikke din plan.", "Flip the cards in the selected groups and say whether you knew the word. Doesn't change your schedule."],
+  "fc.da": ["Dansk → engelsk", "Danish → English"], "fc.en": ["Engelsk → dansk", "English → Danish"], "fc.home": ["← Hjem", "← Home"],
+  "fc.flip": ["Vend kortet", "Flip the card"], "fc.no": ["✗ Igen", "✗ Again"], "fc.yes": ["✓ Kunne den", "✓ Knew it"],
+  "fc.q.en": ["Hvad hedder det på dansk?", "What is it in Danish?"], "fc.tap": ["Tryk på kortet (eller mellemrum) for at vende det", "Tap the card (or press Space) to flip it"],
+  "fc.left": ["{0} tilbage · {1} kunne du", "{0} left · {1} known"], "fc.ddo": ["Ordbogen", "Dictionary"], "fc.exam": ["Fra prøven", "From the exam"], "fc.eg": ["Eksempel", "Example"],
+  "fc.keys": ["Mellemrum = vend · 1 = igen · 2 = kunne den. Kun øvelse – din plan ændres ikke.", "Space = flip · 1 = again · 2 = knew it. Practice only: your schedule doesn't change."],
+  "fc.done": ["Flashcards · færdig", "Flashcards · done"], "fc.score": ["{0} af {1} kunne du i første forsøg", "You knew {0} of {1} on the first try"],
+  "fc.hard": ["Skulle ses igen", "Needed another look"], "fc.again": ["Øv de svære igen · {0}", "Practise the hard ones · {0}"], "fc.new": ["Ny runde", "New round"],
   "h.ex": ["Øvelse", "Exercise"], "h.ex.t": ["B2-øvelser i de ord, du allerede har lært i de valgte grupper. Påvirker ikke din plan.", "B2 exercises on the words you've already learnt in the selected groups. Doesn't change your schedule."],
   "h.ex.none": ["Ingen lærte ord i de valgte grupper endnu. Lær nogle ord først.", "No learnt words in the selected groups yet. Learn some words first."],
   "r.ex": ["Øvelse: dine svar ændrer ikke, hvornår ordene skal gentages.", "Exercise: your answers don't change when the words come up for review."],
@@ -757,7 +796,7 @@ function counts() {
 }
 
 function home() {
-  S = null;
+  S = null; FC = null;
   const k = counts(), p = DB.profile || {};
   const dW = daysTo(p.exam_date);
   const groupsBy = {};
@@ -792,6 +831,7 @@ function home() {
         <button class="btn" id="review" ${canDue ? "" : "disabled"} title="${esc(canDue ? t("h.review.t") : t("h.review.off"))}">${t("h.review")}</button>
         <button class="btn" id="conf" ${confusablePairs(sel).length ? "" : `disabled title="${esc(t("h.conf.none"))}"`}>${t("h.conf")}${sel ? ` · ${confusablePairs(sel).length}` : ""}</button>
         <button class="btn" id="exer" ${learnedIn(sel).length ? `title="${esc(t("h.ex.t"))}"` : `disabled title="${esc(t("h.ex.none"))}"`}>${t("h.ex")} · ${learnedIn(sel).length}</button>
+        <button class="btn" id="flash" title="${esc(t("h.fc.t"))}">${t("h.fc")} · ${pool.length}</button>
       </div>
       <p class="soft small" style="margin-top:12px">${sessionBlurb(k, canDue, canNew)}</p>
       ${storageOK ? "" : `<div class="err small">${t("h.storage")}</div>`}
@@ -818,6 +858,7 @@ function home() {
   });
   $("#conf").onclick = () => startConfusables(sel);
   $("#exer").onclick = () => startExercise(sel);
+  $("#flash").onclick = () => startFlash(sel);
   document.querySelectorAll(".group").forEach(b => b.onclick = () => { openGroup = openGroup === b.dataset.g ? null : b.dataset.g; const y = window.scrollY; home(); window.scrollTo(0, y); });
   if (openGroup && groupsBy[openGroup]) showGroupDetail(openGroup, groupsBy[openGroup]);
 }
@@ -1506,6 +1547,101 @@ function renderPairSame(it) {
   btns.forEach(b => b.onclick = () => toggle(+b.dataset.i));
   S.keys = e => { const n = +e.key; if (n >= 1 && n <= 4) toggle(n - 1); };
 }
+
+// ---------- flashcards ----------
+// Practice only, like Øvelse: flip the card and say whether you knew it. "Igen" puts the card back a few
+// places down the pile, so a round ends when every card has been known once. The SM-2 schedule doesn't change.
+const FC_DIR = "pd3-assisted-learning:fcdir";
+let FC = null;
+function startFlash(groups, ids) {
+  const pool = ids ? ids.map(id => DB.cards[id]) : cards().filter(c => !groups || groups.includes(c.group));
+  let dir = "da";
+  try { dir = localStorage.getItem(FC_DIR) === "en" ? "en" : "da"; } catch (e) { /* ignore */ }
+  S = null;
+  FC = { groups, pile: shuffle(pool.map(c => c.id)), total: pool.length, known: 0, again: new Set(), sent: {}, dir, flipped: false };
+  flashCard();
+  window.scrollTo(0, 0);
+}
+function flashFaces(c) {
+  if (!(c.id in FC.sent)) FC.sent[c.id] = ctxSentence(c);
+  const ex = FC.sent[c.id], d = c.dict && c.dict.senses && c.dict.senses.length ? c.dict : null;
+  const word = `<div class="head"><span class="big" lang="da">${esc(c.word)}</span>${wtype(c) ? `<span class="tag">${esc(wtype(c))}</span>` : ""}</div>${prepLine(c)}`;
+  const sentence = ex ? `<div class="block"><span class="lbl">${t("fc.exam")}</span><div class="ex" lang="da">${hlSentence(c, ex.s, ex.m)} ${trLink(ex.s)}</div></div>`
+    : c.example ? `<div class="block"><span class="lbl">${t("fc.eg")}</span><div class="ex" lang="da">${hlSentence(c, c.example)} ${trLink(c.example)}</div></div>` : "";
+  const def = d ? `<div class="block"><span class="lbl">${t("fc.ddo")}</span><div lang="da">${esc(d.senses[0])}</div>${d.senses_en && d.senses_en[0] ? `<div class="en">${esc(d.senses_en[0])}</div>` : ""}</div>` : "";
+  const front = FC.dir === "en"
+    ? `<div class="kind">${t("fc.q.en")}</div><div class="fcq" style="margin-top:12px">${esc(c.meaning)}</div>`
+    : `<span class="big" lang="da">${esc(c.word)}</span>${wtype(c) ? `<span class="tag" style="margin-top:10px">${esc(wtype(c))}</span>` : ""}${prepLine(c)}`;
+  const back = FC.dir === "en" ? `${word}<div class="meaning">${esc(c.meaning)}</div>` : `<div class="head"><span class="fcw" lang="da">${esc(c.word)}</span>${wtype(c) ? `<span class="tag">${esc(wtype(c))}</span>` : ""}</div><div class="meaning">${esc(c.meaning)}</div>${prepLine(c)}`;
+  return [front + `<div class="fchint">${t("fc.tap")}</div>`,
+    back + def + sentence + `<div class="row" style="margin-top:auto;padding-top:16px"><span class="spacer"></span><button type="button" class="btn quiet small" id="fcMore">${t("b.more")}</button></div>`];
+}
+function flashCard() {
+  if (!FC.pile.length) return flashDone();
+  const c = DB.cards[FC.pile[0]], [front, back] = flashFaces(c);
+  const title = t("h.fc") + (FC.groups ? ` · ${FC.groups.length === 1 ? gname(FC.groups[0]) : t("s.groups", FC.groups.length)}` : "");
+  $("#app").innerHTML = `<div class="narrow">
+    <div class="fctop"><button type="button" class="btn quiet" id="fcHome">${t("fc.home")}</button><span class="kind">${esc(title)}</span><span class="spacer"></span>
+      <div class="seg" role="group">${["da", "en"].map(x => `<button type="button" data-dir="${x}" aria-pressed="${FC.dir === x}">${t("fc." + x)}</button>`).join("")}</div></div>
+    <div class="fcprog"><div class="bar"><span style="width:${(100 * FC.known / FC.total).toFixed(1)}%"></span></div><span class="soft small">${t("fc.left", FC.pile.length, FC.known)}</span></div>
+    <div class="fcard" id="fcard" role="button" tabindex="0" aria-label="${esc(t("fc.flip"))}">
+      <div class="fcin${FC.flipped ? " flipped" : ""}"><div class="face front">${front}</div><div class="face back" lang="${LANG}">${back}</div></div></div>
+    <div class="row fcbtns" id="fcBtns"></div>
+    <p class="soft small" style="text-align:center;margin-top:14px">${t("fc.keys")}</p></div>`;
+  $("#fcHome").onclick = home;
+  document.querySelectorAll(".seg [data-dir]").forEach(b => b.onclick = () => {
+    FC.dir = b.dataset.dir; FC.flipped = false;
+    try { localStorage.setItem(FC_DIR, FC.dir); } catch (e) { /* ignore */ }
+    flashCard();
+  });
+  $("#fcard").onclick = e => { if (!e.target.closest("button, a")) flashFlip(); };
+  $("#fcMore").onclick = () => explain(c);
+  bindTr($("#fcard"));
+  flashButtons();
+  $("#fcard").focus({ preventScroll: true });
+}
+function flashButtons() {
+  const box = $("#fcBtns"), face = s => $("#fcard .face." + s);
+  // only the visible side can be tabbed into
+  face("front").inert = FC.flipped; face("back").inert = !FC.flipped;
+  box.innerHTML = FC.flipped
+    ? `<button type="button" class="btn fcno" id="fcNo">${t("fc.no")}</button><button type="button" class="btn solid" id="fcYes">${t("fc.yes")}</button>`
+    : `<button type="button" class="btn solid" id="fcFlip">${t("fc.flip")}</button>`;
+  if (FC.flipped) { $("#fcNo").onclick = () => flashAnswer(false); $("#fcYes").onclick = () => flashAnswer(true); }
+  else $("#fcFlip").onclick = flashFlip;
+}
+function flashFlip() {
+  FC.flipped = !FC.flipped;
+  $("#fcard .fcin").classList.toggle("flipped", FC.flipped);
+  flashButtons();
+}
+function flashAnswer(knew) {
+  if (!FC.flipped) return;
+  const id = FC.pile.shift();
+  if (knew) FC.known++;
+  else { FC.again.add(id); FC.pile.splice(Math.min(3, FC.pile.length), 0, id); }
+  FC.flipped = false;
+  flashCard();
+}
+function flashDone() {
+  const hard = [...FC.again].map(id => DB.cards[id]), groups = FC.groups;
+  $("#app").innerHTML = `<div class="narrow"><div class="sheet q" style="margin-top:28px">
+    <div class="kind">${t("fc.done")}</div>
+    <div class="row" style="align-items:baseline;margin-top:10px"><span class="score">${Math.round(100 * (FC.total - hard.length) / FC.total)}%</span><span class="soft">${t("fc.score", FC.total - hard.length, FC.total)}</span></div>
+    ${hard.length ? `<div class="block"><span class="lbl">${t("fc.hard")}</span><ul class="list">${hard.map(c => `<li><b lang="da">${esc(c.word)}</b><span class="soft">${esc(c.meaning)}</span></li>`).join("")}</ul></div>` : ""}
+    <div class="row next">${hard.length ? `<button class="btn solid" id="fcHard">${t("fc.again", hard.length)}</button>` : ""}
+      <button class="btn${hard.length ? "" : " solid"}" id="fcNew">${t("fc.new")}</button><button class="btn quiet" id="home">${t("r.home")}</button></div></div></div>`;
+  if (hard.length) $("#fcHard").onclick = () => startFlash(groups, hard.map(c => c.id));
+  $("#fcNew").onclick = () => startFlash(groups);
+  $("#home").onclick = home;
+}
+document.addEventListener("keydown", e => {
+  if (!FC || !$("#fcard") || document.querySelector("dialog[open]") || e.target.closest?.("#findbar")) return;
+  const onBtn = e.target.closest?.("button, a") && e.target.id !== "fcard";
+  if ((e.key === " " || e.key === "Enter") && !onBtn) { e.preventDefault(); flashFlip(); }
+  else if (e.key === "1" || e.key === "ArrowLeft") { e.preventDefault(); flashAnswer(false); }
+  else if (e.key === "2" || e.key === "ArrowRight") { e.preventDefault(); flashAnswer(true); }
+});
 
 // ---------- find a word ----------
 // the study sheet's own list (data/words.json on the site) has its own groups; it's fetched once when the finder opens
