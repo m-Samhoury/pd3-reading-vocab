@@ -129,6 +129,15 @@ const I18N = {
   "idx.open": ["Åbn", "Open"],
   "idx.al.p": ["Lær forbinderordene trin for trin: forklaring, ordstilling og eksempler fra prøverne – så test og gentagelse.",
                "Learn the connectors step by step: explanation, word order and exam examples – then test and review."],
+  // find bar (find.js)
+  "fd.ph": ["fx fordi, blandt andet, medføre …", "e.g. fordi, blandt andet, medføre …"], "fd.close": ["Luk søgningen", "Close the search"],
+  "fd.count": ["{0} ord i Guidet læring · {1} på studiearket", "{0} words in Assisted learning · {1} on the study sheet"],
+  "fd.site": ["Studiearket", "Study sheet"], "fd.al": ["Åbn i Guidet læring", "Open in Assisted learning"], "fd.more": ["Forklar mere", "Explain more"],
+  "fd.notal": ["ikke i Guidet læring", "not in Assisted learning"], "fd.notsite": ["ikke i studiearket", "not on the study sheet"],
+  "fd.p1": ["Forbinderord", "Connectors"], "fd.p2": ["Ord fra prøven", "Exam words"], "fd.p3": ["Andre nyttige ord", "Other useful words"],
+  "fd.none": ["“{0}” findes ikke i nogen af listerne.", "“{0}” isn't in either list."], "fd.near": ["Mente du:", "Did you mean:"],
+  "fd.ddo": ["Slå “{0}” op på ordnet.dk ↗", "Look up “{0}” on ordnet.dk ↗"],
+  "fd.viaen": ["fundet via den engelske betydning", "matched on the English meaning"], "fd.viaform": ["fundet via bøjningsformen “{0}”", "matched on the form “{0}”"],
   "idx.t1": ["Tier 1 · forbinderord", "Tier 1 · connectors"], "idx.t2": ["Tier 2 · ord fra opgaverne", "Tier 2 · question words"], "idx.t3": ["Tier 3 · ord fra teksterne", "Tier 3 · text words"],
 };
 const LANG = (() => { try { return localStorage.getItem("pd3.lang") === "en" ? "en" : "da"; } catch (e) { return "da"; } })();

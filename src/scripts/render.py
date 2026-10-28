@@ -9,6 +9,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import build as B          # noqa: E402
 import build_t23           # noqa: E402
+from paths import EXAMS    # noqa: E402
 
 ROOT = B.ROOT
 TPL = os.path.join(B.SRC, "templates")
@@ -42,6 +43,20 @@ def load_json(path):
     except FileNotFoundError:
         print(f"note: {path} not found – rebuilding without it")
         return {}
+
+
+def coach_index():
+    """Guidet læring's words and groups, so the find bar on every page can say where a word is taught.
+    Read from the local PD3 project (PD3_EXAMS); without it the bar searches the study sheet only."""
+    try:
+        cards = json.load(open(os.path.join(EXAMS, "pd3-data", "vocab.json"), encoding="utf-8"))["cards"]
+        tpl = open(os.path.join(EXAMS, ".claude", "skills", "pd3-coach", "app", "assisted-learning.html"), encoding="utf-8").read()
+        groups = json.loads(re.sub(r",\s*}$", "}", re.search(r"const GROUPS = (\{.*?\n\});", tpl, re.S).group(1)))
+    except (OSError, AttributeError, ValueError) as e:
+        print(f"note: no Guidet læring deck ({e}) – the find bar searches the study sheet only")
+        return None
+    wtype = lambda c: (re.match(r"(SUB/PRÆP|SUB/ADV|SUB|ADV|KOO|PRÆP)\b", c.get("note") or "") or [None])[0]
+    return {"cards": [[cid, c["word"], c["meaning"], c["group"], wtype(c)] for cid, c in cards.items()], "groups": groups}
 
 
 def dictionary_info(w, ddo_e, wikt, private):
@@ -84,10 +99,11 @@ def main(private=False):
                   "study tool and checked against Den Danske Ordbog (ordnet.dk). Progress is stored only in this browser.",
         "private": private,
     }
-    data = json.dumps({"words": slim, "groups": [g for g in groups if g["words"]], "meta": meta}, ensure_ascii=False)
+    data = json.dumps({"words": slim, "groups": [g for g in groups if g["words"]], "meta": meta, "coach": coach_index()}, ensure_ascii=False)
     data = data.replace("</", "<\\/")
     css = open(os.path.join(TPL, "common.css"), encoding="utf-8").read()
-    js = open(os.path.join(TPL, "i18n.js"), encoding="utf-8").read() + "\n" + open(os.path.join(TPL, "common.js"), encoding="utf-8").read()
+    js = open(os.path.join(TPL, "i18n.js"), encoding="utf-8").read() + "\n" + open(os.path.join(TPL, "common.js"), encoding="utf-8").read() \
+        + "\n" + open(os.path.join(TPL, "find.js"), encoding="utf-8").read()
     out = os.path.join(ROOT, "private") if private else OUT
     os.makedirs(out, exist_ok=True)
     for src, dst in (("study.html", "study-sheet.html"), ("flash.html", "flashcards.html"), ("index.html", "index.html")):

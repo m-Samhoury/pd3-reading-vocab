@@ -216,7 +216,49 @@ dl.keylist dd { margin: 0; }
 .chipbtn[aria-pressed="mixed"]::before { content: "–"; font-weight: 800; color: var(--accent-text); }
 .chipbtn.toggle { border-style: dashed; color: var(--soft); }
 .chipbtn.toggle[aria-expanded="true"] { border-style: solid; color: var(--ink); }
-@media print { .topbar, dialog.info { display: none; } }
+/* find bar ("Find ord" in the top bar, find.js): slides open under the top bar, the page stays put */
+.findbar { display: grid; grid-template-rows: 0fr; background: var(--sheet); border-bottom: 1px solid transparent;
+  transition: grid-template-rows .34s cubic-bezier(.2, .8, .2, 1), border-color .34s; }
+.findbar.open { grid-template-rows: 1fr; border-bottom-color: var(--rule); box-shadow: var(--shadow); }
+.findbar-in { min-height: 0; overflow: hidden; }
+.findbar .fwrap { max-width: 812px; padding-top: 14px; padding-bottom: 16px; opacity: 0; transform: translateY(-10px);
+  transition: opacity .24s, transform .34s cubic-bezier(.2, .8, .2, 1); }
+.findbar.open .fwrap { opacity: 1; transform: none; transition-delay: .06s; }
+.finder { position: relative; clip-path: inset(0 0 0 70% round 14px); transition: clip-path .42s cubic-bezier(.2, .8, .2, 1); }
+.findbar.open .finder { clip-path: inset(-6px round 18px); }
+.finder .ficon { position: absolute; left: 16px; top: 50%; translate: 0 -50%; color: var(--faint); pointer-events: none; }
+.finder input { width: 100%; font-size: 1.2rem; padding: 13px 54px 13px 46px; border-radius: 14px; border: 1.5px solid var(--rule-strong); background: var(--sheet); color: var(--ink); }
+.finder input::-webkit-search-cancel-button { display: none; }
+.finder input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.fx { position: absolute; right: 8px; top: 50%; translate: 0 -50%; display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%;
+  border: 0; background: var(--paper); color: var(--soft); cursor: pointer; transform: rotate(-90deg) scale(.5); opacity: 0;
+  transition: transform .34s cubic-bezier(.2, .8, .2, 1) .1s, opacity .2s .1s, background .15s, color .15s; }
+.findbar.open .fx { transform: none; opacity: 1; }
+.fx:hover { background: var(--accent-soft); color: var(--accent-text); }
+.fsub { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 14px; }
+.fsub .letters { display: flex; gap: 6px; margin-top: 8px; }
+.fsub .letters button { min-width: 40px; min-height: 36px; border-radius: 9px; border: 1px solid var(--rule-strong); background: var(--sheet); cursor: pointer; font-size: 1rem; }
+.fsub .letters button:hover { border-color: var(--ink); }
+.fsub #fmeta { margin: 8px 0 0; }
+.findbar .hits { display: grid; gap: 12px; max-height: min(62vh, 600px); overflow-y: auto; overscroll-behavior: contain; margin-top: 14px; padding: 2px; }
+.findbar .hits:empty { display: none; }
+.findbar .hit { padding: 16px 18px; background: var(--paper); box-shadow: none; }
+.hit .fhead { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.hit .big { font-family: var(--head); font-size: 1.6rem; font-weight: 700; letter-spacing: -.02em; }
+.hit .meaning { font-size: 1.1rem; font-weight: 600; margin-top: 4px; }
+.hit .via { font-size: .8rem; color: var(--faint); }
+.hit .cats { display: grid; gap: 8px; margin-top: 12px; }
+.hit .cat { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: .92rem; }
+.hit .cat .src { min-width: 120px; color: var(--soft); font-size: .82rem; }
+.hit .cat .gname { font-weight: 700; font-size: 1.05rem; }
+.hit .cat .gname small { font-weight: 400; color: var(--soft); font-size: .85rem; }
+.hit .frow { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 12px; }
+.fchip { min-height: 36px; padding: 4px 14px; border-radius: 999px; border: 1px solid var(--rule-strong); background: var(--sheet); cursor: pointer; font-weight: 600; }
+.fchip:hover { border-color: var(--ink); }
+.nav a[aria-expanded="true"] { color: var(--accent-text); font-weight: 600; background: var(--accent-soft); }
+dialog.info.fentry { width: min(760px, calc(100vw - 32px)); }
+dialog.info.fentry .entry { padding: 8px 0 0; }
+@media print { .topbar, .findbar, dialog.info { display: none; } }
 
 .bar { height: 8px; background: var(--rule); border-radius: 999px; overflow: hidden; }
 .bar > span { display: block; height: 100%; width: 0; background: var(--accent); border-radius: 999px; transition: width .25s; }
