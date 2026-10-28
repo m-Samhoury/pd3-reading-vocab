@@ -132,7 +132,7 @@ const I18N = {
   // find bar (find.js)
   "fd.ph": ["fx fordi, blandt andet, medføre …", "e.g. fordi, blandt andet, medføre …"], "fd.close": ["Luk søgningen", "Close the search"],
   "fd.count": ["{0} ord i Guidet læring · {1} på studiearket", "{0} words in Assisted learning · {1} on the study sheet"],
-  "fd.site": ["Studiearket", "Study sheet"], "fd.al": ["Åbn i Guidet læring", "Open in Assisted learning"], "fd.more": ["Forklar mere", "Explain more"],
+  "fd.site": ["Studiearket", "Study sheet"], "fd.al": ["Åbn i Guidet læring", "Open in Assisted learning"], "fd.more": ["Forklar mere", "Explain more"], "fd.with": ["Med:", "Used with:"],
   "fd.notal": ["ikke i Guidet læring", "not in Assisted learning"], "fd.notsite": ["ikke i studiearket", "not on the study sheet"],
   "fd.p1": ["Forbinderord", "Connectors"], "fd.p2": ["Ord fra prøven", "Exam words"], "fd.p3": ["Andre nyttige ord", "Other useful words"],
   "fd.none": ["“{0}” findes ikke i nogen af listerne.", "“{0}” isn't in either list."], "fd.near": ["Mente du:", "Did you mean:"],
@@ -140,7 +140,7 @@ const I18N = {
   "fd.viaen": ["fundet via den engelske betydning", "matched on the English meaning"], "fd.viaform": ["fundet via bøjningsformen “{0}”", "matched on the form “{0}”"],
   "idx.t1": ["Tier 1 · forbinderord", "Tier 1 · connectors"], "idx.t2": ["Tier 2 · ord fra opgaverne", "Tier 2 · question words"], "idx.t3": ["Tier 3 · ord fra teksterne", "Tier 3 · text words"],
 };
-const LANG = (() => { try { return localStorage.getItem("pd3.lang") === "en" ? "en" : "da"; } catch (e) { return "da"; } })();
+let LANG = (() => { try { return localStorage.getItem("pd3.lang") === "en" ? "en" : "da"; } catch (e) { return "da"; } })();
 function t(key, ...args) {
   const e = I18N[key];
   let s = e ? e[LANG === "en" ? 1 : 0] : key;
@@ -149,21 +149,95 @@ function t(key, ...args) {
 }
 /** translate static markup: data-i18n (text), data-i18n-ph (placeholder), data-i18n-aria (aria-label) */
 function applyI18n(root = document) {
+  applyTexts(root);
+  const nav = document.querySelector(".nav");
+  if (nav && !document.querySelector(".langbtn")) {
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "langbtn"; b.lang = LANG === "en" ? "da" : "en";
+    b.textContent = t("lang.button"); b.title = t("lang.title");
+    b.addEventListener("click", flipLang);
+    (nav.closest(".topbar-in") || nav).append(...infoDialog(), b);
+  }
+}
+function applyTexts(root = document) {
   root.querySelectorAll("[data-i18n]").forEach(n => { n.textContent = t(n.dataset.i18n); });
   root.querySelectorAll("[data-i18n-ph]").forEach(n => { n.placeholder = t(n.dataset.i18nPh); });
   root.querySelectorAll("[data-i18n-aria]").forEach(n => { n.setAttribute("aria-label", t(n.dataset.i18nAria)); });
   document.documentElement.lang = LANG;
-  const nav = document.querySelector(".nav");
-  if (nav && !nav.querySelector(".langbtn")) {
-    const b = document.createElement("button");
-    b.type = "button"; b.className = "langbtn"; b.lang = LANG === "en" ? "da" : "en";
-    b.textContent = t("lang.button"); b.title = t("lang.title");
-    b.addEventListener("click", () => {
-      try { localStorage.setItem("pd3.lang", LANG === "en" ? "da" : "en"); } catch (e) { /* ignore */ }
-      location.reload();
-    });
-    (nav.closest(".topbar-in") || nav).append(...infoDialog(), b);
+}
+
+/** The language button swaps every interface text on screen instead of reloading, so filters, a flashcard round,
+    a test or an open search stay exactly where they are. Texts are found by their wording in the other language;
+    Danish or English content (lang="da" / lang="en") is left alone. */
+function langPairs() {
+  const pairs = Object.values(I18N).map(v => [v[0], v[1]]);           // [da, en]
+  if (typeof PD3 !== "undefined") {
+    for (const g of PD3.groups) pairs.push([g.name_da, g.name_en], [`${g.name_da} · ${g.name_en}`, `${g.name_en} · ${g.name_da}`],
+      [`${g.name_da} – ${g.name_en}`, `${g.name_en} – ${g.name_da}`]);
+    for (const w of PD3.words) if (w.word_order) pairs.push([w.word_order.note_da, w.word_order.note_en]);
+    for (const [en, da] of Object.values((PD3.raw.coach || {}).groups || {})) pairs.push([da, en]);
   }
+  return pairs;
+}
+function flipLang() {
+  const to = LANG === "en" ? "da" : "en", [fi, ti] = to === "en" ? [0, 1] : [1, 0];
+  const exact = new Map(), pats = [];
+  for (const p of langPairs()) {
+    const a = p[fi], b = p[ti];
+    if (!a || !b || a === b || /<[a-z]/i.test(a)) continue;
+    if (/\{\d\}/.test(a)) {
+      const idx = [], re = a.replace(/[.*+?^$()|[\]\\]/g, "\\$&").replace(/\{(\d)\}/g, (_, i) => { idx.push(i); return "(.+?)"; });
+      pats.push([new RegExp("^" + re + "$"), b, idx]);
+    } else {
+      exact.set(a.trim(), b.trim());
+      exact.set(a.trim().replace(/:$/, ""), b.trim().replace(/:$/, ""));   // labels used without their colon ("Brug")
+    }
+  }
+  const one = k => {
+    if (exact.has(k)) return exact.get(k);
+    for (const [re, b, idx] of pats) {
+      const m = re.exec(k), v = {};
+      if (m) { idx.forEach((i, j) => { v[i] = m[j + 1]; }); return b.replace(/\{(\d)\}/g, (_, i) => v[i] ?? ""); }
+    }
+    return null;
+  };
+  // whole text first; then without a leading symbol, a trailing arrow/colon or a "(Tier 1)" note;
+  // then compounds part by part ("Årsag · Reason", "a — b")
+  const bare = k => {
+    const r = one(k);
+    if (r != null) return r;
+    const m = /^([^\p{L}\p{N}“"(]*)(.*?)((?:\s*\([^()]*\))?[\s:→←›…]*)$/u.exec(k);
+    if (m && (m[1] || m[3]) && m[2]) { const x = one(m[2]); if (x != null) return m[1] + x + m[3]; }
+    return null;
+  };
+  const tr = s => {
+    const k = s.trim();
+    if (!k) return null;
+    let out = bare(k);
+    for (const sep of [" · ", " — ", " – "]) {
+      if (out != null || !k.includes(sep)) continue;
+      const parts = k.split(sep), got = parts.map(x => bare(x.trim()) ?? x);
+      if (got.some((x, i) => x !== parts[i])) out = got.join(sep);
+    }
+    return out == null ? null : s.replace(k, out);
+  };
+  const content = n => { const l = n.closest("[lang]"); return l && l !== document.documentElement; };
+  const walk = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+  for (let n; (n = walk.nextNode());) {
+    const el = n.parentElement;
+    if (!el || el.closest("script, style") || content(el)) continue;
+    const r = tr(n.nodeValue); if (r != null) n.nodeValue = r;
+  }
+  document.body.querySelectorAll("[title], [aria-label], [placeholder]").forEach(el => {
+    if (content(el)) return;
+    for (const a of ["title", "aria-label", "placeholder"]) { const v = el.getAttribute(a); const r = v && tr(v); if (r != null) el.setAttribute(a, r); }
+  });
+  const title = tr(document.title); if (title != null) document.title = title;
+  LANG = to;
+  try { localStorage.setItem("pd3.lang", to); } catch (e) { /* ignore */ }
+  applyTexts();
+  const b = document.querySelector(".langbtn");
+  b.lang = to === "en" ? "da" : "en"; b.textContent = t("lang.button"); b.title = t("lang.title");
 }
 
 /** ⓘ button in the top bar that opens a help dialog: page-specific help (#infoExtra) + the abbreviations key */

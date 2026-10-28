@@ -37,8 +37,8 @@
   const INDEX = (() => {
     const idx = new Map();
     const get = key => { if (!idx.has(key)) idx.set(key, { key, word: null, meaning: "", card: null, site: null, forms: new Set(), en: "" }); return idx.get(key); };
-    for (const [id, word, meaning, group, wtype] of coach.cards) {
-      const e = get(fold(word)); e.word = word; e.card = { id, word, group, wtype }; e.meaning = meaning; e.en += " " + meaning;
+    for (const [id, word, meaning, group, wtype, prep] of coach.cards) {
+      const e = get(fold(word)); e.word = word; e.card = { id, word, group, wtype, prep }; e.meaning = meaning; e.en += " " + meaning;
       variants(word).forEach(v => e.forms.add(v));
     }
     for (const w of PD3.words) {
@@ -99,6 +99,7 @@
       el("div", { class: "fhead" }, el("span", { class: "big", lang: "da" }, e.word),
         c && c.wtype ? el("span", { class: "tag" }, c.wtype) : w ? el("span", { class: "tag" }, w.word_class || "") : null),
       e.meaning ? el("div", { class: "meaning" }, e.meaning) : null,
+      c && c.prep ? el("div", { class: "prepline" }, t("fd.with") + " ", el("b", { lang: "da" }, c.prep)) : null,
       via ? el("div", { class: "via" }, via) : null,
       el("div", { class: "cats" },
         el("div", { class: "cat" }, el("span", { class: "src" }, t("nav.assisted")),

@@ -46,17 +46,18 @@ def load_json(path):
 
 
 def coach_index():
-    """Guidet læring's words and groups, so the find bar on every page can say where a word is taught.
+    """Guidet læring's words, groups and constructions ("Med: …"), so the find bar on every page can say where a word is taught.
     Read from the local PD3 project (PD3_EXAMS); without it the bar searches the study sheet only."""
     try:
         cards = json.load(open(os.path.join(EXAMS, "pd3-data", "vocab.json"), encoding="utf-8"))["cards"]
+        tips = json.load(open(os.path.join(EXAMS, "pd3-data", "tips.json"), encoding="utf-8"))
         tpl = open(os.path.join(EXAMS, ".claude", "skills", "pd3-coach", "app", "assisted-learning.html"), encoding="utf-8").read()
         groups = json.loads(re.sub(r",\s*}$", "}", re.search(r"const GROUPS = (\{.*?\n\});", tpl, re.S).group(1)))
     except (OSError, AttributeError, ValueError) as e:
         print(f"note: no Guidet læring deck ({e}) – the find bar searches the study sheet only")
         return None
     wtype = lambda c: (re.match(r"(SUB/PRÆP|SUB/ADV|SUB|ADV|KOO|PRÆP)\b", c.get("note") or "") or [None])[0]
-    return {"cards": [[cid, c["word"], c["meaning"], c["group"], wtype(c)] for cid, c in cards.items()], "groups": groups}
+    return {"cards": [[cid, c["word"], c["meaning"], c["group"], wtype(c), tips.get(cid, {}).get("prep")] for cid, c in cards.items()], "groups": groups}
 
 
 def dictionary_info(w, ddo_e, wikt, private):

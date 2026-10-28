@@ -247,6 +247,8 @@ dl.keylist dd { margin: 0; }
 .hit .big { font-family: var(--head); font-size: 1.6rem; font-weight: 700; letter-spacing: -.02em; }
 .hit .meaning { font-size: 1.1rem; font-weight: 600; margin-top: 4px; }
 .hit .via { font-size: .8rem; color: var(--faint); }
+.hit .prepline { display: inline-block; margin: 6px 0 2px; padding: 3px 10px; border-radius: 8px; background: var(--blue-soft); color: var(--blue-text); font-size: .9rem; }
+.hit .prepline b { color: var(--ink); font-weight: 600; }
 .hit .cats { display: grid; gap: 8px; margin-top: 12px; }
 .hit .cat { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: .92rem; }
 .hit .cat .src { min-width: 120px; color: var(--soft); font-size: .82rem; }
