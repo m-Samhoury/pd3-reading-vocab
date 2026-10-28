@@ -5,7 +5,7 @@ exam sittings Nov 2022 – May 2024. Standalone pages, no install needed, work o
 
 - `index.html` – overview, progress and word groups
 - `study-sheet.html` – every word with meanings, examples, collocations and word order; search, filter, print
-- `flashcards.html` – spaced-repetition flashcards (`#learn`) and a 10-question exam-style test (`#test`)
+- `flashcards.html` – spaced-repetition flashcards (`#learn`; the card front shows the word, the word in a real exam sentence, or its meaning) and a 10-question exam-style test (`#test`)
 - `assisted-learning.html` – guided teach → test → review for the PD3 coach deck ([open](https://m-samhoury.github.io/pd3-reading-vocab/assisted-learning.html)), plus *Find ord*, a word → group lookup ([open](https://m-samhoury.github.io/pd3-reading-vocab/assisted-learning.html#find))
 
 Progress is stored in the browser (localStorage). Use Export/Import on the flashcards page to move it.

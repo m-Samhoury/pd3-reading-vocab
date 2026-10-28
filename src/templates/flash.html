@@ -37,6 +37,17 @@ main { padding-bottom: 40px; }
 .flash .front .big { font-family: var(--head); font-size: clamp(2rem, 8vw, 2.9rem); font-weight: 700; letter-spacing: -.03em; line-height: 1.1; }
 .flash .front .defn { font-size: 1.15rem; font-weight: 600; max-width: 34ch; }
 .flash .front .tap { color: var(--faint); font-size: .88rem; margin-top: 8px; }
+.facepick { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 0 0 12px; }
+.seg { display: grid; grid-template-columns: repeat(3, auto); border: 1.5px solid var(--rule-strong); border-radius: 14px; overflow: hidden; background: var(--sheet); }
+.seg button { min-height: 46px; padding: 6px 14px; border: 0; border-left: 1.5px solid var(--rule-strong); background: none; color: var(--soft); font: inherit; font-weight: 600; cursor: pointer; }
+.seg button:first-child { border-left: 0; }
+.seg button[aria-checked="true"] { background: var(--accent); color: #fff; }
+@media (max-width: 520px) { .seg { width: 100%; grid-template-columns: repeat(3, 1fr); } .seg button { padding: 6px 8px; font-size: .92rem; line-height: 1.2; } }
+.flash .front .ctxs { font-size: clamp(1.15rem, 4.6vw, 1.4rem); line-height: 1.55; max-width: 38ch; text-align: left; margin: 4px 0; }
+.flash .front .ctxs mark.hl, .ctxback mark.hl { padding: 0 .15em; border-radius: 4px; }
+.ctxback { margin: 18px 18px 0; }
+.ctxback .lbl { text-transform: none; letter-spacing: 0; }
+.ctxback p { margin: 6px 0 4px; line-height: 1.55; }
 .flash .back { max-height: min(62vh, 640px); overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; cursor: auto; }
 .flash .back .entry { padding: 18px 18px 22px; }
 .stepper { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 0 0 12px; }
@@ -112,6 +123,14 @@ h2.sub { font-size: 1.1rem; margin: 26px 0 8px; }
 
 <main class="wrap">
   <section id="learn" role="tabpanel" aria-labelledby="tab-learn" class="panel">
+    <div class="facepick">
+      <span class="ptitle" id="faceLbl" data-i18n="face.title">Forsiden viser</span>
+      <div class="seg" id="face" role="radiogroup" aria-labelledby="faceLbl">
+        <button type="button" role="radio" data-face="word" data-i18n="face.word">Ordet</button>
+        <button type="button" role="radio" data-face="context" data-i18n="face.context">Ordet i en sætning</button>
+        <button type="button" role="radio" data-face="meaning" data-i18n="face.meaning">Betydningen</button>
+      </div>
+    </div>
     <div class="counter"><span id="cnt"></span><span id="summary"></span></div>
     <div class="bar" aria-hidden="true"><span id="bar"></span></div>
     <div class="sheet flash" id="card" tabindex="0" role="button" aria-label="Flashcard – press Space to flip"></div>
@@ -128,7 +147,6 @@ h2.sub { font-size: 1.1rem; margin: 26px 0 8px; }
       <summary data-i18n="fl.more">Indstillinger og backup</summary>
       <div class="moreopts">
         <label class="check"><input type="checkbox" id="shuffle"> <span data-i18n="fl.shuffle">Bland</span></label>
-        <label class="check"><input type="checkbox" id="reverse"> <span data-i18n="fl.reverse">Omvendt (definition → dansk)</span></label>
         <div class="tools-row">
           <button class="btn" type="button" id="export" data-i18n="fl.export">Eksportér fremskridt</button>
           <label class="btn" for="importFile" data-i18n="fl.import">Importér</label>
@@ -192,7 +210,7 @@ h2.sub { font-size: 1.1rem; margin: 26px 0 8px; }
   });
 
   /* ───────────── LEARN: state & scheduler (SM-2) ───────────── */
-  const F = Object.assign({ cards: {}, settings: { deck: "t1", shuffle: false, reverse: false } }, store.get(FKEY, {}));
+  const F = Object.assign({ cards: {}, settings: { deck: "t1", shuffle: false } }, store.get(FKEY, {}));
   const saveF = () => store.set(FKEY, F);
   const st = id => F.cards[id] || (F.cards[id] = { ef: 2.5, interval: 0, reps: 0, due: 0, last: 0, seen: 0, lapses: 0 });
   const isKnown = id => F.cards[id] && F.cards[id].last === 5;
@@ -213,7 +231,10 @@ h2.sub { font-size: 1.1rem; margin: 26px 0 8px; }
   }
 
   $("#shuffle").checked = !!F.settings.shuffle;
-  $("#reverse").checked = !!F.settings.reverse;
+  // card front: the word, the word in an exam sentence, or the meaning (older saves stored reverse: true)
+  let face = F.settings.face || (F.settings.reverse ? "meaning" : "word");
+  function renderFace() { document.querySelectorAll("#face [data-face]").forEach(b => b.setAttribute("aria-checked", String(b.dataset.face === face))); }
+  renderFace();
 
   /* ───────────── word picker: category chips shared by Learn and Test ───────────── */
   const live = groups.filter(g => g.words.length);
@@ -264,7 +285,7 @@ h2.sub { font-size: 1.1rem; margin: 26px 0 8px; }
     const fresh = ws.filter(w => !F.cards[w.id] || !F.cards[w.id].seen);
     let q = practiseAll ? ws : [...due, ...fresh];
     if ($("#shuffle").checked) q = shuffle(q.slice());
-    queue = q.map(w => w.id); qi = 0; sessionTotal = queue.length; flipped = false;
+    queue = q.map(w => w.id); qi = 0; ctxPick = {}; sessionTotal = queue.length; flipped = false;
     renderCard(); renderMastery();
   }
   renderPicker();
@@ -274,9 +295,35 @@ h2.sub { font-size: 1.1rem; margin: 26px 0 8px; }
     $("#summary").textContent = ws.length ? t("sum", ws.filter(w => isKnown(w.id)).length, ws.length, ws.filter(w => isDue(w.id)).length) : "";
   }
 
+  /** one exam sentence per word and session (a new one next session); the sense example if the exams have none */
+  let ctxPick = {};
+  function context(w) {
+    if (ctxPick[w.id]) return ctxPick[w.id];
+    const real = w.exam_sentences.filter(s => highlight(s.text, w).length > 1);
+    const short = real.filter(s => s.text.length <= 260);
+    const s = shuffle((short.length ? short : real).slice())[0];
+    return (ctxPick[w.id] = s ? { text: clip(s.text, w), exam: s.exam, part: s.part } : { text: w.senses[0].example_da });
+  }
+  const ctxSrc = c => c.exam ? t("ctx.src", c.exam, c.part) : t("ctx.example");
+  function clip(text, w) {                       // long sentences: keep ~120 characters either side of the word
+    if (text.length <= 260) return text;
+    const i = String(highlight(text, w)[0]).length;
+    let a = Math.max(0, i - 120), b = Math.min(text.length, i + 140);
+    if (a > 0) a = text.indexOf(" ", a) + 1;
+    if (b < text.length) b = text.lastIndexOf(" ", b);
+    return (a > 0 ? "… " : "") + text.slice(a, b).trim() + (b < text.length ? " …" : "");
+  }
   function front(w) {
     const g = groupById[w.primary_group];
-    if ($("#reverse").checked) {
+    if (face === "context") {
+      const c = context(w);
+      return el("div", { class: "front" },
+        el("div", { class: "ghead", style: gstyle(w.primary_group) }, el("span", { class: "meta" }, g ? g.name_da : "")),
+        el("p", { class: "ctxs", lang: "da" }, ...highlight(c.text, w)),
+        el("div", { class: "meta" }, ctxSrc(c)),
+        el("div", { class: "tap" }, t("front.ctx")));
+    }
+    if (face === "meaning") {
       const s = w.senses[0];
       return el("div", { class: "front" },
         el("div", { class: "meta" }, `Tier ${w.tier} · ${w.word_class}`),
@@ -293,7 +340,13 @@ h2.sub { font-size: 1.1rem; margin: 26px 0 8px; }
       el("div", { class: "tap" }, t("front.tap")));
   }
   function back(w) {
-    const b = el("div", { class: "back", tabindex: "0", "aria-label": "Card back – scrollable" }, entry(w, { tag: "div" }));
+    const b = el("div", { class: "back", tabindex: "0", "aria-label": "Card back – scrollable" });
+    if (face === "context") {
+      const c = context(w);
+      b.append(el("div", { class: "eg ctxback" }, el("span", { class: "lbl" }, ctxSrc(c)),
+        el("p", { lang: "da" }, ...highlight(c.text, w))));
+    }
+    b.append(entry(w, { tag: "div" }));
     return b;
   }
   function renderCard() {
@@ -368,7 +421,10 @@ h2.sub { font-size: 1.1rem; margin: 26px 0 8px; }
   });
 
   $("#shuffle").addEventListener("change", e => { F.settings.shuffle = e.target.checked; saveF(); buildSession(); });
-  $("#reverse").addEventListener("change", e => { F.settings.reverse = e.target.checked; saveF(); flipped = false; renderCard(); });
+  $("#face").addEventListener("click", e => {
+    const b = e.target.closest("[data-face]"); if (!b) return;
+    face = F.settings.face = b.dataset.face; delete F.settings.reverse; saveF(); renderFace(); flipped = false; renderCard();
+  });
 
   // export / import / reset
   $("#export").addEventListener("click", () => {
