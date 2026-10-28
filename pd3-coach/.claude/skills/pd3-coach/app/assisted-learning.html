@@ -377,7 +377,7 @@ input.answer:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--ac
 <script>
 "use strict";
 // ---------- interface language (shared with the other pages via localStorage "pd3.lang") ----------
-const LANG = (() => { try { return localStorage.getItem("pd3.lang") === "en" ? "en" : "da"; } catch (e) { return "da"; } })();
+let LANG = (() => { try { return localStorage.getItem("pd3.lang") === "en" ? "en" : "da"; } catch (e) { return "da"; } })();
 const I18N = {
   "brand": ["PD3 ordforråd", "PD3 vocabulary"],
   "nav.overview": ["Overblik", "Overview"], "nav.study": ["Studieark", "Study sheet"], "nav.flash": ["Flashcards", "Flashcards"],
@@ -675,9 +675,84 @@ function chrome() {
   const lang = document.createElement("button");
   lang.type = "button"; lang.className = "langbtn"; lang.lang = LANG === "en" ? "da" : "en";
   lang.textContent = t("lang.button"); lang.title = t("lang.title");
-  lang.onclick = () => { try { localStorage.setItem("pd3.lang", LANG === "en" ? "da" : "en"); } catch (e) { /* ignore */ } location.reload(); };
+  lang.onclick = flipLang;
   bar.append(info, lang);
   $("#foot").textContent = t("foot");
+}
+
+// ---------- switching language in place ----------
+// The language button swaps every interface text on screen instead of reloading, so a session, a flashcard,
+// a search or an open dialog stays exactly where it is. Texts are found by their wording in the other language;
+// Danish or English content (lang="da" / lang="en", the words and sentences) is left alone.
+function langPairs() {
+  const pairs = Object.values(I18N).map(v => [v[0], v[1]]);           // [da, en]
+  for (const [en, da] of Object.values(GROUPS)) pairs.push([da, en], [`${da} · ${en}`, `${en} · ${da}`]);
+  for (const r of Object.values(RULES)) pairs.push([r[2], r[1]]);
+  for (const p of CONFUSABLES) pairs.push([p[3], p[2]]);
+  return pairs;
+}
+function flipLang() {
+  const to = LANG === "en" ? "da" : "en", [fi, ti] = to === "en" ? [0, 1] : [1, 0];
+  const exact = new Map(), pats = [];
+  for (const p of langPairs()) {
+    const a = p[fi], b = p[ti];
+    if (!a || !b || a === b || /<[a-z]/i.test(a)) continue;
+    if (/\{\d\}/.test(a)) {
+      const idx = [], re = a.replace(/[.*+?^$()|[\]\\]/g, "\\$&").replace(/\{(\d)\}/g, (_, i) => { idx.push(i); return "(.+?)"; });
+      pats.push([new RegExp("^" + re + "$"), b, idx]);
+    } else {
+      exact.set(a.trim(), b.trim());
+      exact.set(a.trim().replace(/:$/, ""), b.trim().replace(/:$/, ""));   // labels used without their colon
+    }
+  }
+  const one = k => {
+    if (exact.has(k)) return exact.get(k);
+    for (const [re, b, idx] of pats) {
+      const m = re.exec(k), v = {};
+      if (m) { idx.forEach((i, j) => { v[i] = m[j + 1]; }); return b.replace(/\{(\d)\}/g, (_, i) => v[i] ?? ""); }
+    }
+    return null;
+  };
+  // whole text first; then without a leading symbol or trailing arrow/colon ("✕ Afslut", "Ordstilling:");
+  // then compounds part by part ("Start session · Årsag", "Forveksl ikke: a / b — begge = …")
+  const bare = k => {
+    const r = one(k);
+    if (r != null) return r;
+    const m = /^([^\p{L}\p{N}“"(]*)(.*?)([\s:→←›…]*)$/u.exec(k);
+    if (m && (m[1] || m[3]) && m[2]) { const x = one(m[2]); if (x != null) return m[1] + x + m[3]; }
+    return null;
+  };
+  const tr = s => {
+    const k = s.trim();
+    if (!k) return null;
+    let out = bare(k);
+    for (const sep of [" · ", " — "]) {
+      if (out != null || !k.includes(sep)) continue;
+      const parts = k.split(sep), got = parts.map(x => bare(x.trim()) ?? x);
+      if (got.some((x, i) => x !== parts[i])) out = got.join(sep);
+    }
+    return out == null ? null : s.replace(k, out);
+  };
+  const content = n => { const l = n.closest && n.closest("[lang]"); return l && l !== document.documentElement; };
+  const walk = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+  for (let n; (n = walk.nextNode());) {
+    const el = n.parentElement;
+    if (!el || el.closest("script, style") || content(el)) continue;
+    const r = tr(n.nodeValue); if (r != null) n.nodeValue = r;
+  }
+  document.body.querySelectorAll("[title], [aria-label], [placeholder]").forEach(el => {
+    if (content(el)) return;
+    for (const a of ["title", "aria-label", "placeholder"]) { const v = el.getAttribute(a); const r = v && tr(v); if (r != null) el.setAttribute(a, r); }
+  });
+  LANG = to;
+  try { localStorage.setItem("pd3.lang", to); } catch (e) { /* ignore */ }
+  document.documentElement.lang = to;
+  document.title = `${t("nav.assisted")} · ${t("brand")}`;
+  const lb = $(".langbtn"); lb.lang = to === "en" ? "da" : "en"; lb.textContent = t("lang.button"); lb.title = t("lang.title");
+  // screens that redraw without losing anything are drawn again, so nothing is left in the old language
+  if ($("#go")) { const y = window.scrollY; home(); window.scrollTo(0, y); }
+  else if (FC && $("#fcard")) flashCard();
+  if ($("#findbar").classList.contains("open")) findDraw();
 }
 
 function load() {
@@ -1585,7 +1660,7 @@ function flashCard() {
       <div class="seg" role="group">${["da", "en"].map(x => `<button type="button" data-dir="${x}" aria-pressed="${FC.dir === x}">${t("fc." + x)}</button>`).join("")}</div></div>
     <div class="fcprog"><div class="bar"><span style="width:${(100 * FC.known / FC.total).toFixed(1)}%"></span></div><span class="soft small">${t("fc.left", FC.pile.length, FC.known)}</span></div>
     <div class="fcard" id="fcard" role="button" tabindex="0" aria-label="${esc(t("fc.flip"))}">
-      <div class="fcin${FC.flipped ? " flipped" : ""}"><div class="face front">${front}</div><div class="face back" lang="${LANG}">${back}</div></div></div>
+      <div class="fcin${FC.flipped ? " flipped" : ""}"><div class="face front">${front}</div><div class="face back">${back}</div></div></div>
     <div class="row fcbtns" id="fcBtns"></div>
     <p class="soft small" style="text-align:center;margin-top:14px">${t("fc.keys")}</p></div>`;
   $("#fcHome").onclick = home;
@@ -1718,7 +1793,7 @@ function hitCard(x) {
   const via = x.en ? t("f.viaen") : (x.form && fold(x.form) !== fold(e.word) && x.sc === 0) ? t("f.viaform", x.form) : "";
   return `<div class="sheet hit">
     <div class="head"><span class="big" lang="da">${esc(e.word)}</span>${c && wtype(c) ? `<span class="tag">${esc(wtype(c))}</span>` : w ? `<span class="tag">${esc(w.word_class || "")}</span>` : ""}</div>
-    ${e.meaning ? `<div class="meaning">${esc(e.meaning)}</div>` : ""}${via ? `<div class="via">${esc(via)}</div>` : ""}
+    ${e.meaning ? `<div class="meaning">${esc(e.meaning)}</div>` : ""}${c ? prepLine(c) : ""}${via ? `<div class="via">${esc(via)}</div>` : ""}
     <div class="cats">
       <div class="cat"><span class="src">${t("f.al")}</span>${c ? `<span class="badge t${prio(c.group)}">${esc(t("p." + prio(c.group)))}</span><span class="gname">${esc(gname(c.group))} <small>· ${esc(GROUPS[c.group] ? GROUPS[c.group][LANG === "en" ? 1 : 0] : "")}</small></span>` : `<span class="soft">${t("f.notal")}</span>`}</div>
       ${SITE_WORDS ? `<div class="cat"><span class="src">${t("f.site")}</span>${sg.length ? sg.map((g, i) => `<span class="gname">${esc(LANG === "en" ? g.name_en : g.name_da)} <small>· ${esc(LANG === "en" ? g.name_da : g.name_en)}</small></span>`).join(`<span class="soft">+</span>`) : `<span class="soft">${t("f.notsite")}</span>`}</div>` : ""}
