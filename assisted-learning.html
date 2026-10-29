@@ -226,7 +226,10 @@ button, input { font: inherit; color: inherit; }
   background: var(--sheet); color: var(--ink); font-weight: 600; font-size: .9rem; cursor: pointer; }
 .langbtn:hover { border-color: var(--ink); }
 @media (max-width: 640px) {
-  .topbar-in { padding-bottom: 8px; }
+  .topbar-in { padding-bottom: 8px; column-gap: 8px; }
+  .brand { margin-right: auto; }
+  .iconbtn { margin-left: 0; }
+  .langbtn { padding: 6px 12px; }
   .nav { order: 3; flex-basis: 100%; margin-left: -10px; }
   .nav a { padding: 0 10px; }
 }
