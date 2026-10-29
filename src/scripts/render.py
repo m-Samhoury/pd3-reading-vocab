@@ -45,6 +45,28 @@ def load_json(path):
         return {}
 
 
+def exam_texts():
+    """every exam's text, letters only – to tell sentences copied from the exams from ones written for this tool"""
+    seg = load_json(os.path.join(B.WORK, "segments.json"))
+    def walk(x):
+        if isinstance(x, str):
+            yield x
+        elif isinstance(x, (dict, list)):
+            for v in (x.values() if isinstance(x, dict) else x):
+                yield from walk(v)
+    return {e: letters(" ".join(walk(seg[e]))) for e in seg}
+
+
+def letters(s):
+    return re.sub(r"[^a-zæøå0-9]", "", s.lower())
+
+
+def exam_of(sentence, texts):
+    """the exam a sentence is copied from word for word, else None"""
+    k = letters(sentence or "")
+    return next((e for e in B.EXAM_ORDER if k and k in texts.get(e, "")), None)
+
+
 def coach_index():
     """Guidet læring's words, groups and constructions ("Med: …"), so the find bar on every page can say where a word is taught.
     Read from the local PD3 project (PD3_EXAMS); without it the bar searches the study sheet only."""
@@ -93,19 +115,23 @@ def main(private=False):
     ddo_e = load_json(os.path.join(B.WORK, "ddo_entries.json"))
     wikt = load_json(os.path.join(B.WORK, "wiktionary.json"))
     groups = json.load(open(os.path.join(ROOT, "data", "groups.json"), encoding="utf-8"))
+    texts = exam_texts()
     slim = []
     for w in words:                                    # drop build-only fields to keep files small
         x = {k: v for k, v in w.items() if k not in ("occurrences", "ddo")}
         x["frequency"] = {k: v for k, v in w["frequency"].items()}
         x["dict"] = dictionary_info(w, ddo_e, wikt, private)
+        x["senses"] = [dict(se, ex_exam=exam_of(se["example_da"], texts)) for se in w["senses"]]
+        if w.get("word_order"):
+            x["word_order"] = dict(w["word_order"], ex_exam=exam_of(w["word_order"].get("example_da"), texts))
         slim.append(x)
     meta = {
         "exams": B.EXAM_ORDER,
         "exam_labels": [f"{e} = {B.EXAM_LABEL[e]}" for e in B.EXAM_ORDER],
         "thresholds": f"Tier 2: {build_t23.TIER2_RULE}. Tier 3: {build_t23.TIER3_RULE}.",
         "l3_items": l3_items(words),
-        "footer": "Source: Prøve i Dansk 3, Læseforståelse 1–3, Nov 2022 – May 2024 (SIRI). Definitions written for this "
-                  "study tool and checked against Den Danske Ordbog (ordnet.dk). Progress is stored only in this browser.",
+        "footer": "Source: Prøve i Dansk 3, Læseforståelse 1–3, Nov 2022 – May 2024 (SIRI). Text marked AI was written by AI "
+                  "(Claude) for this study tool, following Den Danske Ordbog (ordnet.dk) and the exams. Progress is stored only in this browser.",
         "private": private,
     }
     data = json.dumps({"words": slim, "groups": [g for g in groups if g["words"]], "meta": meta, "coach": coach_index()}, ensure_ascii=False)

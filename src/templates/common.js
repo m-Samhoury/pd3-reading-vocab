@@ -56,20 +56,24 @@ const PD3 = (() => {
 
   /** label + value row used inside an entry */
   const row = (label, ...val) => el("div", { class: "row" }, el("dt", null, label), el("dd", null, ...val));
+  /** small tag on text written by AI for this tool (not copied from Den Danske Ordbog or the exams) */
+  const ai = () => el("span", { class: "ai", title: t("ai.title") }, "AI");
+  /** "Eksempel" label: the exam it is copied from, else an AI tag */
+  const exLabel = (key, exam) => el("span", { class: "lbl" }, t(key), exam ? el("span", { class: "src" }, " · " + t("ai.exam", exam)) : ai());
 
   function senseItem(w, s, opts = {}) {
     const rel = [];
-    if (s.collocations.length) rel.push(row(t("sense.use").replace(/: $/, ""), el("span", { lang: "da" }, s.collocations.join(" · "))));
-    if (s.synonyms.length) rel.push(row(t("sense.syn").replace(/: $/, ""), el("span", { lang: "da" }, s.synonyms.join(", "))));
-    if (s.antonyms.length) rel.push(row(t("sense.ant").replace(/: $/, ""), el("span", { lang: "da" }, s.antonyms.join(", "))));
+    if (s.collocations.length) rel.push(row([t("sense.use").replace(/: $/, ""), ai()], el("span", { lang: "da" }, s.collocations.join(" · "))));
+    if (s.synonyms.length) rel.push(row([t("sense.syn").replace(/: $/, ""), ai()], el("span", { lang: "da" }, s.synonyms.join(", "))));
+    if (s.antonyms.length) rel.push(row([t("sense.ant").replace(/: $/, ""), ai()], el("span", { lang: "da" }, s.antonyms.join(", "))));
     if (opts.showGroup && s.group !== w.primary_group) rel.push(row(t("sense.group").replace(/: $/, ""), groupName(s.group)));
     return el("li", { class: "sense" },
       el("p", { class: "def" }, el("span", { class: "da", lang: "da" }, s.da_definition),
         s.register === "neutral" ? null : el("span", { class: "reg" }, t("reg." + s.register)),
-        el("span", { class: "en" }, s.en_definition)),
-      el("div", { class: "eg" }, el("span", { class: "lbl" }, t("d.example")),
+        el("span", { class: "en" }, s.en_definition, ai())),
+      el("div", { class: "eg" }, exLabel("d.example", s.ex_exam),
         el("p", { class: "da", lang: "da" }, ...highlight(s.example_da, w)),
-        el("p", { class: "en" }, s.example_en)),
+        el("p", { class: "en" }, s.example_en, s.ex_exam ? ai() : null)),
       rel.length ? el("dl", { class: "rel" }, ...rel) : null,
       s.verified ? null : el("p", { class: "flag" }, t("sense.unverified")));
   }
@@ -77,7 +81,7 @@ const PD3 = (() => {
     if (!w.word_order) return null;
     const o = w.word_order;
     return el("div", { class: "note" },
-      el("span", { class: "lbl" }, t("wo.title").trim()),
+      el("span", { class: "lbl" }, t("wo.title").trim(), ai()),
       el("p", { class: "da", lang: "da" }, o.note_da),
       el("p", { class: "en" }, o.note_en),
       o.example_da ? el("p", { class: "ex da", lang: "da" }, ...highlight(o.example_da, w)) : null,
@@ -107,7 +111,7 @@ const PD3 = (() => {
     const li = x => el("li", null, x);
     return row(t("d.construction"), el("ul", { class: "cons" }, ...items.slice(0, 4).map(li)),
       items.length > 4 ? el("details", { class: "cons-more" }, el("summary", null, t("d.more", items.length - 4)), el("ul", { class: "cons" }, ...items.slice(4).map(li))) : null,
-      g.length ? el("span", { class: "soft small" }, t("d.consddo")) : null);
+      g.length ? el("span", { class: "soft small" }, t("d.consddo")) : ai());
   }
   /** DDO's own numbered senses – only present in the private build */
   function ddoBlock(w) {
@@ -167,5 +171,5 @@ const PD3 = (() => {
     || b.frequency.exams - a.frequency.exams || b.frequency.total - a.frequency.total || a.lemma.localeCompare(b.lemma, "da");
 
   return { raw, words, groups, byId, groupById, PARTS, EXAMS, el, gstyle, groupName, displayLemma, parts, freqText,
-           metaLine, highlight, senseItem, wordOrderNote, entry, store, shuffle, priority };
+           metaLine, highlight, ai, senseItem, wordOrderNote, entry, store, shuffle, priority };
 })();

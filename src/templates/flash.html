@@ -183,7 +183,7 @@ h2.sub { font-size: 1.1rem; margin: 26px 0 8px; }
 <script>
 (() => {
   const { words, groups, byId, groupById, el, gstyle, groupName, metaLine, highlight, entry, wordOrderNote,
-          store, shuffle, priority, displayLemma } = PD3;
+          store, shuffle, priority, displayLemma, ai } = PD3;
   const $ = s => document.querySelector(s);
   const DAY = 86400000;
   const FKEY = "pd3.flash.v1", TKEY = "pd3.test.v1";
@@ -302,9 +302,9 @@ h2.sub { font-size: 1.1rem; margin: 26px 0 8px; }
     const real = w.exam_sentences.filter(s => highlight(s.text, w).length > 1);
     const short = real.filter(s => s.text.length <= 260);
     const s = shuffle((short.length ? short : real).slice())[0];
-    return (ctxPick[w.id] = s ? { text: clip(s.text, w), exam: s.exam, part: s.part } : { text: w.senses[0].example_da });
+    return (ctxPick[w.id] = s ? { text: clip(s.text, w), exam: s.exam, part: s.part } : { text: w.senses[0].example_da, ai: !w.senses[0].ex_exam });
   }
-  const ctxSrc = c => c.exam ? t("ctx.src", c.exam, c.part) : t("ctx.example");
+  const ctxSrc = c => [c.exam ? t("ctx.src", c.exam, c.part) : t("ctx.example"), c.ai ? ai() : null];
   function clip(text, w) {                       // long sentences: keep ~120 characters either side of the word
     if (text.length <= 260) return text;
     const i = String(highlight(text, w)[0]).length;
@@ -328,7 +328,7 @@ h2.sub { font-size: 1.1rem; margin: 26px 0 8px; }
       return el("div", { class: "front" },
         el("div", { class: "meta" }, `Tier ${w.tier} · ${w.word_class}`),
         el("div", { class: "defn" }, s.en_definition),
-        el("div", { class: "soft", lang: "da" }, s.da_definition),
+        el("div", { class: "soft", lang: "da" }, s.da_definition, ai()),
         w.senses.length > 1 ? el("div", { class: "meta" }, t("front.sense", w.senses.length)) : null,
         el("div", { class: "tap" }, t("front.which")));
     }
@@ -487,7 +487,7 @@ h2.sub { font-size: 1.1rem; margin: 26px 0 8px; }
     const ds = distractors(w, 3, { sameGroup: true });
     if (ds.length < 3) return null;
     return { type: 1, word: w, prompt: t("q.def"),
-      stem: [el("div", null, s.da_definition), el("div", { class: "soft small" }, s.en_definition)],
+      stem: [el("div", null, s.da_definition), el("div", { class: "soft small" }, s.en_definition, ai())],
       options: shuffle([{ label: displayLemma(w), correct: true }, ...ds.map(d => ({ label: displayLemma(d), correct: false }))]) };
   }
   function qL3(w) {
@@ -639,7 +639,7 @@ h2.sub { font-size: 1.1rem; margin: 26px 0 8px; }
     const w = q.word, s = q.sense || w.senses[0];
     return el("div", null,
       el("p", null, el("strong", { lang: "da" }, displayLemma(w)), " ", el("span", { class: "soft" }, `(${w.word_class})`),
-        " – ", s.da_definition, el("span", { class: "soft" }, " · " + s.en_definition)),
+        " – ", s.da_definition, el("span", { class: "soft" }, " · " + s.en_definition), ai()),
       el("p", { class: "small" }, el("em", { lang: "da" }, ...highlight(s.example_da, w)), el("span", { class: "soft" }, " – " + s.example_en)),
       q.real ? el("p", { class: "small soft" }, t("ex.key", q.real.answer, q.real.exam, q.real.n)) : null,
       w.tier === 1 ? el("p", { class: "small", style: "margin:4px 0" }, el("b", null, t("ex.relation")), groupName(w.primary_group), ". ",

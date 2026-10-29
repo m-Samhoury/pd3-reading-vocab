@@ -105,6 +105,11 @@ const I18N = {
   "d.consddo": ["Mønstre fra Den Danske Ordbog.", "Patterns from Den Danske Ordbog."],
   "d.partof": ["(præteritum participium af «{0}», DDO)", "(past participle of «{0}», DDO)"],
   "d.inflfrom": ["(DDO: opslaget «{0}»)", "(DDO: entry «{0}»)"],
+  "ai.title": ["Skrevet af AI (Claude) til dette værktøj – ikke fra Den Danske Ordbog eller prøverne. Tjek i ordbogen.",
+                "Written by AI (Claude) for this tool – not from Den Danske Ordbog or the exams. Check in the dictionary."],
+  "ai.exam": ["fra prøven {0}", "from the {0} exam"],
+  "lg.ai": ["skrevet af AI (Claude) til dette værktøj ud fra ordbogen og prøverne. Alt uden mærket er fra Den Danske Ordbog, prøverne eller Wiktionary.",
+            "written by AI (Claude) for this tool, based on the dictionary and the exams. Everything without the tag is from Den Danske Ordbog, the exams or Wiktionary."],
   "lg.nogen": ["en person · en ting (i konstruktioner)", "a person · a thing (in constructions)"],
   "lg.saetning": ["at-sætning · hv-sætning (hvorfor, hvordan …) · at + infinitiv", "that-clause · wh-clause (why, how …) · to-infinitive"],
   "d.inflection": ["Bøjning", "Inflection"], "d.invariable": ["bøjes ikke", "does not inflect"],
@@ -269,7 +274,7 @@ function infoDialog() {
   const dl = document.createElement("dl"); dl.className = "keylist";
   const rows = [["L1", "lg.L1"], ["L2A", "lg.L2A"], ["L2B", "lg.L2B"], ["L3", "lg.L3"],
                 ["Tier 1", "lg.T1"], ["Tier 2", "lg.T2"], ["Tier 3", "lg.T3"], [LANG === "en" ? "4 exams · 52×" : "4 prøver · 52×", "lg.freq"],
-                ["nogen · noget", "lg.nogen"], ["at + sætning · hv + sætning · at + infinitiv", "lg.saetning"]];
+                ["AI", "lg.ai"], ["nogen · noget", "lg.nogen"], ["at + sætning · hv + sætning · at + infinitiv", "lg.saetning"]];
   for (const [k, v] of rows) {
     const dt = document.createElement("dt"); dt.textContent = k;
     const dd = document.createElement("dd"); dd.textContent = t(v);

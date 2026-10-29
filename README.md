@@ -60,6 +60,12 @@ copy the rebuilt file over this one. It also opens straight from disk, no server
 Every entry, on all pages including Guidet læring, shows the same blocks: word class, en/et (nouns), bøjning,
 construction, meanings, examples and a *Brug* list.
 
+Text written by AI (Claude) for this tool carries a small dashed **AI** tag on every page: definitions, English
+meanings, *Brug*, synonyms, word-order notes, construction notes that are not DDO patterns, Guidet læring's notes
+and tips, and examples that are not copied word for word from an exam or DDO (`render.py` checks each example
+against the exam text). Untagged text is from Den Danske Ordbog, the exams or Wiktionary; Guidet læring's English
+under DDO's definitions is marked as Google Translate.
+
 - **Word class, en/et, bøjning, forms** – Den Danske Ordbog (ordnet.dk), read from the cached pages.
   Participles and comparatives take their bøjning from their DDO headword (*kvalificeret* ← *kvalificere*).
 - **Construction** – DDO's grammar patterns (*NOGEN forklarer NOGET/at+SÆTNING over_for NOGEN*) where DDO has

@@ -107,6 +107,10 @@ div.meta { display: flex; }
 .badge.t3 { background: var(--violet-soft); color: var(--violet-text); }
 .tag { display: inline-flex; align-items: center; min-height: 22px; padding: 0 7px; border-radius: 6px; border: 1px solid var(--rule-strong);
   font-size: .72rem; font-weight: 600; color: var(--soft); letter-spacing: .02em; }
+/* tag on text written by AI for this tool (not from DDO or the exams) */
+.ai { display: inline-block; margin-left: 6px; padding: 0 5px; border: 1px dashed var(--faint); border-radius: 5px; vertical-align: .12em;
+  font: 700 .6rem/1.45 var(--body); letter-spacing: .06em; text-transform: none; color: var(--soft); white-space: nowrap; cursor: help; }
+.lbl .src { text-transform: none; letter-spacing: 0; font-weight: 600; }
 .flag { font-size: .78rem; font-weight: 600; color: var(--bad); }
 .flag.guide { color: var(--violet-text); font-weight: 500; }
 .soft { color: var(--soft); }
