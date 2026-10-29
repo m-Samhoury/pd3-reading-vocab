@@ -291,6 +291,31 @@ input.answer:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--ac
 .sensenote { margin-top: 12px; padding: 10px 14px; background: var(--blue-soft); border-radius: 12px; font-size: .9rem; }
 .prepline { display: inline-block; margin: 6px 0 2px; padding: 3px 10px; border-radius: 8px; background: var(--blue-soft); color: var(--blue-text); font-size: .9rem; }
 .prepline b { color: var(--ink); font-weight: 600; }
+/* Grammatik */
+textarea.answer { width: 100%; min-height: 96px; font: inherit; font-size: 1.1rem; line-height: 1.5; padding: 10px 14px; border: 1px solid var(--rule-strong); border-radius: 12px; background: var(--sheet); color: var(--ink); margin-top: 14px; resize: vertical; }
+textarea.answer:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); outline: none; }
+.gtile { padding: 18px 20px; margin-top: 14px; display: grid; gap: 8px; }
+.gtile h3 { font-size: 1.2rem; }
+.gtile .demo { font-style: italic; color: var(--soft); }
+.chipw { display: inline-block; padding: 2px 10px; border-radius: 8px; background: var(--accent-soft); color: var(--accent-text); font-weight: 700; }
+.slots { font-size: 1.15rem; line-height: 2.3; font-weight: 500; }
+.slot { display: inline-grid; place-items: center; min-width: 22px; height: 28px; margin: 0 2px; padding: 0 4px; vertical-align: middle; border: 1px dashed var(--rule-strong); border-radius: 7px; background: transparent; color: var(--faint); font: inherit; font-size: .8rem; cursor: pointer; }
+.slot:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
+.slot.sel, .slot.right { vertical-align: baseline; }
+.slot.sel { border: 0; background: var(--accent-soft); color: var(--accent-text); font-size: 1.05rem; font-weight: 700; padding: 0 8px; }
+.slot.right { border: 0; background: var(--ok-bg); color: var(--ok); font-size: 1.05rem; font-weight: 700; padding: 0 8px; }
+.slot:disabled { cursor: default; }
+.gdiff { margin-top: 6px; line-height: 1.6; }
+.gdiff del { background: var(--bad-bg); color: var(--bad); text-decoration: line-through; padding: 0 2px; border-radius: 4px; }
+.gdiff ins { background: var(--ok-bg); color: var(--ok); text-decoration: none; font-weight: 700; padding: 0 2px; border-radius: 4px; }
+.gwhy { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--rule); }
+.gwhy ul { margin: 6px 0 0; padding-left: 18px; }
+.gwhy li { margin: 3px 0; }
+.scheme { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 4px; }
+.scheme span { display: inline-flex; flex-direction: column; align-items: center; padding: 3px 9px 4px; border-radius: 8px; background: var(--sheet); border: 1px solid var(--rule); font-weight: 600; }
+.scheme b { font-weight: 600; }
+.scheme i { font-style: normal; font-size: .62rem; font-weight: 700; letter-spacing: .06em; color: var(--faint); text-transform: uppercase; }
+.scheme .v { border-color: var(--accent); } .scheme .a { border-color: var(--blue); }
 /* tag on text written by AI for this tool (not from DDO or the exams) */
 .ai { display: inline-block; margin-left: 6px; padding: 0 5px; border: 1px dashed var(--faint); border-radius: 5px; vertical-align: .12em;
   font: 700 .6rem/1.45 var(--body); letter-spacing: .06em; text-transform: none; color: var(--soft); white-space: nowrap; cursor: help; }
@@ -517,6 +542,46 @@ const I18N = {
   "f.title": ["Om ordet", "About the word"], "f.class": ["Ordklasse", "Word class"], "f.gender": ["Køn", "Gender"],
   "f.g.en": ["fælleskøn (en)", "common gender (en)"], "f.g.et": ["intetkøn (et)", "neuter (et)"],
   "f.infl": ["Bøjning", "Inflection"], "f.noinfl": ["bøjes ikke", "does not inflect"], "f.cons": ["Konstruktion", "Construction"],
+  "h.gram": ["Grammatik", "Grammar"], "h.gram.t": ["Øv datid, inversion og ikke'ets plads på rigtige sætninger fra prøverne.", "Practise past tense, inversion and where ikke goes, on real exam sentences."],
+  "gm.title": ["Grammatik", "Grammar"], "gm.back": ["Forside", "Home"],
+  "gm.intro": ["Tre øvelser på rigtige sætninger fra læse- og skrivedelen af prøverne (2013–2024). Det rigtige svar er altid sætningen, som den står i prøven.", "Three drills on real sentences from the reading and writing parts of the exams (2013–2024). The right answer is always the sentence as it is written in the exam."],
+  "gm.tense": ["Datid", "Past tense"], "gm.tense.k": ["Øvelse 1 · præteritum", "Drill 1 · past tense"],
+  "gm.tense.p": ["En sætning fra prøven er skrevet om til nutid. Skriv den tilbage i datid.", "An exam sentence has been rewritten in the present. Write it back in the past."],
+  "gm.tense.demo": ["Han slår sig, når han falder. → Han slog sig, da han faldt.", "Han slår sig, når han falder. → Han slog sig, da han faldt."],
+  "gm.v2": ["Inversion (V2)", "Inversion (V2)"], "gm.v2.k": ["Øvelse 2 · ordstilling", "Drill 2 · word order"],
+  "gm.v2.p": ["Et ord er taget væk fra starten af sætningen. Sæt det først igen – og husk, at verbet skal stå på plads 2.", "A word has been taken off the start of the sentence. Put it first again – and remember that the verb must come second."],
+  "gm.v2.demo": ["Du kan ikke … + Derfor → Derfor kan du ikke …", "Du kan ikke … + Derfor → Derfor kan du ikke …"],
+  "gm.place": ["Hvor står ikke?", "Where does ikke go?"], "gm.place.k": ["Øvelse 3 · adverbiets plads", "Drill 3 · adverb position"],
+  "gm.place.p": ["Ikke, også, altid, stadig … er taget ud af sætningen. Tryk på det sted, hvor ordet skal stå. Ledsætning eller hovedsætning?", "Ikke, også, altid, stadig … has been taken out of the sentence. Tap where it belongs. Subordinate or main clause?"],
+  "gm.place.demo": ["… fordi du ikke vil flytte · Du kan ikke komme", "… fordi du ikke vil flytte · Du kan ikke komme"],
+  "gm.start": ["Start", "Start"], "gm.done": ["{0} af {1} klaret", "{0} of {1} done"], "gm.mix": ["Bland alle tre", "Mix all three"],
+  "gm.tense.q": ["Skriv sætningen i datid (præteritum).", "Write the sentence in the past tense."],
+  "gm.v2.q": ["Sæt «{0}» først i sætningen.", "Put «{0}» first in the sentence."],
+  "gm.place.q": ["Hvor skal «{0}» stå? Tryk på pladsen.", "Where does «{0}» go? Tap the spot."],
+  "gm.mine": ["Skrevet om af AI – sætningen i prøven ser anderledes ud.", "Rewritten by AI – the sentence in the exam looks different."],
+  "gm.from": ["Sætningen er fra prøven {0}.", "The sentence is from the {0} exam."],
+  "gm.edit": ["Ret sætningen her:", "Edit the sentence here:"], "gm.reset": ["Start forfra", "Start over"], "gm.give": ["Vis svar", "Show answer"],
+  "gm.pick": ["Tryk på en plads først.", "Tap a spot first."],
+  "gm.right": ["Rigtigt!", "Right!"], "gm.wrong": ["Ikke helt", "Not quite"], "gm.shown": ["Her er svaret", "Here is the answer"],
+  "gm.yours": ["Dit svar:", "Your answer:"], "gm.answer": ["Sådan står det i prøven ({0}):", "As written in the exam ({0}):"],
+  "gm.why": ["Hvorfor?", "Why?"],
+  "gm.t.rule": ["Datid (præteritum) bruges om noget, der skete og er afsluttet. Kun de bøjede verber skifter form – infinitiver (at blive, at prøve) bliver stående.", "The past tense is used for something that happened and is over. Only the finite verbs change – infinitives (at blive, at prøve) stay the same."],
+  "gm.t.ede": ["regelmæssigt: -ede", "regular: -ede"], "gm.t.te": ["regelmæssigt: -te", "regular: -te"],
+  "gm.t.irr": ["uregelmæssigt – lær det udenad", "irregular – learn it by heart"], "gm.t.modal": ["modalverbum", "modal verb"],
+  "gm.t.perf": ["førnutid → førdatid: {0} → {1}", "present perfect → past perfect: {0} → {1}"],
+  "gm.t.da": ["én bestemt gang i fortiden hedder da – når bruges om nu, fremtiden og om noget, der sker igen og igen", "one particular time in the past is da – når is for the present, the future and things that happen again and again"],
+  "gm.v2.rule": ["«{0}» står på plads 1. Det bøjede verbum «{1}» skal altid stå på plads 2, så subjektet «{2}» rykker om bag verbet (inversion).", "«{0}» takes position 1. The finite verb «{1}» must always come second, so the subject «{2}» moves behind the verb (inversion)."],
+  "gm.v2.mid": ["«{0}» bliver stående lige efter subjektet – også med inversion.", "«{0}» stays right after the subject – inversion or not."],
+  "gm.v2.noinv": ["Du har subjektet før verbet. Når et andet led står først, kommer verbet før subjektet.", "You have the subject before the verb. When something else comes first, the verb comes before the subject."],
+  "gm.v2.one": ["Kun ét led før verbet: «{0}» tæller som ét led, selv om det er flere ord.", "Only one element before the verb: «{0}» counts as one element, even though it is several words."],
+  "gm.p.sub": ["«{0}» indleder en ledsætning. I en ledsætning står «{1}» foran det bøjede verbum «{2}».", "«{0}» starts a subordinate clause. In a subordinate clause «{1}» comes before the finite verb «{2}»."],
+  "gm.p.biff": ["Husk BIFF: Bisætning – Ikke Før Finit verbum. Det gælder også også, altid, aldrig, gerne, stadig …", "Remember BIFF: in a subordinate clause ikke comes before the finite verb. The same goes for også, altid, aldrig, gerne, stadig …"],
+  "gm.p.main": ["Det er en hovedsætning. Her står «{0}» efter det bøjede verbum «{1}».", "This is a main clause. Here «{0}» comes after the finite verb «{1}»."],
+  "gm.p.inv": ["Verbet står før subjektet (inversion), så «{0}» kommer efter subjektet «{1}».", "The verb comes before the subject (inversion), so «{0}» goes after the subject «{1}»."],
+  "gm.p.mid": ["«{0}» står også mellem verbet og «{1}».", "«{0}» also sits between the verb and «{1}»."],
+  "gm.sum": ["{0} af {1} rigtige", "{0} of {1} right"], "gm.again": ["Igen", "Again"], "gm.list": ["Øv disse igen:", "Practise these again:"],
+  "gm.menu": ["Grammatik", "Grammar"],
+  "gm.s.v": ["verbum", "verb"], "gm.s.s": ["subjekt", "subject"], "gm.s.a": ["adverbium", "adverb"], "gm.s.p": ["pronomen", "pronoun"],
   "ai.title": ["Skrevet af AI (Claude) til dette værktøj – ikke fra Den Danske Ordbog eller prøverne. Tjek i ordbogen.", "Written by AI (Claude) for this tool – not from Den Danske Ordbog or the exams. Check in the dictionary."],
   "ai.ddo": ["fra Den Danske Ordbog", "from Den Danske Ordbog"], "ai.exam": ["fra prøverne", "from the exams"],
   "ai.gt": ["Engelsk: maskinoversat med Google Translate.", "English: machine-translated with Google Translate."],
@@ -788,7 +853,7 @@ function load() {
     $("#app").innerHTML = `<div class="err" style="margin-top:32px">${t("nodeck")}<br><br><code>python3 -I .claude/skills/pd3-coach/scripts/pd3.py page</code></div>`;
     return;
   }
-  DB = { today: iso(new Date()), profile: deck.profile || {}, sentences: deck.sentences || {}, senses: deck.senses || {}, tips: deck.tips || {}, info: deck.info || {}, cards: {} };
+  DB = { today: iso(new Date()), profile: deck.profile || {}, sentences: deck.sentences || {}, senses: deck.senses || {}, tips: deck.tips || {}, info: deck.info || {}, grammar: deck.grammar || {}, cards: {} };
   const saved = readProgress();
   for (const [id, c] of Object.entries(deck.cards)) DB.cards[id] = { id, ...c, history: c.history || [], ...(saved[id] || {}) };
   // ask the browser not to clear this page's storage when space runs low (Chrome/Firefox; Safari decides itself)
@@ -799,6 +864,7 @@ function load() {
 }
 // the site's other pages link to "#find" (or "#find=ord"): open the find bar over the home screen
 function route() {
+  if (location.hash === "#grammatik") { history.replaceState(null, "", location.pathname + location.search); return grammarHome(); }
   if (!location.hash.startsWith("#find")) return;
   const q = decodeURIComponent(location.hash.slice(6));
   history.replaceState(null, "", location.pathname + location.search);
@@ -905,7 +971,7 @@ function counts() {
 }
 
 function home() {
-  S = null; FC = null;
+  S = null; FC = null; GS = null;
   const k = counts(), p = DB.profile || {};
   const dW = daysTo(p.exam_date);
   const groupsBy = {};
@@ -941,6 +1007,7 @@ function home() {
         <button class="btn" id="conf" ${confusablePairs(sel).length ? "" : `disabled title="${esc(t("h.conf.none"))}"`}>${t("h.conf")}${sel ? ` · ${confusablePairs(sel).length}` : ""}</button>
         <button class="btn" id="exer" ${learnedIn(sel).length ? `title="${esc(t("h.ex.t"))}"` : `disabled title="${esc(t("h.ex.none"))}"`}>${t("h.ex")} · ${learnedIn(sel).length}</button>
         <button class="btn" id="flash" title="${esc(t("h.fc.t"))}">${t("h.fc")} · ${pool.length}</button>
+        ${grCount() ? `<button class="btn" id="gram" title="${esc(t("h.gram.t"))}">${t("h.gram")} · ${grCount()}</button>` : ""}
       </div>
       <p class="soft small" style="margin-top:12px">${sessionBlurb(k, canDue, canNew)}</p>
       ${storageOK ? "" : `<div class="err small">${t("h.storage")}</div>`}
@@ -968,6 +1035,7 @@ function home() {
   $("#conf").onclick = () => startConfusables(sel);
   $("#exer").onclick = () => startExercise(sel);
   $("#flash").onclick = () => startFlash(sel);
+  if ($("#gram")) $("#gram").onclick = grammarHome;
   document.querySelectorAll(".group").forEach(b => b.onclick = () => { openGroup = openGroup === b.dataset.g ? null : b.dataset.g; const y = window.scrollY; home(); window.scrollTo(0, y); });
   if (openGroup && groupsBy[openGroup]) showGroupDetail(openGroup, groupsBy[openGroup]);
 }
@@ -2014,6 +2082,211 @@ document.addEventListener("keydown", e => {
   if (e.key === "ArrowLeft" && $("#prev") && document.activeElement?.tagName !== "INPUT") { e.preventDefault(); goBack(); return; }
   if (S.keys && document.activeElement?.tagName !== "INPUT") S.keys(e);
   else if (S.keys && e.key === "Enter") S.keys(e);
+});
+
+// ---------- Grammatik: three drills on real exam sentences (pd3-data/grammar.json) ----------
+// tense: an exam sentence in the past, rewritten in the present (by AI) → the learner writes the past again
+// v2:    a fronted adverbial taken off and the word order straightened (by AI) → the learner puts it first again
+// place: ikke/også/altid … taken out → the learner taps where it stood (subordinate clause: before the verb; main: after)
+// The right answer is always the exam's own sentence; explanations are built from each item's fields.
+const GR_KEY = "pd3-assisted-learning:grammar:v1";
+const GR_TYPES = ["tense", "v2", "place"];
+let GS = null;   // grammar session
+const grItems = type => (DB.grammar[type] || []).map((x, i) => ({ ...x, type, id: type + i }));
+const grCount = () => GR_TYPES.reduce((n, k) => n + (DB.grammar[k] || []).length, 0);
+function grStats() { try { return JSON.parse(localStorage.getItem(GR_KEY) || "{}"); } catch (e) { return {}; } }
+function grSave(id, ok) {
+  const st = grStats(), x = st[id] || [0, 0];
+  st[id] = [x[0] + (ok ? 1 : 0), x[1] + 1];
+  try { localStorage.setItem(GR_KEY, JSON.stringify(st)); } catch (e) { /* ignore */ }
+}
+// words only: case, commas and full stops don't count
+const gwords = s => String(s).normalize("NFC").toLowerCase().match(/[\p{L}\p{N}]+(?:[-'][\p{L}\p{N}]+)*/gu) || [];
+const sameWords = (a, b) => gwords(a).join(" ") === gwords(b).join(" ");
+// word-by-word difference (longest common subsequence): [the learner's answer, the exam's sentence]
+function wdiff(a, b) {
+  const ta = a.trim().split(/\s+/).filter(Boolean), tb = b.trim().split(/\s+/), k = w => gwords(w).join(" ");
+  const n = ta.length, m = tb.length, L = Array.from({ length: n + 1 }, () => new Array(m + 1).fill(0));
+  for (let i = n - 1; i >= 0; i--) for (let j = m - 1; j >= 0; j--) L[i][j] = k(ta[i]) === k(tb[j]) ? L[i + 1][j + 1] + 1 : Math.max(L[i + 1][j], L[i][j + 1]);
+  const ka = new Set(), kb = new Set();
+  for (let i = 0, j = 0; i < n && j < m;) {
+    if (k(ta[i]) === k(tb[j])) { ka.add(i++); kb.add(j++); } else if (L[i + 1][j] >= L[i][j + 1]) i++; else j++;
+  }
+  return [ta.map((w, i) => ka.has(i) ? esc(w) : `<del>${esc(w)}</del>`).join(" "), tb.map((w, j) => kb.has(j) ? esc(w) : `<ins>${esc(w)}</ins>`).join(" ")];
+}
+// mark whole words of a sentence (the past forms, the moved adverb …); nth: only that occurrence
+function markWords(s, ws, nth = 0) {
+  const want = new Set(ws.map(w => w.toLowerCase()));
+  let k = 0;
+  return s.split(/(\s+)/).map(tok => want.has(gwords(tok).join(" ")) && (!nth || ++k === nth) ? `<mark class="hl">${esc(tok)}</mark>` : esc(tok)).join("");
+}
+
+function grammarHome() {
+  S = null; FC = null; GS = null;
+  const st = grStats();
+  const tile = type => {
+    const its = grItems(type), done = its.filter(x => (st[x.id] || [0])[0] > 0).length;
+    return `<div class="sheet gtile"><div class="kind">${t("gm." + type + ".k")}</div><h3>${t("gm." + type)}</h3>
+      <p class="soft">${t("gm." + type + ".p")}</p><div class="demo" lang="da">${t("gm." + type + ".demo")}</div>
+      <div class="row"><button class="btn solid" data-gt="${type}">${t("gm.start")}</button><span class="soft small">${t("gm.done", done, its.length)}</span></div></div>`;
+  };
+  $("#app").innerHTML = `<div class="narrow">
+    <div class="counter"><span>${t("gm.title")}</span><button class="btn quiet" id="ghome">← ${t("gm.back")}</button></div>
+    <div class="top" style="padding-top:8px"><h1>${t("gm.title")}</h1><p>${t("gm.intro")}</p></div>
+    ${GR_TYPES.map(tile).join("")}
+    <div class="row" style="margin-top:16px"><button class="btn" data-gt="mix">${t("gm.mix")}</button></div></div>`;
+  $("#ghome").onclick = home;
+  document.querySelectorAll("[data-gt]").forEach(b => b.onclick = () => startGrammar(b.dataset.gt));
+  window.scrollTo(0, 0);
+}
+function startGrammar(type, only) {
+  const st = grStats();
+  const pool = only || (type === "mix" ? GR_TYPES.flatMap(grItems) : grItems(type));
+  // items never answered right first, then the rest; 10 per round
+  const fresh = shuffle(pool.filter(x => !(st[x.id] || [0])[0])), seen = shuffle(pool.filter(x => (st[x.id] || [0])[0]));
+  GS = { type, queue: [...fresh, ...seen].slice(0, 10), i: 0, results: [], title: type === "mix" ? t("gm.title") : t("gm." + type) };
+  grStep();
+}
+function grFrame(inner) {
+  const x = GS.queue[GS.i];
+  $("#app").innerHTML = `<div class="narrow">
+    <div class="counter"><span>${esc(GS.title)} · ${t("s.count", GS.i + 1, GS.queue.length)}</span><button class="btn quiet" id="gquit">✕ ${t("s.end")}</button></div>
+    <div class="bar sessionbar" aria-hidden="true"><span style="width:${100 * GS.i / GS.queue.length}%"></span></div>
+    <div class="sheet q"><div class="kind">${t("gm." + x.type)} · <span lang="da">${esc(x.src)}</span></div>${inner}</div></div>`;
+  $("#gquit").onclick = () => GS.results.length ? grSummary() : grammarHome();
+  window.scrollTo(0, 0);
+}
+function grStep() {
+  if (GS.i >= GS.queue.length) return grSummary();
+  const x = GS.queue[GS.i];
+  if (x.type === "place") return grPlace(x);
+  const start = x.type === "tense" ? x.present : x.plain;
+  grFrame(`<p class="prompt">${x.type === "tense" ? t("gm.tense.q") : t("gm.v2.q", esc(x.adv))}</p>
+    <div class="ex" lang="da"><span class="sentence">${esc(start)}</span>${AI()}${trLink(start)}</div>
+    <div class="soft small" style="margin-top:4px">${t("gm.mine")}</div>
+    ${x.type === "v2" ? `<div class="row" style="margin-top:10px"><span class="chipw" lang="da">+ ${esc(x.adv)}</span></div>` : ""}
+    <label class="small" for="gin" style="display:block;margin-top:14px"><b>${t("gm.edit")}</b></label>
+    <textarea class="answer" id="gin" rows="3" lang="da" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" style="margin-top:6px">${esc(start)}</textarea>${letters()}
+    <div class="row next"><button class="btn solid" id="chk">${t("b.check")}</button><button class="btn quiet" id="greset">${t("gm.reset")}</button><button class="btn quiet" id="idk">${t("gm.give")}</button></div><div id="fb"></div>`);
+  const input = $("#gin");
+  bindLetters(input); bindTr($("#app"));
+  $("#greset").onclick = () => { input.value = start; input.focus(); };
+  const check = give => {
+    if (input.disabled) return;
+    const v = input.value.trim();
+    input.disabled = true; ["#chk", "#greset", "#idk"].forEach(id => $(id)?.remove());
+    $("#app").querySelector(".letters")?.remove();
+    const ok = !give && sameWords(v, x.type === "tense" ? x.past : x.s);
+    grFeedback(x, ok, give, v);
+  };
+  $("#chk").onclick = () => check(false);
+  $("#idk").onclick = () => check(true);
+  GS.keys = e => { if (e.key === "Enter" && !e.shiftKey && document.activeElement === input) { e.preventDefault(); check(false); } };
+}
+function grPlace(x) {
+  // take the n-th «ikke» (etc.) out; the gaps between the remaining words are the tap targets
+  const re = new RegExp(`(?<![\\p{L}])${x.w}(?![\\p{L}])`, "giu");
+  let m, k = 0, at = -1;
+  while ((m = re.exec(x.s))) if (++k === x.n) { at = m.index; break; }
+  const before = x.s.slice(0, at).trim(), after = x.s.slice(at + x.w.length).trim();
+  const toks = [...(before ? before.split(/\s+/) : []), ...after.split(/\s+/)];
+  const right = before ? before.split(/\s+/).length : 0;
+  const slot = i => `<button type="button" class="slot" data-k="${i}" aria-label="${esc(t("gm.place.q", x.w))} ${i + 1}">+</button>`;
+  grFrame(`<p class="prompt">${t("gm.place.q", esc(x.w))}</p>
+    <div class="slots" lang="da">${toks.map((w, i) => slot(i) + `<span>${esc(w)}</span>`).join(" ")}</div>
+    <div class="row next"><button class="btn solid" id="chk">${t("b.check")}</button><button class="btn quiet" id="idk">${t("gm.give")}</button><span class="soft small" id="gpick"></span></div><div id="fb"></div>`);
+  let sel = null;
+  document.querySelectorAll(".slot").forEach(b => b.onclick = () => {
+    document.querySelectorAll(".slot").forEach(o => { o.classList.remove("sel"); o.textContent = "+"; });
+    sel = +b.dataset.k; b.classList.add("sel"); b.textContent = x.w; $("#gpick").textContent = "";
+  });
+  const check = give => {
+    if (sel === null && !give) { $("#gpick").textContent = t("gm.pick"); return; }
+    ["#chk", "#idk"].forEach(id => $(id)?.remove());
+    document.querySelectorAll(".slot").forEach(o => { o.disabled = true; if (+o.dataset.k !== sel && +o.dataset.k !== right) o.remove(); });
+    const ok = !give && sel === right;
+    const good = $(`.slot[data-k="${right}"]`);
+    if (good) { good.className = "slot right"; good.textContent = x.w; }
+    const yours = sel !== null && sel !== right ? toks.slice(0, sel).concat([x.w], toks.slice(sel)).join(" ") : "";
+    grFeedback(x, ok, give, yours);
+  };
+  $("#chk").onclick = () => check(false);
+  $("#idk").onclick = () => check(true);
+  GS.keys = e => { if (e.key === "Enter") { e.preventDefault(); check(false); } };
+}
+function grWhy(x, v) {
+  const li = s => `<li>${s}</li>`;
+  if (x.type === "tense") {
+    const MODAL = new Set(["kunne", "skulle", "ville", "måtte", "burde", "turde"]);
+    const kind = ([pr, pa, inf]) => pr.includes(" ") ? t("gm.t.perf", pr.split(" ")[0], pa.split(" ")[0]) : MODAL.has(inf) ? t("gm.t.modal")
+      : pa.startsWith(inf.replace(/e$/, "")) && pa.endsWith("ede") ? t("gm.t.ede") : pa.startsWith(inf.replace(/e$/, "")) && pa.endsWith("te") ? t("gm.t.te") : t("gm.t.irr");
+    return `<p>${t("gm.t.rule")}</p><ul>${x.verbs.map(vb => li(`<span lang="da">${esc(vb[0])} → <b>${esc(vb[1])}</b></span>${vb[0].includes(" ") ? "" : ` <span class="soft">(at ${esc(vb[2])})</span>`} <span class="soft small">· ${kind(vb)}</span>`)).join("")}
+      ${x.swap.map(([a, b]) => li(`<span lang="da">${esc(a)} → <b>${esc(b)}</b></span> <span class="soft small">· ${t("gm.t.da")}</span>`)).join("")}</ul>`;
+  }
+  if (x.type === "v2") {
+    const pos = gwords(x.s).length - gwords(x.plain).length;   // words in the fronted element
+    const noinv = v && gwords(v).join(" ").startsWith(gwords(x.adv + " " + x.subj).join(" "));
+    const rest = gwords(x.s.slice(x.adv.length + x.verb.length + x.subj.length + 3));
+    const mids = x.mid, nmid = mids.join(" ").split(" ").filter(Boolean).length;   // the adverbs right after the subject
+    return `${noinv ? `<p><b>${t("gm.v2.noinv")}</b></p>` : ""}<p>${t("gm.v2.rule", esc(x.adv), esc(x.verb), esc(x.subj))}</p>
+      <div class="scheme"><span><i>1</i><b lang="da">${esc(x.adv)}</b></span><span class="v"><i>${t("gm.s.v")}</i><b lang="da">${esc(x.verb)}</b></span><span><i>${t("gm.s.s")}</i><b lang="da">${esc(x.subj)}</b></span>${mids.map(a => `<span class="a"><i>${t(a === "sig" ? "gm.s.p" : "gm.s.a")}</i><b lang="da">${esc(a)}</b></span>`).join("")}<span><i>…</i><b lang="da">${esc(rest.slice(nmid, nmid + 3).join(" "))} …</b></span></div>
+      ${mids.length ? `<p>${t("gm.v2.mid", mids.map(a => esc(a)).join(", "))}</p>` : ""}
+      ${pos > 1 ? `<p class="soft small">${t("gm.v2.one", esc(x.adv))}</p>` : ""}`;
+  }
+  const words = x.s.split(/\s+/), lw = words.map(w => gwords(w).join(" "));
+  let wi = -1;
+  for (let i = 0, k = 0; i < lw.length; i++) if (lw[i] === x.w.toLowerCase() && ++k === x.n) { wi = i; break; }
+  if (x.clause !== "main") return `<p>${t("gm.p.sub", esc(x.clause), esc(x.w), esc(x.verb))}</p><p class="soft small">${t("gm.p.biff")}</p>`;
+  // main clause: the words between the finite verb and the adverb (an inverted subject, or jo/nok …)
+  let vi = wi - 1; while (vi >= 0 && lw[vi] !== x.verb.toLowerCase()) vi--;
+  const between = words.slice(vi + 1, wi).join(" ");
+  const SUBJ = /^(jeg|du|han|hun|den|det|vi|i|de|man|[A-ZÆØÅ][a-zæøå]+)$/;
+  return `<p>${t("gm.p.main", esc(x.w), esc(x.verb))}</p>
+    ${between ? `<p>${SUBJ.test(between) ? t("gm.p.inv", esc(x.w), esc(between)) : t("gm.p.mid", esc(between), esc(x.w))}</p>` : ""}`;
+}
+function grFeedback(x, ok, give, v) {
+  const exam = x.type === "tense" ? x.past : x.s;
+  if (!give) grSave(x.id, ok);
+  GS.results.push({ id: x.id, ok });
+  const marks = x.type === "tense" ? x.verbs.flatMap(vb => vb[1].split(" ")).concat(x.swap.map(s => s[1])) : x.type === "v2" ? [x.adv.split(" ")[0], x.verb] : [x.w];
+  const [mine, theirs] = v && !ok ? wdiff(v, exam) : [null, null];
+  $("#fb").innerHTML = `<div class="feedback ${ok ? "ok" : "bad"}">
+      <h3>${ok ? t("gm.right") : give ? t("gm.shown") : t("gm.wrong")}</h3>
+      ${mine ? `<div class="small"><b>${t("gm.yours")}</b></div><div class="gdiff" lang="da">${mine}</div>` : ""}
+      <div class="small" style="margin-top:8px"><b>${t("gm.answer", esc(x.src))}</b></div>
+      <div class="gdiff sentence" lang="da">${theirs && x.type !== "place" ? theirs : markWords(exam, marks, x.type === "place" ? x.n : 0)}</div>
+      <div class="trrow">${trLink(exam).replace(t("m.tr"), t("tr.sent"))}</div>
+      <div class="gwhy"><b>${t("gm.why")}</b>${AI()}${grWhy(x, v)}</div>
+    </div>
+    <div class="row next"><button class="btn solid" id="nx">${t("b.next")}</button></div>`;
+  bindTr($("#fb"));
+  const nx = $("#nx");
+  nx.onclick = () => { GS.i++; grStep(); };
+  GS.keys = e => { if (e.key === "Enter") { e.preventDefault(); nx.click(); } };
+  setTimeout(() => nx.focus({ preventScroll: true }), 0);
+  $("#fb").scrollIntoView({ behavior: "smooth", block: "nearest" });
+}
+function grSummary() {
+  const n = GS.results.length, right = GS.results.filter(r => r.ok).length;
+  const byId = Object.fromEntries(GS.queue.map(x => [x.id, x]));
+  const miss = GS.results.filter(r => !r.ok).map(r => byId[r.id]);
+  const again = GS.type;
+  $("#app").innerHTML = `<div class="narrow"><div class="sheet q">
+    <div class="kind">${esc(GS.title)}</div><h2 style="margin-top:6px">${t("gm.sum", right, n)}</h2>
+    ${miss.length ? `<div class="block"><span class="lbl">${t("gm.list")}</span><ul class="list">${miss.map(x => `<li lang="da">${esc(x.type === "tense" ? x.past : x.s)}</li>`).join("")}</ul></div>` : ""}
+    <div class="row next"><button class="btn solid" id="gagain">${t("gm.again")}</button>
+      ${miss.length ? `<button class="btn" id="gmiss">${t("gm.list").replace(/:$/, "")} · ${miss.length}</button>` : ""}
+      <button class="btn quiet" id="gmenu">${t("gm.menu")}</button><button class="btn quiet" id="ghome">${t("gm.back")}</button></div></div></div>`;
+  $("#gagain").onclick = () => startGrammar(again);
+  if ($("#gmiss")) $("#gmiss").onclick = () => startGrammar(again, miss);
+  $("#gmenu").onclick = grammarHome;
+  $("#ghome").onclick = home;
+  GS.keys = null;
+  window.scrollTo(0, 0);
+}
+document.addEventListener("keydown", e => {
+  if (!GS || !GS.keys || document.querySelector("dialog[open]") || e.target.closest?.("#findbar")) return;
+  GS.keys(e);
 });
 
 // ---------- summary ----------
