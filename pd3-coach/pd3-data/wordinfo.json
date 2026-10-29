@@ -1,0 +1,3826 @@
+{
+ "eller": {
+  "word": "eller",
+  "pos": "konjunktion (sideordnende)",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "A eller B"
+  ],
+  "brug": [
+   "eller også",
+   "eller noget",
+   "enten … eller",
+   "eller rettere",
+   "eller snarere"
+  ],
+  "brug_src": "study"
+ },
+ "ellers": {
+  "word": "ellers",
+  "pos": "adverbium",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "ellers + verbum + subjekt: Ellers kommer vi for sent"
+  ],
+  "brug": [
+   "ellers kommer man for sent",
+   "og ellers",
+   "hvad ellers"
+  ],
+  "brug_src": "note"
+ },
+ "næppe": {
+  "word": "næppe",
+  "pos": "adverbium",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "næppe uden ikke: Han kommer næppe"
+  ],
+  "brug": [
+   "næppe nogen",
+   "næppe sandsynligt",
+   "næppe … før"
+  ],
+  "brug_src": "study"
+ },
+ "næsten_ikke": {
+  "word": "næsten ikke",
+  "pos": "adverbium",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "næsten ikke + verbum: Jeg sov næsten ikke"
+  ],
+  "brug": [
+   "næsten alle",
+   "næsten hele tiden",
+   "næsten altid",
+   "næsten aldrig"
+  ],
+  "brug_src": "DDO"
+ },
+ "kunne": {
+  "word": "kunne",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "talesprogsefterlignende også: kan, -, -t",
+  "forms": [
+   [
+    "kunne",
+    "kan",
+    "kunne",
+    "kunnet"
+   ],
+   [
+    "ku'",
+    "ka'"
+   ]
+  ],
+  "grammar": [
+   "NOGEN/NOGET kan+INFINITIV",
+   "NOGEN kan NOGET",
+   "NOGEN kan+INFINITIV/NOGET",
+   "NOGEN kan+INFINITIV",
+   "NOGEN/NOGET kan ikke+INFINITIV",
+   "NOGEN kan ikke med NOGET/at+INFINITIV",
+   "NOGLE kan ikke sammen",
+   "NOGEN kan ikke med NOGEN"
+  ],
+  "construction": [
+   "kunne + infinitiv uden at"
+  ],
+  "brug": [
+   "det kan godt/gerne være",
+   "kunne lide",
+   "ikke kunne fordrage",
+   "ikke kunne udstå",
+   "ikke kunne døje"
+  ],
+  "brug_src": "DDO"
+ },
+ "skulle": {
+  "word": "skulle",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "talesprogsefterlignende også: skal, -, -t",
+  "forms": [
+   [
+    "skulle",
+    "skal",
+    "skulle",
+    "skullet"
+   ],
+   [
+    "sku'",
+    "ska'"
+   ]
+  ],
+  "grammar": [
+   "NOGEN/NOGET skal+INFINITIV",
+   "NOGEN skal+INFINITIV",
+   "NOGEN skal NOGET",
+   "NOGEN skal+RETNING/+STED",
+   "NOGEN/NOGET skulle+INFINITIV",
+   "NOGET skal+INFINITIV",
+   "NOGET/NOGEN skal+INFINITIV",
+   "NOGEN skal+INFINITIV at../NOGET",
+   "NOGEN/NOGET skal til at+INFINITIV",
+   "NOGEN skal til NOGET/at+INFINITIV",
+   "NOGET skal til (+ADVERBIAL)"
+  ],
+  "construction": [
+   "skulle + infinitiv uden at"
+  ],
+  "brug": [
+   "jeg skulle hilse fra ..",
+   "hvad skal det sige",
+   "det skal nævnes at .."
+  ],
+  "brug_src": "DDO"
+ },
+ "måtte": {
+  "word": "måtte",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "må, -, -t",
+  "forms": [
+   [
+    "måtte",
+    "må",
+    "måtte",
+    "måttet"
+   ]
+  ],
+  "grammar": [
+   "NOGEN/NOGET må+INFINITIV",
+   "NOGEN må+INFINITIV",
+   "NOGEN må+RETNING",
+   "NOGET/NOGEN må+INFINITIV",
+   "guderne må vide det/hv+SÆTNING",
+   "NOGEN må om det/hv+SÆTNING",
+   "NOGEN må/skal til lommerne"
+  ],
+  "construction": [
+   "måtte + infinitiv uden at"
+  ],
+  "brug": [
+   "måtte indrømme/erkende",
+   "måtte opgive",
+   "måtte nøjes med",
+   "måtte anses for nødvendig",
+   "du må godt/gerne"
+  ],
+  "brug_src": "DDO"
+ },
+ "ville": {
+  "word": "ville",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "vil, -, -t",
+  "forms": [
+   [
+    "ville",
+    "vil",
+    "ville",
+    "villet"
+   ]
+  ],
+  "grammar": [
+   "NOGEN vil+INFINITIV/NOGET/at+SÆTNING",
+   "NOGEN vil NOGET/at+SÆTNING",
+   "NOGEN vil+RETNING",
+   "NOGET vil+INFINITIV",
+   "NOGEN vil+INFINITIV",
+   "NOGEN/NOGET vil+INFINITIV",
+   "NOGET/NOGEN vil+INFINITIV",
+   "NOGEN vil+INFINITIV (at)+SÆTNING",
+   "NOGEN vil NOGEN NOGET",
+   "jeg vil æde min (gamle) hat på at+SÆTNING",
+   "NOGEN kommer NOGET/NOGEN til livs",
+   "NOGEN vil NOGET/NOGEN til livs",
+   "NOGET skal/vil sige at+SÆTNING/NOGET",
+   "NOGEN vil giftes (med NOGEN)",
+   "NOGLE vil giftes",
+   "NOGEN ville give meget for at+INFINITIV",
+   "NOGEN ville/kunne ønske at+SÆTNING",
+   "NOGEN vil til at+INFINITIV",
+   "NOGEN vil/tør vædde (NOGET) på at+SÆTNING/NOGET",
+   "NOGEN vil/tør vædde med at+SÆTNING",
+   "NOGEN vil vide af NOGEN/NOGET/at+SÆTNING",
+   "NOGET vil vide at+SÆTNING"
+  ],
+  "construction": [
+   "ville + infinitiv uden at"
+  ],
+  "brug": [
+   "hvad skal det sige",
+   "forlydender vil vide",
+   "rygterne/rygtet vil vide"
+  ],
+  "brug_src": "DDO"
+ },
+ "at_betyde": {
+  "word": "at betyde",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "betydning 1-3: -r, betød, -t · betydning 4: -r, -de, -t",
+  "forms": [
+   [
+    "betyde",
+    "betyder",
+    "betød",
+    "betydet"
+   ],
+   [
+    "betyder",
+    "betydede",
+    "betydet"
+   ]
+  ],
+  "grammar": [
+   "NOGET betyder NOGET",
+   "NOGET betyder NOGET/at+SÆTNING",
+   "NOGET/NOGEN betyder NOGET (for NOGET/NOGEN)",
+   "NOGEN betyder (NOGEN) at.."
+  ],
+  "construction": [
+   "betyde noget / betyde, at + sætning"
+  ],
+  "brug": [
+   "hvad skal det betyde",
+   "i praksis betyder det",
+   "det betyder meget for mig",
+   "det betyder ikke noget"
+  ],
+  "brug_src": "DDO"
+ },
+ "at_anbefale": {
+  "word": "anbefale",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "anbefale",
+    "anbefaler",
+    "anbefalede",
+    "anbefalet"
+   ]
+  ],
+  "grammar": [
+   "NOGEN anbefaler (NOGEN) NOGET/at+INFINITIV",
+   "NOGEN anbefaler NOGEN/NOGET (til NOGEN)",
+   "NOGEN anbefaler NOGET (til NOGEN)"
+  ],
+  "construction": [],
+  "brug": [
+   "anbefale at",
+   "anbefale nogen noget",
+   "kan varmt anbefales"
+  ],
+  "brug_src": "study"
+ },
+ "at_fremhæve": {
+  "word": "fremhæve",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "fremhæve",
+    "fremhæver",
+    "fremhævede",
+    "fremhævet"
+   ]
+  ],
+  "grammar": [
+   "NOGEN/NOGET fremhæver NOGET",
+   "NOGEN fremhæver NOGET/at+SÆTNING",
+   "NOGEN fremhæver NOGEN/NOGET"
+  ],
+  "construction": [],
+  "brug": [
+   "fremhæve at",
+   "fremhæve noget som",
+   "fremhævet med fed"
+  ],
+  "brug_src": "study"
+ },
+ "at_vare": {
+  "word": "at vare",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "vare",
+    "varer",
+    "varede",
+    "varet"
+   ]
+  ],
+  "grammar": [
+   "NOGET varer (i) TIDSRUM",
+   "NOGET varer fra TIDSPUNKT til TIDSPUNKT",
+   "NOGET varer ved"
+  ],
+  "construction": [
+   "vare + tidsrum"
+  ],
+  "brug": [
+   "vare et øjeblik",
+   "vare ti minutter",
+   "vare en time",
+   "vare et par dage"
+  ],
+  "brug_src": "DDO"
+ },
+ "at_ansøge_om": {
+  "word": "at ansøge (om)",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, ansøgte, ansøgt",
+  "forms": [
+   [
+    "ansøge",
+    "ansøger",
+    "ansøgte",
+    "ansøgt"
+   ]
+  ],
+  "grammar": [
+   "NOGEN ansøger (NOGEN) om NOGET/at+INFINITIV"
+  ],
+  "construction": [
+   "ansøge om noget"
+  ],
+  "brug": [
+   "ansøge om tilladelse",
+   "ansøge om pension",
+   "ansøge kommunen"
+  ],
+  "brug_src": "DDO"
+ },
+ "at_bestille": {
+  "word": "at bestille",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, bestilte, bestilt",
+  "forms": [
+   [
+    "bestille",
+    "bestiller",
+    "bestilte",
+    "bestilt"
+   ]
+  ],
+  "grammar": [
+   "NOGEN bestiller (NOGET) (hos NOGEN)",
+   "NOGEN bestiller NOGEN til at+INFINITIV",
+   "NOGEN bestiller NOGET"
+  ],
+  "construction": [
+   "bestille tid hos"
+  ],
+  "brug": [
+   "bestille telefonvækning",
+   "bestille en taxa",
+   "bestille noget/lidt",
+   "have noget/meget at bestille"
+  ],
+  "brug_src": "DDO"
+ },
+ "at_optage": {
+  "word": "at optage",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "præteritum participium brugt som foranstillet adjektiv (i betydning 1): -r, optog, -t · eller Se bøjning i skema · eller Se bøjning i skema · i pluralis brugt som prædikativ: -t ( eller -n), -t, optagne",
+  "forms": [
+   [
+    "optage",
+    "optager",
+    "optog",
+    "optaget"
+   ],
+   [
+    "optaget",
+    "optaget",
+    "optagedeelleroptagne"
+   ],
+   [
+    "optagetelleroptagedeelleroptagne"
+   ],
+   [
+    "optagetelleroptagen",
+    "optaget",
+    "optagne"
+   ]
+  ],
+  "grammar": [
+   "NOGET/NOGEN optager NOGET",
+   "NOGET/NOGEN optager NOGEN/NOGET",
+   "NOGEN/NOGET optager NOGET",
+   "NOGEN optager NOGEN",
+   "NOGEN optager NOGET (+STED)",
+   "NOGEN optager NOGET",
+   "NOGEN optager NOGET+MÅDE"
+  ],
+  "construction": [
+   "blive optaget på"
+  ],
+  "brug": [
+   "fuldt optaget",
+   "optage plads",
+   "optage kvælstof",
+   "optage ilt",
+   "optage næring"
+  ],
+  "brug_src": "DDO"
+ },
+ "at_undlade": {
+  "word": "undlade",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, undlod, undladt",
+  "forms": [
+   [
+    "undlade",
+    "undlader",
+    "undlod",
+    "undladt"
+   ]
+  ],
+  "grammar": [
+   "NOGEN undlader at+INFINITIV/NOGET",
+   "NOGEN undlader NOGET"
+  ],
+  "construction": [],
+  "brug": [
+   "undlade at"
+  ],
+  "brug_src": "study"
+ },
+ "at_udelukke": {
+  "word": "udelukke",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "udelukke",
+    "udelukker",
+    "udelukkede",
+    "udelukket"
+   ]
+  ],
+  "grammar": [
+   "NOGEN udelukker NOGEN (fra NOGET)",
+   "NOGEN udelukker NOGET",
+   "NOGEN udelukker NOGET/at+SÆTNING/NOGEN",
+   "NOGET udelukker NOGET",
+   "NOGET udelukker NOGEN/NOGET fra at+INFINITIV",
+   "NOGET udelukker NOGET/at+SÆTNING"
+  ],
+  "construction": [],
+  "brug": [
+   "kan ikke udelukke",
+   "udelukke muligheden",
+   "udelukke fra"
+  ],
+  "brug_src": "study"
+ },
+ "at_omfatte": {
+  "word": "omfatte",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "omfatte",
+    "omfatter",
+    "omfattede",
+    "omfattet"
+   ]
+  ],
+  "grammar": [
+   "NOGET/NOGLE omfatter NOGET/NOGLE",
+   "NOGET omfatter NOGET/NOGEN",
+   "NOGET omfatter NOGEN/NOGET",
+   "NOGEN omfatter NOGET/NOGEN med FØLELSE"
+  ],
+  "construction": [],
+  "brug": [
+   "omfatte både",
+   "være omfattet af"
+  ],
+  "brug_src": "study"
+ },
+ "at_uddele": {
+  "word": "at uddele",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, uddelte, uddelt",
+  "forms": [
+   [
+    "uddele",
+    "uddeler",
+    "uddelte",
+    "uddelt"
+   ]
+  ],
+  "grammar": [
+   "NOGEN uddeler NOGET (til NOGEN)"
+  ],
+  "construction": [
+   "uddele noget til nogen"
+  ],
+  "brug": [
+   "uddele en pris",
+   "uddele en medalje",
+   "uddele legater"
+  ],
+  "brug_src": "DDO"
+ },
+ "at_fordele": {
+  "word": "at fordele",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, fordelte, fordelt",
+  "forms": [
+   [
+    "fordele",
+    "fordeler",
+    "fordelte",
+    "fordelt"
+   ]
+  ],
+  "grammar": [
+   "NOGEN/NOGET fordeler NOGET (mellem NOGLE)/(til NOGEN)",
+   "NOGEN fordeler NOGET (mellem NOGLE)/(til NOGEN)",
+   "NOGEN fordeler NOGET+STED",
+   "NOGEN fordeler NOGET i/på NOGET",
+   "NOGEN fordeler NOGET+MÅDE",
+   "NOGET/NOGLE fordeler sig",
+   "NOGET/NOGLE fordeler sig på/i NOGET",
+   "NOGET/NOGLE fordeler sig+MÅDE"
+  ],
+  "construction": [
+   "fordele noget mellem / blandt"
+  ],
+  "brug": [
+   "ligeligt/jævnt fordelt",
+   "ulige/skævt fordelt",
+   "fordele pengene"
+  ],
+  "brug_src": "DDO"
+ },
+ "et_udsagn": {
+  "word": "udsagn",
+  "pos": "substantiv",
+  "gender": "et",
+  "inflection": "-et, -, -ene",
+  "forms": [
+   [
+    "udsagn",
+    "udsagnet",
+    "udsagn",
+    "udsagnene"
+   ]
+  ],
+  "grammar": [
+   "udsagn om NOGET/at+SÆTNING",
+   "efter NOGEN s udsagn"
+  ],
+  "construction": [],
+  "brug": [
+   "følgende udsagn",
+   "et udsagn om"
+  ],
+  "brug_src": "study"
+ },
+ "i_overensstemmelse_med": {
+  "word": "i overensstemmelse med",
+  "pos": "fast udtryk",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [
+   "i overensstemmelse med NOGET"
+  ],
+  "construction": [
+   "i overensstemmelse med noget"
+  ],
+  "brug": [
+   "i overensstemmelse med sandheden"
+  ],
+  "brug_src": "DDO",
+  "under": "overensstemmelse"
+ },
+ "at_give_udtryk_for": {
+  "word": "at give udtryk for",
+  "pos": "fast udtryk",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [
+   "NOGEN giver udtryk for NOGET/at.."
+  ],
+  "construction": [
+   "give udtryk for noget"
+  ],
+  "brug": [
+   "give udtryk for bekymring",
+   "give udtryk for sin holdning"
+  ],
+  "brug_src": "note"
+ },
+ "at_afgøre": {
+  "word": "afgøre",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "afgør, afgjorde, afgjort",
+  "forms": [
+   [
+    "afgøre",
+    "afgør",
+    "afgjorde",
+    "afgjort"
+   ]
+  ],
+  "grammar": [
+   "NOGEN afgør NOGET/at+SÆTNING/om+SÆTNING/hv+SÆTNING",
+   "NOGET/NOGEN afgør NOGET/om+SÆTNING/hv+SÆTNING/at+SÆTNING",
+   "NOGEN afgør hv+SÆTNING/om+SÆTNING/NOGET",
+   "NOGEN afgør NOGET med sig selv",
+   "NOGEN afgør med sig selv at+SÆTNING"
+  ],
+  "construction": [],
+  "brug": [
+   "afgøre en sag",
+   "det er svært at afgøre",
+   "afgøre udfaldet"
+  ],
+  "brug_src": "study"
+ },
+ "afgørende": {
+  "word": "afgørende",
+  "pos": "adjektiv",
+  "gender": null,
+  "inflection": "-, -",
+  "forms": [
+   [
+    "afgørende",
+    "afgørende",
+    "afgørende"
+   ]
+  ],
+  "grammar": [
+   "være afgørende for NOGET/NOGEN/hv+SÆTNING/om+SÆTNING/at.."
+  ],
+  "construction": [],
+  "brug": [
+   "afgørende for",
+   "af afgørende betydning",
+   "det afgørende er"
+  ],
+  "brug_src": "study"
+ },
+ "en_årsag": {
+  "word": "årsag",
+  "pos": "substantiv",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "årsag",
+    "årsagen",
+    "årsager",
+    "årsagerne"
+   ]
+  ],
+  "grammar": [
+   "årsag til NOGET/at..",
+   "af+ADJEKTIV årsager"
+  ],
+  "construction": [],
+  "brug": [
+   "årsagen til",
+   "af den årsag",
+   "årsag og virkning",
+   "ingen årsag"
+  ],
+  "brug_src": "study"
+ },
+ "et_vilkår": {
+  "word": "vilkår",
+  "pos": "substantiv",
+  "gender": "et",
+  "inflection": "-et, -, -ene",
+  "forms": [
+   [
+    "vilkår",
+    "vilkåret",
+    "vilkår",
+    "vilkårene"
+   ]
+  ],
+  "grammar": [
+   "NOGEN s/NOGET s vilkår",
+   "vilkår for NOGEN/NOGET",
+   "vilkår for NOGET/at+INFINITIV",
+   "på+ADJEKTIV vilkår"
+  ],
+  "construction": [],
+  "brug": [
+   "på lige vilkår",
+   "gode vilkår",
+   "vilkårene for",
+   "vilkår og betingelser",
+   "på ingen vilkår"
+  ],
+  "brug_src": "study"
+ },
+ "et_forhold": {
+  "word": "forhold",
+  "pos": "substantiv",
+  "gender": "et",
+  "inflection": "-et, -, -ene",
+  "forms": [
+   [
+    "forhold",
+    "forholdet",
+    "forhold",
+    "forholdene"
+   ]
+  ],
+  "grammar": [
+   "forhold omkring/vedrørende NOGET/NOGEN",
+   "forholdet til NOGEN",
+   "forholdet mellem NOGLE",
+   "forholdet mellem NOGEN og NOGEN",
+   "forhold til/med NOGEN",
+   "forholdet mellem NOGET (og NOGET)"
+  ],
+  "construction": [],
+  "brug": [
+   "under disse forhold",
+   "sociale forhold",
+   "økonomiske forhold",
+   "forholdet til",
+   "et godt forhold",
+   "et kærlighedsforhold"
+  ],
+  "brug_src": "study"
+ },
+ "i_forhold_til": {
+  "word": "i forhold til",
+  "pos": "præpositionsforbindelse",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "i forhold til + navneord"
+  ],
+  "brug": [
+   "i forhold til tidligere",
+   "i forhold til andre",
+   "i forhold til at + infinitiv"
+  ],
+  "brug_src": "study"
+ },
+ "om_hvorvidt": {
+  "word": "om (konj.)",
+  "pos": "konjunktion (underordnende)",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "om + ledsætning (indirekte ja/nej-spørgsmål): spørge, om …"
+  ],
+  "brug": [
+   "spørge om",
+   "overveje om",
+   "undersøge om",
+   "om … eller",
+   "om nødvendigt",
+   "om muligt"
+  ],
+  "brug_src": "study"
+ },
+ "derfor": {
+  "word": "derfor",
+  "pos": "adverbium",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "derfor + verbum + subjekt: Derfor kom han ikke"
+  ],
+  "brug": [
+   "netop derfor",
+   "og derfor",
+   "derfor er det vigtigt at",
+   "ikke derfor",
+   "derfor kan man godt"
+  ],
+  "brug_src": "study"
+ },
+ "dermed": {
+  "word": "dermed",
+  "pos": "adverbium",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "dermed + verbum + subjekt: Dermed blev det dyrere"
+  ],
+  "brug": [
+   "og dermed",
+   "dermed være sagt",
+   "dermed basta",
+   "dermed ikke sagt"
+  ],
+  "brug_src": "study"
+ },
+ "således": {
+  "word": "således",
+  "pos": "adverbium",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "således + verbum + subjekt: Således sparer man penge"
+  ],
+  "brug": [
+   "og således",
+   "således at",
+   "således som"
+  ],
+  "brug_src": "study"
+ },
+ "følgelig": {
+  "word": "følgelig",
+  "pos": "adverbium",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "følgelig + verbum + subjekt"
+  ],
+  "brug": [
+   "og følgelig"
+  ],
+  "brug_src": "study"
+ },
+ "desuden": {
+  "word": "desuden",
+  "pos": "adverbium",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "desuden + verbum + subjekt: Desuden er det billigt"
+  ],
+  "brug": [
+   "og desuden",
+   "desuden er der"
+  ],
+  "brug_src": "study"
+ },
+ "derudover": {
+  "word": "derudover",
+  "pos": "adverbium",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "derudover + verbum + subjekt"
+  ],
+  "brug": [
+   "og derudover",
+   "derudover kommer"
+  ],
+  "brug_src": "study"
+ },
+ "ligeledes": {
+  "word": "ligeledes",
+  "pos": "adverbium",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "efter verbet: Hun er ligeledes glad"
+  ],
+  "brug": [
+   "og ligeledes",
+   "ligeledes er"
+  ],
+  "brug_src": "study"
+ },
+ "blandt_andet": {
+  "word": "blandt andet",
+  "pos": "adverbiel forbindelse",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "blandt andet (bl.a.)"
+  ],
+  "brug": [
+   "bl.a.",
+   "blandt andre (om personer)"
+  ],
+  "brug_src": "study"
+ },
+ "fordi": {
+  "word": "fordi",
+  "pos": "konjunktion (underordnende)",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "fordi + ledsætning: …, fordi han ikke har tid"
+  ],
+  "brug": [
+   "netop fordi",
+   "bare fordi",
+   "ikke fordi … men fordi",
+   "måske fordi",
+   "ikke fordi"
+  ],
+  "brug_src": "study"
+ },
+ "nemlig": {
+  "word": "nemlig",
+  "pos": "adverbium",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "efter verbet: Han er nemlig syg"
+  ],
+  "brug": [
+   "det er nemlig sådan, at",
+   "der er nemlig"
+  ],
+  "brug_src": "study"
+ },
+ "alligevel": {
+  "word": "alligevel",
+  "pos": "adverbium",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "efter verbet: Han kom alligevel"
+  ],
+  "brug": [
+   "men alligevel",
+   "og alligevel",
+   "alligevel ikke",
+   "når nu alligevel",
+   "alligevel skal",
+   "det er alligevel"
+  ],
+  "brug_src": "study"
+ },
+ "imidlertid": {
+  "word": "imidlertid",
+  "pos": "adverbium",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "efter verbet: Den er imidlertid dyr"
+  ],
+  "brug": [
+   "er imidlertid",
+   "der er imidlertid"
+  ],
+  "brug_src": "study"
+ },
+ "derimod": {
+  "word": "derimod",
+  "pos": "adverbium",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "efter verbet: Hun er derimod glad"
+  ],
+  "brug": [
+   "men derimod",
+   "derimod er"
+  ],
+  "brug_src": "study"
+ },
+ "selvom": {
+  "word": "selvom",
+  "pos": "konjunktion (underordnende)",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "selvom + ledsætning: selvom det regner"
+  ],
+  "brug": [
+   "også selvom",
+   "selvom det",
+   "heller ikke selvom",
+   "selv om det skulle"
+  ],
+  "brug_src": "study"
+ },
+ "omvendt": {
+  "word": "omvendt",
+  "pos": "adverbium",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "omvendt + verbum + subjekt",
+   "lige omvendt"
+  ],
+  "brug": [
+   "lige omvendt",
+   "og omvendt",
+   "det omvendte",
+   "den omvendte rækkefølge"
+  ],
+  "brug_src": "study"
+ },
+ "til_gengæld": {
+  "word": "til gengæld",
+  "pos": "adverbiel forbindelse",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [
+   "til gengæld for NOGET",
+   "til gengæld for NOGET"
+  ],
+  "construction": [],
+  "brug": [
+   "men til gengæld",
+   "få noget til gengæld",
+   "give noget til gengæld"
+  ],
+  "brug_src": "study"
+ },
+ "hvorimod": {
+  "word": "hvorimod",
+  "pos": "konjunktion (underordnende)",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "…, hvorimod + ledsætning"
+  ],
+  "brug": [
+   "hvorimod færre",
+   "hvorimod andre"
+  ],
+  "brug_src": "study"
+ },
+ "overraskende": {
+  "word": "overraskende",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "overraske",
+    "overrasker",
+    "overraskede",
+    "overrasket"
+   ]
+  ],
+  "grammar": [
+   "NOGEN overrasker NOGEN med_ NOGET/ved_at+INFINITIV",
+   "NOGET overrasker NOGEN",
+   "NOGEN overrasker NOGEN (med NOGET)",
+   "NOGEN overrasker NOGEN (i at+INFINITIV/NOGET)"
+  ],
+  "construction": [
+   "Det er overraskende, at + sætning"
+  ],
+  "brug": [
+   "overraskende slutning",
+   "overraskende vinder"
+  ],
+  "brug_src": "DDO"
+ },
+ "logisk": {
+  "word": "logisk",
+  "pos": "adjektiv",
+  "gender": null,
+  "inflection": "-, -e",
+  "forms": [
+   [
+    "logisk",
+    "logisk",
+    "logiske"
+   ]
+  ],
+  "grammar": [],
+  "construction": [
+   "Det er logisk, at + sætning"
+  ],
+  "brug": [
+   "logisk set",
+   "en logisk forklaring"
+  ],
+  "brug_src": "study"
+ },
+ "forventeligt": {
+  "word": "forventeligt",
+  "pos": "adjektiv",
+  "gender": null,
+  "inflection": "som adverbium: -t, -e · som sætningsadv. dog: som adverbium: -t · eller Se bøjning i skema",
+  "forms": [
+   [
+    "forventelig",
+    "forventeligt",
+    "forventelige"
+   ],
+   [
+    "forventeligt"
+   ],
+   [
+    "forventeligtellerforventelig"
+   ]
+  ],
+  "grammar": [],
+  "construction": [
+   "Det var forventeligt, at + sætning"
+  ],
+  "brug": [
+   "det var forventeligt, at",
+   "som forventeligt"
+  ],
+  "brug_src": "note"
+ },
+ "nødvendigt": {
+  "word": "nødvendigt",
+  "pos": "adjektiv",
+  "gender": null,
+  "inflection": "-t, -e -ere, -st",
+  "forms": [
+   [
+    "nødvendig",
+    "nødvendigt",
+    "nødvendige"
+   ],
+   [
+    "nødvendigere",
+    "nødvendigst"
+   ]
+  ],
+  "grammar": [],
+  "construction": [
+   "nødvendigt for / at"
+  ],
+  "brug": [
+   "nødvendige oplysninger",
+   "en nødvendig forudsætning",
+   "et nødvendigt onde"
+  ],
+  "brug_src": "DDO"
+ },
+ "hensigtsmæssig": {
+  "word": "hensigtsmæssig",
+  "pos": "adjektiv",
+  "gender": null,
+  "inflection": "-t, -e",
+  "forms": [
+   [
+    "hensigtsmæssig",
+    "hensigtsmæssigt",
+    "hensigtsmæssige"
+   ]
+  ],
+  "grammar": [],
+  "construction": [
+   "hensigtsmæssig for"
+  ],
+  "brug": [
+   "hensigtsmæssig indretning"
+  ],
+  "brug_src": "DDO"
+ },
+ "tvivlsomt": {
+  "word": "tvivlsomt",
+  "pos": "adjektiv",
+  "gender": null,
+  "inflection": "-t, -me",
+  "forms": [
+   [
+    "tvivlsom",
+    "tvivlsomt",
+    "tvivlsomme"
+   ]
+  ],
+  "grammar": [],
+  "construction": [
+   "tvivlsomt, om …"
+  ],
+  "brug": [
+   "tvivlsom fornøjelse",
+   "tvivlsom ære",
+   "tvivlsom værdi",
+   "tvivlsom kvalitet",
+   "tvivlsom karakter"
+  ],
+  "brug_src": "DDO"
+ },
+ "bæredygtig": {
+  "word": "bæredygtig",
+  "pos": "adjektiv",
+  "gender": null,
+  "inflection": "-t, -e",
+  "forms": [
+   [
+    "bæredygtig",
+    "bæredygtigt",
+    "bæredygtige"
+   ]
+  ],
+  "grammar": [],
+  "construction": [
+   "bæredygtig + navneord: bæredygtig energi"
+  ],
+  "brug": [
+   "bæredygtig udvikling",
+   "bæredygtigt samfund",
+   "bæredygtigt landbrug"
+  ],
+  "brug_src": "DDO"
+ },
+ "at_forhindre": {
+  "word": "forhindre",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "forhindre",
+    "forhindrer",
+    "forhindrede",
+    "forhindret"
+   ]
+  ],
+  "grammar": [
+   "NOGET/NOGEN forhindrer NOGET/at+SÆTNING",
+   "NOGET/NOGEN forhindrer NOGEN/NOGET i at+INFINITIV"
+  ],
+  "construction": [],
+  "brug": [
+   "forhindre at",
+   "forhindre nogen i at"
+  ],
+  "brug_src": "study"
+ },
+ "at_begrænse": {
+  "word": "at begrænse",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "begrænse",
+    "begrænser",
+    "begrænsede",
+    "begrænset"
+   ]
+  ],
+  "grammar": [
+   "NOGEN begrænser NOGET (til NOGET)",
+   "NOGEN/NOGET begrænser NOGET (til/med NOGET)",
+   "NOGET/NOGEN begrænser NOGEN",
+   "NOGEN begrænser sig (til at+INFINITIV/NOGET)",
+   "NOGET begrænser sig til NOGET"
+  ],
+  "construction": [
+   "begrænset af"
+  ],
+  "brug": [
+   "begrænset deltagerantal",
+   "begrænse luftforureningen",
+   "begrænse forbruget",
+   "begrænse skaderne",
+   "begrænse mest muligt"
+  ],
+  "brug_src": "DDO"
+ },
+ "at_forebygge": {
+  "word": "at forebygge",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "forebygge",
+    "forebygger",
+    "forebyggede",
+    "forebygget"
+   ]
+  ],
+  "grammar": [
+   "NOGEN/NOGET forebygger NOGET/at+SÆTNING (ved at../NOGET)"
+  ],
+  "construction": [
+   "forebygge noget"
+  ],
+  "brug": [
+   "forebyggende foranstaltninger",
+   "forebyggende indsats",
+   "forebyggende medicin",
+   "forebyggende middel"
+  ],
+  "brug_src": "DDO"
+ },
+ "at_undgå": {
+  "word": "undgå",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, undgik, -et",
+  "forms": [
+   [
+    "undgå",
+    "undgår",
+    "undgik",
+    "undgået"
+   ]
+  ],
+  "grammar": [
+   "NOGEN/NOGET undgår NOGET/at..",
+   "NOGET undgår NOGET",
+   "NOGEN/NOGET undgår NOGET/at+INFINITIV",
+   "NOGEN undgår NOGEN/NOGET"
+  ],
+  "construction": [],
+  "brug": [
+   "undgå at",
+   "kan ikke undgå"
+  ],
+  "brug_src": "study"
+ },
+ "at_medføre": {
+  "word": "at medføre",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, medførte, medført",
+  "forms": [
+   [
+    "medføre",
+    "medfører",
+    "medførte",
+    "medført"
+   ]
+  ],
+  "grammar": [
+   "NOGET medfører NOGET/at+SÆTNING",
+   "NOGET/NOGEN medfører NOGET"
+  ],
+  "construction": [
+   "medføre + navneord (ingen præposition)"
+  ],
+  "brug": [
+   "automatisk medføre",
+   "medføre merudgifter",
+   "medføre forstyrrelser",
+   "medføre ulemper"
+  ],
+  "brug_src": "DDO"
+ },
+ "at_føre_til": {
+  "word": "at føre til",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, førte, ført",
+  "forms": [
+   [
+    "føre",
+    "fører",
+    "førte",
+    "ført"
+   ]
+  ],
+  "grammar": [
+   "NOGEN/NOGET fører NOGEN/NOGET+RETNING",
+   "NOGEN fører NOGEN/NOGET (+RETNING)",
+   "NOGEN/NOGET fører NOGET+RETNING",
+   "NOGEN fører NOGEN+ADVERBIAL",
+   "NOGEN/NOGET fører NOGET+TILSTAND",
+   "NOGET fører (hen/over/ind/ud/videre/..) til STED",
+   "NOGET fører til NOGET/at+SÆTNING",
+   "NOGET fører med sig at+SÆTNING",
+   "NOGET/det fører+ADVERBIAL",
+   "NOGEN fører NOGET",
+   "NOGEN fører NOGET/NOGEN",
+   "NOGEN fører NOGET (over/med NOGET)",
+   "NOGEN fører NOGET ind (i NOGET)",
+   "NOGEN fører (med NOGET)",
+   "NOGEN/NOGET fører NOGET",
+   "NOGEN bringer/fører NOGET til torvs kasusformen torvs styret af præpositionen til er bevaret fra ældre dansk",
+   "NOGEN fører (NOGET) an",
+   "NOGEN fører an (i NOGET)",
+   "NOGEN fører bevis for_ NOGET/mod_ NOGEN",
+   "NOGEN fører bog over NOGET/NOGEN",
+   "NOGEN fører NOGEN bag lyset",
+   "NOGEN fører NOGEN op (til NOGET)",
+   "NOGEN fører sig+MÅDE",
+   "NOGEN fører sig frem+MÅDE",
+   "NOGEN fører NOGET tilbage til NOGET/TIDSPUNKT",
+   "NOGEN fører NOGET tilbage til NOGET",
+   "NOGEN/NOGET fører NOGEN tilbage til NOGET",
+   "NOGEN fører NOGET til bogs kasusformen bogs styret af til er en analogidannelse",
+   "NOGEN fører NOGET ud i livet",
+   "NOGEN fører NOGET videre",
+   "NOGEN/NOGET fører NOGET videre",
+   "NOGEN fører NOGEN vild",
+   "NOGEN lader sig føre med (af NOGET)"
+  ],
+  "construction": [
+   "føre til + navneord"
+  ],
+  "brug": [
+   "blive ført bort",
+   "alle veje fører til Rom",
+   "den førte politik",
+   "føre ajour",
+   "føre til protokols"
+  ],
+  "brug_src": "DDO"
+ },
+ "at_resultere_i": {
+  "word": "at resultere i",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "resultere",
+    "resulterer",
+    "resulterede",
+    "resulteret"
+   ]
+  ],
+  "grammar": [
+   "NOGET resulterer i NOGET/at+SÆTNING"
+  ],
+  "construction": [
+   "resultere i + navneord"
+  ],
+  "brug": [
+   "resultere i bedre karakterer",
+   "resultere i en stigning"
+  ],
+  "brug_src": "note"
+ },
+ "at_betinge": {
+  "word": "at betinge",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "betinge",
+    "betinger",
+    "betingede",
+    "betinget"
+   ]
+  ],
+  "grammar": [
+   "NOGET betinger NOGET/hv+SÆTNING/om+SÆTNING",
+   "NOGET er betinget af/i NOGET/at+SÆTNING",
+   "NOGET betinger NOGET",
+   "NOGET betinger at+SÆTNING/NOGET",
+   "NOGEN/NOGET betinger NOGET/at+SÆTNING",
+   "NOGEN betinger sig at../NOGET"
+  ],
+  "construction": [
+   "betinget af"
+  ],
+  "brug": [
+   "kulturelt betinget",
+   "historisk betinget"
+  ],
+  "brug_src": "DDO"
+ },
+ "at_sikre": {
+  "word": "sikre",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "sikre",
+    "sikrer",
+    "sikrede",
+    "sikret"
+   ]
+  ],
+  "grammar": [
+   "NOGEN/NOGET sikrer NOGET/NOGEN (mod NOGET)",
+   "NOGEN sikrer NOGET (med NOGET)",
+   "NOGEN sikrer NOGET",
+   "NOGEN sikrer (sig/NOGEN) NOGET",
+   "NOGET sikrer NOGEN NOGET",
+   "NOGEN sikrer (sig) at+SÆTNING/NOGET",
+   "NOGET sikrer at+SÆTNING/NOGET",
+   "NOGEN/NOGET sikrer NOGEN/NOGET",
+   "NOGEN sikrer sig at+SÆTNING"
+  ],
+  "construction": [],
+  "brug": [
+   "sikre at",
+   "sikre sig",
+   "sikre mod"
+  ],
+  "brug_src": "study"
+ },
+ "at_garantere": {
+  "word": "garantere",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "garantere",
+    "garanterer",
+    "garanterede",
+    "garanteret"
+   ]
+  ],
+  "grammar": [
+   "NOGEN garanterer (NOGEN) for/mod NOGET/at+SÆTNING",
+   "NOGEN garanterer (NOGEN) NOGET/at+SÆTNING",
+   "NOGEN garanterer for NOGET"
+  ],
+  "construction": [],
+  "brug": [
+   "garantere at",
+   "garantere for"
+  ],
+  "brug_src": "study"
+ },
+ "at_understrege": {
+  "word": "at understrege",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "understrege",
+    "understreger",
+    "understregede",
+    "understreget"
+   ]
+  ],
+  "grammar": [
+   "NOGEN understreger NOGET",
+   "NOGEN/NOGET understreger NOGET/at+SÆTNING"
+  ],
+  "construction": [
+   "understrege noget / understrege, at + sætning"
+  ],
+  "brug": [
+   "understrege, at",
+   "understrege betydningen af"
+  ],
+  "brug_src": "note"
+ },
+ "at_kræve": {
+  "word": "kræve",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "kræve",
+    "kræver",
+    "krævede",
+    "krævet"
+   ]
+  ],
+  "grammar": [
+   "NOGEN/NOGET kræver NOGET (af NOGEN)",
+   "NOGEN kræver at..",
+   "NOGET kræver NOGET",
+   "NOGET/NOGEN/at+INFINITIV kræver NOGET/at+SÆTNING",
+   "NOGET/NOGEN kræver NOGET (af NOGEN)",
+   "NOGET kræver NOGET/at+SÆTNING",
+   "NOGEN kræver PENGE ind",
+   "NOGEN kræver ind",
+   "NOGEN kræver NOGEN til regnskab (for NOGET)"
+  ],
+  "construction": [],
+  "brug": [
+   "kræve at",
+   "kræve penge",
+   "kræve noget af nogen",
+   "det kræver",
+   "kræve meget af"
+  ],
+  "brug_src": "study"
+ },
+ "at_forårsage": {
+  "word": "at forårsage",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "forårsage",
+    "forårsager",
+    "forårsagede",
+    "forårsaget"
+   ]
+  ],
+  "grammar": [
+   "NOGET/NOGEN forårsager NOGET/at+SÆTNING"
+  ],
+  "construction": [
+   "forårsage + navneord"
+  ],
+  "brug": [
+   "forårsage ødelæggelser/skader",
+   "forårsage ulykker",
+   "forårsage sygdom",
+   "forårsage død"
+  ],
+  "brug_src": "DDO"
+ },
+ "at_fremkalde": {
+  "word": "at fremkalde",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, ..kaldte, ..kaldt",
+  "forms": [
+   [
+    "fremkalde",
+    "fremkalder",
+    "fremkaldte",
+    "fremkaldt"
+   ]
+  ],
+  "grammar": [
+   "NOGET/NOGEN fremkalder NOGET",
+   "NOGEN/NOGET fremkalder NOGET",
+   "NOGEN fremkalder NOGEN"
+  ],
+  "construction": [
+   "fremkalde + navneord"
+  ],
+  "brug": [
+   "fremkalde betændelse",
+   "fremkalde allergi",
+   "fremkalde kræft",
+   "fremkalde vrede"
+  ],
+  "brug_src": "DDO"
+ },
+ "at_skyldes": {
+  "word": "at skyldes",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "skyldes + navneord (ingen præposition)"
+  ],
+  "brug": [
+   "skyldes, at",
+   "skyldes blandt andet"
+  ],
+  "brug_src": "note"
+ },
+ "at_afvise": {
+  "word": "afvise",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, afviste, afvist",
+  "forms": [
+   [
+    "afvise",
+    "afviser",
+    "afviste",
+    "afvist"
+   ]
+  ],
+  "grammar": [
+   "NOGEN afviser NOGET/at..",
+   "NOGEN er afvisende over for NOGET/at..",
+   "NOGEN afviser at+SÆTNING/UDSAGN",
+   "NOGEN afviser NOGEN",
+   "NOGEN afviser NOGEN/NOGET",
+   "NOGEN er afvisende over for NOGEN",
+   "NOGET afviser NOGET"
+  ],
+  "construction": [],
+  "brug": [
+   "afvise et forslag",
+   "afvise en ansøgning",
+   "afvise kritikken",
+   "afvise nogen ved døren"
+  ],
+  "brug_src": "study"
+ },
+ "at_indrømme": {
+  "word": "at indrømme",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "indrømme",
+    "indrømmer",
+    "indrømmede",
+    "indrømmet"
+   ]
+  ],
+  "grammar": [
+   "NOGEN indrømmer at+SÆTNING/NOGET/REPLIK",
+   "NOGEN indrømmer NOGEN NOGET/at+SÆTNING"
+  ],
+  "construction": [
+   "indrømme noget / indrømme, at + sætning"
+  ],
+  "brug": [
+   "indrømme blankt",
+   "jeg må/skal ærligt indrømme",
+   "jeg vil/skal gerne indrømme"
+  ],
+  "brug_src": "DDO"
+ },
+ "et_formål_med": {
+  "word": "et formål med",
+  "pos": "substantiv, intetkøn",
+  "gender": "et",
+  "inflection": "-et, -, -ene",
+  "forms": [
+   [
+    "formål",
+    "formålet",
+    "formål",
+    "formålene"
+   ]
+  ],
+  "grammar": [
+   "formålet med NOGET/at+INFINITIV",
+   "NOGET har til formål at+INFINITIV",
+   "NOGET s formål",
+   "NOGEN s formål med NOGET"
+  ],
+  "construction": [
+   "formålet med"
+  ],
+  "brug": [
+   "det primære formål",
+   "det erklærede formål",
+   "det overordnede formål",
+   "det egentlige formål",
+   "rekreative formål"
+  ],
+  "brug_src": "DDO"
+ },
+ "problemer_med": {
+  "word": "problemer med",
+  "pos": "substantiv, intetkøn",
+  "gender": "et",
+  "inflection": "-et, -er, -erne",
+  "forms": [
+   [
+    "problem",
+    "problemet",
+    "problemer",
+    "problemerne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [
+   "problemer med"
+  ],
+  "brug": [
+   "uløste problemer",
+   "etiske problemer"
+  ],
+  "brug_src": "DDO"
+ },
+ "effekten_af": {
+  "word": "effekten af",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "effekt",
+    "effekten",
+    "effekter",
+    "effekterne"
+   ]
+  ],
+  "grammar": [
+   "effekt af NOGET på NOGET/NOGEN"
+  ],
+  "construction": [
+   "effekten af … på …"
+  ],
+  "brug": [
+   "afsmittende effekt",
+   "positiv/negativ effekt",
+   "dramatisk effekt",
+   "stor effekt"
+  ],
+  "brug_src": "DDO"
+ },
+ "indflydelse_på": {
+  "word": "indflydelse på",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-n, -r, -rne",
+  "forms": [
+   [
+    "indflydelse",
+    "indflydelsen",
+    "indflydelser",
+    "indflydelserne"
+   ]
+  ],
+  "grammar": [
+   "indflydelse på NOGET/NOGEN uden pluralis",
+   "indflydelse på NOGEN/NOGET"
+  ],
+  "construction": [
+   "indflydelse på"
+  ],
+  "brug": [
+   "bestemmende indflydelse",
+   "reel indflydelse",
+   "betydelig/stor indflydelse",
+   "politisk indflydelse",
+   "afgørende indflydelse"
+  ],
+  "brug_src": "DDO"
+ },
+ "da": {
+  "word": "da",
+  "pos": "konjunktion (underordnende)",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "da + ledsætning: Da det regnede, blev vi hjemme"
+  ],
+  "brug": [
+   "da det er sådan",
+   "netop da",
+   "dengang da",
+   "lige da",
+   "først da"
+  ],
+  "brug_src": "study"
+ },
+ "eftersom": {
+  "word": "eftersom",
+  "pos": "konjunktion",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "eftersom + ledsætning"
+  ],
+  "brug": [
+   "eftersom bussen ikke kom"
+  ],
+  "brug_src": "note"
+ },
+ "idet": {
+  "word": "idet",
+  "pos": "konjunktion (underordnende)",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "idet + ledsætning"
+  ],
+  "brug": [
+   "idet at (talesprog)",
+   "lige idet"
+  ],
+  "brug_src": "study"
+ },
+ "for": {
+  "word": "for",
+  "pos": "konjunktion (sideordnende)",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [
+   "for+HOVEDSÆTN",
+   "for at+INFINITIV",
+   "for at+LEDSÆTN"
+  ],
+  "construction": [],
+  "brug": [
+   "for det",
+   "for så",
+   "for at"
+  ],
+  "brug_src": "study"
+ },
+ "på_grund_af": {
+  "word": "på grund af",
+  "pos": "præpositionsforbindelse",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "på grund af + navneord"
+  ],
+  "brug": [
+   "på grund af det",
+   "netop på grund af"
+  ],
+  "brug_src": "study"
+ },
+ "som_følge_af": {
+  "word": "som følge af",
+  "pos": "præpositionsforbindelse",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "som følge af + navneord"
+  ],
+  "brug": [
+   "som en følge af",
+   "direkte følge af"
+  ],
+  "brug_src": "study"
+ },
+ "derved": {
+  "word": "derved",
+  "pos": "adverbium",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [
+   "derved at+SÆTNING"
+  ],
+  "construction": [
+   "derved + verbum + subjekt"
+  ],
+  "brug": [
+   "og derved",
+   "sparer derved"
+  ],
+  "brug_src": "note"
+ },
+ "af_den_grund": {
+  "word": "af den grund",
+  "pos": "adverbiel forbindelse",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "af den grund + verbum + subjekt"
+  ],
+  "brug": [
+   "netop af den grund",
+   "af samme grund"
+  ],
+  "brug_src": "study"
+ },
+ "så": {
+  "word": "så",
+  "pos": "konjunktion (sideordnende) / adverbium",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [
+   "så+HOVEDSÆTN",
+   "så (at)+LEDSÆTN"
+  ],
+  "construction": [],
+  "brug": [
+   "så derfor (talesprog)",
+   "så altså",
+   "så at",
+   "sådan at",
+   "og så",
+   "først … så"
+  ],
+  "brug_src": "study"
+ },
+ "hvilket_betyder_at": {
+  "word": "hvilket betyder, at",
+  "pos": "fast udtryk",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "…, hvilket betyder, at + sætning"
+  ],
+  "brug": [
+   "…, hvilket betyder, at",
+   "hvilket betyder, at man"
+  ],
+  "brug_src": "note",
+  "under": "betyde"
+ },
+ "endvidere": {
+  "word": "endvidere",
+  "pos": "adverbium",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "endvidere + verbum + subjekt"
+  ],
+  "brug": [
+   "og endvidere",
+   "endvidere er"
+  ],
+  "brug_src": "study"
+ },
+ "ydermere": {
+  "word": "ydermere",
+  "pos": "adverbium",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "ydermere + verbum + subjekt"
+  ],
+  "brug": [
+   "og ydermere",
+   "ydermere er"
+  ],
+  "brug_src": "study"
+ },
+ "tilmed": {
+  "word": "tilmed",
+  "pos": "adverbium",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "efter verbet: Det er tilmed gratis"
+  ],
+  "brug": [
+   "og tilmed",
+   "tilmed gratis"
+  ],
+  "brug_src": "note"
+ },
+ "samt": {
+  "word": "samt",
+  "pos": "konjunktion (sideordnende)",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "samt + navneord: bøger samt aviser"
+  ],
+  "brug": [
+   "samt i",
+   "samt et"
+  ],
+  "brug_src": "study"
+ },
+ "ikke_kun_men_også": {
+  "word": "ikke kun … men også",
+  "pos": "fast udtryk (korrelativ)",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "ikke kun A, men også B"
+  ],
+  "brug": [
+   "ikke kun … men også",
+   "ikke kun dyrt, men også"
+  ],
+  "brug_src": "note",
+  "under": "kun"
+ },
+ "både_og": {
+  "word": "både … og",
+  "pos": "konjunktion (korrelativ)",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "både A og B"
+  ],
+  "brug": [
+   "både … og også",
+   "både og"
+  ],
+  "brug_src": "study"
+ },
+ "tilsvarende": {
+  "word": "tilsvarende",
+  "pos": "adverbium / adjektiv",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "en tilsvarende + navneord",
+   "tilsvarende + verbum + subjekt"
+  ],
+  "brug": [
+   "en tilsvarende stigning"
+  ],
+  "brug_src": "study"
+ },
+ "ligesom": {
+  "word": "ligesom",
+  "pos": "konjunktion / adverbium",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [
+   "ligesom (om)+SÆTNING"
+  ],
+  "construction": [],
+  "brug": [
+   "ligesom med",
+   "ligesom også"
+  ],
+  "brug_src": "study"
+ },
+ "til_sammenligning": {
+  "word": "til sammenligning",
+  "pos": "adverbiel forbindelse",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "til sammenligning + verbum + subjekt"
+  ],
+  "brug": [
+   "til sammenligning gjaldt det",
+   "til sammenligning med"
+  ],
+  "brug_src": "study"
+ },
+ "sammenlignet_med": {
+  "word": "sammenlignet med",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "sammenligne",
+    "sammenligner",
+    "sammenlignede",
+    "sammenlignet"
+   ]
+  ],
+  "grammar": [
+   "NOGEN sammenligner NOGET/NOGEN/sig med NOGET/NOGEN",
+   "NOGEN sammenligner NOGET med at+INFINITIV",
+   "NOGEN sammenligner NOGET/NOGLE (med hinanden)",
+   "NOGEN sammenligner NOGET/NOGEN med NOGET/NOGEN",
+   "sammenlign NOGET"
+  ],
+  "construction": [
+   "sammenlignet med + navneord"
+  ],
+  "brug": [
+   "sammenligne forholdene",
+   "sammenligne priser"
+  ],
+  "brug_src": "DDO"
+ },
+ "heller_ikke": {
+  "word": "heller ikke",
+  "pos": "adverbiel forbindelse",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "efter verbet: Jeg kan heller ikke"
+  ],
+  "brug": [
+   "heller ikke selvom",
+   "og heller ikke"
+  ],
+  "brug_src": "study"
+ },
+ "hverken_eller": {
+  "word": "hverken … eller",
+  "pos": "konjunktion (korrelativ)",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "hverken A eller B (uden ikke)"
+  ],
+  "brug": [
+   "hverken … eller",
+   "hverken fugl eller fisk"
+  ],
+  "brug_src": "study"
+ },
+ "men": {
+  "word": "men",
+  "pos": "konjunktion (sideordnende)",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "…, men + hovedsætning"
+  ],
+  "brug": [
+   "men alligevel",
+   "men også",
+   "ikke … men",
+   "undskyld, men",
+   "der er et men",
+   "ingen men"
+  ],
+  "brug_src": "study"
+ },
+ "dog": {
+  "word": "dog",
+  "pos": "adverbium",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "efter verbet: Det er dog dyrt"
+  ],
+  "brug": [
+   "dog ikke",
+   "men dog",
+   "dog kun",
+   "i hvert fald",
+   "dog i det mindste",
+   "hvor er det dog …"
+  ],
+  "brug_src": "study"
+ },
+ "mens": {
+  "word": "mens",
+  "pos": "konjunktion (underordnende)",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "mens + ledsætning"
+  ],
+  "brug": [
+   "mens derimod",
+   "mens det står på",
+   "mens tid er"
+  ],
+  "brug_src": "study"
+ },
+ "tværtimod": {
+  "word": "tværtimod",
+  "pos": "adverbium",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "tværtimod + verbum + subjekt"
+  ],
+  "brug": [
+   "snarere tværtimod",
+   "tværtimod!"
+  ],
+  "brug_src": "study"
+ },
+ "i_modsætning_til": {
+  "word": "i modsætning til",
+  "pos": "præpositionsforbindelse",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [
+   "i modsætning til NOGEN/NOGET",
+   "i modsætning til NOGEN/NOGET"
+  ],
+  "construction": [],
+  "brug": [
+   "i modsætning til andre",
+   "i modsætning hertil"
+  ],
+  "brug_src": "study"
+ },
+ "i_stedet_for": {
+  "word": "i stedet (for)",
+  "pos": "adverbiel forbindelse",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [
+   "i stedet for NOGET/at.. fk.-formen steden er bevaret fra ældre dansk; formen er",
+   "i stedet for NOGET/at.. fk.-formen steden er bevaret fra ældre dansk; formen er"
+  ],
+  "construction": [],
+  "brug": [
+   "i stedet for at",
+   "i stedet for et",
+   "i stedet for at gøre noget"
+  ],
+  "brug_src": "study"
+ },
+ "på_den_ene_side_på_den_anden_side": {
+  "word": "på den ene side … på den anden side",
+  "pos": "fast udtryk (adverbiel forbindelse)",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "på den ene side …, på den anden side …"
+  ],
+  "brug": [
+   "på den ene side …, på den anden side …"
+  ],
+  "brug_src": "note"
+ },
+ "skønt": {
+  "word": "skønt",
+  "pos": "konjunktion",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "skønt + ledsætning"
+  ],
+  "brug": [
+   "skønt han var træt"
+  ],
+  "brug_src": "note"
+ },
+ "ikke_desto_mindre": {
+  "word": "ikke desto mindre",
+  "pos": "adverbiel forbindelse",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "ikke desto mindre + verbum + subjekt"
+  ],
+  "brug": [
+   "men ikke desto mindre"
+  ],
+  "brug_src": "study"
+ },
+ "ganske_vist": {
+  "word": "ganske vist",
+  "pos": "adverbiel forbindelse",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "ganske vist …, men …"
+  ],
+  "brug": [
+   "ganske vist … men"
+  ],
+  "brug_src": "study"
+ },
+ "trods_på_trods_af": {
+  "word": "trods / på trods af",
+  "pos": "præposition",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "på trods af + navneord"
+  ],
+  "brug": [
+   "trods advarsler",
+   "trods protester",
+   "trods modstand"
+  ],
+  "brug_src": "DDO"
+ },
+ "hvis": {
+  "word": "hvis",
+  "pos": "konjunktion (underordnende)",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "hvis + ledsætning: Hvis det regner, …"
+  ],
+  "brug": [
+   "hvis … så",
+   "hvis ikke",
+   "selv hvis",
+   "kun hvis",
+   "hvis bare"
+  ],
+  "brug_src": "study"
+ },
+ "såfremt": {
+  "word": "såfremt",
+  "pos": "konjunktion",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "såfremt + ledsætning"
+  ],
+  "brug": [
+   "såfremt du består"
+  ],
+  "brug_src": "note"
+ },
+ "forudsat_at": {
+  "word": "forudsat at",
+  "pos": "konjunktion",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [
+   "forudsat (at)+SÆTNING"
+  ],
+  "construction": [
+   "forudsat at + ledsætning"
+  ],
+  "brug": [
+   "forudsat at vejret er godt"
+  ],
+  "brug_src": "note"
+ },
+ "medmindre": {
+  "word": "medmindre",
+  "pos": "konjunktion",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "medmindre + ledsætning"
+  ],
+  "brug": [
+   "medmindre det regner",
+   "medmindre andet er aftalt"
+  ],
+  "brug_src": "note"
+ },
+ "for_at": {
+  "word": "for at",
+  "pos": "infinitivforbindelse",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [
+   "for at+INFINITIV",
+   "for at+LEDSÆTN",
+   "for at+INFINITIV",
+   "for at+LEDSÆTN"
+  ],
+  "construction": [],
+  "brug": [
+   "for at kunne",
+   "for ikke at",
+   "for dermed at",
+   "for at sige det mildt",
+   "for at sige det, som det er"
+  ],
+  "brug_src": "study"
+ },
+ "så_at": {
+  "word": "så",
+  "pos": "konjunktion (sideordnende) / adverbium",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [
+   "så+HOVEDSÆTN",
+   "så (at)+LEDSÆTN"
+  ],
+  "construction": [],
+  "brug": [
+   "så derfor (talesprog)",
+   "så altså",
+   "så at",
+   "sådan at",
+   "og så",
+   "først … så"
+  ],
+  "brug_src": "study"
+ },
+ "med_henblik_på": {
+  "word": "med henblik på",
+  "pos": "fast udtryk (præpositionsforbindelse)",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "med henblik på + navneord / at"
+  ],
+  "brug": [
+   "med henblik på job",
+   "med henblik på at + infinitiv"
+  ],
+  "brug_src": "note",
+  "under": "henblik"
+ },
+ "undtagen": {
+  "word": "undtagen",
+  "pos": "præposition",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "undtagen + navneord"
+  ],
+  "brug": [
+   "alle undtagen",
+   "undtagen om søndagen"
+  ],
+  "brug_src": "note"
+ },
+ "bortset_fra": {
+  "word": "bortset fra",
+  "pos": "fast udtryk",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [
+   "bortset fra NOGET/at+SÆTNING/NOGEN"
+  ],
+  "construction": [
+   "bortset fra + navneord"
+  ],
+  "brug": [
+   "bortset fra vejret",
+   "bortset fra det"
+  ],
+  "brug_src": "note"
+ },
+ "frem_for": {
+  "word": "frem for",
+  "pos": "præpositionsforbindelse",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "frem for + navneord / at"
+  ],
+  "brug": [
+   "foretrække noget frem for",
+   "frem for at",
+   "frem for alt"
+  ],
+  "brug_src": "study"
+ },
+ "snarere": {
+  "word": "snarere",
+  "pos": "adverbium",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "snarere A end B"
+  ],
+  "brug": [
+   "måske snarere",
+   "langt snarere",
+   "snarere tværtimod",
+   "undtagelsen snarere end reglen"
+  ],
+  "brug_src": "DDO"
+ },
+ "for_eksempel_fx": {
+  "word": "for eksempel",
+  "pos": "adverbiel forbindelse",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "efter verbet: Man kan for eksempel …",
+   "foran et led: for eksempel København"
+  ],
+  "brug": [
+   "fx",
+   "f.eks.",
+   "som for eksempel"
+  ],
+  "brug_src": "study"
+ },
+ "eksempelvis": {
+  "word": "eksempelvis",
+  "pos": "adverbium",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "eksempelvis + navneord"
+  ],
+  "brug": [
+   "eksempelvis være",
+   "som eksempelvis"
+  ],
+  "brug_src": "study"
+ },
+ "især": {
+  "word": "især",
+  "pos": "adverbium",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "især + navneord: især børn"
+  ],
+  "brug": [
+   "især fordi",
+   "især når",
+   "men især"
+  ],
+  "brug_src": "study"
+ },
+ "navnlig": {
+  "word": "navnlig",
+  "pos": "adverbium",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "navnlig + navneord"
+  ],
+  "brug": [
+   "navnlig ældre",
+   "og navnlig"
+  ],
+  "brug_src": "note"
+ },
+ "det_vil_sige_dvs": {
+  "word": "det vil sige",
+  "pos": "adverbiel forbindelse",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "…, det vil sige + led (forklarer det foregående)"
+  ],
+  "brug": [
+   "dvs.",
+   "hvad vil det sige",
+   "hvad vil det sige at"
+  ],
+  "brug_src": "study"
+ },
+ "med_andre_ord": {
+  "word": "med andre ord",
+  "pos": "adverbiel forbindelse",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "med andre ord + verbum + subjekt"
+  ],
+  "brug": [
+   "med andre ord er"
+  ],
+  "brug_src": "study"
+ },
+ "herunder": {
+  "word": "herunder",
+  "pos": "adverbium",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "…, herunder + navneord"
+  ],
+  "brug": [
+   "herunder børn",
+   "herunder også"
+  ],
+  "brug_src": "note"
+ },
+ "heldigvis": {
+  "word": "heldigvis",
+  "pos": "adverbium",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "heldigvis + verbum + subjekt: Heldigvis kom han"
+  ],
+  "brug": [
+   "men heldigvis",
+   "og heldigvis"
+  ],
+  "brug_src": "study"
+ },
+ "desværre": {
+  "word": "desværre",
+  "pos": "adverbium",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [
+   "desværre for NOGEN/NOGET"
+  ],
+  "construction": [],
+  "brug": [
+   "men desværre",
+   "desværre ikke",
+   "vi må desværre"
+  ],
+  "brug_src": "study"
+ },
+ "naturligvis": {
+  "word": "naturligvis",
+  "pos": "adverbium",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "naturligvis + verbum + subjekt"
+  ],
+  "brug": [
+   "naturligvis … men"
+  ],
+  "brug_src": "study"
+ },
+ "faktisk": {
+  "word": "faktisk",
+  "pos": "adverbium",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "efter verbet: Det er faktisk godt"
+  ],
+  "brug": [
+   "faktisk ikke",
+   "rent faktisk",
+   "det er faktisk",
+   "de faktiske forhold"
+  ],
+  "brug_src": "study"
+ },
+ "overraskende_nok": {
+  "word": "overraskende nok",
+  "pos": "adverbiel forbindelse",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "overraskende nok + verbum + subjekt"
+  ],
+  "brug": [
+   "overraskende nok kunne"
+  ],
+  "brug_src": "study"
+ },
+ "når": {
+  "word": "når",
+  "pos": "konjunktion (underordnende)",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "når + ledsætning"
+  ],
+  "brug": [
+   "når som helst",
+   "hver gang når",
+   "når … så",
+   "når nu"
+  ],
+  "brug_src": "study"
+ },
+ "inden": {
+  "word": "inden",
+  "pos": "konjunktion / præposition",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "inden + ledsætning eller navneord"
+  ],
+  "brug": [
+   "inden da",
+   "i god tid inden",
+   "inden længe",
+   "inden for"
+  ],
+  "brug_src": "study"
+ },
+ "efter_at": {
+  "word": "efter at",
+  "pos": "konjunktion (underordnende)",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "efter at + sætning"
+  ],
+  "brug": [
+   "efter at have + participium"
+  ],
+  "brug_src": "study"
+ },
+ "efterhånden_som": {
+  "word": "efterhånden som",
+  "pos": "adverbium",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "efterhånden som + ledsætning"
+  ],
+  "brug": [
+   "efterhånden som man bliver ældre"
+  ],
+  "brug_src": "note"
+ },
+ "siden": {
+  "word": "siden",
+  "pos": "konjunktion (underordnende)",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "siden + ledsætning / for … siden"
+  ],
+  "brug": [
+   "lige siden",
+   "længe siden",
+   "for … siden",
+   "siden hen",
+   "kort tid siden"
+  ],
+  "brug_src": "study"
+ },
+ "derefter": {
+  "word": "derefter",
+  "pos": "adverbium",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "derefter + verbum + subjekt"
+  ],
+  "brug": [
+   "først derefter",
+   "handle derefter"
+  ],
+  "brug_src": "DDO"
+ },
+ "herefter": {
+  "word": "herefter",
+  "pos": "adverbium",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "herefter + verbum + subjekt"
+  ],
+  "brug": [
+   "og herefter",
+   "blev herefter"
+  ],
+  "brug_src": "study"
+ },
+ "til_sidst": {
+  "word": "til sidst",
+  "pos": "adverbiel forbindelse",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "til sidst + verbum + subjekt"
+  ],
+  "brug": [
+   "helt til sidst",
+   "til det sidste"
+  ],
+  "brug_src": "study"
+ },
+ "endelig": {
+  "word": "endelig",
+  "pos": "adverbium",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "endelig + verbum + subjekt"
+  ],
+  "brug": [
+   "og endelig",
+   "endelig fik",
+   "endelig ikke",
+   "den endelige afgørelse"
+  ],
+  "brug_src": "study"
+ },
+ "alt_i_alt": {
+  "word": "alt i alt",
+  "pos": "fast udtryk (adverbiel forbindelse)",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "alt i alt + verbum + subjekt"
+  ],
+  "brug": [
+   "alt i alt mener jeg"
+  ],
+  "brug_src": "note"
+ },
+ "samlet_set": {
+  "word": "samlet set",
+  "pos": "fast udtryk (adverbiel forbindelse)",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "samlet set + verbum + subjekt"
+  ],
+  "brug": [
+   "samlet set er det"
+  ],
+  "brug_src": "note"
+ },
+ "kort_sagt": {
+  "word": "kort sagt",
+  "pos": "adverbiel forbindelse",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "kort sagt + verbum + subjekt"
+  ],
+  "brug": [
+   "kort fortalt"
+  ],
+  "brug_src": "study"
+ },
+ "for_at_konkludere": {
+  "word": "for at konkludere",
+  "pos": "fast udtryk (infinitivforbindelse)",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [
+   "for at konkludere + verbum + subjekt"
+  ],
+  "brug": [
+   "for at konkludere:"
+  ],
+  "brug_src": "note",
+  "under": "konkludere"
+ },
+ "at_påpege": {
+  "word": "påpege",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "påpege",
+    "påpeger",
+    "påpegede",
+    "påpeget"
+   ]
+  ],
+  "grammar": [
+   "NOGEN/NOGET påpeger NOGET/at+SÆTNING/hv+SÆTNING",
+   "NOGEN påpeger REPLIK"
+  ],
+  "construction": [],
+  "brug": [
+   "påpege at",
+   "påpege et problem"
+  ],
+  "brug_src": "study"
+ },
+ "at_bekræfte": {
+  "word": "bekræfte",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "bekræfte",
+    "bekræfter",
+    "bekræftede",
+    "bekræftet"
+   ]
+  ],
+  "grammar": [
+   "NOGET/NOGEN bekræfter at../NOGET (over for NOGEN)",
+   "NOGET/NOGEN bekræfter NOGEN i NOGET",
+   "NOGEN bekræfter at../NOGET",
+   "NOGET/NOGEN bekræfter at../NOGET",
+   "NOGEN/NOGET bekræfter at../NOGET",
+   "NOGEN bekræfter NOGET",
+   "NOGEN bekræfter NOGEN i NOGET/at..",
+   "NOGEN bekræfter NOGEN (i NOGET/at..)"
+  ],
+  "construction": [],
+  "brug": [
+   "bekræfte at",
+   "bekræfte en mistanke",
+   "bekræfte en aftale",
+   "bekræfte modtagelsen"
+  ],
+  "brug_src": "study"
+ },
+ "at_benægte": {
+  "word": "benægte",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "benægte",
+    "benægter",
+    "benægtede",
+    "benægtet"
+   ]
+  ],
+  "grammar": [
+   "NOGEN benægter NOGET/at..",
+   "NOGET benægter NOGET/at.."
+  ],
+  "construction": [],
+  "brug": [
+   "benægte at",
+   "benægte en anklage"
+  ],
+  "brug_src": "study"
+ },
+ "at_modsige": {
+  "word": "modsige",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, modsagde, modsagt",
+  "forms": [
+   [
+    "modsige",
+    "modsiger",
+    "modsagde",
+    "modsagt"
+   ]
+  ],
+  "grammar": [
+   "NOGEN modsiger NOGEN/NOGET",
+   "NOGET modsiger NOGET",
+   "NOGEN modsiger sig selv"
+  ],
+  "construction": [],
+  "brug": [
+   "modsige nogen",
+   "modsige sig selv"
+  ],
+  "brug_src": "study"
+ },
+ "at_fortryde": {
+  "word": "fortryde",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, fortrød, fortrudt",
+  "forms": [
+   [
+    "fortryde",
+    "fortryder",
+    "fortrød",
+    "fortrudt"
+   ]
+  ],
+  "grammar": [
+   "NOGEN fortryder (NOGET/at../hv+SÆTNING)",
+   "NOGEN fortryder"
+  ],
+  "construction": [],
+  "brug": [
+   "fortryde at",
+   "fortryde noget"
+  ],
+  "brug_src": "study"
+ },
+ "at_beklage": {
+  "word": "beklage",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "beklage",
+    "beklager",
+    "beklagede",
+    "beklaget"
+   ]
+  ],
+  "grammar": [
+   "NOGEN beklager (NOGET/at../hv+SÆTNING)",
+   "NOGEN beklager (NOGET/at+SÆTNING)",
+   "NOGEN beklager NOGEN",
+   "NOGEN beklager sig (over NOGET/at+SÆTNING/NOGEN)"
+  ],
+  "construction": [],
+  "brug": [
+   "beklage at",
+   "vi beklager",
+   "beklage sig over"
+  ],
+  "brug_src": "study"
+ },
+ "at_opleve": {
+  "word": "opleve",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "opleve",
+    "oplever",
+    "oplevede",
+    "oplevet"
+   ]
+  ],
+  "grammar": [
+   "NOGEN oplever NOGET/at..",
+   "NOGEN oplever NOGET/NOGEN+MÅDE",
+   "NOGEN oplever NOGET/NOGEN som NOGET/NOGEN",
+   "NOGEN oplever NOGEN/NOGET",
+   "NOGEN oplever NOGEN",
+   "NOGEN oplever at+SÆTNING"
+  ],
+  "construction": [],
+  "brug": [
+   "opleve at",
+   "opleve noget nyt",
+   "opleve naturen"
+  ],
+  "brug_src": "study"
+ },
+ "at_reducere": {
+  "word": "reducere",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "reducere",
+    "reducerer",
+    "reducerede",
+    "reduceret"
+   ]
+  ],
+  "grammar": [
+   "NOGEN/NOGET reducerer NOGET/NOGEN (til/med NOGET/NOGEN)",
+   "NOGEN reducerer NOGET/NOGEN (til NOGET/NOGEN)",
+   "NOGEN reducerer NOGET/NOGEN (til NOGET)",
+   "NOGEN reducerer (til STILLING)",
+   "NOGEN reducerer NOGET"
+  ],
+  "construction": [],
+  "brug": [
+   "reducere antallet",
+   "reducere udgifterne",
+   "reducere med"
+  ],
+  "brug_src": "study"
+ },
+ "at_muliggøre": {
+  "word": "muliggøre",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "..gør, ..gjorde, ..gjort",
+  "forms": [
+   [
+    "muliggøre",
+    "muliggør",
+    "..gjorde",
+    "..gjort"
+   ]
+  ],
+  "grammar": [
+   "NOGET muliggør NOGET/at+SÆTNING"
+  ],
+  "construction": [],
+  "brug": [
+   "muliggøre at"
+  ],
+  "brug_src": "study"
+ },
+ "at_udvide": {
+  "word": "udvide",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "udvide",
+    "udvider",
+    "udvidede",
+    "udvidet"
+   ]
+  ],
+  "grammar": [
+   "NOGEN udvider NOGET (med NOGET)",
+   "NOGEN udvider NOGET (til at+INFINITIV/NOGET)",
+   "NOGET/NOGEN udvider (NOGET)/(med NOGET)",
+   "NOGEN/NOGET udvider NOGET",
+   "NOGET/NOGEN udvider NOGET"
+  ],
+  "construction": [],
+  "brug": [
+   "udvide med",
+   "udvide sortimentet",
+   "udvide sig"
+  ],
+  "brug_src": "study"
+ },
+ "at_forlænge": {
+  "word": "forlænge",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "forlænge",
+    "forlænger",
+    "forlængede",
+    "forlænget"
+   ]
+  ],
+  "grammar": [
+   "NOGEN/NOGET forlænger NOGET (+ADVERBIAL)",
+   "NOGEN forlænger NOGET ((med) LÆNGDE)",
+   "NOGEN forlænger BRØK (med TAL)"
+  ],
+  "construction": [],
+  "brug": [
+   "forlænge en aftale",
+   "forlænge fristen",
+   "forlænge en vej"
+  ],
+  "brug_src": "study"
+ },
+ "at_forenkle": {
+  "word": "forenkle",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "forenkle",
+    "forenkler",
+    "forenklede",
+    "forenklet"
+   ]
+  ],
+  "grammar": [
+   "NOGEN forenkler NOGET"
+  ],
+  "construction": [],
+  "brug": [
+   "forenkle reglerne",
+   "forenklet"
+  ],
+  "brug_src": "study"
+ },
+ "at_investere_i": {
+  "word": "at investere i",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "investere",
+    "investerer",
+    "investerede",
+    "investeret"
+   ]
+  ],
+  "grammar": [
+   "NOGEN investerer (NOGET) (i NOGET)"
+  ],
+  "construction": [
+   "investere i"
+  ],
+  "brug": [
+   "investere i nye skoler",
+   "investere penge i"
+  ],
+  "brug_src": "note"
+ },
+ "at_offentliggøre": {
+  "word": "offentliggøre",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "..gør, ..gjorde, ..gjort",
+  "forms": [
+   [
+    "offentliggøre",
+    "offentliggør",
+    "..gjorde",
+    "..gjort"
+   ]
+  ],
+  "grammar": [
+   "NOGEN offentliggør NOGET/at+SÆTNING/hv+SÆTNING"
+  ],
+  "construction": [],
+  "brug": [
+   "offentliggøre en rapport",
+   "offentliggøre resultaterne"
+  ],
+  "brug_src": "study"
+ },
+ "en_mulighed": {
+  "word": "mulighed",
+  "pos": "substantiv",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "mulighed",
+    "muligheden",
+    "muligheder",
+    "mulighederne"
+   ]
+  ],
+  "grammar": [
+   "muligheden af NOGET/at.. uden pluralis",
+   "mulighed for NOGET/at.."
+  ],
+  "construction": [],
+  "brug": [
+   "der er mulighed for",
+   "en reel mulighed",
+   "have mulighed for",
+   "give mulighed for",
+   "forskellige muligheder"
+  ],
+  "brug_src": "study"
+ },
+ "en_udfordring": {
+  "word": "udfordring",
+  "pos": "substantiv",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "udfordring",
+    "udfordringen",
+    "udfordringer",
+    "udfordringerne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [
+   "udfordring for"
+  ],
+  "brug": [
+   "stå over for en udfordring",
+   "en stor udfordring",
+   "tage en udfordring op"
+  ],
+  "brug_src": "study"
+ },
+ "et_ansvar": {
+  "word": "ansvar",
+  "pos": "substantiv",
+  "gender": "et",
+  "inflection": "-et",
+  "forms": [
+   [
+    "ansvar",
+    "ansvaret"
+   ]
+  ],
+  "grammar": [
+   "ansvar for NOGET/NOGEN/at..",
+   "på/under NOGEN s ansvar",
+   "NOGEN gør ansvar gældende mod/over_for NOGEN",
+   "NOGEN står til ansvar for NOGET",
+   "NOGEN står til ansvar over for NOGEN"
+  ],
+  "construction": [],
+  "brug": [
+   "have ansvar for",
+   "tage ansvar",
+   "påtage sig ansvaret",
+   "stå til ansvar"
+  ],
+  "brug_src": "study"
+ },
+ "et_behov": {
+  "word": "behov",
+  "pos": "substantiv",
+  "gender": "et",
+  "inflection": "-et, -, -ene",
+  "forms": [
+   [
+    "behov",
+    "behovet",
+    "behov",
+    "behovene"
+   ]
+  ],
+  "grammar": [
+   "behov for NOGET/at.."
+  ],
+  "construction": [],
+  "brug": [
+   "have behov for",
+   "efter behov",
+   "dække et behov",
+   "der er behov for"
+  ],
+  "brug_src": "study"
+ },
+ "en_modstand": {
+  "word": "modstand",
+  "pos": "substantiv",
+  "gender": "en",
+  "inflection": "-en, -e, -ene",
+  "forms": [
+   [
+    "modstand",
+    "modstanden",
+    "modstande",
+    "modstandene"
+   ]
+  ],
+  "grammar": [
+   "modstand mod NOGEN/NOGET uden pluralis",
+   "modstand mod NOGET/NOGEN uden pluralis"
+  ],
+  "construction": [],
+  "brug": [
+   "modstand mod",
+   "møde modstand",
+   "gøre modstand",
+   "modstandsbevægelsen"
+  ],
+  "brug_src": "study"
+ },
+ "en_opbakning": {
+  "word": "opbakning",
+  "pos": "substantiv",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "opbakning",
+    "opbakningen",
+    "opbakninger",
+    "opbakningerne"
+   ]
+  ],
+  "grammar": [
+   "opbakning til NOGET/NOGEN/at+INFINITIV"
+  ],
+  "construction": [],
+  "brug": [
+   "opbakning til",
+   "få opbakning",
+   "bred opbakning"
+  ],
+  "brug_src": "study"
+ },
+ "en_forudsætning": {
+  "word": "forudsætning",
+  "pos": "substantiv",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "forudsætning",
+    "forudsætningen",
+    "forudsætninger",
+    "forudsætningerne"
+   ]
+  ],
+  "grammar": [
+   "under forudsætning af at+SÆTNING",
+   "under forudsætning af NOGET"
+  ],
+  "construction": [],
+  "brug": [
+   "en forudsætning for",
+   "på den forudsætning at",
+   "gode forudsætninger",
+   "ud fra den forudsætning"
+  ],
+  "brug_src": "study"
+ },
+ "en_påstand": {
+  "word": "påstand",
+  "pos": "substantiv",
+  "gender": "en",
+  "inflection": "-en, -e, -ene",
+  "forms": [
+   [
+    "påstand",
+    "påstanden",
+    "påstande",
+    "påstandene"
+   ]
+  ],
+  "grammar": [
+   "påstand om at../NOGET",
+   "nedlægge påstand om NOGET"
+  ],
+  "construction": [],
+  "brug": [
+   "fremsætte en påstand",
+   "påstanden om",
+   "påstand mod påstand"
+  ],
+  "brug_src": "study"
+ },
+ "en_tendens": {
+  "word": "tendens",
+  "pos": "substantiv",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "tendens",
+    "tendensen",
+    "tendenser",
+    "tendenserne"
+   ]
+  ],
+  "grammar": [
+   "have (en) tendens til at+INFINITIV/NOGET"
+  ],
+  "construction": [],
+  "brug": [
+   "en tendens til",
+   "en stigende tendens",
+   "vende tendensen",
+   "have en tendens til"
+  ],
+  "brug_src": "study"
+ },
+ "en_omkostning": {
+  "word": "omkostning",
+  "pos": "substantiv",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "omkostning",
+    "omkostningen",
+    "omkostninger",
+    "omkostningerne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [
+   "omkostninger ved + navneord / at + infinitiv"
+  ],
+  "brug": [
+   "høje omkostninger",
+   "omkostninger ved",
+   "dække omkostningerne"
+  ],
+  "brug_src": "study"
+ },
+ "en_undtagelse": {
+  "word": "undtagelse",
+  "pos": "substantiv",
+  "gender": "en",
+  "inflection": "-n, -r, -rne",
+  "forms": [
+   [
+    "undtagelse",
+    "undtagelsen",
+    "undtagelser",
+    "undtagelserne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [
+   "undtagelse fra"
+  ],
+  "brug": [
+   "med undtagelse af",
+   "en undtagelse fra",
+   "uden undtagelse"
+  ],
+  "brug_src": "study"
+ },
+ "en_målsætning": {
+  "word": "målsætning",
+  "pos": "substantiv",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "målsætning",
+    "målsætningen",
+    "målsætninger",
+    "målsætningerne"
+   ]
+  ],
+  "grammar": [
+   "målsætning for NOGET/NOGEN",
+   "målsætning med NOGET"
+  ],
+  "construction": [],
+  "brug": [
+   "have som målsætning",
+   "nå sin målsætning"
+  ],
+  "brug_src": "study"
+ },
+ "en_forklaring": {
+  "word": "forklaring",
+  "pos": "substantiv",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "forklaring",
+    "forklaringen",
+    "forklaringer",
+    "forklaringerne"
+   ]
+  ],
+  "grammar": [
+   "forklaring på NOGET/hv+SÆTNING/at+SÆTNING",
+   "forklaring om NOGET/at+SÆTNING/hv+SÆTNING",
+   "forklaring på NOGET/at+SÆTNING",
+   "forklaring af NOGET"
+  ],
+  "construction": [],
+  "brug": [
+   "forklaringen på",
+   "en mulig forklaring",
+   "give en forklaring"
+  ],
+  "brug_src": "study"
+ },
+ "typisk": {
+  "word": "typisk",
+  "pos": "adjektiv",
+  "gender": null,
+  "inflection": "-, -e",
+  "forms": [
+   [
+    "typisk",
+    "typisk",
+    "typiske"
+   ]
+  ],
+  "grammar": [],
+  "construction": [
+   "typisk for + navneord",
+   "efter verbet: Man har typisk mere overskud"
+  ],
+  "brug": [
+   "typisk for",
+   "typisk dansk"
+  ],
+  "brug_src": "study"
+ },
+ "karakteristisk": {
+  "word": "karakteristisk",
+  "pos": "adjektiv",
+  "gender": null,
+  "inflection": "-, -e",
+  "forms": [
+   [
+    "karakteristisk",
+    "karakteristisk",
+    "karakteristiske"
+   ]
+  ],
+  "grammar": [
+   "karakteristisk for/ved NOGEN/NOGET"
+  ],
+  "construction": [],
+  "brug": [
+   "karakteristisk for"
+  ],
+  "brug_src": "study"
+ },
+ "sjældent": {
+  "word": "sjældent",
+  "pos": "adjektiv",
+  "gender": null,
+  "inflection": "-t, sjældne sjældnere, sjældnest",
+  "forms": [
+   [
+    "sjælden",
+    "sjældent",
+    "sjældne"
+   ],
+   [
+    "sjældnere",
+    "sjældnest"
+   ]
+  ],
+  "grammar": [],
+  "construction": [
+   "efter verbet: Han kommer sjældent"
+  ],
+  "brug": [
+   "sjælden kombination",
+   "en sjælden gang",
+   "sjælden gæst",
+   "sjælden fugl",
+   "sjælden sygdom"
+  ],
+  "brug_src": "DDO"
+ }
+}

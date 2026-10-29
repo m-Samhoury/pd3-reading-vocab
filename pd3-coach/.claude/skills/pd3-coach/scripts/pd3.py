@@ -594,7 +594,7 @@ def build_page():
         if c.get("dict"):
             c["dict"]["senses_en"] = [tr.get(s, "") for s in c["dict"]["senses"]]
     senses = {cid: {k: v for k, v in e.items() if k != "sentences"} for cid, e in load("senses.json", {}).items()}
-    deck = {"cards": cards, "profile": load("profile.json", {}), "senses": senses, "tips": load("tips.json", {}),
+    deck = {"cards": cards, "profile": load("profile.json", {}), "senses": senses, "tips": load("tips.json", {}), "info": load("wordinfo.json", {}),
             "sentences": load("exam-sentences.json", {}).get("sentences", {}), "built": TODAY.isoformat()}
     js = "window.PD3_DECK = " + json.dumps(deck, ensure_ascii=False).replace("</", "<\\/") + ";"
     html = open(tpl, encoding="utf-8").read().replace("window.PD3_DECK = null; /*DECK*/", js)
