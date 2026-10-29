@@ -292,27 +292,42 @@ input.answer:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--ac
 .prepline { display: inline-block; margin: 6px 0 2px; padding: 3px 10px; border-radius: 8px; background: var(--blue-soft); color: var(--blue-text); font-size: .9rem; }
 .prepline b { color: var(--ink); font-weight: 600; }
 /* Grammatik */
-textarea.answer { width: 100%; min-height: 96px; font: inherit; font-size: 1.1rem; line-height: 1.5; padding: 10px 14px; border: 1px solid var(--rule-strong); border-radius: 12px; background: var(--sheet); color: var(--ink); margin-top: 14px; resize: vertical; }
-textarea.answer:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); outline: none; }
-.gtile { padding: 18px 20px; margin-top: 14px; display: grid; gap: 8px; }
-.gtile h3 { font-size: 1.2rem; }
-.gtile .demo { font-style: italic; color: var(--soft); }
-.chipw { display: inline-block; padding: 2px 10px; border-radius: 8px; background: var(--accent-soft); color: var(--accent-text); font-weight: 700; }
-.slots { font-size: 1.15rem; line-height: 2.3; font-weight: 500; }
-.slot { display: inline-grid; place-items: center; min-width: 22px; height: 28px; margin: 0 2px; padding: 0 4px; vertical-align: middle; border: 1px dashed var(--rule-strong); border-radius: 7px; background: transparent; color: var(--faint); font: inherit; font-size: .8rem; cursor: pointer; }
-.slot:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
-.slot.sel, .slot.right { vertical-align: baseline; }
-.slot.sel { border: 0; background: var(--accent-soft); color: var(--accent-text); font-size: 1.05rem; font-weight: 700; padding: 0 8px; }
-.slot.right { border: 0; background: var(--ok-bg); color: var(--ok); font-size: 1.05rem; font-weight: 700; padding: 0 8px; }
-.slot:disabled { cursor: default; }
+.gsec { margin-top: 26px; }
+.opts.short { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
+.gsec > h2 { font-size: 1.05rem; margin-bottom: 2px; }
+.ggrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; margin-top: 10px; }
+.gtile { padding: 16px 18px; display: grid; gap: 6px; align-content: start; text-align: left; cursor: pointer; border: 1px solid var(--rule); }
+.gtile:hover { border-color: var(--accent); }
+.gtile h3 { font-size: 1.05rem; }
+.gtile .rule { font-size: .92rem; color: var(--soft); }
+.gtile .demo { font-size: .92rem; font-style: italic; }
+.gtile .meta { display: flex; gap: 8px; align-items: center; font-size: .8rem; color: var(--faint); }
+.gtile .bar { height: 5px; flex: 1; }
+.gsent { font-size: 1.15rem; font-weight: 500; line-height: 1.9; }
+.gsent .gap { min-width: 3.5em; }
+.gsent mark.hl { font-weight: 700; }
+input.vgap { width: 5.6em; font: inherit; font-size: 1.05rem; padding: 2px 8px; margin: 0 2px; border: 0; border-bottom: 2.5px solid var(--accent); border-radius: 6px 6px 0 0; background: var(--accent-soft); color: var(--ink); }
+input.vgap:focus { outline: none; box-shadow: 0 0 0 3px var(--accent-soft); }
+input.vgap.right { border-color: var(--ok); background: var(--ok-bg); } input.vgap.wrong { border-color: var(--bad); background: var(--bad-bg); color: var(--bad); text-decoration: line-through; }
+.vinf { color: var(--soft); font-size: .9rem; font-weight: 400; }
+.vfix { color: var(--ok); font-weight: 700; margin-left: 4px; }
+.built { display: inline-flex; flex-wrap: wrap; gap: 6px; vertical-align: middle; min-height: 40px; min-width: 6em; padding: 3px 6px; border-bottom: 2.5px solid var(--accent); border-radius: 8px 8px 0 0; background: var(--accent-soft); }
+.built .tile { padding: 4px 11px; }
+.bank { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; min-height: 44px; }
+.built.right { background: var(--ok-bg); border-color: var(--ok); } .built.wrong { background: var(--bad-bg); border-color: var(--bad); }
+.ewords { font-size: 1.15rem; line-height: 2; }
+.ew { font: inherit; background: none; border: 0; border-bottom: 1px dashed var(--rule-strong); padding: 0 1px; margin: 0; color: var(--ink); cursor: pointer; }
+.ew:hover:not(:disabled) { border-color: var(--accent); color: var(--accent-text); }
+.ew:disabled { cursor: default; border-color: transparent; }
+.ew.bad { background: var(--bad-bg); color: var(--bad); border-radius: 4px; text-decoration: line-through; }
+.ew.miss { background: var(--accent-soft); border-radius: 4px; }
 .gdiff { margin-top: 6px; line-height: 1.6; }
 .gdiff del { background: var(--bad-bg); color: var(--bad); text-decoration: line-through; padding: 0 2px; border-radius: 4px; }
-.gdiff ins { background: var(--ok-bg); color: var(--ok); text-decoration: none; font-weight: 700; padding: 0 2px; border-radius: 4px; }
 .gwhy { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--rule); }
 .gwhy ul { margin: 6px 0 0; padding-left: 18px; }
 .gwhy li { margin: 3px 0; }
 .scheme { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 4px; }
-.scheme span { display: inline-flex; flex-direction: column; align-items: center; padding: 3px 9px 4px; border-radius: 8px; background: var(--sheet); border: 1px solid var(--rule); font-weight: 600; }
+.scheme span { display: inline-flex; flex-direction: column; align-items: center; padding: 3px 9px 4px; border-radius: 8px; background: var(--sheet); border: 1px solid var(--rule); }
 .scheme b { font-weight: 600; }
 .scheme i { font-style: normal; font-size: .62rem; font-weight: 700; letter-spacing: .06em; color: var(--faint); text-transform: uppercase; }
 .scheme .v { border-color: var(--accent); } .scheme .a { border-color: var(--blue); }
@@ -542,46 +557,67 @@ const I18N = {
   "f.title": ["Om ordet", "About the word"], "f.class": ["Ordklasse", "Word class"], "f.gender": ["Køn", "Gender"],
   "f.g.en": ["fælleskøn (en)", "common gender (en)"], "f.g.et": ["intetkøn (et)", "neuter (et)"],
   "f.infl": ["Bøjning", "Inflection"], "f.noinfl": ["bøjes ikke", "does not inflect"], "f.cons": ["Konstruktion", "Construction"],
-  "h.gram": ["Grammatik", "Grammar"], "h.gram.t": ["Øv datid, inversion og ikke'ets plads på rigtige sætninger fra prøverne.", "Practise past tense, inversion and where ikke goes, on real exam sentences."],
+  "h.gram": ["Grammatik", "Grammar"], "h.gram.t": ["Grammatikøvelser på rigtige sætninger fra prøverne: verber, ordstilling, endelser, sin/hans, præpositioner og små ord.", "Grammar drills on real exam sentences: verbs, word order, endings, sin/hans, prepositions and small words."],
   "gm.title": ["Grammatik", "Grammar"], "gm.back": ["Forside", "Home"],
-  "gm.intro": ["Tre øvelser på rigtige sætninger fra læse- og skrivedelen af prøverne (2013–2024). Det rigtige svar er altid sætningen, som den står i prøven.", "Three drills on real sentences from the reading and writing parts of the exams (2013–2024). The right answer is always the sentence as it is written in the exam."],
-  "gm.tense": ["Datid", "Past tense"], "gm.tense.k": ["Øvelse 1 · præteritum", "Drill 1 · past tense"],
-  "gm.tense.p": ["En sætning fra prøven er skrevet om til nutid. Skriv den tilbage i datid.", "An exam sentence has been rewritten in the present. Write it back in the past."],
-  "gm.tense.demo": ["Han slår sig, når han falder. → Han slog sig, da han faldt.", "Han slår sig, når han falder. → Han slog sig, da han faldt."],
-  "gm.v2": ["Inversion (V2)", "Inversion (V2)"], "gm.v2.k": ["Øvelse 2 · ordstilling", "Drill 2 · word order"],
-  "gm.v2.p": ["Et ord er taget væk fra starten af sætningen. Sæt det først igen – og husk, at verbet skal stå på plads 2.", "A word has been taken off the start of the sentence. Put it first again – and remember that the verb must come second."],
-  "gm.v2.demo": ["Du kan ikke … + Derfor → Derfor kan du ikke …", "Du kan ikke … + Derfor → Derfor kan du ikke …"],
-  "gm.place": ["Hvor står ikke?", "Where does ikke go?"], "gm.place.k": ["Øvelse 3 · adverbiets plads", "Drill 3 · adverb position"],
-  "gm.place.p": ["Ikke, også, altid, stadig … er taget ud af sætningen. Tryk på det sted, hvor ordet skal stå. Ledsætning eller hovedsætning?", "Ikke, også, altid, stadig … has been taken out of the sentence. Tap where it belongs. Subordinate or main clause?"],
-  "gm.place.demo": ["… fordi du ikke vil flytte · Du kan ikke komme", "… fordi du ikke vil flytte · Du kan ikke komme"],
-  "gm.start": ["Start", "Start"], "gm.done": ["{0} af {1} klaret", "{0} of {1} done"], "gm.mix": ["Bland alle tre", "Mix all three"],
-  "gm.tense.q": ["Skriv sætningen i datid (præteritum).", "Write the sentence in the past tense."],
-  "gm.v2.q": ["Sæt «{0}» først i sætningen.", "Put «{0}» first in the sentence."],
-  "gm.place.q": ["Hvor skal «{0}» stå? Tryk på pladsen.", "Where does «{0}» go? Tap the spot."],
-  "gm.mine": ["Skrevet om af AI – sætningen i prøven ser anderledes ud.", "Rewritten by AI – the sentence in the exam looks different."],
-  "gm.from": ["Sætningen er fra prøven {0}.", "The sentence is from the {0} exam."],
-  "gm.edit": ["Ret sætningen her:", "Edit the sentence here:"], "gm.reset": ["Start forfra", "Start over"], "gm.give": ["Vis svar", "Show answer"],
-  "gm.pick": ["Tryk på en plads først.", "Tap a spot first."],
+  "gm.intro": ["Alle sætninger er fra læse- og skrivedelen af prøverne (2013–2024) – ikke omskrevet. Det rigtige svar er altid det, der står i prøven.", "Every sentence is from the reading and writing parts of the exams (2013–2024) – not rewritten. The right answer is always what the exam says."],
+  "gm.g.verb": ["Verber", "Verbs"], "gm.g.order": ["Ordstilling", "Word order"], "gm.g.form": ["Ordformer", "Word forms"], "gm.g.small": ["Små ord med store regler", "Small words, big rules"], "gm.g.mix": ["Blandet", "Mixed"],
+  "gm.verbs": ["Datid", "Past tense"], "gm.verbs.r": ["Skriv verbet i den form, der står i prøven (datid eller førdatid).", "Write the verb in the form the exam uses (past or past perfect)."], "gm.verbs.d": ["Han ___ (slå) sig, da han ___ (falde).", "Han ___ (slå) sig, da han ___ (falde)."],
+  "gm.v2": ["Inversion efter første led", "Inversion after the first element"], "gm.v2.r": ["Når noget andet end subjektet står først – et adverbium eller en hel ledsætning – kommer verbet før subjektet.", "When something other than the subject comes first – an adverb or a whole subordinate clause – the verb comes before the subject."], "gm.v2.d": ["Hvis det regner, [bliver vi] hjemme.", "Hvis det regner, [bliver vi] hjemme."],
+  "gm.clause": ["Ikke & co. – ledsætning eller hovedsætning", "Ikke & co. – subordinate or main clause"], "gm.clause.r": ["I ledsætninger står ikke, også, altid … før verbet. I hovedsætninger efter.", "In subordinate clauses ikke, også, altid … come before the verb. In main clauses after."], "gm.clause.d": ["… fordi du [ikke vil] · Du [kan ikke]", "… fordi du [ikke vil] · Du [kan ikke]"],
+  "gm.adj": ["Adjektivets endelse", "Adjective endings"], "gm.adj.r": ["en stor · et stort · den/de store · store huse · det er stort at …", "en stor · et stort · den/de store · store huse · det er stort at …"], "gm.adj.d": ["et ___ spring (stor / stort / store)", "et ___ spring (stor / stort / store)"],
+  "gm.pron": ["Sin, sit, sine – eller hans, hendes, deres?", "Sin, sit, sine – or hans, hendes, deres?"], "gm.pron.r": ["Sin/sit/sine kun når ejeren er subjektet i samme sætning (3. person ental). Aldrig i selve subjektet.", "Sin/sit/sine only when the owner is the subject of the same clause (3rd person singular). Never inside the subject."], "gm.pron.d": ["Hun elsker ___ arbejde.", "Hun elsker ___ arbejde."],
+  "gm.prep": ["Faste præpositioner", "Fixed prepositions"], "gm.prep.r": ["Brug for, vant til, afhænge af … – præpositionen hører til ordet.", "Brug for, vant til, afhænge af … – the preposition belongs to the word."], "gm.prep.d": ["Hunden har brug ___ pasning.", "Hunden har brug ___ pasning."],
+  "gm.small": ["Da eller når · hvis eller om", "Da or når · hvis or om"], "gm.small.r": ["Da = én gang i fortiden, når = hver gang / nu / senere. Hvis = betingelse, om = indirekte spørgsmål.", "Da = one time in the past, når = every time / now / later. Hvis = condition, om = indirect question."], "gm.small.d": ["Jeg ved ikke, ___ jeg skal sige ja.", "Jeg ved ikke, ___ jeg skal sige ja."],
+  "gm.error": ["Find fejlen", "Spot the mistake"], "gm.error.r": ["Én fejl er sat ind i en sætning fra prøven: en endelse, en præposition, sin/hans eller da/når. Tryk på den.", "One mistake has been put into an exam sentence: an ending, a preposition, sin/hans or da/når. Tap it."], "gm.error.d": ["Han elsker sin arbejde.", "Han elsker sin arbejde."],
+  "gm.mix": ["Bland det hele · 12", "Mix everything · 12"], "gm.done": ["{0} / {1}", "{0} / {1}"],
+  "gm.q.verbs": ["Skriv verberne i den rigtige form.", "Write the verbs in the right form."],
+  "gm.q.v2": ["Byg resten af sætningen: tryk på ordene i den rigtige rækkefølge.", "Build the rest of the sentence: tap the words in the right order."],
+  "gm.q.clause": ["Sæt ordene i den rigtige rækkefølge.", "Put the words in the right order."],
+  "gm.q.adj": ["Vælg den rigtige form.", "Choose the right form."], "gm.q.pron": ["Vælg det rigtige ord.", "Choose the right word."],
+  "gm.q.prep": ["Hvilken præposition mangler?", "Which preposition is missing?"], "gm.q.small": ["Vælg det rigtige ord.", "Choose the right word."],
+  "gm.q.error": ["Der er én fejl i sætningen. Tryk på det forkerte ord.", "There is one mistake in the sentence. Tap the wrong word."],
+  "gm.clear": ["Ryd", "Clear"], "gm.give": ["Vis svar", "Show answer"],
   "gm.right": ["Rigtigt!", "Right!"], "gm.wrong": ["Ikke helt", "Not quite"], "gm.shown": ["Her er svaret", "Here is the answer"],
-  "gm.yours": ["Dit svar:", "Your answer:"], "gm.answer": ["Sådan står det i prøven ({0}):", "As written in the exam ({0}):"],
-  "gm.why": ["Hvorfor?", "Why?"],
-  "gm.t.rule": ["Datid (præteritum) bruges om noget, der skete og er afsluttet. Kun de bøjede verber skifter form – infinitiver (at blive, at prøve) bliver stående.", "The past tense is used for something that happened and is over. Only the finite verbs change – infinitives (at blive, at prøve) stay the same."],
+  "gm.yours": ["Dit svar:", "Your answer:"], "gm.answer": ["Sådan står det i prøven ({0}):", "As written in the exam ({0}):"], "gm.why": ["Hvorfor?", "Why?"],
+  "gm.t.rule": ["Datid (præteritum) bruges om noget, der skete og er afsluttet. Førdatid (havde + participium) om noget, der var sket før.", "The past tense is for something that happened and is over. The past perfect (havde + participle) is for something that had happened before."],
+  "gm.v.you": ["Du skrev «{0}» – i prøven står der «{1}».", "You wrote «{0}» – the exam has «{1}»."],
   "gm.t.ede": ["regelmæssigt: -ede", "regular: -ede"], "gm.t.te": ["regelmæssigt: -te", "regular: -te"],
   "gm.t.irr": ["uregelmæssigt – lær det udenad", "irregular – learn it by heart"], "gm.t.modal": ["modalverbum", "modal verb"],
-  "gm.t.perf": ["førnutid → førdatid: {0} → {1}", "present perfect → past perfect: {0} → {1}"],
-  "gm.t.da": ["én bestemt gang i fortiden hedder da – når bruges om nu, fremtiden og om noget, der sker igen og igen", "one particular time in the past is da – når is for the present, the future and things that happen again and again"],
-  "gm.v2.rule": ["«{0}» står på plads 1. Det bøjede verbum «{1}» skal altid stå på plads 2, så subjektet «{2}» rykker om bag verbet (inversion).", "«{0}» takes position 1. The finite verb «{1}» must always come second, so the subject «{2}» moves behind the verb (inversion)."],
-  "gm.v2.mid": ["«{0}» bliver stående lige efter subjektet – også med inversion.", "«{0}» stays right after the subject – inversion or not."],
-  "gm.v2.noinv": ["Du har subjektet før verbet. Når et andet led står først, kommer verbet før subjektet.", "You have the subject before the verb. When something else comes first, the verb comes before the subject."],
-  "gm.v2.one": ["Kun ét led før verbet: «{0}» tæller som ét led, selv om det er flere ord.", "Only one element before the verb: «{0}» counts as one element, even though it is several words."],
-  "gm.p.sub": ["«{0}» indleder en ledsætning. I en ledsætning står «{1}» foran det bøjede verbum «{2}».", "«{0}» starts a subordinate clause. In a subordinate clause «{1}» comes before the finite verb «{2}»."],
-  "gm.p.biff": ["Husk BIFF: Bisætning – Ikke Før Finit verbum. Det gælder også også, altid, aldrig, gerne, stadig …", "Remember BIFF: in a subordinate clause ikke comes before the finite verb. The same goes for også, altid, aldrig, gerne, stadig …"],
+  "gm.t.perf": ["førdatid: havde + participium", "past perfect: havde + participle"],
+  "gm.v2.rule": ["«{0}» står på plads 1. Det bøjede verbum «{1}» skal stå på plads 2, så subjektet «{2}» kommer efter verbet (inversion).", "«{0}» takes position 1. The finite verb «{1}» must come second, so the subject «{2}» comes after the verb (inversion)."],
+  "gm.v2.clause": ["Hele ledsætningen før kommaet er ét led på plads 1. Derfor står det bøjede verbum «{0}» lige efter kommaet – før subjektet «{1}».", "The whole subordinate clause before the comma is one element in position 1. So the finite verb «{0}» comes right after the comma – before the subject «{1}»."],
+  "gm.v2.mid": ["{0} står efter subjektet – også når der er inversion.", "{0} goes after the subject – inversion or not."],
+  "gm.v2.noinv": ["Du satte subjektet før verbet. Når et andet led står først, kommer verbet før subjektet.", "You put the subject before the verb. When something else comes first, the verb comes before the subject."],
+  "gm.p.sub": ["«{0}» indleder en ledsætning. I en ledsætning står «{1}» før det bøjede verbum «{2}».", "«{0}» starts a subordinate clause. In a subordinate clause «{1}» comes before the finite verb «{2}»."],
+  "gm.p.biff": ["Husk BIFF: Bisætning – Ikke Før Finit verbum. Det samme gælder også, altid, aldrig, gerne, stadig …", "Remember BIFF: in a subordinate clause ikke comes before the finite verb. The same goes for også, altid, aldrig, gerne, stadig …"],
   "gm.p.main": ["Det er en hovedsætning. Her står «{0}» efter det bøjede verbum «{1}».", "This is a main clause. Here «{0}» comes after the finite verb «{1}»."],
   "gm.p.inv": ["Verbet står før subjektet (inversion), så «{0}» kommer efter subjektet «{1}».", "The verb comes before the subject (inversion), so «{0}» goes after the subject «{1}»."],
+  "gm.p.q": ["Det er et spørgsmål, så verbet står først – og «{0}» kommer efter subjektet «{1}».", "It is a question, so the verb comes first – and «{0}» goes after the subject «{1}»."],
   "gm.p.mid": ["«{0}» står også mellem verbet og «{1}».", "«{0}» also sits between the verb and «{1}»."],
-  "gm.sum": ["{0} af {1} rigtige", "{0} of {1} right"], "gm.again": ["Igen", "Again"], "gm.list": ["Øv disse igen:", "Practise these again:"],
-  "gm.menu": ["Grammatik", "Grammar"],
-  "gm.s.v": ["verbum", "verb"], "gm.s.s": ["subjekt", "subject"], "gm.s.a": ["adverbium", "adverb"], "gm.s.p": ["pronomen", "pronoun"],
+  "gm.a.en": ["Ubestemt form af et en-ord: ingen endelse – {0}.", "Indefinite form of an en-word: no ending – {0}."],
+  "gm.a.et": ["Ubestemt form af et et-ord: adjektivet får -t – {0}.", "Indefinite form of an et-word: the adjective takes -t – {0}."],
+  "gm.a.ett": ["Et-ord, men adjektivet ender allerede på -t, så det får ikke et ekstra -t – {0}.", "An et-word, but the adjective already ends in -t, so no extra -t – {0}."],
+  "gm.a.def": ["Bestemt form (den/det/de + adjektiv + navneord): adjektivet får altid -e – {0}.", "Definite form (den/det/de + adjective + noun): the adjective always takes -e – {0}."],
+  "gm.a.poss": ["Efter et ejestedord (min, sin, vores, hans …) får adjektivet -e – {0}.", "After a possessive (min, sin, vores, hans …) the adjective takes -e – {0}."],
+  "gm.a.pl": ["Flertal: adjektivet får -e – {0}.", "Plural: the adjective takes -e – {0}."],
+  "gm.a.pred_en": ["Adjektivet står efter er og beskriver et en-ord i ental: ingen endelse – {0}.", "The adjective follows er and describes a singular en-word: no ending – {0}."],
+  "gm.a.pred_pl": ["Adjektivet står efter er og beskriver flere personer: -e – {0}.", "The adjective follows er and describes several people: -e – {0}."],
+  "gm.a.det": ["Det er/var + adjektiv + at …: adjektivet får -t – {0}.", "Det er/var + adjective + at …: the adjective takes -t – {0}."],
+  "gm.o.own": ["Ejeren er sætningens subjekt («{0}»), 3. person ental → sin, sit eller sine. Formen følger det, man ejer: {1} → {2}. (Hans/hendes ville betyde en anden persons.)", "The owner is the subject of the clause («{0}»), 3rd person singular → sin, sit or sine. The form follows what is owned: {1} → {2}. (Hans/hendes would mean someone else's.)"],
+  "gm.o.subj": ["Ordet er selv en del af subjektet («{0}»). Sin kan aldrig stå i subjektet → hans/hendes.", "The word is itself part of the subject («{0}»). Sin can never be inside the subject → hans/hendes."],
+  "gm.o.plural": ["Subjektet er flertal («{0}»). Sin/sit/sine bruges kun, når subjektet er 3. person ental → deres.", "The subject is plural («{0}»). Sin/sit/sine is only used with a 3rd person singular subject → deres."],
+  "gm.o.other": ["Ejeren («{0}») er ikke subjektet i denne sætning – subjektet er «{1}». Derfor hans/hendes, ikke sin.", "The owner («{0}») is not the subject of this clause – the subject is «{1}». So hans/hendes, not sin."],
+  "gm.o.both": ["Ejerne er to personer («{0}»), ikke kun subjektet → deres.", "The owners are two people («{0}»), not just the subject → deres."],
+  "gm.r.prep": ["Det faste udtryk hedder «{0}». Præpositionen hører til ordet – lær dem sammen.", "The fixed expression is «{0}». The preposition belongs to the word – learn them together."],
+  "gm.s.da_once": ["Én bestemt gang eller én afsluttet periode i fortiden → da.", "One particular time or one finished period in the past → da."],
+  "gm.s.naar_past": ["Noget, der skete igen og igen i fortiden (= hver gang) → når.", "Something that happened again and again in the past (= every time) → når."],
+  "gm.s.naar_now": ["Nutid, fremtid eller noget, der gælder generelt → når.", "Present, future or something that is generally true → når."],
+  "gm.s.om": ["Et indirekte spørgsmål (et ja/nej-spørgsmål inde i sætningen) → om. På engelsk: whether.", "An indirect question (a yes/no question inside the sentence) → om. In English: whether."],
+  "gm.s.hvis": ["En betingelse (= på den betingelse, at …) → hvis. På engelsk: if.", "A condition (= on condition that …) → hvis. In English: if."],
+  "gm.e.was": ["Fejlen var «{0}» – i prøven står der «{1}».", "The mistake was «{0}» – the exam has «{1}»."],
+  "gm.e.miss": ["Det ord er rigtigt. Fejlen var «{0}».", "That word is right. The mistake was «{0}»."],
+  "gm.sum": ["{0} af {1} rigtige", "{0} of {1} right"], "gm.again": ["En runde til", "Another round"], "gm.redo": ["Tag fejlene igen · {0}", "Redo the mistakes · {0}"], "gm.list": ["Øv disse igen:", "Practise these again:"], "gm.menu": ["Grammatik", "Grammar"],
+  "gm.s.v": ["verbum", "verb"], "gm.s.s": ["subjekt", "subject"], "gm.s.a": ["adverbium", "adverb"], "gm.s.p": ["pronomen", "pronoun"], "gm.s.1": ["plads 1", "position 1"],
   "ai.title": ["Skrevet af AI (Claude) til dette værktøj – ikke fra Den Danske Ordbog eller prøverne. Tjek i ordbogen.", "Written by AI (Claude) for this tool – not from Den Danske Ordbog or the exams. Check in the dictionary."],
   "ai.ddo": ["fra Den Danske Ordbog", "from Den Danske Ordbog"], "ai.exam": ["fra prøverne", "from the exams"],
   "ai.gt": ["Engelsk: maskinoversat med Google Translate.", "English: machine-translated with Google Translate."],
@@ -2084,182 +2120,231 @@ document.addEventListener("keydown", e => {
   else if (S.keys && e.key === "Enter") S.keys(e);
 });
 
-// ---------- Grammatik: three drills on real exam sentences (pd3-data/grammar.json) ----------
-// tense: an exam sentence in the past, rewritten in the present (by AI) → the learner writes the past again
-// v2:    a fronted adverbial taken off and the word order straightened (by AI) → the learner puts it first again
-// place: ikke/også/altid … taken out → the learner taps where it stood (subordinate clause: before the verb; main: after)
-// The right answer is always the exam's own sentence; explanations are built from each item's fields.
-const GR_KEY = "pd3-assisted-learning:grammar:v1";
-const GR_TYPES = ["tense", "v2", "place"];
+// ---------- Grammatik: drills on real exam sentences (pd3-data/grammar.json, built by scripts/grammar_items.py) ----------
+// Every sentence is shown as the exam has it; the learner fills in, orders or picks, and the answer is the exam's own word(s).
+//   verbs  – the past forms are gaps, the infinitive is the clue
+//   v2     – after a fronted adverb or a whole subordinate clause: order the verb, subject and adverbs (tiles)
+//   clause – subject, ikke/også/altid … and the finite verb as tiles: subordinate clause or main clause?
+//   adj, pron, prep, small – pick the form that fits the gap
+//   error  – one of those words swapped for a wrong option; tap the wrong word
+const GR_KEY = "pd3-assisted-learning:grammar:v2";
+const GR_GROUPS = [["verb", ["verbs"]], ["order", ["v2", "clause"]], ["form", ["adj", "pron"]], ["small", ["prep", "small"]], ["mix", ["error"]]];
+const GR_CHOICE = ["adj", "pron", "prep", "small"];
+const GR_TOPICS = GR_GROUPS.flatMap(g => g[1]);
 let GS = null;   // grammar session
-const grItems = type => (DB.grammar[type] || []).map((x, i) => ({ ...x, type, id: type + i }));
-const grCount = () => GR_TYPES.reduce((n, k) => n + (DB.grammar[k] || []).length, 0);
+// "Find fejlen" uses only swaps that are clearly wrong: endings, prepositions, a wrong sin/sit/sine (not da/når, not sin ↔ hans)
+const grWrongs = x => x.opts.filter(o => o.toLowerCase() !== x.w.toLowerCase() && (x.type !== "pron" || /^si[nt]e?$/.test(o)));
+const grItems = type => type === "error" ? ["adj", "prep", "pron"].flatMap(grItems).filter(x => grWrongs(x).length).map(x => ({ ...x, type: "error", base: x.type, id: "e" + x.id, wrongs: grWrongs(x) }))
+  : (DB.grammar[type] || []).map((x, i) => ({ ...x, type, id: type + i }));
+const grCount = () => GR_TOPICS.reduce((n, k) => n + (k === "error" ? 0 : (DB.grammar[k] || []).length), 0);
 function grStats() { try { return JSON.parse(localStorage.getItem(GR_KEY) || "{}"); } catch (e) { return {}; } }
 function grSave(id, ok) {
   const st = grStats(), x = st[id] || [0, 0];
   st[id] = [x[0] + (ok ? 1 : 0), x[1] + 1];
   try { localStorage.setItem(GR_KEY, JSON.stringify(st)); } catch (e) { /* ignore */ }
 }
-// words only: case, commas and full stops don't count
 const gwords = s => String(s).normalize("NFC").toLowerCase().match(/[\p{L}\p{N}]+(?:[-'][\p{L}\p{N}]+)*/gu) || [];
-const sameWords = (a, b) => gwords(a).join(" ") === gwords(b).join(" ");
-// word-by-word difference (longest common subsequence): [the learner's answer, the exam's sentence]
-function wdiff(a, b) {
-  const ta = a.trim().split(/\s+/).filter(Boolean), tb = b.trim().split(/\s+/), k = w => gwords(w).join(" ");
-  const n = ta.length, m = tb.length, L = Array.from({ length: n + 1 }, () => new Array(m + 1).fill(0));
-  for (let i = n - 1; i >= 0; i--) for (let j = m - 1; j >= 0; j--) L[i][j] = k(ta[i]) === k(tb[j]) ? L[i + 1][j + 1] + 1 : Math.max(L[i + 1][j], L[i][j + 1]);
-  const ka = new Set(), kb = new Set();
-  for (let i = 0, j = 0; i < n && j < m;) {
-    if (k(ta[i]) === k(tb[j])) { ka.add(i++); kb.add(j++); } else if (L[i + 1][j] >= L[i][j + 1]) i++; else j++;
-  }
-  return [ta.map((w, i) => ka.has(i) ? esc(w) : `<del>${esc(w)}</del>`).join(" "), tb.map((w, j) => kb.has(j) ? esc(w) : `<ins>${esc(w)}</ins>`).join(" ")];
-}
-// mark whole words of a sentence (the past forms, the moved adverb …); nth: only that occurrence
-function markWords(s, ws, nth = 0) {
-  const want = new Set(ws.map(w => w.toLowerCase()));
-  let k = 0;
-  return s.split(/(\s+)/).map(tok => want.has(gwords(tok).join(" ")) && (!nth || ++k === nth) ? `<mark class="hl">${esc(tok)}</mark>` : esc(tok)).join("");
-}
+const capFirst = s => s.charAt(0).toUpperCase() + s.slice(1);
+const lowFirst = s => s.charAt(0).toLowerCase() + s.slice(1);
+const q = s => `«${s}»`;
 
 function grammarHome() {
   S = null; FC = null; GS = null;
   const st = grStats();
   const tile = type => {
     const its = grItems(type), done = its.filter(x => (st[x.id] || [0])[0] > 0).length;
-    return `<div class="sheet gtile"><div class="kind">${t("gm." + type + ".k")}</div><h3>${t("gm." + type)}</h3>
-      <p class="soft">${t("gm." + type + ".p")}</p><div class="demo" lang="da">${t("gm." + type + ".demo")}</div>
-      <div class="row"><button class="btn solid" data-gt="${type}">${t("gm.start")}</button><span class="soft small">${t("gm.done", done, its.length)}</span></div></div>`;
+    return `<button type="button" class="sheet gtile" data-gt="${type}"><h3>${t("gm." + type)}</h3>
+      <div class="rule">${t("gm." + type + ".r")}</div><div class="demo" lang="da">${t("gm." + type + ".d")}</div>
+      <div class="meta"><span>${t("gm.done", done, its.length)}</span><span class="bar"><span style="width:${100 * done / its.length}%"></span></span></div></button>`;
   };
   $("#app").innerHTML = `<div class="narrow">
     <div class="counter"><span>${t("gm.title")}</span><button class="btn quiet" id="ghome">← ${t("gm.back")}</button></div>
-    <div class="top" style="padding-top:8px"><h1>${t("gm.title")}</h1><p>${t("gm.intro")}</p></div>
-    ${GR_TYPES.map(tile).join("")}
-    <div class="row" style="margin-top:16px"><button class="btn" data-gt="mix">${t("gm.mix")}</button></div></div>`;
+    <div class="top" style="padding-top:8px"><h1>${t("gm.title")}</h1><p>${t("gm.intro")}</p>
+      <div class="hero-cta"><button class="btn solid" data-gt="mix">${t("gm.mix")}</button></div></div>
+    ${GR_GROUPS.map(([g, types]) => `<div class="gsec"><h2>${t("gm.g." + g)}</h2><div class="ggrid">${types.map(tile).join("")}</div></div>`).join("")}</div>`;
   $("#ghome").onclick = home;
   document.querySelectorAll("[data-gt]").forEach(b => b.onclick = () => startGrammar(b.dataset.gt));
   window.scrollTo(0, 0);
 }
 function startGrammar(type, only) {
-  const st = grStats();
-  const pool = only || (type === "mix" ? GR_TYPES.flatMap(grItems) : grItems(type));
-  // items never answered right first, then the rest; 10 per round
-  const fresh = shuffle(pool.filter(x => !(st[x.id] || [0])[0])), seen = shuffle(pool.filter(x => (st[x.id] || [0])[0]));
-  GS = { type, queue: [...fresh, ...seen].slice(0, 10), i: 0, results: [], title: type === "mix" ? t("gm.title") : t("gm." + type) };
+  const st = grStats(), solved = x => (st[x.id] || [0])[0] > 0;
+  let pool = only || (type === "mix" ? GR_TOPICS.flatMap(grItems) : grItems(type));
+  // never answered right first, then the rest; a mixed round takes at most 2 of a kind
+  let order = [...shuffle(pool.filter(x => !solved(x))), ...shuffle(pool.filter(solved))];
+  if (type === "mix") { const n = {}; order = order.filter(x => (n[x.type] = (n[x.type] || 0) + 1) <= 2).slice(0, 12); order = shuffle(order); }
+  GS = { type, queue: order.slice(0, only ? 99 : 10), i: 0, results: [], title: type === "mix" ? t("gm.title") : t("gm." + type) };
   grStep();
 }
-function grFrame(inner) {
-  const x = GS.queue[GS.i];
+function grFrame(x, inner) {
   $("#app").innerHTML = `<div class="narrow">
     <div class="counter"><span>${esc(GS.title)} · ${t("s.count", GS.i + 1, GS.queue.length)}</span><button class="btn quiet" id="gquit">✕ ${t("s.end")}</button></div>
     <div class="bar sessionbar" aria-hidden="true"><span style="width:${100 * GS.i / GS.queue.length}%"></span></div>
-    <div class="sheet q"><div class="kind">${t("gm." + x.type)} · <span lang="da">${esc(x.src)}</span></div>${inner}</div></div>`;
+    <div class="sheet q"><div class="kind">${t("gm." + x.type)} · <span lang="da">${esc(x.src)}</span></div>
+      <p class="prompt">${t("gm.q." + x.type)}</p>${inner}
+      <div class="trrow">${trLink(x.s).replace(t("m.tr"), t("tr.sent"))}</div>
+      <div class="row next" id="gbtns"></div><div id="fb"></div></div></div>`;
   $("#gquit").onclick = () => GS.results.length ? grSummary() : grammarHome();
+  bindTr($("#app"));
   window.scrollTo(0, 0);
+}
+function grButtons(check, extra = "") {
+  $("#gbtns").innerHTML = `<button class="btn solid" id="chk">${t("b.check")}</button>${extra}<button class="btn quiet" id="idk">${t("gm.give")}</button>`;
+  $("#chk").onclick = () => check(false);
+  $("#idk").onclick = () => check(true);
 }
 function grStep() {
   if (GS.i >= GS.queue.length) return grSummary();
   const x = GS.queue[GS.i];
-  if (x.type === "place") return grPlace(x);
-  const start = x.type === "tense" ? x.present : x.plain;
-  grFrame(`<p class="prompt">${x.type === "tense" ? t("gm.tense.q") : t("gm.v2.q", esc(x.adv))}</p>
-    <div class="ex" lang="da"><span class="sentence">${esc(start)}</span>${AI()}${trLink(start)}</div>
-    <div class="soft small" style="margin-top:4px">${t("gm.mine")}</div>
-    ${x.type === "v2" ? `<div class="row" style="margin-top:10px"><span class="chipw" lang="da">+ ${esc(x.adv)}</span></div>` : ""}
-    <label class="small" for="gin" style="display:block;margin-top:14px"><b>${t("gm.edit")}</b></label>
-    <textarea class="answer" id="gin" rows="3" lang="da" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" style="margin-top:6px">${esc(start)}</textarea>${letters()}
-    <div class="row next"><button class="btn solid" id="chk">${t("b.check")}</button><button class="btn quiet" id="greset">${t("gm.reset")}</button><button class="btn quiet" id="idk">${t("gm.give")}</button></div><div id="fb"></div>`);
-  const input = $("#gin");
-  bindLetters(input); bindTr($("#app"));
-  $("#greset").onclick = () => { input.value = start; input.focus(); };
-  const check = give => {
-    if (input.disabled) return;
-    const v = input.value.trim();
-    input.disabled = true; ["#chk", "#greset", "#idk"].forEach(id => $(id)?.remove());
-    $("#app").querySelector(".letters")?.remove();
-    const ok = !give && sameWords(v, x.type === "tense" ? x.past : x.s);
-    grFeedback(x, ok, give, v);
-  };
-  $("#chk").onclick = () => check(false);
-  $("#idk").onclick = () => check(true);
-  GS.keys = e => { if (e.key === "Enter" && !e.shiftKey && document.activeElement === input) { e.preventDefault(); check(false); } };
+  ({ verbs: grVerbs, v2: grTiles, clause: grTiles, error: grError }[x.type] || grChoice)(x);
 }
-function grPlace(x) {
-  // take the n-th «ikke» (etc.) out; the gaps between the remaining words are the tap targets
-  const re = new RegExp(`(?<![\\p{L}])${x.w}(?![\\p{L}])`, "giu");
-  let m, k = 0, at = -1;
-  while ((m = re.exec(x.s))) if (++k === x.n) { at = m.index; break; }
-  const before = x.s.slice(0, at).trim(), after = x.s.slice(at + x.w.length).trim();
-  const toks = [...(before ? before.split(/\s+/) : []), ...after.split(/\s+/)];
-  const right = before ? before.split(/\s+/).length : 0;
-  const slot = i => `<button type="button" class="slot" data-k="${i}" aria-label="${esc(t("gm.place.q", x.w))} ${i + 1}">+</button>`;
-  grFrame(`<p class="prompt">${t("gm.place.q", esc(x.w))}</p>
-    <div class="slots" lang="da">${toks.map((w, i) => slot(i) + `<span>${esc(w)}</span>`).join(" ")}</div>
-    <div class="row next"><button class="btn solid" id="chk">${t("b.check")}</button><button class="btn quiet" id="idk">${t("gm.give")}</button><span class="soft small" id="gpick"></span></div><div id="fb"></div>`);
-  let sel = null;
-  document.querySelectorAll(".slot").forEach(b => b.onclick = () => {
-    document.querySelectorAll(".slot").forEach(o => { o.classList.remove("sel"); o.textContent = "+"; });
-    sel = +b.dataset.k; b.classList.add("sel"); b.textContent = x.w; $("#gpick").textContent = "";
+
+// ----- verbs: type the forms -----
+function grVerbs(x) {
+  let html = "", at = 0;
+  x.gaps.forEach((g, i) => {
+    html += esc(x.s.slice(at, g.at)) + `<input class="vgap" data-i="${i}" lang="da" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" aria-label="${esc(g.inf)}"><span class="vinf" lang="da">(${esc(g.inf)})</span>`;
+    at = g.at + g.w.length;
   });
+  html += esc(x.s.slice(at));
+  grFrame(x, `<div class="gsent" lang="da">${html}</div>${letters()}`);
+  const ins = [...document.querySelectorAll(".vgap")];
+  let last = ins[0];
+  ins.forEach(inp => inp.onfocus = () => { last = inp; });
+  bindLetters({ get selectionStart() { return last.selectionStart; }, get selectionEnd() { return last.selectionEnd; }, get value() { return last.value; },
+    set value(v) { last.value = v; }, focus: () => last.focus(), setSelectionRange: (a, b) => last.setSelectionRange(a, b), dispatchEvent: e => last.dispatchEvent(e) });
+  ins[0].focus({ preventScroll: true });
   const check = give => {
-    if (sel === null && !give) { $("#gpick").textContent = t("gm.pick"); return; }
-    ["#chk", "#idk"].forEach(id => $(id)?.remove());
-    document.querySelectorAll(".slot").forEach(o => { o.disabled = true; if (+o.dataset.k !== sel && +o.dataset.k !== right) o.remove(); });
-    const ok = !give && sel === right;
-    const good = $(`.slot[data-k="${right}"]`);
-    if (good) { good.className = "slot right"; good.textContent = x.w; }
-    const yours = sel !== null && sel !== right ? toks.slice(0, sel).concat([x.w], toks.slice(sel)).join(" ") : "";
-    grFeedback(x, ok, give, yours);
+    const res = x.gaps.map((g, i) => !give && gwords(ins[i].value).join(" ") === g.w.toLowerCase());
+    ins.forEach((inp, i) => {
+      inp.disabled = true;
+      if (res[i]) inp.classList.add("right");
+      else { if (inp.value.trim()) inp.classList.add("wrong"); else inp.value = "–"; inp.nextElementSibling.insertAdjacentHTML("afterend", `<b class="vfix">${esc(x.gaps[i].w)}</b>`); }
+    });
+    $("#app").querySelector(".letters")?.remove();
+    const wrong = give ? [] : x.gaps.map((g, i) => !res[i] && ins[i].value.trim() && ins[i].value !== "–" ? [ins[i].value.trim(), g.w] : null).filter(Boolean);
+    grFeedback(x, res.every(Boolean), give, { wrong });
   };
-  $("#chk").onclick = () => check(false);
-  $("#idk").onclick = () => check(true);
-  GS.keys = e => { if (e.key === "Enter") { e.preventDefault(); check(false); } };
+  grButtons(check);
+  GS.keys = e => {
+    if (e.key !== "Enter" || !document.activeElement?.classList.contains("vgap")) return;
+    e.preventDefault();
+    const i = ins.indexOf(document.activeElement);
+    if (i < ins.length - 1 && !ins[i + 1].value) ins[i + 1].focus(); else check(false);
+  };
 }
-function grWhy(x, v) {
-  const li = s => `<li>${s}</li>`;
-  if (x.type === "tense") {
+// ----- v2 / clause: order the tiles -----
+function grTiles(x) {
+  const show = (w, i) => !x.pre && i === 0 ? lowFirst(w) : w;           // the first word of the sentence: no capital letter to give it away
+  let bank = x.tiles.map((w, i) => i);
+  do bank = shuffle(bank); while (bank.length > 1 && bank.every((v, i) => v === i));
+  const built = [];
+  grFrame(x, `<div class="gsent" lang="da">${esc(x.pre)} <span class="built" id="built"></span>${/^[,.!?]/.test(x.post) ? "" : " "}${esc(x.post)}</div>
+    <div class="bank" id="bank" lang="da"></div>`);
+  const draw = () => {
+    $("#built").innerHTML = built.map((k, j) => `<button type="button" class="tile" data-k="${k}">${esc(!x.pre && j === 0 ? capFirst(show(x.tiles[k], k)) : show(x.tiles[k], k))}</button>`).join("");
+    $("#bank").innerHTML = bank.filter(k => !built.includes(k)).map(k => `<button type="button" class="tile" data-k="${k}">${esc(show(x.tiles[k], k))}</button>`).join("");
+    $("#built").querySelectorAll(".tile").forEach(b => b.onclick = () => { built.splice(built.indexOf(+b.dataset.k), 1); draw(); });
+    $("#bank").querySelectorAll(".tile").forEach(b => b.onclick = () => { built.push(+b.dataset.k); draw(); if (built.length === x.tiles.length) $("#chk")?.focus(); });
+    if ($("#chk")) $("#chk").disabled = built.length !== x.tiles.length;
+  };
+  const check = give => {
+    const mine = built.map(k => x.tiles[k]);
+    const ok = !give && mine.join(" ").toLowerCase() === x.tiles.join(" ").toLowerCase();
+    $("#built").className = "built " + (ok ? "right" : "wrong");
+    $("#built").innerHTML = x.tiles.map(w => `<span class="tile fixed">${esc(w)}</span>`).join("");
+    $("#bank").remove();
+    grFeedback(x, ok, give, { mine });
+  };
+  grButtons(check, `<button class="btn quiet" id="gclr">${t("gm.clear")}</button>`);
+  $("#gclr").onclick = () => { built.length = 0; draw(); };
+  draw();
+  GS.keys = e => { if (e.key === "Enter" && $("#chk") && !$("#chk").disabled) { e.preventDefault(); check(false); } };
+}
+// ----- pick the form -----
+function grChoice(x) {
+  const opts = shuffle(x.opts);
+  grFrame(x, `<div class="gsent" lang="da">${esc(x.s.slice(0, x.at))}<span class="gap" id="ggap">&nbsp;</span>${esc(x.s.slice(x.at + x.w.length))}</div>
+    <div class="opts short">${opts.map((o, i) => `<button class="btn opt" data-o="${esc(o)}" lang="da"><span class="k">${i + 1}</span>${esc(o)}</button>`).join("")}</div>`);
+  const pickIt = (o, give) => {
+    document.querySelectorAll(".opt").forEach(b => { b.disabled = true; if (b.dataset.o === x.w) b.classList.add("right"); else if (b.dataset.o === o) b.classList.add("wrong"); });
+    $("#ggap").outerHTML = `<mark class="hl">${esc(x.w)}</mark>`;
+    $("#gbtns").innerHTML = "";
+    grFeedback(x, !give && o === x.w, give);
+  };
+  document.querySelectorAll(".opt").forEach(b => b.onclick = () => pickIt(b.dataset.o, false));
+  $("#gbtns").innerHTML = `<button class="btn quiet" id="idk">${t("gm.give")}</button>`;
+  $("#idk").onclick = () => pickIt(null, true);
+  GS.keys = e => { const n = +e.key; if (n >= 1 && n <= opts.length && document.querySelector(".opt:not(:disabled)")) pickIt(opts[n - 1], false); };
+}
+// ----- spot the mistake -----
+function grError(x) {
+  // a fixed wrong option per item, so a retry shows the same mistake
+  const wrongs = x.wrongs;
+  const bad = wrongs[[...x.id].reduce((h, c) => h + c.charCodeAt(0), 0) % wrongs.length];
+  const s2 = x.s.slice(0, x.at) + bad + x.s.slice(x.at + x.w.length);
+  const toks = [];
+  s2.replace(/[\p{L}\p{N}]+(?:[-'][\p{L}\p{N}]+)*|[^\p{L}\p{N}]+/gu, (m, off) => { toks.push([m, off]); return m; });
+  grFrame(x, `<div class="ewords" lang="da">${toks.map(([m, off], i) => /[\p{L}\p{N}]/u.test(m) ? `<button type="button" class="ew" data-i="${i}" data-off="${off}">${esc(m)}</button>` : esc(m)).join("")}</div>`);
+  const check = (give, b) => {
+    const hit = b && +b.dataset.off === x.at;
+    document.querySelectorAll(".ew").forEach(e => { e.disabled = true; if (+e.dataset.off === x.at) { e.classList.add(hit ? "bad" : "miss"); } });
+    if (b && !hit) b.classList.add("bad");
+    $("#gbtns").innerHTML = "";
+    grFeedback(x, !give && hit, give, { bad, missed: b && !hit ? b.textContent : null });
+  };
+  document.querySelectorAll(".ew").forEach(b => b.onclick = () => check(false, b));
+  $("#gbtns").innerHTML = `<button class="btn quiet" id="idk">${t("gm.give")}</button>`;
+  $("#idk").onclick = () => check(true);
+  GS.keys = null;
+}
+
+// ----- explanations (built from each item's fields) -----
+function grWhy(x, extra = {}) {
+  const b = s => esc(s);
+  if (x.type === "verbs") {
     const MODAL = new Set(["kunne", "skulle", "ville", "måtte", "burde", "turde"]);
-    const kind = ([pr, pa, inf]) => pr.includes(" ") ? t("gm.t.perf", pr.split(" ")[0], pa.split(" ")[0]) : MODAL.has(inf) ? t("gm.t.modal")
-      : pa.startsWith(inf.replace(/e$/, "")) && pa.endsWith("ede") ? t("gm.t.ede") : pa.startsWith(inf.replace(/e$/, "")) && pa.endsWith("te") ? t("gm.t.te") : t("gm.t.irr");
-    return `<p>${t("gm.t.rule")}</p><ul>${x.verbs.map(vb => li(`<span lang="da">${esc(vb[0])} → <b>${esc(vb[1])}</b></span>${vb[0].includes(" ") ? "" : ` <span class="soft">(at ${esc(vb[2])})</span>`} <span class="soft small">· ${kind(vb)}</span>`)).join("")}
-      ${x.swap.map(([a, b]) => li(`<span lang="da">${esc(a)} → <b>${esc(b)}</b></span> <span class="soft small">· ${t("gm.t.da")}</span>`)).join("")}</ul>`;
+    const kind = g => g.kind.includes(" ") ? t("gm.t.perf") : MODAL.has(g.inf) ? t("gm.t.modal")
+      : g.w.startsWith(g.inf.replace(/e$/, "")) && g.w.endsWith("ede") ? t("gm.t.ede") : g.w.startsWith(g.inf.replace(/e$/, "")) && g.w.endsWith("te") ? t("gm.t.te") : t("gm.t.irr");
+    const wrong = (extra.wrong || []).map(([a, c]) => `<p><b>${t("gm.v.you", b(a), b(c))}</b></p>`).join("");
+    return `${wrong}<p>${t("gm.t.rule")}</p><ul>${x.gaps.map(g => `<li><span lang="da">at ${esc(g.inf)} → <b>${esc(g.kind)}</b></span> <span class="soft small">· ${kind(g)}</span></li>`).join("")}</ul>`;
   }
   if (x.type === "v2") {
-    const pos = gwords(x.s).length - gwords(x.plain).length;   // words in the fronted element
-    const noinv = v && gwords(v).join(" ").startsWith(gwords(x.adv + " " + x.subj).join(" "));
-    const rest = gwords(x.s.slice(x.adv.length + x.verb.length + x.subj.length + 3));
-    const mids = x.mid, nmid = mids.join(" ").split(" ").filter(Boolean).length;   // the adverbs right after the subject
-    return `${noinv ? `<p><b>${t("gm.v2.noinv")}</b></p>` : ""}<p>${t("gm.v2.rule", esc(x.adv), esc(x.verb), esc(x.subj))}</p>
-      <div class="scheme"><span><i>1</i><b lang="da">${esc(x.adv)}</b></span><span class="v"><i>${t("gm.s.v")}</i><b lang="da">${esc(x.verb)}</b></span><span><i>${t("gm.s.s")}</i><b lang="da">${esc(x.subj)}</b></span>${mids.map(a => `<span class="a"><i>${t(a === "sig" ? "gm.s.p" : "gm.s.a")}</i><b lang="da">${esc(a)}</b></span>`).join("")}<span><i>…</i><b lang="da">${esc(rest.slice(nmid, nmid + 3).join(" "))} …</b></span></div>
-      ${mids.length ? `<p>${t("gm.v2.mid", mids.map(a => esc(a)).join(", "))}</p>` : ""}
-      ${pos > 1 ? `<p class="soft small">${t("gm.v2.one", esc(x.adv))}</p>` : ""}`;
+    const mine = extra.mine || [];
+    const noinv = mine.length && mine.indexOf(x.subj) >= 0 && mine.indexOf(x.subj) < mine.indexOf(x.verb);
+    return `${noinv ? `<p><b>${t("gm.v2.noinv")}</b></p>` : ""}<p>${x.clause ? t("gm.v2.clause", b(x.verb), b(x.subj)) : t("gm.v2.rule", b(x.first), b(x.verb), b(x.subj))}</p>
+      <div class="scheme"><span><i>${t("gm.s.1")}</i><b lang="da">${esc(x.clause ? x.first.split(" ").slice(0, 3).join(" ") + " …," : x.first)}</b></span><span class="v"><i>${t("gm.s.v")}</i><b lang="da">${esc(x.verb)}</b></span><span><i>${t("gm.s.s")}</i><b lang="da">${esc(x.subj)}</b></span>${x.mid.map(a => `<span class="a"><i>${t(a === "sig" ? "gm.s.p" : "gm.s.a")}</i><b lang="da">${esc(a)}</b></span>`).join("")}</div>
+      ${x.mid.length ? `<p>${t("gm.v2.mid", x.mid.map(q).join(", "))}</p>` : ""}`;
   }
-  const words = x.s.split(/\s+/), lw = words.map(w => gwords(w).join(" "));
-  let wi = -1;
-  for (let i = 0, k = 0; i < lw.length; i++) if (lw[i] === x.w.toLowerCase() && ++k === x.n) { wi = i; break; }
-  if (x.clause !== "main") return `<p>${t("gm.p.sub", esc(x.clause), esc(x.w), esc(x.verb))}</p><p class="soft small">${t("gm.p.biff")}</p>`;
-  // main clause: the words between the finite verb and the adverb (an inverted subject, or jo/nok …)
-  let vi = wi - 1; while (vi >= 0 && lw[vi] !== x.verb.toLowerCase()) vi--;
-  const between = words.slice(vi + 1, wi).join(" ");
-  const SUBJ = /^(jeg|du|han|hun|den|det|vi|i|de|man|[A-ZÆØÅ][a-zæøå]+)$/;
-  return `<p>${t("gm.p.main", esc(x.w), esc(x.verb))}</p>
-    ${between ? `<p>${SUBJ.test(between) ? t("gm.p.inv", esc(x.w), esc(between)) : t("gm.p.mid", esc(between), esc(x.w))}</p>` : ""}`;
+  if (x.type === "clause") {
+    if (x.clause !== "main") return `<p>${t("gm.p.sub", b(x.clause), b(x.w), b(x.verb))}</p><p class="soft small">${t("gm.p.biff")}</p>`;
+    const vi = x.tiles.findIndex(w => w.toLowerCase() === x.verb.toLowerCase()), wi = x.tiles.length - 1;
+    const mid = wi - vi > 1 ? x.tiles.slice(vi + 1, wi).join(" ") : "";
+    const SUBJ = /^(jeg|du|han|hun|den|det|vi|I|de|man|[A-ZÆØÅ][a-zæøå]+)$/;
+    return `<p>${t("gm.p.main", b(x.w), b(x.verb))}</p>${mid ? `<p>${SUBJ.test(mid) ? t(x.s.endsWith("?") ? "gm.p.q" : "gm.p.inv", b(x.w), b(mid)) : t("gm.p.mid", b(mid), b(x.w))}</p>` : ""}`;
+  }
+  const base = x.base || x.type;
+  const rule = base === "adj" ? t("gm.a." + x.rule, b(x.args[0])) : base === "pron" ? t("gm.o." + x.rule, ...x.args.map(b), b(x.w))
+    : base === "prep" ? t("gm.r.prep", b(x.args[0])) : t("gm.s." + x.rule);
+  const was = x.type === "error" ? `<p>${extra.missed ? t("gm.e.miss", b(extra.bad)) : t("gm.e.was", b(extra.bad), b(x.w))}</p>` : "";
+  return was + `<p>${rule}</p>`;
 }
-function grFeedback(x, ok, give, v) {
-  const exam = x.type === "tense" ? x.past : x.s;
+function grFeedback(x, ok, give, extra = {}) {
   if (!give) grSave(x.id, ok);
   GS.results.push({ id: x.id, ok });
-  const marks = x.type === "tense" ? x.verbs.flatMap(vb => vb[1].split(" ")).concat(x.swap.map(s => s[1])) : x.type === "v2" ? [x.adv.split(" ")[0], x.verb] : [x.w];
-  const [mine, theirs] = v && !ok ? wdiff(v, exam) : [null, null];
+  const marks = x.type === "verbs" ? x.gaps.map(g => [g.at, g.w.length]) : x.type === "v2" || x.type === "clause" ? null : [[x.at, x.w.length]];
+  let exam = esc(x.s);
+  if (marks) { exam = ""; let at = 0; for (const [a, n] of marks) { exam += esc(x.s.slice(at, a)) + `<mark class="hl">${esc(x.s.slice(a, a + n))}</mark>`; at = a + n; } exam += esc(x.s.slice(at)); }
+  else { const h = [x.pre, x.tiles.join(" ")].filter(Boolean).join(" "); exam = esc(x.pre ? x.pre + " " : "") + `<mark class="hl">${esc(x.tiles.join(" "))}</mark>` + esc(x.s.slice(h.length)); }
+  // the learner's order struck through, inside the rest of the sentence
+  const yours = extra.mine && !ok && !give ? esc(x.pre ? x.pre + " " : "") + `<del>${esc((x.pre ? extra.mine : extra.mine.map((w, j) => j ? w : capFirst(lowFirst(w)))).join(" "))}</del>` + esc(x.s.slice([x.pre, x.tiles.join(" ")].filter(Boolean).join(" ").length)) : "";
   $("#fb").innerHTML = `<div class="feedback ${ok ? "ok" : "bad"}">
       <h3>${ok ? t("gm.right") : give ? t("gm.shown") : t("gm.wrong")}</h3>
-      ${mine ? `<div class="small"><b>${t("gm.yours")}</b></div><div class="gdiff" lang="da">${mine}</div>` : ""}
-      <div class="small" style="margin-top:8px"><b>${t("gm.answer", esc(x.src))}</b></div>
-      <div class="gdiff sentence" lang="da">${theirs && x.type !== "place" ? theirs : markWords(exam, marks, x.type === "place" ? x.n : 0)}</div>
-      <div class="trrow">${trLink(exam).replace(t("m.tr"), t("tr.sent"))}</div>
-      <div class="gwhy"><b>${t("gm.why")}</b>${AI()}${grWhy(x, v)}</div>
-    </div>
-    <div class="row next"><button class="btn solid" id="nx">${t("b.next")}</button></div>`;
-  bindTr($("#fb"));
+      ${yours ? `<div class="small"><b>${t("gm.yours")}</b></div><div class="gdiff" lang="da">${yours}</div>` : ""}
+      ${ok || GR_CHOICE.includes(x.type) ? "" : `<div class="small" style="margin-top:8px"><b>${t("gm.answer", esc(x.src))}</b></div><div class="gdiff sentence" lang="da">${exam}</div>`}
+      <div class="gwhy"><b>${t("gm.why")}</b>${AI()}${grWhy(x, extra)}</div>
+    </div>`;
+  $("#gbtns").innerHTML = `<button class="btn solid" id="nx">${t("b.next")}</button>`;
+  $("#fb").after($("#gbtns"));
   const nx = $("#nx");
   nx.onclick = () => { GS.i++; grStep(); };
   GS.keys = e => { if (e.key === "Enter") { e.preventDefault(); nx.click(); } };
@@ -2269,14 +2354,14 @@ function grFeedback(x, ok, give, v) {
 function grSummary() {
   const n = GS.results.length, right = GS.results.filter(r => r.ok).length;
   const byId = Object.fromEntries(GS.queue.map(x => [x.id, x]));
-  const miss = GS.results.filter(r => !r.ok).map(r => byId[r.id]);
-  const again = GS.type;
+  const miss = [...new Set(GS.results.filter(r => !r.ok).map(r => r.id))].map(id => byId[id]);
   $("#app").innerHTML = `<div class="narrow"><div class="sheet q">
     <div class="kind">${esc(GS.title)}</div><h2 style="margin-top:6px">${t("gm.sum", right, n)}</h2>
-    ${miss.length ? `<div class="block"><span class="lbl">${t("gm.list")}</span><ul class="list">${miss.map(x => `<li lang="da">${esc(x.type === "tense" ? x.past : x.s)}</li>`).join("")}</ul></div>` : ""}
+    ${miss.length ? `<div class="block"><span class="lbl">${t("gm.list")}</span><ul class="list">${miss.map(x => `<li lang="da">${esc(x.s)}</li>`).join("")}</ul></div>` : ""}
     <div class="row next"><button class="btn solid" id="gagain">${t("gm.again")}</button>
-      ${miss.length ? `<button class="btn" id="gmiss">${t("gm.list").replace(/:$/, "")} · ${miss.length}</button>` : ""}
+      ${miss.length ? `<button class="btn" id="gmiss">${t("gm.redo", miss.length)}</button>` : ""}
       <button class="btn quiet" id="gmenu">${t("gm.menu")}</button><button class="btn quiet" id="ghome">${t("gm.back")}</button></div></div></div>`;
+  const again = GS.type;
   $("#gagain").onclick = () => startGrammar(again);
   if ($("#gmiss")) $("#gmiss").onclick = () => startGrammar(again, miss);
   $("#gmenu").onclick = grammarHome;

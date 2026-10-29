@@ -1,530 +1,581 @@
 {
- "tense": [
+ "verbs": [
   {
    "src": "2013v L2",
-   "past": "Egentlig gik han med drømme om at blive cykelmekaniker.",
-   "present": "Egentlig går han med drømme om at blive cykelmekaniker.",
-   "verbs": [
-    [
-     "går",
-     "gik",
-     "gå"
-    ]
-   ],
-   "swap": []
-  },
-  {
-   "src": "2013v L2",
-   "past": "Selv ville han gerne være cykelmekaniker, da han forlod folkeskolen.",
-   "present": "Selv vil han gerne være cykelmekaniker, når han forlader folkeskolen.",
-   "verbs": [
-    [
-     "vil",
-     "ville",
-     "ville"
-    ],
-    [
-     "forlader",
-     "forlod",
-     "forlade"
-    ]
-   ],
-   "swap": [
-    [
-     "når",
-     "da"
-    ]
+   "s": "Egentlig gik han med drømme om at blive cykelmekaniker.",
+   "gaps": [
+    {
+     "at": 9,
+     "w": "gik",
+     "inf": "gå",
+     "kind": "gik",
+     "pres": "går"
+    }
    ]
   },
   {
    "src": "2013v L2",
-   "past": "Jeg kunne ikke sætte ord på, hvad det var.",
-   "present": "Jeg kan ikke sætte ord på, hvad det er.",
-   "verbs": [
-    [
-     "kan",
-     "kunne",
-     "kunne"
-    ],
-    [
-     "er",
-     "var",
-     "være"
-    ]
-   ],
-   "swap": []
+   "s": "Selv ville han gerne være cykelmekaniker, da han forlod folkeskolen.",
+   "gaps": [
+    {
+     "at": 5,
+     "w": "ville",
+     "inf": "ville",
+     "kind": "ville",
+     "pres": "vil"
+    },
+    {
+     "at": 49,
+     "w": "forlod",
+     "inf": "forlade",
+     "kind": "forlod",
+     "pres": "forlader"
+    }
+   ]
   },
   {
    "src": "2013v L2",
-   "past": "Da jeg læste bogen, tænkte jeg, at det var lige sådan, jeg havde haft det.",
-   "present": "Når jeg læser bogen, tænker jeg, at det er lige sådan, jeg har haft det.",
-   "verbs": [
-    [
-     "læser",
-     "læste",
-     "læse"
-    ],
-    [
-     "tænker",
-     "tænkte",
-     "tænke"
-    ],
-    [
-     "er",
-     "var",
-     "være"
-    ],
-    [
-     "har haft",
-     "havde haft",
-     "have"
-    ]
-   ],
-   "swap": [
-    [
-     "Når",
-     "Da"
-    ]
+   "s": "Jeg kunne ikke sætte ord på, hvad det var.",
+   "gaps": [
+    {
+     "at": 4,
+     "w": "kunne",
+     "inf": "kunne",
+     "kind": "kunne",
+     "pres": "kan"
+    },
+    {
+     "at": 38,
+     "w": "var",
+     "inf": "være",
+     "kind": "var",
+     "pres": "er"
+    }
+   ]
+  },
+  {
+   "src": "2013v L2",
+   "s": "Da jeg læste bogen, tænkte jeg, at det var lige sådan, jeg havde haft det.",
+   "gaps": [
+    {
+     "at": 7,
+     "w": "læste",
+     "inf": "læse",
+     "kind": "læste",
+     "pres": "læser"
+    },
+    {
+     "at": 20,
+     "w": "tænkte",
+     "inf": "tænke",
+     "kind": "tænkte",
+     "pres": "tænker"
+    },
+    {
+     "at": 39,
+     "w": "var",
+     "inf": "være",
+     "kind": "var",
+     "pres": "er"
+    },
+    {
+     "at": 59,
+     "w": "havde",
+     "inf": "have",
+     "kind": "havde haft",
+     "pres": "har haft"
+    }
    ]
   },
   {
    "src": "2015v L2",
-   "past": "Det gik så godt, at han fik mod på at prøve nye udfordringer.",
-   "present": "Det går så godt, at han får mod på at prøve nye udfordringer.",
-   "verbs": [
-    [
-     "går",
-     "gik",
-     "gå"
-    ],
-    [
-     "får",
-     "fik",
-     "få"
-    ]
-   ],
-   "swap": []
-  },
-  {
-   "src": "2017s L2",
-   "past": "Han slog sig ikke alvorligt, da han faldt, men han satte sig lettere chokeret på en stol.",
-   "present": "Han slår sig ikke alvorligt, når han falder, men han sætter sig lettere chokeret på en stol.",
-   "verbs": [
-    [
-     "slår",
-     "slog",
-     "slå"
-    ],
-    [
-     "falder",
-     "faldt",
-     "falde"
-    ],
-    [
-     "sætter",
-     "satte",
-     "sætte"
-    ]
-   ],
-   "swap": [
-    [
-     "når",
-     "da"
-    ]
+   "s": "Det gik så godt, at han fik mod på at prøve nye udfordringer.",
+   "gaps": [
+    {
+     "at": 4,
+     "w": "gik",
+     "inf": "gå",
+     "kind": "gik",
+     "pres": "går"
+    },
+    {
+     "at": 24,
+     "w": "fik",
+     "inf": "få",
+     "kind": "fik",
+     "pres": "får"
+    }
    ]
   },
   {
    "src": "2017s L2",
-   "past": "Nu begyndte det at gå op for ham, at der var noget alvorligt galt.",
-   "present": "Nu begynder det at gå op for ham, at der er noget alvorligt galt.",
-   "verbs": [
-    [
-     "begynder",
-     "begyndte",
-     "begynde"
-    ],
-    [
-     "er",
-     "var",
-     "være"
-    ]
-   ],
-   "swap": []
+   "s": "Han slog sig ikke alvorligt, da han faldt, men han satte sig lettere chokeret på en stol.",
+   "gaps": [
+    {
+     "at": 4,
+     "w": "slog",
+     "inf": "slå",
+     "kind": "slog",
+     "pres": "slår"
+    },
+    {
+     "at": 36,
+     "w": "faldt",
+     "inf": "falde",
+     "kind": "faldt",
+     "pres": "falder"
+    },
+    {
+     "at": 51,
+     "w": "satte",
+     "inf": "sætte",
+     "kind": "satte",
+     "pres": "sætter"
+    }
+   ]
   },
   {
    "src": "2017s L2",
-   "past": "Tankerne kørte rundt i hovedet på ham, og hjertet slog hurtigt.",
-   "present": "Tankerne kører rundt i hovedet på ham, og hjertet slår hurtigt.",
-   "verbs": [
-    [
-     "kører",
-     "kørte",
-     "køre"
-    ],
-    [
-     "slår",
-     "slog",
-     "slå"
-    ]
-   ],
-   "swap": []
+   "s": "Nu begyndte det at gå op for ham, at der var noget alvorligt galt.",
+   "gaps": [
+    {
+     "at": 3,
+     "w": "begyndte",
+     "inf": "begynde",
+     "kind": "begyndte",
+     "pres": "begynder"
+    },
+    {
+     "at": 41,
+     "w": "var",
+     "inf": "være",
+     "kind": "var",
+     "pres": "er"
+    }
+   ]
   },
   {
-   "src": "2017v L1",
-   "past": "Dyrepasserne tog sig i stedet af ham, og han voksede op uden kontakt til andre næsehorn.",
-   "present": "Dyrepasserne tager sig i stedet af ham, og han vokser op uden kontakt til andre næsehorn.",
-   "verbs": [
-    [
-     "tager",
-     "tog",
-     "tage"
-    ],
-    [
-     "vokser",
-     "voksede",
-     "vokse"
-    ]
-   ],
-   "swap": []
-  },
-  {
-   "src": "2017v L1",
-   "past": "Da han blev kønsmoden, begyndte han at blive aggressiv.",
-   "present": "Når han bliver kønsmoden, begynder han at blive aggressiv.",
-   "verbs": [
-    [
-     "bliver",
-     "blev",
-     "blive"
-    ],
-    [
-     "begynder",
-     "begyndte",
-     "begynde"
-    ]
-   ],
-   "swap": [
-    [
-     "Når",
-     "Da"
-    ]
+   "src": "2017s L2",
+   "s": "Tankerne kørte rundt i hovedet på ham, og hjertet slog hurtigt.",
+   "gaps": [
+    {
+     "at": 9,
+     "w": "kørte",
+     "inf": "køre",
+     "kind": "kørte",
+     "pres": "kører"
+    },
+    {
+     "at": 50,
+     "w": "slog",
+     "inf": "slå",
+     "kind": "slog",
+     "pres": "slår"
+    }
    ]
   },
   {
    "src": "2017v L1",
-   "past": "Brutalis faldt forbavsende godt til i Afrika og fik tilkæmpet sig et godt territorium.",
-   "present": "Brutalis falder forbavsende godt til i Afrika og får tilkæmpet sig et godt territorium.",
-   "verbs": [
-    [
-     "falder",
-     "faldt",
-     "falde"
-    ],
-    [
-     "får",
-     "fik",
-     "få"
-    ]
-   ],
-   "swap": []
+   "s": "Dyrepasserne tog sig i stedet af ham, og han voksede op uden kontakt til andre næsehorn.",
+   "gaps": [
+    {
+     "at": 13,
+     "w": "tog",
+     "inf": "tage",
+     "kind": "tog",
+     "pres": "tager"
+    },
+    {
+     "at": 45,
+     "w": "voksede",
+     "inf": "vokse",
+     "kind": "voksede",
+     "pres": "vokser"
+    }
+   ]
+  },
+  {
+   "src": "2017v L1",
+   "s": "Da han blev kønsmoden, begyndte han at blive aggressiv.",
+   "gaps": [
+    {
+     "at": 7,
+     "w": "blev",
+     "inf": "blive",
+     "kind": "blev",
+     "pres": "bliver"
+    },
+    {
+     "at": 23,
+     "w": "begyndte",
+     "inf": "begynde",
+     "kind": "begyndte",
+     "pres": "begynder"
+    }
+   ]
+  },
+  {
+   "src": "2017v L1",
+   "s": "Brutalis faldt forbavsende godt til i Afrika og fik tilkæmpet sig et godt territorium.",
+   "gaps": [
+    {
+     "at": 9,
+     "w": "faldt",
+     "inf": "falde",
+     "kind": "faldt",
+     "pres": "falder"
+    },
+    {
+     "at": 48,
+     "w": "fik",
+     "inf": "få",
+     "kind": "fik",
+     "pres": "får"
+    }
+   ]
   },
   {
    "src": "2018v L1",
-   "past": "Samfundet udviklede sig, og det gjorde højskolerne også.",
-   "present": "Samfundet udvikler sig, og det gør højskolerne også.",
-   "verbs": [
-    [
-     "udvikler",
-     "udviklede",
-     "udvikle"
-    ],
-    [
-     "gør",
-     "gjorde",
-     "gøre"
-    ]
-   ],
-   "swap": []
+   "s": "Samfundet udviklede sig, og det gjorde højskolerne også.",
+   "gaps": [
+    {
+     "at": 10,
+     "w": "udviklede",
+     "inf": "udvikle",
+     "kind": "udviklede",
+     "pres": "udvikler"
+    },
+    {
+     "at": 32,
+     "w": "gjorde",
+     "inf": "gøre",
+     "kind": "gjorde",
+     "pres": "gør"
+    }
+   ]
   },
   {
    "src": "2018v L1",
-   "past": "Jeg var lidt i tvivl om, hvilket studie jeg skulle vælge.",
-   "present": "Jeg er lidt i tvivl om, hvilket studie jeg skal vælge.",
-   "verbs": [
-    [
-     "er",
-     "var",
-     "være"
-    ],
-    [
-     "skal",
-     "skulle",
-     "skulle"
-    ]
-   ],
-   "swap": []
+   "s": "Jeg var lidt i tvivl om, hvilket studie jeg skulle vælge.",
+   "gaps": [
+    {
+     "at": 4,
+     "w": "var",
+     "inf": "være",
+     "kind": "var",
+     "pres": "er"
+    },
+    {
+     "at": 44,
+     "w": "skulle",
+     "inf": "skulle",
+     "kind": "skulle",
+     "pres": "skal"
+    }
+   ]
   },
   {
    "src": "2018v L1",
-   "past": "Det var ret hårdt, og på et tidspunkt fik jeg simpelthen brug for en pause.",
-   "present": "Det er ret hårdt, og på et tidspunkt får jeg simpelthen brug for en pause.",
-   "verbs": [
-    [
-     "er",
-     "var",
-     "være"
-    ],
-    [
-     "får",
-     "fik",
-     "få"
-    ]
-   ],
-   "swap": []
+   "s": "Det var ret hårdt, og på et tidspunkt fik jeg simpelthen brug for en pause.",
+   "gaps": [
+    {
+     "at": 4,
+     "w": "var",
+     "inf": "være",
+     "kind": "var",
+     "pres": "er"
+    },
+    {
+     "at": 38,
+     "w": "fik",
+     "inf": "få",
+     "kind": "fik",
+     "pres": "får"
+    }
+   ]
   },
   {
    "src": "2018v L2",
-   "past": "Først tænkte de på at flytte til Aalborg i stedet for til Hjørring.",
-   "present": "Først tænker de på at flytte til Aalborg i stedet for til Hjørring.",
-   "verbs": [
-    [
-     "tænker",
-     "tænkte",
-     "tænke"
-    ]
-   ],
-   "swap": []
+   "s": "Først tænkte de på at flytte til Aalborg i stedet for til Hjørring.",
+   "gaps": [
+    {
+     "at": 6,
+     "w": "tænkte",
+     "inf": "tænke",
+     "kind": "tænkte",
+     "pres": "tænker"
+    }
+   ]
   },
   {
    "src": "2019s L1",
-   "past": "Vi dansede, sang og grinede i regnen og blev helt forelskede.",
-   "present": "Vi danser, synger og griner i regnen og bliver helt forelskede.",
-   "verbs": [
-    [
-     "danser",
-     "dansede",
-     "danse"
-    ],
-    [
-     "synger",
-     "sang",
-     "synge"
-    ],
-    [
-     "griner",
-     "grinede",
-     "grine"
-    ],
-    [
-     "bliver",
-     "blev",
-     "blive"
-    ]
-   ],
-   "swap": []
+   "s": "Vi dansede, sang og grinede i regnen og blev helt forelskede.",
+   "gaps": [
+    {
+     "at": 3,
+     "w": "dansede",
+     "inf": "danse",
+     "kind": "dansede",
+     "pres": "danser"
+    },
+    {
+     "at": 12,
+     "w": "sang",
+     "inf": "synge",
+     "kind": "sang",
+     "pres": "synger"
+    },
+    {
+     "at": 20,
+     "w": "grinede",
+     "inf": "grine",
+     "kind": "grinede",
+     "pres": "griner"
+    },
+    {
+     "at": 40,
+     "w": "blev",
+     "inf": "blive",
+     "kind": "blev",
+     "pres": "bliver"
+    }
+   ]
   },
   {
    "src": "2019v L2",
-   "past": "Helene Bagger tog en hurtig beslutning og tilbød ham et job i Roskilde.",
-   "present": "Helene Bagger tager en hurtig beslutning og tilbyder ham et job i Roskilde.",
-   "verbs": [
-    [
-     "tager",
-     "tog",
-     "tage"
-    ],
-    [
-     "tilbyder",
-     "tilbød",
-     "tilbyde"
-    ]
-   ],
-   "swap": []
+   "s": "Helene Bagger tog en hurtig beslutning og tilbød ham et job i Roskilde.",
+   "gaps": [
+    {
+     "at": 14,
+     "w": "tog",
+     "inf": "tage",
+     "kind": "tog",
+     "pres": "tager"
+    },
+    {
+     "at": 42,
+     "w": "tilbød",
+     "inf": "tilbyde",
+     "kind": "tilbød",
+     "pres": "tilbyder"
+    }
+   ]
   },
   {
    "src": "2019v L2",
-   "past": "Men han havde endnu ikke besluttet sig, fordi han var glad for sit arbejde i Rumænien.",
-   "present": "Men han har endnu ikke besluttet sig, fordi han er glad for sit arbejde i Rumænien.",
-   "verbs": [
-    [
-     "har besluttet",
-     "havde besluttet",
-     "beslutte"
-    ],
-    [
-     "er",
-     "var",
-     "være"
-    ]
-   ],
-   "swap": []
+   "s": "Men han havde endnu ikke besluttet sig, fordi han var glad for sit arbejde i Rumænien.",
+   "gaps": [
+    {
+     "at": 8,
+     "w": "havde",
+     "inf": "have",
+     "kind": "havde besluttet",
+     "pres": "har besluttet"
+    },
+    {
+     "at": 50,
+     "w": "var",
+     "inf": "være",
+     "kind": "var",
+     "pres": "er"
+    }
+   ]
   },
   {
    "src": "2016s L2",
-   "past": "Han krævede disciplin af eleverne, og han lagde vægt på udenadslære.",
-   "present": "Han kræver disciplin af eleverne, og han lægger vægt på udenadslære.",
-   "verbs": [
-    [
-     "kræver",
-     "krævede",
-     "kræve"
-    ],
-    [
-     "lægger",
-     "lagde",
-     "lægge"
-    ]
-   ],
-   "swap": []
+   "s": "Han krævede disciplin af eleverne, og han lagde vægt på udenadslære.",
+   "gaps": [
+    {
+     "at": 4,
+     "w": "krævede",
+     "inf": "kræve",
+     "kind": "krævede",
+     "pres": "kræver"
+    },
+    {
+     "at": 42,
+     "w": "lagde",
+     "inf": "lægge",
+     "kind": "lagde",
+     "pres": "lægger"
+    }
+   ]
   },
   {
    "src": "2016s L2",
-   "past": "De havde aldeles ikke lyst til det, men de lærte det, ellers fik de bank.",
-   "present": "De har aldeles ikke lyst til det, men de lærer det, ellers får de bank.",
-   "verbs": [
-    [
-     "har",
-     "havde",
-     "have"
-    ],
-    [
-     "lærer",
-     "lærte",
-     "lære"
-    ],
-    [
-     "får",
-     "fik",
-     "få"
-    ]
-   ],
-   "swap": []
+   "s": "De havde aldeles ikke lyst til det, men de lærte det, ellers fik de bank.",
+   "gaps": [
+    {
+     "at": 3,
+     "w": "havde",
+     "inf": "have",
+     "kind": "havde",
+     "pres": "har"
+    },
+    {
+     "at": 43,
+     "w": "lærte",
+     "inf": "lære",
+     "kind": "lærte",
+     "pres": "lærer"
+    },
+    {
+     "at": 61,
+     "w": "fik",
+     "inf": "få",
+     "kind": "fik",
+     "pres": "får"
+    }
+   ]
   },
   {
    "src": "2017s L1",
-   "past": "Vi valgte at køre en tur med hestevogn i den ældste del af byen.",
-   "present": "Vi vælger at køre en tur med hestevogn i den ældste del af byen.",
-   "verbs": [
-    [
-     "vælger",
-     "valgte",
-     "vælge"
-    ]
-   ],
-   "swap": []
+   "s": "Vi valgte at køre en tur med hestevogn i den ældste del af byen.",
+   "gaps": [
+    {
+     "at": 3,
+     "w": "valgte",
+     "inf": "vælge",
+     "kind": "valgte",
+     "pres": "vælger"
+    }
+   ]
   },
   {
    "src": "2017s L1",
-   "past": "Forældrene gik op i gamle møbler, og de genbrugte, reparerede og afsyrede.",
-   "present": "Forældrene går op i gamle møbler, og de genbruger, reparerer og afsyrer.",
-   "verbs": [
-    [
-     "går",
-     "gik",
-     "gå"
-    ],
-    [
-     "genbruger",
-     "genbrugte",
-     "genbruge"
-    ],
-    [
-     "reparerer",
-     "reparerede",
-     "reparere"
-    ],
-    [
-     "afsyrer",
-     "afsyrede",
-     "afsyre"
-    ]
-   ],
-   "swap": []
+   "s": "Forældrene gik op i gamle møbler, og de genbrugte, reparerede og afsyrede.",
+   "gaps": [
+    {
+     "at": 11,
+     "w": "gik",
+     "inf": "gå",
+     "kind": "gik",
+     "pres": "går"
+    },
+    {
+     "at": 40,
+     "w": "genbrugte",
+     "inf": "genbruge",
+     "kind": "genbrugte",
+     "pres": "genbruger"
+    },
+    {
+     "at": 51,
+     "w": "reparerede",
+     "inf": "reparere",
+     "kind": "reparerede",
+     "pres": "reparerer"
+    },
+    {
+     "at": 65,
+     "w": "afsyrede",
+     "inf": "afsyre",
+     "kind": "afsyrede",
+     "pres": "afsyrer"
+    }
+   ]
   },
   {
    "src": "2017s L1",
-   "past": "Bønder fra omegnen kom med vadmel og uldgarn, som farveren behandlede.",
-   "present": "Bønder fra omegnen kommer med vadmel og uldgarn, som farveren behandler.",
-   "verbs": [
-    [
-     "kommer",
-     "kom",
-     "komme"
-    ],
-    [
-     "behandler",
-     "behandlede",
-     "behandle"
-    ]
-   ],
-   "swap": []
+   "s": "Bønder fra omegnen kom med vadmel og uldgarn, som farveren behandlede.",
+   "gaps": [
+    {
+     "at": 19,
+     "w": "kom",
+     "inf": "komme",
+     "kind": "kom",
+     "pres": "kommer"
+    },
+    {
+     "at": 59,
+     "w": "behandlede",
+     "inf": "behandle",
+     "kind": "behandlede",
+     "pres": "behandler"
+    }
+   ]
   },
   {
    "src": "2017s L2",
-   "past": "Han havde i stedet fået stress, og de næste måneder kunne han næsten ingenting.",
-   "present": "Han har i stedet fået stress, og de næste måneder kan han næsten ingenting.",
-   "verbs": [
-    [
-     "har fået",
-     "havde fået",
-     "få"
-    ],
-    [
-     "kan",
-     "kunne",
-     "kunne"
-    ]
-   ],
-   "swap": []
+   "s": "Han havde i stedet fået stress, og de næste måneder kunne han næsten ingenting.",
+   "gaps": [
+    {
+     "at": 4,
+     "w": "havde",
+     "inf": "have",
+     "kind": "havde fået",
+     "pres": "har fået"
+    },
+    {
+     "at": 52,
+     "w": "kunne",
+     "inf": "kunne",
+     "kind": "kunne",
+     "pres": "kan"
+    }
+   ]
   },
   {
    "src": "2022s L1",
-   "past": "Vi besøgte også skolen, og jeg tænkte, at Fejø var et helt vidunderligt sted.",
-   "present": "Vi besøger også skolen, og jeg tænker, at Fejø er et helt vidunderligt sted.",
-   "verbs": [
-    [
-     "besøger",
-     "besøgte",
-     "besøge"
-    ],
-    [
-     "tænker",
-     "tænkte",
-     "tænke"
-    ],
-    [
-     "er",
-     "var",
-     "være"
-    ]
-   ],
-   "swap": []
+   "s": "Vi besøgte også skolen, og jeg tænkte, at Fejø var et helt vidunderligt sted.",
+   "gaps": [
+    {
+     "at": 3,
+     "w": "besøgte",
+     "inf": "besøge",
+     "kind": "besøgte",
+     "pres": "besøger"
+    },
+    {
+     "at": 31,
+     "w": "tænkte",
+     "inf": "tænke",
+     "kind": "tænkte",
+     "pres": "tænker"
+    },
+    {
+     "at": 47,
+     "w": "var",
+     "inf": "være",
+     "kind": "var",
+     "pres": "er"
+    }
+   ]
   },
   {
    "src": "2023v L2",
-   "past": "De forstod ikke altid, hvor jeg ville hen med mine ideer.",
-   "present": "De forstår ikke altid, hvor jeg vil hen med mine ideer.",
-   "verbs": [
-    [
-     "forstår",
-     "forstod",
-     "forstå"
-    ],
-    [
-     "vil",
-     "ville",
-     "ville"
-    ]
-   ],
-   "swap": []
+   "s": "De forstod ikke altid, hvor jeg ville hen med mine ideer.",
+   "gaps": [
+    {
+     "at": 3,
+     "w": "forstod",
+     "inf": "forstå",
+     "kind": "forstod",
+     "pres": "forstår"
+    },
+    {
+     "at": 32,
+     "w": "ville",
+     "inf": "ville",
+     "kind": "ville",
+     "pres": "vil"
+    }
+   ]
   }
  ],
  "v2": [
   {
    "src": "2013s L1",
    "s": "Måske kan du også selv blive tutor.",
-   "plain": "Du kan også selv blive tutor.",
-   "adv": "Måske",
+   "pre": "Måske",
+   "tiles": [
+    "kan",
+    "du",
+    "også",
+    "selv"
+   ],
+   "post": "blive tutor.",
+   "first": "Måske",
    "verb": "kan",
    "subj": "du",
    "mid": [
@@ -535,8 +586,14 @@
   {
    "src": "2013s L1",
    "s": "Desuden vil du også få tilknyttet en kontaktlærer.",
-   "plain": "Du vil også få tilknyttet en kontaktlærer.",
-   "adv": "Desuden",
+   "pre": "Desuden",
+   "tiles": [
+    "vil",
+    "du",
+    "også"
+   ],
+   "post": "få tilknyttet en kontaktlærer.",
+   "first": "Desuden",
    "verb": "vil",
    "subj": "du",
    "mid": [
@@ -546,8 +603,14 @@
   {
    "src": "2013v L2",
    "s": "I dag har han allerede lagt planer for fremtiden.",
-   "plain": "Han har allerede lagt planer for fremtiden.",
-   "adv": "I dag",
+   "pre": "I dag",
+   "tiles": [
+    "har",
+    "han",
+    "allerede"
+   ],
+   "post": "lagt planer for fremtiden.",
+   "first": "I dag",
    "verb": "har",
    "subj": "han",
    "mid": [
@@ -557,8 +620,14 @@
   {
    "src": "2014s L2",
    "s": "I dag skal den slet ikke åbnes og bliver kun rørt ved en enkelt gang.",
-   "plain": "Den skal slet ikke åbnes og bliver kun rørt ved en enkelt gang.",
-   "adv": "I dag",
+   "pre": "I dag",
+   "tiles": [
+    "skal",
+    "den",
+    "slet ikke"
+   ],
+   "post": "åbnes og bliver kun rørt ved en enkelt gang.",
+   "first": "I dag",
    "verb": "skal",
    "subj": "den",
    "mid": [
@@ -568,8 +637,14 @@
   {
    "src": "2016s L1",
    "s": "Derfor gør vi altid vores bedste for at vise respekt for den tiltro, som vores frivillige viser vores organisation.",
-   "plain": "Vi gør altid vores bedste for at vise respekt for den tiltro, som vores frivillige viser vores organisation.",
-   "adv": "Derfor",
+   "pre": "Derfor",
+   "tiles": [
+    "gør",
+    "vi",
+    "altid"
+   ],
+   "post": "vores bedste for at vise respekt for den tiltro, som vores frivillige viser vores organisation.",
+   "first": "Derfor",
    "verb": "gør",
    "subj": "vi",
    "mid": [
@@ -579,8 +654,14 @@
   {
    "src": "2016s L2",
    "s": "For eksempel bliver eleverne sjældent sendt uden for døren.",
-   "plain": "Eleverne bliver sjældent sendt uden for døren.",
-   "adv": "For eksempel",
+   "pre": "For eksempel",
+   "tiles": [
+    "bliver",
+    "eleverne",
+    "sjældent"
+   ],
+   "post": "sendt uden for døren.",
+   "first": "For eksempel",
    "verb": "bliver",
    "subj": "eleverne",
    "mid": [
@@ -590,8 +671,14 @@
   {
    "src": "2017s L2",
    "s": "I dag er Gert ikke længere projektleder.",
-   "plain": "Gert er ikke længere projektleder.",
-   "adv": "I dag",
+   "pre": "I dag",
+   "tiles": [
+    "er",
+    "Gert",
+    "ikke længere"
+   ],
+   "post": "projektleder.",
+   "first": "I dag",
    "verb": "er",
    "subj": "Gert",
    "mid": [
@@ -601,8 +688,14 @@
   {
    "src": "2018s L1",
    "s": "Her vil vi også få en mulighed for at høre mere om dig og dine kompetencer.",
-   "plain": "Vi vil også få en mulighed for at høre mere om dig og dine kompetencer.",
-   "adv": "Her",
+   "pre": "Her",
+   "tiles": [
+    "vil",
+    "vi",
+    "også"
+   ],
+   "post": "få en mulighed for at høre mere om dig og dine kompetencer.",
+   "first": "Her",
    "verb": "vil",
    "subj": "vi",
    "mid": [
@@ -612,8 +705,14 @@
   {
    "src": "2018s L2",
    "s": "Derudover skal de også have mod til at ansætte nogen, der er anderledes end dem selv.",
-   "plain": "De skal også have mod til at ansætte nogen, der er anderledes end dem selv.",
-   "adv": "Derudover",
+   "pre": "Derudover",
+   "tiles": [
+    "skal",
+    "de",
+    "også"
+   ],
+   "post": "have mod til at ansætte nogen, der er anderledes end dem selv.",
+   "first": "Derudover",
    "verb": "skal",
    "subj": "de",
    "mid": [
@@ -623,8 +722,14 @@
   {
    "src": "2019s L1",
    "s": "Dog kan man også vælge at tjekke ind ved det officielle indtjekningssted, der hedder Laden.",
-   "plain": "Man kan også vælge at tjekke ind ved det officielle indtjekningssted, der hedder Laden.",
-   "adv": "Dog",
+   "pre": "Dog",
+   "tiles": [
+    "kan",
+    "man",
+    "også"
+   ],
+   "post": "vælge at tjekke ind ved det officielle indtjekningssted, der hedder Laden.",
+   "first": "Dog",
    "verb": "kan",
    "subj": "man",
    "mid": [
@@ -634,8 +739,14 @@
   {
    "src": "2019s L2",
    "s": "Dog støtter han ikke med penge, men med tid.",
-   "plain": "Han støtter ikke med penge, men med tid.",
-   "adv": "Dog",
+   "pre": "Dog",
+   "tiles": [
+    "støtter",
+    "han",
+    "ikke"
+   ],
+   "post": "med penge, men med tid.",
+   "first": "Dog",
    "verb": "støtter",
    "subj": "han",
    "mid": [
@@ -645,8 +756,14 @@
   {
    "src": "2019s L2",
    "s": "Desuden kommer nogle unge aldrig i gang med en ny uddannelse igen, og det kan begrænse deres muligheder på jobmarkedet.",
-   "plain": "Nogle unge kommer aldrig i gang med en ny uddannelse igen, og det kan begrænse deres muligheder på jobmarkedet.",
-   "adv": "Desuden",
+   "pre": "Desuden",
+   "tiles": [
+    "kommer",
+    "nogle unge",
+    "aldrig"
+   ],
+   "post": "i gang med en ny uddannelse igen, og det kan begrænse deres muligheder på jobmarkedet.",
+   "first": "Desuden",
    "verb": "kommer",
    "subj": "nogle unge",
    "mid": [
@@ -656,8 +773,14 @@
   {
    "src": "2019v L1",
    "s": "Derudover smiler de altid og hilser pænt.",
-   "plain": "De smiler altid og hilser pænt.",
-   "adv": "Derudover",
+   "pre": "Derudover",
+   "tiles": [
+    "smiler",
+    "de",
+    "altid"
+   ],
+   "post": "og hilser pænt.",
+   "first": "Derudover",
    "verb": "smiler",
    "subj": "de",
    "mid": [
@@ -667,8 +790,14 @@
   {
    "src": "2019v L2",
    "s": "Samtidig har den ikke påvirket lønningerne negativt.",
-   "plain": "Den har ikke påvirket lønningerne negativt.",
-   "adv": "Samtidig",
+   "pre": "Samtidig",
+   "tiles": [
+    "har",
+    "den",
+    "ikke"
+   ],
+   "post": "påvirket lønningerne negativt.",
+   "first": "Samtidig",
    "verb": "har",
    "subj": "den",
    "mid": [
@@ -678,8 +807,14 @@
   {
    "src": "2020s L1",
    "s": "Derudover skal det også fremgå, at man har modificeret fotoet fra originalen.",
-   "plain": "Det skal også fremgå, at man har modificeret fotoet fra originalen.",
-   "adv": "Derudover",
+   "pre": "Derudover",
+   "tiles": [
+    "skal",
+    "det",
+    "også"
+   ],
+   "post": "fremgå, at man har modificeret fotoet fra originalen.",
+   "first": "Derudover",
    "verb": "skal",
    "subj": "det",
    "mid": [
@@ -689,8 +824,15 @@
   {
    "src": "2021s L2",
    "s": "Her adskiller han sig nok fra flertallet.",
-   "plain": "Han adskiller sig nok fra flertallet.",
-   "adv": "Her",
+   "pre": "Her",
+   "tiles": [
+    "adskiller",
+    "han",
+    "sig",
+    "nok"
+   ],
+   "post": "fra flertallet.",
+   "first": "Her",
    "verb": "adskiller",
    "subj": "han",
    "mid": [
@@ -701,8 +843,14 @@
   {
    "src": "2021s L2",
    "s": "Til gengæld er det måske ikke så vigtigt, om sommerferien går til Berlin eller Bangkok.",
-   "plain": "Det er måske ikke så vigtigt, om sommerferien går til Berlin eller Bangkok.",
-   "adv": "Til gengæld",
+   "pre": "Til gengæld",
+   "tiles": [
+    "er",
+    "det",
+    "måske ikke"
+   ],
+   "post": "så vigtigt, om sommerferien går til Berlin eller Bangkok.",
+   "first": "Til gengæld",
    "verb": "er",
    "subj": "det",
    "mid": [
@@ -712,8 +860,14 @@
   {
    "src": "2022s L2",
    "s": "Typisk lærer man ikke noget om at søge job, når man går på en uddannelse.",
-   "plain": "Man lærer ikke noget om at søge job, når man går på en uddannelse.",
-   "adv": "Typisk",
+   "pre": "Typisk",
+   "tiles": [
+    "lærer",
+    "man",
+    "ikke"
+   ],
+   "post": "noget om at søge job, når man går på en uddannelse.",
+   "first": "Typisk",
    "verb": "lærer",
    "subj": "man",
    "mid": [
@@ -723,8 +877,14 @@
   {
    "src": "2023s L1",
    "s": "Måske er du slet ikke i tvivl om, hvad jeg mener.",
-   "plain": "Du er slet ikke i tvivl om, hvad jeg mener.",
-   "adv": "Måske",
+   "pre": "Måske",
+   "tiles": [
+    "er",
+    "du",
+    "slet ikke"
+   ],
+   "post": "i tvivl om, hvad jeg mener.",
+   "first": "Måske",
    "verb": "er",
    "subj": "du",
    "mid": [
@@ -734,8 +894,14 @@
   {
    "src": "2023s L2",
    "s": "Måske handler de nedslående tal også om selvværdet hos de nyuddannede med et handicap.",
-   "plain": "De nedslående tal handler også om selvværdet hos de nyuddannede med et handicap.",
-   "adv": "Måske",
+   "pre": "Måske",
+   "tiles": [
+    "handler",
+    "de nedslående tal",
+    "også"
+   ],
+   "post": "om selvværdet hos de nyuddannede med et handicap.",
+   "first": "Måske",
    "verb": "handler",
    "subj": "de nedslående tal",
    "mid": [
@@ -745,8 +911,15 @@
   {
    "src": "2023s L2",
    "s": "Her kan de dog stadig ses fra land, og det kan få berørte borgere til at protestere.",
-   "plain": "De kan dog stadig ses fra land, og det kan få berørte borgere til at protestere.",
-   "adv": "Her",
+   "pre": "Her",
+   "tiles": [
+    "kan",
+    "de",
+    "dog",
+    "stadig"
+   ],
+   "post": "ses fra land, og det kan få berørte borgere til at protestere.",
+   "first": "Her",
    "verb": "kan",
    "subj": "de",
    "mid": [
@@ -757,8 +930,14 @@
   {
    "src": "2023v L2",
    "s": "Desuden er det ikke alle, der har brug for den samme sikkerhedsstandard.",
-   "plain": "Det er ikke alle, der har brug for den samme sikkerhedsstandard.",
-   "adv": "Desuden",
+   "pre": "Desuden",
+   "tiles": [
+    "er",
+    "det",
+    "ikke"
+   ],
+   "post": "alle, der har brug for den samme sikkerhedsstandard.",
+   "first": "Desuden",
    "verb": "er",
    "subj": "det",
    "mid": [
@@ -768,8 +947,14 @@
   {
    "src": "2023v L2",
    "s": "Endelig er det også vigtigt altid at holde sine enheder opdaterede, gerne automatisk.",
-   "plain": "Det er også vigtigt altid at holde sine enheder opdaterede, gerne automatisk.",
-   "adv": "Endelig",
+   "pre": "Endelig",
+   "tiles": [
+    "er",
+    "det",
+    "også"
+   ],
+   "post": "vigtigt altid at holde sine enheder opdaterede, gerne automatisk.",
+   "first": "Endelig",
    "verb": "er",
    "subj": "det",
    "mid": [
@@ -779,8 +964,14 @@
   {
    "src": "2024s L2",
    "s": "Derfor er det også forholdsvist sjældent, man ser journalister skifte til et helt andet arbejdsområde.",
-   "plain": "Det er også forholdsvist sjældent, man ser journalister skifte til et helt andet arbejdsområde.",
-   "adv": "Derfor",
+   "pre": "Derfor",
+   "tiles": [
+    "er",
+    "det",
+    "også"
+   ],
+   "post": "forholdsvist sjældent, man ser journalister skifte til et helt andet arbejdsområde.",
+   "first": "Derfor",
    "verb": "er",
    "subj": "det",
    "mid": [
@@ -790,8 +981,14 @@
   {
    "src": "2015v L2",
    "s": "I dag er det ikke kun manden, der har som opgave at forsørge familien, sådan som det var tidligere.",
-   "plain": "Det er ikke kun manden, der har som opgave at forsørge familien, sådan som det var tidligere.",
-   "adv": "I dag",
+   "pre": "I dag",
+   "tiles": [
+    "er",
+    "det",
+    "ikke kun"
+   ],
+   "post": "manden, der har som opgave at forsørge familien, sådan som det var tidligere.",
+   "first": "I dag",
    "verb": "er",
    "subj": "det",
    "mid": [
@@ -801,8 +998,14 @@
   {
    "src": "2022v L2",
    "s": "Derfor er det nok de færreste iværksættere, der kan nøjes med at arbejde 37 timer om ugen.",
-   "plain": "Det er nok de færreste iværksættere, der kan nøjes med at arbejde 37 timer om ugen.",
-   "adv": "Derfor",
+   "pre": "Derfor",
+   "tiles": [
+    "er",
+    "det",
+    "nok"
+   ],
+   "post": "de færreste iværksættere, der kan nøjes med at arbejde 37 timer om ugen.",
+   "first": "Derfor",
    "verb": "er",
    "subj": "det",
    "mid": [
@@ -812,8 +1015,13 @@
   {
    "src": "2014s W",
    "s": "Siden sin studentereksamen har Jonas været et år i Spanien, og resten af tiden har han haft forskellige job.",
-   "plain": "Jonas har været et år i Spanien, og resten af tiden har han haft forskellige job.",
-   "adv": "Siden sin studentereksamen",
+   "pre": "Siden sin studentereksamen",
+   "tiles": [
+    "har",
+    "Jonas"
+   ],
+   "post": "været et år i Spanien, og resten af tiden har han haft forskellige job.",
+   "first": "Siden sin studentereksamen",
    "verb": "har",
    "subj": "Jonas",
    "mid": []
@@ -821,8 +1029,13 @@
   {
    "src": "2015s W",
    "s": "I denne periode har fædre ret til 2 ugers orlov.",
-   "plain": "Fædre har ret til 2 ugers orlov.",
-   "adv": "I denne periode",
+   "pre": "I denne periode",
+   "tiles": [
+    "har",
+    "fædre"
+   ],
+   "post": "ret til 2 ugers orlov.",
+   "first": "I denne periode",
    "verb": "har",
    "subj": "fædre",
    "mid": []
@@ -830,17 +1043,314 @@
   {
    "src": "2017v L1",
    "s": "Så går vi til gudstjeneste, og vi afslutter altid turen med varm kakao til hele banden.",
-   "plain": "Vi går til gudstjeneste, og vi afslutter altid turen med varm kakao til hele banden.",
-   "adv": "Så",
+   "pre": "Så",
+   "tiles": [
+    "går",
+    "vi"
+   ],
+   "post": "til gudstjeneste, og vi afslutter altid turen med varm kakao til hele banden.",
+   "first": "Så",
    "verb": "går",
    "subj": "vi",
    "mid": []
+  },
+  {
+   "src": "2013s L1",
+   "s": "Hvis du siger nej tak til en praktikplads, fordi du ikke vil flytte, kan du ikke komme i skolepraktik.",
+   "pre": "Hvis du siger nej tak til en praktikplads, fordi du ikke vil flytte,",
+   "tiles": [
+    "kan",
+    "du",
+    "ikke"
+   ],
+   "post": "komme i skolepraktik.",
+   "first": "Hvis du siger nej tak til en praktikplads, fordi du ikke vil flytte",
+   "clause": true,
+   "verb": "kan",
+   "subj": "du",
+   "mid": [
+    "ikke"
+   ]
+  },
+  {
+   "src": "2013s L1",
+   "s": "Når du er over 18 år, har du ret til at få undervisning på VUC.",
+   "pre": "Når du er over 18 år,",
+   "tiles": [
+    "har",
+    "du"
+   ],
+   "post": "ret til at få undervisning på VUC.",
+   "first": "Når du er over 18 år",
+   "clause": true,
+   "verb": "har",
+   "subj": "du",
+   "mid": []
+  },
+  {
+   "src": "2013s L1",
+   "s": "Mens du er på skolen, kan du vælge at bo på skolehjemmet.",
+   "pre": "Mens du er på skolen,",
+   "tiles": [
+    "kan",
+    "du",
+    "vælge"
+   ],
+   "post": "at bo på skolehjemmet.",
+   "first": "Mens du er på skolen",
+   "clause": true,
+   "verb": "kan",
+   "subj": "du",
+   "mid": []
+  },
+  {
+   "src": "2013s L1",
+   "s": "Hvis du ikke har et godt kendskab til at arbejde i landbruget, bør du vælge skolevejen.",
+   "pre": "Hvis du ikke har et godt kendskab til at arbejde i landbruget,",
+   "tiles": [
+    "bør",
+    "du",
+    "vælge"
+   ],
+   "post": "skolevejen.",
+   "first": "Hvis du ikke har et godt kendskab til at arbejde i landbruget",
+   "clause": true,
+   "verb": "bør",
+   "subj": "du",
+   "mid": []
+  },
+  {
+   "src": "2017s L1",
+   "s": "Når knallerten gik i stykker, måtte den repareres af en knallertmekaniker.",
+   "pre": "Når knallerten gik i stykker,",
+   "tiles": [
+    "måtte",
+    "den",
+    "repareres"
+   ],
+   "post": "af en knallertmekaniker.",
+   "first": "Når knallerten gik i stykker",
+   "clause": true,
+   "verb": "måtte",
+   "subj": "den",
+   "mid": []
+  },
+  {
+   "src": "2018s L2",
+   "s": "Selvom Danmark er et af de lande i verden med størst ligestilling, er der relativt få kvinder i toppen af dansk erhvervsliv.",
+   "pre": "Selvom Danmark er et af de lande i verden med størst ligestilling,",
+   "tiles": [
+    "er",
+    "der"
+   ],
+   "post": "relativt få kvinder i toppen af dansk erhvervsliv.",
+   "first": "Selvom Danmark er et af de lande i verden med størst ligestilling",
+   "clause": true,
+   "verb": "er",
+   "subj": "der",
+   "mid": []
+  },
+  {
+   "src": "2018v L2",
+   "s": "Hvis deres mere erfarne kolleger vælger at stoppe, får de måske en chance for at få mere spændende ansvarsområder.",
+   "pre": "Hvis deres mere erfarne kolleger vælger at stoppe,",
+   "tiles": [
+    "får",
+    "de",
+    "måske"
+   ],
+   "post": "en chance for at få mere spændende ansvarsområder.",
+   "first": "Hvis deres mere erfarne kolleger vælger at stoppe",
+   "clause": true,
+   "verb": "får",
+   "subj": "de",
+   "mid": [
+    "måske"
+   ]
+  },
+  {
+   "src": "2019s L1",
+   "s": "Hvis man tidligere har købt billet, har man sikkert allerede en konto.",
+   "pre": "Hvis man tidligere har købt billet,",
+   "tiles": [
+    "har",
+    "man",
+    "sikkert allerede"
+   ],
+   "post": "en konto.",
+   "first": "Hvis man tidligere har købt billet",
+   "clause": true,
+   "verb": "har",
+   "subj": "man",
+   "mid": [
+    "sikkert allerede"
+   ]
+  },
+  {
+   "src": "2020s L2",
+   "s": "Da Eva begyndte at studere, havde hun endnu ikke tænkt over, om hun skulle tage en del af sit studie i udlandet.",
+   "pre": "Da Eva begyndte at studere,",
+   "tiles": [
+    "havde",
+    "hun",
+    "endnu ikke",
+    "tænkt"
+   ],
+   "post": "over, om hun skulle tage en del af sit studie i udlandet.",
+   "first": "Da Eva begyndte at studere",
+   "clause": true,
+   "verb": "havde",
+   "subj": "hun",
+   "mid": [
+    "endnu ikke",
+    "tænkt"
+   ]
+  },
+  {
+   "src": "2020v L2",
+   "s": "Hvis en it-virksomhed mister en erfaren medarbejder, kan det være svært at finde en ny specialist med de rigtige kvalifikationer.",
+   "pre": "Hvis en it-virksomhed mister en erfaren medarbejder,",
+   "tiles": [
+    "kan",
+    "det",
+    "være"
+   ],
+   "post": "svært at finde en ny specialist med de rigtige kvalifikationer.",
+   "first": "Hvis en it-virksomhed mister en erfaren medarbejder",
+   "clause": true,
+   "verb": "kan",
+   "subj": "det",
+   "mid": []
+  },
+  {
+   "src": "2022s L2",
+   "s": "Selvom hun måtte revidere sine forventninger undervejs, tænker hun ikke længere så meget på, at året med jobsøgning var frustrerende.",
+   "pre": "Selvom hun måtte revidere sine forventninger undervejs,",
+   "tiles": [
+    "tænker",
+    "hun",
+    "ikke længere"
+   ],
+   "post": "så meget på, at året med jobsøgning var frustrerende.",
+   "first": "Selvom hun måtte revidere sine forventninger undervejs",
+   "clause": true,
+   "verb": "tænker",
+   "subj": "hun",
+   "mid": [
+    "ikke længere"
+   ]
+  },
+  {
+   "src": "2022s L2",
+   "s": "Inden René fik sit job, var han til andre jobsamtaler uden succes.",
+   "pre": "Inden René fik sit job,",
+   "tiles": [
+    "var",
+    "han"
+   ],
+   "post": "til andre jobsamtaler uden succes.",
+   "first": "Inden René fik sit job",
+   "clause": true,
+   "verb": "var",
+   "subj": "han",
+   "mid": []
+  },
+  {
+   "src": "2024s L1",
+   "s": "Da jeg var barn, gik jeg tit tur sammen med min bedstefar, der gik ved hjælp af sin elskede stok.",
+   "pre": "Da jeg var barn,",
+   "tiles": [
+    "gik",
+    "jeg",
+    "tit"
+   ],
+   "post": "tur sammen med min bedstefar, der gik ved hjælp af sin elskede stok.",
+   "first": "Da jeg var barn",
+   "clause": true,
+   "verb": "gik",
+   "subj": "jeg",
+   "mid": [
+    "tit"
+   ]
+  },
+  {
+   "src": "2024s L1",
+   "s": "Når man har tilmeldt sig som deltager til årets hærvejsmarch, modtager man en kvittering for sin betaling.",
+   "pre": "Når man har tilmeldt sig som deltager til årets hærvejsmarch,",
+   "tiles": [
+    "modtager",
+    "man"
+   ],
+   "post": "en kvittering for sin betaling.",
+   "first": "Når man har tilmeldt sig som deltager til årets hærvejsmarch",
+   "clause": true,
+   "verb": "modtager",
+   "subj": "man",
+   "mid": []
+  },
+  {
+   "src": "2024s L1",
+   "s": "Selvom der især spilles rytmisk musik, har vi også en gang imellem klassiske koncerter.",
+   "pre": "Selvom der især spilles rytmisk musik,",
+   "tiles": [
+    "har",
+    "vi",
+    "også"
+   ],
+   "post": "en gang imellem klassiske koncerter.",
+   "first": "Selvom der især spilles rytmisk musik",
+   "clause": true,
+   "verb": "har",
+   "subj": "vi",
+   "mid": [
+    "også"
+   ]
+  },
+  {
+   "src": "2020v L2",
+   "s": "Hvis efterspørgslen falder, kan de nemlig forholdsvis nemt komme af med medarbejderne igen.",
+   "pre": "Hvis efterspørgslen falder,",
+   "tiles": [
+    "kan",
+    "de",
+    "nemlig"
+   ],
+   "post": "forholdsvis nemt komme af med medarbejderne igen.",
+   "first": "Hvis efterspørgslen falder",
+   "clause": true,
+   "verb": "kan",
+   "subj": "de",
+   "mid": [
+    "nemlig"
+   ]
+  },
+  {
+   "src": "2017v L1",
+   "s": "Da han blev kønsmoden, begyndte han at blive aggressiv.",
+   "pre": "Da han blev kønsmoden,",
+   "tiles": [
+    "begyndte",
+    "han"
+   ],
+   "post": "at blive aggressiv.",
+   "first": "Da han blev kønsmoden",
+   "clause": true,
+   "verb": "begyndte",
+   "subj": "han",
+   "mid": []
   }
  ],
- "place": [
+ "clause": [
   {
    "src": "2013s L1",
    "s": "Princippet i det danske uddannelsessystem er nemlig, at man ikke skal gennemgå det samme to gange.",
+   "pre": "Princippet i det danske uddannelsessystem er nemlig, at",
+   "tiles": [
+    "man",
+    "ikke",
+    "skal"
+   ],
+   "post": "gennemgå det samme to gange.",
    "w": "ikke",
    "n": 1,
    "clause": "at",
@@ -849,6 +1359,13 @@
   {
    "src": "2013s L1",
    "s": "Hvis du siger nej tak til en praktikplads, fordi du ikke vil flytte, kan du ikke komme i skolepraktik.",
+   "pre": "Hvis du siger nej tak til en praktikplads, fordi",
+   "tiles": [
+    "du",
+    "ikke",
+    "vil"
+   ],
+   "post": "flytte, kan du ikke komme i skolepraktik.",
    "w": "ikke",
    "n": 1,
    "clause": "fordi",
@@ -857,6 +1374,13 @@
   {
    "src": "2013s L1",
    "s": "Hvis du siger nej tak til en praktikplads, fordi du ikke vil flytte, kan du ikke komme i skolepraktik.",
+   "pre": "Hvis du siger nej tak til en praktikplads, fordi du ikke vil flytte,",
+   "tiles": [
+    "kan",
+    "du",
+    "ikke"
+   ],
+   "post": "komme i skolepraktik.",
    "w": "ikke",
    "n": 2,
    "clause": "main",
@@ -865,6 +1389,13 @@
   {
    "src": "2013s L1",
    "s": "Vi er helt klar over, at det ikke er nok, at du får en uddannelse og udvikles.",
+   "pre": "Vi er helt klar over, at",
+   "tiles": [
+    "det",
+    "ikke",
+    "er"
+   ],
+   "post": "nok, at du får en uddannelse og udvikles.",
    "w": "ikke",
    "n": 1,
    "clause": "at",
@@ -873,6 +1404,13 @@
   {
    "src": "2013v L2",
    "s": "Hvis man kommer fra et hjem, hvor man ikke har tradition for uddannelse, så er man meget usikker over for den verden.",
+   "pre": "Hvis man kommer fra et hjem, hvor",
+   "tiles": [
+    "man",
+    "ikke",
+    "har"
+   ],
+   "post": "tradition for uddannelse, så er man meget usikker over for den verden.",
    "w": "ikke",
    "n": 1,
    "clause": "hvor",
@@ -881,6 +1419,13 @@
   {
    "src": "2015s L1",
    "s": "Du skal til optagelsesprøve, hvis du ikke har aflagt de prøver, der kræves for at blive optaget.",
+   "pre": "Du skal til optagelsesprøve, hvis",
+   "tiles": [
+    "du",
+    "ikke",
+    "har"
+   ],
+   "post": "aflagt de prøver, der kræves for at blive optaget.",
    "w": "ikke",
    "n": 1,
    "clause": "hvis",
@@ -889,6 +1434,13 @@
   {
    "src": "2015v L1",
    "s": "Det er en garanti for, at man kan færdiggøre sin uddannelse, selv om man ikke kan skaffe en praktikplads.",
+   "pre": "Det er en garanti for, at man kan færdiggøre sin uddannelse, selv om",
+   "tiles": [
+    "man",
+    "ikke",
+    "kan"
+   ],
+   "post": "skaffe en praktikplads.",
    "w": "ikke",
    "n": 1,
    "clause": "selv om",
@@ -897,6 +1449,13 @@
   {
    "src": "2016s L2",
    "s": "Alle laver deres lektier, også selvom de ikke vil have en boglig uddannelse.",
+   "pre": "Alle laver deres lektier, også selvom",
+   "tiles": [
+    "de",
+    "ikke",
+    "vil"
+   ],
+   "post": "have en boglig uddannelse.",
    "w": "ikke",
    "n": 1,
    "clause": "selvom",
@@ -905,6 +1464,13 @@
   {
    "src": "2016v L1",
    "s": "Der er hele tiden meget, der skal laves, og det er vigtigt, at man ikke kommer bagud.",
+   "pre": "Der er hele tiden meget, der skal laves, og det er vigtigt, at",
+   "tiles": [
+    "man",
+    "ikke",
+    "kommer"
+   ],
+   "post": "bagud.",
    "w": "ikke",
    "n": 1,
    "clause": "at",
@@ -913,6 +1479,13 @@
   {
    "src": "2017s L1",
    "s": "Det er afgørende, at du også har lyst til at fortælle om håndværket til museets mange gæster.",
+   "pre": "Det er afgørende, at",
+   "tiles": [
+    "du",
+    "også",
+    "har"
+   ],
+   "post": "lyst til at fortælle om håndværket til museets mange gæster.",
    "w": "også",
    "n": 1,
    "clause": "at",
@@ -921,6 +1494,13 @@
   {
    "src": "2017s L1",
    "s": "De var bevidste om, at de ikke ville bo i en møbeludstilling og holdt af, at tingene havde en historie.",
+   "pre": "De var bevidste om, at",
+   "tiles": [
+    "de",
+    "ikke",
+    "ville"
+   ],
+   "post": "bo i en møbeludstilling og holdt af, at tingene havde en historie.",
    "w": "ikke",
    "n": 1,
    "clause": "at",
@@ -929,6 +1509,13 @@
   {
    "src": "2017s L2",
    "s": "Det har vi, selvom vi stadig opfatter vores ferie som en periode, hvor vi slapper af uden at tænke på arbejde.",
+   "pre": "Det har vi, selvom",
+   "tiles": [
+    "vi",
+    "stadig",
+    "opfatter"
+   ],
+   "post": "vores ferie som en periode, hvor vi slapper af uden at tænke på arbejde.",
    "w": "stadig",
    "n": 1,
    "clause": "selvom",
@@ -937,6 +1524,13 @@
   {
    "src": "2017s L2",
    "s": "Vi ønsker et interessant arbejde, hvor vi også kan udvikle os personligt.",
+   "pre": "Vi ønsker et interessant arbejde, hvor",
+   "tiles": [
+    "vi",
+    "også",
+    "kan"
+   ],
+   "post": "udvikle os personligt.",
    "w": "også",
    "n": 1,
    "clause": "hvor",
@@ -945,6 +1539,13 @@
   {
    "src": "2017v L1",
    "s": "Husk, at I ikke må spise eller drikke i dyrenes områder.",
+   "pre": "Husk, at",
+   "tiles": [
+    "I",
+    "ikke",
+    "må"
+   ],
+   "post": "spise eller drikke i dyrenes områder.",
    "w": "ikke",
    "n": 1,
    "clause": "at",
@@ -953,6 +1554,13 @@
   {
    "src": "2018s L2",
    "s": "Et vigtigt argument er, at man ikke skal se på ansøgeres køn, men udelukkende på deres kvalifikationer.",
+   "pre": "Et vigtigt argument er, at",
+   "tiles": [
+    "man",
+    "ikke",
+    "skal"
+   ],
+   "post": "se på ansøgeres køn, men udelukkende på deres kvalifikationer.",
    "w": "ikke",
    "n": 1,
    "clause": "at",
@@ -961,6 +1569,13 @@
   {
    "src": "2019s L2",
    "s": "Der er lavet en del undersøgelser af, hvorfor nogle ikke færdiggør deres uddannelse.",
+   "pre": "Der er lavet en del undersøgelser af, hvorfor",
+   "tiles": [
+    "nogle",
+    "ikke",
+    "færdiggør"
+   ],
+   "post": "deres uddannelse.",
    "w": "ikke",
    "n": 1,
    "clause": "hvorfor",
@@ -969,6 +1584,13 @@
   {
    "src": "2020s L2",
    "s": "I undersøgelsen pegede de unge på flere afgørende årsager til, at de ikke ønskede at rejse ud.",
+   "pre": "I undersøgelsen pegede de unge på flere afgørende årsager til, at",
+   "tiles": [
+    "de",
+    "ikke",
+    "ønskede"
+   ],
+   "post": "at rejse ud.",
    "w": "ikke",
    "n": 1,
    "clause": "at",
@@ -977,6 +1599,13 @@
   {
    "src": "2020v L1",
    "s": "Vi spørger os selv, om vi stadig kan bruge kunsten til noget.",
+   "pre": "Vi spørger os selv, om",
+   "tiles": [
+    "vi",
+    "stadig",
+    "kan"
+   ],
+   "post": "bruge kunsten til noget.",
    "w": "stadig",
    "n": 1,
    "clause": "om",
@@ -985,6 +1614,13 @@
   {
    "src": "2020v L1",
    "s": "I efteråret gik jeg til guitarundervisning for begyndere i Kolding, hvor jeg også arbejder.",
+   "pre": "I efteråret gik jeg til guitarundervisning for begyndere i Kolding, hvor",
+   "tiles": [
+    "jeg",
+    "også",
+    "arbejder"
+   ],
+   "post": ".",
    "w": "også",
    "n": 1,
    "clause": "hvor",
@@ -993,6 +1629,13 @@
   {
    "src": "2020v L1",
    "s": "Den video sikrer, at vi altid kan få genopfrisket det, vi lærte på kurset.",
+   "pre": "Den video sikrer, at",
+   "tiles": [
+    "vi",
+    "altid",
+    "kan"
+   ],
+   "post": "få genopfrisket det, vi lærte på kurset.",
    "w": "altid",
    "n": 1,
    "clause": "at",
@@ -1001,6 +1644,13 @@
   {
    "src": "2021s L2",
    "s": "En anden grund til, at folk ikke gør noget, er, at det ikke er klart, hvem der egentlig har ansvaret for klimaforandringerne.",
+   "pre": "En anden grund til, at",
+   "tiles": [
+    "folk",
+    "ikke",
+    "gør"
+   ],
+   "post": "noget, er, at det ikke er klart, hvem der egentlig har ansvaret for klimaforandringerne.",
    "w": "ikke",
    "n": 1,
    "clause": "at",
@@ -1009,6 +1659,13 @@
   {
    "src": "2022s L1",
    "s": "Festivalen flyttede derfor til en naturskøn strandeng, hvor den også ligger i dag.",
+   "pre": "Festivalen flyttede derfor til en naturskøn strandeng, hvor",
+   "tiles": [
+    "den",
+    "også",
+    "ligger"
+   ],
+   "post": "i dag.",
    "w": "også",
    "n": 1,
    "clause": "hvor",
@@ -1017,6 +1674,13 @@
   {
    "src": "2023v L2",
    "s": "Det er blevet sagt, at man som ny leder hurtigt må lære at svømme, hvis man ikke vil synke til bunds.",
+   "pre": "Det er blevet sagt, at man som ny leder hurtigt må lære at svømme, hvis",
+   "tiles": [
+    "man",
+    "ikke",
+    "vil"
+   ],
+   "post": "synke til bunds.",
    "w": "ikke",
    "n": 1,
    "clause": "hvis",
@@ -1025,6 +1689,13 @@
   {
    "src": "2023v L2",
    "s": "Det kan alt sammen være svært at overskue, hvis man ikke er særlig it-interesseret.",
+   "pre": "Det kan alt sammen være svært at overskue, hvis",
+   "tiles": [
+    "man",
+    "ikke",
+    "er"
+   ],
+   "post": "særlig it-interesseret.",
    "w": "ikke",
    "n": 1,
    "clause": "hvis",
@@ -1033,6 +1704,13 @@
   {
    "src": "2024s L1",
    "s": "Sven har kun misset et enkelt år, hvor han ikke kunne vandre.",
+   "pre": "Sven har kun misset et enkelt år, hvor",
+   "tiles": [
+    "han",
+    "ikke",
+    "kunne"
+   ],
+   "post": "vandre.",
    "w": "ikke",
    "n": 1,
    "clause": "hvor",
@@ -1041,6 +1719,13 @@
   {
    "src": "2024s L2",
    "s": "Fælles for dem alle er, at de gerne vil gøre arbejdsugen mere fleksibel for de ansatte.",
+   "pre": "Fælles for dem alle er, at",
+   "tiles": [
+    "de",
+    "gerne",
+    "vil"
+   ],
+   "post": "gøre arbejdsugen mere fleksibel for de ansatte.",
    "w": "gerne",
    "n": 1,
    "clause": "at",
@@ -1049,6 +1734,13 @@
   {
    "src": "2024s L2",
    "s": "I andre betyder det, at man også arbejder færre timer om ugen.",
+   "pre": "I andre betyder det, at",
+   "tiles": [
+    "man",
+    "også",
+    "arbejder"
+   ],
+   "post": "færre timer om ugen.",
    "w": "også",
    "n": 1,
    "clause": "at",
@@ -1057,6 +1749,13 @@
   {
    "src": "2013s L1",
    "s": "Du kan ikke bare selv vælge uddannelsen.",
+   "pre": "",
+   "tiles": [
+    "Du",
+    "kan",
+    "ikke"
+   ],
+   "post": "bare selv vælge uddannelsen.",
    "w": "ikke",
    "n": 1,
    "clause": "main",
@@ -1065,6 +1764,13 @@
   {
    "src": "2013s L1",
    "s": "Du er altid velkommen til at kontakte skolen, hvis du har spørgsmål.",
+   "pre": "",
+   "tiles": [
+    "Du",
+    "er",
+    "altid"
+   ],
+   "post": "velkommen til at kontakte skolen, hvis du har spørgsmål.",
    "w": "altid",
    "n": 1,
    "clause": "main",
@@ -1073,6 +1779,13 @@
   {
    "src": "2013s L1",
    "s": "Vi hjælper gerne med at etablere kontakt til virksomheder.",
+   "pre": "",
+   "tiles": [
+    "Vi",
+    "hjælper",
+    "gerne"
+   ],
+   "post": "med at etablere kontakt til virksomheder.",
    "w": "gerne",
    "n": 1,
    "clause": "main",
@@ -1081,6 +1794,13 @@
   {
    "src": "2013v L2",
    "s": "Jeg kunne ikke sætte ord på, hvad det var.",
+   "pre": "",
+   "tiles": [
+    "Jeg",
+    "kunne",
+    "ikke"
+   ],
+   "post": "sætte ord på, hvad det var.",
    "w": "ikke",
    "n": 1,
    "clause": "main",
@@ -1089,6 +1809,13 @@
   {
    "src": "2023v L2",
    "s": "De forstod ikke altid, hvor jeg ville hen med mine ideer.",
+   "pre": "",
+   "tiles": [
+    "De",
+    "forstod",
+    "ikke"
+   ],
+   "post": "altid, hvor jeg ville hen med mine ideer.",
    "w": "ikke",
    "n": 1,
    "clause": "main",
@@ -1097,6 +1824,13 @@
   {
    "src": "2024s L1",
    "s": "Jeg møder stadig nogle af mine gamle fodboldkammerater fra dengang, jeg selv spillede.",
+   "pre": "",
+   "tiles": [
+    "Jeg",
+    "møder",
+    "stadig"
+   ],
+   "post": "nogle af mine gamle fodboldkammerater fra dengang, jeg selv spillede.",
    "w": "stadig",
    "n": 1,
    "clause": "main",
@@ -1105,6 +1839,13 @@
   {
    "src": "2022s L1",
    "s": "Vi besøgte også skolen, og jeg tænkte, at Fejø var et helt vidunderligt sted.",
+   "pre": "",
+   "tiles": [
+    "Vi",
+    "besøgte",
+    "også"
+   ],
+   "post": "skolen, og jeg tænkte, at Fejø var et helt vidunderligt sted.",
    "w": "også",
    "n": 1,
    "clause": "main",
@@ -1113,6 +1854,13 @@
   {
    "src": "2023v L2",
    "s": "De laver ikke andet, og de er gode til det, de gør.",
+   "pre": "",
+   "tiles": [
+    "De",
+    "laver",
+    "ikke"
+   ],
+   "post": "andet, og de er gode til det, de gør.",
    "w": "ikke",
    "n": 1,
    "clause": "main",
@@ -1121,6 +1869,13 @@
   {
    "src": "2022v L2",
    "s": "Man behøver ikke at gå på kompromis med noget.",
+   "pre": "",
+   "tiles": [
+    "Man",
+    "behøver",
+    "ikke"
+   ],
+   "post": "at gå på kompromis med noget.",
    "w": "ikke",
    "n": 1,
    "clause": "main",
@@ -1129,6 +1884,13 @@
   {
    "src": "2019s L2",
    "s": "Dog støtter han ikke med penge, men med tid.",
+   "pre": "Dog",
+   "tiles": [
+    "støtter",
+    "han",
+    "ikke"
+   ],
+   "post": "med penge, men med tid.",
    "w": "ikke",
    "n": 1,
    "clause": "main",
@@ -1137,6 +1899,13 @@
   {
    "src": "2017s L2",
    "s": "I dag er Gert ikke længere projektleder.",
+   "pre": "I dag",
+   "tiles": [
+    "er",
+    "Gert",
+    "ikke"
+   ],
+   "post": "længere projektleder.",
    "w": "ikke",
    "n": 1,
    "clause": "main",
@@ -1145,6 +1914,13 @@
   {
    "src": "2014s W",
    "s": "Jeg ved ikke, om jeg skal blande mig i det, for han er jo voksen.",
+   "pre": "",
+   "tiles": [
+    "Jeg",
+    "ved",
+    "ikke"
+   ],
+   "post": ", om jeg skal blande mig i det, for han er jo voksen.",
    "w": "ikke",
    "n": 1,
    "clause": "main",
@@ -1153,6 +1929,13 @@
   {
    "src": "2013v W",
    "s": "Din ven er ikke sikker på, om det er en god idé.",
+   "pre": "Din",
+   "tiles": [
+    "ven",
+    "er",
+    "ikke"
+   ],
+   "post": "sikker på, om det er en god idé.",
    "w": "ikke",
    "n": 1,
    "clause": "main",
@@ -1161,6 +1944,13 @@
   {
    "src": "2013v W",
    "s": "Jeg har jo aldrig prøvet at bo uden for Danmark.",
+   "pre": "Jeg",
+   "tiles": [
+    "har",
+    "jo",
+    "aldrig"
+   ],
+   "post": "prøvet at bo uden for Danmark.",
    "w": "aldrig",
    "n": 1,
    "clause": "main",
@@ -1169,6 +1959,13 @@
   {
    "src": "2013s W",
    "s": "Men jeg må også lige høre, hvordan det går med dit kursus.",
+   "pre": "Men",
+   "tiles": [
+    "jeg",
+    "må",
+    "også"
+   ],
+   "post": "lige høre, hvordan det går med dit kursus.",
    "w": "også",
    "n": 1,
    "clause": "main",
@@ -1177,6 +1974,13 @@
   {
    "src": "2013v W",
    "s": "Tror du ikke, hun er for ung?",
+   "pre": "",
+   "tiles": [
+    "Tror",
+    "du",
+    "ikke"
+   ],
+   "post": ", hun er for ung?",
    "w": "ikke",
    "n": 1,
    "clause": "main",
@@ -1185,6 +1989,13 @@
   {
    "src": "2013s W",
    "s": "Jeg kan ikke rigtig finde ud af, hvad der sker med Marc.",
+   "pre": "",
+   "tiles": [
+    "Jeg",
+    "kan",
+    "ikke"
+   ],
+   "post": "rigtig finde ud af, hvad der sker med Marc.",
    "w": "ikke",
    "n": 1,
    "clause": "main",
@@ -1193,10 +2004,1365 @@
   {
    "src": "2018s W",
    "s": "Hun overvejer derfor at leje et værelse ud for at få råd til at blive boende.",
+   "pre": "",
+   "tiles": [
+    "Hun",
+    "overvejer",
+    "derfor"
+   ],
+   "post": "at leje et værelse ud for at få råd til at blive boende.",
    "w": "derfor",
    "n": 1,
    "clause": "main",
    "verb": "overvejer"
+  }
+ ],
+ "adj": [
+  {
+   "src": "2018v L2",
+   "s": "Det var jo et stort spring for hele familien at flytte.",
+   "at": 14,
+   "w": "stort",
+   "opts": [
+    "stor",
+    "stort",
+    "store"
+   ],
+   "rule": "et",
+   "args": [
+    "et stort spring"
+   ]
+  },
+  {
+   "src": "2018v L2",
+   "s": "For eksempel skal børnene begynde i en ny skole, og ægtefællen skal finde et nyt job.",
+   "at": 77,
+   "w": "nyt",
+   "opts": [
+    "ny",
+    "nyt",
+    "nye"
+   ],
+   "rule": "et",
+   "args": [
+    "et nyt job"
+   ]
+  },
+  {
+   "src": "2018v L2",
+   "s": "Så kan der nemlig blive behov for ledere, kantine og reception både i den gamle og den nye afdeling.",
+   "at": 87,
+   "w": "nye",
+   "opts": [
+    "ny",
+    "nyt",
+    "nye"
+   ],
+   "rule": "def",
+   "args": [
+    "den nye afdeling"
+   ]
+  },
+  {
+   "src": "2018s L2",
+   "s": "Men det er svært at finde en god og billig bolig.",
+   "at": 36,
+   "w": "billig",
+   "opts": [
+    "billig",
+    "billigt",
+    "billige"
+   ],
+   "rule": "en",
+   "args": [
+    "en god og billig bolig"
+   ]
+  },
+  {
+   "src": "2019s L1",
+   "s": "På de store festivaler er budgettet til at betale de optrædende musikere på mange millioner kroner.",
+   "at": 6,
+   "w": "store",
+   "opts": [
+    "stor",
+    "stort",
+    "store"
+   ],
+   "rule": "def",
+   "args": [
+    "de store festivaler"
+   ]
+  },
+  {
+   "src": "2019s L1",
+   "s": "Langt de fleste musikfestivaler er store, årlige begivenheder.",
+   "at": 35,
+   "w": "store",
+   "opts": [
+    "stor",
+    "stort",
+    "store"
+   ],
+   "rule": "pl",
+   "args": [
+    "store, årlige begivenheder"
+   ]
+  },
+  {
+   "src": "2019s L2",
+   "s": "Hun donerer et fast beløb hver måned til Red Barnet.",
+   "at": 15,
+   "w": "fast",
+   "opts": [
+    "fast",
+    "faste"
+   ],
+   "rule": "ett",
+   "args": [
+    "et fast beløb"
+   ]
+  },
+  {
+   "src": "2019s L2",
+   "s": "Han synes, den personlige indsats er vigtig.",
+   "at": 37,
+   "w": "vigtig",
+   "opts": [
+    "vigtig",
+    "vigtigt",
+    "vigtige"
+   ],
+   "rule": "pred_en",
+   "args": [
+    "indsatsen er vigtig"
+   ]
+  },
+  {
+   "src": "2019s L2",
+   "s": "Han synes, den personlige indsats er vigtig.",
+   "at": 15,
+   "w": "personlige",
+   "opts": [
+    "personlig",
+    "personligt",
+    "personlige"
+   ],
+   "rule": "def",
+   "args": [
+    "den personlige indsats"
+   ]
+  },
+  {
+   "src": "2019s L2",
+   "s": "Hun var glad for at komme ind på studiet og fik hurtigt et godt studiejob i en boghandel.",
+   "at": 59,
+   "w": "godt",
+   "opts": [
+    "god",
+    "godt",
+    "gode"
+   ],
+   "rule": "et",
+   "args": [
+    "et godt studiejob"
+   ]
+  },
+  {
+   "src": "2019s L2",
+   "s": "I nyere tid har de fleste organisationer også taget de sociale medier i brug.",
+   "at": 55,
+   "w": "sociale",
+   "opts": [
+    "social",
+    "socialt",
+    "sociale"
+   ],
+   "rule": "def",
+   "args": [
+    "de sociale medier"
+   ]
+  },
+  {
+   "src": "2018v L1",
+   "s": "Det er vigtigt at søge om opholdstilladelse i god tid.",
+   "at": 46,
+   "w": "god",
+   "opts": [
+    "god",
+    "godt",
+    "gode"
+   ],
+   "rule": "en",
+   "args": [
+    "i god tid (en tid)"
+   ]
+  },
+  {
+   "src": "2018v L1",
+   "s": "På et langt ophold vælger man et par hovedfag og nogle sidefag.",
+   "at": 6,
+   "w": "langt",
+   "opts": [
+    "lang",
+    "langt",
+    "lange"
+   ],
+   "rule": "et",
+   "args": [
+    "et langt ophold"
+   ]
+  },
+  {
+   "src": "2018v L2",
+   "s": "Det betyder nemlig mere liv i kommunen og bedre forretningsmuligheder for de lokale virksomheder.",
+   "at": 77,
+   "w": "lokale",
+   "opts": [
+    "lokal",
+    "lokalt",
+    "lokale"
+   ],
+   "rule": "def",
+   "args": [
+    "de lokale virksomheder"
+   ]
+  },
+  {
+   "src": "2018v L2",
+   "s": "Vi skulle forlade vores kendte dagligdag og ville komme langt væk fra vores venner.",
+   "at": 24,
+   "w": "kendte",
+   "opts": [
+    "kendt",
+    "kendte"
+   ],
+   "rule": "poss",
+   "args": [
+    "vores kendte dagligdag"
+   ]
+  },
+  {
+   "src": "2018s L1",
+   "s": "Han er kendt for sin løse, hvide dragt, sit hvide ansigt, sin røde mund og den aflange hat.",
+   "at": 44,
+   "w": "hvide",
+   "opts": [
+    "hvid",
+    "hvidt",
+    "hvide"
+   ],
+   "rule": "poss",
+   "args": [
+    "sit hvide ansigt"
+   ]
+  },
+  {
+   "src": "2018s L2",
+   "s": "Det er også velkendt, at et toplederjob kræver et stort engagement og mange arbejdstimer.",
+   "at": 50,
+   "w": "stort",
+   "opts": [
+    "stor",
+    "stort",
+    "store"
+   ],
+   "rule": "et",
+   "args": [
+    "et stort engagement"
+   ]
+  },
+  {
+   "src": "2018v L1",
+   "s": "Det var godt at bruge sin krop så meget hver dag!",
+   "at": 8,
+   "w": "godt",
+   "opts": [
+    "god",
+    "godt",
+    "gode"
+   ],
+   "rule": "det",
+   "args": [
+    "Det var godt at …"
+   ]
+  },
+  {
+   "src": "2018v L2",
+   "s": "Det er dejligt at se ham udvikle sig i disse omgivelser.",
+   "at": 7,
+   "w": "dejligt",
+   "opts": [
+    "dejlig",
+    "dejligt",
+    "dejlige"
+   ],
+   "rule": "det",
+   "args": [
+    "Det er dejligt at …"
+   ]
+  },
+  {
+   "src": "2018s L2",
+   "s": "De fleste er klar over, at et toplederjob er godt lønnet og forbundet med høj status.",
+   "at": 74,
+   "w": "høj",
+   "opts": [
+    "høj",
+    "højt",
+    "høje"
+   ],
+   "rule": "en",
+   "args": [
+    "høj status (en status)"
+   ]
+  },
+  {
+   "src": "2018s L2",
+   "s": "Det er klart, at det er noget, der er brug for i virksomhederne.",
+   "at": 7,
+   "w": "klart",
+   "opts": [
+    "klar",
+    "klart",
+    "klare"
+   ],
+   "rule": "det",
+   "args": [
+    "Det er klart, at …"
+   ]
+  },
+  {
+   "src": "2019s L1",
+   "s": "Man kan tjekke ind ved et særligt indtjekningssted ved området.",
+   "at": 26,
+   "w": "særligt",
+   "opts": [
+    "særlig",
+    "særligt",
+    "særlige"
+   ],
+   "rule": "et",
+   "args": [
+    "et særligt indtjekningssted"
+   ]
+  },
+  {
+   "src": "2018s L1",
+   "s": "Vi er glade for at komme på arbejde, og vi har det sjovt sammen med børnene og alle vores dejlige kolleger.",
+   "at": 6,
+   "w": "glade",
+   "opts": [
+    "glad",
+    "glade"
+   ],
+   "rule": "pred_pl",
+   "args": [
+    "vi er glade"
+   ]
+  },
+  {
+   "src": "2018s L1",
+   "s": "Vi er glade for at komme på arbejde, og vi har det sjovt sammen med børnene og alle vores dejlige kolleger.",
+   "at": 90,
+   "w": "dejlige",
+   "opts": [
+    "dejlig",
+    "dejligt",
+    "dejlige"
+   ],
+   "rule": "poss",
+   "args": [
+    "vores dejlige kolleger"
+   ]
+  },
+  {
+   "src": "2021s L2",
+   "s": "Der er derfor stor politisk og folkelig interesse for at nedbringe udledningen af CO2 i atmosfæren.",
+   "at": 14,
+   "w": "stor",
+   "opts": [
+    "stor",
+    "stort",
+    "store"
+   ],
+   "rule": "en",
+   "args": [
+    "stor interesse (en interesse)"
+   ]
+  }
+ ],
+ "pron": [
+  {
+   "src": "2014s L2",
+   "s": "Hun elsker sit arbejde og vil, hvis helbredet holder, gerne fortsætte, til hun er 70.",
+   "at": 11,
+   "w": "sit",
+   "opts": [
+    "sin",
+    "sit",
+    "sine",
+    "hendes"
+   ],
+   "rule": "own",
+   "args": [
+    "hun",
+    "et arbejde"
+   ]
+  },
+  {
+   "src": "2014v L2",
+   "s": "Kolesteroltallet falder også, og han får stabiliseret sit blodsukker.",
+   "at": 54,
+   "w": "sit",
+   "opts": [
+    "sin",
+    "sit",
+    "sine",
+    "hans"
+   ],
+   "rule": "own",
+   "args": [
+    "han",
+    "et blodsukker"
+   ]
+  },
+  {
+   "src": "2017v L2",
+   "s": "Gennem GoMore kan man leje en bil eller udleje sin egen bil.",
+   "at": 47,
+   "w": "sin",
+   "opts": [
+    "sin",
+    "sit",
+    "sine",
+    "deres"
+   ],
+   "rule": "own",
+   "args": [
+    "man",
+    "en bil"
+   ]
+  },
+  {
+   "src": "2018s L2",
+   "s": "Man skal kunne markere sig og få sine synspunkter igennem.",
+   "at": 33,
+   "w": "sine",
+   "opts": [
+    "sin",
+    "sit",
+    "sine",
+    "deres"
+   ],
+   "rule": "own",
+   "args": [
+    "man",
+    "synspunkter (flertal)"
+   ]
+  },
+  {
+   "src": "2019v L2",
+   "s": "Han går faktisk til dansk sammen med én af sine kolleger, og de taler nogle gange dansk sammen i frokostpausen.",
+   "at": 43,
+   "w": "sine",
+   "opts": [
+    "sin",
+    "sine",
+    "hans"
+   ],
+   "rule": "own",
+   "args": [
+    "han",
+    "kolleger (flertal)"
+   ]
+  },
+  {
+   "src": "2021s L2",
+   "s": "Marianne Andresen står i køkkenet sammen med sin yngste søn og snitter grøntsager.",
+   "at": 45,
+   "w": "sin",
+   "opts": [
+    "sin",
+    "sit",
+    "hendes"
+   ],
+   "rule": "own",
+   "args": [
+    "Marianne Andresen",
+    "en søn"
+   ]
+  },
+  {
+   "src": "2021s W",
+   "s": "Lise bor i et hus i Odense sammen med sin mand.",
+   "at": 38,
+   "w": "sin",
+   "opts": [
+    "sin",
+    "sit",
+    "hendes"
+   ],
+   "rule": "own",
+   "args": [
+    "Lise",
+    "en mand"
+   ]
+  },
+  {
+   "src": "2023s L1",
+   "s": "Peter takkede derfor ja til et job i Miljøstyrelsen og flyttede med sin afdeling til Augustenborg.",
+   "at": 68,
+   "w": "sin",
+   "opts": [
+    "sin",
+    "sit",
+    "hans"
+   ],
+   "rule": "own",
+   "args": [
+    "Peter",
+    "en afdeling"
+   ]
+  },
+  {
+   "src": "2024s L1",
+   "s": "Når man har tilmeldt sig som deltager til årets hærvejsmarch, modtager man en kvittering for sin betaling.",
+   "at": 93,
+   "w": "sin",
+   "opts": [
+    "sin",
+    "sit",
+    "sine"
+   ],
+   "rule": "own",
+   "args": [
+    "man",
+    "en betaling"
+   ]
+  },
+  {
+   "src": "2019v L2",
+   "s": "Selvom hans arbejdssprog er engelsk, vil Andrei gerne lære dansk.",
+   "at": 7,
+   "w": "hans",
+   "opts": [
+    "sin",
+    "sit",
+    "hans"
+   ],
+   "rule": "subj",
+   "args": [
+    "hans arbejdssprog"
+   ]
+  },
+  {
+   "src": "2021v L1",
+   "s": "Hans Christian Andersen blev født i Odense, og hans livlige fantasi inspirerer fortsat byen.",
+   "at": 47,
+   "w": "hans",
+   "opts": [
+    "sin",
+    "hans"
+   ],
+   "rule": "subj",
+   "args": [
+    "hans livlige fantasi"
+   ]
+  },
+  {
+   "src": "2021v L2",
+   "s": "Ida går nu i 3.g i gymnasiet, og hendes sygemelding skete på andet år, hvor mange gymnasieelever føler sig særligt stressede.",
+   "at": 33,
+   "w": "hendes",
+   "opts": [
+    "sin",
+    "hendes"
+   ],
+   "rule": "subj",
+   "args": [
+    "hendes sygemelding"
+   ]
+  },
+  {
+   "src": "2021s L2",
+   "s": "For fire år siden besluttede Marianne og hendes mand, Torben Bruun, at lægge deres livsstil helt om.",
+   "at": 41,
+   "w": "hendes",
+   "opts": [
+    "sin",
+    "hendes"
+   ],
+   "rule": "subj",
+   "args": [
+    "Marianne og hendes mand"
+   ]
+  },
+  {
+   "src": "2021s L2",
+   "s": "For fire år siden besluttede Marianne og hendes mand, Torben Bruun, at lægge deres livsstil helt om.",
+   "at": 77,
+   "w": "deres",
+   "opts": [
+    "sin",
+    "sine",
+    "deres"
+   ],
+   "rule": "plural",
+   "args": [
+    "Marianne og hendes mand"
+   ]
+  },
+  {
+   "src": "2022s L2",
+   "s": "Mange nyuddannede går arbejdsløse længe, inden de får deres første rigtige fuldtidsarbejde.",
+   "at": 54,
+   "w": "deres",
+   "opts": [
+    "sit",
+    "sine",
+    "deres"
+   ],
+   "rule": "plural",
+   "args": [
+    "de"
+   ]
+  },
+  {
+   "src": "2017s L1",
+   "s": "Især drengene hakkede og borede deres knallerter i håb om at kunne imponere hinanden – og pigerne.",
+   "at": 32,
+   "w": "deres",
+   "opts": [
+    "sine",
+    "deres"
+   ],
+   "rule": "plural",
+   "args": [
+    "drengene"
+   ]
+  },
+  {
+   "src": "2023v L2",
+   "s": "Under sin sygemelding fik hun en ny leder, der var mere tydelig omkring hendes arbejdsopgaver og ansvarsområder.",
+   "at": 6,
+   "w": "sin",
+   "opts": [
+    "sin",
+    "hendes"
+   ],
+   "rule": "own",
+   "args": [
+    "hun",
+    "en sygemelding"
+   ]
+  },
+  {
+   "src": "2023v L2",
+   "s": "Under sin sygemelding fik hun en ny leder, der var mere tydelig omkring hendes arbejdsopgaver og ansvarsområder.",
+   "at": 72,
+   "w": "hendes",
+   "opts": [
+    "sine",
+    "hendes"
+   ],
+   "rule": "other",
+   "args": [
+    "hun",
+    "der (= lederen)"
+   ]
+  },
+  {
+   "src": "2019s L2",
+   "s": "Efter samtaler med en studievejleder er der sket flere ændringer i hendes liv, så hun nu har mod på at fortsætte.",
+   "at": 67,
+   "w": "hendes",
+   "opts": [
+    "sit",
+    "hendes"
+   ],
+   "rule": "other",
+   "args": [
+    "Anne",
+    "flere ændringer"
+   ]
+  },
+  {
+   "src": "2018s L2",
+   "s": "Det gør hun, selvom det har vist sig, at det betyder meget for hendes karrieremuligheder efter barselsorloven.",
+   "at": 63,
+   "w": "hendes",
+   "opts": [
+    "sine",
+    "hendes"
+   ],
+   "rule": "other",
+   "args": [
+    "hun",
+    "det"
+   ]
+  },
+  {
+   "src": "2018s L2",
+   "s": "Tine er på barsel med deres seks måneder gamle datter Sofie, men om en uge er det Peters tur.",
+   "at": 22,
+   "w": "deres",
+   "opts": [
+    "sin",
+    "hendes",
+    "deres"
+   ],
+   "rule": "both",
+   "args": [
+    "Tine og Peter"
+   ]
+  }
+ ],
+ "prep": [
+  {
+   "src": "2017s L2",
+   "s": "Nye hundeejere opdager også, at det kan være et problem at holde ferie, fordi hunden har brug for pasning.",
+   "at": 94,
+   "w": "for",
+   "opts": [
+    "for",
+    "til",
+    "på",
+    "om"
+   ],
+   "rule": "prep",
+   "args": [
+    "have brug for noget"
+   ]
+  },
+  {
+   "src": "2017v L1",
+   "s": "Jeg har altid været lidt bange for hunde, og mange folk kan ikke holde dem i ro.",
+   "at": 31,
+   "w": "for",
+   "opts": [
+    "for",
+    "til",
+    "på",
+    "om"
+   ],
+   "rule": "prep",
+   "args": [
+    "være bange for noget"
+   ]
+  },
+  {
+   "src": "2017v L1",
+   "s": "Vi er vant til at komme i København Zoo, og forventningerne til Aalborg Zoo var ikke så høje.",
+   "at": 11,
+   "w": "til",
+   "opts": [
+    "til",
+    "for",
+    "på",
+    "i"
+   ],
+   "rule": "prep",
+   "args": [
+    "være vant til noget"
+   ]
+  },
+  {
+   "src": "2018v L1",
+   "s": "Jeg var lidt i tvivl om, hvilket studie jeg skulle vælge.",
+   "at": 21,
+   "w": "om",
+   "opts": [
+    "om",
+    "på",
+    "for",
+    "over"
+   ],
+   "rule": "prep",
+   "args": [
+    "være i tvivl om noget"
+   ]
+  },
+  {
+   "src": "2019v L1",
+   "s": "Personalet er rigtig gode til at hjælpe og tage hensyn til alle os nybagte mødre og fædre.",
+   "at": 55,
+   "w": "til",
+   "opts": [
+    "til",
+    "for",
+    "på",
+    "i"
+   ],
+   "rule": "prep",
+   "args": [
+    "tage hensyn til nogen"
+   ]
+  },
+  {
+   "src": "2019v L1",
+   "s": "Personalet er rigtig gode til at hjælpe og tage hensyn til alle os nybagte mødre og fædre.",
+   "at": 26,
+   "w": "til",
+   "opts": [
+    "til",
+    "for",
+    "på",
+    "i"
+   ],
+   "rule": "prep",
+   "args": [
+    "være god til noget"
+   ]
+  },
+  {
+   "src": "2019s L1",
+   "s": "Desuden er festivalen kendt for sin grønne profil.",
+   "at": 28,
+   "w": "for",
+   "opts": [
+    "for",
+    "til",
+    "på",
+    "om"
+   ],
+   "rule": "prep",
+   "args": [
+    "være kendt for noget"
+   ]
+  },
+  {
+   "src": "2018v L2",
+   "s": "Det betyder også, at de nu uden forstyrrende flytteplaner kan glæde sig til den kommende familieforøgelse.",
+   "at": 72,
+   "w": "til",
+   "opts": [
+    "til",
+    "for",
+    "på",
+    "i"
+   ],
+   "rule": "prep",
+   "args": [
+    "glæde sig til noget"
+   ]
+  },
+  {
+   "src": "2018v L2",
+   "s": "Mange ansatte er også bekymrede for, hvordan en flytning vil påvirke deres arbejdsplads.",
+   "at": 32,
+   "w": "for",
+   "opts": [
+    "for",
+    "til",
+    "på",
+    "om"
+   ],
+   "rule": "prep",
+   "args": [
+    "være bekymret for noget"
+   ]
+  },
+  {
+   "src": "2018v L2",
+   "s": "Økonomien i udflytningerne afhænger af, om de udflyttede statslige institutioner flytter helt væk fra hovedstaden.",
+   "at": 36,
+   "w": "af",
+   "opts": [
+    "af",
+    "for",
+    "på",
+    "med"
+   ],
+   "rule": "prep",
+   "args": [
+    "afhænge af noget"
+   ]
+  },
+  {
+   "src": "2018v L1",
+   "s": "Uddannelsen består af to moduler, der samlet varer et år.",
+   "at": 19,
+   "w": "af",
+   "opts": [
+    "af",
+    "for",
+    "på",
+    "med"
+   ],
+   "rule": "prep",
+   "args": [
+    "bestå af noget"
+   ]
+  },
+  {
+   "src": "2019s L2",
+   "s": "Med alle ændringerne har Anne Puggaard igen fået mod på at studere, og hun trives i dag på matematikstudiet.",
+   "at": 53,
+   "w": "på",
+   "opts": [
+    "på",
+    "til",
+    "i",
+    "for"
+   ],
+   "rule": "prep",
+   "args": [
+    "få mod på noget"
+   ]
+  },
+  {
+   "src": "2019s W",
+   "s": "Jeg er nemlig så træt af at sidde i kø på motorvejen hver dag – og måske kunne jeg undvære bilen.",
+   "at": 22,
+   "w": "af",
+   "opts": [
+    "af",
+    "for",
+    "på",
+    "med"
+   ],
+   "rule": "prep",
+   "args": [
+    "være træt af noget"
+   ]
+  },
+  {
+   "src": "2021s L2",
+   "s": "Flere og flere familier vælger at tage mere hensyn til miljøet, end de har gjort før.",
+   "at": 51,
+   "w": "til",
+   "opts": [
+    "til",
+    "for",
+    "på",
+    "i"
+   ],
+   "rule": "prep",
+   "args": [
+    "tage hensyn til noget"
+   ]
+  },
+  {
+   "src": "2021s L2",
+   "s": "Der er derfor stor politisk og folkelig interesse for at nedbringe udledningen af CO2 i atmosfæren.",
+   "at": 50,
+   "w": "for",
+   "opts": [
+    "for",
+    "til",
+    "på",
+    "om"
+   ],
+   "rule": "prep",
+   "args": [
+    "interesse for noget"
+   ]
+  },
+  {
+   "src": "2017s L1",
+   "s": "Forældrene gik op i gamle møbler, og de genbrugte, reparerede og afsyrede.",
+   "at": 18,
+   "w": "i",
+   "opts": [
+    "i",
+    "på",
+    "til",
+    "med"
+   ],
+   "rule": "prep",
+   "args": [
+    "gå op i noget"
+   ]
+  },
+  {
+   "src": "2017s L2",
+   "s": "Han peger på, at der er sket en ændring i den måde, vi opfatter begrebet stress på.",
+   "at": 10,
+   "w": "på",
+   "opts": [
+    "på",
+    "til",
+    "i",
+    "for"
+   ],
+   "rule": "prep",
+   "args": [
+    "pege på noget"
+   ]
+  },
+  {
+   "src": "2018v L1",
+   "s": "Arbejdsløse på kontanthjælp kan søge om at komme på højskole som led i en handlingsplan eller aktiveringsplan.",
+   "at": 37,
+   "w": "om",
+   "opts": [
+    "om",
+    "på",
+    "for",
+    "over"
+   ],
+   "rule": "prep",
+   "args": [
+    "søge om noget"
+   ]
+  },
+  {
+   "src": "2017v L1",
+   "s": "Jeg har årskort til Aalborg Zoo og er rigtig glad for at komme der.",
+   "at": 50,
+   "w": "for",
+   "opts": [
+    "for",
+    "til",
+    "på",
+    "om"
+   ],
+   "rule": "prep",
+   "args": [
+    "være glad for noget"
+   ]
+  },
+  {
+   "src": "2018s L1",
+   "s": "Vi foretrækker ansøgere, der har lyst til at arbejde i alle sæsoner.",
+   "at": 38,
+   "w": "til",
+   "opts": [
+    "til",
+    "for",
+    "på",
+    "i"
+   ],
+   "rule": "prep",
+   "args": [
+    "have lyst til noget"
+   ]
+  },
+  {
+   "src": "2017v L1",
+   "s": "Man skal dog være opmærksom på, at afstandene er store: Der er 23 km veje i safariparken!",
+   "at": 28,
+   "w": "på",
+   "opts": [
+    "på",
+    "til",
+    "i",
+    "for"
+   ],
+   "rule": "prep",
+   "args": [
+    "være opmærksom på noget"
+   ]
+  },
+  {
+   "src": "2018s L2",
+   "s": "De fleste er klar over, at et toplederjob er godt lønnet og forbundet med høj status.",
+   "at": 18,
+   "w": "over",
+   "opts": [
+    "over",
+    "om",
+    "på",
+    "for"
+   ],
+   "rule": "prep",
+   "args": [
+    "være klar over noget"
+   ]
+  },
+  {
+   "src": "2020v L2",
+   "s": "Det danske arbejdsmarked er også kendetegnet ved en relativt høj grad af økonomisk sikkerhed for medarbejderne.",
+   "at": 45,
+   "w": "ved",
+   "opts": [
+    "ved",
+    "af",
+    "med",
+    "på"
+   ],
+   "rule": "prep",
+   "args": [
+    "være kendetegnet ved noget"
+   ]
+  },
+  {
+   "src": "2020s L1",
+   "s": "Oplevelsescentret byder på en unik og supermoderne digital sanseoplevelse, der handler om vikingernes liv og levned.",
+   "at": 87,
+   "w": "om",
+   "opts": [
+    "om",
+    "på",
+    "for",
+    "over"
+   ],
+   "rule": "prep",
+   "args": [
+    "handle om noget"
+   ]
+  },
+  {
+   "src": "2019v L2",
+   "s": "Helene Baggers firma i Roskilde var i gang med at udvikle robotteknologi til sundhedsområdet.",
+   "at": 43,
+   "w": "med",
+   "opts": [
+    "med",
+    "på",
+    "af",
+    "i"
+   ],
+   "rule": "prep",
+   "args": [
+    "være i gang med noget"
+   ]
+  },
+  {
+   "src": "2019s L2",
+   "s": "Vi er også vant til, at der er et velfærdssamfund, der tager sig af folk.",
+   "at": 65,
+   "w": "af",
+   "opts": [
+    "af",
+    "for",
+    "på",
+    "med"
+   ],
+   "rule": "prep",
+   "args": [
+    "tage sig af nogen"
+   ]
+  }
+ ],
+ "small": [
+  {
+   "src": "2017v L1",
+   "s": "Da han blev kønsmoden, begyndte han at blive aggressiv.",
+   "at": 0,
+   "w": "Da",
+   "opts": [
+    "Da",
+    "Når"
+   ],
+   "rule": "da_once",
+   "args": []
+  },
+  {
+   "src": "2017s L2",
+   "s": "Han slog sig ikke alvorligt, da han faldt, men han satte sig lettere chokeret på en stol.",
+   "at": 29,
+   "w": "da",
+   "opts": [
+    "da",
+    "når"
+   ],
+   "rule": "da_once",
+   "args": []
+  },
+  {
+   "src": "2024s L1",
+   "s": "Da jeg var barn, gik jeg tit tur sammen med min bedstefar, der gik ved hjælp af sin elskede stok.",
+   "at": 0,
+   "w": "Da",
+   "opts": [
+    "Da",
+    "Når"
+   ],
+   "rule": "da_once",
+   "args": []
+  },
+  {
+   "src": "2013s L1",
+   "s": "Når du er i praktik og får løn, skal du selv dække dine daglige transportudgifter til og fra arbejde.",
+   "at": 0,
+   "w": "Når",
+   "opts": [
+    "Da",
+    "Når"
+   ],
+   "rule": "naar_now",
+   "args": []
+  },
+  {
+   "src": "2018s L1",
+   "s": "Når vi indkalder til samtale, vil vi enten sende en mail eller ringe til dig.",
+   "at": 0,
+   "w": "Når",
+   "opts": [
+    "Da",
+    "Når"
+   ],
+   "rule": "naar_now",
+   "args": []
+  },
+  {
+   "src": "2020s L2",
+   "s": "Da Eva begyndte at studere, havde hun endnu ikke tænkt over, om hun skulle tage en del af sit studie i udlandet.",
+   "at": 0,
+   "w": "Da",
+   "opts": [
+    "Da",
+    "Når"
+   ],
+   "rule": "da_once",
+   "args": []
+  },
+  {
+   "src": "2021v L2",
+   "s": "Så det var derfor en overraskelse for os, da Ida fik stress.",
+   "at": 42,
+   "w": "da",
+   "opts": [
+    "da",
+    "når"
+   ],
+   "rule": "da_once",
+   "args": []
+  },
+  {
+   "src": "2019v L1",
+   "s": "Mange ældre er nemlig ikke så glade for at komme ud om aftenen, når det er mørkt.",
+   "at": 64,
+   "w": "når",
+   "opts": [
+    "da",
+    "når"
+   ],
+   "rule": "naar_now",
+   "args": []
+  },
+  {
+   "src": "2024s L1",
+   "s": "Da de blev større, gik jeg med igen, og børnene har også været med flere gange.",
+   "at": 0,
+   "w": "Da",
+   "opts": [
+    "Da",
+    "Når"
+   ],
+   "rule": "da_once",
+   "args": []
+  },
+  {
+   "src": "2020v L1",
+   "s": "Vi spørger os selv, om vi stadig kan bruge kunsten til noget.",
+   "at": 20,
+   "w": "om",
+   "opts": [
+    "hvis",
+    "om"
+   ],
+   "rule": "om",
+   "args": []
+  },
+  {
+   "src": "2021v W",
+   "s": "Spørgsmålet er, om jeg skal tage bilen eller toget.",
+   "at": 16,
+   "w": "om",
+   "opts": [
+    "hvis",
+    "om"
+   ],
+   "rule": "om",
+   "args": []
+  },
+  {
+   "src": "2019v W",
+   "s": "Dine venner er usikre på, om det er en god ide.",
+   "at": 26,
+   "w": "om",
+   "opts": [
+    "hvis",
+    "om"
+   ],
+   "rule": "om",
+   "args": []
+  },
+  {
+   "src": "2019s W",
+   "s": "Det er en stor chance for mig, men det betyder også mere overarbejde, så jeg ved ikke, om jeg skal sige ja.",
+   "at": 87,
+   "w": "om",
+   "opts": [
+    "hvis",
+    "om"
+   ],
+   "rule": "om",
+   "args": []
+  },
+  {
+   "src": "2021s L2",
+   "s": "I Danmark kan man få dagpenge som nyuddannet, hvis man er arbejdsløs og er medlem af en A-kasse.",
+   "at": 46,
+   "w": "hvis",
+   "opts": [
+    "hvis",
+    "om"
+   ],
+   "rule": "hvis",
+   "args": []
+  },
+  {
+   "src": "2020v L2",
+   "s": "Det er nemlig ikke noget problem at sige sit job op, hvis man nemt kan finde et andet job.",
+   "at": 53,
+   "w": "hvis",
+   "opts": [
+    "hvis",
+    "om"
+   ],
+   "rule": "hvis",
+   "args": []
+  },
+  {
+   "src": "2019v L2",
+   "s": "Men COWI har brug for flere dygtige specialister, hvis det skal lykkes.",
+   "at": 50,
+   "w": "hvis",
+   "opts": [
+    "hvis",
+    "om"
+   ],
+   "rule": "hvis",
+   "args": []
+  },
+  {
+   "src": "2018s L1",
+   "s": "Vurderingerne er afgørende for, om ansøgerne går videre i Universes ansættelsesforløb.",
+   "at": 32,
+   "w": "om",
+   "opts": [
+    "hvis",
+    "om"
+   ],
+   "rule": "om",
+   "args": []
+  },
+  {
+   "src": "2020v L1",
+   "s": "Dog kan man få et kursusbevis, hvis man ønsker det.",
+   "at": 31,
+   "w": "hvis",
+   "opts": [
+    "hvis",
+    "om"
+   ],
+   "rule": "hvis",
+   "args": []
+  },
+  {
+   "src": "2019s L2",
+   "s": "Fx viser det sig, at der er markant flere kvinder end mænd, der giver penge, når der er indsamling.",
+   "at": 77,
+   "w": "når",
+   "opts": [
+    "da",
+    "når"
+   ],
+   "rule": "naar_now",
+   "args": []
   }
  ]
 }
