@@ -295,6 +295,18 @@ input.answer:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--ac
 .whybox { margin-top: 10px; padding: 10px 12px; border-radius: 10px; background: var(--sheet); border-left: 3px solid var(--accent); font-size: .94rem; }
 .whybox > b:first-child { color: var(--accent-text); }
 .whybox .test { margin-top: 6px; }
+.facts { padding: 12px 14px; border-radius: 12px; background: var(--paper); display: grid; gap: 8px; }
+.facts .lbl { margin-bottom: 0; }
+.frow { display: grid; grid-template-columns: 7.5em 1fr; gap: 2px 10px; align-items: baseline; font-size: .95rem; }
+.frow .fl { color: var(--soft); font-size: .85rem; font-weight: 600; }
+@media (max-width: 480px) { .frow { grid-template-columns: 1fr; } }
+.facts .forms { display: inline-flex; flex-wrap: wrap; gap: 5px; }
+.facts .form { padding: 1px 8px; border-radius: 7px; background: var(--sheet); border: 1px solid var(--rule); font-weight: 600; font-size: .9rem; }
+.facts .fsep { color: var(--faint); }
+.facts ul.cons { margin: 0; padding: 0; list-style: none; display: grid; gap: 3px; }
+.facts ul.cons li { padding-left: 13px; position: relative; }
+.facts ul.cons li::before { content: "›"; position: absolute; left: 1px; color: var(--accent); font-weight: 700; }
+.facts .cap { font-variant: small-caps; font-weight: 700; letter-spacing: .03em; color: var(--soft); }
 .tipbox { padding: 12px 14px; border-radius: 12px; background: var(--blue-soft); font-size: .94rem; }
 .tipbox b { color: var(--blue-text); }
 .tipbox ul { margin: 6px 0 0; padding-left: 18px; }
@@ -497,7 +509,12 @@ const I18N = {
   "m.same": ["samme betydning", "same meaning"], "m.nodict": ["Ordet er ikke slået op i Den Danske Ordbog her.", "This word has no dictionary entry in the deck."],
   "m.lookup": ["Slå op på ordnet.dk ↗", "Look it up on ordnet.dk ↗"],
   "m.coach": ["Stadig uklart? Spørg coachen i chatten, fx “/pd3-coach forklar {0} med flere eksempler”.", "Still unclear? Ask the coach in chat, e.g. “/pd3-coach explain {0} with more examples”."],
-  "t.ddo": ["Den Danske Ordbog", "Den Danske Ordbog"], "t.mix": ["Forveksl ikke:", "Don't mix up:"],
+  "t.ddo": ["Den Danske Ordbog", "Den Danske Ordbog"],
+  "f.title": ["Om ordet", "About the word"], "f.class": ["Ordklasse", "Word class"], "f.gender": ["Køn", "Gender"],
+  "f.g.en": ["fælleskøn (en)", "common gender (en)"], "f.g.et": ["intetkøn (et)", "neuter (et)"],
+  "f.infl": ["Bøjning", "Inflection"], "f.noinfl": ["bøjes ikke", "does not inflect"], "f.cons": ["Konstruktion", "Construction"],
+  "f.brug": ["Brug", "Used as"], "f.ddo": ["fra Den Danske Ordbog", "from Den Danske Ordbog"],
+  "f.key": ["nogen = en person · noget = en ting · at + sætning = at-sætning · hv + sætning = hvorfor/hvordan …-sætning", "nogen = a person · noget = a thing · at + sætning = that-clause · hv + sætning = why/how … clause"], "t.mix": ["Forveksl ikke:", "Don't mix up:"],
   "q.meaning": ["Hvad betyder det?", "What does it mean?"], "q.relation": ["Hvilken relation udtrykker forbinderordet?", "Which relation does this connector express?"],
   "q.cloze": ["Hvilket ord passer i hullet?", "Which word fits the gap?"], "q.base": [" (grundform)", " (options in base form)"],
   "q.odd": ["To af dem hører til samme relation, så i en L3-opgave ville de udelukke hinanden. Vælg de to.",
@@ -763,7 +780,7 @@ function load() {
     $("#app").innerHTML = `<div class="err" style="margin-top:32px">${t("nodeck")}<br><br><code>python3 -I .claude/skills/pd3-coach/scripts/pd3.py page</code></div>`;
     return;
   }
-  DB = { today: iso(new Date()), profile: deck.profile || {}, sentences: deck.sentences || {}, senses: deck.senses || {}, tips: deck.tips || {}, cards: {} };
+  DB = { today: iso(new Date()), profile: deck.profile || {}, sentences: deck.sentences || {}, senses: deck.senses || {}, tips: deck.tips || {}, info: deck.info || {}, cards: {} };
   const saved = readProgress();
   for (const [id, c] of Object.entries(deck.cards)) DB.cards[id] = { id, ...c, history: c.history || [], ...(saved[id] || {}) };
   // ask the browser not to clear this page's storage when space runs low (Chrome/Firefox; Safari decides itself)
@@ -1142,7 +1159,9 @@ function prepLine(c) {
 function tipBlock(c) {
   const tp = DB.tips[c.id];
   if (!tp) return "";
-  const rows = [["order", "tip.order"], ["register", "tip.register"], ["construction", "tip.construction"]].filter(([k]) => tp[k]);
+  // the construction is shown in "Om ordet" (factsBlock) when the card has one
+  const rows = [["order", "tip.order"], ["register", "tip.register"], ["construction", "tip.construction"]].filter(([k]) => tp[k] && !(k === "construction" && DB.info[c.id]));
+  if (!rows.length) return "";
   return `<div class="block"><div class="tipbox"><b>${t("tip.title")}</b><ul>${rows.map(([k, l]) =>
     `<li><span class="tl">${t(l)}:</span> <span lang="da">${esc(tp[k][0])}</span><div class="en-def" lang="en">${esc(tp[k][1])}</div></li>`).join("")}</ul></div></div>`;
 }
@@ -1153,6 +1172,30 @@ function ruleBlock(c) {
 }
 // the word-type label is shown as a tag already
 function noteText(c) { return (c.note || "").replace(/^(SUB\/PRÆP|SUB\/ADV|SUB|ADV|KOO|PRÆP)\s*(—\s*)?/, ""); }
+// the same facts as on the study sheet: word class, en/et, bøjning, construction, Brug (pd3-data/wordinfo.json)
+// DDO's valency notation made readable: NOGEN/NOGET/+SÆTNING in small caps, over_for → over for
+const patHtml = p => esc(p.replace(/_/g, " ").replace(/\s*\/\s*/g, " / ").replace(/\+/g, " + "))
+  .replace(/\b([A-ZÆØÅ]{3,})\b/g, (_, x) => `<span class="cap">${x.toLowerCase()}</span>`);
+const INFLECTS = /^(substantiv|verbum|adjektiv|pronomen)/;
+function factsBlock(c) {
+  const f = DB.info[c.id];
+  if (!f) return "";
+  const row = (l, v) => `<div class="frow"><span class="fl">${l}</span><div>${v}</div></div>`;
+  const rows = [];
+  if (f.pos) rows.push(row(t("f.class"), `<span lang="da">${esc(f.pos)}</span>`));
+  if (f.gender) rows.push(row(t("f.gender"), `<b lang="da">${f.gender}</b> · ${t("f.g." + f.gender)}`));
+  if (f.forms.length) rows.push(row(t("f.infl"), `<span class="forms" lang="da">${f.forms.map(fs => fs.map(x => `<span class="form">${esc(x)}</span>`).join("")).join('<span class="fsep">|</span>')}</span>${f.inflection ? ` <span class="soft small" lang="da">${esc(f.inflection)}</span>` : ""}`));
+  else if (!INFLECTS.test(f.pos)) rows.push(row(t("f.infl"), `<span class="soft">${t("f.noinfl")}</span>`));
+  // the card's own construction tip, the study-sheet note and DDO's first patterns – each once
+  const tip = DB.tips[c.id] && DB.tips[c.id].construction;
+  const plain = h => h.replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim().toLowerCase();
+  const cons = [];
+  for (const h of [...f.construction.map(esc), ...(tip ? [esc(tip[0])] : []), ...f.grammar.slice(0, 3).map(patHtml)])
+    if (!cons.some(x => plain(x) === plain(h))) cons.push(h);
+  if (cons.length) rows.push(row(t("f.cons"), `<ul class="cons" lang="da">${cons.map(x => `<li>${x}</li>`).join("")}</ul>${f.grammar.length ? `<span class="soft small">${t("f.key")}</span>` : ""}`));
+  if (f.brug.length) rows.push(row(t("f.brug"), `<span lang="da">${f.brug.map(esc).join(" · ")}</span>${f.brug_src === "DDO" ? ` <span class="soft small">(${t("f.ddo")})</span>` : ""}`));
+  return `<div class="block"><div class="facts"><span class="lbl">${t("f.title")}</span>${rows.join("")}</div></div>`;
+}
 function renderTeach(c, review) {
   const ex = examSentences(c).slice(0, 2);
   const d = c.dict;
@@ -1163,6 +1206,7 @@ function renderTeach(c, review) {
     ${prepLine(c)}
     <div class="meaning">${esc(c.meaning)}</div>
     ${extraNote ? `<div class="soft" lang="da" style="margin-top:4px">${esc(extraNote)}</div>` : ""}
+    ${factsBlock(c)}
     ${wtype(c) ? `<div class="block"><span class="lbl">${t("t.order")}</span>${ruleBlock(c)}</div>` : ""}
     ${DB.senses[c.id] ? `<div class="block"><span class="lbl">${DB.senses[c.id].senses.length > 1 ? `${t("t.senses")} · ${t("t.senses.s")}` : t("t.sense1")}</span>${senseBlocks(c, 1, false)}</div>` : `
     <div class="block"><div class="eg"><span class="lbl">${t("t.example")}</span><div class="sentence" lang="da">${hlSentence(c, c.example)}</div></div></div>
@@ -1915,6 +1959,7 @@ function explain(c) {
     ${prepLine(c)}
     <div class="meaning" style="margin-top:12px">${esc(c.meaning)}</div>
     ${noteText(c) ? `<div class="soft" lang="da" style="margin-top:4px">${esc(noteText(c))}</div>` : ""}
+    ${factsBlock(c)}
     ${DB.senses[c.id] ? "" : `<div class="block"><div class="eg"><span class="lbl">${t("t.example")}</span><div class="ex" lang="da"><span class="sentence">${hlSentence(c, c.example)}</span>${trLink(c.example)}</div></div></div>`}
     ${wtype(c) ? `<h3>${t("t.order")}</h3>${ruleBlock(c)}` : ""}
     <h3>${t("m.senses")} <span class="soft">· ${t("t.ddo")}</span></h3>
