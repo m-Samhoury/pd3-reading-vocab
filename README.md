@@ -57,7 +57,14 @@ copy the rebuilt file over this one. It also opens straight from disk, no server
 
 ### Where the information comes from
 
+Every entry, on all pages including Guidet læring, shows the same blocks: word class, en/et (nouns), bøjning,
+construction, meanings, examples and a *Brug* list.
+
 - **Word class, en/et, bøjning, forms** – Den Danske Ordbog (ordnet.dk), read from the cached pages.
+  Participles and comparatives take their bøjning from their DDO headword (*kvalificeret* ← *kvalificere*).
+- **Construction** – DDO's grammar patterns (*NOGEN forklarer NOGET/at+SÆTNING over_for NOGEN*) where DDO has
+  them (164 words); otherwise a `con:` line in the lexicon, written from the exam sentences and the
+  Guidet læring "Med:" lines.
 - **Definitions** – written for this tool following DDO's senses (most frequent senses; DDO itself
   lists more). Every headword was matched to DDO (`reports/unverified.md`).
 - **Examples** – the first sense uses a sentence taken or adapted from the exams where the word occurs;
@@ -108,6 +115,8 @@ python3 src/scripts/t23_lexicon.py   # fill class/forms/ddo lines in the Tier 2/
 python3 src/scripts/ddo_entries.py   # word class, en/et, bøjning (+ DDO senses for the private build)
 python3 src/scripts/wiktionary.py    # English headword glosses from Wiktionary (CC BY-SA 4.0)
 python3 src/scripts/render.py --private   # private/ – same pages plus DDO's definitions verbatim
+python3 src/scripts/coach_info.py    # word class, en/et, bøjning, construction, Brug for Guidet læring's deck
+                                     #   → $PD3_EXAMS/pd3-data/wordinfo.json (then `pd3.py page` there)
 ```
 
 `private/` is git-ignored: Den Danske Ordbog's wording is copyrighted, so the study sheet and

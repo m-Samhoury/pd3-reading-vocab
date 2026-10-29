@@ -71,6 +71,14 @@ def dictionary_info(w, ddo_e, wikt, private):
         forms = [[w["lemma"]] + fs for fs in d.get("forms", [])]
         info.update({"gender": d.get("gender"), "inflection": d.get("inflection", ""), "forms": forms,
                      "invariable": not d.get("inflection")})
+    if d.get("infl_from"):            # bøjning from the related DDO headword (kvalificeret → kvalificere)
+        # the related headword leads its own forms (tidlig · tidligt · tidlige | tidligere · tidligst)
+        fs = d["forms"] if d.get("participle") else [list(dict.fromkeys(([d["infl_from"]] if not i else []) + x)) for i, x in enumerate(d["forms"])]
+        info.update({"inflection": d["inflection"], "forms": fs, "infl_from": d["infl_from"], "participle": bool(d.get("participle"))})
+    if d.get("invariable"):
+        info["invariable"] = True
+    if d.get("grammar"):
+        info["grammar"] = d["grammar"]
     if w["id"] in wikt:
         info["en"] = wikt[w["id"]]["glosses"]
         info["en_url"] = wikt[w["id"]]["url"]

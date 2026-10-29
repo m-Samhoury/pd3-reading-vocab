@@ -6,6 +6,7 @@
 # Definitions follow DDO's senses in our own words; examples are taken or adapted from the exam texts where the word occurs.
 
 @ tidligere
+con: tidligere end + led/sætning; foran navneord: den tidligere minister; efter verbet: Hvad har der tidligere været …
 forms: tidligere
 class: adjektiv
 ddo: tidlig
@@ -21,6 +22,7 @@ S: t2-aarsag | neutral | Gøre, som nogen anbefaler eller en regel siger. | To f
 S: t2-aarsag | neutral | (en følge af) En virkning eller et resultat af noget, der er sket før. | (noun) Consequence; result. | Det kan fx være en følge af det danske velfærdssamfund. | It may, for example, be a consequence of the Danish welfare society. | være en følge af; som følge af | konsekvens; resultat | årsag
 
 @ følgende
+con: følgende + navneord (uden den/det): følgende udsagn; den følgende dag; i det følgende
 forms: følgende
 class: adjektiv
 ddo: følge
@@ -46,12 +48,14 @@ S: t2-aarsag | neutral | Et stykke jord, hvor man kan bygge et hus. | Plot (of l
 S: t2-aarsag | neutral | Det faste grundlag, som noget bygger på. | Basis; foundation; ground. | Undersøgelsen danner grund for de nye regler. | The study forms the basis for the new rules. | danne grund for; i bund og grund | grundlag; basis | -
 
 @ forskellig
+con: forskellig fra + navneord; foran navneord: forskellige bygninger
 forms: forskellig, forskelligt, forskellige
 class: adjektiv
 S: t2-egenskab | neutral | Som ikke er ens; som adskiller sig fra hinanden. | Different. | Medarbejdere har forskellige behov. | Employees have different needs. | forskellig fra; meget forskellige | anderledes; ulig | ens; samme
 S: t2-egenskab | neutral | (i flertal) Flere af en slags; diverse. | Various; several. | Der er forskellige muligheder for at få flere unge ind på uddannelsen. | There are various ways of getting more young people onto the programme. | forskellige muligheder; på forskellige måder | diverse; flere; adskillige | -
 
 @ udfordring
+con: udfordring for
 forms: udfordring, udfordringen, udfordringer, udfordringerne, udfordrings, udfordringens, udfordringers, udfordringernes
 class: substantiv
 S: t2-fordel | neutral | En opgave eller situation, der er svær og kræver noget af én. | Challenge. | Det er dyrt, men det er ikke den eneste udfordring. | It is expensive, but it is not the only challenge. | stå over for en udfordring; en stor udfordring; tage en udfordring op | problem; vanskelighed | -
@@ -63,12 +67,14 @@ S: t2-argument | neutral | Ikke ville godkende, tage imod eller give ret i noget
 S: t2-argument | neutral | Ikke lukke nogen ind; sende nogen væk. | To turn away (someone). | Gæster uden billet blev afvist ved døren. | Guests without tickets were turned away at the door. | afvise nogen ved døren | - | lukke ind
 
 @ moderne
+con: foran navneord: et moderne shoppingcenter; efter være: er moderne (bøjes ikke)
 forms: moderne
 class: adjektiv
 S: t2-egenskab | neutral | Som hører til eller er typisk for vores tid. | Modern; contemporary. | Hverken nettet eller et moderne shoppingcenter kan konkurrere med det. | Neither the internet nor a modern shopping centre can compete with it. | moderne teknologi; det moderne samfund | nutidig; tidssvarende | gammeldags
 S: t2-egenskab | neutral | Som følger tidens mode; ny og populær. | Fashionable; in fashion. | Den slags tøj er meget moderne i år. | That kind of clothing is very fashionable this year. | være moderne | populær; på mode | umoderne
 
 @ fysisk
+con: foran navneord: fysisk træning; foran adjektiv: fysisk aktiv; mentalt og fysisk
 forms: fysisk, fysiske
 class: adjektiv
 S: t2-egenskab | neutral | Som har med kroppen at gøre. | Physical (of the body). | De fleste får mere energi af at være fysisk aktive. | Most people get more energy from being physically active. | fysisk aktiv; fysisk arbejde; fysisk sundhed | kropslig | psykisk; mental
@@ -86,6 +92,7 @@ class: substantiv
 S: t2-aarsag | neutral | Noget, man har brug for og må have opfyldt. | Need. | Hun har ikke behov for at tage et arbejde ved siden af studiet. | She has no need to take a job alongside her studies. | have behov for; efter behov; dække et behov; der er behov for | brug; nødvendighed | -
 
 @ mental
+con: foran navneord: mental sundhed; som adverbium: mentalt og fysisk på toppen
 forms: mental, mentalt, mentale
 class: adjektiv
 S: t2-egenskab | neutral | Som har med tanker, psyke og sind at gøre. | Mental. | Som topleder er det vigtigt at være mentalt og fysisk på toppen. | As a top manager it is important to be mentally and physically at your best. | mental sundhed; mentalt overskud; mentalt og fysisk | psykisk; åndelig | fysisk
@@ -130,6 +137,7 @@ class: verbum
 S: t2-argument | neutral | Gøre noget klart for andre ved at beskrive eller fortælle om det. | To explain. | Hun forklarer, at danske unge er i en anden situation end unge fra andre lande. | She explains that Danish young people are in a different situation from young people in other countries. | forklare hvorfor; forklare noget for nogen | redegøre for; beskrive; begrunde | -
 
 @ sjælden
+con: det er sjældent, (at) + ledsætning; foran navneord: sjældne arter
 forms: sjælden, sjældent, sjældne, sjældnere, sjældnest
 class: adjektiv
 S: t2-egenskab | neutral | Som ikke sker ret tit. | Rare; infrequent. | Det er forholdsvis sjældent, at journalister skifter til et helt andet område. | It is relatively rare for journalists to switch to a completely different field. | det er sjældent; sjældent eller aldrig; ikke sjældent | usædvanlig | hyppig; almindelig
@@ -142,6 +150,7 @@ S: t2-aarsag | formal | Noget, der skal være til stede, før noget andet kan sk
 S: t2-aarsag | formal | Det, man går ud fra, er sandt; ens udgangspunkt. | Assumption; starting point. | Han har andre forudsætninger end sine kolleger. | He has a different background from his colleagues. | gode forudsætninger; ud fra den forudsætning | antagelse; baggrund | -
 
 @ omkostning
+con: omkostninger ved + navneord / at + infinitiv
 forms: omkostning, omkostningen, omkostninger, omkostningerne, omkostnings, omkostningens, omkostningers, omkostningernes
 class: substantiv
 S: t2-samfund | formal | Penge, man må bruge for at drive eller lave noget; en udgift. | Cost; expense. | Omkostningerne ved at sætte vindmøller op på havet er høje. | The costs of putting up wind turbines at sea are high. | høje omkostninger; omkostninger ved; dække omkostningerne | udgift | indtægt
@@ -163,11 +172,13 @@ S: t2-holdning | neutral | Officielt sige til en myndighed eller ansvarlig, at m
 S: t2-holdning | neutral | Give udtryk for, at noget er utilstrækkeligt eller dårligt. | To complain; to grumble. | Han klager altid over vejret. | He always complains about the weather. | klage over; klage sin nød | brokke sig | -
 
 @ husleje
+con: betale husleje; høj husleje; huslejen stiger
 forms: husleje, huslejen, huslejer, huslejerne, huslejes, huslejens, huslejers, huslejernes
 class: substantiv
 S: t2-samfund | neutral | Det beløb, man betaler fast for at leje en bolig eller et lokale. | Rent. | Ejerne af erhvervslokalerne kræver høje huslejer. | The owners of the commercial premises demand high rents. | betale husleje; høj husleje; huslejen stiger | leje | -
 
 @ livskvalitet
+con: livskvaliteten for + nogen; forbedre/forringe livskvaliteten
 forms: livskvalitet, livskvaliteten, livskvaliteter, livskvaliteterne, livskvalitets, livskvalitetens, livskvaliteters, livskvaliteternes
 class: substantiv
 S: t2-samfund | neutral | Hvor godt et menneske har det med sit liv. | Quality of life. | Det kan forringe livskvaliteten for borgerne, hvis butikkerne lukker. | It can reduce citizens' quality of life if the shops close. | høj livskvalitet; forbedre livskvaliteten | trivsel; velvære | -
@@ -179,6 +190,7 @@ S: t2-argument | neutral | Vise eller sige, at noget er rigtigt. | To confirm. |
 S: t2-argument | neutral | Sige ja til eller acceptere noget. | To confirm (a booking, an agreement). | Husk at bekræfte din tilmelding. | Remember to confirm your registration. | bekræfte en aftale; bekræfte modtagelsen | godkende | aflyse
 
 @ nødvendig
+con: det er nødvendigt at + infinitiv; nødvendig for + navneord; hvis nødvendigt
 forms: nødvendig, nødvendigt, nødvendige, nødvendigere, nødvendigst
 class: adjektiv
 S: t2-egenskab | neutral | Som man absolut må have eller gøre; som man ikke kan undvære. | Necessary. | For at lykkes er det nødvendigt at øge produktionen af grøn energi. | To succeed it is necessary to increase the production of green energy. | det er nødvendigt at; nødvendig for; hvis nødvendigt | påkrævet; uundværlig | unødvendig; overflødig
@@ -194,6 +206,7 @@ class: verbum
 S: t2-aendring | neutral | Fjerne noget og sætte noget andet i stedet. | To replace; to change. | Vi udskifter oftere vores fritidsinteresser i dag. | We change our leisure interests more often today. | udskifte med; udskifte de gamle vinduer | erstatte; skifte | beholde
 
 @ problematik
+con: problematikken er, at + ledsætning; problematikken omkring + navneord
 forms: problematik, problematikken, problematikker, problematikkerne, problematiks, problematikkens, problematikkers, problematikkernes
 class: substantiv
 S: t2-argument | formal | En række problemer, der hænger sammen omkring en bestemt sag. | Set of problems; issue. | Problematikken er, at vindmøller er dyrere at sætte op på havet. | The issue is that wind turbines are more expensive to put up at sea. | problematikken er; en kompleks problematik | problem; problemstilling | -
@@ -252,11 +265,13 @@ S: t2-aarsag | neutral | Noget, der skal opfyldes; en betingelse. | Requirement;
 S: t2-aarsag | formal | Penge eller ret, som man mener at have til gode. | Claim; entitlement. | Du har krav på erstatning. | You are entitled to compensation. | have krav på | ret | -
 
 @ typisk
+con: typisk for + navneord; efter verbet: Man har typisk mere overskud
 forms: typisk, typiske
 class: adjektiv
 S: t2-egenskab | neutral | Som særlig ofte gælder for en bestemt slags personer eller ting. | Typical; typically. | Som topleder har man typisk en travl og krævende arbejdsdag. | As a top manager you typically have a busy and demanding working day. | typisk for; typisk dansk | karakteristisk; normal | usædvanlig; atypisk
 
 @ udvalg
+con: udvalget af + navneord: udvalget af uddannelser; sidde i et udvalg
 forms: udvalg, udvalget, udvalgene, udvalgs, udvalgets, udvalgenes
 class: substantiv
 S: t2-samfund | neutral | De varer, kurser eller muligheder, man kan vælge imellem. | Selection; range. | Man skal tilpasse udvalget af uddannelser efter behovet. | The range of programmes should be adjusted to the need. | et stort udvalg; udvalget af | sortiment | -
@@ -290,6 +305,7 @@ S: t2-argument | neutral | Nævne, beskrive eller fortælle om noget. | To menti
 S: t2-argument | neutral | Tale om nogen eller noget på en bestemt måde. | To speak of (in a certain way). | Hun omtales ofte som en dygtig leder. | She is often spoken of as a capable leader. | omtale positivt; omtale som | betegne; kalde | -
 
 @ kvalitet
+con: af god/høj kvalitet; kvaliteten af + navneord
 forms: kvalitet, kvaliteten, kvaliteter, kvaliteterne, kvalitets, kvalitetens, kvaliteters, kvaliteternes
 class: substantiv
 S: t2-egenskab | neutral | Hvor gode egenskaber noget har. | Quality. | Musikerne viser kvaliteten af det bornholmske musikliv. | The musicians show the quality of Bornholm's music scene. | høj kvalitet; af god kvalitet; kvaliteten af | standard | -
@@ -301,6 +317,7 @@ class: substantiv
 S: t2-argument | formal | Noget, man siger er sandt, uden at bevise det. | Claim; assertion. | Det er en påstand, der ikke holder. | That is a claim that does not hold up. | fremsætte en påstand; påstanden om; påstand mod påstand | udsagn; postulat | bevis
 
 @ ansøgning
+con: ansøgning om + navneord / at + infinitiv: ansøgning om at blive …
 forms: ansøgning, ansøgningen, ansøgninger, ansøgningerne, ansøgnings, ansøgningens, ansøgningers, ansøgningernes
 class: substantiv
 S: t2-arbejde | formal | Det at søge om noget; den tekst, man skriver, når man søger. | Application. | Juryen var imponeret over den bornholmske ansøgning. | The jury was impressed by the Bornholm application. | sende en ansøgning; ansøgning om; skrive en ansøgning | anmodning | -
@@ -327,6 +344,7 @@ class: verbum
 S: t2-argument | formal | Give oplysninger om noget. | To inform. | Man kunne informere mere om mistænkelige mails. | You could provide more information about suspicious e-mails. | informere om; holde nogen informeret | oplyse; underrette | -
 
 @ undtagelse
+con: undtagelse fra
 forms: undtagelse, undtagelsen, undtagelser, undtagelserne, undtagelses, undtagelsens, undtagelsers, undtagelsernes
 class: substantiv
 S: t2-fordel | formal | Noget eller nogen, som en regel ikke gælder for. | Exception. | Vi har vandret sammen i 25 år med undtagelse af nogle få år. | We have hiked together for 25 years with the exception of a few years. | med undtagelse af; en undtagelse fra; uden undtagelse | - | regel
@@ -344,11 +362,13 @@ class: verbum
 S: t2-holdning | neutral | Ønske, at man ikke havde gjort eller sagt noget. | To regret. | Hun valgte livet som selvstændig, og det har hun ikke fortrudt. | She chose to be self-employed, and she has not regretted it. | fortryde at; fortryde noget | angre | -
 
 @ kulturel
+con: foran navneord: kulturelle tilbud; efter være: aktiviteterne er kulturelle
 forms: kulturel, kulturelt, kulturelle
 class: adjektiv
 S: t2-egenskab | neutral | Som har med kultur at gøre, fx kunst, musik og et folks levevis. | Cultural. | Lokalerne udlejes til andre aktiviteter, primært kulturelle. | The premises are rented out for other activities, mainly cultural ones. | kulturelle tilbud; kulturel arv; kulturelle forskelle | - | -
 
 @ arbejdsmæssig
+con: foran navneord: arbejdsmæssige udfordringer; arbejdsmæssigt set
 forms: arbejdsmæssig, arbejdsmæssigt, arbejdsmæssige
 class: adjektiv
 S: t2-arbejde | neutral | Som har med ens arbejde eller job at gøre. | Work-related; professional. | Arbejdsmæssigt set var det et godt år. | Work-wise, it was a good year. | arbejdsmæssigt set; arbejdsmæssige udfordringer | faglig; jobmæssig | privat
@@ -393,6 +413,7 @@ S: t2-argument | formal | Sige, at man er uenig med nogen eller i noget. | To co
 S: t2-argument | formal | Ikke stemme overens med noget. | To contradict (a fact, a claim). | Resultaterne modsiger den tidligere undersøgelse. | The results contradict the earlier study. | modsige sig selv | stride mod | bekræfte
 
 @ logisk
+con: Det er logisk, at + sætning
 forms: logisk, logiske
 class: adjektiv
 S: t2-argument | neutral | Som følger en fornuftig tankegang; som er let at forstå. | Logical. | Det er logisk, at prisen stiger, når efterspørgslen stiger. | It is logical that the price rises when demand rises. | logisk set; en logisk forklaring | fornuftig; naturlig | ulogisk
@@ -414,11 +435,13 @@ class: verbum
 S: t2-aendring | formal | Gøre det muligt, at noget kan ske. | To make possible; to enable. | Ny teknologi muliggør større vindmøller. | New technology makes larger wind turbines possible. | muliggøre at | gøre muligt | forhindre
 
 @ problemstilling
+con: tage en problemstilling op; problemstillingen omkring + navneord
 forms: problemstilling, problemstillingen, problemstillinger, problemstillingerne, problemstillings, problemstillingens, problemstillingers, problemstillingernes
 class: substantiv
 S: t2-argument | formal | Et problem, som man beskriver eller arbejder med. | Issue; question (under discussion). | Teksten tager en vigtig problemstilling op. | The text addresses an important issue. | tage en problemstilling op; en kompleks problemstilling | problem; problematik; spørgsmål | -
 
 @ barriere
+con: en barriere for + navneord / at + infinitiv
 forms: barriere, barrieren, barrierer, barriererne, barrieres, barrierens, barrierers, barrierernes
 class: substantiv
 S: t2-fordel | formal | Noget, der gør det svært eller umuligt at komme videre. | Barrier; obstacle. | Prisen er den største barriere for mange. | The price is the biggest barrier for many. | en barriere for; nedbryde barrierer | forhindring; hindring | -

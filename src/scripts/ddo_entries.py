@@ -42,6 +42,16 @@ def _articles(page):
                 if fs and fs not in forms:
                     forms.append(fs)
         senses = []
+        # valency patterns ("NOGEN forklarer NOGET/at+SÆTNING over_for NOGEN"), in sense order, without repeats
+        grammar = []
+        for g in re.findall(r'<span class="modern-label">grammatik</span><div class="modern-inline-text">(.*?)</div>', a, re.S):
+            for x in re.split(r'<span class="dividerSmall">', g):
+                x = _t(re.sub(r"^[^<]*?</span>", "", x) if x.lstrip().startswith(" </span>") else x)
+                x = re.sub(r"\s*([/+])\s*", r"\1", x).replace("( ", "(").replace(" )", ")").strip()
+                # keep the pattern, drop DDO's usage remarks ("… almindelig i præteritum participium", "HJÆLPEVERBUM have")
+                x = re.split(r"\s+(?:HJÆLPEVERBUM|almindelig|især|ofte|brugt|i (?:komparativ|passiv|præsens|præteritum)|spøgende|sjældent)\b", x)[0].strip(" ;,")
+                if x and re.search(r"[A-ZÆØÅ]{3,}", x) and x not in grammar:
+                    grammar.append(x)
         for row in re.split(r'<div class="modern-senseno">', a)[1:]:
             no = _t(row[:row.find("</div>")]).rstrip(".")
             d = re.search(r'class="modern-definition"[^>]*>(.*?)</span>', row, re.S)
@@ -58,7 +68,7 @@ def _articles(page):
             for d in re.findall(r'class="modern-definition"[^>]*>(.*?)</span>', a, re.S)[:1]:
                 senses.append({"no": "", "definition": _t(d), "examples": [], "citations": [
                     _t(x) for x in re.findall(r'<span class="modern-citat">(.*?)</span>', a, re.S)][:2]})
-        out.append({"kind": "phrase" if kind == "fasteudtryk" else "word", "head": head, "pos": pos, "inflection": inflection, "forms": forms, "senses": senses})
+        out.append({"kind": "phrase" if kind == "fasteudtryk" else "word", "head": head, "pos": pos, "inflection": inflection, "forms": forms, "grammar": grammar, "senses": senses})
     return out
 
 
@@ -102,7 +112,37 @@ def phrase_index():
     return _PHRASES
 
 
+# words DDO describes under another headword: the bøjning comes from that article
+#   (participles from their verb, an adverb from its adjective, a form from its pronoun)
+INFL_FROM = {"t1-hvilket": "hvilken", "t2-tidligere": "tidligere", "t3-ansat": "ansat", "t2-relativt": "relativt"}
+# past participles used as adjectives: the participle (from the verb's DDO bøjning) and its -e form
+PARTICIPLE = {"t2-kvalificeret": "kvalificere", "t3-anerkendt": "anerkende"}
+# present participles used as adjectives do not inflect (DDO: "præsens participium brugt som adjektiv")
+INVARIABLE = {"t2-foelgende", "t3-afvekslende"}
+
+
+def borrowed_inflection(wid):
+    q = INFL_FROM[wid]
+    for a in _articles(ddo._fetch(q)):
+        if a["forms"] and a["kind"] == "word":
+            return {"infl_from": a["head"], "infl_pos": a["pos"], "inflection": a["inflection"], "forms": a["forms"]}
+    return {}
+
+
 def entry(w):
+    e = _entry(w)
+    if w["id"] in INFL_FROM and e.get("found") and not e.get("forms"):
+        e.update(borrowed_inflection(w["id"]))
+    if w["id"] in PARTICIPLE and e.get("found"):
+        verb = next(a for a in _articles(ddo._fetch(PARTICIPLE[w["id"]])) if a["forms"])
+        part = verb["forms"][0][-1]
+        e.update({"infl_from": verb["head"], "participle": True, "inflection": "", "forms": [[part, part[:-1] + "de" if part.endswith("et") else part + "e"]]})
+    if w["id"] in INVARIABLE:
+        e["invariable"] = True
+    return e
+
+
+def _entry(w):
     q = w["ddo"]["query"]
     url = "https://ordnet.dk/ddo/ordbog?query=" + urllib.parse.quote(q)
     arts = [a for a in _articles(ddo._fetch(q)) if a["senses"]]
@@ -125,6 +165,7 @@ def entry(w):
             "pos": a["pos"] if same else "", "gender": next((v for k, v in GENDER.items() if k in a["pos"]), None) if same else None,
             "inflection": a["inflection"] if same else "", "forms": a["forms"] if same else [],
             "same_class": same,
+            "grammar": [g for x in pick for g in x["grammar"]] if match == "exact" else [],
             "senses": [s for x in pick for s in x["senses"]] if match == "exact" else []}
 
 

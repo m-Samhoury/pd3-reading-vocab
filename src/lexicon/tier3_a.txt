@@ -13,11 +13,13 @@ S: t3-handling | neutral | Få planter til at gro ved at arbejde med jorden. | T
 S: t3-handling | formal | Tilbede en gud eller praktisere en religion. | To worship. | Asatroende dyrker vikingernes guder. | Ásatrú believers worship the Vikings' gods. | dyrke guderne | tilbede | -
 
 @ branche
+con: i en branche; i samme branche; skifte branche
 forms: branche, branchen, brancher, brancherne, branches, branchens, branchers, branchernes
 class: substantiv
 S: t3-arbejde | neutral | Et område i erhvervslivet med en bestemt type varer eller tjenester. | Industry; sector; trade. | Industriens største branche er jern- og metalindustrien. | Industry's largest sector is the iron and metal industry. | skifte branche; i samme branche; branchen for | erhverv; sektor | -
 
 @ selvstændig
+con: være/blive selvstændig; arbejde selvstændigt; starte som selvstændig
 forms: selvstændig, selvstændigt, selvstændige, selvstændigere, selvstændigst
 class: adjektiv
 S: t3-arbejde | neutral | Som ikke er ansat af nogen, men har sin egen virksomhed. | Self-employed. | Hvad ville de gøre anderledes, hvis de skulle starte forfra som selvstændige? | What would they do differently if they were to start over as self-employed? | blive selvstændig; selvstændig erhvervsdrivende | - | ansat; lønmodtager
@@ -41,6 +43,7 @@ class: verbum
 S: t3-handling | neutral | Være med til et fælles resultat med arbejde, viden eller penge. | To contribute. | Humanister kan bidrage med viden om menneskelig adfærd. | Humanities graduates can contribute knowledge about human behaviour. | bidrage med; bidrage til | medvirke | -
 
 @ placering
+con: placeringen af + navneord; byens placering
 forms: placering, placeringen, placeringer, placeringerne, placerings, placeringens, placeringers, placeringernes
 class: substantiv
 S: t3-forhold | neutral | Det sted, hvor noget er eller kommer til at være. | Location; placement; position. | Følgen af møllernes placering er, at husene vil falde i pris. | The consequence of the turbines' location is that the houses will fall in value. | placeringen af; en central placering | beliggenhed; plads | -
@@ -58,6 +61,7 @@ S: t3-sted | neutral | Det, man kan se fra et sted, fx ud over et landskab. | Vi
 S: t3-forhold | neutral | Det, man kan forvente vil ske i fremtiden. | Prospect; outlook. | Der er udsigt til bedre vejr. | Better weather is expected. | udsigt til; have udsigt til; udsigterne for | perspektiv; forventning | -
 
 @ region
+con: i regionen; regionen omkring + sted
 forms: region, regionen, regioner, regionerne, regions, regionens, regioners, regionernes
 class: substantiv
 S: t3-samfund | neutral | Et område, der udgør en enhed geografisk, kulturelt eller politisk. | Region; area. | Bornholm blev udnævnt som World Craft Region. | Bornholm was named a World Craft Region. | i regionen; regionen omkring | område; egn | -
@@ -75,17 +79,20 @@ class: substantiv
 S: t3-tanke | neutral | Følelsen af ikke at være sikker på noget. | Doubt. | Jeg var ikke i tvivl om, at jeg skulle være med. | I had no doubt that I should take part. | være i tvivl om; uden tvivl; der er ingen tvivl om | usikkerhed | vished; sikkerhed
 
 @ tilfælde
+con: i det/dette tilfælde; i mange tilfælde; det er (ikke) tilfældet
 forms: tilfælde, tilfældet, tilfældene, tilfældes, tilfældets, tilfældenes
 class: substantiv
 S: t3-forhold | neutral | En bestemt situation, sag eller hændelse ud af flere. | Case; instance. | I Mettes tilfælde handlede det om at balancere arbejde og privatliv. | In Mette's case it was about balancing work and private life. | i så fald / i dette tilfælde; i mange tilfælde; i hvert tilfælde | sag; situation | -
 S: t3-forhold | neutral | Noget, der sker uventet og uden plan. | Chance; coincidence. | Det var et rent tilfælde, at vi mødtes. | It was pure chance that we met. | ved et tilfælde; for alle tilfældes skyld | træf | -
 
 @ anderledes
+con: anderledes end + led/sætning; foran navneord: et helt anderledes landskab (bøjes ikke); efter verbet: organisere arbejdet anderledes
 forms: anderledes
 class: adjektiv
 S: t3-beskrivelse | neutral | Som ikke ligner noget andet; på en anden måde. | Different; differently. | Hvad ville de gøre anderledes i dag? | What would they do differently today? | helt anderledes; anderledes end | forskellig | ens; samme
 
 @ kommunikation
+con: kommunikation med/mellem + nogen
 forms: kommunikation, kommunikationen, kommunikationer, kommunikationerne, kommunikations, kommunikationens, kommunikationers, kommunikationernes
 class: substantiv
 S: t3-arbejde | neutral | Det at udveksle information og budskaber mellem mennesker. | Communication. | God kommunikation er vigtig på arbejdspladsen. | Good communication is important in the workplace. | kommunikation mellem; intern kommunikation | dialog; kontakt | -
@@ -96,11 +103,13 @@ class: adjektiv
 S: t3-beskrivelse | neutral | (være nødt til) Ikke have andre muligheder end at gøre noget. | (be) forced to; have to. | Flere ville være nødt til at vælge et andet studium. | Several would have to choose a different course of study. | være nødt til at; se sig nødt til | tvunget til; nødsaget til | -
 
 @ permanent
+con: foran navneord: et permanent problem, de permanente udstillinger
 forms: permanent, permanente
 class: adjektiv
 S: t3-beskrivelse | formal | Som varer ved og hele tiden er der. | Permanent. | Byens placering inde i landet var et permanent problem. | The town's inland location was a permanent problem. | permanent ophold; en permanent løsning | varig; vedvarende | midlertidig
 
 @ ramme
+con: danne rammen om + navneord; inden for rammerne af + navneord; vokse ud af rammerne
 forms: ramme, rammen, rammer, rammerne, rammes, rammens, rammers, rammernes
 class: substantiv
 S: t3-forhold | neutral | (rammer) De forhold og regler, som noget foregår inden for. | Framework; setting; limits. | Han arbejdede for meget pga. de manglende rammer for hans arbejde. | He worked too much because of the lack of a framework for his work. | danne rammen om; inden for rammerne af; faste rammer | grænser; vilkår | -
@@ -128,43 +137,51 @@ S: t3-arbejde | neutral | Få penge for sit arbejde. | To earn. | Det er interne
 S: t3-handling | formal | Være til nytte eller have en bestemt funktion. | To serve (a purpose). | Bygningen tjente som skole i mange år. | The building served as a school for many years. | tjene som; tjene et formål | fungere som | -
 
 @ administrativ
+con: foran navneord: administrative opgaver, den administrative del af + navneord
 forms: administrativ, administrativt, administrative
 class: adjektiv
 S: t3-arbejde | formal | Som har med ledelse, regler, penge og papirarbejde at gøre. | Administrative. | Hun vidste ikke meget om den administrative del af at have en virksomhed. | She did not know much about the administrative side of running a business. | administrative opgaver; administrativt personale | - | -
 
 @ formidling
+con: formidlingen af + navneord: formidlingen af historien; formidling til + nogen
 forms: formidling, formidlingen, formidlinger, formidlingerne, formidlings, formidlingens, formidlingers, formidlingernes
 class: substantiv
 S: t3-arbejde | formal | Det at gøre viden eller budskaber forståelige og videregive dem. | Communication; dissemination. | Hun arbejder stadig med sproglig formidling. | She still works with language-based communication. | formidling af; formidling til børn | kommunikation | -
 
 @ udvikling
+con: udviklingen i/af + navneord; en positiv udvikling
 forms: udvikling, udviklingen, udviklinger, udviklingerne, udviklings, udviklingens, udviklingers, udviklingernes
 class: substantiv
 S: t3-forhold | neutral | En proces, hvor noget gradvis forandrer sig. | Development; trend. | Romanen beskriver arbejderbevægelsens udvikling. | The novel describes the development of the labour movement. | en positiv udvikling; udviklingen i; følge udviklingen | forandring; fremskridt | -
 S: t3-forhold | neutral | Det at skabe eller lave noget nyt. | Development (of products). | Firmaet bruger mange penge på udvikling af nye produkter. | The company spends a lot of money developing new products. | forskning og udvikling | - | -
 
 @ oprindelig
+con: foran navneord: den oprindelige plan; foran verbum/adjektiv: oprindelig uddannet lærer
 forms: oprindelig, oprindeligt, oprindelige, oprindeligtelleroprindelig, oprindeligere, oprindeligst
 class: adjektiv
 S: t3-beskrivelse | neutral | Som hører til begyndelsen eller var der først. | Original; originally. | Hvilke materialer er kunsthåndværket oprindeligt baseret på? | Which materials was the craft originally based on? | oprindeligt; den oprindelige plan | original; første | -
 
 @ udgravning
+con: arkæologiske udgravninger; udgravningen af + navneord
 forms: udgravning, udgravningen, udgravninger, udgravningerne, udgravnings, udgravningens, udgravningers, udgravningernes
 class: substantiv
 S: t3-sted | neutral | Det at grave i jorden for at finde spor af fortiden. | Excavation; dig. | Man kan se originale krukker fra udgravninger. | You can see original pots from excavations. | arkæologiske udgravninger | - | -
 
 @ autentisk
+con: foran navneord: et autentisk billede af + navneord; virke autentisk
 forms: autentisk, autentiske
 class: adjektiv
 S: t3-beskrivelse | formal | Som er ægte eller virker som det virkelige. | Authentic. | Skuespillerne forsøger at få serien til at virke mere autentisk. | The actors try to make the series seem more authentic. | virke autentisk; autentiske genstande | ægte; original | falsk
 
 @ anerkendt
+con: anerkendt af + nogen: anerkendt af UNESCO; anerkendt som + navneord
 forms: anerkendt
 class: adjektiv
 ddo: anerkende
 S: t3-beskrivelse | formal | Som officielt er godkendt eller har fået respekt. | Recognised; acknowledged. | Er gruppen officielt anerkendt som et nationalt mindretal? | Is the group officially recognised as a national minority? | officielt anerkendt; en anerkendt kunstner | respekteret; godkendt | -
 
 @ frivillig
+con: foran navneord: frivillige mentorer; være frivillig; på frivillig basis
 forms: frivillig, frivilligt, frivillige
 class: adjektiv
 S: t3-samfund | neutral | En person, der arbejder uden løn, fordi vedkommende gerne vil. | Volunteer. | Hun er frivillig på spillestedet Paletten. | She is a volunteer at the Paletten music venue. | være frivillig; frivillige hjælpere | - | -
@@ -186,22 +203,26 @@ class: verbum
 S: t3-handling | formal | Udføre noget og gøre det færdigt. | To carry out; to complete. | Byfesten holdes i den uge, hvor marchen gennemføres. | The town festival is held in the week when the march takes place. | gennemføre en plan; gennemføre en uddannelse | udføre; fuldføre | opgive
 
 @ kilde
+con: ifølge + kilde; en kilde til + navneord
 forms: kilde, kilden, kilder, kilderne, kildes, kildens, kilders, kildernes
 class: substantiv
 S: t3-forhold | neutral | Sted, person eller tekst, som oplysninger kommer fra. | Source. | Kilde: Let bearbejdet efter faktalink.dk. | Source: Slightly adapted from faktalink.dk. | ifølge kilder; en pålidelig kilde | ophav | -
 S: t3-sted | neutral | Vand, der strømmer op fra jorden. | Spring (water). | I skoven ligger en gammel kilde. | There is an old spring in the forest. | - | - | -
 
 @ særlig
+con: foran navneord: særligt værktøj; særligt + verbum/adjektiv: særligt fokus på
 forms: særlig, særligt, særlige, særligtellersærlig
 class: adjektiv
 S: t3-beskrivelse | neutral | Som er anderledes end det almindelige; speciel. | Special; particular; especially. | På turen kan man opleve den særlige natur i området. | On the trip you can experience the area's special nature. | særligt; i særdeleshed; særlig vigtig | speciel; usædvanlig | almindelig
 
 @ fokus
+con: have/sætte fokus på + navneord; i fokus
 forms: fokus, fokussetellerfokussen, fokusserellerfokus, fokusserneellerfokussene, fokussetellerfokussens, fokusserneellerfokussenes
 class: substantiv
 S: t3-tanke | neutral | Det, opmærksomheden særligt er rettet mod. | Focus. | Udstillingen har særligt fokus på det tyske mindretal. | The exhibition has a particular focus on the German minority. | have fokus på; sætte fokus på; i fokus | opmærksomhed | -
 
 @ tradition
+con: traditionen for + navneord: traditionen for pølsemageri; traditionen med + navneord
 forms: tradition, traditionen, traditioner, traditionerne, traditions, traditionens, traditioners, traditionernes
 class: substantiv
 S: t3-samfund | neutral | En skik eller vane, der går videre fra generation til generation. | Tradition. | Arkæologisk udgravning er efterhånden blevet en tradition. | Archaeological excavation has gradually become a tradition. | efter tradition; en lang tradition; holde fast i traditionen | skik; sædvane | -
@@ -228,6 +249,7 @@ class: verbum
 S: t3-handling | formal | Gøre brug af noget. | To use; to make use of. | Kvægdrivere har også benyttet hærvejen. | Cattle drovers have also used the Army Road. | benytte sig af; benytte lejligheden | bruge; anvende | -
 
 @ unik
+con: foran navneord: unikke møbler; unik for + navneord: unikt for et værksted
 forms: unik, unikt, unikke
 class: adjektiv
 S: t3-beskrivelse | neutral | Som der kun findes én af; helt særlig. | Unique. | Jeg køber gamle unikke møbler på loppemarkeder. | I buy unique old furniture at flea markets. | helt unik; en unik mulighed | enestående; særegen | almindelig
@@ -245,11 +267,13 @@ S: t3-handling | formal | Behandle eller ændre noget, fx en tekst eller et mate
 S: t3-tanke | neutral | Arbejde med en oplevelse i tankerne for at komme videre. | To process (feelings, experiences). | Det tog lang tid at bearbejde sorgen. | It took a long time to process the grief. | bearbejde en oplevelse | - | -
 
 @ konflikt
+con: en konflikt om + navneord; i konflikt med + nogen; speciale i konflikter
 forms: konflikt, konflikten, konflikter, konflikterne, konflikts, konfliktens, konflikters, konflikternes
 class: substantiv
 S: t3-samfund | neutral | En strid eller et sammenstød mellem to parter. | Conflict. | Modsætningerne udviklede sig til en national konflikt. | The tensions developed into a national conflict. | i konflikt med; løse en konflikt; en væbnet konflikt | strid; uenighed | -
 
 @ offentlig
+con: foran navneord: den offentlige sektor; offentlig transport
 forms: offentlig, offentligt, offentlige
 class: adjektiv
 S: t3-samfund | neutral | Som hører under staten, regionen eller kommunen. | Public (sector). | Den offentlige sektor skal handle mere hos små virksomheder. | The public sector should buy more from small businesses. | den offentlige sektor; offentlige midler | statslig; kommunal | privat

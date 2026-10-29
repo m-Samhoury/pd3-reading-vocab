@@ -142,6 +142,11 @@ dl .row { display: grid; grid-template-columns: 96px 1fr; gap: 10px; align-items
 dl .row dt { font-size: .8rem; font-weight: 600; color: var(--faint); }
 dl .row dd { margin: 0; }
 dl.facts { padding: 12px 14px; background: var(--paper); border-radius: 12px; }
+ul.cons { margin: 0; padding: 0; list-style: none; display: grid; gap: 4px; }
+ul.cons li { padding-left: 14px; position: relative; line-height: 1.45; }
+ul.cons li::before { content: "›"; position: absolute; left: 2px; color: var(--accent); font-weight: 700; }
+.pat .cap { font-variant: small-caps; font-weight: 700; letter-spacing: .03em; color: var(--soft); }
+.cons-more summary { cursor: pointer; color: var(--soft); font-size: .88rem; margin: 4px 0; }
 .forms { display: inline-flex; flex-wrap: wrap; gap: 6px; }
 .form { padding: 2px 9px; border-radius: 7px; background: var(--sheet); border: 1px solid var(--rule); font-weight: 600; font-size: .92rem; }
 .fsep { color: var(--faint); }

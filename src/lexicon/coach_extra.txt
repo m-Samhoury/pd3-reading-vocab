@@ -1,0 +1,28 @@
+# Guidet læring cards that are not on the study sheet and have no DDO example phrases:
+# card id | word class (blank = keep DDO's) | Brug (";"-separated, from the card's example and usage)
+ellers | | ellers kommer man for sent; og ellers; hvad ellers
+at_give_udtryk_for | | give udtryk for bekymring; give udtryk for sin holdning
+forventeligt | | det var forventeligt, at; som forventeligt
+at_resultere_i | | resultere i bedre karakterer; resultere i en stigning
+at_understrege | | understrege, at; understrege betydningen af
+at_skyldes | | skyldes, at; skyldes blandt andet
+eftersom | | eftersom bussen ikke kom
+derved | | og derved; sparer derved
+tilmed | | og tilmed; tilmed gratis
+på_den_ene_side_på_den_anden_side | fast udtryk (adverbiel forbindelse) | på den ene side …, på den anden side …
+skønt | | skønt han var træt
+såfremt | | såfremt du består
+forudsat_at | | forudsat at vejret er godt
+medmindre | | medmindre det regner; medmindre andet er aftalt
+med_henblik_på | fast udtryk (præpositionsforbindelse) | med henblik på job; med henblik på at + infinitiv
+undtagen | | alle undtagen; undtagen om søndagen
+bortset_fra | | bortset fra vejret; bortset fra det
+navnlig | | navnlig ældre; og navnlig
+herunder | | herunder børn; herunder også
+efterhånden_som | | efterhånden som man bliver ældre
+alt_i_alt | fast udtryk (adverbiel forbindelse) | alt i alt mener jeg
+samlet_set | fast udtryk (adverbiel forbindelse) | samlet set er det
+for_at_konkludere | fast udtryk (infinitivforbindelse) | for at konkludere:
+at_investere_i | | investere i nye skoler; investere penge i
+hvilket_betyder_at | fast udtryk | …, hvilket betyder, at; hvilket betyder, at man
+ikke_kun_men_også | fast udtryk (korrelativ) | ikke kun … men også; ikke kun dyrt, men også

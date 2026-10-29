@@ -242,6 +242,11 @@ def main():
         print("lexicon entries not used (no exam hit, not guide):", sorted(unused))
     import build_t23
     words += build_t23.build(units, {w["lemma"] for w in words})
+    # construction note ("con:" lines) for words where DDO lists no grammar pattern
+    lex = {1: lex1, 2: parse_lexicon(sorted(glob.glob(os.path.join(LEX, "tier[23]_*.txt"))))}
+    for w in words:
+        con = lex[min(w["tier"], 2)].get(w["lemma"], {}).get("meta", {}).get("con")
+        w["construction"] = [x.strip() for x in con.split("; ")] if con else []
     out = os.path.join(ROOT, "data")
     os.makedirs(out, exist_ok=True)
     groups = build_t23.groups(words, RELATIONS)

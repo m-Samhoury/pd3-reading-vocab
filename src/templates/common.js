@@ -83,14 +83,31 @@ const PD3 = (() => {
       o.example_da ? el("p", { class: "ex da", lang: "da" }, ...highlight(o.example_da, w)) : null,
       o.example_en ? el("p", { class: "en small" }, o.example_en) : null);
   }
+  // word classes that never inflect (connectors, adverbs, prepositions, fixed expressions)
+  const NOINFL = /^(adverbi|konjunktion|præposition|adverbiel|fast udtryk|infinitivforbindelse)/;
   /** bøjning row: DDO's endings plus the full forms */
-  function inflection(d) {
+  function inflection(d, w) {
+    const from = d.infl_from ? el("span", { class: "soft small" }, " " + t(d.participle ? "d.partof" : "d.inflfrom", d.infl_from)) : null;
     if (d.forms && d.forms.length) return row(t("d.inflection"), el("span", { class: "forms", lang: "da" },
       ...d.forms.flatMap((fs, i) => [i ? el("span", { class: "fsep" }, "|") : null, ...fs.map(f => el("span", { class: "form" }, f))])),
-      d.inflection ? el("span", { class: "soft small", lang: "da" }, " " + d.inflection) : null);
-    if (d.inflection) return row(t("d.inflection"), el("span", { lang: "da" }, d.inflection));
-    if (d.invariable) return row(t("d.inflection"), el("span", { class: "soft" }, t("d.invariable")));
+      d.inflection ? el("span", { class: "soft small", lang: "da" }, " " + d.inflection) : null, from);
+    if (d.inflection) return row(t("d.inflection"), el("span", { lang: "da" }, d.inflection), from);
+    if (d.invariable || NOINFL.test(w.word_class)) return row(t("d.inflection"), el("span", { class: "soft" }, t("d.invariable")));
     return null;
+  }
+  /** DDO's valency notation, readable: NOGEN/NOGET/+SÆTNING as small caps, over_for → over for */
+  function pattern(p) {
+    return el("span", { class: "pat", lang: "da" }, ...p.replace(/_/g, " ").replace(/\s*\/\s*/g, " / ").replace(/\+/g, " + ")
+      .split(/\b([A-ZÆØÅ]{3,})\b/).map((x, i) => i % 2 ? el("span", { class: "cap" }, x.toLowerCase()) : x));
+  }
+  /** what the word is used with: DDO's grammar patterns, else the note written from the exam sentences */
+  function construction(w) {
+    const g = (w.dict && w.dict.grammar) || [], items = g.length ? g.map(pattern) : (w.construction || []).map(x => el("span", { class: "pat", lang: "da" }, x));
+    if (!items.length) return null;
+    const li = x => el("li", null, x);
+    return row(t("d.construction"), el("ul", { class: "cons" }, ...items.slice(0, 4).map(li)),
+      items.length > 4 ? el("details", { class: "cons-more" }, el("summary", null, t("d.more", items.length - 4)), el("ul", { class: "cons" }, ...items.slice(4).map(li))) : null,
+      g.length ? el("span", { class: "soft small" }, t("d.consddo")) : null);
   }
   /** DDO's own numbered senses – only present in the private build */
   function ddoBlock(w) {
@@ -107,7 +124,9 @@ const PD3 = (() => {
   /** full dictionary-style entry (used on the study sheet and on the back of flashcards) */
   function entry(w, opts = {}) {
     const d = w.dict || {};
-    const facts = [inflection(d)].filter(Boolean);
+    const facts = [row(t("d.class"), el("span", null, w.word_class)),
+      d.gender ? row(t("d.gender"), el("span", { lang: "da" }, el("b", null, d.gender), " · " + t("d.gender." + d.gender))) : null,
+      inflection(d, w), construction(w)].filter(Boolean);
     const link = (href, label) => el("a", { class: "btn quiet small", href, target: "_blank", rel: "noopener" }, label, " ↗");
     const node = el(opts.tag || "article", { class: "entry", id: opts.id || null, "data-id": w.id },
       el("header", { class: "hw" },
@@ -115,8 +134,7 @@ const PD3 = (() => {
           d.gender ? el("span", { class: "gender", title: t("d.gender." + d.gender) }, d.gender) : null,
           el("span", { class: "lemma", lang: "da" }, displayLemma(w)),
           metaLine(w)),
-        el("div", { class: "hw-sub" }, el("span", { class: "cls" }, w.word_class),
-          w.grammar ? el("span", { class: "gram", lang: "da" }, w.grammar) : null),
+        w.grammar ? el("div", { class: "hw-sub" }, el("span", { class: "gram", lang: "da" }, w.grammar)) : null,
         d.en ? el("p", { class: "en-head" }, el("span", { class: "lbl" }, "EN"), d.en.join(" · ")) : null,
         w.source === "guide" ? el("p", { class: "flag guide" }, t("entry.guide")) : null),
       facts.length ? el("dl", { class: "facts" }, ...facts) : null,

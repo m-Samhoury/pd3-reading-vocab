@@ -100,6 +100,13 @@ const I18N = {
   "idx.progress": ["Dit fremskridt", "Your progress"], "idx.groups": ["Grupper", "Groups"], "idx.sources": ["Kilder", "Sources"],
   "idx.tests": ["Tests", "Tests"], "idx.last": [" · seneste {0}/{1}", " · last {0}/{1}"], "idx.none": [" · ingen endnu", " · none yet"],
   "brand": ["PD3 ordforråd", "PD3 vocabulary"],
+  "d.class": ["Ordklasse", "Word class"], "d.gender": ["Køn", "Gender"],
+  "d.construction": ["Konstruktion", "Construction"], "d.more": ["+ {0} flere", "+ {0} more"],
+  "d.consddo": ["Mønstre fra Den Danske Ordbog.", "Patterns from Den Danske Ordbog."],
+  "d.partof": ["(præteritum participium af «{0}», DDO)", "(past participle of «{0}», DDO)"],
+  "d.inflfrom": ["(DDO: opslaget «{0}»)", "(DDO: entry «{0}»)"],
+  "lg.nogen": ["en person · en ting (i konstruktioner)", "a person · a thing (in constructions)"],
+  "lg.saetning": ["at-sætning · hv-sætning (hvorfor, hvordan …) · at + infinitiv", "that-clause · wh-clause (why, how …) · to-infinitive"],
   "d.inflection": ["Bøjning", "Inflection"], "d.invariable": ["bøjes ikke", "does not inflect"],
   "d.sense": ["Betydning", "Meaning"], "d.senses": ["Betydninger", "Meanings"], "d.example": ["Eksempel", "Example"],
   "d.ddo": ["Den Danske Ordbog – ordret", "Den Danske Ordbog – verbatim"], "d.links": ["Slå op", "Look up"],
@@ -261,7 +268,8 @@ function infoDialog() {
   const lh = document.createElement("h3"); lh.textContent = t("lg.title");
   const dl = document.createElement("dl"); dl.className = "keylist";
   const rows = [["L1", "lg.L1"], ["L2A", "lg.L2A"], ["L2B", "lg.L2B"], ["L3", "lg.L3"],
-                ["Tier 1", "lg.T1"], ["Tier 2", "lg.T2"], ["Tier 3", "lg.T3"], [LANG === "en" ? "4 exams · 52×" : "4 prøver · 52×", "lg.freq"]];
+                ["Tier 1", "lg.T1"], ["Tier 2", "lg.T2"], ["Tier 3", "lg.T3"], [LANG === "en" ? "4 exams · 52×" : "4 prøver · 52×", "lg.freq"],
+                ["nogen · noget", "lg.nogen"], ["at + sætning · hv + sætning · at + infinitiv", "lg.saetning"]];
   for (const [k, v] of rows) {
     const dt = document.createElement("dt"); dt.textContent = k;
     const dd = document.createElement("dd"); dd.textContent = t(v);

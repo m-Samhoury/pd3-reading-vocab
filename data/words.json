@@ -189,7 +189,10 @@
    "headword_found": true,
    "pos": "konjunktion"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "fordi + ledsætning: …, fordi han ikke har tid"
+  ]
  },
  {
   "id": "t1-da",
@@ -394,7 +397,10 @@
    "headword_found": true,
    "pos": "forkortelse"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "da + ledsætning: Da det regnede, blev vi hjemme"
+  ]
  },
  {
   "id": "t1-idet",
@@ -497,7 +503,10 @@
    "headword_found": true,
    "pos": "konjunktion"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "idet + ledsætning"
+  ]
  },
  {
   "id": "t1-siden",
@@ -634,7 +643,10 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "siden + ledsætning / for … siden"
+  ]
  },
  {
   "id": "t1-for",
@@ -796,7 +808,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "guide": false
+  "guide": false,
+  "construction": []
  },
  {
   "id": "t1-nemlig",
@@ -1017,7 +1030,10 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": true
+  "guide": true,
+  "construction": [
+   "efter verbet: Han er nemlig syg"
+  ]
  },
  {
   "id": "t1-paa-grund-af",
@@ -1175,7 +1191,10 @@
    "headword_found": false,
    "pos": ""
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "på grund af + navneord"
+  ]
  },
  {
   "id": "t1-som-foelge-af",
@@ -1258,7 +1277,10 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "som følge af + navneord"
+  ]
  },
  {
   "id": "t1-af-den-grund",
@@ -1342,7 +1364,10 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "guide": true
+  "guide": true,
+  "construction": [
+   "af den grund + verbum + subjekt"
+  ]
  },
  {
   "id": "t1-saa",
@@ -1623,7 +1648,8 @@
    "headword_found": true,
    "pos": "udråbsord"
   },
-  "guide": true
+  "guide": true,
+  "construction": []
  },
  {
   "id": "t1-derfor",
@@ -1889,7 +1915,10 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": true
+  "guide": true,
+  "construction": [
+   "derfor + verbum + subjekt: Derfor kom han ikke"
+  ]
  },
  {
   "id": "t1-dermed",
@@ -2015,7 +2044,10 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": true
+  "guide": true,
+  "construction": [
+   "dermed + verbum + subjekt: Dermed blev det dyrere"
+  ]
  },
  {
   "id": "t1-saaledes",
@@ -2171,7 +2203,10 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": true
+  "guide": true,
+  "construction": [
+   "således + verbum + subjekt: Således sparer man penge"
+  ]
  },
  {
   "id": "t1-foelgelig",
@@ -2235,7 +2270,10 @@
    "headword_found": true,
    "pos": ""
   },
-  "guide": true
+  "guide": true,
+  "construction": [
+   "følgelig + verbum + subjekt"
+  ]
  },
  {
   "id": "t1-hermed",
@@ -2327,7 +2365,10 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "hermed + verbum + subjekt: Hermed slutter vi"
+  ]
  },
  {
   "id": "t1-hvorfor",
@@ -2424,7 +2465,10 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "…, hvorfor + ledsætning (om hele den foregående sætning)"
+  ]
  },
  {
   "id": "t1-hvilket",
@@ -2574,7 +2618,10 @@
    "headword_found": true,
    "pos": "pronomen"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "…, hvilket + ledsætning (om hele den foregående sætning): hvilket betyder, at …"
+  ]
  },
  {
   "id": "t1-altsaa",
@@ -2753,7 +2800,11 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "efter verbet: Der er altså meget …",
+   "først: Altså + verbum + subjekt"
+  ]
  },
  {
   "id": "t1-det-betyder-at",
@@ -2880,7 +2931,10 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "det betyder, at + ledsætning"
+  ]
  },
  {
   "id": "t1-men",
@@ -3161,7 +3215,10 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "guide": true
+  "guide": true,
+  "construction": [
+   "…, men + hovedsætning"
+  ]
  },
  {
   "id": "t1-imidlertid",
@@ -3321,7 +3378,10 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": true
+  "guide": true,
+  "construction": [
+   "efter verbet: Den er imidlertid dyr"
+  ]
  },
  {
   "id": "t1-dog",
@@ -3562,7 +3622,10 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": true
+  "guide": true,
+  "construction": [
+   "efter verbet: Det er dog dyrt"
+  ]
  },
  {
   "id": "t1-derimod",
@@ -3682,7 +3745,10 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": true
+  "guide": true,
+  "construction": [
+   "efter verbet: Hun er derimod glad"
+  ]
  },
  {
   "id": "t1-til-gengaeld",
@@ -3813,7 +3879,8 @@
    "headword_found": false,
    "pos": ""
   },
-  "guide": true
+  "guide": true,
+  "construction": []
  },
  {
   "id": "t1-omvendt",
@@ -3939,7 +4006,11 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "guide": true
+  "guide": true,
+  "construction": [
+   "omvendt + verbum + subjekt",
+   "lige omvendt"
+  ]
  },
  {
   "id": "t1-i-modsaetning-til",
@@ -4046,7 +4117,8 @@
    "headword_found": false,
    "pos": ""
   },
-  "guide": true
+  "guide": true,
+  "construction": []
  },
  {
   "id": "t1-hvorimod",
@@ -4090,7 +4162,10 @@
     "en_definition": "Whereas.",
     "example_da": "Mange unge vælger humaniora, hvorimod færre vælger en teknisk uddannelse.",
     "example_en": "Many young people choose the humanities, whereas fewer choose a technical education.",
-    "collocations": [],
+    "collocations": [
+     "hvorimod færre",
+     "hvorimod andre"
+    ],
     "synonyms": [
      "mens",
      "derimod"
@@ -4106,7 +4181,10 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": true
+  "guide": true,
+  "construction": [
+   "…, hvorimod + ledsætning"
+  ]
  },
  {
   "id": "t1-mens",
@@ -4263,7 +4341,10 @@
    "headword_found": true,
    "pos": ""
   },
-  "guide": true
+  "guide": true,
+  "construction": [
+   "mens + ledsætning"
+  ]
  },
  {
   "id": "t1-imens",
@@ -4342,7 +4423,11 @@
    "headword_found": true,
    "pos": ""
   },
-  "guide": true
+  "guide": true,
+  "construction": [
+   "imens + ledsætning",
+   "og imens + verbum + subjekt"
+  ]
  },
  {
   "id": "t1-paa-den-ene-side",
@@ -4401,7 +4486,10 @@
    "headword_found": false,
    "pos": ""
   },
-  "guide": true
+  "guide": true,
+  "construction": [
+   "på den ene side + verbum + subjekt …, på den anden side + verbum + subjekt"
+  ]
  },
  {
   "id": "t1-paa-den-anden-side",
@@ -4501,7 +4589,10 @@
    "headword_found": false,
    "pos": ""
   },
-  "guide": true
+  "guide": true,
+  "construction": [
+   "på den anden side + verbum + subjekt"
+  ]
  },
  {
   "id": "t1-tvaertimod",
@@ -4593,7 +4684,10 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "tværtimod + verbum + subjekt"
+  ]
  },
  {
   "id": "t1-modsat",
@@ -4690,7 +4784,11 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "modsat + verbum + subjekt",
+   "modsat + navneord (modsat byerne)"
+  ]
  },
  {
   "id": "t1-i-stedet-for",
@@ -4834,7 +4932,8 @@
    "headword_found": false,
    "pos": ""
   },
-  "guide": false
+  "guide": false,
+  "construction": []
  },
  {
   "id": "t1-selvom",
@@ -5038,7 +5137,10 @@
    "headword_found": true,
    "pos": ""
   },
-  "guide": true
+  "guide": true,
+  "construction": [
+   "selvom + ledsætning: selvom det regner"
+  ]
  },
  {
   "id": "t1-alligevel",
@@ -5228,7 +5330,10 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": true
+  "guide": true,
+  "construction": [
+   "efter verbet: Han kom alligevel"
+  ]
  },
  {
   "id": "t1-ikke-desto-mindre",
@@ -5291,7 +5396,10 @@
    "headword_found": false,
    "pos": ""
   },
-  "guide": true
+  "guide": true,
+  "construction": [
+   "ikke desto mindre + verbum + subjekt"
+  ]
  },
  {
   "id": "t1-uanset",
@@ -5396,7 +5504,8 @@
    "headword_found": true,
    "pos": "konjunktion"
   },
-  "guide": false
+  "guide": false,
+  "construction": []
  },
  {
   "id": "t1-ganske-vist",
@@ -5478,7 +5587,10 @@
    "headword_found": false,
    "pos": ""
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "ganske vist …, men …"
+  ]
  },
  {
   "id": "t1-stadig-vaek",
@@ -5671,7 +5783,11 @@
    "headword_found": true,
    "pos": ""
   },
-  "guide": true
+  "guide": true,
+  "construction": [
+   "efter verbet: Det er stadig …",
+   "stadig + komparativ (stadig flere)"
+  ]
  },
  {
   "id": "t1-trods-alt",
@@ -5755,7 +5871,10 @@
    "headword_found": false,
    "pos": ""
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "efter verbet: Jeg havde trods alt …"
+  ]
  },
  {
   "id": "t1-ogsaa",
@@ -6024,7 +6143,11 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": true
+  "guide": true,
+  "construction": [
+   "efter verbet: De lokale butikker har også …",
+   "ikke kun … men også"
+  ]
  },
  {
   "id": "t1-ligesom",
@@ -6126,7 +6249,8 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": true
+  "guide": true,
+  "construction": []
  },
  {
   "id": "t1-ligeledes",
@@ -6183,7 +6307,10 @@
     "en_definition": "Likewise; similarly.",
     "example_da": "Mange vælger at studere i København. Ligeledes er Aarhus populær.",
     "example_en": "Many choose to study in Copenhagen. Likewise, Aarhus is popular.",
-    "collocations": [],
+    "collocations": [
+     "og ligeledes",
+     "ligeledes er"
+    ],
     "synonyms": [
      "også",
      "tilsvarende",
@@ -6203,7 +6330,10 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": true
+  "guide": true,
+  "construction": [
+   "efter verbet: Hun er ligeledes glad"
+  ]
  },
  {
   "id": "t1-til-sammenligning",
@@ -6247,7 +6377,10 @@
     "en_definition": "By comparison; for comparison.",
     "example_da": "81 % af dem uden handicap kom i arbejde. Til sammenligning gjaldt det kun 60 % af dem med handicap.",
     "example_en": "81% of those without a disability got a job. By comparison, this applied to only 60% of those with a disability.",
-    "collocations": [],
+    "collocations": [
+     "til sammenligning gjaldt det",
+     "til sammenligning med"
+    ],
     "synonyms": [
      "sammenlignet med",
      "i forhold til"
@@ -6263,7 +6396,10 @@
    "headword_found": false,
    "pos": ""
   },
-  "guide": true
+  "guide": true,
+  "construction": [
+   "til sammenligning + verbum + subjekt"
+  ]
  },
  {
   "id": "t1-i-forhold-til",
@@ -6380,7 +6516,10 @@
    "headword_found": false,
    "pos": ""
   },
-  "guide": true
+  "guide": true,
+  "construction": [
+   "i forhold til + navneord"
+  ]
  },
  {
   "id": "t1-paa-samme-maade",
@@ -6465,7 +6604,11 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "på samme måde + verbum + subjekt",
+   "på samme måde som + navneord/sætning"
+  ]
  },
  {
   "id": "t1-tilsvarende",
@@ -6565,7 +6708,11 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "en tilsvarende + navneord",
+   "tilsvarende + verbum + subjekt"
+  ]
  },
  {
   "id": "t1-heller-ikke",
@@ -6681,7 +6828,10 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": true
+  "guide": true,
+  "construction": [
+   "efter verbet: Jeg kan heller ikke"
+  ]
  },
  {
   "id": "t1-baade-og",
@@ -6898,7 +7048,10 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "guide": true
+  "guide": true,
+  "construction": [
+   "både A og B"
+  ]
  },
  {
   "id": "t1-hverken-eller",
@@ -6996,7 +7149,10 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": true
+  "guide": true,
+  "construction": [
+   "hverken A eller B (uden ikke)"
+  ]
  },
  {
   "id": "t1-end",
@@ -7225,7 +7381,8 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": false
+  "guide": false,
+  "construction": []
  },
  {
   "id": "t1-som-om",
@@ -7307,7 +7464,10 @@
    "headword_found": false,
    "pos": ""
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "som om + ledsætning: Det er, som om …"
+  ]
  },
  {
   "id": "t1-hvis",
@@ -7560,7 +7720,10 @@
    "headword_found": true,
    "pos": "pronomen"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "hvis + ledsætning: Hvis det regner, …"
+  ]
  },
  {
   "id": "t1-naar",
@@ -7786,7 +7949,10 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "når + ledsætning"
+  ]
  },
  {
   "id": "t1-om-konj",
@@ -7966,7 +8132,10 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": true
+  "guide": true,
+  "construction": [
+   "om + ledsætning (indirekte ja/nej-spørgsmål): spørge, om …"
+  ]
  },
  {
   "id": "t1-hvorvidt",
@@ -8028,7 +8197,10 @@
    "headword_found": true,
    "pos": "konjunktion"
   },
-  "guide": true
+  "guide": true,
+  "construction": [
+   "hvorvidt + ledsætning (indirekte ja/nej-spørgsmål): afgøre, hvorvidt …"
+  ]
  },
  {
   "id": "t1-for-at",
@@ -8276,7 +8448,8 @@
    "headword_found": false,
    "pos": ""
   },
-  "guide": false
+  "guide": false,
+  "construction": []
  },
  {
   "id": "t1-og",
@@ -8614,7 +8787,11 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "A og B",
+   "og + hovedsætning"
+  ]
  },
  {
   "id": "t1-desuden",
@@ -8787,7 +8964,10 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": true
+  "guide": true,
+  "construction": [
+   "desuden + verbum + subjekt: Desuden er det billigt"
+  ]
  },
  {
   "id": "t1-derudover",
@@ -8927,7 +9107,10 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "derudover + verbum + subjekt"
+  ]
  },
  {
   "id": "t1-herudover",
@@ -8971,7 +9154,10 @@
     "en_definition": "In addition to this; furthermore.",
     "example_da": "Herudover tilbyder kommunen kurser i jobsøgning.",
     "example_en": "In addition to this, the municipality offers courses in job seeking.",
-    "collocations": [],
+    "collocations": [
+     "og herudover",
+     "herudover tilbyder"
+    ],
     "synonyms": [
      "derudover",
      "desuden",
@@ -8988,7 +9174,10 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": true
+  "guide": true,
+  "construction": [
+   "herudover + verbum + subjekt"
+  ]
  },
  {
   "id": "t1-endvidere",
@@ -9052,7 +9241,10 @@
     "en_definition": "Furthermore; moreover.",
     "example_da": "Brosten i plænen markerer endvidere, hvor den gamle kirkes tilbygninger lå.",
     "example_en": "Cobblestones in the lawn furthermore mark where the old church's extensions were.",
-    "collocations": [],
+    "collocations": [
+     "og endvidere",
+     "endvidere er"
+    ],
     "synonyms": [
      "desuden",
      "derudover",
@@ -9069,7 +9261,10 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "endvidere + verbum + subjekt"
+  ]
  },
  {
   "id": "t1-ydermere",
@@ -9126,7 +9321,10 @@
     "en_definition": "Furthermore; moreover.",
     "example_da": "Vindmøller er dyre. Ydermere er de svære at placere.",
     "example_en": "Wind turbines are expensive. Furthermore, they are hard to place.",
-    "collocations": [],
+    "collocations": [
+     "og ydermere",
+     "ydermere er"
+    ],
     "synonyms": [
      "desuden",
      "endvidere",
@@ -9158,7 +9356,10 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "ydermere + verbum + subjekt"
+  ]
  },
  {
   "id": "t1-samtidig",
@@ -9302,7 +9503,11 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "guide": true
+  "guide": true,
+  "construction": [
+   "samtidig + verbum + subjekt",
+   "samtidig med at + ledsætning"
+  ]
  },
  {
   "id": "t1-i-oevrigt",
@@ -9367,7 +9572,10 @@
     "en_definition": "Moreover; besides.",
     "example_da": "Trelleborg er den bedst bevarede og i øvrigt den eneste med en befæstet forborg.",
     "example_en": "Trelleborg is the best preserved and moreover the only one with a fortified outer bailey.",
-    "collocations": [],
+    "collocations": [
+     "og i øvrigt",
+     "i øvrigt den eneste"
+    ],
     "synonyms": [
      "desuden",
      "derudover"
@@ -9414,7 +9622,10 @@
    "headword_found": false,
    "pos": ""
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "efter verbet: Det er i øvrigt …"
+  ]
  },
  {
   "id": "t1-samt",
@@ -9511,7 +9722,10 @@
     "en_definition": "And; as well as.",
     "example_da": "Museets udstillinger findes i syv bygninger samt i parken og skoven.",
     "example_en": "The museum's exhibitions are found in seven buildings as well as in the park and the forest.",
-    "collocations": [],
+    "collocations": [
+     "samt i",
+     "samt et"
+    ],
     "synonyms": [
      "og",
      "tillige med"
@@ -9527,7 +9741,10 @@
    "headword_found": true,
    "pos": "konjunktion"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "samt + navneord: bøger samt aviser"
+  ]
  },
  {
   "id": "t1-ikke-alene-men-ogsaa",
@@ -9631,7 +9848,10 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "ikke alene + led …, men også + led"
+  ]
  },
  {
   "id": "t1-blandt-andet",
@@ -9808,7 +10028,10 @@
    "headword_found": true,
    "pos": "præposition"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "blandt andet (bl.a.)"
+  ]
  },
  {
   "id": "t1-for-eksempel",
@@ -10010,7 +10233,11 @@
    "headword_found": false,
    "pos": ""
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "efter verbet: Man kan for eksempel …",
+   "foran et led: for eksempel København"
+  ]
  },
  {
   "id": "t1-eksempelvis",
@@ -10081,7 +10308,10 @@
     "en_definition": "For example; for instance.",
     "example_da": "Det kan eksempelvis være aktiviteter som at hygge med familien eller læse.",
     "example_en": "It can, for example, be activities such as spending cosy time with the family or reading.",
-    "collocations": [],
+    "collocations": [
+     "eksempelvis være",
+     "som eksempelvis"
+    ],
     "synonyms": [
      "for eksempel",
      "blandt andet"
@@ -10097,7 +10327,10 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "eksempelvis + navneord"
+  ]
  },
  {
   "id": "t1-isaer",
@@ -10242,7 +10475,10 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "især + navneord: især børn"
+  ]
  },
  {
   "id": "t1-endda",
@@ -10343,7 +10579,11 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "efter verbet: Det er endda …",
+   "foran et led: måske endda hyggelig"
+  ]
  },
  {
   "id": "t1-ogsaa-selvom",
@@ -10407,7 +10647,9 @@
     "en_definition": "Even though; even if.",
     "example_da": "De trives med ansvar for medarbejdere – også selvom det ikke altid er lige let.",
     "example_en": "They thrive on being responsible for staff – even though it is not always easy.",
-    "collocations": [],
+    "collocations": [
+     "– også selvom det ikke …"
+    ],
     "synonyms": [
      "selvom",
      "selv om",
@@ -10424,7 +10666,10 @@
    "headword_found": true,
    "pos": ""
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "også selvom + ledsætning"
+  ]
  },
  {
   "id": "t1-frem-for",
@@ -10542,7 +10787,10 @@
    "headword_found": true,
    "pos": ""
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "frem for + navneord / at"
+  ]
  },
  {
   "id": "t1-uden-at",
@@ -10664,7 +10912,8 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": false
+  "guide": false,
+  "construction": []
  },
  {
   "id": "t1-enten-eller",
@@ -10790,7 +11039,10 @@
    "headword_found": true,
    "pos": "konjunktion"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "enten + led … eller + led"
+  ]
  },
  {
   "id": "t1-eller",
@@ -11027,7 +11279,10 @@
    "headword_found": true,
    "pos": "konjunktion"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "A eller B"
+  ]
  },
  {
   "id": "t1-heldigvis",
@@ -11146,7 +11401,10 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "heldigvis + verbum + subjekt: Heldigvis kom han"
+  ]
  },
  {
   "id": "t1-desvaerre",
@@ -11290,7 +11548,8 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": false
+  "guide": false,
+  "construction": []
  },
  {
   "id": "t1-faktisk",
@@ -11498,7 +11757,10 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "efter verbet: Det er faktisk godt"
+  ]
  },
  {
   "id": "t1-selvfoelgelig",
@@ -11672,7 +11934,10 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "efter verbet: Det er selvfølgelig …"
+  ]
  },
  {
   "id": "t1-naturligvis",
@@ -11770,7 +12035,10 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "naturligvis + verbum + subjekt"
+  ]
  },
  {
   "id": "t1-maaske",
@@ -11960,7 +12228,11 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "efter verbet: Det lyder måske …",
+   "først: Måske + verbum + subjekt"
+  ]
  },
  {
   "id": "t1-sandsynligvis",
@@ -12024,7 +12296,10 @@
     "en_definition": "Probably; most likely.",
     "example_da": "Nyker Rundkirke er den mindste og sandsynligvis også den yngste.",
     "example_en": "Nyker Round Church is the smallest and probably also the youngest.",
-    "collocations": [],
+    "collocations": [
+     "sandsynligvis også",
+     "vil sandsynligvis"
+    ],
     "synonyms": [
      "formentlig",
      "nok",
@@ -12043,7 +12318,10 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "efter verbet: Den er sandsynligvis …"
+  ]
  },
  {
   "id": "t1-egentlig",
@@ -12221,7 +12499,10 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "efter verbet: Man skal egentlig …"
+  ]
  },
  {
   "id": "t1-i-hvert-fald",
@@ -12331,7 +12612,10 @@
    "headword_found": false,
    "pos": ""
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "efter verbet: Det mener i hvert fald …"
+  ]
  },
  {
   "id": "t1-ifoelge",
@@ -12475,7 +12759,10 @@
    "headword_found": true,
    "pos": "præposition"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "ifølge + navneord: ifølge teksten"
+  ]
  },
  {
   "id": "t1-umiddelbart",
@@ -12623,7 +12910,10 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "efter verbet: Det kan umiddelbart virke …"
+  ]
  },
  {
   "id": "t1-i-virkeligheden",
@@ -12701,7 +12991,10 @@
     "en_definition": "In reality; actually.",
     "example_da": "I virkeligheden bevæger Bornholm sig ikke meget.",
     "example_en": "In reality, Bornholm does not move much.",
-    "collocations": [],
+    "collocations": [
+     "men i virkeligheden",
+     "i virkeligheden havde"
+    ],
     "synonyms": [
      "faktisk",
      "egentlig",
@@ -12720,7 +13013,11 @@
    "headword_found": false,
    "pos": ""
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "efter verbet: Det er i virkeligheden …",
+   "først: I virkeligheden + verbum + subjekt"
+  ]
  },
  {
   "id": "t1-tilfaeldigvis",
@@ -12797,7 +13094,10 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": true
+  "guide": true,
+  "construction": [
+   "efter verbet: Hun var tilfældigvis …"
+  ]
  },
  {
   "id": "t1-naeppe",
@@ -12881,7 +13181,10 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": true
+  "guide": true,
+  "construction": [
+   "næppe uden ikke: Han kommer næppe"
+  ]
  },
  {
   "id": "t1-overraskende-nok",
@@ -12945,7 +13248,9 @@
     "en_definition": "Surprisingly.",
     "example_da": "Overraskende nok kunne 15 ud af 18 fortælle, at deres handicap har lille betydning.",
     "example_en": "Surprisingly, 15 out of 18 said their disability has little significance.",
-    "collocations": [],
+    "collocations": [
+     "overraskende nok kunne"
+    ],
     "synonyms": [
      "mod forventning"
     ],
@@ -12962,7 +13267,10 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "overraskende nok + verbum + subjekt"
+  ]
  },
  {
   "id": "t1-generelt",
@@ -13143,7 +13451,10 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "efter verbet: Vi er generelt …"
+  ]
  },
  {
   "id": "t1-foerst",
@@ -13293,7 +13604,8 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": false
+  "guide": false,
+  "construction": []
  },
  {
   "id": "t1-for-det-foerste",
@@ -13355,7 +13667,11 @@
    "headword_found": false,
    "pos": ""
   },
-  "guide": true
+  "guide": true,
+  "construction": [
+   "for det første + verbum + subjekt …",
+   "for det andet + verbum + subjekt"
+  ]
  },
  {
   "id": "t1-foerst-og-fremmest",
@@ -13437,7 +13753,10 @@
     "en_definition": "First and foremost; above all.",
     "example_da": "De fleste ved godt, at det at starte sit eget først og fremmest er hårdt arbejde.",
     "example_en": "Most people know that starting your own business is first and foremost hard work.",
-    "collocations": [],
+    "collocations": [
+     "først og fremmest er",
+     "først og fremmest i"
+    ],
     "synonyms": [
      "især",
      "frem for alt",
@@ -13454,7 +13773,11 @@
    "headword_found": false,
    "pos": ""
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "efter verbet: Det er først og fremmest …",
+   "foran et led"
+  ]
  },
  {
   "id": "t1-herefter",
@@ -13518,7 +13841,10 @@
     "en_definition": "After this; thereafter.",
     "example_da": "Der blev bygget en borg, og byen blev herefter kaldt Viborg.",
     "example_en": "A castle was built, and the town was thereafter called Viborg.",
-    "collocations": [],
+    "collocations": [
+     "og herefter",
+     "blev herefter"
+    ],
     "synonyms": [
      "derefter",
      "siden",
@@ -13550,7 +13876,10 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": true
+  "guide": true,
+  "construction": [
+   "herefter + verbum + subjekt"
+  ]
  },
  {
   "id": "t1-til-sidst",
@@ -13656,7 +13985,10 @@
    "headword_found": false,
    "pos": ""
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "til sidst + verbum + subjekt"
+  ]
  },
  {
   "id": "t1-endelig",
@@ -13844,7 +14176,10 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "endelig + verbum + subjekt"
+  ]
  },
  {
   "id": "t1-efterhaanden",
@@ -13970,7 +14305,11 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "efterhånden + verbum + subjekt",
+   "efterhånden som + ledsætning"
+  ]
  },
  {
   "id": "t1-efter-at",
@@ -14068,7 +14407,10 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "efter at + sætning"
+  ]
  },
  {
   "id": "t1-foer",
@@ -14225,7 +14567,11 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "før + ledsætning: …, før de vil …",
+   "før + navneord/tidspunkt"
+  ]
  },
  {
   "id": "t1-inden",
@@ -14361,7 +14707,10 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "inden + ledsætning eller navneord"
+  ]
  },
  {
   "id": "t1-indtil",
@@ -14502,7 +14851,11 @@
    "headword_found": true,
    "pos": "konjunktion"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "indtil + ledsætning",
+   "indtil + navneord/tidspunkt (indtil nu)"
+  ]
  },
  {
   "id": "t1-hidtil",
@@ -14586,7 +14939,11 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "efter verbet: Det har hidtil …",
+   "foran adjektiv: den hidtil mest …"
+  ]
  },
  {
   "id": "t1-med-andre-ord",
@@ -14658,7 +15015,9 @@
     "en_definition": "In other words.",
     "example_da": "Med andre ord er vi generelt mere åbne over for at prøve noget nyt.",
     "example_en": "In other words, we are generally more open to trying something new.",
-    "collocations": [],
+    "collocations": [
+     "med andre ord er"
+    ],
     "synonyms": [
      "det vil sige",
      "altså",
@@ -14691,7 +15050,10 @@
    "headword_found": false,
    "pos": ""
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "med andre ord + verbum + subjekt"
+  ]
  },
  {
   "id": "t1-det-vil-sige",
@@ -14807,7 +15169,10 @@
    "headword_found": false,
    "pos": ""
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "…, det vil sige + led (forklarer det foregående)"
+  ]
  },
  {
   "id": "t1-som-naevnt",
@@ -14889,7 +15254,11 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "guide": true
+  "guide": true,
+  "construction": [
+   "som nævnt + verbum + subjekt",
+   "efter verbet: Det forventes som nævnt, at …"
+  ]
  },
  {
   "id": "t1-kort-sagt",
@@ -14971,7 +15340,10 @@
    "headword_found": false,
    "pos": ""
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "kort sagt + verbum + subjekt"
+  ]
  },
  {
   "id": "t1-i-form-af",
@@ -15035,7 +15407,10 @@
     "en_definition": "In the form of.",
     "example_da": "I vikingetiden var der en central magt i form af skiftende konger.",
     "example_en": "In the Viking Age there was a central power in the form of changing kings.",
-    "collocations": [],
+    "collocations": [
+     "i form af skiftende konger",
+     "i form af penge"
+    ],
     "synonyms": [
      "som",
      "bestående af"
@@ -15051,7 +15426,10 @@
    "headword_found": false,
    "pos": ""
   },
-  "guide": false
+  "guide": false,
+  "construction": [
+   "i form af + navneord"
+  ]
  },
  {
   "id": "t2-tidligere",
@@ -15210,7 +15588,12 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "tidligere end + led/sætning",
+   "foran navneord: den tidligere minister",
+   "efter verbet: Hvad har der tidligere været …"
+  ]
  },
  {
   "id": "t2-foelge",
@@ -15430,7 +15813,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-foelgende",
@@ -15520,7 +15904,12 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "følgende + navneord (uden den/det): følgende udsagn",
+   "den følgende dag",
+   "i det følgende"
+  ]
  },
  {
   "id": "t2-fordel",
@@ -15691,7 +16080,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-mulighed",
@@ -15893,7 +16283,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-grund",
@@ -16112,7 +16503,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-forskellig",
@@ -16321,7 +16713,11 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": [
+   "forskellig fra + navneord",
+   "foran navneord: forskellige bygninger"
+  ]
  },
  {
   "id": "t2-udfordring",
@@ -16466,7 +16862,10 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": [
+   "udfordring for"
+  ]
  },
  {
   "id": "t2-afvise",
@@ -16589,7 +16988,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t3-moderne",
@@ -16725,7 +17125,11 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "foran navneord: et moderne shoppingcenter",
+   "efter være: er moderne (bøjes ikke)"
+  ]
  },
  {
   "id": "t2-fysisk",
@@ -16874,7 +17278,12 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": [
+   "foran navneord: fysisk træning",
+   "foran adjektiv: fysisk aktiv",
+   "mentalt og fysisk"
+  ]
  },
  {
   "id": "t2-modstand",
@@ -17016,7 +17425,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-behov",
@@ -17153,7 +17563,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-mental",
@@ -17268,7 +17679,11 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": [
+   "foran navneord: mental sundhed",
+   "som adverbium: mentalt og fysisk på toppen"
+  ]
  },
  {
   "id": "t2-opleve",
@@ -17424,7 +17839,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t3-oplevelse",
@@ -17571,7 +17987,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t2-aarsag",
@@ -17680,7 +18097,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-overensstemmelse",
@@ -17786,7 +18204,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-maal",
@@ -17954,7 +18373,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-forklaring",
@@ -18051,7 +18471,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-forklare",
@@ -18146,7 +18567,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-sjaelden",
@@ -18255,7 +18677,11 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": [
+   "det er sjældent, (at) + ledsætning",
+   "foran navneord: sjældne arter"
+  ]
  },
  {
   "id": "t2-forudsaetning",
@@ -18362,7 +18788,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-omkostning",
@@ -18445,7 +18872,10 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": [
+   "omkostninger ved + navneord / at + infinitiv"
+  ]
  },
  {
   "id": "t2-formaal",
@@ -18568,7 +18998,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-forhindre",
@@ -18691,7 +19122,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-klage",
@@ -18805,7 +19237,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-husleje",
@@ -18914,7 +19347,12 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": [
+   "betale husleje",
+   "høj husleje",
+   "huslejen stiger"
+  ]
  },
  {
   "id": "t2-livskvalitet",
@@ -19017,7 +19455,11 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": [
+   "livskvaliteten for + nogen",
+   "forbedre/forringe livskvaliteten"
+  ]
  },
  {
   "id": "t2-bekraefte",
@@ -19141,7 +19583,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-noedvendig",
@@ -19231,7 +19674,12 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": [
+   "det er nødvendigt at + infinitiv",
+   "nødvendig for + navneord",
+   "hvis nødvendigt"
+  ]
  },
  {
   "id": "t2-konsekvens",
@@ -19336,7 +19784,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-udskifte",
@@ -19424,7 +19873,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-problematik",
@@ -19512,7 +19962,11 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": [
+   "problematikken er, at + ledsætning",
+   "problematikken omkring + navneord"
+  ]
  },
  {
   "id": "t2-forlaenge",
@@ -19614,7 +20068,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-reducere",
@@ -19705,7 +20160,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-garantere",
@@ -19791,7 +20247,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-paapege",
@@ -19878,7 +20335,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-tendens",
@@ -19992,7 +20450,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-ansvar",
@@ -20125,7 +20584,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-opbakning",
@@ -20250,7 +20710,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-evne",
@@ -20368,7 +20829,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-maalsaetning",
@@ -20457,7 +20919,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-krav",
@@ -20597,7 +21060,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-typisk",
@@ -20723,7 +21187,11 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": [
+   "typisk for + navneord",
+   "efter verbet: Man har typisk mere overskud"
+  ]
  },
  {
   "id": "t2-udvalg",
@@ -20841,7 +21309,11 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": [
+   "udvalget af + navneord: udvalget af uddannelser",
+   "sidde i et udvalg"
+  ]
  },
  {
   "id": "t2-karakteristisk",
@@ -20943,7 +21415,8 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-udvide",
@@ -21050,7 +21523,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-reklame",
@@ -21141,7 +21615,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-kontrast",
@@ -21233,7 +21708,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-omtale",
@@ -21340,7 +21816,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-kvalitet",
@@ -21464,7 +21941,11 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": [
+   "af god/høj kvalitet",
+   "kvaliteten af + navneord"
+  ]
  },
  {
   "id": "t2-paastand",
@@ -21557,7 +22038,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-ansoegning",
@@ -21647,7 +22129,10 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": [
+   "ansøgning om + navneord / at + infinitiv: ansøgning om at blive …"
+  ]
  },
  {
   "id": "t2-investere",
@@ -21731,7 +22216,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-vejledning",
@@ -21840,7 +22326,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-forslag",
@@ -21928,7 +22415,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-informere",
@@ -22015,7 +22503,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-undtagelse",
@@ -22104,7 +22593,10 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": [
+   "undtagelse fra"
+  ]
  },
  {
   "id": "t2-beklage",
@@ -22210,7 +22702,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-fortryde",
@@ -22310,7 +22803,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-kulturel",
@@ -22406,7 +22900,11 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": [
+   "foran navneord: kulturelle tilbud",
+   "efter være: aktiviteterne er kulturelle"
+  ]
  },
  {
   "id": "t2-arbejdsmaessig",
@@ -22484,7 +22982,11 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": [
+   "foran navneord: arbejdsmæssige udfordringer",
+   "arbejdsmæssigt set"
+  ]
  },
  {
   "id": "t2-advarsel",
@@ -22558,7 +23060,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-idyllisere",
@@ -22629,7 +23132,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-betingelse",
@@ -22723,7 +23227,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-forenkle",
@@ -22796,7 +23301,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-forkorte",
@@ -22887,7 +23393,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-udelukke",
@@ -22977,7 +23484,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-modsige",
@@ -23067,7 +23575,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-logisk",
@@ -23137,7 +23646,10 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": [
+   "Det er logisk, at + sætning"
+  ]
  },
  {
   "id": "t2-beregne",
@@ -23226,7 +23738,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-offentliggoere",
@@ -23301,7 +23814,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-muliggoere",
@@ -23374,7 +23888,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-problemstilling",
@@ -23449,7 +23964,11 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": [
+   "tage en problemstilling op",
+   "problemstillingen omkring + navneord"
+  ]
  },
  {
   "id": "t2-barriere",
@@ -23523,7 +24042,10 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": [
+   "en barriere for + navneord / at + infinitiv"
+  ]
  },
  {
   "id": "t2-gentage",
@@ -23609,7 +24131,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-benaegte",
@@ -23684,7 +24207,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-forsikring",
@@ -23772,7 +24296,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-udbetaling",
@@ -23845,7 +24370,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-argument",
@@ -23920,7 +24446,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": []
  },
  {
   "id": "t2-velstand",
@@ -23992,7 +24519,11 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": true
+  "l3_option": true,
+  "construction": [
+   "stigende velstand",
+   "leve i velstand"
+  ]
  },
  {
   "id": "t2-virksomhed",
@@ -24209,7 +24740,12 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "starte/drive en virksomhed",
+   "i virksomheden",
+   "små og mellemstore virksomheder"
+  ]
  },
  {
   "id": "t2-medarbejder",
@@ -24365,7 +24901,11 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "medarbejdere i + virksomhed",
+   "ansvar for medarbejdere"
+  ]
  },
  {
   "id": "t2-borger",
@@ -24512,7 +25052,11 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "borgerne i + sted: borgerne i kommunen",
+   "for borgerne"
+  ]
  },
  {
   "id": "t2-kommune",
@@ -24661,7 +25205,11 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "i kommunen",
+   "kommunens + navneord: kommunens borgere"
+  ]
  },
  {
   "id": "t2-undersoegelse",
@@ -24816,7 +25364,12 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "en undersøgelse viser, at + ledsætning",
+   "undersøgelsen af + navneord",
+   "ifølge en undersøgelse"
+  ]
  },
  {
   "id": "t2-almindelig",
@@ -24994,7 +25547,11 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "foran navneord: den almindelige borger",
+   "helt almindelig"
+  ]
  },
  {
   "id": "t2-grad",
@@ -25172,7 +25729,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t2-social",
@@ -25330,7 +25888,10 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "foran navneord: sociale relationer, sociale medier"
+  ]
  },
  {
   "id": "t2-effekt",
@@ -25432,7 +25993,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t2-relation",
@@ -25555,7 +26117,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t2-positiv",
@@ -25705,7 +26268,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t2-udstilling",
@@ -25836,7 +26400,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t2-indeholde",
@@ -25970,7 +26535,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t2-beskrive",
@@ -26066,7 +26632,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-forsoege",
@@ -26187,7 +26754,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t2-tilbyde",
@@ -26350,7 +26918,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t2-periode",
@@ -26493,7 +27062,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t2-udtryk",
@@ -26635,7 +27205,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t2-foretraekke",
@@ -26748,7 +27319,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t2-paavirke",
@@ -26849,7 +27421,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t2-definere",
@@ -26950,7 +27523,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t2-produktion",
@@ -27091,7 +27665,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t2-historisk",
@@ -27229,7 +27804,12 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "foran navneord: historiske bygninger",
+   "historisk set",
+   "foran adjektiv: historisk ukorrekt"
+  ]
  },
  {
   "id": "t2-konkurrence",
@@ -27366,7 +27946,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t2-overveje",
@@ -27482,7 +28063,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t2-opmaerksom",
@@ -27612,7 +28194,8 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t2-arbejdskraft",
@@ -27721,7 +28304,11 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "mangel på arbejdskraft",
+   "der mangler arbejdskraft"
+  ]
  },
  {
   "id": "t2-kvalificeret",
@@ -27826,7 +28413,11 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "kvalificeret til + navneord / at + infinitiv",
+   "kvalificeret arbejdskraft"
+  ]
  },
  {
   "id": "t2-kompetence",
@@ -27946,7 +28537,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t2-arbejdsforhold",
@@ -28062,7 +28654,11 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "gode arbejdsforhold",
+   "forbedre arbejdsforholdene"
+  ]
  },
  {
   "id": "t2-udsagn",
@@ -28154,7 +28750,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t2-stoette",
@@ -28313,7 +28910,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t2-relativt",
@@ -28432,7 +29030,11 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "foran adjektiv/adverbium: relativt nemt, relativt mange",
+   "relativt set"
+  ]
  },
  {
   "id": "t2-deltager",
@@ -28551,7 +29153,11 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "deltagerne i + navneord: deltagerne i Hærvejsmarchen",
+   "som deltager til"
+  ]
  },
  {
   "id": "t2-original",
@@ -28697,7 +29303,11 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "foran navneord: originale vikingeskibe",
+   "efter være: er original"
+  ]
  },
  {
   "id": "t2-materiale",
@@ -28830,7 +29440,11 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "lavet af + materiale",
+   "materialet til + navneord"
+  ]
  },
  {
   "id": "t2-officiel",
@@ -28957,7 +29571,11 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "foran navneord: et officielt besøg",
+   "foran adjektiv: officielt godkendt"
+  ]
  },
  {
   "id": "t2-karriere",
@@ -29085,7 +29703,12 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "skifte karriere",
+   "gøre karriere",
+   "en karriere som + stilling"
+  ]
  },
  {
   "id": "t2-ulempe",
@@ -29204,7 +29827,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-rolle",
@@ -29357,7 +29981,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t2-primaer",
@@ -29491,7 +30116,11 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "foran navneord: det primære ansvar for + navneord",
+   "primært + led"
+  ]
  },
  {
   "id": "t2-kraeve",
@@ -29631,7 +30260,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-afgoere",
@@ -29764,7 +30394,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t2-vilkaar",
@@ -29862,7 +30493,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t2-fremhaeve",
@@ -29960,7 +30592,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t2-undlade",
@@ -30056,7 +30689,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-faellesskab",
@@ -30182,7 +30816,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-dyrke",
@@ -30344,7 +30979,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-branche",
@@ -30459,7 +31095,12 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "i en branche",
+   "i samme branche",
+   "skifte branche"
+  ]
  },
  {
   "id": "t3-selvstaendig",
@@ -30598,7 +31239,12 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "være/blive selvstændig",
+   "arbejde selvstændigt",
+   "starte som selvstændig"
+  ]
  },
  {
   "id": "t3-opfatte",
@@ -30722,7 +31368,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-overskud",
@@ -30852,7 +31499,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-bidrage",
@@ -30965,7 +31613,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-placering",
@@ -31093,7 +31742,11 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "placeringen af + navneord",
+   "byens placering"
+  ]
  },
  {
   "id": "t3-fungere",
@@ -31197,7 +31850,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-udsigt",
@@ -31332,7 +31986,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-region",
@@ -31463,7 +32118,11 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "i regionen",
+   "regionen omkring + sted"
+  ]
  },
  {
   "id": "t2-afgoerende",
@@ -31556,7 +32215,8 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-tvivl",
@@ -31669,7 +32329,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-tilfaelde",
@@ -31796,7 +32457,12 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "i det/dette tilfælde",
+   "i mange tilfælde",
+   "det er (ikke) tilfældet"
+  ]
  },
  {
   "id": "t3-anderledes",
@@ -31907,7 +32573,12 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "anderledes end + led/sætning",
+   "foran navneord: et helt anderledes landskab (bøjes ikke)",
+   "efter verbet: organisere arbejdet anderledes"
+  ]
  },
  {
   "id": "t3-kommunikation",
@@ -32017,7 +32688,10 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "kommunikation med/mellem + nogen"
+  ]
  },
  {
   "id": "t3-noedt",
@@ -32126,7 +32800,8 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-permanent",
@@ -32237,7 +32912,10 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "foran navneord: et permanent problem, de permanente udstillinger"
+  ]
  },
  {
   "id": "t3-ramme",
@@ -32367,7 +33045,12 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "danne rammen om + navneord",
+   "inden for rammerne af + navneord",
+   "vokse ud af rammerne"
+  ]
  },
  {
   "id": "t3-beskytte",
@@ -32484,7 +33167,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-beslutning",
@@ -32586,7 +33270,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-erfaring",
@@ -32701,7 +33386,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-tjene",
@@ -32829,7 +33515,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-administrativ",
@@ -32935,7 +33622,10 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "foran navneord: administrative opgaver, den administrative del af + navneord"
+  ]
  },
  {
   "id": "t3-formidling",
@@ -33042,7 +33732,11 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "formidlingen af + navneord: formidlingen af historien",
+   "formidling til + nogen"
+  ]
  },
  {
   "id": "t3-udvikling",
@@ -33187,7 +33881,11 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "udviklingen i/af + navneord",
+   "en positiv udvikling"
+  ]
  },
  {
   "id": "t3-oprindelig",
@@ -33306,7 +34004,11 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "foran navneord: den oprindelige plan",
+   "foran verbum/adjektiv: oprindelig uddannet lærer"
+  ]
  },
  {
   "id": "t3-udgravning",
@@ -33416,7 +34118,11 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "arkæologiske udgravninger",
+   "udgravningen af + navneord"
+  ]
  },
  {
   "id": "t3-autentisk",
@@ -33526,7 +34232,11 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "foran navneord: et autentisk billede af + navneord",
+   "virke autentisk"
+  ]
  },
  {
   "id": "t3-anerkendt",
@@ -33620,7 +34330,11 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "anerkendt af + nogen: anerkendt af UNESCO",
+   "anerkendt som + navneord"
+  ]
  },
  {
   "id": "t3-frivillig",
@@ -33739,7 +34453,12 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "foran navneord: frivillige mentorer",
+   "være frivillig",
+   "på frivillig basis"
+  ]
  },
  {
   "id": "t3-rekonstruere",
@@ -33842,7 +34561,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-indblik",
@@ -33934,7 +34654,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-gennemfoere",
@@ -34048,7 +34769,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-kilde",
@@ -34175,7 +34897,11 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "ifølge + kilde",
+   "en kilde til + navneord"
+  ]
  },
  {
   "id": "t3-saerlig",
@@ -34332,7 +35058,11 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "foran navneord: særligt værktøj",
+   "særligt + verbum/adjektiv: særligt fokus på"
+  ]
  },
  {
   "id": "t3-fokus",
@@ -34444,7 +35174,11 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "have/sætte fokus på + navneord",
+   "i fokus"
+  ]
  },
  {
   "id": "t3-tradition",
@@ -34560,7 +35294,11 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "traditionen for + navneord: traditionen for pølsemageri",
+   "traditionen med + navneord"
+  ]
  },
  {
   "id": "t3-tydelig",
@@ -34669,7 +35407,8 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-gaelde",
@@ -34827,7 +35566,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-samarbejde",
@@ -34947,7 +35687,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-benytte",
@@ -35060,7 +35801,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-unik",
@@ -35172,7 +35914,11 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "foran navneord: unikke møbler",
+   "unik for + navneord: unikt for et værksted"
+  ]
  },
  {
   "id": "t3-indhold",
@@ -35287,7 +36033,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-bearbejde",
@@ -35408,7 +36155,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-konflikt",
@@ -35517,7 +36265,12 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "en konflikt om + navneord",
+   "i konflikt med + nogen",
+   "speciale i konflikter"
+  ]
  },
  {
   "id": "t3-offentlig",
@@ -35653,7 +36406,11 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "foran navneord: den offentlige sektor",
+   "offentlig transport"
+  ]
  },
  {
   "id": "t3-populaer",
@@ -35759,7 +36516,8 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-arkaeologisk",
@@ -35857,7 +36615,10 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "foran navneord: arkæologiske udgravninger, arkæologiske fund"
+  ]
  },
  {
   "id": "t3-inspirere",
@@ -35962,7 +36723,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-marked",
@@ -36101,7 +36863,12 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "på markedet",
+   "markedet for + navneord",
+   "præsentere for et marked"
+  ]
  },
  {
   "id": "t3-arv",
@@ -36220,7 +36987,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-central",
@@ -36355,7 +37123,12 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "foran navneord: en central magt",
+   "centralt beliggende",
+   "spille en central rolle"
+  ]
  },
  {
   "id": "t3-omfatte",
@@ -36462,7 +37235,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-samling",
@@ -36584,7 +37358,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-bekymring",
@@ -36693,7 +37468,11 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "bekymring for + navneord: en bekymring for mange",
+   "bekymringen har fået nogen til at + infinitiv"
+  ]
  },
  {
   "id": "t3-landskab",
@@ -36793,7 +37572,10 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "et afvekslende/anderledes landskab"
+  ]
  },
  {
   "id": "t3-baggrund",
@@ -36926,7 +37708,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-overhovedet",
@@ -37033,7 +37816,11 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "i nægtende sætninger: overhovedet ikke",
+   "i spørgsmål: Kan man overhovedet …?"
+  ]
  },
  {
   "id": "t3-saakaldt",
@@ -37130,7 +37917,10 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "et såkaldt + navneord: et såkaldt førlederkursus"
+  ]
  },
  {
   "id": "t3-sevaerdighed",
@@ -37229,7 +38019,11 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "byens seværdigheder",
+   "den mest besøgte seværdighed"
+  ]
  },
  {
   "id": "t3-sammenhold",
@@ -37324,7 +38118,11 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "et (stærkt) sammenhold",
+   "sammenholdet i/blandt + gruppe"
+  ]
  },
  {
   "id": "t3-adgang",
@@ -37425,7 +38223,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-genstand",
@@ -37537,7 +38336,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-tillid",
@@ -37636,7 +38436,11 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "tillid til + nogen/noget: have stor tillid til en ny …",
+   "øge tilliden mellem + nogen"
+  ]
  },
  {
   "id": "t3-praecis",
@@ -37767,7 +38571,11 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "foran navneord: det præcise antal",
+   "som adverbium: lige præcis det, man …"
+  ]
  },
  {
   "id": "t3-haandvaerk",
@@ -37865,7 +38673,11 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "et håndværk, der …",
+   "gå i arv"
+  ]
  },
  {
   "id": "t3-anbefale",
@@ -37981,7 +38793,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-resultat",
@@ -38092,7 +38905,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-beliggenhed",
@@ -38179,7 +38993,11 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "den østlige beliggenhed",
+   "en central beliggenhed"
+  ]
  },
  {
   "id": "t3-institution",
@@ -38279,7 +39097,10 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "offentlige/statslige institutioner"
+  ]
  },
  {
   "id": "t3-afvekslende",
@@ -38373,7 +39194,10 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "foran navneord: et afvekslende landskab, et afvekslende program"
+  ]
  },
  {
   "id": "t3-undervejs",
@@ -38472,7 +39296,11 @@
    "headword_found": true,
    "pos": "adverbium"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "efter verbet: Man begår fejl undervejs",
+   "først: Undervejs + verbum + subjekt"
+  ]
  },
  {
   "id": "t3-anlaegge",
@@ -38593,7 +39421,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-etablere",
@@ -38701,7 +39530,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-indtryk",
@@ -38788,7 +39618,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-opbygge",
@@ -38876,7 +39707,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-arbejdsopgave",
@@ -38976,7 +39808,11 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "ens/hendes arbejdsopgaver",
+   "fordele arbejdsopgaverne"
+  ]
  },
  {
   "id": "t3-identitet",
@@ -39089,7 +39925,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-begivenhed",
@@ -39189,7 +40026,11 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "en af de store begivenheder i + navneord",
+   "en historisk begivenhed"
+  ]
  },
  {
   "id": "t3-fornemmelse",
@@ -39290,7 +40131,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-undgaa",
@@ -39401,7 +40243,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-forplejning",
@@ -39501,7 +40344,11 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "god forplejning under + begivenhed",
+   "inklusive forplejning"
+  ]
  },
  {
   "id": "t3-enestaaende",
@@ -39584,7 +40431,11 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "foran navneord: en enestående mulighed",
+   "efter være: er enestående (bøjes ikke)"
+  ]
  },
  {
   "id": "t3-funktion",
@@ -39691,7 +40542,12 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "have en funktion",
+   "borgens funktion",
+   "funktionen af + navneord"
+  ]
  },
  {
   "id": "t3-element",
@@ -39794,7 +40650,11 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "et vigtigt element",
+   "elementer fra/af + navneord"
+  ]
  },
  {
   "id": "t3-fremstille",
@@ -39904,7 +40764,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-indflydelse",
@@ -40006,7 +40867,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-kombinere",
@@ -40095,7 +40957,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-indsats",
@@ -40194,7 +41057,10 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "gøre en indsats for + navneord / for at + infinitiv"
+  ]
  },
  {
   "id": "t3-inspiration",
@@ -40281,7 +41147,12 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "inspiration til + navneord",
+   "som inspiration til",
+   "hente inspiration fra/i"
+  ]
  },
  {
   "id": "t3-afstand",
@@ -40394,7 +41265,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-attraktiv",
@@ -40499,7 +41371,8 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-rekruttere",
@@ -40600,7 +41473,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-sundhed",
@@ -40698,7 +41572,11 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "mental sundhed",
+   "vejen til sundhed"
+  ]
  },
  {
   "id": "t3-straekning",
@@ -40792,7 +41670,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-interesse",
@@ -40944,7 +41823,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-forbindelse",
@@ -41070,7 +41950,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-sikre",
@@ -41208,7 +42089,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-forhold",
@@ -41370,7 +42252,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-samfund",
@@ -41482,7 +42365,11 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "i samfundet",
+   "det danske samfund"
+  ]
  },
  {
   "id": "t3-antal",
@@ -41595,7 +42482,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-raekke",
@@ -41745,7 +42633,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-egentlig",
@@ -41891,7 +42780,11 @@
    "headword_found": true,
    "pos": "adjektiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "efter verbet: hvad en fire-dages arbejdsuge egentlig er",
+   "foran verbum i ledsætning: der egentlig ønskede"
+  ]
  },
  {
   "id": "t3-styrke",
@@ -42010,7 +42903,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-tillade",
@@ -42119,7 +43013,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-ansat",
@@ -42219,7 +43114,12 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "de ansatte",
+   "være ansat som + stilling",
+   "være ansat i + virksomhed"
+  ]
  },
  {
   "id": "t3-foregaa",
@@ -42324,7 +43224,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-magt",
@@ -42420,7 +43321,8 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-befolkning",
@@ -42507,7 +43409,11 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "befolkningen i + sted",
+   "en stor del af befolkningen"
+  ]
  },
  {
   "id": "t3-opstaa",
@@ -42622,7 +43528,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-udfoere",
@@ -42735,7 +43642,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-inddrage",
@@ -42844,7 +43752,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-eksistere",
@@ -42948,7 +43857,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-loenmodtager",
@@ -43050,7 +43960,11 @@
    "headword_found": true,
    "pos": "substantiv"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": [
+   "lønmodtagernes + navneord: lønmodtagernes arbejdstid",
+   "lønmodtagere og arbejdsgivere"
+  ]
  },
  {
   "id": "t3-betragte",
@@ -43163,7 +44077,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-praesentere",
@@ -43279,7 +44194,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-undvaere",
@@ -43375,7 +44291,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-mangle",
@@ -43503,7 +44420,8 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  },
  {
   "id": "t3-afholde",
@@ -43621,6 +44539,7 @@
    "headword_found": true,
    "pos": "verbum"
   },
-  "l3_option": false
+  "l3_option": false,
+  "construction": []
  }
 ]
