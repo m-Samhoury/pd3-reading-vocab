@@ -618,6 +618,81 @@ input.vgap.right { border-color: var(--ok); background: var(--ok-bg); } input.vg
 
 @media (max-width: 600px) { .pair { grid-template-columns: 1fr; } .q { padding: 18px 16px; } }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+
+/* ---------- Tavle: I dag board, Alle emner, Grammatik ---------- */
+.tvhead { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px 32px; flex-wrap: wrap; }
+.tvhead p { margin-top: 8px; max-width: 52ch; }
+.tvgo svg, .txtbtn svg, .tvlinks svg, .tverr svg { width: 20px; height: 20px; flex: none; }
+.tvgo { display: inline-flex; align-items: center; gap: 8px; }
+.tvback { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; color: var(--md-sys-color-primary); font-weight: 600; text-decoration: none; }
+.tvback::before { content: ""; width: 8px; height: 8px; border: solid currentColor; border-width: 0 0 2px 2px; transform: rotate(45deg); margin: 0 4px 0 2px; }
+.tvboard { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 24px; align-items: start; }
+.tvcol { border-radius: 28px; background: var(--md-sys-color-surface-container-low); overflow: hidden; }
+.tvcol > header { display: flex; align-items: flex-end; gap: 12px; padding: 18px 20px 16px; }
+.tvcol > header h2 { margin: 0; font-size: 1.3rem; flex: 1; display: flex; align-items: center; gap: 10px; }
+.tvcol > header h2 svg { width: 20px; height: 20px; }
+.tvcol .big { font-family: var(--display, 'Gabarito'), sans-serif; font-weight: 800; font-size: 2.6rem; line-height: .9; letter-spacing: -.03em; text-align: right; }
+.tvcol .big small { display: block; margin-top: 6px; font: 500 .8rem/1.2 var(--sans, system-ui), sans-serif; letter-spacing: 0; opacity: .85; }
+.k-review > header, .btn.k-review { background: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container); }
+.k-learn > header, .btn.k-learn { background: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container); }
+.k-test > header, .btn.k-test { background: var(--md-sys-color-tertiary-container); color: var(--md-sys-color-on-tertiary-container); }
+.tvrows { list-style: none; margin: 0; padding: 6px; }
+.tvrows li + li { border-top: 1px solid var(--md-sys-color-surface-container-highest); }
+.tvrows button { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 12px; width: 100%; min-height: 56px; padding: 8px 8px 8px 14px; border: 0; border-radius: 16px; background: none; color: inherit; font: inherit; cursor: pointer; text-align: left; }
+.tvrows button:hover:not(:disabled) { background: var(--md-sys-color-surface-container); }
+.tvrows button:disabled { opacity: .55; cursor: not-allowed; }
+.tvrows b { font-weight: 600; display: block; }
+.tvrows small { display: block; font-size: .8rem; color: var(--md-sys-color-on-surface-variant); }
+.tvrows small.rule { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.tvrows .n { font-family: 'Gabarito', sans-serif; font-weight: 800; font-size: 1.2rem; text-align: right; min-width: 2ch; }
+.tvrows .n small { font: 500 .72rem system-ui, sans-serif; }
+.verb { display: inline-flex; align-items: center; min-height: 32px; padding: 0 12px; border-radius: 999px; font-size: .82rem; font-weight: 700; }
+.k-review .verb { background: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container); }
+.k-learn .verb { background: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container); }
+.k-test .verb { background: var(--md-sys-color-tertiary-container); color: var(--md-sys-color-on-tertiary-container); }
+.tvrows button:hover:not(:disabled) .verb, .tvrows button:focus-visible .verb { background: var(--md-sys-color-primary); color: var(--md-sys-color-on-primary); }
+.tvempty { display: flex; gap: 12px; align-items: flex-start; margin: 0; padding: 18px 20px 20px; color: var(--md-sys-color-on-surface-variant); font-size: .95rem; }
+.tvempty svg { width: 20px; height: 20px; flex: none; margin-top: 2px; color: var(--md-sys-color-primary); }
+.tvcol .foot { padding: 4px 10px 10px; border-top: 1px solid var(--md-sys-color-surface-container-highest); }
+.tvcol .foot .txtbtn { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; }
+.wdots { display: flex; flex-wrap: wrap; gap: 3px; margin-top: 5px; align-items: center; }
+.wdots i { width: 8px; height: 8px; border-radius: 50%; box-shadow: inset 0 0 0 1.5px var(--md-sys-color-outline-variant); }
+.wdots i.wk { background: var(--md-sys-color-primary); box-shadow: none; }
+.wdots i.wl { background: linear-gradient(90deg, var(--md-sys-color-primary) 50%, transparent 50%); box-shadow: inset 0 0 0 1.5px var(--md-sys-color-primary); }
+.wdots i.wd { background: var(--md-sys-color-secondary); box-shadow: none; }
+.wdots em { font: 600 .72rem system-ui, sans-serif; font-style: normal; color: var(--md-sys-color-on-surface-variant); margin-left: 2px; }
+.tvlinks { display: flex; flex-wrap: wrap; gap: 8px 28px; align-items: center; margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--md-sys-color-outline-variant); }
+.tvlinks a { display: inline-flex; align-items: center; gap: 10px; min-height: 48px; color: var(--md-sys-color-on-surface); font-weight: 600; text-decoration: none; }
+.tvlinks a span { font-weight: 400; color: var(--md-sys-color-on-surface-variant); font-size: .9rem; }
+.tvlinks a svg { color: var(--md-sys-color-primary); }
+.tvkey { display: flex; gap: 6px 16px; flex-wrap: wrap; font-size: .82rem; color: var(--md-sys-color-on-surface-variant); margin-top: 16px; }
+.tvkey > span { display: inline-flex; align-items: center; gap: 6px; } .tvkey .wdots { margin: 0; }
+.tvset { margin-top: 28px; }
+.tvset > header { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 8px; }
+.tvset h2 { margin: 0; } .tvset > header .txtbtn { margin-left: auto; }
+.tvtbl { list-style: none; margin: 0; padding: 6px; border-radius: 24px; background: var(--md-sys-color-surface-container-low); }
+.tvtbl li + li { border-top: 1px solid var(--md-sys-color-surface-container-highest); }
+.tvtbl label { display: grid; grid-template-columns: 28px minmax(0, 1.3fr) minmax(0, 1.6fr) 64px 96px; align-items: center; gap: 12px; min-height: 56px; padding: 6px 14px 6px 10px; border-radius: 16px; cursor: pointer; }
+.tvtbl label:hover { background: var(--md-sys-color-surface-container); }
+.tvtbl label:has(input:checked) { background: var(--md-sys-color-surface-container-lowest); box-shadow: inset 0 0 0 2px var(--md-sys-color-primary); }
+.tvtbl input { width: 20px; height: 20px; margin: 0; }
+.tvtbl b { font-weight: 600; display: block; } .tvtbl small { display: block; font-size: .8rem; color: var(--md-sys-color-on-surface-variant); }
+.tvtbl .wdots { margin: 0; } .tvtbl .wdots i { width: 10px; height: 10px; }
+.tvtbl .c { font-family: 'Gabarito', sans-serif; font-weight: 700; text-align: right; }
+.tvtbl .due { justify-self: end; padding: 2px 10px; border-radius: 999px; font-size: .78rem; font-weight: 700; background: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container); }
+.tvbar { position: sticky; bottom: 16px; z-index: 5; display: flex; align-items: center; gap: 8px 12px; flex-wrap: wrap; margin-top: 24px; padding: 12px 12px 12px 24px; border-radius: 28px; background: var(--md-sys-color-inverse-surface); color: var(--md-sys-color-inverse-on-surface); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
+.tvbar .tx { flex: 1; min-width: 180px; } .tvbar small { display: block; opacity: .8; }
+.tvbar .btn { display: inline-flex; align-items: center; gap: 8px; } .tvbar .btn svg { width: 18px; height: 18px; }
+.tvbar .txtbtn { color: inherit; }
+.tverr { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 8px 20px; margin-top: 16px; padding: 20px 24px; border-radius: 28px; background: var(--md-sys-color-inverse-surface); color: var(--md-sys-color-inverse-on-surface); }
+.tverr .i { width: 48px; height: 48px; border-radius: 16px; display: grid; place-items: center; background: color-mix(in srgb, currentColor 14%, transparent); }
+.tverr b { font-family: 'Gabarito', sans-serif; font-size: 1.25rem; } .tverr p { margin: 4px 0 0; opacity: .85; }
+.tverr .btn { background: var(--md-sys-color-inverse-primary); color: var(--md-sys-color-on-primary-fixed); }
+@media (max-width: 860px) { .tvboard { grid-template-columns: 1fr; } .tvgo { width: 100%; justify-content: center; } }
+@media (max-width: 700px) { .tvtbl label { grid-template-columns: 24px minmax(0, 1fr) auto; row-gap: 2px; } .tvtbl .wdots { grid-column: 2 / 4; } .tvtbl .c { grid-row: 1; grid-column: 3; } .tvtbl .due { grid-column: 2; justify-self: start; }
+  .tverr { grid-template-columns: auto 1fr; } .tverr .btn { grid-column: 1 / -1; } }
+@media (prefers-reduced-motion: no-preference) { .tvcol .big { animation: tvrise .5s cubic-bezier(.16,1,.3,1) both; } }
+@keyframes tvrise { from { transform: translateY(.35em); opacity: 0; } }
 </style>
 </head>
 <body>
@@ -875,6 +950,24 @@ const I18N = {
   "r.next": ["Næste gang du ser dem", "Next time you'll see them"], "r.cards": ["{0} kort", "{0} cards"],
   "r.coach": ["Vil du have feedback på en fri sætning? Spørg coachen i chatten (/pd3-coach vocab) om opgaven “skriv én sætning med 3 af dagens forbinderord”.",
               "Want feedback on a free sentence? Ask the coach in chat (/pd3-coach vocab) for the “write one sentence with 3 of today's connectors” task."],
+  "tv.due.u": ["ord i dag", "words today"], "tv.new.u": ["nye ord tilbage", "new words left"], "tv.learnt.u": ["lærte ord", "words learnt"],
+  "tv.learn": ["Lær nyt", "Learn new"], "tv.test": ["Test", "Test"],
+  "tv.v.review": ["Gentag", "Review"], "tv.v.learn": ["Lær", "Learn"], "tv.v.test": ["Test", "Test"],
+  "tv.l.review": ["Gentag ordene i {0}", "Review the words in {0}"], "tv.l.learn": ["Lær nye ord i {0}", "Learn new words in {0}"], "tv.l.test": ["Test dig selv i {0}", "Test yourself on {0}"],
+  "tv.rev.first": ["Intet at gentage endnu. Ord, du lærer, kommer tilbage her lige før du glemmer dem.", "Nothing to review yet. Words you learn come back here just before you forget them."],
+  "tv.rev.done": ["Alt er gentaget i dag.", "Everything is reviewed for today."],
+  "tv.learn.done": ["Du har set alle ord.", "You have seen every word."],
+  "tv.all": ["Vis alle {0} emner", "Show all {0} topics"], "tv.fewer": ["Vis færre", "Show fewer"],
+  "tv.ex.s": ["Øvelse · {0}", "Exercise · {0}"], "tv.conf.s": ["imidlertid eller dog?", "imidlertid or dog?"], "tv.exall": ["Test alle lærte ord", "Test all learnt words"],
+  "tv.more": ["Mere", "More"], "tv.topics": ["Alle emner", "All topics"], "tv.topics.s": ["{0} emner · vælg flere på én gang", "{0} topics · pick several at once"],
+  "tv.gram.s": ["regler fra prøverne", "rules from the exams"],
+  "tv.topics.intro": ["Se hvor langt du er. Sæt flueben for at øve flere emner på én gang.", "See how far you are. Tick topics to practise several at once."],
+  "tv.key.due": ["gentag i dag", "review today"], "tv.n.topics": ["{0} emner", "{0} topics"], "tv.of": ["af {0}", "of {0}"],
+  "tv.g.go": ["Fortsæt", "Continue"], "tv.g.go.u": ["regler i gang", "rules started"], "tv.g.cont": ["Fortsæt", "Continue"], "tv.g.go.none": ["Ingen regler i gang.", "No rules started."],
+  "tv.g.new": ["Nye regler", "New rules"], "tv.g.new.u": ["ikke startet", "not started"], "tv.g.start": ["Start", "Start"], "tv.g.new.none": ["Du har prøvet alle regler.", "You have tried every rule."],
+  "tv.g.done": ["Kan det", "Got it"], "tv.g.done.u": ["alle rigtige", "all correct"], "tv.g.again": ["Øv igen", "Again"],
+  "tv.g.done.none": ["Når du har alle sætninger i en regel rigtige, står den her.", "When you get every sentence in a rule right, it moves here."],
+  "tv.g.try": ["Prøv", "Try it"],
   "r.home": ["Tilbage til oversigten", "Back to overview"],
 };
 function t(key, ...args) {
@@ -1256,90 +1349,105 @@ function counts() {
   };
 }
 
+let learnAll = false;      // "Vis alle" open in the Lær nyt column
+function wordDots(cs) {
+  const cls = c => stateOf(c) === "new" ? "" : c.history.length && c.due <= DB.today ? "wd" : stateOf(c) === "learn" ? "wl" : "wk";
+  const order = { wk: 0, wl: 1, wd: 2, "": 3 }, a = cs.map(cls).sort((x, y) => order[x] - order[y]);
+  return `<span class="wdots" aria-hidden="true">${a.slice(0, 14).map(c => `<i class="${c}"></i>`).join("")}${a.length > 14 ? `<em>+${a.length - 14}</em>` : ""}</span>`;
+}
+function tvRow(attrs, name, sub, n, verb, label, dis) {
+  return `<li><button type="button" ${attrs} aria-label="${esc(label)}"${dis ? " disabled" : ""}><span><b>${name}</b>${sub}</span><span class="n">${n}</span><span class="verb">${verb}</span></button></li>`;
+}
+function tvCol(k, icon, title, big, unit, body, foot) {
+  return `<section class="tvcol k-${k}"><header><h2>${ICONS[icon]}${title}</h2><span class="big">${big}<small>${unit}</small></span></header>${body}${foot ? `<div class="foot">${foot}</div>` : ""}</section>`;
+}
 function home() {
   S = null; FC = null; GS = null;
   const k = counts(), p = DB.profile || {};
   const dW = daysTo(p.exam_date);
   const groupsBy = {};
   cards().forEach(c => (groupsBy[c.group] = groupsBy[c.group] || []).push(c));
-  const tiles = pr => GROUP_ORDER.filter(g => prio(g) === pr && groupsBy[g]).map(g => groupTile(g, groupsBy[g])).join("");
-  const metric = (l, n, s, pct) => `<div class="m"><div class="lbl">${l}</div><b>${n}</b><span class="s">${s}</span>${pct != null ? `<div class="bar"><span style="width:${pct.toFixed(1)}%"></span></div>` : ""}</div>`;
-  const newLeft = Math.min(k.newLeft, k.fresh);
   if (picked.some(g => !groupsBy[g])) setPicked(picked.filter(g => groupsBy[g]));
-  const sel = picked.length ? picked : null;
-  const pool = sel ? sel.flatMap(g => groupsBy[g]) : cards();
+  const gs = GROUP_ORDER.filter(g => groupsBy[g]);
   const dueIn = cs => cs.filter(c => c.history.length && c.due <= DB.today).length;
-  const canNew = Math.min(k.newLeft, pool.filter(c => stateOf(c) === "new").length);
-  const canDue = dueIn(pool);
-  const chips = pr => GROUP_ORDER.filter(g => prio(g) === pr && groupsBy[g]).map(g => {
-    const d = dueIn(groupsBy[g]);
-    return `<button type="button" class="pchip" data-g="${esc(g)}" aria-pressed="${picked.includes(g)}">${ICONS.check.replace("<svg", '<svg class="ck"')}${esc(gname(g))}<span class="n">${groupsBy[g].length}</span>${d ? `<span class="d" title="${esc(t("pk.due", d))}">${d}</span>` : ""}</button>`;
-  }).join("");
-  const tierGroups = pr => GROUP_ORDER.filter(g => prio(g) === pr && groupsBy[g]);
-  const tile = (id, key, icon, title, desc, count, attrs = "") => `<button type="button" class="mtile k-${key}" id="${id}" ${attrs}>
-    <span class="tt"><span class="ti" aria-hidden="true">${ICONS[icon]}</span>${count != null ? `<span class="tn">${count}</span>` : ""}</span>
-    <span><b>${title}</b><span class="td">${desc}</span></span></button>`;
-  const nConf = confusablePairs(sel).length, nLearned = learnedIn(sel).length;
+  const newIn = cs => cs.filter(c => stateOf(c) === "new").length;
+  const seenIn = cs => cs.filter(c => c.history.length).length;
+  const due = gs.filter(g => dueIn(groupsBy[g]));
+  const fresh = gs.filter(g => newIn(groupsBy[g])).sort((a, b) => (seenIn(groupsBy[b]) > 0) - (seenIn(groupsBy[a]) > 0));
+  const learnt = gs.filter(g => seenIn(groupsBy[g]));
+  const nLearned = learnedIn(null).length, nConf = confusablePairs(null).length;
+  const canNew = Math.min(k.newLeft, k.fresh);
+  const empty = (icon, txt) => `<p class="tvempty">${ICONS[icon]}<span>${txt}</span></p>`;
+  const list = rows => `<ul class="tvrows">${rows.join("")}</ul>`;
+  const setName = g => t("p." + prio(g));
+  const freshShown = learnAll ? fresh : fresh.slice(0, 5);
   $("#app").innerHTML = `
-    <div class="top">
-      <div class="hometop"><h1>${t("h.today")}</h1>
+    <div class="top tvhead">
+      <div><div class="hometop"><h1>${t("h.today")}</h1>
         ${dW != null && dW >= 0 ? `<span class="dayspill" title="${esc(t("h.chip.days", dW) + " " + t("h.chip"))}">${ICONS.event}${t("h.chip.days", dW)}</span>` : ""}</div>
-      <div class="bento${grCount() ? "" : " nogram"}">
-        ${tile("go", "go", "play", t("h.go"), sessionBlurb(k, canDue, canNew), sel ? t("pk.some", sel.length, pool.length) : t("md.all"))}
-        ${tile("learn", "learn", "spark", t("h.learn", BATCH), t("md.learn"), canNew ? t("u.words", Math.min(BATCH, canNew)) : null, canNew ? "" : "disabled")}
-        ${tile("review", "review", "repeat", t("h.review"), canDue ? t("h.review.t") : t("h.review.off"), canDue ? t("u.words", canDue) : null, canDue ? "" : "disabled")}
-        ${tile("conf", "conf", "swap", t("h.conf"), nConf ? t("md.conf") : t("h.conf.none"), t("u.pairs", nConf), nConf ? "" : "disabled")}
-        ${tile("exer", "exer", "pencil", t("h.ex"), nLearned ? t("md.exer") : t("h.ex.none"), t("u.words", nLearned), nLearned ? `title="${esc(t("h.ex.t"))}"` : "disabled")}
-        ${tile("flash", "flash", "cards", t("h.fc"), t("md.fc"), t("u.cards", pool.length), `title="${esc(t("h.fc.t"))}"`)}
-        ${grCount() ? tile("gram", "gram", "book", t("h.gram"), t("md.gram"), t("u.items", grCount()), `title="${esc(t("h.gram.t"))}"`) : ""}
-      </div>
-      <section class="picker" aria-labelledby="pkTitle">
-        <div class="ph"><h2 id="pkTitle">${t("pk.emner")}</h2>
-          <span class="soft">${sel ? t("pk.some", sel.length, pool.length) : t("pk.all")}</span>
-          ${sel ? `<button type="button" class="txtbtn" id="allg">${t("pk.clear")}</button>` : ""}</div>
-        <div class="ptabs"><div role="tablist" style="display:contents">${[1, 2, 3].map(pr => { const n = tierGroups(pr).filter(g => picked.includes(g)).length;
-          return `<button type="button" class="ptab" role="tab" id="ptab${pr}" data-pr="${pr}" aria-selected="${pickTab === pr}" aria-controls="ppane${pr}" tabindex="${pickTab === pr ? 0 : -1}">${t("p." + pr)}${n ? `<span class="c">${n}</span>` : ""}</button>`; }).join("")}</div>
-          <button type="button" class="txtbtn" id="tierall">${t(tierGroups(pickTab).every(g => picked.includes(g)) ? "pk.tnone" : "pk.tall")}</button></div>
-        ${[1, 2, 3].map(pr => `<div class="ppane" role="tabpanel" id="ppane${pr}" aria-labelledby="ptab${pr}"${pickTab === pr ? "" : " hidden"}><div class="pchips">${chips(pr)}</div></div>`).join("")}
-      </section>
-      ${storageOK ? "" : `<div class="err small">${t("h.storage")}</div>`}
+        <p class="soft">${sessionBlurb(k, k.due, canNew)}</p></div>
+      <button type="button" class="btn solid tvgo" id="go"${k.due || canNew ? "" : " disabled"}>${ICONS.play}${t("h.go")}</button>
     </div>
-    <div class="section"><h2>${t("h.progress")}</h2><div class="band"><div class="prog">
-      ${metric(t("m.due"), k.due, t("m.due.s"))}
-      ${metric(t("m.new"), newLeft, t("m.new.s"), 100 * newLeft / NEW_PER_DAY)}
-      ${metric(t("m.learn"), k.learning, t("m.learn.s"))}
-      ${metric(t("m.master"), `${k.mastered} / ${k.total}`, t("m.master.s"), 100 * k.mastered / k.total)}
-    </div></div></div>
-    <div class="section"><h2>${t("h.groups")}</h2><p class="soft small" style="margin:-4px 0 10px">${t("h.map.s")}</p>
-      <div class="legend">${["new", "learn", "known", "master"].map(s => `<span><i style="background:var(--s-${s})"></i>${t("st." + s)}</span>`).join("")}</div>
-      ${[1, 2, 3].map(pr => `<div class="tierlabel"><span class="badge t${pr}">${t("p." + pr)}</span></div><div class="groups" data-pr="${pr}">${tiles(pr)}</div>`).join("")}
-    </div>`;
-  $("#go").onclick = () => startSession({ groups: sel });
-  $("#learn").onclick = () => startSession({ groups: sel, reviews: 0 });
-  $("#review").onclick = () => startSession({ groups: sel, fresh: 0 });
-  if ($("#allg")) $("#allg").onclick = () => { setPicked([]); home(); };
-  const rehome = focus => { const y = window.scrollY; home(); window.scrollTo(0, y); $(focus)?.focus(); };
-  document.querySelectorAll(".ptab").forEach(b => {
-    b.onclick = () => { pickTab = +b.dataset.pr; rehome(`#ptab${pickTab}`); };
-    b.onkeydown = e => { const d = { ArrowRight: 1, ArrowLeft: -1 }[e.key]; if (d) { pickTab = (pickTab + d + 2) % 3 + 1; rehome(`#ptab${pickTab}`); } };
-  });
-  $("#tierall").onclick = () => {
-    const gs = tierGroups(pickTab), all = gs.every(g => picked.includes(g));
-    setPicked(all ? picked.filter(g => !gs.includes(g)) : [...new Set([...picked, ...gs])]);
-    rehome("#tierall");
-  };
-  document.querySelectorAll(".pchip").forEach(b => b.onclick = () => {
-    const g = b.dataset.g;
-    setPicked(picked.includes(g) ? picked.filter(x => x !== g) : [...picked, g]);
-    const y = window.scrollY; home(); window.scrollTo(0, y);
-    $(`.pchip[data-g="${CSS.escape(g)}"]`)?.focus();
-  });
-  $("#conf").onclick = () => startConfusables(sel);
-  $("#exer").onclick = () => startExercise(sel);
-  $("#flash").onclick = () => startFlash(sel);
-  if ($("#gram")) $("#gram").onclick = grammarHome;
-  document.querySelectorAll(".group").forEach(b => b.onclick = () => { openGroup = openGroup === b.dataset.g ? null : b.dataset.g; const y = window.scrollY; home(); window.scrollTo(0, y); });
-  if (openGroup && groupsBy[openGroup]) showGroupDetail(openGroup, groupsBy[openGroup]);
+    ${storageOK ? "" : `<div class="err small">${t("h.storage")}</div>`}
+    <div class="tvboard">
+      ${tvCol("review", "repeat", t("tv.v.review"), k.due, t("tv.due.u"),
+        due.length ? list(due.map(g => tvRow(`data-rev="${esc(g)}"`, esc(gname(g)), `<small>${esc(setName(g))}</small>`, dueIn(groupsBy[g]), t("tv.v.review"), t("tv.l.review", gname(g))))) :
+        empty(nLearned ? "check" : "repeat", t(nLearned ? "tv.rev.done" : "tv.rev.first")),
+        `<button type="button" class="txtbtn" id="flash">${ICONS.cards}${t("h.fc")}</button>`)}
+      ${tvCol("learn", "spark", t("tv.learn"), k.fresh, t("tv.new.u"),
+        fresh.length ? list(freshShown.map(g => tvRow(`data-learn="${esc(g)}"`, esc(gname(g)), wordDots(groupsBy[g]), newIn(groupsBy[g]), t("tv.v.learn"), t("tv.l.learn", gname(g)), !k.newLeft))) : empty("check", t("tv.learn.done")),
+        fresh.length > 5 ? `<button type="button" class="txtbtn" id="learnAll" aria-expanded="${learnAll}">${t(learnAll ? "tv.fewer" : "tv.all", fresh.length)}</button>` : "")}
+      ${tvCol("test", "pencil", t("tv.test"), nLearned, t("tv.learnt.u"),
+        list([...learnt.map(g => tvRow(`data-ex="${esc(g)}"`, esc(gname(g)), `<small>${t("tv.ex.s", setName(g))}</small>`, seenIn(groupsBy[g]), t("tv.v.test"), t("tv.l.test", gname(g)))),
+          tvRow(`id="conf"`, t("h.conf"), `<small>${t("tv.conf.s")}</small>`, nConf, t("tv.v.test"), t("h.conf"), !nConf)]) + (nLearned ? "" : empty("pencil", t("h.ex.none"))),
+        `<button type="button" class="txtbtn" id="exer"${nLearned ? "" : " disabled"}>${ICONS.pencil}${t("tv.exall")}</button>`)}
+    </div>
+    <nav class="tvlinks" aria-label="${esc(t("tv.more"))}">
+      <a href="#emner" id="allTopics">${t("tv.topics")} <span>${t("tv.topics.s", gs.length)}</span></a>
+      ${grCount() ? `<a href="#grammatik" id="gram">${ICONS.book}${t("h.gram")} <span>${t("tv.gram.s")}</span></a>` : ""}
+    </nav>`;
+  $("#go").onclick = () => startSession({});
+  // flashcards on the words you have learnt; before that, on the ticked topics (or all)
+  $("#flash").onclick = () => nLearned ? startFlash(null, learnedIn(null).map(c => c.id)) : startFlash(picked.length ? picked : null);
+  $("#exer").onclick = () => startExercise(null);
+  $("#conf").onclick = () => startConfusables(null);
+  document.querySelectorAll("[data-rev]").forEach(b => b.onclick = () => startSession({ groups: [b.dataset.rev], fresh: 0 }));
+  document.querySelectorAll("[data-learn]").forEach(b => b.onclick = () => startSession({ groups: [b.dataset.learn], reviews: 0 }));
+  document.querySelectorAll("[data-ex]").forEach(b => b.onclick = () => startExercise([b.dataset.ex]));
+  if ($("#learnAll")) $("#learnAll").onclick = () => { learnAll = !learnAll; const y = window.scrollY; home(); window.scrollTo(0, y); $("#learnAll")?.focus(); };
+  $("#allTopics").onclick = e => { e.preventDefault(); topicsView(); };
+  if ($("#gram")) $("#gram").onclick = e => { e.preventDefault(); grammarHome(); };
+}
+// "Alle emner": every topic with one dot per word, and multi-select for Lær / Test / Gentag
+function topicsView() {
+  S = null; FC = null; GS = null;
+  const groupsBy = {};
+  cards().forEach(c => (groupsBy[c.group] = groupsBy[c.group] || []).push(c));
+  const tier = pr => GROUP_ORDER.filter(g => prio(g) === pr && groupsBy[g]);
+  const sel = picked.length ? picked : null, pool = sel ? sel.flatMap(g => groupsBy[g] || []) : [];
+  const dueIn = cs => cs.filter(c => c.history.length && c.due <= DB.today).length;
+  const key = [["wk", "st.known"], ["wl", "st.learn"], ["wd", "tv.key.due"], ["", "st.new"]].map(([c, l]) => `<span><span class="wdots"><i class="${c}"></i></span>${t(l)}</span>`).join("");
+  $("#app").innerHTML = `
+    <div class="top"><a href="#" class="tvback" id="thome">${t("gm.back")}</a><h1>${t("tv.topics")}</h1><p class="soft">${t("tv.topics.intro")}</p>
+      <div class="tvkey">${key}</div></div>
+    ${[1, 2, 3].filter(pr => tier(pr).length).map(pr => `<section class="tvset"><header><h2>${t("p." + pr)}</h2><span class="soft">${t("tv.n.topics", tier(pr).length)}</span>
+      <button type="button" class="txtbtn" data-tier="${pr}">${t(tier(pr).every(g => picked.includes(g)) ? "pk.tnone" : "pk.tall")}</button></header>
+      <ul class="tvtbl">${tier(pr).map(g => { const cs = groupsBy[g], d = dueIn(cs), seen = cs.filter(c => c.history.length).length;
+        return `<li><label class="tvpick"><input type="checkbox" data-g="${esc(g)}"${picked.includes(g) ? " checked" : ""}><span><b>${esc(gname(g))}</b><small>${esc(GROUPS[g] ? GROUPS[g][LANG === "en" ? 1 : 0] : "")}</small></span>${wordDots(cs)}<span class="c">${seen}/${cs.length}</span>${d ? `<span class="due">${t("g.due", d)}</span>` : "<span></span>"}</label></li>`; }).join("")}</ul></section>`).join("")}
+    ${sel ? `<div class="tvbar"><div class="tx"><b>${t("pk.some", sel.length, pool.length)}</b><small>${esc(sel.map(gname).slice(0, 3).join(", "))}${sel.length > 3 ? " …" : ""}</small></div>
+      <button type="button" class="btn k-learn" id="selLearn">${ICONS.spark}${t("tv.v.learn")}</button><button type="button" class="btn k-test" id="selTest">${ICONS.pencil}${t("tv.v.test")}</button>
+      <button type="button" class="btn k-review" id="selRev">${ICONS.repeat}${t("tv.v.review")}</button><button type="button" class="txtbtn" id="selClear">${t("pk.clear")}</button></div>` : ""}`;
+  const redraw = () => { const y = window.scrollY; topicsView(); window.scrollTo(0, y); };
+  $("#thome").onclick = e => { e.preventDefault(); home(); window.scrollTo(0, 0); };
+  document.querySelectorAll(".tvtbl input").forEach(i => i.onchange = () => { const g = i.dataset.g; setPicked(i.checked ? [...picked, g] : picked.filter(x => x !== g)); redraw(); $(`.tvtbl input[data-g="${CSS.escape(g)}"]`)?.focus(); });
+  document.querySelectorAll("[data-tier]").forEach(b => b.onclick = () => { const gs = tier(+b.dataset.tier), all = gs.every(g => picked.includes(g)); setPicked(all ? picked.filter(g => !gs.includes(g)) : [...new Set([...picked, ...gs])]); redraw(); });
+  if (sel) {
+    $("#selLearn").onclick = () => startSession({ groups: sel, reviews: 0 });
+    $("#selTest").onclick = () => startExercise(sel);
+    $("#selRev").onclick = () => startSession({ groups: sel, fresh: 0 });
+    $("#selClear").onclick = () => { setPicked([]); redraw(); };
+  }
+  window.scrollTo(0, 0);
 }
 const ICONS = Object.fromEntries(Object.entries({
   play: '<path d="M8 5.5v13l10.5-6.5z" fill="currentColor" stroke="none"/>',
@@ -2428,18 +2536,24 @@ const q = s => `«${s}»`;
 function grammarHome() {
   S = null; FC = null; GS = null;
   const st = grStats();
-  const tile = type => {
-    const its = grItems(type), done = its.filter(x => (st[x.id] || [0])[0] > 0).length;
-    return `<button type="button" class="sheet gtile" data-gt="${type}"><h3>${t("gm." + type)}</h3>
-      <div class="rule">${t("gm." + type + ".r")}</div><div class="demo" lang="da">${t("gm." + type + ".d")}</div>
-      <div class="meta"><span>${t("gm.done", done, its.length)}</span><span class="bar"><span style="width:${100 * done / its.length}%"></span></span></div></button>`;
-  };
-  $("#app").innerHTML = `<div class="narrow">
-    <div class="counter"><span>${t("gm.title")}</span><button class="btn quiet" id="ghome">← ${t("gm.back")}</button></div>
-    <div class="top" style="padding-top:8px"><h1>${t("gm.title")}</h1><p>${t("gm.intro")}</p>
-      <div class="hero-cta"><button class="btn solid" data-gt="mix">${t("gm.mix")}</button></div></div>
-    ${GR_GROUPS.map(([g, types]) => `<div class="gsec"><h2>${t("gm.g." + g)}</h2><div class="ggrid">${types.map(tile).join("")}</div></div>`).join("")}</div>`;
-  $("#ghome").onclick = home;
+  const types = GR_TOPICS.filter(x => x !== "error");
+  const info = type => { const its = grItems(type); return { n: its.length, ok: its.filter(x => (st[x.id] || [0])[0] > 0).length }; };
+  const row = (type, verb) => { const f = info(type);
+    return tvRow(`data-gt="${type}"`, t("gm." + type), `<small class="rule">${t("gm." + type + ".r")}</small>`, `${f.ok}<small>${t("tv.of", f.n)}</small>`, verb, `${verb}: ${t("gm." + type)}`); };
+  const go = types.filter(x => { const f = info(x); return f.ok && f.ok < f.n; }), fresh = types.filter(x => !info(x).ok), done = types.filter(x => { const f = info(x); return f.n && f.ok === f.n; });
+  const col = (k, icon, title, list, unit, verb, emptyKey) => tvCol(k, icon, title, list.length, unit,
+    list.length ? `<ul class="tvrows">${list.map(x => row(x, verb)).join("")}</ul>` : `<p class="tvempty">${ICONS.check}<span>${t(emptyKey)}</span></p>`);
+  $("#app").innerHTML = `
+    <div class="top tvhead"><div><a href="#" class="tvback" id="ghome">${t("gm.back")}</a><h1>${t("gm.title")}</h1><p class="soft">${t("gm.intro")}</p></div>
+      <button type="button" class="btn solid tvgo" data-gt="mix">${ICONS.swap}${t("gm.mix")}</button></div>
+    <div class="tvboard">
+      ${col("test", "pencil", t("tv.g.go"), go, t("tv.g.go.u"), t("tv.g.cont"), "tv.g.go.none")}
+      ${col("learn", "spark", t("tv.g.new"), fresh, t("tv.g.new.u"), t("tv.g.start"), "tv.g.new.none")}
+      ${col("review", "repeat", t("tv.g.done"), done, t("tv.g.done.u"), t("tv.g.again"), "tv.g.done.none")}
+    </div>
+    <section class="tverr"><span class="i">${ICONS.swap}</span><div><b>${t("gm.error")}</b><p>${t("gm.error.r")}</p></div>
+      <button type="button" class="btn" data-gt="error">${t("tv.g.try")}</button></section>`;
+  $("#ghome").onclick = e => { e.preventDefault(); home(); };
   document.querySelectorAll("[data-gt]").forEach(b => b.onclick = () => startGrammar(b.dataset.gt));
   window.scrollTo(0, 0);
 }
