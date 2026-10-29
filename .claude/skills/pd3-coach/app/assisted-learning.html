@@ -291,6 +291,10 @@ input.answer:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--ac
 .sensenote { margin-top: 12px; padding: 10px 14px; background: var(--blue-soft); border-radius: 12px; font-size: .9rem; }
 .prepline { display: inline-block; margin: 6px 0 2px; padding: 3px 10px; border-radius: 8px; background: var(--blue-soft); color: var(--blue-text); font-size: .9rem; }
 .prepline b { color: var(--ink); font-weight: 600; }
+/* tag on text written by AI for this tool (not from DDO or the exams) */
+.ai { display: inline-block; margin-left: 6px; padding: 0 5px; border: 1px dashed var(--faint); border-radius: 5px; vertical-align: .12em;
+  font: 700 .6rem/1.45 var(--body); letter-spacing: .06em; text-transform: none; color: var(--soft); white-space: nowrap; cursor: help; }
+.lbl .src { text-transform: none; letter-spacing: 0; font-weight: 600; }
 .feedback .prepline { margin-top: 8px; }
 .whybox { margin-top: 10px; padding: 10px 12px; border-radius: 10px; background: var(--sheet); border-left: 3px solid var(--accent); font-size: .94rem; }
 .whybox > b:first-child { color: var(--accent-text); }
@@ -513,7 +517,11 @@ const I18N = {
   "f.title": ["Om ordet", "About the word"], "f.class": ["Ordklasse", "Word class"], "f.gender": ["Køn", "Gender"],
   "f.g.en": ["fælleskøn (en)", "common gender (en)"], "f.g.et": ["intetkøn (et)", "neuter (et)"],
   "f.infl": ["Bøjning", "Inflection"], "f.noinfl": ["bøjes ikke", "does not inflect"], "f.cons": ["Konstruktion", "Construction"],
-  "f.brug": ["Brug", "Used as"], "f.ddo": ["fra Den Danske Ordbog", "from Den Danske Ordbog"],
+  "ai.title": ["Skrevet af AI (Claude) til dette værktøj – ikke fra Den Danske Ordbog eller prøverne. Tjek i ordbogen.", "Written by AI (Claude) for this tool – not from Den Danske Ordbog or the exams. Check in the dictionary."],
+  "ai.ddo": ["fra Den Danske Ordbog", "from Den Danske Ordbog"], "ai.exam": ["fra prøverne", "from the exams"],
+  "ai.gt": ["Engelsk: maskinoversat med Google Translate.", "English: machine-translated with Google Translate."],
+  "info.ai": ["Mærket AI betyder: skrevet af AI (Claude) til dette værktøj – de engelske betydninger, noterne, tips, ordstillingsreglerne og de eksempler, der ikke er fra prøverne eller ordbogen. Alt uden mærket er fra Den Danske Ordbog eller prøverne; de engelske oversættelser under DDO og knappen “oversæt” er Google Translate.", "The AI tag means: written by AI (Claude) for this tool – the English meanings, notes, tips, word-order rules and the examples that are not from the exams or the dictionary. Everything without the tag is from Den Danske Ordbog or the exams; the English under DDO and the “translate” button are Google Translate."],
+  "f.brug": ["Brug", "Used as"], "f.ddosrc": ["fra Den Danske Ordbog", "from Den Danske Ordbog"],
   "f.key": ["nogen = en person · noget = en ting · at + sætning = at-sætning · hv + sætning = hvorfor/hvordan …-sætning", "nogen = a person · noget = a thing · at + sætning = that-clause · hv + sætning = why/how … clause"], "t.mix": ["Forveksl ikke:", "Don't mix up:"],
   "q.meaning": ["Hvad betyder det?", "What does it mean?"], "q.relation": ["Hvilken relation udtrykker forbinderordet?", "Which relation does this connector express?"],
   "q.cloze": ["Hvilket ord passer i hullet?", "Which word fits the gap?"], "q.base": [" (grundform)", " (options in base form)"],
@@ -682,7 +690,7 @@ function chrome() {
   const dlg = document.createElement("dialog");
   dlg.className = "info"; dlg.setAttribute("aria-labelledby", "infoTitle");
   dlg.innerHTML = `<div class="ib"><div class="ih"><h2 id="infoTitle">${t("info.title")}</h2><button type="button" class="btn quiet" id="infoClose">${t("info.close")}</button></div>
-    <h3>${t("info.how")}</h3><p>${t("info.p1")}</p><p>${t("info.p2")}</p><p>${t("info.p3")}</p>
+    <h3>${t("info.how")}</h3><p>${t("info.p1")}</p><p>${t("info.p2")}</p><p>${t("info.p3")}</p><p><span class="ai" style="margin:0 4px 0 0">AI</span>${t("info.ai")}</p>
     <h3>${t("info.keys")}</h3><dl class="keylist"><dt>1 – 4</dt><dd>${t("key.num")}</dd><dt>Enter</dt><dd>${t("key.enter")}</dd><dt>←</dt><dd>${t("b.prev.t")}</dd></dl>
     <h3>${t("info.grades")}</h3><dl class="keylist">${[5, 4, 3, 2, 1, 0].map(g => `<dt>${g}</dt><dd>${t("gr." + g)}</dd>`).join("")}</dl></div>`;
   dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
@@ -866,6 +874,15 @@ function hlSentence(c, s, span) {
   return esc(s.slice(0, span[0])) + `<mark class="hl">${esc(s.slice(span[0], span[1]))}</mark>` + esc(s.slice(span[1]));
 }
 function examSentences(c) { return DB.sentences[c.id] || []; }
+// small tag on text written by AI for this tool; exLabel says where the card's example comes from (DDO, the exams, else AI)
+const AI = () => `<span class="ai" title="${esc(t("ai.title"))}">AI</span>`;
+const lettersOf = s => String(s || "").toLowerCase().replace(/[^a-zæøå0-9]/g, "");
+function exLabel(c, s) {
+  const k = lettersOf(s);
+  if (k && c.dict && c.dict.cite.some(x => lettersOf(x) === k)) return `<span class="src"> · ${t("ai.ddo")}</span>`;
+  if (k && examSentences(c).some(e => lettersOf(e.s).includes(k))) return `<span class="src"> · ${t("ai.exam")}</span>`;
+  return AI();
+}
 function partnerPairs(id) { return CONFUSABLES.filter(p => (p[0] === id || p[1] === id) && DB.cards[p[0]] && DB.cards[p[1]]); }
 function gname(g) { return GROUPS[g] ? GROUPS[g][LANG === "en" ? 0 : 1] : g; }
 // both languages, the page language first (as the other pages name their groups)
@@ -1109,7 +1126,8 @@ function ddoHead(c, d) {
 }
 function ddoSenses(d, n) {
   return d.senses.slice(0, n).map((s, i) => `<div lang="da" style="margin-top:4px">${d.senses.length > 1 ? `<b>${i + 1}.</b> ` : ""}${esc(s)}</div>${
-    d.senses_en && d.senses_en[i] ? `<div class="en-def" lang="en">${esc(d.senses_en[i])}</div>` : ""}`).join("");
+    d.senses_en && d.senses_en[i] ? `<div class="en-def" lang="en">${esc(d.senses_en[i])}</div>` : ""}`).join("") +
+    (d.senses_en && d.senses_en.length ? `<div class="soft small" style="margin-top:4px">${t("ai.gt")}</div>` : "");
 }
 // words with more than one meaning (senses.json): one block per meaning with its own example and exam sentences
 function senseBlocks(c, perSense, withTr) {
@@ -1118,10 +1136,10 @@ function senseBlocks(c, perSense, withTr) {
   const exLine = e => `<div class="ex" lang="da"><span class="tag">${esc(e.src)}</span><span>${hlSentence(c, e.s, e.m)}</span>${withTr ? trLink(e.s) : ""}</div>`;
   return info.senses.map((sn, i) => {
     const mine = ex.filter(e => e.sense === sn.id).slice(0, perSense);
-    return `<div class="sense"><div class="sh">${info.senses.length > 1 ? `<span class="num">${i + 1}</span>` : ""}<b lang="en">${esc(sn.en)}</b><span class="soft" lang="da">${esc(sn.da)}</span></div>
-      <div class="eg"><div class="ex" lang="da"><span class="sentence">${hlSentence(c, sn.example)}</span>${withTr ? trLink(sn.example) : ""}</div></div>
+    return `<div class="sense"><div class="sh">${info.senses.length > 1 ? `<span class="num">${i + 1}</span>` : ""}<b lang="en">${esc(sn.en)}</b><span class="soft" lang="da">${esc(sn.da)}</span>${AI()}</div>
+      <div class="eg"><span class="lbl">${t("t.example")}${exLabel(c, sn.example)}</span><div class="ex" lang="da"><span class="sentence">${hlSentence(c, sn.example)}</span>${withTr ? trLink(sn.example) : ""}</div></div>
       ${mine.length ? mine.map(exLine).join("") : `<div class="none">${t("s.noexam")}</div>`}</div>`;
-  }).join("") + (info.note ? `<div class="sensenote" lang="da">${esc(info.note)}</div>` : "");
+  }).join("") + (info.note ? `<div class="sensenote" lang="da">${esc(info.note)}${AI()}</div>` : "");
 }
 // ---------- "Hvorfor?": why the right answer is right, shown after a wrong answer ----------
 const GEX = {
@@ -1154,7 +1172,7 @@ function swapIn(s, span, word) {
 // the construction a word is learnt with (resultere i + navneord, ansvar for): shown right under the word
 function prepLine(c) {
   const pr = DB.tips[c.id] && DB.tips[c.id].prep;
-  return pr ? `<div class="prepline">${t("prep.with")} <b lang="da">${esc(pr)}</b></div>` : "";
+  return pr ? `<div class="prepline">${t("prep.with")} <b lang="da">${esc(pr)}</b>${AI()}</div>` : "";
 }
 function tipBlock(c) {
   const tp = DB.tips[c.id];
@@ -1162,13 +1180,13 @@ function tipBlock(c) {
   // the construction is shown in "Om ordet" (factsBlock) when the card has one
   const rows = [["order", "tip.order"], ["register", "tip.register"], ["construction", "tip.construction"]].filter(([k]) => tp[k] && !(k === "construction" && DB.info[c.id]));
   if (!rows.length) return "";
-  return `<div class="block"><div class="tipbox"><b>${t("tip.title")}</b><ul>${rows.map(([k, l]) =>
+  return `<div class="block"><div class="tipbox"><b>${t("tip.title")}</b>${AI()}<ul>${rows.map(([k, l]) =>
     `<li><span class="tl">${t(l)}:</span> <span lang="da">${esc(tp[k][0])}</span><div class="en-def" lang="en">${esc(tp[k][1])}</div></li>`).join("")}</ul></div></div>`;
 }
 function ruleBlock(c) {
   const w = wtype(c);
   if (!w) return "";
-  return w.split("/").map(k => RULES[k] ? `<div class="note"><b class="t">${RULES[k][0]}</b><div>${rule(k)}</div><div class="demo" lang="da">${RULES[k][3]}</div></div>` : "").join("");
+  return w.split("/").map(k => RULES[k] ? `<div class="note"><b class="t">${RULES[k][0]}</b>${AI()}<div>${rule(k)}</div><div class="demo" lang="da">${RULES[k][3]}</div></div>` : "").join("");
 }
 // the word-type label is shown as a tag already
 function noteText(c) { return (c.note || "").replace(/^(SUB\/PRÆP|SUB\/ADV|SUB|ADV|KOO|PRÆP)\s*(—\s*)?/, ""); }
@@ -1189,11 +1207,12 @@ function factsBlock(c) {
   // the card's own construction tip, the study-sheet note and DDO's first patterns – each once
   const tip = DB.tips[c.id] && DB.tips[c.id].construction;
   const plain = h => h.replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim().toLowerCase();
+  // the notes written for this tool carry an AI tag, DDO's patterns don't
   const cons = [];
-  for (const h of [...f.construction.map(esc), ...(tip ? [esc(tip[0])] : []), ...f.grammar.slice(0, 3).map(patHtml)])
-    if (!cons.some(x => plain(x) === plain(h))) cons.push(h);
-  if (cons.length) rows.push(row(t("f.cons"), `<ul class="cons" lang="da">${cons.map(x => `<li>${x}</li>`).join("")}</ul>${f.grammar.length ? `<span class="soft small">${t("f.key")}</span>` : ""}`));
-  if (f.brug.length) rows.push(row(t("f.brug"), `<span lang="da">${f.brug.map(esc).join(" · ")}</span>${f.brug_src === "DDO" ? ` <span class="soft small">(${t("f.ddo")})</span>` : ""}`));
+  for (const [h, mine] of [...f.construction.map(x => [esc(x), true]), ...(tip ? [[esc(tip[0]), true]] : []), ...f.grammar.slice(0, 3).map(x => [patHtml(x), false])])
+    if (!cons.some(([x]) => plain(x) === plain(h))) cons.push([h, mine]);
+  if (cons.length) rows.push(row(t("f.cons"), `<ul class="cons" lang="da">${cons.map(([x, mine]) => `<li>${x}${mine ? AI() : ""}</li>`).join("")}</ul>${f.grammar.length ? `<span class="soft small">${t("f.key")}</span>` : ""}`));
+  if (f.brug.length) rows.push(row(t("f.brug"), `<span lang="da">${f.brug.map(esc).join(" · ")}</span>${f.brug_src === "DDO" ? ` <span class="soft small">(${t("f.ddosrc")})</span>` : AI()}`));
   return `<div class="block"><div class="facts"><span class="lbl">${t("f.title")}</span>${rows.join("")}</div></div>`;
 }
 function renderTeach(c, review) {
@@ -1204,15 +1223,15 @@ function renderTeach(c, review) {
   frame(review ? t("k.back") : t("k.learn"), `
     <div class="head" style="margin-top:6px"><span class="big" lang="da">${esc(c.word)}</span>${wtype(c) ? `<span class="tag">${esc(wtype(c))}</span>` : ""}<span class="badge t${prio(c.group)}">${esc(glabel(c.group))}</span></div>
     ${prepLine(c)}
-    <div class="meaning">${esc(c.meaning)}</div>
-    ${extraNote ? `<div class="soft" lang="da" style="margin-top:4px">${esc(extraNote)}</div>` : ""}
+    <div class="meaning">${esc(c.meaning)}${AI()}</div>
+    ${extraNote ? `<div class="soft" lang="da" style="margin-top:4px">${esc(extraNote)}${AI()}</div>` : ""}
     ${factsBlock(c)}
     ${wtype(c) ? `<div class="block"><span class="lbl">${t("t.order")}</span>${ruleBlock(c)}</div>` : ""}
     ${DB.senses[c.id] ? `<div class="block"><span class="lbl">${DB.senses[c.id].senses.length > 1 ? `${t("t.senses")} · ${t("t.senses.s")}` : t("t.sense1")}</span>${senseBlocks(c, 1, false)}</div>` : `
-    <div class="block"><div class="eg"><span class="lbl">${t("t.example")}</span><div class="sentence" lang="da">${hlSentence(c, c.example)}</div></div></div>
+    <div class="block"><div class="eg"><span class="lbl">${t("t.example")}${exLabel(c, c.example)}</span><div class="sentence" lang="da">${hlSentence(c, c.example)}</div></div></div>
     ${ex.length ? `<div class="block"><span class="lbl">${t("t.exam")}</span>${ex.map(e => `<div class="ex" lang="da"><span class="tag">${esc(e.src)}</span>${hlSentence(c, e.s, e.m)}</div>`).join("")}</div>` : ""}`}
     ${d ? `<div class="block"><div class="ddo"><span class="lbl">${t("t.ddo")}</span><div class="soft small">${ddoHead(c, d)}</div>${ddoSenses(d, 2)}${d.cite.slice(0, 1).map(x => `<blockquote lang="da">${esc(x)}</blockquote>`).join("")}<div class="cite"><a href="${esc(d.url)}" target="_blank" rel="noopener">ordnet.dk ↗</a></div></div></div>` : ""}
-    ${pairs.map(p => { const o = DB.cards[p[0] === c.id ? p[1] : p[0]]; return `<div class="block"><div class="warnbox"><b>${t("t.mix")}</b> <span lang="da">${esc(c.word)} / ${esc(o.word)}</span> — ${esc(tip(p))}</div></div>`; }).join("")}
+    ${pairs.map(p => { const o = DB.cards[p[0] === c.id ? p[1] : p[0]]; return `<div class="block"><div class="warnbox"><b>${t("t.mix")}</b> <span lang="da">${esc(c.word)} / ${esc(o.word)}</span> — ${esc(tip(p))}${AI()}</div></div>`; }).join("")}
     ${tipBlock(c)}
     <div class="row next"><button class="btn solid" id="nx">${review ? t("b.next") + " →" : t("b.got")}</button><button class="btn quiet morebtn" id="more">${t("b.more")}</button></div>`);
   $("#more").onclick = () => explain(c);
@@ -1957,10 +1976,10 @@ function explain(c) {
     <div class="ih"><div><span class="lbl" id="exTitle">${t("m.title")}</span><div class="head"><span class="big" lang="da">${esc(c.word)}</span>${wtype(c) ? `<span class="tag">${esc(wtype(c))}</span>` : ""}</div></div>
       <button type="button" class="btn quiet" id="exClose">${t("info.close")}</button></div>
     ${prepLine(c)}
-    <div class="meaning" style="margin-top:12px">${esc(c.meaning)}</div>
-    ${noteText(c) ? `<div class="soft" lang="da" style="margin-top:4px">${esc(noteText(c))}</div>` : ""}
+    <div class="meaning" style="margin-top:12px">${esc(c.meaning)}${AI()}</div>
+    ${noteText(c) ? `<div class="soft" lang="da" style="margin-top:4px">${esc(noteText(c))}${AI()}</div>` : ""}
     ${factsBlock(c)}
-    ${DB.senses[c.id] ? "" : `<div class="block"><div class="eg"><span class="lbl">${t("t.example")}</span><div class="ex" lang="da"><span class="sentence">${hlSentence(c, c.example)}</span>${trLink(c.example)}</div></div></div>`}
+    ${DB.senses[c.id] ? "" : `<div class="block"><div class="eg"><span class="lbl">${t("t.example")}${exLabel(c, c.example)}</span><div class="ex" lang="da"><span class="sentence">${hlSentence(c, c.example)}</span>${trLink(c.example)}</div></div></div>`}
     ${wtype(c) ? `<h3>${t("t.order")}</h3>${ruleBlock(c)}` : ""}
     <h3>${t("m.senses")} <span class="soft">· ${t("t.ddo")}</span></h3>
     ${d ? `<div class="ddo"><div class="soft small">${ddoHead(c, d)}</div>${ddoSenses(d, 99)}
@@ -1969,7 +1988,7 @@ function explain(c) {
       : `<p>${t("m.nodict")} <a href="${esc(lookup)}" target="_blank" rel="noopener">${t("m.lookup")}</a></p>`}
     ${DB.senses[c.id] ? `<h3>${t("t.senses")} <span class="soft">· ${t("m.exam")}</span></h3>${senseBlocks(c, 99, true)}` :
       ex.length ? `<h3>${t("m.exam")} <span class="soft">· ${ex.length}</span></h3>${ex.map(e => `<div class="ex" lang="da"><span class="tag">${esc(e.src)}</span><span>${hlSentence(c, e.s, e.m)}</span>${trLink(e.s)}</div>`).join("")}` : ""}
-    ${pairs.map(p => { const o = DB.cards[p[0] === c.id ? p[1] : p[0]]; return `<div class="block"><div class="warnbox"><b>${t("t.mix")}</b> <span lang="da">${esc(c.word)} / ${esc(o.word)}</span> (${esc(o.meaning)}) — ${esc(tip(p))}</div></div>`; }).join("")}
+    ${pairs.map(p => { const o = DB.cards[p[0] === c.id ? p[1] : p[0]]; return `<div class="block"><div class="warnbox"><b>${t("t.mix")}</b> <span lang="da">${esc(c.word)} / ${esc(o.word)}</span> (${esc(o.meaning)}) — ${esc(tip(p))}${AI()}</div></div>`; }).join("")}
     ${tipBlock(c)}
     ${mates.length ? `<h3>${t("m.mates")} <span class="soft">· ${esc(gname(c.group))} ${t("m.mates.s")}</span></h3>
       <div class="mates">${mates.map(x => `<button type="button" class="mate${same(x) ? " same" : ""}" data-id="${esc(x.id)}"><b lang="da">${esc(x.word)}</b><span>${esc(x.meaning)}${same(x) ? ` · ${t("m.same")}` : ""}</span></button>`).join("")}</div>` : ""}
