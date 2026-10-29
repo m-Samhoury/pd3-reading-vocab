@@ -120,7 +120,7 @@ const I18N = {
   "d.gender.en": ["fælleskøn (en)", "common gender (en)"], "d.gender.et": ["intetkøn (et)", "neuter (et)"],
   "d.wikt": ["Engelske ord (EN) fra Wiktionary, CC BY-SA 4.0.", "English words (EN) from Wiktionary, CC BY-SA 4.0."],
   "info.open": ["Hjælp og forkortelser", "Help and abbreviations"], "info.title": ["Hjælp", "Help"],
-  "info.close": ["Luk", "Close"], "info.how": ["Sådan virker det", "How it works"],
+  "info.close": ["Luk", "Close"], "th.dark": ["Skift til mørk tilstand", "Switch to dark mode"], "th.light": ["Skift til lys tilstand", "Switch to light mode"], "info.how": ["Sådan virker det", "How it works"],
   "tab.learn.s": ["Flashcards: se ordet, vend kortet", "Flashcards: see the word, flip the card"],
   "tab.test.s": ["10 spørgsmål som til prøven", "10 exam-style questions"],
   "pick.title": ["Hvilke ord?", "Which words?"], "pick.count": ["{0} ord valgt", "{0} words selected"],
@@ -173,7 +173,17 @@ function applyI18n(root = document) {
     b.type = "button"; b.className = "langbtn"; b.lang = LANG === "en" ? "da" : "en";
     b.textContent = t("lang.button"); b.title = t("lang.title");
     b.addEventListener("click", flipLang);
-    (nav.closest(".topbar-in") || nav).append(...infoDialog(), b);
+    const theme = document.createElement("button");
+    theme.type = "button"; theme.className = "iconbtn themebtn";
+    theme.addEventListener("click", () => {
+      const to = isDark() ? "light" : "dark";
+      document.documentElement.dataset.theme = to;
+      try { localStorage.setItem("pd3.theme", to); } catch (e) { /* ignore */ }
+      themeButton();
+    });
+    matchMedia("(prefers-color-scheme: dark)").addEventListener("change", themeButton);
+    (nav.closest(".topbar-in") || nav).append(...infoDialog(), theme, b);
+    themeButton();
   }
 }
 function applyTexts(root = document) {
@@ -255,6 +265,18 @@ function flipLang() {
   applyTexts();
   const b = document.querySelector(".langbtn");
   b.lang = to === "en" ? "da" : "en"; b.textContent = t("lang.button"); b.title = t("lang.title");
+  themeButton();
+}
+
+// light / dark: follows the system until the button is used; the choice is kept in localStorage "pd3.theme" (shared with Guidet læring)
+const isDark = () => document.documentElement.dataset.theme ? document.documentElement.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+function themeButton() {
+  const b = document.querySelector(".themebtn"); if (!b) return;
+  const dark = isDark(), label = t(dark ? "th.light" : "th.dark");
+  b.title = label; b.setAttribute("aria-label", label);
+  b.innerHTML = `<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${dark
+    ? '<circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/>'
+    : '<path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/>'}</svg>`;
 }
 
 /** ⓘ button in the top bar that opens a help dialog: page-specific help (#infoExtra) + the abbreviations key */

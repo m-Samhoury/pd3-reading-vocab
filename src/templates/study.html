@@ -8,6 +8,9 @@
 <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="description" content="PD3 reading vocabulary (Nov 2022 – May 2024 exams): connectors, question words and text words, grouped by meaning.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500..900&family=Roboto+Flex:opsz,wght@8..144,400..700&display=swap">
+<script>try { const m = localStorage.getItem("pd3.theme"); if (m === "light" || m === "dark") document.documentElement.dataset.theme = m; } catch (e) { /* ignore */ }</script>
 <style>
 {{CSS}}
 .tools { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--paper) 88%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--rule); margin-top: 14px; }
@@ -97,7 +100,7 @@ section.group > .ghead button { margin-left: auto; }
       <label class="field"><span data-i18n="f.ddo">Tjek i DDO</span> <select id="fVer"><option value="" data-i18n="f.any">Alle</option><option value="yes" data-i18n="f.verified">Verificeret</option><option value="no" data-i18n="f.unverified">Ikke verificeret</option></select></label>
       <label class="check"><input type="checkbox" id="hideEn"> <span data-i18n="f.hideEn">Skjul engelsk</span></label>
       <label class="check"><input type="checkbox" id="hideDa"> <span data-i18n="f.hideDa">Skjul dansk</span></label>
-      <div style="display:flex;gap:6px;align-items:end;flex-wrap:wrap">
+      <div style="grid-column:1/-1;display:flex;gap:6px;align-items:center;flex-wrap:wrap">
         <button class="btn quiet" type="button" id="expand" data-i18n="f.expand">Fold alle ud</button>
         <button class="btn quiet" type="button" id="collapse" data-i18n="f.collapse">Fold sammen</button>
         <button class="btn quiet" type="button" onclick="window.print()" data-i18n="f.print">Print</button>
