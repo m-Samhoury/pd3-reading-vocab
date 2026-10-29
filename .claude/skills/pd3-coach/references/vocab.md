@@ -42,6 +42,14 @@ tiles with a retype after an error, L3 pair), an **Øvelse** button (up to 15 B2
 **Explain more** (button on the teach card, after every answer, and on any word in the group map) opens a panel with all
 DDO senses and citations, every stored exam sentence, a translate button on each sentence and citation (English shown inline: Google translate endpoint, MyMemory as fallback, cached in the browser), the word-order rule, confusables, and the
 other words in the group (same-meaning ones first); it ends by pointing to the coach in chat for a custom explanation.
+**Grammatik** (home button, or `#grammatik`) has three drills on real exam sentences from `pd3-data/grammar.json`
+(built by `scripts/grammar_items.py`, which checks every sentence word for word against the extracted reading texts
+and writing tasks): *Datid* (the sentence rewritten in the present, retyped in the past), *Inversion (V2)* (the fronted
+adverbial taken off and the order straightened, put back first; most items keep ikke/også/altid after the subject), and
+*Hvor står ikke?* (ikke/også/altid … taken out, tapped back in; subordinate and main clauses mixed). The right answer is
+always the exam's sentence, compared on words only (not case or punctuation); feedback shows a word diff, the exam
+sentence, a translate button and the rule. The rewritten sentences and the explanations carry the AI tag. 10 items a
+round, unsolved first; per-item results in localStorage (`pd3-assisted-learning:grammar:v1`), not in the SM-2 schedule.
 Grades (same SM-2 as `pd3.py`): 5 instant · 4 correct · 3 typo / second try · 2 recognised when shown · 1 wrong · 0 "I don't know".
 
 Data it uses: `card.dict` (from `pd3.py vocab enrich ddo_entries.json t23_facts.json`: up to 4 DDO senses + 6 citations)

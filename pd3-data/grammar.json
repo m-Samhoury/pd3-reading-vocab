@@ -1,0 +1,1202 @@
+{
+ "tense": [
+  {
+   "src": "2013v L2",
+   "past": "Egentlig gik han med drømme om at blive cykelmekaniker.",
+   "present": "Egentlig går han med drømme om at blive cykelmekaniker.",
+   "verbs": [
+    [
+     "går",
+     "gik",
+     "gå"
+    ]
+   ],
+   "swap": []
+  },
+  {
+   "src": "2013v L2",
+   "past": "Selv ville han gerne være cykelmekaniker, da han forlod folkeskolen.",
+   "present": "Selv vil han gerne være cykelmekaniker, når han forlader folkeskolen.",
+   "verbs": [
+    [
+     "vil",
+     "ville",
+     "ville"
+    ],
+    [
+     "forlader",
+     "forlod",
+     "forlade"
+    ]
+   ],
+   "swap": [
+    [
+     "når",
+     "da"
+    ]
+   ]
+  },
+  {
+   "src": "2013v L2",
+   "past": "Jeg kunne ikke sætte ord på, hvad det var.",
+   "present": "Jeg kan ikke sætte ord på, hvad det er.",
+   "verbs": [
+    [
+     "kan",
+     "kunne",
+     "kunne"
+    ],
+    [
+     "er",
+     "var",
+     "være"
+    ]
+   ],
+   "swap": []
+  },
+  {
+   "src": "2013v L2",
+   "past": "Da jeg læste bogen, tænkte jeg, at det var lige sådan, jeg havde haft det.",
+   "present": "Når jeg læser bogen, tænker jeg, at det er lige sådan, jeg har haft det.",
+   "verbs": [
+    [
+     "læser",
+     "læste",
+     "læse"
+    ],
+    [
+     "tænker",
+     "tænkte",
+     "tænke"
+    ],
+    [
+     "er",
+     "var",
+     "være"
+    ],
+    [
+     "har haft",
+     "havde haft",
+     "have"
+    ]
+   ],
+   "swap": [
+    [
+     "Når",
+     "Da"
+    ]
+   ]
+  },
+  {
+   "src": "2015v L2",
+   "past": "Det gik så godt, at han fik mod på at prøve nye udfordringer.",
+   "present": "Det går så godt, at han får mod på at prøve nye udfordringer.",
+   "verbs": [
+    [
+     "går",
+     "gik",
+     "gå"
+    ],
+    [
+     "får",
+     "fik",
+     "få"
+    ]
+   ],
+   "swap": []
+  },
+  {
+   "src": "2017s L2",
+   "past": "Han slog sig ikke alvorligt, da han faldt, men han satte sig lettere chokeret på en stol.",
+   "present": "Han slår sig ikke alvorligt, når han falder, men han sætter sig lettere chokeret på en stol.",
+   "verbs": [
+    [
+     "slår",
+     "slog",
+     "slå"
+    ],
+    [
+     "falder",
+     "faldt",
+     "falde"
+    ],
+    [
+     "sætter",
+     "satte",
+     "sætte"
+    ]
+   ],
+   "swap": [
+    [
+     "når",
+     "da"
+    ]
+   ]
+  },
+  {
+   "src": "2017s L2",
+   "past": "Nu begyndte det at gå op for ham, at der var noget alvorligt galt.",
+   "present": "Nu begynder det at gå op for ham, at der er noget alvorligt galt.",
+   "verbs": [
+    [
+     "begynder",
+     "begyndte",
+     "begynde"
+    ],
+    [
+     "er",
+     "var",
+     "være"
+    ]
+   ],
+   "swap": []
+  },
+  {
+   "src": "2017s L2",
+   "past": "Tankerne kørte rundt i hovedet på ham, og hjertet slog hurtigt.",
+   "present": "Tankerne kører rundt i hovedet på ham, og hjertet slår hurtigt.",
+   "verbs": [
+    [
+     "kører",
+     "kørte",
+     "køre"
+    ],
+    [
+     "slår",
+     "slog",
+     "slå"
+    ]
+   ],
+   "swap": []
+  },
+  {
+   "src": "2017v L1",
+   "past": "Dyrepasserne tog sig i stedet af ham, og han voksede op uden kontakt til andre næsehorn.",
+   "present": "Dyrepasserne tager sig i stedet af ham, og han vokser op uden kontakt til andre næsehorn.",
+   "verbs": [
+    [
+     "tager",
+     "tog",
+     "tage"
+    ],
+    [
+     "vokser",
+     "voksede",
+     "vokse"
+    ]
+   ],
+   "swap": []
+  },
+  {
+   "src": "2017v L1",
+   "past": "Da han blev kønsmoden, begyndte han at blive aggressiv.",
+   "present": "Når han bliver kønsmoden, begynder han at blive aggressiv.",
+   "verbs": [
+    [
+     "bliver",
+     "blev",
+     "blive"
+    ],
+    [
+     "begynder",
+     "begyndte",
+     "begynde"
+    ]
+   ],
+   "swap": [
+    [
+     "Når",
+     "Da"
+    ]
+   ]
+  },
+  {
+   "src": "2017v L1",
+   "past": "Brutalis faldt forbavsende godt til i Afrika og fik tilkæmpet sig et godt territorium.",
+   "present": "Brutalis falder forbavsende godt til i Afrika og får tilkæmpet sig et godt territorium.",
+   "verbs": [
+    [
+     "falder",
+     "faldt",
+     "falde"
+    ],
+    [
+     "får",
+     "fik",
+     "få"
+    ]
+   ],
+   "swap": []
+  },
+  {
+   "src": "2018v L1",
+   "past": "Samfundet udviklede sig, og det gjorde højskolerne også.",
+   "present": "Samfundet udvikler sig, og det gør højskolerne også.",
+   "verbs": [
+    [
+     "udvikler",
+     "udviklede",
+     "udvikle"
+    ],
+    [
+     "gør",
+     "gjorde",
+     "gøre"
+    ]
+   ],
+   "swap": []
+  },
+  {
+   "src": "2018v L1",
+   "past": "Jeg var lidt i tvivl om, hvilket studie jeg skulle vælge.",
+   "present": "Jeg er lidt i tvivl om, hvilket studie jeg skal vælge.",
+   "verbs": [
+    [
+     "er",
+     "var",
+     "være"
+    ],
+    [
+     "skal",
+     "skulle",
+     "skulle"
+    ]
+   ],
+   "swap": []
+  },
+  {
+   "src": "2018v L1",
+   "past": "Det var ret hårdt, og på et tidspunkt fik jeg simpelthen brug for en pause.",
+   "present": "Det er ret hårdt, og på et tidspunkt får jeg simpelthen brug for en pause.",
+   "verbs": [
+    [
+     "er",
+     "var",
+     "være"
+    ],
+    [
+     "får",
+     "fik",
+     "få"
+    ]
+   ],
+   "swap": []
+  },
+  {
+   "src": "2018v L2",
+   "past": "Først tænkte de på at flytte til Aalborg i stedet for til Hjørring.",
+   "present": "Først tænker de på at flytte til Aalborg i stedet for til Hjørring.",
+   "verbs": [
+    [
+     "tænker",
+     "tænkte",
+     "tænke"
+    ]
+   ],
+   "swap": []
+  },
+  {
+   "src": "2019s L1",
+   "past": "Vi dansede, sang og grinede i regnen og blev helt forelskede.",
+   "present": "Vi danser, synger og griner i regnen og bliver helt forelskede.",
+   "verbs": [
+    [
+     "danser",
+     "dansede",
+     "danse"
+    ],
+    [
+     "synger",
+     "sang",
+     "synge"
+    ],
+    [
+     "griner",
+     "grinede",
+     "grine"
+    ],
+    [
+     "bliver",
+     "blev",
+     "blive"
+    ]
+   ],
+   "swap": []
+  },
+  {
+   "src": "2019v L2",
+   "past": "Helene Bagger tog en hurtig beslutning og tilbød ham et job i Roskilde.",
+   "present": "Helene Bagger tager en hurtig beslutning og tilbyder ham et job i Roskilde.",
+   "verbs": [
+    [
+     "tager",
+     "tog",
+     "tage"
+    ],
+    [
+     "tilbyder",
+     "tilbød",
+     "tilbyde"
+    ]
+   ],
+   "swap": []
+  },
+  {
+   "src": "2019v L2",
+   "past": "Men han havde endnu ikke besluttet sig, fordi han var glad for sit arbejde i Rumænien.",
+   "present": "Men han har endnu ikke besluttet sig, fordi han er glad for sit arbejde i Rumænien.",
+   "verbs": [
+    [
+     "har besluttet",
+     "havde besluttet",
+     "beslutte"
+    ],
+    [
+     "er",
+     "var",
+     "være"
+    ]
+   ],
+   "swap": []
+  },
+  {
+   "src": "2016s L2",
+   "past": "Han krævede disciplin af eleverne, og han lagde vægt på udenadslære.",
+   "present": "Han kræver disciplin af eleverne, og han lægger vægt på udenadslære.",
+   "verbs": [
+    [
+     "kræver",
+     "krævede",
+     "kræve"
+    ],
+    [
+     "lægger",
+     "lagde",
+     "lægge"
+    ]
+   ],
+   "swap": []
+  },
+  {
+   "src": "2016s L2",
+   "past": "De havde aldeles ikke lyst til det, men de lærte det, ellers fik de bank.",
+   "present": "De har aldeles ikke lyst til det, men de lærer det, ellers får de bank.",
+   "verbs": [
+    [
+     "har",
+     "havde",
+     "have"
+    ],
+    [
+     "lærer",
+     "lærte",
+     "lære"
+    ],
+    [
+     "får",
+     "fik",
+     "få"
+    ]
+   ],
+   "swap": []
+  },
+  {
+   "src": "2017s L1",
+   "past": "Vi valgte at køre en tur med hestevogn i den ældste del af byen.",
+   "present": "Vi vælger at køre en tur med hestevogn i den ældste del af byen.",
+   "verbs": [
+    [
+     "vælger",
+     "valgte",
+     "vælge"
+    ]
+   ],
+   "swap": []
+  },
+  {
+   "src": "2017s L1",
+   "past": "Forældrene gik op i gamle møbler, og de genbrugte, reparerede og afsyrede.",
+   "present": "Forældrene går op i gamle møbler, og de genbruger, reparerer og afsyrer.",
+   "verbs": [
+    [
+     "går",
+     "gik",
+     "gå"
+    ],
+    [
+     "genbruger",
+     "genbrugte",
+     "genbruge"
+    ],
+    [
+     "reparerer",
+     "reparerede",
+     "reparere"
+    ],
+    [
+     "afsyrer",
+     "afsyrede",
+     "afsyre"
+    ]
+   ],
+   "swap": []
+  },
+  {
+   "src": "2017s L1",
+   "past": "Bønder fra omegnen kom med vadmel og uldgarn, som farveren behandlede.",
+   "present": "Bønder fra omegnen kommer med vadmel og uldgarn, som farveren behandler.",
+   "verbs": [
+    [
+     "kommer",
+     "kom",
+     "komme"
+    ],
+    [
+     "behandler",
+     "behandlede",
+     "behandle"
+    ]
+   ],
+   "swap": []
+  },
+  {
+   "src": "2017s L2",
+   "past": "Han havde i stedet fået stress, og de næste måneder kunne han næsten ingenting.",
+   "present": "Han har i stedet fået stress, og de næste måneder kan han næsten ingenting.",
+   "verbs": [
+    [
+     "har fået",
+     "havde fået",
+     "få"
+    ],
+    [
+     "kan",
+     "kunne",
+     "kunne"
+    ]
+   ],
+   "swap": []
+  },
+  {
+   "src": "2022s L1",
+   "past": "Vi besøgte også skolen, og jeg tænkte, at Fejø var et helt vidunderligt sted.",
+   "present": "Vi besøger også skolen, og jeg tænker, at Fejø er et helt vidunderligt sted.",
+   "verbs": [
+    [
+     "besøger",
+     "besøgte",
+     "besøge"
+    ],
+    [
+     "tænker",
+     "tænkte",
+     "tænke"
+    ],
+    [
+     "er",
+     "var",
+     "være"
+    ]
+   ],
+   "swap": []
+  },
+  {
+   "src": "2023v L2",
+   "past": "De forstod ikke altid, hvor jeg ville hen med mine ideer.",
+   "present": "De forstår ikke altid, hvor jeg vil hen med mine ideer.",
+   "verbs": [
+    [
+     "forstår",
+     "forstod",
+     "forstå"
+    ],
+    [
+     "vil",
+     "ville",
+     "ville"
+    ]
+   ],
+   "swap": []
+  }
+ ],
+ "v2": [
+  {
+   "src": "2013s L1",
+   "s": "Måske kan du også selv blive tutor.",
+   "plain": "Du kan også selv blive tutor.",
+   "adv": "Måske",
+   "verb": "kan",
+   "subj": "du",
+   "mid": [
+    "også",
+    "selv"
+   ]
+  },
+  {
+   "src": "2013s L1",
+   "s": "Desuden vil du også få tilknyttet en kontaktlærer.",
+   "plain": "Du vil også få tilknyttet en kontaktlærer.",
+   "adv": "Desuden",
+   "verb": "vil",
+   "subj": "du",
+   "mid": [
+    "også"
+   ]
+  },
+  {
+   "src": "2013v L2",
+   "s": "I dag har han allerede lagt planer for fremtiden.",
+   "plain": "Han har allerede lagt planer for fremtiden.",
+   "adv": "I dag",
+   "verb": "har",
+   "subj": "han",
+   "mid": [
+    "allerede"
+   ]
+  },
+  {
+   "src": "2014s L2",
+   "s": "I dag skal den slet ikke åbnes og bliver kun rørt ved en enkelt gang.",
+   "plain": "Den skal slet ikke åbnes og bliver kun rørt ved en enkelt gang.",
+   "adv": "I dag",
+   "verb": "skal",
+   "subj": "den",
+   "mid": [
+    "slet ikke"
+   ]
+  },
+  {
+   "src": "2016s L1",
+   "s": "Derfor gør vi altid vores bedste for at vise respekt for den tiltro, som vores frivillige viser vores organisation.",
+   "plain": "Vi gør altid vores bedste for at vise respekt for den tiltro, som vores frivillige viser vores organisation.",
+   "adv": "Derfor",
+   "verb": "gør",
+   "subj": "vi",
+   "mid": [
+    "altid"
+   ]
+  },
+  {
+   "src": "2016s L2",
+   "s": "For eksempel bliver eleverne sjældent sendt uden for døren.",
+   "plain": "Eleverne bliver sjældent sendt uden for døren.",
+   "adv": "For eksempel",
+   "verb": "bliver",
+   "subj": "eleverne",
+   "mid": [
+    "sjældent"
+   ]
+  },
+  {
+   "src": "2017s L2",
+   "s": "I dag er Gert ikke længere projektleder.",
+   "plain": "Gert er ikke længere projektleder.",
+   "adv": "I dag",
+   "verb": "er",
+   "subj": "Gert",
+   "mid": [
+    "ikke længere"
+   ]
+  },
+  {
+   "src": "2018s L1",
+   "s": "Her vil vi også få en mulighed for at høre mere om dig og dine kompetencer.",
+   "plain": "Vi vil også få en mulighed for at høre mere om dig og dine kompetencer.",
+   "adv": "Her",
+   "verb": "vil",
+   "subj": "vi",
+   "mid": [
+    "også"
+   ]
+  },
+  {
+   "src": "2018s L2",
+   "s": "Derudover skal de også have mod til at ansætte nogen, der er anderledes end dem selv.",
+   "plain": "De skal også have mod til at ansætte nogen, der er anderledes end dem selv.",
+   "adv": "Derudover",
+   "verb": "skal",
+   "subj": "de",
+   "mid": [
+    "også"
+   ]
+  },
+  {
+   "src": "2019s L1",
+   "s": "Dog kan man også vælge at tjekke ind ved det officielle indtjekningssted, der hedder Laden.",
+   "plain": "Man kan også vælge at tjekke ind ved det officielle indtjekningssted, der hedder Laden.",
+   "adv": "Dog",
+   "verb": "kan",
+   "subj": "man",
+   "mid": [
+    "også"
+   ]
+  },
+  {
+   "src": "2019s L2",
+   "s": "Dog støtter han ikke med penge, men med tid.",
+   "plain": "Han støtter ikke med penge, men med tid.",
+   "adv": "Dog",
+   "verb": "støtter",
+   "subj": "han",
+   "mid": [
+    "ikke"
+   ]
+  },
+  {
+   "src": "2019s L2",
+   "s": "Desuden kommer nogle unge aldrig i gang med en ny uddannelse igen, og det kan begrænse deres muligheder på jobmarkedet.",
+   "plain": "Nogle unge kommer aldrig i gang med en ny uddannelse igen, og det kan begrænse deres muligheder på jobmarkedet.",
+   "adv": "Desuden",
+   "verb": "kommer",
+   "subj": "nogle unge",
+   "mid": [
+    "aldrig"
+   ]
+  },
+  {
+   "src": "2019v L1",
+   "s": "Derudover smiler de altid og hilser pænt.",
+   "plain": "De smiler altid og hilser pænt.",
+   "adv": "Derudover",
+   "verb": "smiler",
+   "subj": "de",
+   "mid": [
+    "altid"
+   ]
+  },
+  {
+   "src": "2019v L2",
+   "s": "Samtidig har den ikke påvirket lønningerne negativt.",
+   "plain": "Den har ikke påvirket lønningerne negativt.",
+   "adv": "Samtidig",
+   "verb": "har",
+   "subj": "den",
+   "mid": [
+    "ikke"
+   ]
+  },
+  {
+   "src": "2020s L1",
+   "s": "Derudover skal det også fremgå, at man har modificeret fotoet fra originalen.",
+   "plain": "Det skal også fremgå, at man har modificeret fotoet fra originalen.",
+   "adv": "Derudover",
+   "verb": "skal",
+   "subj": "det",
+   "mid": [
+    "også"
+   ]
+  },
+  {
+   "src": "2021s L2",
+   "s": "Her adskiller han sig nok fra flertallet.",
+   "plain": "Han adskiller sig nok fra flertallet.",
+   "adv": "Her",
+   "verb": "adskiller",
+   "subj": "han",
+   "mid": [
+    "sig",
+    "nok"
+   ]
+  },
+  {
+   "src": "2021s L2",
+   "s": "Til gengæld er det måske ikke så vigtigt, om sommerferien går til Berlin eller Bangkok.",
+   "plain": "Det er måske ikke så vigtigt, om sommerferien går til Berlin eller Bangkok.",
+   "adv": "Til gengæld",
+   "verb": "er",
+   "subj": "det",
+   "mid": [
+    "måske ikke"
+   ]
+  },
+  {
+   "src": "2022s L2",
+   "s": "Typisk lærer man ikke noget om at søge job, når man går på en uddannelse.",
+   "plain": "Man lærer ikke noget om at søge job, når man går på en uddannelse.",
+   "adv": "Typisk",
+   "verb": "lærer",
+   "subj": "man",
+   "mid": [
+    "ikke"
+   ]
+  },
+  {
+   "src": "2023s L1",
+   "s": "Måske er du slet ikke i tvivl om, hvad jeg mener.",
+   "plain": "Du er slet ikke i tvivl om, hvad jeg mener.",
+   "adv": "Måske",
+   "verb": "er",
+   "subj": "du",
+   "mid": [
+    "slet ikke"
+   ]
+  },
+  {
+   "src": "2023s L2",
+   "s": "Måske handler de nedslående tal også om selvværdet hos de nyuddannede med et handicap.",
+   "plain": "De nedslående tal handler også om selvværdet hos de nyuddannede med et handicap.",
+   "adv": "Måske",
+   "verb": "handler",
+   "subj": "de nedslående tal",
+   "mid": [
+    "også"
+   ]
+  },
+  {
+   "src": "2023s L2",
+   "s": "Her kan de dog stadig ses fra land, og det kan få berørte borgere til at protestere.",
+   "plain": "De kan dog stadig ses fra land, og det kan få berørte borgere til at protestere.",
+   "adv": "Her",
+   "verb": "kan",
+   "subj": "de",
+   "mid": [
+    "dog",
+    "stadig"
+   ]
+  },
+  {
+   "src": "2023v L2",
+   "s": "Desuden er det ikke alle, der har brug for den samme sikkerhedsstandard.",
+   "plain": "Det er ikke alle, der har brug for den samme sikkerhedsstandard.",
+   "adv": "Desuden",
+   "verb": "er",
+   "subj": "det",
+   "mid": [
+    "ikke"
+   ]
+  },
+  {
+   "src": "2023v L2",
+   "s": "Endelig er det også vigtigt altid at holde sine enheder opdaterede, gerne automatisk.",
+   "plain": "Det er også vigtigt altid at holde sine enheder opdaterede, gerne automatisk.",
+   "adv": "Endelig",
+   "verb": "er",
+   "subj": "det",
+   "mid": [
+    "også"
+   ]
+  },
+  {
+   "src": "2024s L2",
+   "s": "Derfor er det også forholdsvist sjældent, man ser journalister skifte til et helt andet arbejdsområde.",
+   "plain": "Det er også forholdsvist sjældent, man ser journalister skifte til et helt andet arbejdsområde.",
+   "adv": "Derfor",
+   "verb": "er",
+   "subj": "det",
+   "mid": [
+    "også"
+   ]
+  },
+  {
+   "src": "2015v L2",
+   "s": "I dag er det ikke kun manden, der har som opgave at forsørge familien, sådan som det var tidligere.",
+   "plain": "Det er ikke kun manden, der har som opgave at forsørge familien, sådan som det var tidligere.",
+   "adv": "I dag",
+   "verb": "er",
+   "subj": "det",
+   "mid": [
+    "ikke kun"
+   ]
+  },
+  {
+   "src": "2022v L2",
+   "s": "Derfor er det nok de færreste iværksættere, der kan nøjes med at arbejde 37 timer om ugen.",
+   "plain": "Det er nok de færreste iværksættere, der kan nøjes med at arbejde 37 timer om ugen.",
+   "adv": "Derfor",
+   "verb": "er",
+   "subj": "det",
+   "mid": [
+    "nok"
+   ]
+  },
+  {
+   "src": "2014s W",
+   "s": "Siden sin studentereksamen har Jonas været et år i Spanien, og resten af tiden har han haft forskellige job.",
+   "plain": "Jonas har været et år i Spanien, og resten af tiden har han haft forskellige job.",
+   "adv": "Siden sin studentereksamen",
+   "verb": "har",
+   "subj": "Jonas",
+   "mid": []
+  },
+  {
+   "src": "2015s W",
+   "s": "I denne periode har fædre ret til 2 ugers orlov.",
+   "plain": "Fædre har ret til 2 ugers orlov.",
+   "adv": "I denne periode",
+   "verb": "har",
+   "subj": "fædre",
+   "mid": []
+  },
+  {
+   "src": "2017v L1",
+   "s": "Så går vi til gudstjeneste, og vi afslutter altid turen med varm kakao til hele banden.",
+   "plain": "Vi går til gudstjeneste, og vi afslutter altid turen med varm kakao til hele banden.",
+   "adv": "Så",
+   "verb": "går",
+   "subj": "vi",
+   "mid": []
+  }
+ ],
+ "place": [
+  {
+   "src": "2013s L1",
+   "s": "Princippet i det danske uddannelsessystem er nemlig, at man ikke skal gennemgå det samme to gange.",
+   "w": "ikke",
+   "n": 1,
+   "clause": "at",
+   "verb": "skal"
+  },
+  {
+   "src": "2013s L1",
+   "s": "Hvis du siger nej tak til en praktikplads, fordi du ikke vil flytte, kan du ikke komme i skolepraktik.",
+   "w": "ikke",
+   "n": 1,
+   "clause": "fordi",
+   "verb": "vil"
+  },
+  {
+   "src": "2013s L1",
+   "s": "Hvis du siger nej tak til en praktikplads, fordi du ikke vil flytte, kan du ikke komme i skolepraktik.",
+   "w": "ikke",
+   "n": 2,
+   "clause": "main",
+   "verb": "kan"
+  },
+  {
+   "src": "2013s L1",
+   "s": "Vi er helt klar over, at det ikke er nok, at du får en uddannelse og udvikles.",
+   "w": "ikke",
+   "n": 1,
+   "clause": "at",
+   "verb": "er"
+  },
+  {
+   "src": "2013v L2",
+   "s": "Hvis man kommer fra et hjem, hvor man ikke har tradition for uddannelse, så er man meget usikker over for den verden.",
+   "w": "ikke",
+   "n": 1,
+   "clause": "hvor",
+   "verb": "har"
+  },
+  {
+   "src": "2015s L1",
+   "s": "Du skal til optagelsesprøve, hvis du ikke har aflagt de prøver, der kræves for at blive optaget.",
+   "w": "ikke",
+   "n": 1,
+   "clause": "hvis",
+   "verb": "har"
+  },
+  {
+   "src": "2015v L1",
+   "s": "Det er en garanti for, at man kan færdiggøre sin uddannelse, selv om man ikke kan skaffe en praktikplads.",
+   "w": "ikke",
+   "n": 1,
+   "clause": "selv om",
+   "verb": "kan"
+  },
+  {
+   "src": "2016s L2",
+   "s": "Alle laver deres lektier, også selvom de ikke vil have en boglig uddannelse.",
+   "w": "ikke",
+   "n": 1,
+   "clause": "selvom",
+   "verb": "vil"
+  },
+  {
+   "src": "2016v L1",
+   "s": "Der er hele tiden meget, der skal laves, og det er vigtigt, at man ikke kommer bagud.",
+   "w": "ikke",
+   "n": 1,
+   "clause": "at",
+   "verb": "kommer"
+  },
+  {
+   "src": "2017s L1",
+   "s": "Det er afgørende, at du også har lyst til at fortælle om håndværket til museets mange gæster.",
+   "w": "også",
+   "n": 1,
+   "clause": "at",
+   "verb": "har"
+  },
+  {
+   "src": "2017s L1",
+   "s": "De var bevidste om, at de ikke ville bo i en møbeludstilling og holdt af, at tingene havde en historie.",
+   "w": "ikke",
+   "n": 1,
+   "clause": "at",
+   "verb": "ville"
+  },
+  {
+   "src": "2017s L2",
+   "s": "Det har vi, selvom vi stadig opfatter vores ferie som en periode, hvor vi slapper af uden at tænke på arbejde.",
+   "w": "stadig",
+   "n": 1,
+   "clause": "selvom",
+   "verb": "opfatter"
+  },
+  {
+   "src": "2017s L2",
+   "s": "Vi ønsker et interessant arbejde, hvor vi også kan udvikle os personligt.",
+   "w": "også",
+   "n": 1,
+   "clause": "hvor",
+   "verb": "kan"
+  },
+  {
+   "src": "2017v L1",
+   "s": "Husk, at I ikke må spise eller drikke i dyrenes områder.",
+   "w": "ikke",
+   "n": 1,
+   "clause": "at",
+   "verb": "må"
+  },
+  {
+   "src": "2018s L2",
+   "s": "Et vigtigt argument er, at man ikke skal se på ansøgeres køn, men udelukkende på deres kvalifikationer.",
+   "w": "ikke",
+   "n": 1,
+   "clause": "at",
+   "verb": "skal"
+  },
+  {
+   "src": "2019s L2",
+   "s": "Der er lavet en del undersøgelser af, hvorfor nogle ikke færdiggør deres uddannelse.",
+   "w": "ikke",
+   "n": 1,
+   "clause": "hvorfor",
+   "verb": "færdiggør"
+  },
+  {
+   "src": "2020s L2",
+   "s": "I undersøgelsen pegede de unge på flere afgørende årsager til, at de ikke ønskede at rejse ud.",
+   "w": "ikke",
+   "n": 1,
+   "clause": "at",
+   "verb": "ønskede"
+  },
+  {
+   "src": "2020v L1",
+   "s": "Vi spørger os selv, om vi stadig kan bruge kunsten til noget.",
+   "w": "stadig",
+   "n": 1,
+   "clause": "om",
+   "verb": "kan"
+  },
+  {
+   "src": "2020v L1",
+   "s": "I efteråret gik jeg til guitarundervisning for begyndere i Kolding, hvor jeg også arbejder.",
+   "w": "også",
+   "n": 1,
+   "clause": "hvor",
+   "verb": "arbejder"
+  },
+  {
+   "src": "2020v L1",
+   "s": "Den video sikrer, at vi altid kan få genopfrisket det, vi lærte på kurset.",
+   "w": "altid",
+   "n": 1,
+   "clause": "at",
+   "verb": "kan"
+  },
+  {
+   "src": "2021s L2",
+   "s": "En anden grund til, at folk ikke gør noget, er, at det ikke er klart, hvem der egentlig har ansvaret for klimaforandringerne.",
+   "w": "ikke",
+   "n": 1,
+   "clause": "at",
+   "verb": "gør"
+  },
+  {
+   "src": "2022s L1",
+   "s": "Festivalen flyttede derfor til en naturskøn strandeng, hvor den også ligger i dag.",
+   "w": "også",
+   "n": 1,
+   "clause": "hvor",
+   "verb": "ligger"
+  },
+  {
+   "src": "2023v L2",
+   "s": "Det er blevet sagt, at man som ny leder hurtigt må lære at svømme, hvis man ikke vil synke til bunds.",
+   "w": "ikke",
+   "n": 1,
+   "clause": "hvis",
+   "verb": "vil"
+  },
+  {
+   "src": "2023v L2",
+   "s": "Det kan alt sammen være svært at overskue, hvis man ikke er særlig it-interesseret.",
+   "w": "ikke",
+   "n": 1,
+   "clause": "hvis",
+   "verb": "er"
+  },
+  {
+   "src": "2024s L1",
+   "s": "Sven har kun misset et enkelt år, hvor han ikke kunne vandre.",
+   "w": "ikke",
+   "n": 1,
+   "clause": "hvor",
+   "verb": "kunne"
+  },
+  {
+   "src": "2024s L2",
+   "s": "Fælles for dem alle er, at de gerne vil gøre arbejdsugen mere fleksibel for de ansatte.",
+   "w": "gerne",
+   "n": 1,
+   "clause": "at",
+   "verb": "vil"
+  },
+  {
+   "src": "2024s L2",
+   "s": "I andre betyder det, at man også arbejder færre timer om ugen.",
+   "w": "også",
+   "n": 1,
+   "clause": "at",
+   "verb": "arbejder"
+  },
+  {
+   "src": "2013s L1",
+   "s": "Du kan ikke bare selv vælge uddannelsen.",
+   "w": "ikke",
+   "n": 1,
+   "clause": "main",
+   "verb": "kan"
+  },
+  {
+   "src": "2013s L1",
+   "s": "Du er altid velkommen til at kontakte skolen, hvis du har spørgsmål.",
+   "w": "altid",
+   "n": 1,
+   "clause": "main",
+   "verb": "er"
+  },
+  {
+   "src": "2013s L1",
+   "s": "Vi hjælper gerne med at etablere kontakt til virksomheder.",
+   "w": "gerne",
+   "n": 1,
+   "clause": "main",
+   "verb": "hjælper"
+  },
+  {
+   "src": "2013v L2",
+   "s": "Jeg kunne ikke sætte ord på, hvad det var.",
+   "w": "ikke",
+   "n": 1,
+   "clause": "main",
+   "verb": "kunne"
+  },
+  {
+   "src": "2023v L2",
+   "s": "De forstod ikke altid, hvor jeg ville hen med mine ideer.",
+   "w": "ikke",
+   "n": 1,
+   "clause": "main",
+   "verb": "forstod"
+  },
+  {
+   "src": "2024s L1",
+   "s": "Jeg møder stadig nogle af mine gamle fodboldkammerater fra dengang, jeg selv spillede.",
+   "w": "stadig",
+   "n": 1,
+   "clause": "main",
+   "verb": "møder"
+  },
+  {
+   "src": "2022s L1",
+   "s": "Vi besøgte også skolen, og jeg tænkte, at Fejø var et helt vidunderligt sted.",
+   "w": "også",
+   "n": 1,
+   "clause": "main",
+   "verb": "besøgte"
+  },
+  {
+   "src": "2023v L2",
+   "s": "De laver ikke andet, og de er gode til det, de gør.",
+   "w": "ikke",
+   "n": 1,
+   "clause": "main",
+   "verb": "laver"
+  },
+  {
+   "src": "2022v L2",
+   "s": "Man behøver ikke at gå på kompromis med noget.",
+   "w": "ikke",
+   "n": 1,
+   "clause": "main",
+   "verb": "behøver"
+  },
+  {
+   "src": "2019s L2",
+   "s": "Dog støtter han ikke med penge, men med tid.",
+   "w": "ikke",
+   "n": 1,
+   "clause": "main",
+   "verb": "støtter"
+  },
+  {
+   "src": "2017s L2",
+   "s": "I dag er Gert ikke længere projektleder.",
+   "w": "ikke",
+   "n": 1,
+   "clause": "main",
+   "verb": "er"
+  },
+  {
+   "src": "2014s W",
+   "s": "Jeg ved ikke, om jeg skal blande mig i det, for han er jo voksen.",
+   "w": "ikke",
+   "n": 1,
+   "clause": "main",
+   "verb": "ved"
+  },
+  {
+   "src": "2013v W",
+   "s": "Din ven er ikke sikker på, om det er en god idé.",
+   "w": "ikke",
+   "n": 1,
+   "clause": "main",
+   "verb": "er"
+  },
+  {
+   "src": "2013v W",
+   "s": "Jeg har jo aldrig prøvet at bo uden for Danmark.",
+   "w": "aldrig",
+   "n": 1,
+   "clause": "main",
+   "verb": "har"
+  },
+  {
+   "src": "2013s W",
+   "s": "Men jeg må også lige høre, hvordan det går med dit kursus.",
+   "w": "også",
+   "n": 1,
+   "clause": "main",
+   "verb": "må"
+  },
+  {
+   "src": "2013v W",
+   "s": "Tror du ikke, hun er for ung?",
+   "w": "ikke",
+   "n": 1,
+   "clause": "main",
+   "verb": "Tror"
+  },
+  {
+   "src": "2013s W",
+   "s": "Jeg kan ikke rigtig finde ud af, hvad der sker med Marc.",
+   "w": "ikke",
+   "n": 1,
+   "clause": "main",
+   "verb": "kan"
+  },
+  {
+   "src": "2018s W",
+   "s": "Hun overvejer derfor at leje et værelse ud for at få råd til at blive boende.",
+   "w": "derfor",
+   "n": 1,
+   "clause": "main",
+   "verb": "overvejer"
+  }
+ ]
+}
