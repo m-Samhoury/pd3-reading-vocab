@@ -6,6 +6,7 @@
 <title>Guidet læring · PD3 ordforråd</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E %3Crect x='8' y='44' width='48' height='12' rx='3' fill='%231f2430'/%3E %3Crect x='11' y='46.5' width='42' height='2.2' rx='1.1' fill='%23f4efe6'/%3E %3Crect x='12' y='30' width='44' height='12' rx='3' fill='%23ec6a3c'/%3E %3Crect x='15' y='32.5' width='38' height='2.2' rx='1.1' fill='%23fff1ea'/%3E %3Crect x='6' y='8' width='50' height='20' rx='3.5' fill='%23c8102e'/%3E %3Crect x='20' y='8' width='5' height='20' fill='%23fff'/%3E %3Crect x='6' y='15.5' width='50' height='5' fill='%23fff'/%3E %3C/svg%3E" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>try { const m = localStorage.getItem("pd3.theme"); if (m === "light" || m === "dark") document.documentElement.dataset.theme = m; } catch (e) { /* ignore */ }</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500..900&family=Roboto+Flex:opsz,wght@8..144,400..700&display=swap">
 <meta name="description" content="Guided teach → test → spaced review for the PD3 coach's vocabulary deck, connectors first.">
@@ -81,8 +82,9 @@
   --s-new: var(--rule-strong); --s-learn: var(--md-sys-color-secondary); --s-known: var(--md-sys-color-primary); --s-master: var(--ok);
   color-scheme: light;
 }
+/* dark: follows the system unless the theme button chose (data-theme on <html>, saved as pd3.theme) */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
   --md-sys-color-primary: #7bd2f0;
   --md-sys-color-on-primary: #003543;
   --md-sys-color-primary-container: #004e60;
@@ -137,6 +139,60 @@
     color-scheme: dark;
   }
 }
+:root[data-theme="dark"] {
+  --md-sys-color-primary: #7bd2f0;
+  --md-sys-color-on-primary: #003543;
+  --md-sys-color-primary-container: #004e60;
+  --md-sys-color-on-primary-container: #b5ebff;
+  --md-sys-color-inverse-primary: #00677e;
+  --md-sys-color-secondary: #f6b8ae;
+  --md-sys-color-on-secondary: #4c251f;
+  --md-sys-color-secondary-container: #673b34;
+  --md-sys-color-on-secondary-container: #ffdad4;
+  --md-sys-color-tertiary: #d5c87b;
+  --md-sys-color-on-tertiary: #373100;
+  --md-sys-color-tertiary-container: #504705;
+  --md-sys-color-on-tertiary-container: #f2e494;
+  --md-sys-color-error: #ffb4ab;
+  --md-sys-color-on-error: #690005;
+  --md-sys-color-error-container: #93000a;
+  --md-sys-color-on-error-container: #ffdad6;
+  --md-sys-color-background: #1b1114;
+  --md-sys-color-on-background: #f2dde2;
+  --md-sys-color-surface: #1b1114;
+  --md-sys-color-surface-dim: #1b1114;
+  --md-sys-color-surface-bright: #43363a;
+  --md-sys-color-surface-container-lowest: #150b0f;
+  --md-sys-color-surface-container-low: #23191c;
+  --md-sys-color-surface-container: #281d20;
+  --md-sys-color-surface-container-high: #33272a;
+  --md-sys-color-surface-container-highest: #3e3135;
+  --md-sys-color-on-surface: #f2dde2;
+  --md-sys-color-surface-variant: #554148;
+  --md-sys-color-on-surface-variant: #dbbfc7;
+  --md-sys-color-inverse-surface: #f2dde2;
+  --md-sys-color-inverse-on-surface: #392d31;
+  --md-sys-color-outline: #a38a91;
+  --md-sys-color-outline-variant: #554148;
+  --md-sys-color-shadow: #000000;
+  --md-sys-color-scrim: #000000;
+  --md-sys-color-surface-tint: #7bd2f0;
+  --md-sys-color-primary-fixed: #b5ebff;
+  --md-sys-color-primary-fixed-dim: #7bd2f0;
+  --md-sys-color-on-primary-fixed: #001f28;
+  --md-sys-color-on-primary-fixed-variant: #004e60;
+  --md-sys-color-secondary-fixed: #ffdad4;
+  --md-sys-color-secondary-fixed-dim: #f6b8ae;
+  --md-sys-color-on-secondary-fixed: #33110c;
+  --md-sys-color-on-secondary-fixed-variant: #673b34;
+  --md-sys-color-tertiary-fixed: #f2e494;
+  --md-sys-color-tertiary-fixed-dim: #d5c87b;
+  --md-sys-color-on-tertiary-fixed: #201c00;
+  --md-sys-color-on-tertiary-fixed-variant: #504705;
+    --ok: #7fd9a1; --ok-bg: #143021; --warn: #f0c060; --warn-bg: #362a0e;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3); --shadow-lg: 0 2px 6px 2px rgba(0, 0, 0, .3);
+    color-scheme: dark;
+  }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
 body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.55 var(--body); -webkit-font-smoothing: antialiased;
@@ -164,6 +220,8 @@ button, input { font: inherit; color: inherit; }
 .iconbtn { order: 2; margin-left: auto; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%;
   border: 1px solid var(--rule-strong); background: var(--sheet); color: var(--soft); cursor: pointer; }
 .iconbtn:hover { color: var(--ink); border-color: var(--ink); }
+.themebtn { margin-left: 8px; }
+.themebtn svg { display: block; }
 .langbtn { order: 2; margin-left: 8px; min-height: 38px; padding: 6px 16px; border-radius: 10px; border: 1px solid var(--rule-strong);
   background: var(--sheet); color: var(--ink); font-weight: 600; font-size: .9rem; cursor: pointer; }
 .langbtn:hover { border-color: var(--ink); }
@@ -599,6 +657,7 @@ const I18N = {
   "nav.overview": ["Overblik", "Overview"], "nav.study": ["Studieark", "Study sheet"], "nav.flash": ["Flashcards", "Flashcards"],
   "nav.test": ["Test", "Test"], "nav.assisted": ["Guidet læring", "Assisted learning"],
   "lang.button": ["English", "Dansk"], "lang.title": ["Skift sprog til engelsk", "Switch language to Danish"],
+  "th.dark": ["Skift til mørk tilstand", "Switch to dark mode"], "th.light": ["Skift til lys tilstand", "Switch to light mode"],
   "info.open": ["Hjælp", "Help"], "info.title": ["Hjælp", "Help"], "info.close": ["Luk", "Close"],
   "info.how": ["Sådan virker det", "How it works"],
   "info.p1": ["Nye ord kommer fem ad gangen fra én gruppe. Først ser du ordet med ordstilling, eksempel, rigtige sætninger fra prøverne og ordbogsopslaget; bagefter bliver du testet.",
@@ -971,8 +1030,30 @@ function chrome() {
   lang.type = "button"; lang.className = "langbtn"; lang.lang = LANG === "en" ? "da" : "en";
   lang.textContent = t("lang.button"); lang.title = t("lang.title");
   lang.onclick = flipLang;
-  bar.append(info, lang);
+  const theme = document.createElement("button");
+  theme.type = "button"; theme.className = "iconbtn themebtn";
+  theme.onclick = () => {
+    const to = isDark() ? "light" : "dark";
+    document.documentElement.dataset.theme = to;
+    try { localStorage.setItem("pd3.theme", to); } catch (e) { /* ignore */ }
+    themeButton();
+  };
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", themeButton);
+  bar.append(info, theme, lang);
+  themeButton();
   $("#foot").textContent = t("foot");
+}
+
+// ---------- light / dark ----------
+// Follows the system until the button is used; the choice is kept in localStorage "pd3.theme".
+const isDark = () => document.documentElement.dataset.theme ? document.documentElement.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+function themeButton() {
+  const b = $(".themebtn"); if (!b) return;
+  const dark = isDark(), label = t(dark ? "th.light" : "th.dark");
+  b.title = label; b.setAttribute("aria-label", label);
+  b.innerHTML = `<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${dark
+    ? '<circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/>'
+    : '<path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/>'}</svg>`;
 }
 
 // ---------- switching language in place ----------
@@ -1043,7 +1124,7 @@ function flipLang() {
   try { localStorage.setItem("pd3.lang", to); } catch (e) { /* ignore */ }
   document.documentElement.lang = to;
   document.title = `${t("nav.assisted")} · ${t("brand")}`;
-  const lb = $(".langbtn"); lb.lang = to === "en" ? "da" : "en"; lb.textContent = t("lang.button"); lb.title = t("lang.title");
+  const lb = $(".langbtn"); lb.lang = to === "en" ? "da" : "en"; lb.textContent = t("lang.button"); lb.title = t("lang.title"); themeButton();
   // screens that redraw without losing anything are drawn again, so nothing is left in the old language
   if ($("#go")) { const y = window.scrollY; home(); window.scrollTo(0, y); }
   else if (FC && $("#fcard")) flashCard();
