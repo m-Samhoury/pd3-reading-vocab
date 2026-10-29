@@ -692,6 +692,12 @@ input.vgap.right { border-color: var(--ok); background: var(--ok-bg); } input.vg
 @media (max-width: 700px) { .tvtbl label { grid-template-columns: 24px minmax(0, 1fr) auto; row-gap: 2px; } .tvtbl .wdots { grid-column: 2 / 4; } .tvtbl .c { grid-row: 1; grid-column: 3; } .tvtbl .due { grid-column: 2; justify-self: start; }
   .tverr { grid-template-columns: auto 1fr; } .tverr .btn { grid-column: 1 / -1; } }
 @media (prefers-reduced-motion: no-preference) { .tvcol .big { animation: tvrise .5s cubic-bezier(.16,1,.3,1) both; } }
+.tvseg { display: inline-flex; gap: 4px; padding: 4px; margin-top: 20px; border-radius: 999px; background: var(--md-sys-color-surface-container-high); }
+.tvseg button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 0 22px; border: 0; border-radius: 999px; background: none; cursor: pointer; font: inherit; font-weight: 700; color: var(--md-sys-color-on-surface-variant); }
+.tvseg button svg { width: 20px; height: 20px; }
+.tvseg button[aria-pressed="true"] { background: var(--md-sys-color-inverse-surface); color: var(--md-sys-color-inverse-on-surface); }
+.tvseg .c { padding: 0 8px; border-radius: 999px; font-size: .78rem; background: color-mix(in srgb, currentColor 18%, transparent); }
+@media (max-width: 700px) { .tvseg { display: flex; } .tvseg button { flex: 1; } }
 @keyframes tvrise { from { transform: translateY(.35em); opacity: 0; } }
 </style>
 </head>
@@ -967,7 +973,7 @@ const I18N = {
   "tv.g.new": ["Nye regler", "New rules"], "tv.g.new.u": ["ikke startet", "not started"], "tv.g.start": ["Start", "Start"], "tv.g.new.none": ["Du har prøvet alle regler.", "You have tried every rule."],
   "tv.g.done": ["Kan det", "Got it"], "tv.g.done.u": ["alle rigtige", "all correct"], "tv.g.again": ["Øv igen", "Again"],
   "tv.g.done.none": ["Når du har alle sætninger i en regel rigtige, står den her.", "When you get every sentence in a rule right, it moves here."],
-  "tv.g.try": ["Prøv", "Try it"],
+  "tv.g.try": ["Prøv", "Try it"], "tv.seg": ["Vælg, hvad du vil øve", "Choose what to practise"], "tv.seg.w": ["Ord", "Words"],
   "r.home": ["Tilbage til oversigten", "Back to overview"],
 };
 function t(key, ...args) {
@@ -1349,6 +1355,9 @@ function counts() {
   };
 }
 
+const HV_KEY = "pd3-assisted-learning:homeview";
+let homeView = (() => { try { return localStorage.getItem(HV_KEY) === "grammar" ? "grammar" : "words"; } catch (e) { return "words"; } })();
+function setHomeView(v) { homeView = v; try { localStorage.setItem(HV_KEY, v); } catch (e) { /* ignore */ } }
 let learnAll = false;      // "Vis alle" open in the Lær nyt column
 function wordDots(cs) {
   const cls = c => stateOf(c) === "new" ? "" : c.history.length && c.due <= DB.today ? "wd" : stateOf(c) === "learn" ? "wl" : "wk";
@@ -1381,15 +1390,18 @@ function home() {
   const list = rows => `<ul class="tvrows">${rows.join("")}</ul>`;
   const setName = g => t("p." + prio(g));
   const freshShown = learnAll ? fresh : fresh.slice(0, 5);
+  const gview = homeView === "grammar" && grCount() > 0;
+  const seg = grCount() ? `<div class="tvseg" role="group" aria-label="${esc(t("tv.seg"))}"><button type="button" data-hv="words" aria-pressed="${!gview}">${ICONS.spark}${t("tv.seg.w")}</button><button type="button" data-hv="grammar" aria-pressed="${gview}">${ICONS.book}${t("h.gram")}<span class="c">${GR_TOPICS.filter(x => x !== "error").length}</span></button></div>` : "";
   $("#app").innerHTML = `
     <div class="top tvhead">
-      <div><div class="hometop"><h1>${t("h.today")}</h1>
-        ${dW != null && dW >= 0 ? `<span class="dayspill" title="${esc(t("h.chip.days", dW) + " " + t("h.chip"))}">${ICONS.event}${t("h.chip.days", dW)}</span>` : ""}</div>
-        <p class="soft">${sessionBlurb(k, k.due, canNew)}</p></div>
-      <button type="button" class="btn solid tvgo" id="go"${k.due || canNew ? "" : " disabled"}>${ICONS.play}${t("h.go")}</button>
+      <div><div class="hometop"><h1>${gview ? t("gm.title") : t("h.today")}</h1>
+        ${!gview && dW != null && dW >= 0 ? `<span class="dayspill" title="${esc(t("h.chip.days", dW) + " " + t("h.chip"))}">${ICONS.event}${t("h.chip.days", dW)}</span>` : ""}</div>
+        <p class="soft">${gview ? t("gm.intro") : sessionBlurb(k, k.due, canNew)}</p></div>
+      ${gview ? `<button type="button" class="btn solid tvgo" data-gt="mix">${ICONS.swap}${t("gm.mix")}</button>` : `<button type="button" class="btn solid tvgo" id="go"${k.due || canNew ? "" : " disabled"}>${ICONS.play}${t("h.go")}</button>`}
     </div>
+    ${seg}
     ${storageOK ? "" : `<div class="err small">${t("h.storage")}</div>`}
-    <div class="tvboard">
+    ${gview ? grBoard() : `<div class="tvboard">
       ${tvCol("review", "repeat", t("tv.v.review"), k.due, t("tv.due.u"),
         due.length ? list(due.map(g => tvRow(`data-rev="${esc(g)}"`, esc(gname(g)), `<small>${esc(setName(g))}</small>`, dueIn(groupsBy[g]), t("tv.v.review"), t("tv.l.review", gname(g))))) :
         empty(nLearned ? "check" : "repeat", t(nLearned ? "tv.rev.done" : "tv.rev.first")),
@@ -1401,22 +1413,22 @@ function home() {
         list([...learnt.map(g => tvRow(`data-ex="${esc(g)}"`, esc(gname(g)), `<small>${t("tv.ex.s", setName(g))}</small>`, seenIn(groupsBy[g]), t("tv.v.test"), t("tv.l.test", gname(g)))),
           tvRow(`id="conf"`, t("h.conf"), `<small>${t("tv.conf.s")}</small>`, nConf, t("tv.v.test"), t("h.conf"), !nConf)]) + (nLearned ? "" : empty("pencil", t("h.ex.none"))),
         `<button type="button" class="txtbtn" id="exer"${nLearned ? "" : " disabled"}>${ICONS.pencil}${t("tv.exall")}</button>`)}
-    </div>
-    <nav class="tvlinks" aria-label="${esc(t("tv.more"))}">
+    </div>`}
+    ${gview ? "" : `<nav class="tvlinks" aria-label="${esc(t("tv.more"))}">
       <a href="#emner" id="allTopics">${t("tv.topics")} <span>${t("tv.topics.s", gs.length)}</span></a>
-      ${grCount() ? `<a href="#grammatik" id="gram">${ICONS.book}${t("h.gram")} <span>${t("tv.gram.s")}</span></a>` : ""}
-    </nav>`;
-  $("#go").onclick = () => startSession({});
+    </nav>`}`;
+  if ($("#go")) $("#go").onclick = () => startSession({});
   // flashcards on the words you have learnt; before that, on the ticked topics (or all)
-  $("#flash").onclick = () => nLearned ? startFlash(null, learnedIn(null).map(c => c.id)) : startFlash(picked.length ? picked : null);
-  $("#exer").onclick = () => startExercise(null);
-  $("#conf").onclick = () => startConfusables(null);
+  if ($("#flash")) $("#flash").onclick = () => nLearned ? startFlash(null, learnedIn(null).map(c => c.id)) : startFlash(picked.length ? picked : null);
+  if ($("#exer")) $("#exer").onclick = () => startExercise(null);
+  if ($("#conf")) $("#conf").onclick = () => startConfusables(null);
   document.querySelectorAll("[data-rev]").forEach(b => b.onclick = () => startSession({ groups: [b.dataset.rev], fresh: 0 }));
   document.querySelectorAll("[data-learn]").forEach(b => b.onclick = () => startSession({ groups: [b.dataset.learn], reviews: 0 }));
   document.querySelectorAll("[data-ex]").forEach(b => b.onclick = () => startExercise([b.dataset.ex]));
   if ($("#learnAll")) $("#learnAll").onclick = () => { learnAll = !learnAll; const y = window.scrollY; home(); window.scrollTo(0, y); $("#learnAll")?.focus(); };
-  $("#allTopics").onclick = e => { e.preventDefault(); topicsView(); };
-  if ($("#gram")) $("#gram").onclick = e => { e.preventDefault(); grammarHome(); };
+  if ($("#allTopics")) $("#allTopics").onclick = e => { e.preventDefault(); topicsView(); };
+  document.querySelectorAll("[data-hv]").forEach(b => b.onclick = () => { setHomeView(b.dataset.hv); home(); $(`[data-hv="${b.dataset.hv}"]`)?.focus(); });
+  document.querySelectorAll("[data-gt]").forEach(b => b.onclick = () => startGrammar(b.dataset.gt));
 }
 // "Alle emner": every topic with one dot per word, and multi-select for Lær / Test / Gentag
 function topicsView() {
@@ -2533,8 +2545,8 @@ const capFirst = s => s.charAt(0).toUpperCase() + s.slice(1);
 const lowFirst = s => s.charAt(0).toLowerCase() + s.slice(1);
 const q = s => `«${s}»`;
 
-function grammarHome() {
-  S = null; FC = null; GS = null;
+// the grammar view of the home page (Ord | Grammatik switch): rules sorted into Fortsæt / Nye regler / Kan det
+function grBoard() {
   const st = grStats();
   const types = GR_TOPICS.filter(x => x !== "error");
   const info = type => { const its = grItems(type); return { n: its.length, ok: its.filter(x => (st[x.id] || [0])[0] > 0).length }; };
@@ -2543,20 +2555,15 @@ function grammarHome() {
   const go = types.filter(x => { const f = info(x); return f.ok && f.ok < f.n; }), fresh = types.filter(x => !info(x).ok), done = types.filter(x => { const f = info(x); return f.n && f.ok === f.n; });
   const col = (k, icon, title, list, unit, verb, emptyKey) => tvCol(k, icon, title, list.length, unit,
     list.length ? `<ul class="tvrows">${list.map(x => row(x, verb)).join("")}</ul>` : `<p class="tvempty">${ICONS.check}<span>${t(emptyKey)}</span></p>`);
-  $("#app").innerHTML = `
-    <div class="top tvhead"><div><a href="#" class="tvback" id="ghome">${t("gm.back")}</a><h1>${t("gm.title")}</h1><p class="soft">${t("gm.intro")}</p></div>
-      <button type="button" class="btn solid tvgo" data-gt="mix">${ICONS.swap}${t("gm.mix")}</button></div>
-    <div class="tvboard">
+  return `<div class="tvboard">
       ${col("test", "pencil", t("tv.g.go"), go, t("tv.g.go.u"), t("tv.g.cont"), "tv.g.go.none")}
       ${col("learn", "spark", t("tv.g.new"), fresh, t("tv.g.new.u"), t("tv.g.start"), "tv.g.new.none")}
       ${col("review", "repeat", t("tv.g.done"), done, t("tv.g.done.u"), t("tv.g.again"), "tv.g.done.none")}
     </div>
     <section class="tverr"><span class="i">${ICONS.swap}</span><div><b>${t("gm.error")}</b><p>${t("gm.error.r")}</p></div>
       <button type="button" class="btn" data-gt="error">${t("tv.g.try")}</button></section>`;
-  $("#ghome").onclick = e => { e.preventDefault(); home(); };
-  document.querySelectorAll("[data-gt]").forEach(b => b.onclick = () => startGrammar(b.dataset.gt));
-  window.scrollTo(0, 0);
 }
+function grammarHome() { setHomeView("grammar"); home(); window.scrollTo(0, 0); }
 function startGrammar(type, only) {
   const st = grStats(), solved = x => (st[x.id] || [0])[0] > 0;
   let pool = only || (type === "mix" ? GR_TOPICS.flatMap(grItems) : grItems(type));
