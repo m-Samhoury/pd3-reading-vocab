@@ -24,9 +24,10 @@ confusables drill (*da/når*, *for/fordi* …), SM-2 spaced repetition and a gro
 Progress is saved in the browser on each device (localStorage) and survives closing the page.
 
 **Grammatik** (button on the Guidet læring home screen, https://m-samhoury.github.io/pd3-reading-vocab/assisted-learning.html#grammatik)
-has three drills on real sentences from the reading texts and writing tasks (2013–2024): put a sentence back into the
-past tense, put a fronted word back first with inversion (V2), and tap where *ikke / også / altid …* goes. The answer is
-always the sentence as written in the exam; after each answer the page shows the difference, the rule and a translate button.
+has drills on real, unchanged sentences from the reading texts and writing tasks (2013–2024): past-tense forms, inversion
+after a fronted adverb or clause, ikke/også/altid in subordinate vs main clauses (word tiles), adjective endings,
+sin/sit/sine vs hans/hendes/deres, fixed prepositions, da/når and hvis/om, and *Find fejlen*. The answer is always what
+the exam says; after each answer the page shows the rule and a translate button.
 
 **Find ord** (top bar, https://m-samhoury.github.io/pd3-reading-vocab/assisted-learning.html#find) looks up a word
 and shows its group in Guidet læring and on the study sheet (`data/words.json`). It accepts bent forms
