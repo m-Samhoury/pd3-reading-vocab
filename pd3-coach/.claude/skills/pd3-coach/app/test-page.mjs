@@ -59,17 +59,29 @@ ok("sentence lengths", await ev(`(()=>{ const L=[]; for (const id of Object.keys
 ok("translate after answer", await ev(`(async()=>{ S={queue:[{kind:"ex",id:"da",type:"sense",practice:true}],i:0,results:[],graded:new Set(),title:"t"}; step(); const before=!!$(".q button.tr"); $(".opt").click(); await new Promise(r=>setTimeout(r,30)); const b=$("#fb .trrow button.tr"); const label=b?.textContent; b.click(); await new Promise(r=>setTimeout(r,2500)); return [before, label, $("#fb .trrow .trl")?.textContent]; })()`));
 ok("sense options", await ev(`[...document.querySelectorAll(".opt")].map(b=>b.innerText.replace(/\\n/g," "))`));
 ok("base form ok", await ev(`(async()=>{ const s="Forsinkelsen skyldtes sne."; const it={kind:"ex",id:"at_skyldes",type:"produce",practice:true}; S={queue:[it],i:0,results:[],graded:new Set(),title:"t"}; step(); const gap=$(".q .gap")?true:false; $("#ans").value="skyldes"; $("#chk").click(); await new Promise(r=>setTimeout(r,30)); return [gap, S.pending.q, $("#fb h3").innerText, $("#fb .why").innerText.slice(0,80)]; })()`));
-ok("flashcards", await ev(`(async()=>{ const w=ms=>new Promise(r=>setTimeout(r,ms)); localStorage.clear(); setPicked(["årsag"]); home(); const lbl=$("#flash").textContent; const due0=JSON.stringify(Object.values(DB.cards).map(c=>c.due));
-  $("#flash").click(); const n=FC.total, front=$("#fcard .front").innerText.replace(/\\n+/g," | ");
-  document.dispatchEvent(new KeyboardEvent("keydown",{key:" ",bubbles:true})); const flipped=$("#fcard .fcin").classList.contains("flipped"), back=$("#fcard .back").innerText.replace(/\\n+/g," | ").slice(0,200);
-  $("#fcNo").click(); const afterNo=[FC.pile.length, FC.again.size];
-  let k=0; while (FC.pile.length && k++<40) { $("#fcFlip").click(); $("#fcYes").click(); }
-  const done=$("#app").innerText.slice(0,120).replace(/\\n+/g," | "); $("#fcHard").click(); const hard=FC.total;
-  $(".seg [data-dir=en]").click(); const en=$("#fcard .front").innerText.replace(/\\n+/g," | ");
-  return [lbl, n, flipped, afterNo, done.slice(0,60), hard, en.slice(0,40), due0===JSON.stringify(Object.values(DB.cards).map(c=>c.due))]; })()`));
-await ev(`$(".seg [data-dir=da]").click(); setPicked([]); startFlash(null); FC.pile.unshift("at_resultere_i"); FC.total++; flashCard()`); await sleep(500); writeFileSync(`${out}/fc-front.png`, Buffer.from((await send("Page.captureScreenshot")).result.data, "base64"));
-await ev(`flashFlip()`); await sleep(800); writeFileSync(`${out}/fc-back.png`, Buffer.from((await send("Page.captureScreenshot")).result.data, "base64"));
+// flashcards: batches of 20, the wrong pile drilled to empty, resume, type mode, pictures, chunk, Tankegang, keys
+await ev(`DB.images.fordi = { kind: "svg", svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 90"><circle cx="60" cy="45" r="30" fill="var(--pic-a)"/></svg>', alt_da: "test", alt_en: "test" }; DB.images.da = { kind: "photo", file: "flash-img/__missing__.jpg", w: 480, h: 320, credit: "Foto: X · CC0", source: "https://example.org", license: "cc0", alt_da: "t", alt_en: "t" }; window.confirm = () => true; window.FCT = { fresh: (groups, ids, bi) => { localStorage.clear(); startFlash(groups, ids); fcEnter(bi || 0); }, ans: k => { if (!FC.flipped) fcFlip(); fcAnswer(k); } }`);
+ok("fc batches", await ev(`(()=>{ localStorage.clear(); setPicked(["l3_ord"]); home(); $("#flash").click(); const s=[FC.screen, FC.st.order.length, document.querySelectorAll(".fcbat").length]; $(".fcbat[data-bi='0']").click(); return s.concat([FC.screen, FC.queue.length, new Set(FC.queue).size, fcIds(1).length]); })()`));
+ok("fc wrong pile", await ev(`(()=>{ FCT.fresh(["l3_ord"], null, 0); for (let i=0;i<5;i++) FCT.ans(false); for (let i=0;i<15;i++) FCT.ans(true); const a=[FC.screen, document.querySelectorAll("#fcwrong li").length];
+  $("#fcPractice").click(); FCT.ans(true); FCT.ans(true); FCT.ans(false); FCT.ans(false); FCT.ans(false); const b=[FC.screen, FC.pile.length, FC.loop]; for (let i=0;i<3;i++) FCT.ans(true);
+  return a.concat(b, [FC.screen, FC.st.score[0] && FC.st.score[0].ok, FC.st.done.includes(0), document.querySelector("#fcdone .score")?.textContent]); })()`));
+ok("fc resume", await ev(`(()=>{ FCT.fresh(["l3_ord"], null, 1); FCT.ans(true); FCT.ans(true); FCT.ans(false); home(); $("#flash").click(); $("#fcGo").click(); return [FC.bi, FC.queue.length, FC.st.cur && FC.st.cur.bi, FC.screen]; })()`));
+ok("fc no grading", await ev(`(()=>{ const snap=()=>JSON.stringify(Object.values(DB.cards).map(c=>[c.due,c.history.length])); const before=snap(); let calls=0; const g0=grade; grade=(...a)=>{ calls++; return g0(...a); };
+  FCT.fresh(["l3_ord"], null, 0); for (let i=0;i<20;i++) FCT.ans(true); grade=g0; return [FC.screen, FC.st.done.includes(0), calls, snap()===before]; })()`));
+ok("fc type mode", await ev(`(()=>{ const out=[]; const run = v => { FCT.fresh(null, ["fordi"], 0); FC.dir="en"; FC.mode="type"; fcRender(); const i=$("#fcAns"); i.value=v; i.dispatchEvent(new Event("input")); $("#fcCheck").click(); return FC.result ? FC.result.kind : null; };
+  out.push(run("fordi"), run("fordy"), run("hvorfor")); out.push(!!$("#fcard .face.back .prepline"), FC.screen, FC.queue.length); return out; })()`));
+ok("fc pictures", await ev(`(()=>{ const out=[]; FCT.fresh(null, ["fordi"], 0); FC.dir="da"; fcRender(); out.push(!$("#fcard .face.front .fcpic"), !!$("#fcard .face.back .fcpic svg"));
+  FC.dir="en"; FC.flipped=false; fcRender(); out.push(!!$("#fcard .face.front .fcpic svg"), !$("#fcard .face.back .fcpic")); return out; })()`));
+ok("fc missing photo", await ev(`(async()=>{ FCT.fresh(null, ["da"], 0); FC.dir="da"; fcRender(); const before=!!$("#fcard .fcpic img"); await new Promise(r=>setTimeout(r,400)); return [before, !!$("#fcard .fcpic img"), !!$("#fcard .fcpic")]; })()`));
+ok("fc chunk", await ev(`(()=>{ const id=Object.keys(DB.info).find(k=>DB.cards[k]&&DB.info[k].forms&&DB.info[k].forms.length); FCT.fresh(null,[id],0); FC.dir="da"; fcRender(); return [id, !!$("#fcard .face.back .fcchunk"), $("#fcard .fcchunk .lbl")?.textContent]; })()`));
+ok("fc from tankegang", await ev(`(()=>{ localStorage.clear(); home(); tankegang(); const n=lgRows("ulogisk").reduce((a,r)=>a+r[1].length,0); $("[data-lgfc=ulogisk]").click(); return [FC.screen, FC.kind, FC.st.order.length===n, document.querySelectorAll(".fcbat").length]; })()`));
+ok("fc keys", await ev(`(()=>{ FCT.fresh(null, ["fordi","da"], 0); const k=key=>document.dispatchEvent(new KeyboardEvent("keydown",{key,bubbles:true}));
+  k(" "); const a=FC.flipped; k("2"); const q1=FC.queue.length; k(" "); const b=FC.flipped; k("1"); return [a, q1, b, Object.values(FC.first), FC.queue.length, FC.screen]; })()`));
 await ev(`home()`);
+ok("flashcards", await ev(`(()=>{ localStorage.clear(); setPicked(["årsag"]); home(); const lbl=$("#flash").textContent; $("#flash").click(); return [FC.screen, FC.st.order.length, lbl]; })()`));
+await ev(`FCT.fresh(null, ["fordi","da","imidlertid"], 0); FC.dir="da"; fcRender()`); await sleep(500); writeFileSync(`${out}/fc-front.png`, Buffer.from((await send("Page.captureScreenshot")).result.data, "base64"));
+await ev(`fcFlip()`); await sleep(800); writeFileSync(`${out}/fc-back.png`, Buffer.from((await send("Page.captureScreenshot")).result.data, "base64"));
+await ev(`home(); setPicked(["l3_ord"]); home(); $("#flash").click()`); await sleep(300); writeFileSync(`${out}/fc-setup.png`, Buffer.from((await send("Page.captureScreenshot")).result.data, "base64"));
 // Tankegang board + "Hvilken slags?" drill: chips for every logic card, practice only (no grading), real gaps keep the exam's options
 ok("tankegang", await ev(`(()=>{ localStorage.clear(); home(); const link=!!$("#tkLink"), row=$("#logic")?.textContent; $("#tkLink").click();
   const cols=[...document.querySelectorAll(".lgcol")].map(c=>[c.querySelector("h2").textContent, c.querySelectorAll(".lgchip").length]);
@@ -101,7 +113,11 @@ for (const [name, setup, probe] of [
   ["home", `localStorage.clear(); setPicked([]); home()`, `$("#go").textContent`],
   ["teach", `S={queue:[{kind:"teach",id:"fordi"},{kind:"teach",id:"da"}],i:0,results:[],graded:new Set(),title:"t"}; step()`, `[S.i, $(".q .big")?.textContent]`],
   ["feedback", `S={queue:[{kind:"ex",id:"fordi",type:"relation",practice:true}],i:0,results:[],graded:new Set(),title:"t"}; step(); $(".opt").click()`, `[!!$("#fb"), !!S.pending]`],
-  ["flash", `startFlash(["årsag"]); flashFlip()`, `[FC.pile[0], FC.flipped, $("#fcard .fcin").classList.contains("flipped")]`],
+  ["flash setup", `localStorage.clear(); setPicked([]); startFlash(["årsag"])`, `[FC.screen, document.querySelectorAll(".fcbat").length]`],
+  ["flash card", `startFlash(["årsag"]); fcEnter(0); FC.flipped = false; fcRender()`, `[FC.screen, FC.queue[0], FC.flipped]`],
+  ["flash wrong pile", `startFlash(["årsag"]); fcEnter(0); const id = fcIds(0)[0]; FC.phase = "first"; FC.queue = []; FC.first = { [id]: false }; fcAdvance()`, `[FC.screen, FC.pile.length]`],
+  ["flash batch done", `FC.screen = "batchDone"; FC.st.score[0] = { ok: 1, n: 2, wrong: [] }; fcRender()`, `[FC.screen, $("#fcdone .score")?.textContent]`],
+  ["flash all done", `FC.screen = "allDone"; fcRender()`, `[FC.screen, !!$("#fcalldone")]`],
   ["find", `home(); $("#navFind").click(); $("#fq").value="fordi"; $("#fq").oninput()`, `[$("#findbar").classList.contains("open"), $("#fq").value, document.querySelectorAll("#hits .hit").length]`],
   ["explain", `explain(DB.cards.imidlertid)`, `[$("#explain").open]`],
   ["tankegang", `home(); tankegang()`, `[document.querySelectorAll(".lgchip").length, !!$("#lgboard")]`],
