@@ -1077,6 +1077,9 @@ const I18N = {
   "lg.drill": ["Hvilken slags?", "Which kind?"], "lg.drill.s": ["ord i sætninger fra Læsning 3", "words in sentences from Læsning 3"], "lg.drill.l": ["Øv: hvilken slags logik?", "Practise: which kind of logic?"],
   "gm.logic": ["Hvilken slags?", "Which kind?"], "gm.q.logic": ["Hvilken slags logik mangler her? Vælg først slaget, så ordet.", "Which kind of logic is missing here? Choose the kind first, then the word."],
   "lg.step1": ["1. Hvilken slags logik?", "1. Which kind of logic?"], "lg.step2": ["2. Hvilket ord passer?", "2. Which word fits?"],
+  "lg.nofit.t": ["Hvorfor ikke «{0}»? «{0}» = {1}. Ordet har en anden ordstilling end det, hullet kræver. ", "Why not “{0}”? “{0}” = {1}. It has a different word order from what this gap needs. "],
+  "lg.nofit.s": ["Hvorfor ikke «{0}»? «{0}» = {1}. Det har samme ordstilling og samme slags logik, men en anden betydning, og den passer ikke her. ", "Why not “{0}”? “{0}” = {1}. Same word order and same kind of logic, but a different meaning that doesn't fit here. "],
+  "lg.nofit.r": ["Her skal der stå «{0}» = {1}.", "Here the sentence needs “{0}” = {1}."],
   "lg.cat.miss": ["Du valgte «{0}», men det er «{1}».", "You chose “{0}”, but it is “{1}”."], "lg.word.miss": ["Du valgte «{0}»; det rigtige ord er «{1}».", "You chose “{0}”; the right word is “{1}”."],
   "lg.others": ["De andre muligheder:", "The other options:"], "lg.means": ["{0} = {1}", "{0} = {1}"],
   "mk.pill": ["MOCK", "MOCK"], "mk.title": ["Læsning 3 · mock", "Reading 3 · mock"], "mk.go": ["Start mock", "Start mock"],
@@ -3049,11 +3052,20 @@ function grLogic(x) {
 // feedback: the kind of logic and why, the meaning, the word order, the other options and what kind they are
 function lgWhy(x, extra) {
   const c = DB.cards[x.card], [, cl, sym] = lgCat(x.cat), [, wt] = LG[x.card], w = x.w, b = esc;
-  const mis = [];
+  const mis = []; let nofit = "";
   if (extra.cat && extra.cat !== x.cat) { const [, , s2] = lgCat(extra.cat); mis.push(t("lg.cat.miss", `${s2} ${t("lg.c." + extra.cat)}`, `${sym} ${t("lg.c." + x.cat)}`)); }
   if (extra.word != null && lowFirst(w) !== extra.word && !(x.opts && x.opts[x.ans] === extra.word)) mis.push(t("lg.word.miss", extra.word, lowFirst(w)));
+  if (extra.word != null && lowFirst(w) !== extra.word && !(x.opts && x.opts[x.ans] === extra.word)) {
+    // why the word they picked does not fit: its meaning, its word order against the one this gap needs
+    const wid = Object.keys(LG).find(id => DB.cards[id] && lowFirst(DB.cards[id].word) === extra.word), wc = wid && DB.cards[wid];
+    if (wc) {
+      const wwt = LG[wid][1], mine = t("lg.wo." + wwt, capFirst(extra.word), extra.word);
+      nofit = wwt === wt ? `${t("lg.nofit.s", extra.word, wc.meaning)}${t("lg.nofit.r", lowFirst(w), c.meaning)}`
+        : `${t("lg.nofit.t", extra.word, wc.meaning)}${mine} ${t("lg.nofit.r", lowFirst(w), c.meaning)}`;
+    }
+  }
   const others = (extra.opts || []).filter(o => lowFirst(o) !== lowFirst(w) && !(x.opts && x.opts[x.ans] === o)).map(o => { const k = LGW[norm(o)], g = k ? lgCat(k)[2] : ""; return `<span lang="da">${b(o)}</span> ${g}`; });
-  return `${mis.map(m => `<p><b>${b(m)}</b></p>`).join("")}
+  return `${mis.map(m => `<p><b>${b(m)}</b></p>`).join("")}${nofit ? `<p>${b(nofit)}</p>` : ""}
     <p><span class="lgpill lg-${cl}">${sym} ${t("lg.c." + x.cat)}</span> ${t("lg.why." + x.cat)}</p>
     <p><b lang="da">${b(w)}</b> = ${b(c.meaning)}${AI()}</p>
     <p>${t("lg.wo." + wt, capFirst(w), lowFirst(w))}</p>
