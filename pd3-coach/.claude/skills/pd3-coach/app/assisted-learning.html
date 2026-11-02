@@ -692,6 +692,37 @@ input.vgap.right { border-color: var(--ok); background: var(--ok-bg); } input.vg
 .tverr .i { width: 48px; height: 48px; border-radius: 16px; display: grid; place-items: center; background: color-mix(in srgb, currentColor 14%, transparent); }
 .tverr b { font-family: 'Gabarito', sans-serif; font-size: 1.25rem; } .tverr p { margin: 4px 0 0; opacity: .85; }
 .tverr .btn { background: var(--md-sys-color-inverse-primary); color: var(--md-sys-color-on-primary-fixed); }
+/* Tankegang: the linking words in four kinds of logic, and the "Hvilken slags?" drill */
+.lg-t { --lgbg: var(--ok-bg); --lgink: var(--ok); } .lg-m { --lgbg: var(--md-sys-color-secondary-container); --lgink: var(--md-sys-color-on-secondary-container); }
+.lg-f { --lgbg: var(--md-sys-color-primary-container); --lgink: var(--md-sys-color-on-primary-container); } .lg-u { --lgbg: var(--md-sys-color-tertiary-container); --lgink: var(--md-sys-color-on-tertiary-container); }
+.lgpair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }
+.lgex { margin: 0; padding: 12px 16px; border-radius: 16px; background: var(--lgbg); color: var(--lgink); font-weight: 500; display: flex; gap: 10px; align-items: baseline; }
+.lgex b { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 2px; }
+.lgleg { list-style: none; margin: 16px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px 20px; }
+.lgleg li { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 2px 10px; align-items: baseline; font-size: .92rem; }
+.lgleg li > span:last-child { grid-column: 2; color: var(--md-sys-color-on-surface-variant); font-size: .82rem; }
+.wo { display: inline-flex; align-items: center; min-height: 22px; padding: 0 8px; border-radius: 999px; font: 700 .72rem system-ui, sans-serif; white-space: nowrap; background: var(--md-sys-color-surface-container-high); color: var(--md-sys-color-on-surface-variant); }
+.lgboard { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 24px; align-items: start; }
+.lgcol { border-radius: 28px; background: var(--md-sys-color-surface-container-low); overflow: hidden; min-width: 0; }
+.lgcol > header { padding: 16px 20px; background: var(--lgbg); color: var(--lgink); }
+.lgcol > header h2 { margin: 0; font-size: 1.3rem; display: flex; align-items: center; gap: 10px; } .lgcol > header p { margin: 4px 0 0; font-size: .9rem; opacity: .9; }
+.lgbody { padding: 4px 16px 12px; }
+.lgsub { margin: 14px 0 8px; font: 700 .78rem system-ui, sans-serif; letter-spacing: .02em; color: var(--md-sys-color-on-surface-variant); }
+.lgchips { display: flex; flex-wrap: wrap; gap: 8px; }
+.lgchip { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; min-height: 48px; max-width: 100%; padding: 7px 12px; border-radius: 14px; border: 1px solid var(--rule-strong); border-left: 4px solid var(--lgink); background: var(--sheet); color: inherit; font: inherit; text-align: left; cursor: pointer; }
+.lgchip:hover { background: var(--lgbg); }
+.lgchip .w { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; } .lgchip b { font-weight: 600; overflow-wrap: anywhere; }
+.lgchip .m { display: flex; align-items: center; gap: 8px; } .lgchip .wdots { margin-top: 0; }
+.fq { font: 700 .72rem system-ui, sans-serif; color: var(--md-sys-color-on-surface-variant); } .fq.no { font-weight: 500; font-style: italic; }
+.lgcol .foot { padding: 4px 10px 10px; border-top: 1px solid var(--md-sys-color-surface-container-highest); } .lgcol .foot .txtbtn { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; } .lgcol .foot svg { width: 20px; height: 20px; }
+.lgprev { margin: 0 0 6px; color: var(--soft); font-size: .95rem; line-height: 1.6; }
+.lgstep { margin: 14px 0 0; font-weight: 600; }
+.opts.lgcats { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 8px; }
+.lgcat { border-left: 6px solid var(--lgink); } .lgcat > span:last-child { line-height: 1.25; }
+.lgpill { display: inline-flex; align-items: center; gap: 6px; padding: 1px 10px; border-radius: 999px; background: var(--lgbg); color: var(--lgink); font-weight: 700; }
+.lgopt .g { margin-left: auto; padding-left: 8px; }
+@media (max-width: 480px) { .opts.lgcats { grid-template-columns: 1fr; } }
+@media (max-width: 700px) { .lgboard, .lgpair { grid-template-columns: 1fr; } .lgcol > header { padding: 14px 16px; } .lgbody { padding: 2px 12px 10px; } }
 @media (max-width: 860px) { .tvboard { grid-template-columns: 1fr; } .tvgo { width: 100%; justify-content: center; } }
 @media (max-width: 700px) { .tvtbl label { grid-template-columns: 24px minmax(0, 1fr) auto; row-gap: 2px; } .tvtbl .wdots { grid-column: 2 / 4; } .tvtbl .c { grid-row: 1; grid-column: 3; } .tvtbl .due { grid-column: 2; justify-self: start; }
   .tverr { grid-template-columns: auto 1fr; } .tverr .btn { grid-column: 1 / -1; } }
@@ -989,6 +1020,36 @@ const I18N = {
   "tv.g.try": ["Prøv", "Try it"], "tv.seg": ["Vælg, hvad du vil øve", "Choose what to practise"], "tv.seg.w": ["Ord", "Words"], "tv.pick.l": ["Vælg {0}", "Select {0}"],
   "tv.hint": ["Sæt flueben ved flere emner for at øve dem på én gang.", "Tick several topics to practise them together."],
   "r.home": ["Tilbage til oversigten", "Back to overview"],
+  "lg.title": ["Tankegang", "Logic"], "lg.link.s": ["4 slags logik · bindeordene fra Læsning 3", "4 kinds of logic · the linking words from Læsning 3"],
+  "lg.intro": ["Et bindeord viser, hvordan to sætninger hænger sammen. Peter sorterer dem i fire slags logik. Tryk på et ord for at læse mere om det.", "A linking word shows how two sentences connect. Peter sorts them into four kinds of logic. Tap a word to read more about it."],
+  "lg.ex.f": ["Logisk følge", "Logical result"], "lg.ex.u": ["Ulogisk følge", "Illogical result"],
+  "lg.c.tilføjelse": ["Tilføjelse", "Addition"], "lg.c.modargument": ["Modargument", "Counter-argument"], "lg.c.følge": ["Logisk følge", "Logical result"], "lg.c.ulogisk": ["Ulogisk følge", "Illogical result"],
+  "lg.d.tilføjelse": ["Mere af det samme, i rækkefølge eller som eksempel.", "More of the same, in order or as an example."],
+  "lg.d.modargument": ["Det nye står i kontrast til det forrige.", "The new part contrasts with the previous one."],
+  "lg.d.følge": ["Derfor, fordi, hvis: grund og følge hænger sammen.", "Derfor, fordi, hvis: reason and result belong together."],
+  "lg.d.ulogisk": ["Det uventede: det sker, selv om man ville vente noget andet.", "The unexpected: it happens although you would expect something else."],
+  "lg.s.tilføjelse": ["lægger noget til", "adds something"], "lg.s.modargument": ["modsiger eller kontrasterer", "contradicts or contrasts"], "lg.s.følge": ["grund eller følge", "reason or result"], "lg.s.ulogisk": ["det uventede", "the unexpected"],
+  "lg.why.tilføjelse": ["Skribenten lægger noget til det forrige: mere af det samme, næste punkt i rækkefølgen eller et eksempel.", "The writer adds to the previous part: more of the same, the next point in a list or an example."],
+  "lg.why.modargument": ["Det nye står i kontrast til det forrige: en modsætning eller et modargument.", "The new part contrasts with the previous one: an opposite or a counter-argument."],
+  "lg.why.følge": ["Det nye er en logisk følge af det forrige (eller grunden til det): det er det, man venter.", "The new part is a logical result of the previous one (or its reason): it is what you expect."],
+  "lg.why.ulogisk": ["Det nye er det uventede: det sker på trods af det forrige. Det er ikke en logisk følge.", "The new part is the unexpected: it happens in spite of the previous one. It is not a logical result."],
+  "lg.tag.ADV": ["V2", "V2"], "lg.tag.SUB": ["bisætning", "subordinate clause"], "lg.tag.KOO": ["hovedsætning", "main clause"], "lg.tag.PRAEP": ["+ navneord", "+ noun"], "lg.tag.NOUN": ["navneord", "noun"], "lg.tag.VERB": ["verbum", "verb"],
+  "lg.leg": ["Ordstilling", "Word order"],
+  "lg.leg.ADV": ["verbet kommer lige efter ordet", "the verb comes right after the word"], "lg.leg.SUB": ["ikke/også står før verbet", "ikke/også come before the verb"],
+  "lg.leg.KOO": ["ordet står uden for sætningen, verbet kommer som normalt", "the word sits outside the clause; the verb comes as usual"], "lg.leg.PRAEP": ["et navneord kommer efter ordet", "a noun follows the word"],
+  "lg.leg.NOUN": ["bruges som et almindeligt navneord", "used as an ordinary noun"], "lg.leg.VERB": ["bruges som et almindeligt verbum", "used as an ordinary verb"],
+  "lg.wo.ADV": ["Ordstilling: forrest i sætningen kommer verbet lige efter (V2): «{0} går jeg hjem». Midt i sætningen står ordet efter verbet: «Jeg går {1} hjem».", "Word order: at the front of the sentence the verb comes right after (V2): “{0} går jeg hjem”. In the middle the word follows the verb: “Jeg går {1} hjem”."],
+  "lg.wo.SUB": ["Ordstilling: bisætning. Subjektet og ikke/også kommer før verbet: «{1} jeg ikke har tid».", "Word order: subordinate clause. The subject and ikke/også come before the verb: “{1} jeg ikke har tid”."],
+  "lg.wo.KOO": ["Ordstilling: hovedsætning. Verbet står som normalt efter subjektet: «{1} jeg har ikke tid».", "Word order: main clause. The verb follows the subject as usual: “{1} jeg har ikke tid”."],
+  "lg.wo.PRAEP": ["Efter ordet kommer et navneord, ikke en sætning: «{1} regnen».", "A noun follows the word, not a clause: “{1} regnen”."],
+  "lg.wo.NOUN": ["Bruges som et almindeligt navneord, ofte med af/til: «{1} …».", "Used as an ordinary noun, often with af/til: “{1} …”."],
+  "lg.wo.VERB": ["Bruges som et almindeligt verbum i en hovedsætning: «det {1} …».", "Used as an ordinary verb: “det {1} …”."],
+  "lg.notab": ["ikke i tabellen", "not in the table"], "lg.fq.t": ["{0} gange i prøverne siden 2020", "{0} times in the exams since 2020"],
+  "lg.drill": ["Hvilken slags?", "Which kind?"], "lg.drill.s": ["ord i sætninger fra Læsning 3", "words in sentences from Læsning 3"], "lg.drill.l": ["Øv: hvilken slags logik?", "Practise: which kind of logic?"],
+  "gm.logic": ["Hvilken slags?", "Which kind?"], "gm.q.logic": ["Hvilken slags logik mangler her? Vælg først slaget, så ordet.", "Which kind of logic is missing here? Choose the kind first, then the word."],
+  "lg.step1": ["1. Hvilken slags logik?", "1. Which kind of logic?"], "lg.step2": ["2. Hvilket ord passer?", "2. Which word fits?"],
+  "lg.cat.miss": ["Du valgte «{0}», men det er «{1}».", "You chose “{0}”, but it is “{1}”."], "lg.word.miss": ["Du valgte «{0}»; det rigtige ord er «{1}».", "You chose “{0}”; the right word is “{1}”."],
+  "lg.others": ["De andre muligheder:", "The other options:"], "lg.means": ["{0} = {1}", "{0} = {1}"],
 };
 function t(key, ...args) {
   const e = I18N[key];
@@ -1240,6 +1301,7 @@ function flipLang() {
   const lb = $(".langbtn"); lb.lang = to === "en" ? "da" : "en"; lb.textContent = t("lang.button"); lb.title = t("lang.title"); themeButton();
   // screens that redraw without losing anything are drawn again, so nothing is left in the old language
   if ($("#go")) { const y = window.scrollY; home(); window.scrollTo(0, y); }
+  else if ($("#lgboard")) { const y = window.scrollY; tankegang(); window.scrollTo(0, y); }
   else if (FC && $("#fcard")) flashCard();
   if ($("#findbar").classList.contains("open")) findDraw();
 }
@@ -1252,10 +1314,11 @@ function load() {
     $("#app").innerHTML = `<div class="err" style="margin-top:32px">${t("nodeck")}<br><br><code>python3 -I .claude/skills/pd3-coach/scripts/pd3.py page</code></div>`;
     return;
   }
-  DB = { today: iso(new Date()), profile: deck.profile || {}, sentences: deck.sentences || {}, senses: deck.senses || {}, tips: deck.tips || {}, info: deck.info || {}, grammar: deck.grammar || {}, cards: {} };
+  DB = { today: iso(new Date()), profile: deck.profile || {}, sentences: deck.sentences || {}, senses: deck.senses || {}, tips: deck.tips || {}, info: deck.info || {}, grammar: deck.grammar || {}, logic: deck.logic || {}, l3: deck.l3 || [], cards: {} };
   const saved = readProgress();
   for (const [id, c] of Object.entries(deck.cards)) DB.cards[id] = { id, ...c, history: c.history || [], ...(saved[id] || {}) };
   addFreqGroups();
+  lgIndex();
   // ask the browser not to clear this page's storage when space runs low (Chrome/Firefox; Safari decides itself)
   if (navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(() => {});
   finder();
@@ -1264,6 +1327,7 @@ function load() {
 }
 // the site's other pages link to "#find" (or "#find=ord"): open the find bar over the home screen
 function route() {
+  if (location.hash === "#tankegang") { history.replaceState(null, "", location.pathname + location.search); return tankegang(); }
   if (location.hash === "#grammatik") { history.replaceState(null, "", location.pathname + location.search); return grammarHome(); }
   if (!location.hash.startsWith("#find")) return;
   const q = decodeURIComponent(location.hash.slice(6));
@@ -1467,17 +1531,21 @@ function home() {
         fresh.length > 5 ? `<button type="button" class="txtbtn" id="learnAll" aria-expanded="${learnAll}">${t(learnAll ? "tv.fewer" : "tv.all", fresh.length)}</button>` : "")}
       ${tvCol("test", "pencil", t("tv.test"), nLearned, t("tv.learnt.u"),
         list([...learnt.map(g => tvRow(`data-ex="${esc(g)}"`, esc(gname(g)), `<small>${t("tv.ex.s", setName(g))}</small>`, seenIn(groupsBy[g]), t("tv.v.test"), t("tv.l.test", gname(g)), false, g)),
-          tvRow(`id="conf"`, t("h.conf"), `<small>${t("tv.conf.s")}</small>`, nConf, t("tv.v.test"), t("h.conf"), !nConf)]) + (nLearned ? "" : empty("pencil", t("h.ex.none"))),
+          tvRow(`id="conf"`, t("h.conf"), `<small>${t("tv.conf.s")}</small>`, nConf, t("tv.v.test"), t("h.conf"), !nConf),
+          ...(lgItems().length ? [tvRow(`id="logic"`, t("lg.drill"), `<small>${t("lg.drill.s")}</small>`, `${lgDone()}<small>${t("tv.of", lgItems().length)}</small>`, t("tv.v.test"), t("lg.drill.l"))] : [])]) + (nLearned ? "" : empty("pencil", t("h.ex.none"))),
         `<button type="button" class="txtbtn" id="exer"${nLearned ? "" : " disabled"}>${ICONS.pencil}${t("tv.exall")}</button>`)}
     </div>`}
     ${gview ? "" : `<nav class="tvlinks" aria-label="${esc(t("tv.more"))}">
       <a href="#emner" id="allTopics">${t("tv.topics")} <span>${t("tv.topics.s", gs.length)}</span></a>
+      ${lgItems().length ? `<a href="#tankegang" id="tkLink">${t("lg.title")} <span>${t("lg.link.s")}</span></a>` : ""}
     </nav>${pickBar(groupsBy)}`}`;
   if ($("#go")) $("#go").onclick = () => startSession({});
   // flashcards on the words you have learnt; before that, on the ticked topics (or all)
   if ($("#flash")) $("#flash").onclick = () => nLearned ? startFlash(null, learnedIn(null).map(c => c.id)) : startFlash(picked.length ? picked : null);
   if ($("#exer")) $("#exer").onclick = () => startExercise(null);
   if ($("#conf")) $("#conf").onclick = () => startConfusables(null);
+  if ($("#logic")) $("#logic").onclick = () => startLogic();
+  if ($("#tkLink")) $("#tkLink").onclick = e => { e.preventDefault(); tankegang(); };
   document.querySelectorAll("[data-rev]").forEach(b => b.onclick = () => startSession({ groups: [b.dataset.rev], fresh: 0 }));
   document.querySelectorAll("[data-learn]").forEach(b => b.onclick = () => startSession({ groups: [b.dataset.learn], reviews: 0 }));
   document.querySelectorAll("[data-ex]").forEach(b => b.onclick = () => startExercise([b.dataset.ex]));
@@ -2635,7 +2703,7 @@ function grFrame(x, inner) {
       <p class="prompt">${t("gm.q." + x.type)}</p>${inner}
       <div class="trrow">${trLink(x.s).replace(t("m.tr"), t("tr.sent"))}</div>
       <div class="row next" id="gbtns"></div><div id="fb"></div></div></div>`;
-  $("#gquit").onclick = () => GS.results.length ? grSummary() : grammarHome();
+  $("#gquit").onclick = () => GS.results.length ? grSummary() : GS.type === "logic" ? tankegang() : grammarHome();
   bindTr($("#app"));
   window.scrollTo(0, 0);
 }
@@ -2647,7 +2715,7 @@ function grButtons(check, extra = "") {
 function grStep() {
   if (GS.i >= GS.queue.length) return grSummary();
   const x = GS.queue[GS.i];
-  ({ verbs: grVerbs, v2: grTiles, clause: grTiles, error: grError }[x.type] || grChoice)(x);
+  ({ verbs: grVerbs, v2: grTiles, clause: grTiles, error: grError, logic: grLogic }[x.type] || grChoice)(x);
 }
 
 // ----- verbs: type the forms -----
@@ -2753,6 +2821,7 @@ function grError(x) {
 // ----- explanations (built from each item's fields) -----
 function grWhy(x, extra = {}) {
   const b = s => esc(s);
+  if (x.type === "logic") return lgWhy(x, extra);
   if (x.type === "verbs") {
     const MODAL = new Set(["kunne", "skulle", "ville", "måtte", "burde", "turde"]);
     const kind = g => g.kind.includes(" ") ? t("gm.t.perf") : MODAL.has(g.inf) ? t("gm.t.modal")
@@ -2781,7 +2850,7 @@ function grWhy(x, extra = {}) {
   return was + `<p>${rule}</p>`;
 }
 function grFeedback(x, ok, give, extra = {}) {
-  if (!give) grSave(x.id, ok);
+  if (!give) (x.type === "logic" ? lgSave : grSave)(x.id, ok);
   GS.results.push({ id: x.id, ok });
   const marks = x.type === "verbs" ? x.gaps.map(g => [g.at, g.w.length]) : x.type === "v2" || x.type === "clause" ? null : [[x.at, x.w.length]];
   let exam = esc(x.s);
@@ -2792,11 +2861,12 @@ function grFeedback(x, ok, give, extra = {}) {
   $("#fb").innerHTML = `<div class="feedback ${ok ? "ok" : "bad"}">
       <h3>${ok ? t("gm.right") : give ? t("gm.shown") : t("gm.wrong")}</h3>
       ${yours ? `<div class="small"><b>${t("gm.yours")}</b></div><div class="gdiff" lang="da">${yours}</div>` : ""}
-      ${ok || GR_CHOICE.includes(x.type) ? "" : `<div class="small" style="margin-top:8px"><b>${t("gm.answer", esc(x.src))}</b></div><div class="gdiff sentence" lang="da">${exam}</div>`}
+      ${(ok && x.type !== "logic") || GR_CHOICE.includes(x.type) ? "" : `<div class="small" style="margin-top:8px"><b>${t("gm.answer", esc(x.src))}</b></div><div class="gdiff sentence" lang="da">${exam}</div>`}
       <div class="gwhy"><b>${t("gm.why")}</b>${AI()}${grWhy(x, extra)}</div>
     </div>`;
   $("#gbtns").innerHTML = `<button class="btn solid" id="nx">${t("b.next")}</button>`;
   $("#fb").after($("#gbtns"));
+  $("#fb [data-more]")?.addEventListener("click", () => explain(DB.cards[x.card]));
   const nx = $("#nx");
   nx.onclick = () => { GS.i++; grStep(); };
   GS.keys = e => { if (e.key === "Enter") { e.preventDefault(); nx.click(); } };
@@ -2814,9 +2884,10 @@ function grSummary() {
       ${miss.length ? `<button class="btn" id="gmiss">${t("gm.redo", miss.length)}</button>` : ""}
       <button class="btn quiet" id="gmenu">${t("gm.menu")}</button><button class="btn quiet" id="ghome">${t("gm.back")}</button></div></div></div>`;
   const again = GS.type;
-  $("#gagain").onclick = () => startGrammar(again);
-  if ($("#gmiss")) $("#gmiss").onclick = () => startGrammar(again, miss);
-  $("#gmenu").onclick = grammarHome;
+  const restart = only => again === "logic" ? startLogic(only) : startGrammar(again, only);
+  $("#gagain").onclick = () => restart();
+  if ($("#gmiss")) $("#gmiss").onclick = () => restart(miss);
+  $("#gmenu").onclick = again === "logic" ? tankegang : grammarHome;
   $("#ghome").onclick = home;
   GS.keys = null;
   window.scrollTo(0, 0);
@@ -2825,6 +2896,131 @@ document.addEventListener("keydown", e => {
   if (!GS || !GS.keys || document.querySelector("dialog[open]") || e.target.closest?.("#findbar")) return;
   GS.keys(e);
 });
+
+// ---------- Tankegang: the linking words in Peter's four kinds of logic (pd3-data/logic.json) ----------
+// The board shows every word with its frequency, progress colour and word order. "Hvilken slags?" drills real sentences
+// from Læsning 3 (pd3-data/l3-gaps.json): first the kind of logic, then the word. Practice only: no SM-2, own storage key.
+const LG_KEY = "pd3-assisted-learning:logic:v1";
+const LG_CATS = [["tilføjelse", "t", "➕"], ["modargument", "m", "↔️"], ["følge", "f", "➡️"], ["ulogisk", "u", "↪️"]];
+const LG = {};     // card id -> [category, word type]
+const LGW = {};    // normalised word -> category (to label the other options)
+function lgIndex() {
+  for (const [k] of LG_CATS) for (const [, ids] of DB.logic[k] || []) for (const [id, wt] of ids) {
+    const c = DB.cards[id];
+    if (!c || LG[id]) continue;
+    LG[id] = [k, wt];
+    variants(c.word).forEach(v => { LGW[v] = LGW[v] || k; });
+  }
+}
+const lgCat = k => LG_CATS.find(c => c[0] === k);
+const lgRows = k => (DB.logic[k] || []).map(([h, ids]) => [h, ids.filter(([id]) => DB.cards[id])]).filter(r => r[1].length);
+function lgStats() { try { return JSON.parse(localStorage.getItem(LG_KEY) || "{}"); } catch (e) { return {}; } }
+function lgSave(id, ok) {
+  const st = lgStats(), x = st[id] || [0, 0];
+  st[id] = [x[0] + (ok ? 1 : 0), x[1] + 1];
+  try { localStorage.setItem(LG_KEY, JSON.stringify(st)); } catch (e) { /* ignore */ }
+}
+// real gaps keep the exam's 4 options; id = sitting + gap (or the start of the sentence) so progress survives a rebuild
+const lgItems = () => DB.l3.filter(x => LG[x.card]).map(x => ({ ...x, type: "logic", id: `${x.src}|${x.n ?? x.s.slice(0, 24)}|${x.card}`, cat: LG[x.card][0] }));
+const lgDone = () => { const st = lgStats(); return lgItems().filter(x => (st[x.id] || [0])[0] > 0).length; };
+
+function tankegang() {
+  S = null; FC = null; GS = null;
+  const chip = ([id, wt]) => { const c = DB.cards[id];
+    return `<button type="button" class="lgchip" data-id="${esc(id)}" title="${esc(c.meaning)}" aria-label="${esc(c.word + ": " + c.meaning)}">
+      <span class="w"><b lang="da">${esc(c.word)}</b>${c.freq == null ? `<span class="fq no">${t("lg.notab")}</span>` : `<span class="fq" title="${esc(t("lg.fq.t", c.freq))}">${c.freq}×</span>`}</span>
+      <span class="m">${wordDots([c])}<span class="wo">${t("lg.tag." + wt)}</span></span></button>`; };
+  const col = ([k, cl, sym]) => { const rows = lgRows(k), n = rows.reduce((a, r) => a + r[1].length, 0);
+    return `<section class="lgcol lg-${cl}"><header><h2><span aria-hidden="true">${sym}</span>${t("lg.c." + k)}</h2><p>${t("lg.d." + k)}</p></header>
+      <div class="lgbody">${rows.map(([h, cs]) => `<h3 class="lgsub" lang="da">${esc(h)}</h3><div class="lgchips">${cs.map(chip).join("")}</div>`).join("")}</div>
+      <div class="foot"><button type="button" class="txtbtn" data-lgfc="${k}">${ICONS.cards}${t("h.fc")} · ${n}</button></div></section>`; };
+  const leg = ["ADV", "SUB", "KOO", "PRAEP", "NOUN", "VERB"], ex = { ADV: "Derfor <b>går jeg</b> hjem", SUB: "selvom jeg <b>ikke har</b> tid", KOO: "men jeg <b>har</b> ikke tid", PRAEP: "på trods af <b>regnen</b>", NOUN: "en følge af <b>regnen</b>", VERB: "det <b>skyldes</b> regnen" };
+  $("#app").innerHTML = `
+    <div class="top"><a href="#" class="tvback" id="thome">${t("gm.back")}</a>
+      <div class="tvhead"><div><h1>${t("lg.title")}</h1><p class="soft">${t("lg.intro")}</p></div>
+        ${lgItems().length ? `<button type="button" class="btn solid tvgo" id="lgGo">${ICONS.pencil}${t("lg.drill")}</button>` : ""}</div>
+      <div class="lgpair"><p class="lgex lg-f"><span aria-hidden="true">➡️</span><span lang="da">Det regnede. <b>Derfor</b> blev vi hjemme.</span></p>
+        <p class="lgex lg-u"><span aria-hidden="true">↪️</span><span lang="da">Det regnede. <b>Alligevel</b> gik vi en tur.</span></p></div>
+      <ul class="lgleg" aria-label="${esc(t("lg.leg"))}">${leg.map(w => `<li><span class="wo">${t("lg.tag." + w)}</span><span lang="da">${ex[w]}</span><span>${t("lg.leg." + w)}</span></li>`).join("")}</ul></div>
+    <div class="lgboard" id="lgboard">${LG_CATS.map(col).join("")}</div>`;
+  $("#thome").onclick = e => { e.preventDefault(); home(); window.scrollTo(0, 0); };
+  if ($("#lgGo")) $("#lgGo").onclick = () => startLogic();
+  document.querySelectorAll(".lgchip").forEach(b => b.onclick = () => explain(DB.cards[b.dataset.id]));
+  document.querySelectorAll("[data-lgfc]").forEach(b => b.onclick = () => startFlash(null, lgRows(b.dataset.lgfc).flatMap(r => r[1].map(x => x[0]))));
+  window.scrollTo(0, 0);
+}
+
+// a round: 10 sentences, real exam gaps first, every kind of logic at least once
+function startLogic(only) {
+  const st = lgStats(), solved = x => (st[x.id] || [0])[0] > 0;
+  let q = only;
+  if (!q) {
+    const rank = x => (x.n ? 0 : 2) + (solved(x) ? 1 : 0);   // real gap not solved yet, real gap solved, then the same for text sentences
+    const pool = shuffle(lgItems()).sort((a, b) => rank(a) - rank(b));
+    const first = LG_CATS.map(([k]) => pool.find(x => x.cat === k)).filter(Boolean);
+    q = [...first, ...pool.filter(x => !first.includes(x))].slice(0, 10).sort((a, b) => !a.n - !b.n);
+  }
+  if (!q.length) return;
+  GS = { type: "logic", queue: q, i: 0, results: [], title: t("lg.drill") };
+  grStep();
+}
+// the answer plus one word from each other kind (same word type where possible)
+function lgOptions(x) {
+  if (x.opts) return x.opts.map(lowFirst);
+  const low = x.s.toLowerCase(), wt = LG[x.card][1], word = lowFirst(x.w);
+  const plain = id => /^[a-zæøå]+( [a-zæøå]+){0,2}$/.test(DB.cards[id].word) && ["ADV", "SUB", "KOO", "PRAEP"].includes(LG[id][1]) && !low.includes(DB.cards[id].word);
+  const others = LG_CATS.map(([k]) => k).filter(k => k !== x.cat).map(k => {
+    const ids = shuffle(Object.keys(LG).filter(id => LG[id][0] === k && plain(id)));
+    return DB.cards[ids.find(id => LG[id][1] === wt) || ids[0]]?.word;
+  }).filter(Boolean);
+  return shuffle([word, ...others]);
+}
+function grLogic(x) {
+  const opts = lgOptions(x), right = x.opts ? x.ans : opts.indexOf(lowFirst(x.w));
+  const show = o => x.at === 0 ? capFirst(o) : o, cats = LG_CATS;
+  let cat = null;
+  grFrame(x, `${x.prev ? `<p class="lgprev" lang="da">${esc(x.prev)}</p>` : ""}<div class="gsent" lang="da">${esc(x.s.slice(0, x.at))}<span class="gap" id="ggap">&nbsp;</span>${esc(x.s.slice(x.at + x.w.length))}</div>
+    <p class="lgstep" id="lgstep">${t("lg.step1")}</p>
+    <div class="opts lgcats" id="lgcats">${cats.map(([k, cl, sym], i) => `<button type="button" class="btn opt lgcat lg-${cl}" data-c="${k}"><span class="k">${i + 1}</span><span>${sym} ${t("lg.c." + k)}</span></button>`).join("")}</div>
+    <div class="opts short" id="lgopts"></div>`);
+  const finish = (word, give) => {
+    document.querySelectorAll(".lgcat").forEach(b => { b.disabled = true; b.classList.toggle("right", b.dataset.c === x.cat); b.classList.toggle("wrong", !give && b.dataset.c === cat && cat !== x.cat); });
+    document.querySelectorAll(".lgopt").forEach((b, i) => { b.disabled = true; b.classList.toggle("right", i === right); b.classList.toggle("wrong", !give && i === word && i !== right); });
+    $("#ggap").outerHTML = `<mark class="hl">${esc(x.w)}</mark>`;
+    $("#gbtns").innerHTML = "";
+    grFeedback(x, !give && cat === x.cat && word === right, give, { cat, word: word == null ? null : opts[word], opts });
+  };
+  const step2 = () => {
+    $("#lgstep").textContent = t("lg.step2");
+    $("#lgopts").innerHTML = opts.map((o, i) => `<button type="button" class="btn opt lgopt" data-i="${i}" lang="da"><span class="k">${i + 1}</span>${esc(show(o))}</button>`).join("");
+    document.querySelectorAll(".lgopt").forEach(b => b.onclick = () => finish(+b.dataset.i, false));
+    GS.keys = e => { const n = +e.key; if (n >= 1 && n <= opts.length && document.querySelector(".lgopt:not(:disabled)")) finish(n - 1, false); };
+  };
+  const pickCat = k => {
+    cat = k;
+    document.querySelectorAll(".lgcat").forEach(b => { b.disabled = true; b.classList.toggle("sel", b.dataset.c === k); });
+    step2();
+  };
+  document.querySelectorAll(".lgcat").forEach(b => b.onclick = () => pickCat(b.dataset.c));
+  GS.keys = e => { const n = +e.key; if (n >= 1 && n <= cats.length && document.querySelector(".lgcat:not(:disabled)")) pickCat(cats[n - 1][0]); };
+  $("#gbtns").innerHTML = `<button class="btn quiet" id="idk">${t("gm.give")}</button>`;
+  $("#idk").onclick = () => finish(null, true);
+}
+// feedback: the kind of logic and why, the meaning, the word order, the other options and what kind they are
+function lgWhy(x, extra) {
+  const c = DB.cards[x.card], [, cl, sym] = lgCat(x.cat), [, wt] = LG[x.card], w = x.w, b = esc;
+  const mis = [];
+  if (extra.cat && extra.cat !== x.cat) { const [, , s2] = lgCat(extra.cat); mis.push(t("lg.cat.miss", `${s2} ${t("lg.c." + extra.cat)}`, `${sym} ${t("lg.c." + x.cat)}`)); }
+  if (extra.word != null && lowFirst(w) !== extra.word && !(x.opts && x.opts[x.ans] === extra.word)) mis.push(t("lg.word.miss", extra.word, lowFirst(w)));
+  const others = (extra.opts || []).filter(o => lowFirst(o) !== lowFirst(w) && !(x.opts && x.opts[x.ans] === o)).map(o => { const k = LGW[norm(o)], g = k ? lgCat(k)[2] : ""; return `<span lang="da">${b(o)}</span> ${g}`; });
+  return `${mis.map(m => `<p><b>${b(m)}</b></p>`).join("")}
+    <p><span class="lgpill lg-${cl}">${sym} ${t("lg.c." + x.cat)}</span> ${t("lg.why." + x.cat)}</p>
+    <p><b lang="da">${b(w)}</b> = ${b(c.meaning)}${AI()}</p>
+    <p>${t("lg.wo." + wt, capFirst(w), lowFirst(w))}</p>
+    ${noteText(c) ? `<p class="soft small" lang="da">${b(noteText(c))}</p>` : ""}
+    ${others.length ? `<p class="small"><span class="soft">${t("lg.others")}</span> ${others.join(" · ")}</p>` : ""}
+    <p><button type="button" class="linkbtn" data-more>${t("b.more")}</button></p>`;
+}
 
 // ---------- summary ----------
 function summary() {

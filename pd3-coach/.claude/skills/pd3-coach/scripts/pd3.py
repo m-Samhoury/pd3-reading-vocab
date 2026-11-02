@@ -28,6 +28,8 @@ Usage (run with python3 -I):
   pd3.py sentences                     # find real exam sentences for every card -> exam-sentences.json
                                        #   (cards in senses.json use its hand-labelled sentences instead)
   pd3.py translate                     # English for every DDO definition (Google Translate) -> translations.json
+  pd3.py l3gaps                        # real Læsning 3 gaps + linking-word sentences from those texts -> l3-gaps.json
+                                       #   (the "Hvilken slags?" drill; needs logic.json)
   pd3.py page                          # rebuild <project>/assisted-learning.html (also automatic when the deck
                                        #   changes); open it from disk, progress is kept in the browser
   pd3.py mistake add PATTERN --category C [--severity critical|moderate|minor] [--example E]
@@ -556,6 +558,162 @@ def cmd_sentences(a):
     print(f"{found} of {len(cards)} cards have real exam sentences -> {os.path.join(DATA, 'exam-sentences.json')}")
 
 
+# ---------- Læsning 3 gaps (the "Hvilken slags?" drill) ----------
+
+GAP_HEAD = re.compile(r"Delprøve\s*(?:2\s*B|3)\s*[–-]")
+
+
+def l3_lines(o):
+    from pdfminer.layout import LTTextLine
+    for x in o:
+        if isinstance(x, LTTextLine):
+            yield x
+        elif hasattr(x, "__iter__"):
+            yield from l3_lines(x)
+
+
+def l3_options(path):
+    """{gap: {A: word, ...}} from the L3 / old-2B option grid (opgavehæfte page with columns A-D), read by x/y position."""
+    from pdfminer.high_level import extract_pages
+    from pdfminer.layout import LAParams
+    for page in extract_pages(path, laparams=LAParams()):
+        ls = list(l3_lines(page))
+        if not any(GAP_HEAD.search(l.get_text()) for l in ls):
+            continue
+        heads = {l.get_text().strip(): l for l in ls if l.get_text().strip() and l.get_text().strip() in "ABCD"}
+        if len(heads) < 4:
+            continue
+        cols, top, rows = sorted((heads[k].x0, k) for k in "ABCD"), heads["A"].y0, {}
+        for l in ls:
+            t = l.get_text().strip()
+            if l.y0 >= top - 2 or not t:
+                continue
+            m = re.match(r"^([0-8])\s+(?:X\s+)?(.*)$", t)
+            col = max((k for x, k in cols if l.x0 >= x - 60), default="A")
+            if m and l.x0 < cols[1][0] - 60:
+                rows.setdefault(round(l.y0), {})["n"] = int(m.group(1)); t = m.group(2)
+            rows.setdefault(round(l.y0), {})[col] = re.sub(r"^X\s+", "", t)
+        groups = []  # rows within 6pt are one line (the numbered cell sits 2pt lower)
+        for y in sorted(rows, reverse=True):
+            if groups and groups[-1][0] - y <= 6:
+                groups[-1][1].update(rows[y])
+            else:
+                groups.append([y, dict(rows[y])])
+        out = {g["n"]: {k: g[k] for k in "ABCD"} for _, g in groups if "n" in g and all(k in g for k in "ABCD") and g["n"] > 0}
+        if len(out) >= 8:
+            return out
+    return {}
+
+
+def l3_key(text, new):
+    """{gap: letter} from the censor booklet's old Delprøve 2 B / new Delprøve 3 key."""
+    m = re.search(r"Delprøve\s*" + ("3" if new else r"2\s*B") + r"\s*[–-].*?Svar(.*?)I alt", text, re.S)
+    return {int(n): l for n, l in re.findall(r"(?m)^\s*([1-8])\.\s*([A-D])\b", m.group(1))} if m else {}
+
+
+def l3_text(text, new):
+    m = re.search(r"Delprøve\s*" + ("3" if new else r"2\s*[B8]") + r"\s*[–-]\s*(?!fort)", text)
+    if not m:
+        return ""
+    t = re.sub(r"([a-zæøå])-?[ \t]*\n[ \t]*(?=[a-zæøå])", "\\1\x01", text[m.start():])  # a word split over two lines (the hyphen was lost)
+    return re.sub(r"\s+", " ", t)
+
+
+def l3_rejoin(txt, known):
+    """Resolve the \\x01 line-break marks: glue the pieces when that makes a word seen elsewhere, else a space when both are words."""
+    def fix(m):
+        a, b = m.group(1), m.group(2)
+        return a + " " + b if a.lower() in known and b.lower() in known else a + b if (a + b).lower() in known else m.group(0)
+    return re.sub(r"([\wæøå]+)\x01([\wæøå]+)", fix, txt)
+
+
+L3_JUNK = re.compile(r"\d{4}\s*$|Hentet|www\.|https?:|©|Kilde|^\W*$|[a-zæøå”]\d\b|\bDelprøve|\b(?:MAJ|NOV)[-–A-Z ]*\d{4}", re.I)
+
+
+def l3_sentences(txt, answers):
+    """Sentences of one L3 text as (n or None, prev, s): gaps filled with their answers, n = the real gap in s."""
+    txt = re.sub(r"(?:MAJ|NOV|DEC)[-–A-Z ]*\d{4}\s*(?:Delprøve\s*\w+\s*[–-]\s*fortsat)?", " ", txt)
+    txt = re.sub(r"Delprøve\s*(?:2\s*B|3)\s*[–-]\s*fortsat", " ", txt)
+    txt = re.sub(r"^Delprøve\s*(?:2\s*B|3)\s*[–-]\s*", "", txt)
+    txt = re.sub(r"^(.{8,90}?) \1 ", "", txt)  # the title is printed twice
+    txt = re.sub(r"(?<=[a-zæøå0-9\x01]) (?=(?:Hvis|Når|Men|Derfor|Det|Der|Man|De|Og|Flere|Mange|Hun|Han|Som|Hvad|Hvorfor)\b)", ". ", txt)  # a heading glued to the next sentence
+    txt = re.sub(r"\s*\(\s*([0-8])\s*\)\s*(?:…|\.{3})", lambda m: f" \x00{m.group(1)}\x00 ", txt)  # a gap marker keeps its own spaces
+    txt = re.sub(r"\s+", " ", txt).replace(" ,", ",").replace(" .", ".").strip()
+    out, prev = [], ""
+    for sent in re.split(r"(?<=[.!?])\s+(?=[A-ZÆØÅ«»\"„\x00])", txt):
+        ns = [int(n) for n in re.findall(r"\x00(\d)\x00", sent)]
+        if "\x01" in sent or re.search(r"[a-zæøå]- (?!(?:og|eller|samt)\b)[a-zæøå]", sent) or 0 in ns or any(n not in answers for n in ns):
+            prev = ""  # the example gap, a gap we cannot fill or a broken word: no clean context
+            continue
+        full = re.sub(r"\x00(\d)\x00", lambda m: answers[int(m.group(1))], sent).strip()
+        full = re.sub(r"\s+([,.!?])", r"\1", full)
+        if not (4 <= len(full.split()) <= 40) or L3_JUNK.search(full) or full[-1] not in ".!?":
+            prev = ""
+            continue
+        full = full[0].upper() + full[1:]
+        out.append((ns[0] if len(ns) == 1 else None, prev if len(prev.split()) >= 6 else "", full))
+        prev = full
+    return out
+
+
+def cmd_l3gaps(a):
+    idx, cards, logic = index(), load("vocab.json", {"cards": {}})["cards"], load("logic.json", {})
+    lids = {cid: wt for k, rows in logic.items() if not k.startswith("_") for _, ids in rows for cid, wt in ids}
+    pats = {cid: card_pattern(cards[cid]) for cid in lids}
+    sittings = {}
+    for k in sorted(idx):
+        if k < "2014":
+            continue
+        f, new = idx[k]["files"], idx[k]["format"] == "new"
+        key, opts, txt = {}, {}, ""
+        for rel in f.get("key", []):
+            key = key or l3_key(extract(os.path.join(EXAMS, rel)), new)
+        for rel in f.get("L2_opg", []):
+            try:
+                opts = opts or l3_options(os.path.join(EXAMS, rel))
+            except Exception as e:
+                print(f"skip {rel}: {e}", file=sys.stderr)
+        for i, rel in enumerate(f.get("L2_txt", [])):
+            txt = txt or l3_text(reading_text(k, "L2_txt", rel, i), new)
+        sittings[k] = (key, opts, txt)
+    # words seen whole in the texts, to tell a word split over two lines from two words
+    corpus = " ".join(t for _, _, t in sittings.values())
+    for fn in os.listdir(CACHE):
+        if fn.endswith(".txt") and "_txt" in fn:
+            corpus += " " + open(os.path.join(CACHE, fn), encoding="utf-8").read()
+    known = {w.lower() for w in re.findall(r"(?<![\x01\wæøå])[\wæøå]+(?![\x01\wæøå])", re.sub(r"[ \t]*\n[ \t]*", "\x01", corpus))}
+    items, stats = [], []
+    for k, (key, opts, txt) in sittings.items():
+        if len(key) < 8 or len([n for n in opts if 1 <= n <= 8]) < 8 or not txt:
+            stats.append(f"{k}: left out (key {len(key)}, options {len(opts)}, text {bool(txt)})")
+            continue
+        answers = {n: nfc(opts[n][key[n]]) for n in range(1, 9)}
+        real = text = 0
+        for n, prev, s in l3_sentences(l3_rejoin(txt, known), answers):
+            low = s.lower()
+            if n:  # a real gap whose answer is a logic card
+                w = answers[n].lower()
+                cid = next((c for c, p in pats.items() if p.fullmatch(answers[n]) or card_id(answers[n]) == c), None)
+                at = low.find(w)
+                if cid and at >= 0:
+                    items.append({"src": f"{k} L3", "n": n, "prev": prev, "s": s, "at": at, "w": s[at:at + len(w)], "card": cid,
+                                  "opts": [opts[n][c] for c in "ABCD"], "ans": "ABCD".index(key[n])})
+                    real += 1
+                    continue
+            # other sentences: only the linking words (a noun or verb card like "grund" is too often used in another sense)
+            hits = [(m.start(), c, m) for c, p in pats.items() if lids[c] in ("ADV", "SUB", "KOO", "PRAEP") for m in p.finditer(s)]
+            if hits:
+                at, cid, m = min(hits, key=lambda h: h[0])
+                items.append({"src": f"{k} L3", "n": None, "prev": prev, "s": s, "at": at, "w": m.group(0), "card": cid, "opts": None})
+                text += 1
+        stats.append(f"{k}: {real} real, {text} text")
+    for i, it in enumerate(items):
+        it["id"] = i
+    save("l3-gaps.json", {"built": TODAY.isoformat(), "items": items})
+    print("\n".join(stats))
+    print(f"{len(items)} items -> {os.path.join(DATA, 'l3-gaps.json')}")
+
+
 # ---------- Assisted Learning page ----------
 
 PAGE = os.path.join(ROOT, "assisted-learning.html")
@@ -601,6 +759,7 @@ def build_page():
             c["dict"]["senses_en"] = [tr.get(s, "") for s in c["dict"]["senses"]]
     senses = {cid: {k: v for k, v in e.items() if k != "sentences"} for cid, e in load("senses.json", {}).items()}
     deck = {"cards": cards, "profile": load("profile.json", {}), "senses": senses, "tips": load("tips.json", {}), "info": load("wordinfo.json", {}), "grammar": load("grammar.json", {}),
+            "logic": load("logic.json", {}), "l3": load("l3-gaps.json", {}).get("items", []),
             "sentences": load("exam-sentences.json", {}).get("sentences", {}), "built": TODAY.isoformat()}
     js = "window.PD3_DECK = " + json.dumps(deck, ensure_ascii=False).replace("</", "<\\/") + ";"
     html = open(tpl, encoding="utf-8").read().replace("window.PD3_DECK = null; /*DECK*/", js)
@@ -664,7 +823,7 @@ def main():
     q = vs.add_parser("list"); q.add_argument("--group"); q.add_argument("--priority", type=int)
     vs.add_parser("groups")
     q = vs.add_parser("enrich"); q.add_argument("files", nargs="+")
-    sp.add_parser("sentences"); sp.add_parser("translate")
+    sp.add_parser("sentences"); sp.add_parser("translate"); sp.add_parser("l3gaps")
     sp.add_parser("page")
     p = sp.add_parser("mistake"); ms = p.add_subparsers(dest="mcmd", required=True)
     q = ms.add_parser("add"); q.add_argument("pattern"); q.add_argument("--category", required=True)
@@ -674,7 +833,7 @@ def main():
     a = ap.parse_args()
     {"init": cmd_init, "status": cmd_status, "index": lambda a: print(f"{len(build_index())} sittings indexed"),
      "sittings": cmd_sittings, "pick": cmd_pick, "get": cmd_get, "log": cmd_log,
-     "vocab": cmd_vocab, "mistake": cmd_mistake, "sentences": cmd_sentences, "translate": cmd_translate,
+     "vocab": cmd_vocab, "mistake": cmd_mistake, "sentences": cmd_sentences, "translate": cmd_translate, "l3gaps": cmd_l3gaps,
      "page": lambda a: print(build_page() or "template missing")}[a.cmd](a)
 
 
