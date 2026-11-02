@@ -1,0 +1,1839 @@
+{
+  "built": "2026-11-02",
+  "items": [
+    {
+      "src": "2015s L3",
+      "n": null,
+      "prev": "Mange trafikforskere går ind for roadpricing.",
+      "s": "Men politikerne ønsker at se tiden an.",
+      "at": 0,
+      "w": "Men",
+      "card": "men",
+      "opts": null,
+      "id": 0
+    },
+    {
+      "src": "2015s L3",
+      "n": null,
+      "prev": "Men politikerne ønsker at se tiden an.",
+      "s": "De mener blandt andet ikke, at man ved nok om den nødvendige teknik til, at man kan registrere bilkørsel ved hjælp af GPS.",
+      "at": 9,
+      "w": "blandt andet",
+      "card": "blandt_andet",
+      "opts": null,
+      "id": 1
+    },
+    {
+      "src": "2015s L3",
+      "n": 8,
+      "prev": "Roadpricing behøver ikke resultere i endnu en afgift.",
+      "s": "Roadpricing kan nemlig betyde, at de danske bilister slipper for nogle af de afgifter, de betaler i dag.",
+      "at": 16,
+      "w": "nemlig",
+      "card": "nemlig",
+      "opts": [
+        "alligevel",
+        "næppe",
+        "stadigvæk",
+        "nemlig"
+      ],
+      "ans": 3,
+      "id": 2
+    },
+    {
+      "src": "2015s L3",
+      "n": 1,
+      "prev": "I København har man også i de senere år oplevet voksende trafikproblemer.",
+      "s": "Man har imidlertid ikke gjort noget af betydning ved dem.",
+      "at": 8,
+      "w": "imidlertid",
+      "card": "imidlertid",
+      "opts": [
+        "imidlertid",
+        "desuden",
+        "således",
+        "derfor"
+      ],
+      "ans": 0,
+      "id": 3
+    },
+    {
+      "src": "2015s L3",
+      "n": null,
+      "prev": "",
+      "s": "Regeringen havde dog indtil 2012 planer om at indføre en afgift for at køre ind i København.",
+      "at": 17,
+      "w": "dog",
+      "card": "dog",
+      "opts": null,
+      "id": 4
+    },
+    {
+      "src": "2015s L3",
+      "n": null,
+      "prev": "Regeringen havde dog indtil 2012 planer om at indføre en afgift for at køre ind i København.",
+      "s": "Men planerne blev opgivet blandt andet på grund af folkelig modstand.",
+      "at": 0,
+      "w": "Men",
+      "card": "men",
+      "opts": null,
+      "id": 5
+    },
+    {
+      "src": "2015s L3",
+      "n": null,
+      "prev": "Men planerne blev opgivet blandt andet på grund af folkelig modstand.",
+      "s": "Derfor arbejder regeringen på at finde andre løsninger på trafikproblemerne.",
+      "at": 0,
+      "w": "Derfor",
+      "card": "derfor",
+      "opts": null,
+      "id": 6
+    },
+    {
+      "src": "2015s L3",
+      "n": 3,
+      "prev": "Ved roadpricing er det ikke sådan, at man betaler en fast afgift for at køre ind i byen.",
+      "s": "Man betaler derimod for den strækning, man har kørt.",
+      "at": 12,
+      "w": "derimod",
+      "card": "derimod",
+      "opts": [
+        "ligeledes",
+        "samtidig",
+        "dermed",
+        "derimod"
+      ],
+      "ans": 3,
+      "id": 7
+    },
+    {
+      "src": "2015s L3",
+      "n": null,
+      "prev": "",
+      "s": "Roadpricing kan dermed også være et effektivt red skab til at regulere biltrafikken.",
+      "at": 16,
+      "w": "dermed",
+      "card": "dermed",
+      "opts": null,
+      "id": 8
+    },
+    {
+      "src": "2015s L3",
+      "n": null,
+      "prev": "Roadpricing kan tilrettelægges, så det ikke koster så meget at køre på tyndt trafikerede veje.",
+      "s": "Samtidig kan man gøre det ekstra dyrt at køre ind i hovedstaden i myldretiden.",
+      "at": 0,
+      "w": "Samtidig",
+      "card": "samtidig",
+      "opts": null,
+      "id": 9
+    },
+    {
+      "src": "2015v L3",
+      "n": null,
+      "prev": "",
+      "s": "Meget tyder dog på, at dagligvarer på nettet er kommet for at blive.",
+      "at": 12,
+      "w": "dog",
+      "card": "dog",
+      "opts": null,
+      "id": 10
+    },
+    {
+      "src": "2015v L3",
+      "n": null,
+      "prev": "Meget tyder dog på, at dagligvarer på nettet er kommet for at blive.",
+      "s": "Men det er usandsynligt, at forbrugerne inden for den nærmeste fremtid vælger at købe de fleste af deres dagligvarer online.",
+      "at": 0,
+      "w": "Men",
+      "card": "men",
+      "opts": null,
+      "id": 11
+    },
+    {
+      "src": "2015v L3",
+      "n": 2,
+      "prev": "Det viser en ny undersøgelse fra Eniro Danmark.",
+      "s": "Derimod har cirka halvdelen af alle danskere købt varer som rejser og tøj på nettet i samme periode.",
+      "at": 0,
+      "w": "Derimod",
+      "card": "derimod",
+      "opts": [
+        "Ligeledes",
+        "Blandt andet",
+        "I stedet",
+        "Derimod"
+      ],
+      "ans": 3,
+      "id": 12
+    },
+    {
+      "src": "2015v L3",
+      "n": null,
+      "prev": "Der er flere grunde til, at mange mennesker er skeptiske over for at købe dagligvarer på nettet.",
+      "s": "Blandt andet er der mange, der er nervøse for, om varerne er friske.",
+      "at": 0,
+      "w": "Blandt andet",
+      "card": "blandt_andet",
+      "opts": null,
+      "id": 13
+    },
+    {
+      "src": "2015v L3",
+      "n": null,
+      "prev": "Når man f.eks. køber frugt eller grønt i en fysisk butik, ved man, hvad man får.",
+      "s": "Køber man derimod frugt eller grønt online, kan man ikke selv tjekke kvaliteten.",
+      "at": 10,
+      "w": "derimod",
+      "card": "derimod",
+      "opts": null,
+      "id": 14
+    },
+    {
+      "src": "2015v L3",
+      "n": null,
+      "prev": "Køber man derimod frugt eller grønt online, kan man ikke selv tjekke kvaliteten.",
+      "s": "Der er altså ingen garanti for at få den kvalitet, man gerne vil have, når man køber sine dagligvarer på nettet.",
+      "at": 7,
+      "w": "altså",
+      "card": "altså",
+      "opts": null,
+      "id": 15
+    },
+    {
+      "src": "2015v L3",
+      "n": null,
+      "prev": "En anden grund til folks skepsis er priserne.",
+      "s": "Det er tit dyrere at handle dagligvarer på nettet, fordi man typisk skal betale for at få varerne leveret.",
+      "at": 51,
+      "w": "fordi",
+      "card": "fordi",
+      "opts": null,
+      "id": 16
+    },
+    {
+      "src": "2015v L3",
+      "n": null,
+      "prev": "Det er tit dyrere at handle dagligvarer på nettet, fordi man typisk skal betale for at få varerne leveret.",
+      "s": "Derfor er lavere priser en betingelse for, at netbutikkerne kan få flere kunder.",
+      "at": 0,
+      "w": "Derfor",
+      "card": "derfor",
+      "opts": null,
+      "id": 17
+    },
+    {
+      "src": "2015v L3",
+      "n": 5,
+      "prev": "Derfor er lavere priser en betingelse for, at netbutikkerne kan få flere kunder.",
+      "s": "Desuden er der mange, der synes, at det er besværligt at skulle være hjemme på et bestemt tidspunkt for at tage imod varerne.",
+      "at": 0,
+      "w": "Desuden",
+      "card": "desuden",
+      "opts": [
+        "Desuden",
+        "Altså",
+        "Desværre",
+        "Derfor"
+      ],
+      "ans": 0,
+      "id": 18
+    },
+    {
+      "src": "2015v L3",
+      "n": null,
+      "prev": "Desuden er der mange, der synes, at det er besværligt at skulle være hjemme på et bestemt tidspunkt for at tage imod varerne.",
+      "s": "Hvis netbutikkerne skal tiltrække flere kunder, er de derfor også nødt til at tilbyde fleksible leveringstider.",
+      "at": 0,
+      "w": "Hvis",
+      "card": "hvis",
+      "opts": null,
+      "id": 19
+    },
+    {
+      "src": "2016s L3",
+      "n": null,
+      "prev": "",
+      "s": "Og mange syge ønsker selv at blive behandlet i eget hjem, fordi de ovennævnte behandlingsmuligheder betyder, at en behandling hurtigere kan justeres, end hvis den syge først skal aftale en tid og så senere møde op hos lægen.",
+      "at": 58,
+      "w": "fordi",
+      "card": "fordi",
+      "opts": null,
+      "id": 20
+    },
+    {
+      "src": "2016s L3",
+      "n": 3,
+      "prev": "Netop transporten til sygehuset er blevet mere besværlig for mange patienter og pårørende.",
+      "s": "Flere mindre sygehuse rundt om i landet er nemlig blevet sparet væk, og det giver en meget længere afstand til det nærmeste hospital.",
+      "at": 43,
+      "w": "nemlig",
+      "card": "nemlig",
+      "opts": [
+        "nemlig",
+        "derfor",
+        "omvendt",
+        "herefter"
+      ],
+      "ans": 0,
+      "id": 21
+    },
+    {
+      "src": "2016s L3",
+      "n": 5,
+      "prev": "Der kan spares mange penge ved at flytte behandlingen væk fra hospitalerne.",
+      "s": "Det er imidlertid et problem, at mange ældre, som gerne vil behandles hjemme, ikke er så gode til at bruge IT.",
+      "at": 7,
+      "w": "imidlertid",
+      "card": "imidlertid",
+      "opts": [
+        "imidlertid",
+        "sjældent",
+        "ligeledes",
+        "endelig"
+      ],
+      "ans": 0,
+      "id": 22
+    },
+    {
+      "src": "2016s L3",
+      "n": null,
+      "prev": "For indtil de er blevet grundigt instrueret i, hvordan de skal bruge det nye IT-udstyr, så har de tit svært ved at finde ud af det.",
+      "s": "Det er dog en udfordring, der kan klares, ved at lægerne har ekstra fokus på at hjælpe denne målgruppe med teknologien.",
+      "at": 7,
+      "w": "dog",
+      "card": "dog",
+      "opts": null,
+      "id": 23
+    },
+    {
+      "src": "2016s L3",
+      "n": null,
+      "prev": "Og fremtidens ældre vil sandsynligvis have færre problemer med IT-udstyret.",
+      "s": "Behandling i hjemmet er altså samlet set både nemmere for borgerne og billigere for samfundet.",
+      "at": 24,
+      "w": "altså",
+      "card": "altså",
+      "opts": null,
+      "id": 24
+    },
+    {
+      "src": "2017s L3",
+      "n": null,
+      "prev": "",
+      "s": "Flere og flere danskere får hund, men der er mange hundekøb, der ender med, at ejeren skiller sig af med hunden igen.",
+      "at": 34,
+      "w": "men",
+      "card": "men",
+      "opts": null,
+      "id": 25
+    },
+    {
+      "src": "2017s L3",
+      "n": 1,
+      "prev": "",
+      "s": "Imidlertid er det ikke alle, der tænker sig lige godt om, før de bliver hundeejere, og mange bliver derfor overraskede over, hvor meget arbejde der følger med.",
+      "at": 0,
+      "w": "Imidlertid",
+      "card": "imidlertid",
+      "opts": [
+        "imidlertid",
+        "derudover",
+        "ligeledes",
+        "dermed"
+      ],
+      "ans": 0,
+      "id": 26
+    },
+    {
+      "src": "2017s L3",
+      "n": null,
+      "prev": "Imidlertid er det ikke alle, der tænker sig lige godt om, før de bliver hundeejere, og mange bliver derfor overraskede over, hvor meget arbejde der følger med.",
+      "s": "Hunde har nemlig brug for motion og aktivering hver dag året rundt for at trives, og det bliver for meget for mange hundeejere.",
+      "at": 10,
+      "w": "nemlig",
+      "card": "nemlig",
+      "opts": null,
+      "id": 27
+    },
+    {
+      "src": "2017s L3",
+      "n": 2,
+      "prev": "Hunde har nemlig brug for motion og aktivering hver dag året rundt for at trives, og det bliver for meget for mange hundeejere.",
+      "s": "Derfor beslutter de sig for at komme af med hunden.",
+      "at": 0,
+      "w": "Derfor",
+      "card": "derfor",
+      "opts": [
+        "Derfor",
+        "Alligevel",
+        "Desuden",
+        "Derimod"
+      ],
+      "ans": 0,
+      "id": 28
+    },
+    {
+      "src": "2017s L3",
+      "n": null,
+      "prev": "Derfor beslutter de sig for at komme af med hunden.",
+      "s": "Det kan selvfølgelig være en vanskelig beslutning af tage, især hvis der er børn i familien, der har knyttet sig til hunden, men ikke desto mindre sker det meget ofte.",
+      "at": 59,
+      "w": "især",
+      "card": "især",
+      "opts": null,
+      "id": 29
+    },
+    {
+      "src": "2017s L3",
+      "n": 4,
+      "prev": "",
+      "s": "Hun synes, der er alt for mange, der skiller sig af med deres hunde, og årsagen er ikke kun, at der er meget arbejde ved at have en hund.",
+      "at": 72,
+      "w": "årsagen",
+      "card": "en_årsag",
+      "opts": [
+        "formålet",
+        "hensigten",
+        "årsagen",
+        "resultatet"
+      ],
+      "ans": 2,
+      "id": 30
+    },
+    {
+      "src": "2017s L3",
+      "n": null,
+      "prev": "Hun synes, der er alt for mange, der skiller sig af med deres hunde, og årsagen er ikke kun, at der er meget arbejde ved at have en hund.",
+      "s": "Nye hundeejere opdager også, at det kan være et problem at holde ferie, fordi hunden har brug for pasning.",
+      "at": 72,
+      "w": "fordi",
+      "card": "fordi",
+      "opts": null,
+      "id": 31
+    },
+    {
+      "src": "2017s L3",
+      "n": null,
+      "prev": "",
+      "s": "Det er imidlertid ikke alle de uønskede hunde, der får en ny chance på et dyreinternat, for hvert år bliver op til 12.000 raske hunde aflivet hos dyrlægen.",
+      "at": 7,
+      "w": "imidlertid",
+      "card": "imidlertid",
+      "opts": null,
+      "id": 32
+    },
+    {
+      "src": "2017s L3",
+      "n": null,
+      "prev": "Kampagnens formål er ikke at diktere, hvordan folk skal leve.",
+      "s": "Derimod tilbyder man på kampagnens hjemmeside blandt andet en test, hvor folk kan finde ud af, om de har forudsætninger for at købe hund.",
+      "at": 0,
+      "w": "Derimod",
+      "card": "derimod",
+      "opts": null,
+      "id": 33
+    },
+    {
+      "src": "2017s L3",
+      "n": 7,
+      "prev": "",
+      "s": "Konsekvensen af testen var en beslutning om, at han ikke skulle have hund foreløbig: ”Jeg har selv taget testen for at se, om jeg kunne være egnet til at have hund.",
+      "at": 0,
+      "w": "Konsekvensen af",
+      "card": "en_konsekvens_af",
+      "opts": [
+        "Konsekvensen af",
+        "Baggrunden for",
+        "Meningen med",
+        "Forudsætningen for"
+      ],
+      "ans": 0,
+      "id": 34
+    },
+    {
+      "src": "2017s L3",
+      "n": null,
+      "prev": "Konsekvensen af testen var en beslutning om, at han ikke skulle have hund foreløbig: ”Jeg har selv taget testen for at se, om jeg kunne være egnet til at have hund.",
+      "s": "Det vil jeg nemlig meget gerne.",
+      "at": 12,
+      "w": "nemlig",
+      "card": "nemlig",
+      "opts": null,
+      "id": 35
+    },
+    {
+      "src": "2017v L3",
+      "n": null,
+      "prev": "Den vigtigste er uden tvivl de senere års reformer.",
+      "s": "Der er for eksempel ændret i reglerne for at gå på efterløn, så folk får udbetalt en stor sum penge, hvis de bliver lidt længere på arbejdsmarkedet.",
+      "at": 101,
+      "w": "hvis",
+      "card": "hvis",
+      "opts": null,
+      "id": 36
+    },
+    {
+      "src": "2017v L3",
+      "n": null,
+      "prev": "Det tiltaler mange, der gerne vil have flere penge til livet som pensionist.",
+      "s": "Vi lever nemlig længere og forventer at have mange aktive år, efter vi stopper med arbejdet. ”Nu har man måske 30 år foran sig, hvor man i hvert fald halvdelen af tiden er frisk og rørig.",
+      "at": 9,
+      "w": "nemlig",
+      "card": "nemlig",
+      "opts": null,
+      "id": 37
+    },
+    {
+      "src": "2017v L3",
+      "n": null,
+      "prev": "Så forklaringen på det forlængede arbejdsliv er også, at levealderen stiger.",
+      "s": "Vi bliver simpelthen nødt til at arbejde mere, hvis vi vil have råd til at leve godt i hele vores tilværelse som pensionist.",
+      "at": 47,
+      "w": "hvis",
+      "card": "hvis",
+      "opts": null,
+      "id": 38
+    },
+    {
+      "src": "2017v L3",
+      "n": null,
+      "prev": "Ældres erfaring er nyttig Aldringsforsker Henning Kirk tror også, at vi i fremtiden vil få flere aktive år med arbejde.",
+      "s": "Der er nemlig ikke mange biologiske grunde til, at seniorer skulle være dårligere til at udfylde en plads på arbejdsmarkedet, undtagen hvis der er kronisk sygdom inde i billedet, der går ud over arbejdsevnen.",
+      "at": 7,
+      "w": "nemlig",
+      "card": "nemlig",
+      "opts": null,
+      "id": 39
+    },
+    {
+      "src": "2017v L3",
+      "n": null,
+      "prev": "Han begrunder det med, at mange typer job har ændret sig, så vi i dag ikke slides ned.",
+      "s": "Men lige så vigtigt er det, at det er en fordel for virksomheder at have ældre medarbejdere pga. deres erfaringer: ”Ældre har nogle ressourcer, som de unge ikke har.",
+      "at": 0,
+      "w": "Men",
+      "card": "men",
+      "opts": null,
+      "id": 40
+    },
+    {
+      "src": "2018v L3",
+      "n": null,
+      "prev": "",
+      "s": "Formålet med undersøgelsen, som faldt i to dele, var at se på sammenhængen mellem blandt andet mad, motion og evnen til at koncentrere sig.",
+      "at": 82,
+      "w": "blandt andet",
+      "card": "blandt_andet",
+      "opts": null,
+      "id": 41
+    },
+    {
+      "src": "2018v L3",
+      "n": 1,
+      "prev": "",
+      "s": "Forskerne undersøgte derefter de samme børns evne til at løse en række opgaver først på eftermiddagen på en almindelig skoledag, og de kunne så blandt andet måle, hvilken effekt motionen havde på børnenes evne til at koncentrere sig.",
+      "at": 21,
+      "w": "derefter",
+      "card": "derefter",
+      "opts": [
+        "således",
+        "derefter",
+        "muligvis",
+        "omvendt"
+      ],
+      "ans": 1,
+      "id": 42
+    },
+    {
+      "src": "2018v L3",
+      "n": null,
+      "prev": "Forskerne undersøgte derefter de samme børns evne til at løse en række opgaver først på eftermiddagen på en almindelig skoledag, og de kunne så blandt andet måle, hvilken effekt motionen havde på børnenes evne til at koncentrere sig.",
+      "s": "Undersøgelsens konklusion var, at børn klarer sig bedre og kan koncentrere sig i længere tid, hvis de selv går eller cykler til skole, end hvis de bliver kørt i bil, bus eller tog.",
+      "at": 94,
+      "w": "hvis",
+      "card": "hvis",
+      "opts": null,
+      "id": 43
+    },
+    {
+      "src": "2018v L3",
+      "n": 6,
+      "prev": "",
+      "s": "Flere cykelture betyder nemlig mere sundhed, færre sygedage og renere luft.",
+      "at": 24,
+      "w": "nemlig",
+      "card": "nemlig",
+      "opts": [
+        "tværtimod",
+        "alligevel",
+        "imidlertid",
+        "nemlig"
+      ],
+      "ans": 3,
+      "id": 44
+    },
+    {
+      "src": "2018v L3",
+      "n": null,
+      "prev": "Det vil også hjælpe på den trafik, der opstår omkring skolerne, når forældre kører deres børn.",
+      "s": "Der er nemlig mange forældre, der kører både deres små og store børn i skole, i den tro at de gør dem en tjeneste.",
+      "at": 7,
+      "w": "nemlig",
+      "card": "nemlig",
+      "opts": null,
+      "id": 45
+    },
+    {
+      "src": "2018v L3",
+      "n": 7,
+      "prev": "Der er nemlig mange forældre, der kører både deres små og store børn i skole, i den tro at de gør dem en tjeneste.",
+      "s": "Og fordi forældrene gør dette i bedste mening, så kan det være svært at få dem til at lade være, men med kampagnen gør Cyklistforbundet et forsøg.",
+      "at": 3,
+      "w": "fordi",
+      "card": "fordi",
+      "opts": [
+        "indtil",
+        "bort set fra at",
+        "fordi",
+        "på trods af at"
+      ],
+      "ans": 2,
+      "id": 46
+    },
+    {
+      "src": "2019s L3",
+      "n": null,
+      "prev": "Hun var glad for at komme ind på studiet og fik hurtigt et godt studiejob i en boghandel.",
+      "s": "Det gik dog ikke helt, som hun havde forventet på studiet, for hun fik problemer med at følge med.",
+      "at": 8,
+      "w": "dog",
+      "card": "dog",
+      "opts": null,
+      "id": 47
+    },
+    {
+      "src": "2019s L3",
+      "n": 1,
+      "prev": "Det gik dog ikke helt, som hun havde forventet på studiet, for hun fik problemer med at følge med.",
+      "s": "Hun arbejdede nemlig alt for meget, og hun mødte ofte dårligt forberedt til undervisningen, fordi hun ikke havde tid nok til at læse.",
+      "at": 14,
+      "w": "nemlig",
+      "card": "nemlig",
+      "opts": [
+        "heldigvis",
+        "imidlertid",
+        "nemlig",
+        "ligeledes"
+      ],
+      "ans": 2,
+      "id": 48
+    },
+    {
+      "src": "2019s L3",
+      "n": 2,
+      "prev": "Hun arbejdede nemlig alt for meget, og hun mødte ofte dårligt forberedt til undervisningen, fordi hun ikke havde tid nok til at læse.",
+      "s": "Samtidig kendte hun ikke så mange af de andre og følte sig ikke som en del af det sociale liv på studiet.",
+      "at": 0,
+      "w": "Samtidig",
+      "card": "samtidig",
+      "opts": [
+        "Samtidig",
+        "Alligevel",
+        "Omvendt",
+        "Derimod"
+      ],
+      "ans": 0,
+      "id": 49
+    },
+    {
+      "src": "2019s L3",
+      "n": 3,
+      "prev": "Hun følte sig modløs og stresset, og nogle dage havde hun slet ikke energi til at møde op.",
+      "s": "Der kan være flere konsekvenser af frafald.",
+      "at": 19,
+      "w": "konsekvenser af",
+      "card": "en_konsekvens_af",
+      "opts": [
+        "grunde til",
+        "former for",
+        "konsekvenser af",
+        "eksempler på"
+      ],
+      "ans": 2,
+      "id": 50
+    },
+    {
+      "src": "2019s L3",
+      "n": null,
+      "prev": "For den unge kan det være et personligt nederlag, og for samfundet er det dyrt med en spildt studieplads.",
+      "s": "Desuden kommer nogle unge aldrig i gang med en ny uddannelse igen, og det kan begrænse deres muligheder på jobmarkedet.",
+      "at": 0,
+      "w": "Desuden",
+      "card": "desuden",
+      "opts": null,
+      "id": 51
+    },
+    {
+      "src": "2019s L3",
+      "n": null,
+      "prev": "Der er lavet en del undersøgelser af, hvorfor nogle ikke færdiggør deres uddannelse.",
+      "s": "Det er forskelligt fra studie til studie, men en typisk årsag til, at de studerende springer fra deres studier er, at de har svært ved at følge med på grund af niveauet og derfor ikke føler sig dygtige nok.",
+      "at": 42,
+      "w": "men",
+      "card": "men",
+      "opts": null,
+      "id": 52
+    },
+    {
+      "src": "2019s L3",
+      "n": null,
+      "prev": "Det er forskelligt fra studie til studie, men en typisk årsag til, at de studerende springer fra deres studier er, at de har svært ved at følge med på grund af niveauet og derfor ikke føler sig dygtige nok.",
+      "s": "Det kan også være et problem, hvis de studerende ikke lærer hinanden godt at kende fra starten.",
+      "at": 30,
+      "w": "hvis",
+      "card": "hvis",
+      "opts": null,
+      "id": 53
+    },
+    {
+      "src": "2019s L3",
+      "n": null,
+      "prev": "Det er Anne et godt eksempel på.",
+      "s": "Hvis man som Anne ikke får et godt netværk fra starten, kan man komme til at mangle støtte fra sine studiekammerater senere hen.",
+      "at": 0,
+      "w": "Hvis",
+      "card": "hvis",
+      "opts": null,
+      "id": 54
+    },
+    {
+      "src": "2019s L3",
+      "n": 7,
+      "prev": "Ved at tilbyde vejledning kan de hjælpe de studerende med deres problemer, før de bliver for store.",
+      "s": "Det er dog de studerendes eget ansvar selv at søge hjælp i tide, og det gjorde Anne, der som nævnt fik problemer på studiet.",
+      "at": 89,
+      "w": "som nævnt",
+      "card": "som_nævnt",
+      "opts": [
+        "til gengæld",
+        "som nævnt",
+        "tværtimod",
+        "desuden"
+      ],
+      "ans": 1,
+      "id": 55
+    },
+    {
+      "src": "2019s L3",
+      "n": null,
+      "prev": "Hun er begyndt at løbe, da det giver hende energi.",
+      "s": "Hun har også fundet en billigere bolig, så hun ikke skal arbejde så meget, og det har løst de faglige problemer, hun havde, fordi hun har fået mere tid til at studere og nu kan følge med.",
+      "at": 124,
+      "w": "fordi",
+      "card": "fordi",
+      "opts": null,
+      "id": 56
+    },
+    {
+      "src": "2019v L3",
+      "n": null,
+      "prev": "",
+      "s": "Hvis man har en arbejdsgiver og en fast månedsløn, så har man et arbejdsliv som de fleste danskere.",
+      "at": 0,
+      "w": "Hvis",
+      "card": "hvis",
+      "opts": null,
+      "id": 57
+    },
+    {
+      "src": "2019v L3",
+      "n": null,
+      "prev": "Mange nye freelancere mener, at det er attraktivt at være ”sin egen chef ” – også mister en stabil månedsløn og måske får en længere arbejdsdag.",
+      "s": "Undersøgelser viser, at det især er friheden til selv at bestemme, der er motiverende.",
+      "at": 28,
+      "w": "især",
+      "card": "især",
+      "opts": null,
+      "id": 58
+    },
+    {
+      "src": "2019v L3",
+      "n": 3,
+      "prev": "",
+      "s": "Samtidig er ansvaret ekstremt motiverende.",
+      "at": 0,
+      "w": "Samtidig",
+      "card": "samtidig",
+      "opts": [
+        "Derimod",
+        "Derfor",
+        "Samtidig",
+        "Alligevel"
+      ],
+      "ans": 2,
+      "id": 59
+    },
+    {
+      "src": "2019v L3",
+      "n": null,
+      "prev": "",
+      "s": "Hvis man tænker på at starte for sig selv, er det dog vigtigt, at man er opmærksom på, at der også er nogle udfordringer og ulemper ved livet som selvstændig.",
+      "at": 0,
+      "w": "Hvis",
+      "card": "hvis",
+      "opts": null,
+      "id": 60
+    },
+    {
+      "src": "2020s L3",
+      "n": null,
+      "prev": "Den er også det sidste, mange kigger på, da de seneste nyheder eller opdateringer på de sociale medier tjekkes lige før sengetid.",
+      "s": "Nogle mener, at den stråling fra telefonen, som folk bliver eksponeret for kan være skadelig, men er det rigtigt?",
+      "at": 94,
+      "w": "men",
+      "card": "men",
+      "opts": null,
+      "id": 61
+    },
+    {
+      "src": "2020s L3",
+      "n": 2,
+      "prev": "Sundhedsstyrelsen har lavet nogle enkle råd, som borgerne kan følge for at begrænse den stråling, de bliver udsat for.",
+      "s": "Rådene handler blandt andet om at sms’e frem for at ringe, at bruge headset og at undgå at sove med telefonen ved hovedet.",
+      "at": 15,
+      "w": "blandt andet",
+      "card": "blandt_andet",
+      "opts": [
+        "desuden",
+        "i stedet for",
+        "imidlertid",
+        "blandt andet"
+      ],
+      "ans": 3,
+      "id": 62
+    },
+    {
+      "src": "2020s L3",
+      "n": null,
+      "prev": "Rådene handler blandt andet om at sms’e frem for at ringe, at bruge headset og at undgå at sove med telefonen ved hovedet.",
+      "s": "Med disse opfordringer er det ikke så mærkeligt, hvis folk tror, at der er en større risiko for at få alvorlige sygdomme som fx kræft, hvis de konstant bruger telefonen.",
+      "at": 49,
+      "w": "hvis",
+      "card": "hvis",
+      "opts": null,
+      "id": 63
+    },
+    {
+      "src": "2020s L3",
+      "n": null,
+      "prev": "Med disse opfordringer er det ikke så mærkeligt, hvis folk tror, at der er en større risiko for at få alvorlige sygdomme som fx kræft, hvis de konstant bruger telefonen.",
+      "s": "Sundhedsstyrelsen understreger imidlertid, at de ovennævnte anbefalinger er baseret på et princip om forsigtighed.",
+      "at": 31,
+      "w": "imidlertid",
+      "card": "imidlertid",
+      "opts": null,
+      "id": 64
+    },
+    {
+      "src": "2020s L3",
+      "n": null,
+      "prev": "Sundhedsstyrelsen understreger imidlertid, at de ovennævnte anbefalinger er baseret på et princip om forsigtighed.",
+      "s": "Men hvad siger forskningen?",
+      "at": 0,
+      "w": "Men",
+      "card": "men",
+      "opts": null,
+      "id": 65
+    },
+    {
+      "src": "2020s L3",
+      "n": null,
+      "prev": "",
+      "s": "Det er dog et faktum, at mængden af data, der overføres til og fra mobiltelefoner, er vokset.",
+      "at": 7,
+      "w": "dog",
+      "card": "dog",
+      "opts": null,
+      "id": 66
+    },
+    {
+      "src": "2020s L3",
+      "n": null,
+      "prev": "Det er dog et faktum, at mængden af data, der overføres til og fra mobiltelefoner, er vokset.",
+      "s": "Det er sket pga. digitaliseringen i samfundet, og fordi vores telefoner konstant er logget på blandt andet mail og sociale medier.",
+      "at": 50,
+      "w": "fordi",
+      "card": "fordi",
+      "opts": null,
+      "id": 67
+    },
+    {
+      "src": "2020s L3",
+      "n": 6,
+      "prev": "Det er sket pga. digitaliseringen i samfundet, og fordi vores telefoner konstant er logget på blandt andet mail og sociale medier.",
+      "s": "Samtidig er der dog blevet sat flere mobilmaster op, så vores smartphones ikke behøver at sende og modtage med så stor styrke som før.",
+      "at": 0,
+      "w": "Samtidig",
+      "card": "samtidig",
+      "opts": [
+        "Samtidig",
+        "Modsat",
+        "Som nævnt",
+        "Alligevel"
+      ],
+      "ans": 0,
+      "id": 68
+    },
+    {
+      "src": "2020s L3",
+      "n": null,
+      "prev": "Samtidig er der dog blevet sat flere mobilmaster op, så vores smartphones ikke behøver at sende og modtage med så stor styrke som før.",
+      "s": "Det betyder samlet set, at vi bliver udsat for mindre stråling, men meget oftere end før.",
+      "at": 64,
+      "w": "men",
+      "card": "men",
+      "opts": null,
+      "id": 69
+    },
+    {
+      "src": "2020s L3",
+      "n": null,
+      "prev": "Forskere har forsøgt at finde ud af, om de folk, der bor i områder med flere master, har en forøget risiko for kræft.",
+      "s": "Det er faktisk tilfældet, men indtil videre kan man ikke se det som bevis for en forøget sundhedsrisiko.",
+      "at": 26,
+      "w": "men",
+      "card": "men",
+      "opts": null,
+      "id": 70
+    },
+    {
+      "src": "2020s L3",
+      "n": null,
+      "prev": "Det er faktisk tilfældet, men indtil videre kan man ikke se det som bevis for en forøget sundhedsrisiko.",
+      "s": "Mobilmasterne står nemlig ofte oven på høje boligblokke, og disse bygninger ligger typisk i områder, hvor folk ikke tjener så meget.",
+      "at": 19,
+      "w": "nemlig",
+      "card": "nemlig",
+      "opts": null,
+      "id": 71
+    },
+    {
+      "src": "2020v L3",
+      "n": null,
+      "prev": "CSR betegner i dag virksomheders arbejde med at integrere sociale og miljømæssige hensyn i deres forretningsaktiviteter i samspil med deres kunder.",
+      "s": "CSR har bredt sig i dansk erhvervsliv i de senere år, blandt andet på hoteller, der har haft stor succes med at tænke CSR ind i deres aktiviteter.",
+      "at": 54,
+      "w": "blandt andet",
+      "card": "blandt_andet",
+      "opts": null,
+      "id": 72
+    },
+    {
+      "src": "2020v L3",
+      "n": 1,
+      "prev": "CSR har bredt sig i dansk erhvervsliv i de senere år, blandt andet på hoteller, der har haft stor succes med at tænke CSR ind i deres aktiviteter.",
+      "s": "Mange hoteller arbejder eksempelvis med bæredygtighed og miljø.",
+      "at": 24,
+      "w": "eksempelvis",
+      "card": "eksempelvis",
+      "opts": [
+        "derimod",
+        "eksempelvis",
+        "derefter",
+        "omvendt"
+      ],
+      "ans": 1,
+      "id": 73
+    },
+    {
+      "src": "2020v L3",
+      "n": null,
+      "prev": "Der er flere årsager til, at CSR har bredt sig i dansk erhvervsliv i de senere år.",
+      "s": "For det første er CSR en gevinst for de danske virksomheder.",
+      "at": 0,
+      "w": "For det første",
+      "card": "for_det_første",
+      "opts": null,
+      "id": 74
+    },
+    {
+      "src": "2020v L3",
+      "n": null,
+      "prev": "Det viser studier i sammenhængen mellem CSR og virksomheders succes.",
+      "s": "Virksomheder, der tænker arbejdet med CSR ind i deres aktiviteter, klarer sig nemlig ofte godt økonomisk.",
+      "at": 78,
+      "w": "nemlig",
+      "card": "nemlig",
+      "opts": null,
+      "id": 75
+    },
+    {
+      "src": "2020v L3",
+      "n": null,
+      "prev": "At CSR har bredt sig hænger også sammen med, at der generelt er kommet mere fokus på emner som miljø og inklusion i samfundet, og det påvirker også det danske erhvervsliv.",
+      "s": "Endelig kan en forklaring på det øgede fokus på CSR være, at de sociale medier er mere udbredte i dag.",
+      "at": 0,
+      "w": "Endelig",
+      "card": "endelig",
+      "opts": null,
+      "id": 76
+    },
+    {
+      "src": "2020v L3",
+      "n": null,
+      "prev": "Endelig kan en forklaring på det øgede fokus på CSR være, at de sociale medier er mere udbredte i dag.",
+      "s": "Med de sociale medier er samfundet som helhed blevet mere åbent, fordi alle har nem adgang til både gode og dårlige nyheder og historier.",
+      "at": 65,
+      "w": "fordi",
+      "card": "fordi",
+      "opts": null,
+      "id": 77
+    },
+    {
+      "src": "2020v L3",
+      "n": null,
+      "prev": "Med de sociale medier er samfundet som helhed blevet mere åbent, fordi alle har nem adgang til både gode og dårlige nyheder og historier.",
+      "s": "Det er derfor vigtigt for en virksomhed at tage hensyn til miljøet og behandle de ansatte godt, så virksomheden kan få en god omtale.",
+      "at": 7,
+      "w": "derfor",
+      "card": "derfor",
+      "opts": null,
+      "id": 78
+    },
+    {
+      "src": "2020v L3",
+      "n": 5,
+      "prev": "Det er derfor vigtigt for en virksomhed at tage hensyn til miljøet og behandle de ansatte godt, så virksomheden kan få en god omtale.",
+      "s": "En klar CSR-profil er god reklame for en virksomhed, og dermed kan det blive lettere at finde nye medarbejdere i brancher, hvor der ikke er arbejdskraft nok.",
+      "at": 56,
+      "w": "dermed",
+      "card": "dermed",
+      "opts": [
+        "modsat",
+        "alligevel",
+        "dermed",
+        "dog"
+      ],
+      "ans": 2,
+      "id": 79
+    },
+    {
+      "src": "2020v L3",
+      "n": 6,
+      "prev": "Det gælder særligt i forhold til de unge.",
+      "s": "En undersøgelse fra 2018 viser nemlig, at 75 % af lønmodtagerne mellem 24 og 34 år mener, at en arbejdsplads skal påvirke samfund og miljø positivt.",
+      "at": 31,
+      "w": "nemlig",
+      "card": "nemlig",
+      "opts": [
+        "imidlertid",
+        "i stedet",
+        "nemlig",
+        "tværtimod"
+      ],
+      "ans": 2,
+      "id": 80
+    },
+    {
+      "src": "2020v L3",
+      "n": null,
+      "prev": "Undersøgelsen viser også, at netop de unge skifter job ofte.",
+      "s": "I en tid med mangel på på arbejdskraft er det derfor vigtigt med CSR-initiativer.",
+      "at": 46,
+      "w": "derfor",
+      "card": "derfor",
+      "opts": null,
+      "id": 81
+    },
+    {
+      "src": "2020v L3",
+      "n": null,
+      "prev": "Der er bred enighed i samfundet om, at det er positivt at arbejde for social inklusion, miljøbevidsthed og samfundsmæssigt ansvar.",
+      "s": "Alligevel er der uenighed om CSR’s plads i dansk erhvervsliv.",
+      "at": 0,
+      "w": "Alligevel",
+      "card": "alligevel",
+      "opts": null,
+      "id": 82
+    },
+    {
+      "src": "2021s L3",
+      "n": null,
+      "prev": "Til sommer stopper mine dagpenge, og så skal jeg finde et job,” siger hun.",
+      "s": "I Danmark kan man få dagpenge som nyuddannet, hvis man er arbejdsløs og er medlem af en A-kasse.",
+      "at": 46,
+      "w": "hvis",
+      "card": "hvis",
+      "opts": null,
+      "id": 83
+    },
+    {
+      "src": "2021s L3",
+      "n": null,
+      "prev": "I Danmark kan man få dagpenge som nyuddannet, hvis man er arbejdsløs og er medlem af en A-kasse.",
+      "s": "Man kan få dagpenge i to år i træk, og man har derfor relativt god tid til at finde et job.",
+      "at": 47,
+      "w": "derfor",
+      "card": "derfor",
+      "opts": null,
+      "id": 84
+    },
+    {
+      "src": "2021s L3",
+      "n": null,
+      "prev": "",
+      "s": "Hvis man skal have folk hurtigere ud på arbejdsmarkedet, er det måske nødvendigt at ændre reglerne,” mener hun.",
+      "at": 0,
+      "w": "Hvis",
+      "card": "hvis",
+      "opts": null,
+      "id": 85
+    },
+    {
+      "src": "2021s L3",
+      "n": null,
+      "prev": "Der er forskellige holdninger til, at nyuddannede som Thea går ledige i lang tid.",
+      "s": "Mange af disse er negative, fordi mange mener, at nyuddannede bør tage et midlertidigt ufaglært job i stedet for at gå arbejdsløse.",
+      "at": 28,
+      "w": "fordi",
+      "card": "fordi",
+      "opts": null,
+      "id": 86
+    },
+    {
+      "src": "2021s L3",
+      "n": null,
+      "prev": "",
+      "s": "Hun hører desuden, at arbejdsgiverne igen og igen siger nej tak til overkvalificerede ansøgere, der søger et lavtlønnet job, fx i Netto.",
+      "at": 10,
+      "w": "desuden",
+      "card": "desuden",
+      "opts": null,
+      "id": 87
+    },
+    {
+      "src": "2021v L3",
+      "n": 2,
+      "prev": "Mange offentligt ansatte har ikke samme indflydelse på, hvor og hvornår de arbejder.",
+      "s": "Denne forskel på den private og offentlige sektor skyldes i høj grad, at mange offentligt ansatte arbejder med pleje eller pasning.",
+      "at": 50,
+      "w": "skyldes",
+      "card": "at_skyldes",
+      "opts": [
+        "medfører",
+        "udelukker",
+        "forklarer",
+        "skyldes"
+      ],
+      "ans": 3,
+      "id": 88
+    },
+    {
+      "src": "2021v L3",
+      "n": null,
+      "prev": "Her er det nødvendigt, at medarbejderne er fysisk til stede på arbejdspladsen på bestemte tidspunkter.",
+      "s": "I flere kommuner ønsker man imidlertid at kunne tilbyde de ansatte større indflydelse på deres arbejdsliv.",
+      "at": 28,
+      "w": "imidlertid",
+      "card": "imidlertid",
+      "opts": null,
+      "id": 89
+    },
+    {
+      "src": "2021v L3",
+      "n": 3,
+      "prev": "I flere kommuner ønsker man imidlertid at kunne tilbyde de ansatte større indflydelse på deres arbejdsliv.",
+      "s": "Flere kommuner har derfor planer om eksempelvis at give de ansatte bedre muligheder for at skrue op og ned for arbejdsugens længde og for at møde tidligere eller senere nogle af ugens dage.",
+      "at": 19,
+      "w": "derfor",
+      "card": "derfor",
+      "opts": [
+        "herefter",
+        "alligevel",
+        "derfor",
+        "omvendt"
+      ],
+      "ans": 2,
+      "id": 90
+    },
+    {
+      "src": "2021v L3",
+      "n": null,
+      "prev": "Flere kommuner har derfor planer om eksempelvis at give de ansatte bedre muligheder for at skrue op og ned for arbejdsugens længde og for at møde tidligere eller senere nogle af ugens dage.",
+      "s": "Det skal dog være noget, man skal aftale med sin leder.",
+      "at": 9,
+      "w": "dog",
+      "card": "dog",
+      "opts": null,
+      "id": 91
+    },
+    {
+      "src": "2021v L3",
+      "n": null,
+      "prev": "På den baggrund forventer man, at bedre muligheder for at påvirke, hvor og hvornår man arbejder på daglig basis, også vil øge tilfredsheden.",
+      "s": "Det kan dog i praksis være svært at tilbyde alle offentligt ansatte et mere fleksibelt arbejdsliv.",
+      "at": 8,
+      "w": "dog",
+      "card": "dog",
+      "opts": null,
+      "id": 92
+    },
+    {
+      "src": "2021v L3",
+      "n": 5,
+      "prev": "Det kan dog i praksis være svært at tilbyde alle offentligt ansatte et mere fleksibelt arbejdsliv.",
+      "s": "Som nævnt har en del kommunalt ansatte et arbejde, hvor de arbejder med pleje eller pasning og har kontakt med borgerne i faste tidsrum.",
+      "at": 0,
+      "w": "Som nævnt",
+      "card": "som_nævnt",
+      "opts": [
+        "Desuden",
+        "Som nævnt",
+        "Imens",
+        "Til gengæld"
+      ],
+      "ans": 1,
+      "id": 93
+    },
+    {
+      "src": "2021v L3",
+      "n": null,
+      "prev": "",
+      "s": "Det tyder dog på, at det er muligt at undgå brug af flere vikarer.",
+      "at": 10,
+      "w": "dog",
+      "card": "dog",
+      "opts": null,
+      "id": 94
+    },
+    {
+      "src": "2021v L3",
+      "n": null,
+      "prev": "Det tyder dog på, at det er muligt at undgå brug af flere vikarer.",
+      "s": "Nogle unge ansatte vil nemlig gerne arbejde lidt mere i perioder, så de kan holde fri i andre.",
+      "at": 23,
+      "w": "nemlig",
+      "card": "nemlig",
+      "opts": null,
+      "id": 95
+    },
+    {
+      "src": "2022s L3",
+      "n": null,
+      "prev": "Hjemmearbejde er i dag en naturlig del af arbejdslivet i de job, hvor det kan lade sig gøre, og det kan der være flere fordele ved.",
+      "s": "Arbejdsdagen kan eksempelvis blive mere fokuseret og effektiv.",
+      "at": 17,
+      "w": "eksempelvis",
+      "card": "eksempelvis",
+      "opts": null,
+      "id": 96
+    },
+    {
+      "src": "2022s L3",
+      "n": 2,
+      "prev": "Derhjemme er der tit mere ro til arbejdsopgaverne.",
+      "s": "Herudover kan der spares både tid og penge på turen til og fra arbejde.",
+      "at": 0,
+      "w": "Herudover",
+      "card": "herudover",
+      "opts": [
+        "Herudover",
+        "Altså",
+        "Hermed",
+        "Omvendt"
+      ],
+      "ans": 0,
+      "id": 97
+    },
+    {
+      "src": "2022s L3",
+      "n": null,
+      "prev": "Herudover kan der spares både tid og penge på turen til og fra arbejde.",
+      "s": "Udskifter man ofte kontoret med en hjemmearbejdsplads, skal man dog være opmærksom på, at det kræver det rigtige udstyr i hjemmet.",
+      "at": 64,
+      "w": "dog",
+      "card": "dog",
+      "opts": null,
+      "id": 98
+    },
+    {
+      "src": "2022s L3",
+      "n": null,
+      "prev": "Udskifter man ofte kontoret med en hjemmearbejdsplads, skal man dog være opmærksom på, at det kræver det rigtige udstyr i hjemmet.",
+      "s": "Det er det ikke alle, der har, selvom arbejdsgiverne har ansvar for at sikre et godt fysisk arbejdsmiljø derhjemme.",
+      "at": 31,
+      "w": "selvom",
+      "card": "selvom",
+      "opts": null,
+      "id": 99
+    },
+    {
+      "src": "2022s L3",
+      "n": null,
+      "prev": "Det er det ikke alle, der har, selvom arbejdsgiverne har ansvar for at sikre et godt fysisk arbejdsmiljø derhjemme.",
+      "s": "Et godt arbejdsmiljø er nemlig en rettighed, man har som ansat, uanset hvor man har sin arbejdsplads.",
+      "at": 24,
+      "w": "nemlig",
+      "card": "nemlig",
+      "opts": null,
+      "id": 100
+    },
+    {
+      "src": "2022s L3",
+      "n": null,
+      "prev": "Morten Skov Christiansen fra Fagbevægelsens Hovedorganisation mener, at det er bekymrende, at mange arbejder mere hjemme uden det rigtige udstyr.",
+      "s": "Det kan arbejdsgiveren dog let rette op på.",
+      "at": 23,
+      "w": "dog",
+      "card": "dog",
+      "opts": null,
+      "id": 101
+    },
+    {
+      "src": "2022s L3",
+      "n": 6,
+      "prev": "Det kan ske, at grænsen mellem arbejde og fritid forsvinder, når hjem og arbejdsplads ikke er fysisk adskilt.",
+      "s": "Dermed kan man komme til at mangle struktur i sin hverdag.",
+      "at": 0,
+      "w": "Dermed",
+      "card": "dermed",
+      "opts": [
+        "Som nævnt",
+        "Til gengæld",
+        "Dermed",
+        "Alligevel"
+      ],
+      "ans": 2,
+      "id": 102
+    },
+    {
+      "src": "2022s L3",
+      "n": null,
+      "prev": "Dermed kan man komme til at mangle struktur i sin hverdag.",
+      "s": "Mange savner også fællesskabet med kollegerne, hvis meget af deres arbejde foregår derhjemme.",
+      "at": 47,
+      "w": "hvis",
+      "card": "hvis",
+      "opts": null,
+      "id": 103
+    },
+    {
+      "src": "2022s L3",
+      "n": 7,
+      "prev": "Mange savner også fællesskabet med kollegerne, hvis meget af deres arbejde foregår derhjemme.",
+      "s": "Det sociale samvær på arbejdspladsen betyder ofte meget, og ensomhed og stress kan derfor være en konsekvens af meget hjemmearbejde.",
+      "at": 95,
+      "w": "en konsekvens af",
+      "card": "en_konsekvens_af",
+      "opts": [
+        "en konsekvens af",
+        "en grund til",
+        "et argument for",
+        "en forudsætning for"
+      ],
+      "ans": 0,
+      "id": 104
+    },
+    {
+      "src": "2022s L3",
+      "n": null,
+      "prev": "Det mener Henrik Holdt Larsen fra Copenhagen Business School (CBS).",
+      "s": "Han mener derfor, at hjemmearbejde kræver en ledelse, der er ekstra opmærksom.",
+      "at": 10,
+      "w": "derfor",
+      "card": "derfor",
+      "opts": null,
+      "id": 105
+    },
+    {
+      "src": "2022v L3",
+      "n": 1,
+      "prev": "",
+      "s": "Det kan eksempelvis være aktiviteter som at hygge med familien, se fjernsyn eller læse.",
+      "at": 8,
+      "w": "eksempelvis",
+      "card": "eksempelvis",
+      "opts": [
+        "eksempelvis",
+        "desuden",
+        "heldigvis",
+        "alligevel"
+      ],
+      "ans": 0,
+      "id": 106
+    },
+    {
+      "src": "2022v L3",
+      "n": null,
+      "prev": "",
+      "s": "Men dette er netop ikke tilfældet.",
+      "at": 0,
+      "w": "Men",
+      "card": "men",
+      "opts": null,
+      "id": 107
+    },
+    {
+      "src": "2022v L3",
+      "n": null,
+      "prev": "For uanset job oplever de fleste, at de ved at være fysisk aktive faktisk får mere energi og overskud i hverdagen.",
+      "s": "Det lader derfor til at give god mening at være aktiv i sin fritid, da det giver energi til andet end blot at flade ud på sofaen efter arbejde.",
+      "at": 10,
+      "w": "derfor",
+      "card": "derfor",
+      "opts": null,
+      "id": 108
+    },
+    {
+      "src": "2022v L3",
+      "n": 5,
+      "prev": "",
+      "s": "Når mange prioriterer at dyrke den aktive fritid ret intensivt, kan det være en konsekvens af, at vores hobbyer i dag spiller en vigtigere rolle for os end tidligere.",
+      "at": 77,
+      "w": "en konsekvens af",
+      "card": "en_konsekvens_af",
+      "opts": [
+        "en kontrast til",
+        "en modstand mod",
+        "en advarsel om",
+        "en konsekvens af"
+      ],
+      "ans": 3,
+      "id": 109
+    },
+    {
+      "src": "2022v L3",
+      "n": null,
+      "prev": "",
+      "s": "Det er nemlig sådan, at man tidligere ofte havde det samme job og den samme hobby hele livet.",
+      "at": 7,
+      "w": "nemlig",
+      "card": "nemlig",
+      "opts": null,
+      "id": 110
+    },
+    {
+      "src": "2023s L3",
+      "n": null,
+      "prev": "Målet skal nås ved at omstille det danske energiforbrug fra kul, olie og gas til grønne energiformer.",
+      "s": "Det er dyrt, men det er ikke den eneste udfordring.",
+      "at": 13,
+      "w": "men",
+      "card": "men",
+      "opts": null,
+      "id": 111
+    },
+    {
+      "src": "2023s L3",
+      "n": 2,
+      "prev": "Det sker i Danmark i høj grad gennem en satsning på vindenergi.",
+      "s": "Derfor er der i de senere år sat vindmøller op overalt i Danmark.",
+      "at": 0,
+      "w": "Derfor",
+      "card": "derfor",
+      "opts": [
+        "Desuden",
+        "Derfor",
+        "Omvendt",
+        "Alligevel"
+      ],
+      "ans": 1,
+      "id": 112
+    },
+    {
+      "src": "2023s L3",
+      "n": null,
+      "prev": "Udviklingen er også blevet hjulpet på vej af, at det er blevet en bedre forretning at producere vindenergi.",
+      "s": "Teknologien er nemlig blevet bedre og møllerne større.",
+      "at": 15,
+      "w": "nemlig",
+      "card": "nemlig",
+      "opts": null,
+      "id": 113
+    },
+    {
+      "src": "2023s L3",
+      "n": null,
+      "prev": "Det har øget interessen blandt private firmaer for at investere i store vindmølleprojekter.",
+      "s": "Men flere steder møder projekterne modstand fra lokale borgere.",
+      "at": 0,
+      "w": "Men",
+      "card": "men",
+      "opts": null,
+      "id": 114
+    },
+    {
+      "src": "2023s L3",
+      "n": 3,
+      "prev": "Men flere steder møder projekterne modstand fra lokale borgere.",
+      "s": "De store vindmøller kan nemlig ses og høres vidt omkring.",
+      "at": 24,
+      "w": "nemlig",
+      "card": "nemlig",
+      "opts": [
+        "dermed",
+        "dog",
+        "nemlig",
+        "sjældent"
+      ],
+      "ans": 2,
+      "id": 115
+    },
+    {
+      "src": "2023s L3",
+      "n": null,
+      "prev": "For at undgå ulemperne med støj og med, at de store vindmøller kan ses på lang afstand, kan man sætte dem op på havet.",
+      "s": "Problematikken er imidlertid, at de er dyrere at sætte op på havet, og jo længere ude på havet de sættes op, jo dyrere er det.",
+      "at": 18,
+      "w": "imidlertid",
+      "card": "imidlertid",
+      "opts": null,
+      "id": 116
+    },
+    {
+      "src": "2023s L3",
+      "n": null,
+      "prev": "Problematikken er imidlertid, at de er dyrere at sætte op på havet, og jo længere ude på havet de sættes op, jo dyrere er det.",
+      "s": "Man vælger derfor ofte mellemløsningen og bygger havvindmøllerne relativt tæt på kysten.",
+      "at": 11,
+      "w": "derfor",
+      "card": "derfor",
+      "opts": null,
+      "id": 117
+    },
+    {
+      "src": "2023s L3",
+      "n": null,
+      "prev": "Man vælger derfor ofte mellemløsningen og bygger havvindmøllerne relativt tæt på kysten.",
+      "s": "Her kan de dog stadig ses fra land, og det kan få berørte borgere til at protestere.",
+      "at": 11,
+      "w": "dog",
+      "card": "dog",
+      "opts": null,
+      "id": 118
+    },
+    {
+      "src": "2023s L3",
+      "n": null,
+      "prev": "Protesterne kan sætte de lokale politikere i landets kommuner under pres.",
+      "s": "Det er nemlig kommunerne, der afgør, hvor møllerne skal sættes op.",
+      "at": 7,
+      "w": "nemlig",
+      "card": "nemlig",
+      "opts": null,
+      "id": 119
+    },
+    {
+      "src": "2023s L3",
+      "n": null,
+      "prev": "Når borgere klager, kan det forlænge kommunernes sagsbehandling af vindmølleprojekter.",
+      "s": "Nogle gange kan en klagesag faktisk ende med, at projekter ikke blot trækker ud, men helt må opgives.",
+      "at": 81,
+      "w": "men",
+      "card": "men",
+      "opts": null,
+      "id": 120
+    },
+    {
+      "src": "2023s L3",
+      "n": null,
+      "prev": "Nogle gange kan en klagesag faktisk ende med, at projekter ikke blot trækker ud, men helt må opgives.",
+      "s": "Det er dog ikke kun borgernes modstand mod at sætte vindmøller op, der kan forsinke eller forhindre processen.",
+      "at": 7,
+      "w": "dog",
+      "card": "dog",
+      "opts": null,
+      "id": 121
+    },
+    {
+      "src": "2023s L3",
+      "n": null,
+      "prev": "Det kan også hensyn til naturen.",
+      "s": "Store dele af Danmarks natur er nemlig sikret med Naturbeskyttelsesloven.",
+      "at": 32,
+      "w": "nemlig",
+      "card": "nemlig",
+      "opts": null,
+      "id": 122
+    },
+    {
+      "src": "2023v L3",
+      "n": 1,
+      "prev": "En undersøgelse fra ROCKWOOL-Fonden viser, at der generelt er flere jobmuligheder for unge med en teknisk uddannelse end unge med en humanistisk uddannelse.",
+      "s": "Alligevel begyndte knap 6.000 unge på en humanistisk bacheloruddannelse i 2021, mens knap 3.000 unge begyndte på en teknisk bacheloruddannelse.",
+      "at": 0,
+      "w": "Alligevel",
+      "card": "alligevel",
+      "opts": [
+        "Ligeledes",
+        "Derfor",
+        "Alligevel",
+        "Derimod"
+      ],
+      "ans": 2,
+      "id": 123
+    },
+    {
+      "src": "2023v L3",
+      "n": null,
+      "prev": "Man kan synes, det er overraskende med denne fordeling.",
+      "s": "Ikke blot på grund af jobmulighederne, men også fordi nyuddannede med en teknisk uddannelse ofte får en højere løn end nyuddannede med en humanistisk uddannelse.",
+      "at": 39,
+      "w": "men",
+      "card": "men",
+      "opts": null,
+      "id": 124
+    },
+    {
+      "src": "2023v L3",
+      "n": 3,
+      "prev": "Der kan være gode grunde til, at jobmuligheder og løn ikke er mere afgørende for danske unges valg af uddannelse.",
+      "s": "Det kan fx være en følge af det danske velfærdssamfund.",
+      "at": 19,
+      "w": "følge af",
+      "card": "en_følge_af",
+      "opts": [
+        "målsætning for",
+        "forklaring på",
+        "følge af",
+        "forudsætning for"
+      ],
+      "ans": 2,
+      "id": 125
+    },
+    {
+      "src": "2023v L3",
+      "n": null,
+      "prev": "Hun forklarer, at danske unge er i en anden situation end unge fra mange andre lande.",
+      "s": "Danske unge er nemlig ikke så afhængige af straks at få et arbejde med en høj løn efter endt uddannelse for at have en god levestandard.",
+      "at": 15,
+      "w": "nemlig",
+      "card": "nemlig",
+      "opts": null,
+      "id": 126
+    },
+    {
+      "src": "2023v L3",
+      "n": null,
+      "prev": "",
+      "s": "Hvis man skal have flere unge til at søge ind på en teknisk uddannelse, er der forskellige muligheder.",
+      "at": 0,
+      "w": "Hvis",
+      "card": "hvis",
+      "opts": null,
+      "id": 127
+    },
+    {
+      "src": "2023v L3",
+      "n": null,
+      "prev": "Man kunne også helt lukke nogle uddannelser.",
+      "s": "En uddannelse som filosofi udbydes fx fem steder i landet, selvom der er høj ledighed blandt nyuddannede.",
+      "at": 59,
+      "w": "selvom",
+      "card": "selvom",
+      "opts": null,
+      "id": 128
+    },
+    {
+      "src": "2023v L3",
+      "n": null,
+      "prev": "En uddannelse som filosofi udbydes fx fem steder i landet, selvom der er høj ledighed blandt nyuddannede.",
+      "s": "Charlotte Rønhof mener, at det er et forsøg værd, selvom ingen af de to initiativer kan garantere, at de unge, der normalt ville vælge en humanistisk uddannelse, ville vælge en teknisk uddannelse.",
+      "at": 50,
+      "w": "selvom",
+      "card": "selvom",
+      "opts": null,
+      "id": 129
+    },
+    {
+      "src": "2023v L3",
+      "n": null,
+      "prev": "Han påpeger, at det ikke er muligt at forudsige, hvad der sker i fremtiden.",
+      "s": "Vi kan derfor ikke vurdere, hvilke behov der kommer til at opstå.",
+      "at": 7,
+      "w": "derfor",
+      "card": "derfor",
+      "opts": null,
+      "id": 130
+    },
+    {
+      "src": "2023v L3",
+      "n": null,
+      "prev": "Og der er måske noget, der tyder på, at der godt kan blive brug for flere med en humanistisk uddannelse i fremtiden.",
+      "s": "Der bliver nemlig ansat flere og flere humanister i private virksomheder, fx i it-virksomheder.",
+      "at": 11,
+      "w": "nemlig",
+      "card": "nemlig",
+      "opts": null,
+      "id": 131
+    },
+    {
+      "src": "2024s L3",
+      "n": null,
+      "prev": "Bymidterne har historisk været et sted, hvor folk mødtes på torve og markeder for at handle og blive underholdt.",
+      "s": "Men i dag er bymidterne truet, da butikkerne i bymidterne har svært ved at klare sig i konkurrencen med nethandlen og storcentrene, og kunderne svigter.",
+      "at": 0,
+      "w": "Men",
+      "card": "men",
+      "opts": null,
+      "id": 132
+    },
+    {
+      "src": "2024s L3",
+      "n": 1,
+      "prev": "Men i dag er bymidterne truet, da butikkerne i bymidterne har svært ved at klare sig i konkurrencen med nethandlen og storcentrene, og kunderne svigter.",
+      "s": "Man ser derfor i dag flere og flere tomme butikslokaler rundt omkring i landets byer.",
+      "at": 8,
+      "w": "derfor",
+      "card": "derfor",
+      "opts": [
+        "omvendt",
+        "alligevel",
+        "derfor",
+        "dog"
+      ],
+      "ans": 2,
+      "id": 133
+    },
+    {
+      "src": "2024s L3",
+      "n": null,
+      "prev": "Det er også ejerne af bymidternes erhvervslokaler, der kræver høje huslejer.",
+      "s": "Historisk har det nemlig været attraktivt at have en butik i centrum.",
+      "at": 18,
+      "w": "nemlig",
+      "card": "nemlig",
+      "opts": null,
+      "id": 134
+    },
+    {
+      "src": "2024s L3",
+      "n": null,
+      "prev": "Sådan er det bare ikke mere.",
+      "s": "Men omkostningsniveauet er stadig højt.",
+      "at": 0,
+      "w": "Men",
+      "card": "men",
+      "opts": null,
+      "id": 135
+    },
+    {
+      "src": "2024s L3",
+      "n": null,
+      "prev": "Den faldende handel i bymidterne er en tendens, der bekymrer mange, også politikerne.",
+      "s": "Det kan nemlig generelt forringe livskvaliteten for borgerne, hvis butikkerne i bymidterne lukker.",
+      "at": 8,
+      "w": "nemlig",
+      "card": "nemlig",
+      "opts": null,
+      "id": 136
+    },
+    {
+      "src": "2024s L3",
+      "n": null,
+      "prev": "Det kan nemlig generelt forringe livskvaliteten for borgerne, hvis butikkerne i bymidterne lukker.",
+      "s": "Butikkerne har nemlig især i de mindre byer, hvor der heller ikke er storcentre, en vigtig rolle for folks psykiske og fysiske velvære.",
+      "at": 15,
+      "w": "nemlig",
+      "card": "nemlig",
+      "opts": null,
+      "id": 137
+    },
+    {
+      "src": "2024s L3",
+      "n": null,
+      "prev": "Butikkerne har nemlig især i de mindre byer, hvor der heller ikke er storcentre, en vigtig rolle for folks psykiske og fysiske velvære.",
+      "s": "Det har de, fordi de lokale butikker typisk støtter arrangementer og events, der ud over at få folk ind til byen, også kan give folk mulighed for oplevelser og aktiviteter at mødes om.",
+      "at": 12,
+      "w": "fordi",
+      "card": "fordi",
+      "opts": null,
+      "id": 138
+    },
+    {
+      "src": "2024s L3",
+      "n": null,
+      "prev": "Målet er at skabe bymidter, hvor folk kommer af andre grunde end blot for at handle.",
+      "s": "Formålet med bymidterne skal altså tænkes bredere end i den klassiske handelsby, hvor det primært var handlen, der fik folk ind til centrum.",
+      "at": 29,
+      "w": "altså",
+      "card": "altså",
+      "opts": null,
+      "id": 139
+    },
+    {
+      "src": "2024s L3",
+      "n": 6,
+      "prev": "De ti udvalgte byer har for eksempel tænkt velfærdsfunktioner som biblioteker og borgerservice ind i deres planer for nyt liv i bymidterne.",
+      "s": "De har desuden tænkt flere grønne områder og pladser ind, hvor der kan arrangeres fx events og koncerter.",
+      "at": 7,
+      "w": "desuden",
+      "card": "desuden",
+      "opts": [
+        "imidlertid",
+        "desuden",
+        "derimod",
+        "nemlig"
+      ],
+      "ans": 1,
+      "id": 140
+    },
+    {
+      "src": "2024s L3",
+      "n": null,
+      "prev": "De har desuden tænkt flere grønne områder og pladser ind, hvor der kan arrangeres fx events og koncerter.",
+      "s": "Det er dog ikke kun politisk, der kan gøres en indsats.",
+      "at": 7,
+      "w": "dog",
+      "card": "dog",
+      "opts": null,
+      "id": 141
+    },
+    {
+      "src": "2024s L3",
+      "n": null,
+      "prev": "De lokale butikker kan selv gøre noget for at blive mere attraktive.",
+      "s": "De kan blandt andet tilbyde den samme service som netbutikkerne.",
+      "at": 7,
+      "w": "blandt andet",
+      "card": "blandt_andet",
+      "opts": null,
+      "id": 142
+    },
+    {
+      "src": "2024s L3",
+      "n": null,
+      "prev": "De kan blandt andet tilbyde den samme service som netbutikkerne.",
+      "s": "Hvis de for eksempel ikke har mulighed for at have så mange varer på lager i butikken, kan de tilbyde at fremskaffe dem inden for 24 timer og levere dem til døren.",
+      "at": 0,
+      "w": "Hvis",
+      "card": "hvis",
+      "opts": null,
+      "id": 143
+    },
+    {
+      "src": "2024s L3",
+      "n": null,
+      "prev": "Hvis de for eksempel ikke har mulighed for at have så mange varer på lager i butikken, kan de tilbyde at fremskaffe dem inden for 24 timer og levere dem til døren.",
+      "s": "De kan også tilbyde samme pris som en netbutik, hvis den fysiske butik ikke umiddelbart matcher den pris man kan få online.",
+      "at": 48,
+      "w": "hvis",
+      "card": "hvis",
+      "opts": null,
+      "id": 144
+    },
+    {
+      "src": "2024s L3",
+      "n": null,
+      "prev": "De kan også tilbyde samme pris som en netbutik, hvis den fysiske butik ikke umiddelbart matcher den pris man kan få online.",
+      "s": "Endelig har de lokale butikker også en fordel, som man ikke skal undervurdere.",
+      "at": 0,
+      "w": "Endelig",
+      "card": "endelig",
+      "opts": null,
+      "id": 145
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "_about": "Tankegang: the frequency-table connectors in Peter's four kinds of logic. Each row: [sub-heading, [[card id, word type], ...]]. Word types: ADV (V2 after it), SUB (subordinate clause), KOO (main clause), PRAEP (+ noun), NOUN, VERB. men and selvom are not in the table; they are Peter's anchor words.",
+  "tilføjelse": [
+    ["Mere af det samme", [["desuden", "ADV"], ["derudover", "ADV"], ["herudover", "ADV"], ["ydermere", "ADV"], ["blandt_andet", "ADV"], ["ligeledes", "ADV"], ["samtidig", "ADV"], ["som_nævnt", "ADV"]]],
+    ["Rækkefølge", [["for_det_første", "ADV"], ["allerførst", "ADV"], ["dernæst", "ADV"], ["herefter", "ADV"], ["derefter", "ADV"], ["endelig", "ADV"]]],
+    ["Eksempel / præcisering", [["eksempelvis", "ADV"], ["især", "ADV"], ["med_andre_ord", "ADV"]]]
+  ],
+  "modargument": [
+    ["Kontrast", [["men", "KOO"], ["imidlertid", "ADV"], ["dog", "ADV"], ["derimod", "ADV"], ["til_gengæld", "ADV"], ["omvendt", "ADV"], ["modsat", "ADV"], ["tværtimod", "ADV"], ["på_den_ene_side_på_den_anden_side", "ADV"]]],
+    ["I stedet / undtagen", [["i_stedet_for", "PRAEP"], ["bortset_fra", "PRAEP"], ["imod", "PRAEP"]]]
+  ],
+  "følge": [
+    ["Derfor – følgen", [["derfor", "ADV"], ["dermed", "ADV"], ["således", "ADV"], ["hermed", "ADV"], ["altså", "ADV"], ["at_medføre", "VERB"], ["en_konsekvens_af", "NOUN"], ["en_følge_af", "NOUN"], ["et_resultat_af", "NOUN"]]],
+    ["Fordi – årsagen", [["fordi", "SUB"], ["nemlig", "ADV"], ["at_skyldes", "VERB"], ["en_grund_til", "NOUN"], ["en_årsag", "NOUN"]]],
+    ["Hvis – betingelsen", [["hvis", "SUB"], ["ellers", "ADV"]]]
+  ],
+  "ulogisk": [
+    ["Det uventede", [["alligevel", "ADV"], ["selvom", "SUB"], ["trods_på_trods_af", "PRAEP"]]]
+  ]
+}
