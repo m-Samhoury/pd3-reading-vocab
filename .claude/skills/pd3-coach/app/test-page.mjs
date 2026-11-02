@@ -106,6 +106,46 @@ ok("logic give up + keys", await ev(`(async()=>{ const w=ms=>new Promise(r=>setT
   $("#nx").click(); await w(10); document.dispatchEvent(new KeyboardEvent("keydown",{key:"2",bubbles:true})); await w(5); const k1=document.querySelectorAll(".lgcat.sel").length, k2=document.querySelectorAll(".lgopt").length; document.dispatchEvent(new KeyboardEvent("keydown",{key:"1",bubbles:true})); await w(5);
   const k3=!!$("#fb .feedback"); $("#gquit").click(); await w(10); const q=[$("#app").innerText.slice(0,40).replace(/\\n+/g," | ")]; home(); return [g,k1,k2,k3,q]; })()`));
 await ev(`home()`);
+// Sortér ordene (Tankegang): both sets, a right and a wrong answer by button, the wrong pile back, keys 1–4, a real mouse drag,
+// the tap fallback, the score screen, no SM-2 change, and no horizontal scroll at phone width
+ok("sort start", await ev(`(()=>{ localStorage.clear(); home(); tankegang(); const btn=!!$("#soGo"); window.__snap0=JSON.stringify(Object.values(DB.cards).map(c=>[c.due,c.history.length,c.ef,c.interval]));
+  $("#soGo").click(); return [btn, !!$("#soWord"), SO.set, SO.queue.length, document.querySelectorAll(".sob").length, $(".sowrd").textContent]; })()`));
+ok("sort order set", await ev(`(()=>{ document.querySelector("[data-set=order]").click(); const w=SO.queue.map(id=>LG[id][1]);
+  return [SO.set, SO.queue.length, [...document.querySelectorAll(".sob")].map(b=>b.dataset.b).join(","), w.every(x=>["ADV","SUB","KOO","PRAEP"].includes(x)), !!document.querySelector("[data-set=order][aria-pressed=true]")]; })()`));
+ok("sort right answer", await ev(`(()=>{ document.querySelector("[data-set=logic]").click(); const id=SO.queue[SO.i], k=LG[id][0]; document.querySelector('.sob[data-b="'+k+'"]').click();
+  const r=[!!$(".feedback.ok"), $(".sob.right")?.dataset.b===k, SO.first[id], soStore().words[id]]; $("#nx").click(); return r.concat(SO.i); })()`));
+ok("sort wrong answer", await ev(`(()=>{ const id=SO.queue[SO.i], k=LG[id][0], wrong=SO_SETS.logic.map(b=>b[0]).find(x=>x!==k); window.__soWrong=id; document.querySelector('.sob[data-b="'+wrong+'"]').click();
+  return [!!$(".feedback.bad"), $(".sob.wrong")?.dataset.b===wrong, $(".sob.right")?.dataset.b===k, $("#fb").innerText.includes("er ikke"), SO.pile.length, soStore().words[id]]; })()`));
+ok("sort round, pile, score", await ev(`(async()=>{ const w=ms=>new Promise(r=>setTimeout(r,ms)); const out=[];
+  $("#nx").click(); await w(20);
+  while (SO.pass===1 && !SO.done) { const id=SO.queue[SO.i]; document.querySelector('.sob[data-b="'+soKey(SO.set,id)+'"]').click(); await w(5); $("#nx").click(); await w(5); }
+  out.push(SO.pass, SO.queue.length, SO.queue[0]===window.__soWrong, SO.i, SO.pile.length);
+  document.querySelector('.sob[data-b="'+soKey(SO.set,SO.queue[0])+'"]').click(); await w(5); $("#nx").click(); await w(20);
+  out.push(SO.done, $(".score")?.textContent, !!$("#soAgain"), $("#app").innerText.includes(DB.cards[window.__soWrong].word), JSON.stringify(Object.values(DB.cards).map(c=>[c.due,c.history.length,c.ef,c.interval]))===window.__snap0);
+  return out; })()`));
+ok("sort keys 1-4 + Enter", await ev(`(async()=>{ const w=ms=>new Promise(r=>setTimeout(r,ms)); soStart("logic"); const k=key=>document.dispatchEvent(new KeyboardEvent("keydown",{key,bubbles:true}));
+  k("5"); const none=SO.ans; k("2"); const a=SO.ans&&SO.ans.b, i0=SO.i; k("3"); const same=SO.ans.b===a; k("Enter"); await w(20);
+  return [none, a===SO_SETS.logic[1][0], same, SO.i===i0+1]; })()`));
+const mouse = (type, x, y) => send("Input.dispatchMouseEvent", { type, x, y, button: "left", buttons: type === "mouseReleased" ? 0 : 1, clickCount: 1 });
+const dr = await ev(`(()=>{ soStart("logic"); const id=SO.queue[SO.i], k=LG[id][0], r=$("#soWord").getBoundingClientRect(), b=document.querySelector('.sob[data-b="'+k+'"]').getBoundingClientRect();
+  return {from:[r.x+r.width/2, r.y+r.height/2], to:[b.x+b.width/2, b.y+b.height/2]}; })()`);
+const [fx, fy] = dr.from, [tx, ty] = dr.to;   // a real mouse drag: the word card to its right bucket
+await mouse("mouseMoved", fx, fy); await mouse("mousePressed", fx, fy);
+for (let s = 1; s <= 6; s++) await mouse("mouseMoved", fx + (tx - fx) * s / 6, fy + (ty - fy) * s / 6);
+const mid = await ev(`[!!document.querySelector(".sogh"), document.querySelectorAll(".sob.over").length]`);
+await mouse("mouseReleased", tx, ty); await sleep(200);
+ok("sort drag with mouse", [mid, await ev(`[!!$(".feedback.ok"), !document.querySelector(".sogh"), SO.ans && SO.ans.ok]`)]);
+await ev(`$("#nx").click(); soStart("logic")`); await sleep(100);
+const t0 = await ev(`(()=>{ const r=$("#soWord").getBoundingClientRect(); return [r.x+r.width/2, r.y+r.height/2]; })()`);
+await mouse("mouseMoved", t0[0], t0[1]); await mouse("mousePressed", t0[0], t0[1]); await mouse("mouseReleased", t0[0], t0[1]); await sleep(100);
+ok("sort tap picks up", await ev(`[SO.picked, !!$("#soWord.picked"), SO.ans]`));
+ok("sort tap then bucket", await ev(`(()=>{ document.querySelector(".sob").click(); return [!!SO.ans, !!$(".feedback")]; })()`));
+ok("sort phone width", await ev(`(async()=>{ soStart("order"); return document.documentElement.scrollWidth <= document.documentElement.clientWidth; })()`));
+await send("Emulation.setDeviceMetricsOverride", { width: 375, height: 800, deviceScaleFactor: 1, mobile: true }); await sleep(300);
+ok("sort 375px no horizontal scroll", await ev(`(()=>{ soStart("logic"); return [document.documentElement.scrollWidth <= document.documentElement.clientWidth, document.documentElement.scrollWidth, document.documentElement.clientWidth]; })()`));
+await send("Emulation.setDeviceMetricsOverride", { width: 1000, height: 1400, deviceScaleFactor: 1, mobile: false }); await sleep(200);
+await ev(`home()`);
+
 // language button: swaps texts in place, keeps the screen; "left" = interface texts still in the old language
 const leftover = `(()=>{ const old=new Set(Object.values(I18N).filter(v=>v[0]!==v[1]&&!/[{<]/.test(v[0])).map(v=>(LANG==="en"?v[0]:v[1]).trim())); const out=[];
   const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT); for(let n;(n=w.nextNode());){ const e=n.parentElement; if(!e||e.closest("script,style")) continue; const l=e.closest("[lang]"); if(l&&l!==document.documentElement) continue; if(e.closest("[inert]")) continue; const k=n.nodeValue.trim(); if(old.has(k)) out.push(k); } return out; })()`;
@@ -122,6 +162,7 @@ for (const [name, setup, probe] of [
   ["explain", `explain(DB.cards.imidlertid)`, `[$("#explain").open]`],
   ["tankegang", `home(); tankegang()`, `[document.querySelectorAll(".lgchip").length, !!$("#lgboard")]`],
   ["logic drill", `startLogic(); $(".lgcat").click()`, `[GS.i, document.querySelectorAll(".lgopt").length]`],
+  ["sort", `soStart("order")`, `[SO.i, SO.set, SO.queue.length, !!$("#soWord"), document.querySelectorAll(".sob").length]`],
 ]) {
   await ev(setup); await sleep(150);
   const before = await ev(probe);
