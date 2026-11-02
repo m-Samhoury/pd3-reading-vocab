@@ -418,11 +418,17 @@ def cmd_vocab(a):
         print(f"enriched {n} of {len(cards)} cards ({sum(1 for c in cards.values() if c.get('dict'))} have a definition)")
 
 
+PREPS = {"af", "til", "for", "på", "om", "mod", "imod", "med", "ved", "i", "fra", "over for"}
+
+
 def word_variants(word):
     """Look-up forms of a card word: 'at ansøge (om)' -> ansøge, 'trods / på trods af' -> trods, på trods af, …"""
     w = nfc(word).lower().strip()
     out = [w, re.sub(r"\s*\(.*?\)", "", w).strip()]
-    out += [p.strip("() ") for p in re.findall(r"\((.*?)\)", w)]
+    for p in re.findall(r"\((.*?)\)", w):
+        preps = [x.strip() for x in p.split("/")]
+        # 'en konsekvens (af)': the preposition belongs to the word and never stands alone
+        out += [out[1] + " " + x for x in preps] if all(x in PREPS for x in preps) else [p.strip("() ")]
     for part in re.split(r"\s*/\s*|\s*…\s*", out[1]):
         out.append(part.strip())
     for v in list(out):
@@ -492,7 +498,7 @@ def card_pattern(card):
     """Regex that finds a card word in running text; verbs and nouns get their common inflections."""
     w = nfc(card["word"]).lower()
     kind = "verb" if w.startswith("at ") else "noun" if w.startswith(("en ", "et ")) else \
-        "adj" if card.get("group") == "adjektiv" else "fixed"
+        "adj" if card.get("group") == "adjektiv" or (card.get("dict") or {}).get("pos", "").startswith("adjektiv") else "fixed"
     ends = {"verb": r"(?:e|er|es|ede|edes|et|te|tes|t|de|des)?", "noun": r"(?:en|et|n|t|er|erne|e|ne|s)?",
             "adj": r"(?:e|t)?", "fixed": ""}[kind]
     alts = []

@@ -59,7 +59,11 @@
           "Den smagte faktisk godt. Jeg plejer ellers ikke at kunne lide leverpostej"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=ellers"
-      }
+      },
+      "fg": "fg_12",
+      "frank": 181,
+      "freq": 0,
+      "freq_total": 1
     },
     "næppe": {
       "word": "næppe",
@@ -273,7 +277,11 @@
           "penge havde jo aldrig betydet noget videre for Sylvia"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=betyde"
-      }
+      },
+      "fg": "fg_12",
+      "frank": 177,
+      "freq": 0,
+      "freq_total": 1
     },
     "at_anbefale": {
       "word": "at anbefale",
@@ -489,7 +497,11 @@
           "\"Tilholderlåsen\" .. indstemmes i dørkanten og udelukker derved direkte angreb på mekanismen"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=udelukke"
-      }
+      },
+      "fg": "fg_03",
+      "frank": 46,
+      "freq": 2,
+      "freq_total": 2
     },
     "at_omfatte": {
       "word": "at omfatte",
@@ -624,7 +636,11 @@
           "Kirkeudvalget fører tilsyn med .. at der er rimelig overensstemmelse imellem regnskaberne og budgetterne"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=overensstemmelse"
-      }
+      },
+      "fg": "fg_09",
+      "frank": 132,
+      "freq": 1,
+      "freq_total": 1
     },
     "at_give_udtryk_for": {
       "word": "at give udtryk for",
@@ -730,7 +746,11 @@
           "Den væsentligste årsag til iltsvindet er stadig udvaskningen af kvælstof fra landbruget"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=%C3%A5rsag"
-      }
+      },
+      "fg": "fg_01",
+      "frank": 14,
+      "freq": 4,
+      "freq_total": 5
     },
     "et_vilkår": {
       "word": "et vilkår",
@@ -886,7 +906,11 @@
           "Hvor særlige forhold taler derfor, kan et medlems kontingent nedsættes"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=derfor"
-      }
+      },
+      "fg": "fg_01",
+      "frank": 5,
+      "freq": 5,
+      "freq_total": 8
     },
     "dermed": {
       "word": "dermed",
@@ -915,7 +939,11 @@
           "Hans sportslige interesse og trangen til den dermed forbundne udfoldelse af livsglæde var et fremtrædende træk i hans karakter"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=dermed"
-      }
+      },
+      "fg": "fg_01",
+      "frank": 6,
+      "freq": 5,
+      "freq_total": 7
     },
     "således": {
       "word": "således",
@@ -946,7 +974,11 @@
           "Navnlig efter den anden verdenskrig har kammerorkestrene fået en renæssance. I Musici stammer således fra 1952"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=s%C3%A5ledes"
-      }
+      },
+      "fg": "fg_02",
+      "frank": 29,
+      "freq": 2,
+      "freq_total": 3
     },
     "følgelig": {
       "word": "følgelig",
@@ -998,7 +1030,11 @@
           "Var bange for, at ingen ville tro mig, og desuden, hvad kom det dem ved"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=desuden"
-      }
+      },
+      "fg": "fg_01",
+      "frank": 2,
+      "freq": 7,
+      "freq_total": 12
     },
     "derudover": {
       "word": "derudover",
@@ -1024,7 +1060,11 @@
           "Hvis indtægten er over 300.000 kroner for ægteparret .. skal der betales 5 procent af beløbet derudover"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=derudover"
-      }
+      },
+      "fg": "fg_02",
+      "frank": 25,
+      "freq": 2,
+      "freq_total": 4
     },
     "ligeledes": {
       "word": "ligeledes",
@@ -1050,7 +1090,11 @@
           "Der skal arbejdes hårdt for at få succes. Ligeledes skal du være varsom med at satse på andres hjælp"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=ligeledes"
-      }
+      },
+      "fg": "fg_04",
+      "frank": 48,
+      "freq": 1,
+      "freq_total": 4
     },
     "blandt_andet": {
       "word": "blandt andet",
@@ -1080,7 +1124,11 @@
           "Han var den største og stærkeste blandt ridderne"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=blandt"
-      }
+      },
+      "fg": "fg_06",
+      "frank": 83,
+      "freq": 1,
+      "freq_total": 1
     },
     "fordi": {
       "word": "fordi",
@@ -1110,7 +1158,11 @@
           "Vi har valgt en dommer, fordi han skal holde rede på tallene"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=fordi"
-      }
+      },
+      "fg": "fg_11",
+      "frank": 161,
+      "freq": 0,
+      "freq_total": 2
     },
     "nemlig": {
       "word": "nemlig",
@@ -1138,7 +1190,11 @@
           "\"Sprang du på hovedet fra bådebroen?\" \"Nemlig!\" De otte-årige basunkinder glødede af stolthed"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=nemlig"
-      }
+      },
+      "fg": "fg_02",
+      "frank": 24,
+      "freq": 2,
+      "freq_total": 5
     },
     "alligevel": {
       "word": "alligevel",
@@ -1167,7 +1223,11 @@
           "\"Pas dig selv, dit pattebarn! Du forstår alligevel ikke en skid,\" snerrede Litten"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=alligevel"
-      }
+      },
+      "fg": "fg_01",
+      "frank": 1,
+      "freq": 7,
+      "freq_total": 12
     },
     "imidlertid": {
       "word": "imidlertid",
@@ -1192,7 +1252,11 @@
           "2. udgave, står der i hæftet. Første udgave blev imidlertid trykt i så forsvindende få eksemplarer at den så godt som ikke er udkommet"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=imidlertid"
-      }
+      },
+      "fg": "fg_01",
+      "frank": 3,
+      "freq": 7,
+      "freq_total": 11
     },
     "derimod": {
       "word": "derimod",
@@ -1220,7 +1284,11 @@
           "Statsamtet .. skal følge tilkendegivelsen, medmindre hensynet til, hvad der er bedst for barnet, taler derimod"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=derimod"
-      }
+      },
+      "fg": "fg_01",
+      "frank": 7,
+      "freq": 4,
+      "freq_total": 7
     },
     "selvom": {
       "word": "selvom",
@@ -1279,7 +1347,11 @@
           "Jeg foretrækker ikke film frem for teatret eller omvendt. Man skal kunne det hele"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=omvendt"
-      }
+      },
+      "fg": "fg_01",
+      "frank": 4,
+      "freq": 6,
+      "freq_total": 11
     },
     "til_gengæld": {
       "word": "til gengæld",
@@ -1310,7 +1382,11 @@
           "Indfører man .. medarbejderskab i en virksomhed, må virksomheden til gengæld forpligte sig på sin vilje til at fastholde medarbejderne"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=til%20geng%C3%A6ld"
-      }
+      },
+      "fg": "fg_01",
+      "frank": 10,
+      "freq": 4,
+      "freq_total": 7
     },
     "hvorimod": {
       "word": "hvorimod",
@@ -1360,7 +1436,11 @@
           "Gud, hvor du overrasker mig. Jeg troede, du var sådan en bornert fyr"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=overraske"
-      }
+      },
+      "fg": "fg_14",
+      "frank": 205,
+      "freq": 0,
+      "freq_total": 1
     },
     "logisk": {
       "word": "logisk",
@@ -1411,7 +1491,11 @@
           "De triste følelser .. er en rimelig og forventelig reaktion på så mange år med (for) stor arbejdsaktivitet"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=forventelig"
-      }
+      },
+      "fg": "fg_13",
+      "frank": 185,
+      "freq": 0,
+      "freq_total": 1
     },
     "nødvendigt": {
       "word": "nødvendigt",
@@ -1437,7 +1521,11 @@
           "Jeg går lige ind og pakker det nødvendigste"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=n%C3%B8dvendig"
-      }
+      },
+      "fg": "fg_02",
+      "frank": 17,
+      "freq": 3,
+      "freq_total": 5
     },
     "hensigtsmæssig": {
       "word": "hensigtsmæssig",
@@ -1652,7 +1740,11 @@
           "Hans morgenjob har medført, at han udviser stor passivitet i timerne"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=medf%C3%B8re"
-      }
+      },
+      "fg": "fg_09",
+      "frank": 122,
+      "freq": 1,
+      "freq_total": 1
     },
     "at_føre_til": {
       "word": "at føre til",
@@ -1759,7 +1851,11 @@
           "Et ja ved næste EF-folkeafstemning vil sikre Danmark 100.000 flere arbejdspladser, end landet ellers ville få"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=sikre"
-      }
+      },
+      "fg": "fg_05",
+      "frank": 63,
+      "freq": 1,
+      "freq_total": 2
     },
     "at_garantere": {
       "word": "at garantere",
@@ -1841,7 +1937,11 @@
           "Et sådant [: handicappet] barn kræver langt mere opmærksomhed og hjælp end et normalt barn"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=kr%C3%A6ve"
-      }
+      },
+      "fg": "fg_02",
+      "frank": 20,
+      "freq": 3,
+      "freq_total": 3
     },
     "at_forårsage": {
       "word": "at forårsage",
@@ -1921,7 +2021,11 @@
           "den samfundsmæssige uro skyldtes kongemagtens forsøg på at øge sin magt"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=skyldes"
-      }
+      },
+      "fg": "fg_05",
+      "frank": 64,
+      "freq": 1,
+      "freq_total": 2
     },
     "at_afvise": {
       "word": "at afvise",
@@ -1950,7 +2054,11 @@
           "Socialdemokratiet afviser SF med henblik på et arbejderflertal"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=afvise"
-      }
+      },
+      "fg": "fg_01",
+      "frank": 11,
+      "freq": 4,
+      "freq_total": 6
     },
     "at_indrømme": {
       "word": "at indrømme",
@@ -1976,7 +2084,11 @@
           "lidt har du nu altså skræmt os alligevel, Per, det må jeg indrømme"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=indr%C3%B8mme"
-      }
+      },
+      "fg": "fg_03",
+      "frank": 35,
+      "freq": 2,
+      "freq_total": 2
     },
     "et_formål_med": {
       "word": "et formål med",
@@ -2006,7 +2118,11 @@
           "Amnesty International har til formål at sikre overholdelsen af menneskerettighederne"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=form%C3%A5l"
-      }
+      },
+      "fg": "fg_01",
+      "frank": 16,
+      "freq": 3,
+      "freq_total": 5
     },
     "problemer_med": {
       "word": "problemer med",
@@ -2032,7 +2148,11 @@
           "Indenrigsministeren har .. planer om at nedsætte et etisk råd til at beskæftige sig med de problemer, den genetiske og biotekniske forsknings resultater rejser"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=problem"
-      }
+      },
+      "fg": "fg_03",
+      "frank": 43,
+      "freq": 2,
+      "freq_total": 2
     },
     "effekten_af": {
       "word": "effekten af",
@@ -2057,7 +2177,11 @@
           "Desværre har offentlige besparelser en meget ringe effekt på betalingsbalancen, fordi de ikke påvirker importen nævneværdigt"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=effekt"
-      }
+      },
+      "fg": "fg_06",
+      "frank": 85,
+      "freq": 1,
+      "freq_total": 1
     },
     "indflydelse_på": {
       "word": "indflydelse på",
@@ -2086,7 +2210,11 @@
           "Med et JA til traktaten vil Danmark få øget indflydelse"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=indflydelse"
-      }
+      },
+      "fg": "fg_08",
+      "frank": 111,
+      "freq": 1,
+      "freq_total": 1
     },
     "da": {
       "word": "da",
@@ -2419,7 +2547,11 @@
           "Hvad skal vi med alle de TV-kanaler? Det er til at blive skør af alt det TV, og så skal vi ydermere betale for det"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=ydermere"
-      }
+      },
+      "fg": "fg_04",
+      "frank": 47,
+      "freq": 2,
+      "freq_total": 2
     },
     "tilmed": {
       "word": "tilmed",
@@ -2766,7 +2898,11 @@
           "De kan jo tjene masser af penge på det jo. Ok gud dog. De kan tjene op til 160 kroner i timen"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=dog"
-      }
+      },
+      "fg": "fg_02",
+      "frank": 26,
+      "freq": 2,
+      "freq_total": 4
     },
     "mens": {
       "word": "mens",
@@ -2820,7 +2956,11 @@
           "Jeg var slet ikke deprimeret, tværtimod, man skal se positivt på alting"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=tv%C3%A6rtimod"
-      }
+      },
+      "fg": "fg_02",
+      "frank": 30,
+      "freq": 2,
+      "freq_total": 3
     },
     "i_modsætning_til": {
       "word": "i modsætning til",
@@ -2878,7 +3018,11 @@
           "Det kan sagtens lade sig gøre at lave syltetøj helt uden sukker, men med sødemiddel i stedet for"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=i%20stedet%20for"
-      }
+      },
+      "fg": "fg_04",
+      "frank": 51,
+      "freq": 1,
+      "freq_total": 3
     },
     "på_den_ene_side_på_den_anden_side": {
       "word": "på den ene side … på den anden side",
@@ -2904,7 +3048,11 @@
           "På den ene side burde vi gå i seng. På den anden side kunne vi jo også lige se lidt af den videofilm, som vi har optaget"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=p%C3%A5%20den%20ene%20side"
-      }
+      },
+      "fg": "fg_04",
+      "frank": 54,
+      "freq": 1,
+      "freq_total": 2
     },
     "skønt": {
       "word": "skønt",
@@ -3016,7 +3164,11 @@
           "På trods af at det kun var lokalbedøvelse, må jeg være døset lidt hen"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=trods"
-      }
+      },
+      "fg": "fg_11",
+      "frank": 158,
+      "freq": 0,
+      "freq_total": 3
     },
     "hvis": {
       "word": "hvis",
@@ -3049,7 +3201,11 @@
           "afkastet er ringe hvis overhovedet positivt"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=hvis"
-      }
+      },
+      "fg": "fg_13",
+      "frank": 189,
+      "freq": 0,
+      "freq_total": 1
     },
     "såfremt": {
       "word": "såfremt",
@@ -3271,7 +3427,11 @@
           "Det kan være svært at forstå, hvad der får folk til at købe en sådan vare – bortset altså fra prisen"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=bortset%20fra"
-      }
+      },
+      "fg": "fg_12",
+      "frank": 178,
+      "freq": 0,
+      "freq_total": 1
     },
     "frem_for": {
       "word": "frem for",
@@ -3380,7 +3540,11 @@
           "Lejlighederne holder en usædvanlig høj standard; eksempelvis er alle gulve belagt med brede brædder"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=eksempelvis"
-      }
+      },
+      "fg": "fg_06",
+      "frank": 86,
+      "freq": 1,
+      "freq_total": 1
     },
     "især": {
       "word": "især",
@@ -3408,7 +3572,11 @@
           "Hver især ved vi alle mere eller mindre, hvad der er sundt og usundt"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=is%C3%A6r"
-      }
+      },
+      "fg": "fg_08",
+      "frank": 113,
+      "freq": 1,
+      "freq_total": 1
     },
     "navnlig": {
       "word": "navnlig",
@@ -3493,7 +3661,11 @@
           "den var en forfalden rønne med høluge i stuehusets ene gavl. Med andre ord: hovedbygningen blev brugt som lade"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=med%20andre%20ord"
-      }
+      },
+      "fg": "fg_03",
+      "frank": 38,
+      "freq": 2,
+      "freq_total": 2
     },
     "herunder": {
       "word": "herunder",
@@ -3545,7 +3717,11 @@
           "Heldigvis har min kone et fredsommeligt gemyt"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=heldigvis"
-      }
+      },
+      "fg": "fg_03",
+      "frank": 33,
+      "freq": 2,
+      "freq_total": 2
     },
     "desværre": {
       "word": "desværre",
@@ -3674,7 +3850,11 @@
           "fugtig luft afkøles, når den stiger til vejrs"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=n%C3%A5r"
-      }
+      },
+      "fg": "fg_14",
+      "frank": 200,
+      "freq": 0,
+      "freq_total": 1
     },
     "inden": {
       "word": "inden",
@@ -3811,7 +3991,11 @@
           "I 1973 udkom en ucensureret udgave i Vesten, og først derefter blev romanen trykt i sin helhed i Sovjet"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=derefter"
-      }
+      },
+      "fg": "fg_12",
+      "frank": 179,
+      "freq": 0,
+      "freq_total": 1
     },
     "herefter": {
       "word": "herefter",
@@ -3843,7 +4027,11 @@
           "Den europæiske Patentkonvention .. indeholder ganske samme bestemmelser, som de nationale love – de er kalkeret herefter"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=herefter"
-      }
+      },
+      "fg": "fg_08",
+      "frank": 107,
+      "freq": 1,
+      "freq_total": 1
     },
     "til_sidst": {
       "word": "til sidst",
@@ -3902,7 +4090,11 @@
           "Har De specielle ønsker om andre teer end de i brochuren angivne, ring endelig til os!!"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=endelig"
-      }
+      },
+      "fg": "fg_06",
+      "frank": 88,
+      "freq": 1,
+      "freq_total": 1
     },
     "alt_i_alt": {
       "word": "alt i alt",
@@ -4056,7 +4248,11 @@
           "man sad bare og bekræftede hinandens holdninger hele tiden"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=bekr%C3%A6fte"
-      }
+      },
+      "fg": "fg_06",
+      "frank": 79,
+      "freq": 1,
+      "freq_total": 1
     },
     "at_benægte": {
       "word": "at benægte",
@@ -4109,7 +4305,11 @@
           "Opfattelsen af, at staten er nødsaget til at træde til for at sikre kvalitetskulturen, modsiges af virkelighedens verden"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=modsige"
-      }
+      },
+      "fg": "fg_09",
+      "frank": 125,
+      "freq": 1,
+      "freq_total": 1
     },
     "at_fortryde": {
       "word": "at fortryde",
@@ -4135,7 +4335,11 @@
           "Da han stod foran hendes gadedør, fortrød han. Hun havde jo sagt, at hun havde besøg"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=fortryde"
-      }
+      },
+      "fg": "fg_07",
+      "frank": 103,
+      "freq": 1,
+      "freq_total": 1
     },
     "at_beklage": {
       "word": "at beklage",
@@ -4165,7 +4369,11 @@
           "Dommeren beklagede Julie Harper-Taylor, der for altid vil være mærket af dramaet"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=beklage"
-      }
+      },
+      "fg": "fg_06",
+      "frank": 78,
+      "freq": 1,
+      "freq_total": 1
     },
     "at_opleve": {
       "word": "at opleve",
@@ -4191,7 +4399,11 @@
           "Jeg har selv oplevet at blive overfaldet af to unge mænd i et S-tog"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=opleve"
-      }
+      },
+      "fg": "fg_09",
+      "frank": 131,
+      "freq": 1,
+      "freq_total": 1
     },
     "at_reducere": {
       "word": "at reducere",
@@ -4222,7 +4434,11 @@
           "Saucen sigtes og reduceres til 2,5 dl"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=reducere"
-      }
+      },
+      "fg": "fg_14",
+      "frank": 207,
+      "freq": 0,
+      "freq_total": 1
     },
     "at_muliggøre": {
       "word": "at muliggøre",
@@ -4274,7 +4490,11 @@
           "Folketinget har vedtaget en barselorlovsreform, så barselorlovsperioden forlænges og udvides til også at omfatte fædrene"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=udvide"
-      }
+      },
+      "fg": "fg_05",
+      "frank": 66,
+      "freq": 1,
+      "freq_total": 2
     },
     "at_forlænge": {
       "word": "at forlænge",
@@ -4304,7 +4524,11 @@
           "1/2 = 2/4 . Vi har her forlænget 1/2 med 2 ved at gange både tæller og nævner med 2"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=forl%C3%A6nge"
-      }
+      },
+      "fg": "fg_07",
+      "frank": 97,
+      "freq": 1,
+      "freq_total": 1
     },
     "at_forenkle": {
       "word": "at forenkle",
@@ -4330,7 +4554,11 @@
           "Når vi beskæftiger os med fremmede kulturer, har vi en tendens til at forenkle dem"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=forenkle"
-      }
+      },
+      "fg": "fg_07",
+      "frank": 93,
+      "freq": 1,
+      "freq_total": 1
     },
     "at_investere_i": {
       "word": "at investere i",
@@ -4356,7 +4584,11 @@
           "Han er en fedtet tv-prædikant, som underviser mænd i kunsten at score damer uden at investere penge eller følelser"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=investere"
-      }
+      },
+      "fg": "fg_08",
+      "frank": 112,
+      "freq": 1,
+      "freq_total": 1
     },
     "at_offentliggøre": {
       "word": "at offentliggøre",
@@ -4410,7 +4642,11 @@
           "hun er nu ved at afsøge mulighederne for at slå sig ned i Danmark som sundhedscoach"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=mulighed"
-      }
+      },
+      "fg": "fg_03",
+      "frank": 40,
+      "freq": 2,
+      "freq_total": 2
     },
     "en_udfordring": {
       "word": "en udfordring",
@@ -4439,7 +4675,11 @@
           "den finske VM-vinder kan se frem til en massiv udfordring fra de øvrige fabriksteam og deres kørere"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=udfordring"
-      }
+      },
+      "fg": "fg_02",
+      "frank": 22,
+      "freq": 3,
+      "freq_total": 3
     },
     "et_ansvar": {
       "word": "et ansvar",
@@ -4466,7 +4706,11 @@
           "Jeg ved godt, at det var dumt af mig at lade mig udskrive på eget ansvar fra hospitalet i mandags"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=ansvar"
-      }
+      },
+      "fg": "fg_05",
+      "frank": 75,
+      "freq": 1,
+      "freq_total": 1
     },
     "et_behov": {
       "word": "et behov",
@@ -4492,7 +4736,11 @@
           "Hver femte af de ældre har behov for madudbringning, hjemmehjælp eller lignende"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=behov"
-      }
+      },
+      "fg": "fg_06",
+      "frank": 77,
+      "freq": 1,
+      "freq_total": 1
     },
     "en_modstand": {
       "word": "en modstand",
@@ -4525,7 +4773,11 @@
           "I alle rene metaller – også kobber, som jo bruges til ledninger – vokser modstanden, når temperaturen stiger"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=modstand"
-      }
+      },
+      "fg": "fg_03",
+      "frank": 39,
+      "freq": 2,
+      "freq_total": 2
     },
     "en_opbakning": {
       "word": "en opbakning",
@@ -4550,7 +4802,11 @@
           "der er stor lokal opbakning bag deres spændende projekter"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=opbakning"
-      }
+      },
+      "fg": "fg_09",
+      "frank": 129,
+      "freq": 1,
+      "freq_total": 1
     },
     "en_forudsætning": {
       "word": "en forudsætning",
@@ -4579,7 +4835,11 @@
           "Med en række forudsætninger om de forskellige formuegoders gennemsnitlige levetid er der foretaget afskrivninger"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=foruds%C3%A6tning"
-      }
+      },
+      "fg": "fg_02",
+      "frank": 23,
+      "freq": 2,
+      "freq_total": 5
     },
     "en_påstand": {
       "word": "en påstand",
@@ -4606,7 +4866,11 @@
           "forsvareren .. nedlagde påstand om samfundstjeneste eller lovens mildeste straf"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=p%C3%A5stand"
-      }
+      },
+      "fg": "fg_09",
+      "frank": 134,
+      "freq": 1,
+      "freq_total": 1
     },
     "en_tendens": {
       "word": "en tendens",
@@ -4637,7 +4901,11 @@
           "Hvad man nok kan savne i Irving Jensens redigering er det israelske synspunkt. Bogen hælder i indhold og tendens til den palæstinensiske side"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=tendens"
-      }
+      },
+      "fg": "fg_10",
+      "frank": 144,
+      "freq": 1,
+      "freq_total": 1
     },
     "en_omkostning": {
       "word": "en omkostning",
@@ -4663,7 +4931,11 @@
           "At vi ikke bruger gift har den omkostning, at vi er mere plaget af skadedyr end traditionelle møllerier"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=omkostning"
-      }
+      },
+      "fg": "fg_03",
+      "frank": 41,
+      "freq": 2,
+      "freq_total": 2
     },
     "en_undtagelse": {
       "word": "en undtagelse",
@@ -4691,7 +4963,11 @@
           "De britiske konservatives årsmøder er altid nøje iscenesat .. Partiledelsen gjorde ingen undtagelse ved fru Thatchers en-dags besøg i Blackpool"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=undtagelse"
-      }
+      },
+      "fg": "fg_10",
+      "frank": 148,
+      "freq": 1,
+      "freq_total": 1
     },
     "en_målsætning": {
       "word": "en målsætning",
@@ -4716,7 +4992,11 @@
           "Regeringens klare målsætning er, at alle unge skal kunne tilbydes enten en uddannelse eller en arbejdsplads i løbet af i år og næste år"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=m%C3%A5ls%C3%A6tning"
-      }
+      },
+      "fg": "fg_13",
+      "frank": 196,
+      "freq": 0,
+      "freq_total": 1
     },
     "en_forklaring": {
       "word": "en forklaring",
@@ -4742,7 +5022,11 @@
           "Vi får en forklaring om, at pengene på grund af forskellige forhold først vil komme om en 14 dages tid"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=forklaring"
-      }
+      },
+      "fg": "fg_01",
+      "frank": 8,
+      "freq": 4,
+      "freq_total": 7
     },
     "typisk": {
       "word": "typisk",
@@ -4768,7 +5052,11 @@
           "En typisk ceremoni foregår på den måde, at Sai Baba vandrer rundt blandt tusindvis af sine tilhængere, som sidder på jorden"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=typisk"
-      }
+      },
+      "fg": "fg_03",
+      "frank": 45,
+      "freq": 2,
+      "freq_total": 2
     },
     "karakteristisk": {
       "word": "karakteristisk",
@@ -4794,7 +5082,11 @@
           "hans mest karakteristiske egenskab er hans enorme søvnbehov"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=karakteristisk"
-      }
+      },
+      "fg": "fg_08",
+      "frank": 114,
+      "freq": 1,
+      "freq_total": 1
     },
     "sjældent": {
       "word": "sjældent",
@@ -4821,7 +5113,4824 @@
           "Vi støder sjældnere og sjældnere på folk, der kører promille- og spirituskørsel op til jul"
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=sj%C3%A6lden"
-      }
+      },
+      "fg": "fg_01",
+      "frank": 12,
+      "freq": 4,
+      "freq_total": 6
+    },
+    "en_konsekvens_af": {
+      "word": "en konsekvens (af)",
+      "meaning": "a consequence (of)",
+      "group": "fg_01",
+      "example": "Konsekvensen af de høje priser er, at færre rejser.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "konsekvens",
+        "senses": [
+          "logisk eller uundgåelig følge af en bestemt handling eller begivenhed",
+          "det at følge en bestemt fremgangsmåde eller bestemte principper hver gang og uden undtagelse"
+        ],
+        "cite": [
+          "Fassbinder skildrer terrorismen som en konsekvens af samfundsmagtens umenneskelighed i stedet for som et opgør med den",
+          "Bliver du indlagt på sygehus, får det normalt ingen konsekvenser for din folkepension",
+          "i Fulton-pædagogikken er der konsekvens og strenghed forstået på den måde, at man ikke tolererer misbrug"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=konsekvens"
+      },
+      "fg": "fg_01",
+      "frank": 9,
+      "freq": 4,
+      "freq_total": 7
+    },
+    "som_nævnt": {
+      "word": "som nævnt",
+      "meaning": "as mentioned",
+      "group": "fg_01",
+      "example": "Som nævnt er der mange fordele ved at bo på landet.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "fg": "fg_01",
+      "frank": 13,
+      "freq": 4,
+      "freq_total": 6
+    },
+    "en_grund_til": {
+      "word": "en grund (til)",
+      "meaning": "a reason (for)",
+      "group": "fg_01",
+      "example": "Grunden til, at jeg flytter, er mit nye job.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "grund",
+        "senses": [
+          "grundlag som forårsager, motiverer eller forklarer et forhold, en opfattelse, en handling el.lign."
+        ],
+        "cite": [
+          "Hvad er grunden til at du har valgt tysk som fag?",
+          "Jeg holder på at man altid skal sige sandheden, for det første af moralske grunde, for det andet af praktiske grunde"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=grund"
+      },
+      "fg": "fg_01",
+      "frank": 15,
+      "freq": 4,
+      "freq_total": 4
+    },
+    "en_fordel_ved": {
+      "word": "en fordel (ved)",
+      "meaning": "an advantage (of)",
+      "group": "fg_02",
+      "example": "En stor fordel ved at cykle er, at det er gratis.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "fordel",
+        "senses": [
+          "omstændighed eller egenskab som bidrager positivt i en samlet vurdering",
+          "til gavn eller støtte for",
+          "idet man i stedet foretrækker"
+        ],
+        "cite": [
+          "Der er den fordel ved at arbejde derhjemme, at man så selv kan bestemme, hvornår man vil arbejde",
+          "Bikuben Plus Klub giver dig fordele, du ikke kan få i noget andet dansk pengeinstitut",
+          "Han skulle arrangere en koncert i Århus til fordel for Kræftens Bekæmpelse",
+          "stadig flere konservative vælgere forlader partiet til fordel for andre partier"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=fordel"
+      },
+      "fg": "fg_02",
+      "frank": 18,
+      "freq": 3,
+      "freq_total": 3
+    },
+    "en_holdning_til": {
+      "word": "en holdning (til)",
+      "meaning": "an attitude / opinion (on)",
+      "group": "fg_02",
+      "example": "Hvad er din holdning til hjemmearbejde?",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "holdning",
+        "senses": [
+          "personlig opfattelse eller vurdering af en bestemt sag eller sammenhæng",
+          "måde som en person holder hovedet og kroppen på, fx under gang"
+        ],
+        "cite": [
+          "Det var sjældent, hun bebrejdede mig direkte, men hendes holdning lå i luften",
+          "alle klasser har altid en hård kerne på 5-6 elever, der præger de andre med deres holdninger",
+          "Et godt udseende, en rank holdning og en fremragende, tydelig diktion. Det kan være vigtige ingredienser i en skuespillerkarriere",
+          "Det er vores erfaring, at der kommer flere børn med dårlig holdning og nakkeproblemer på grund af for meget brug af pc'er og tablets"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=holdning"
+      },
+      "fg": "fg_02",
+      "frank": 19,
+      "freq": 3,
+      "freq_total": 3
+    },
+    "modsat": {
+      "word": "modsat",
+      "meaning": "opposite; in contrast",
+      "group": "fg_02",
+      "example": "Modsat sin bror elsker hun at læse.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "",
+        "head": "modsat",
+        "senses": [
+          "lige omvendt af eller helt forskellig fra noget andet",
+          "som befinder sig over for eller på den anden side af noget; som ligger i den anden ende af den samme (tænkte) linje"
+        ],
+        "cite": [
+          "det ville være en markant vending, hvis Folketinget traf den modsatte beslutning",
+          "Forstykke: Strikkes som ryggen men modsat",
+          "Ræk armen op over hovedet og rør ved modsatte skulderblad uden at spænde og løfte skulderen",
+          "[brændenælden] har firkantede stængler og korsvis modsatte, savtakkede blade"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=modsat"
+      },
+      "fg": "fg_02",
+      "frank": 21,
+      "freq": 3,
+      "freq_total": 3
+    },
+    "en_betingelse_for": {
+      "word": "en betingelse (for)",
+      "meaning": "a condition (for)",
+      "group": "fg_02",
+      "example": "Et godt sprog er en betingelse for at få et job.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "betingelse",
+        "senses": [
+          "krav der stilles af en person eller instans, og som forlanges opfyldt før noget kan ske",
+          "nødvendig forudsætning for at noget kan ske; forhold eller omstændighed som noget foregår under"
+        ],
+        "cite": [
+          "betingelserne for at gå på efterløn fra 60 år strammes",
+          "[de] indvilligede i mødet – hvis det kunne afvikles på deres betingelser: Kun otte skulle inviteres",
+          "Den første betingelse for at få succes: LET RØVEN",
+          "Alle herhjemme har .. gennem stigende lønninger og en socialt forhøjet sikkerhed fået bedre betingelser for et frit og rigt liv"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=betingelse"
+      },
+      "fg": "fg_02",
+      "frank": 27,
+      "freq": 2,
+      "freq_total": 3
+    },
+    "hermed": {
+      "word": "hermed",
+      "meaning": "hereby; with this",
+      "group": "fg_02",
+      "example": "Hermed er det besluttet, at skolen lukker.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "",
+        "head": "hermed",
+        "senses": [
+          "med det netop nævnte",
+          "som følge af det netop nævnte"
+        ],
+        "cite": [
+          "Såfremt vedtægterne giver de øvrige andelshavere forkøbsret til andelen, er køberen ved modtagelsen af vedtægterne gjort bekendt hermed",
+          "Smelt marmeladen, si den og pensl [kagen] hermed",
+          "Plejehotellets største kunde, Københavns Kommune, har meddelt, at den ikke vil bruge hotellet i 1993, og hermed falder grundlaget for det væk"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=hermed"
+      },
+      "fg": "fg_02",
+      "frank": 28,
+      "freq": 2,
+      "freq_total": 3
+    },
+    "et_argument_for_imod": {
+      "word": "et argument (for / imod)",
+      "meaning": "an argument (for / against)",
+      "group": "fg_02",
+      "example": "Det bedste argument for at cykle er, at det er sundt.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, intetkøn",
+        "head": "argument",
+        "senses": [
+          "ræsonnerende begrundelse der fremføres for eller imod en påstand, beslutning, opfattelse el.lign."
+        ],
+        "cite": [
+          "Det er svært .. at tænke sig et etisk holdbart argument for at klone mennesket",
+          "Et væsentligt argument mod tv-reklamer har .. været at det vil trække tæppet væk under dagspressen"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=argument"
+      },
+      "fg": "fg_02",
+      "frank": 31,
+      "freq": 2,
+      "freq_total": 2
+    },
+    "at_behandle": {
+      "word": "at behandle",
+      "meaning": "to treat; to deal with",
+      "group": "fg_03",
+      "example": "Han blev behandlet for stress i tre måneder.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "behandle",
+        "senses": [
+          "handle eller opføre sig på en bestemt måde over for et andet menneske eller et dyr",
+          "gøre til genstand for en særlig aktivitet eller virksomhed",
+          "udføre administrative opgaver, foretage undersøgelser, gøre sig overvejelser m.m. i forbindelse med en sag og herefter træffe afgørelse i sagen",
+          "beskæftige sig med; have som emne"
+        ],
+        "cite": [
+          "Alle har fortjent at blive behandlet med respekt. Alle har fortjent en hjælpende hånd",
+          "Balletten har det med at blive stedmoderligt behandlet i de tyske operahuse",
+          "Han har flere fabrikker, hvor affaldet behandles",
+          "Omkring 70 pct. af karrosseriet er efter fabrikkens oplysninger behandlet galvanisk",
+          "I fjor behandlede ombudsmandsinstitutionen 1476 henvendelser",
+          "videnskabsfilosofien [må] også behandle ontologiske spørgsmål, altså spørgsmål om hvad der er virkeligt, hvad der er til"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=behandle"
+      },
+      "fg": "fg_03",
+      "frank": 32,
+      "freq": 2,
+      "freq_total": 2
+    },
+    "herudover": {
+      "word": "herudover",
+      "meaning": "in addition to this",
+      "group": "fg_03",
+      "example": "Herudover tilbyder firmaet gratis frokost.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "",
+        "head": "herudover",
+        "senses": [
+          "ud over det netop nævnte"
+        ],
+        "cite": [
+          "Sony's trommemaskine er udstyret med 15 forskellige rytmer .. Herudover kan du vælge mellem 15 forskellige enkelte lydeffekter",
+          "der udbetales fuldt børnetilskud, hvis forældrenes socialindkomst ikke overstiger 173.000 om året. For indtægter herudover nedtrappes børnetilskuddet"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=herudover"
+      },
+      "fg": "fg_03",
+      "frank": 34,
+      "freq": 2,
+      "freq_total": 2
+    },
+    "en_interesse_for": {
+      "word": "en interesse (for)",
+      "meaning": "an interest (in)",
+      "group": "fg_03",
+      "example": "Der er stor interesse for at bo i byen.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "interesse",
+        "senses": [
+          "en persons eller gruppes spontane og lystbetonede opmærksomhed over for og optagethed af en anden person eller gruppe, et emne, en begivenhed el.lign.",
+          "aktivitet som man beskæftiger sig indgående med, oftest i fritiden",
+          "(hensyn til) forhold som er til fordel eller gavn for eller regnes for afgørende vigtigt af en person, en gruppe, en organisation, et land el.lign.",
+          "evne til at tiltrække sig nogens opmærksomhed"
+        ],
+        "cite": [
+          "det er jo herligt at vi kan forenes i en fælles interesse for splatgenren",
+          "Jeppe havde med stigende interesse lyttet til den lange udredning",
+          "Hans foretrukne interesser var akvariefisk, modelfly og voldsfilm!",
+          "Venstre har ikke nogen interesse i en fremgang på de konservatives bekostning",
+          "For den internationale oliebranche var der store økonomiske interesser på spil",
+          "Man kunne selvfølgelig lukke op for tv eller spille en video. Men det første turde han ikke .. Og det sidste havde mistet interessen"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=interesse"
+      },
+      "fg": "fg_03",
+      "frank": 36,
+      "freq": 2,
+      "freq_total": 2
+    },
+    "et_mål": {
+      "word": "et mål",
+      "meaning": "a goal, aim",
+      "group": "fg_03",
+      "example": "Målet er at få flere unge til at læse.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, intetkøn",
+        "head": "mål",
+        "senses": [
+          "noget man arbejder på at opnå; noget man stræber mod",
+          "sted som man bevidst bevæger sig mod"
+        ],
+        "cite": [
+          "mine forældre har lært mig, hvor vigtigt det er at sætte sig mål i livet",
+          "Penge er ikke et mål i sig selv. Men de er et middel",
+          "en rejse til udlandet rummer stadig en vis risiko. En risiko, der afhænger af såvel rejsens mål, som af den måde, man lever og opfører sig på i det fremmede",
+          "Peter har brugt drivhuset som mål for sin nye slangebøsse"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=m%C3%A5l"
+      },
+      "fg": "fg_03",
+      "frank": 37,
+      "freq": 2,
+      "freq_total": 2
+    },
+    "en_plan_for": {
+      "word": "en plan (for)",
+      "meaning": "a plan (for)",
+      "group": "fg_03",
+      "example": "Kommunen har planer om at bygge en ny skole.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "plan",
+        "senses": [
+          "(nedskreven) oversigt med udførlige forslag til hvordan noget kan gennemføres eller opnås",
+          "oversigt der viser hvordan forskellige steder, bygninger, bygningsdele el.lign. er placeret i forhold til hinanden",
+          "systematisk oversigt, fx et skema, et diagram eller en tabel, der indeholder en række tal, tidspunkter eller andre oplysninger angående hvordan noget skal afvikles, er sammensat el.lign.",
+          "en genstands eller en flades placering i forhold til en anden flade"
+        ],
+        "cite": [
+          "Ifølge planen skal stillingen som teknisk direktør nedlægges",
+          "Røde Kors opererer med en plan om at oprette to lejre i løbet af 14 dage",
+          "Den ældste plan over gården fra 1765 viser et virvar af større og mindre bygninger",
+          "en hjemmesygeplejerske og en hjemmehjælper .. kører ud efter en fast plan, til de klienter, der har brug for hjælp",
+          "Ligger fugen helt i plan med stenene, er muren meget modstandsdygtig over for fx fugt",
+          "da Jacob Blom købte lejligheden, var kun et enkelt plan udnyttet til beboelse. Det gamle tørreloft lå dengang ubenyttet hen"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=plan"
+      },
+      "fg": "fg_03",
+      "frank": 42,
+      "freq": 2,
+      "freq_total": 2
+    },
+    "at_have_tid_til": {
+      "word": "at have tid til",
+      "meaning": "to have time for",
+      "group": "fg_03",
+      "example": "Mange forældre har ikke tid til at lave mad.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "fg": "fg_03",
+      "frank": 44,
+      "freq": 2,
+      "freq_total": 2
+    },
+    "vanskelig": {
+      "word": "vanskelig",
+      "meaning": "difficult",
+      "group": "fg_04",
+      "example": "Det er vanskeligt at finde en bolig i København.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "",
+        "head": "vanskelig",
+        "senses": [
+          "som kræver stor anstrengelse eller dygtighed at udføre, forstå, beslutte el.lign.",
+          "ikke let at omgås eller gøre tilpas"
+        ],
+        "cite": [
+          "med sine stærke forsvarsværker var borgen et vanskeligt angrebsmål",
+          "Det er ofte vanskeligt at råde i skilsmissesituationer",
+          "da jeg var en ti-tolv år, var jeg – som mange andre unger – meget vanskelig med tøj"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=vanskelig"
+      },
+      "fg": "fg_04",
+      "frank": 49,
+      "freq": 1,
+      "freq_total": 4
+    },
+    "en_fleksibilitet": {
+      "word": "en fleksibilitet",
+      "meaning": "flexibility",
+      "group": "fg_04",
+      "example": "Hjemmearbejde giver mere fleksibilitet i hverdagen.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "fleksibilitet",
+        "senses": [
+          "det let at kunne bøjes eller bevæge sig"
+        ],
+        "cite": [
+          "Jo mere fleksibilitet, du opøver i hofterne, jo mere vil du gradvis kunne dreje knæet ud til siden",
+          "Jytte Hilden siger, at hun synes større fleksibilitet i efterlønsordningen er en god ide"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=fleksibilitet"
+      },
+      "fg": "fg_04",
+      "frank": 50,
+      "freq": 1,
+      "freq_total": 3
+    },
+    "at_overholde": {
+      "word": "at overholde",
+      "meaning": "to comply with, keep (rules, a deadline)",
+      "group": "fg_04",
+      "example": "Alle skal overholde reglerne i trafikken.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "overholde",
+        "senses": [
+          "rette sig efter noget eller følge noget, fx et påbud, en skik eller en opskrift"
+        ],
+        "cite": [
+          "Dæk skal overholde internationale krav til sikkerhed",
+          "Mit liv er virkelig blevet godt, selv om jeg ikke overholder kostplanen 100 %"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=overholde"
+      },
+      "fg": "fg_04",
+      "frank": 52,
+      "freq": 1,
+      "freq_total": 3
+    },
+    "afhængig_af": {
+      "word": "afhængig (af)",
+      "meaning": "dependent (on)",
+      "group": "fg_04",
+      "example": "Mange unge er afhængige af deres mobil.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "",
+        "head": "afhængig",
+        "senses": [
+          "som har meget brug for eller ikke kan undvære noget eller nogen",
+          "bestemt eller betinget af noget"
+        ],
+        "cite": [
+          "Han kan intet selv. Han er totalt afhængig af andre mennesker",
+          "regeringen har ikke gjort sig afhængig af Fremskridtspartiets stemmer",
+          "Undervisningen afsluttes med en mindre eksamen og beståelse gøres afhængig af en samlet bedømmelse"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=afh%C3%A6ngig"
+      },
+      "fg": "fg_04",
+      "frank": 53,
+      "freq": 1,
+      "freq_total": 2
+    },
+    "en_følge_af": {
+      "word": "en følge (af)",
+      "meaning": "a consequence (of)",
+      "group": "fg_04",
+      "example": "En følge af krisen er, at mange mister deres job.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "følge",
+        "senses": [
+          "logisk eller naturlig virkning eller resultat af noget forudgående",
+          "orden; rækkefølge",
+          "gruppe personer der følger bag efter noget i samlet flok",
+          "det at følges eller blive fulgt"
+        ],
+        "cite": [
+          "Sidste år døde 188 narkomaner som følge af overdosis",
+          "Barsebäck skal lukkes hurtigst muligt, da et uheld kan få katastrofale følger for Danmark",
+          "I ubrudt følge siden 1779 har Helms-familien været apotekere på Helms Apotek i Horsens",
+          "hun gik efter den blomsterdækkede kiste som en af de bageste i følget",
+          "Dronningen og hendes følge besøgte den lille kirke til en kort gudstjeneste",
+          "Børn har gratis adgang i følge med voksne"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=f%C3%B8lge"
+      },
+      "fg": "fg_04",
+      "frank": 55,
+      "freq": 1,
+      "freq_total": 2
+    },
+    "en_husleje": {
+      "word": "en husleje",
+      "meaning": "(the) rent",
+      "group": "fg_04",
+      "example": "Huslejen er steget meget i de store byer.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "husleje",
+        "senses": [
+          "beløb som man betaler med regelmæssige mellemrum for at leje et hus, en lejlighed eller et værelse af nogen"
+        ],
+        "cite": [
+          "Hvis hun ikke har betalt huslejen i morgen aften, bliver hun smidt ud",
+          "Regeringspartierne har brudt deres valgløfter om stop for stigende huslejer for såvel lejere som ejere"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=husleje"
+      },
+      "fg": "fg_04",
+      "frank": 56,
+      "freq": 1,
+      "freq_total": 2
+    },
+    "en_konklusion": {
+      "word": "en konklusion",
+      "meaning": "a conclusion",
+      "group": "fg_04",
+      "example": "Konklusionen er, at flere bør cykle til arbejde.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "konklusion",
+        "senses": [
+          "opfattelse, konstatering el.lign. der følger af de foreliggende omstændigheder eller af en række overvejelser"
+        ],
+        "cite": [
+          "Jeg har tænkt meget over det og er kommet til den konklusion, at jeg ikke vil forlade min kæreste",
+          "Lav gerne delkonklusioner efter hvert kapitel. Disse kan så opsummeres og samles i opgavens endelige konklusion"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=konklusion"
+      },
+      "fg": "fg_04",
+      "frank": 57,
+      "freq": 1,
+      "freq_total": 2
+    },
+    "en_løsning_på": {
+      "word": "en løsning (på)",
+      "meaning": "a solution (to)",
+      "group": "fg_04",
+      "example": "Der findes ingen enkel løsning på problemet.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "løsning",
+        "senses": [
+          "handling, fænomen eller produkt der løser fx et problem, en konflikt, en opgave eller en gåde",
+          "det at løse noget (op)",
+          "det at købe eller skaffe sig noget, især en billet"
+        ],
+        "cite": [
+          "En opdeling af rummet ved hjælp af stigereolen vil være en god løsning",
+          "vi skulle helst ikke gå ud i verden og sælge halve løsninger"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=l%C3%B8sning"
+      },
+      "fg": "fg_04",
+      "frank": 58,
+      "freq": 1,
+      "freq_total": 2
+    },
+    "muligvis": {
+      "word": "muligvis",
+      "meaning": "possibly",
+      "group": "fg_04",
+      "example": "Prisen stiger muligvis igen næste år.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "",
+        "head": "muligvis",
+        "senses": [
+          "med en vis, oftest lille eller begrænset sandsynlighed"
+        ],
+        "cite": [
+          "De høje danske afgifter ved import af brugte biler er muligvis i strid med Rom-traktaten",
+          "De første franske hofaktører i Nørregade og på Charlottenborg var muligvis en andenklasses provinstrup, men det var fransk skuespilkunst på nært hold"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=muligvis"
+      },
+      "fg": "fg_04",
+      "frank": 59,
+      "freq": 1,
+      "freq_total": 2
+    },
+    "et_resultat_af": {
+      "word": "et resultat (af)",
+      "meaning": "a result (of)",
+      "group": "fg_04",
+      "example": "Resultatet af undersøgelsen var overraskende.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, intetkøn",
+        "head": "resultat",
+        "senses": [
+          "udfald, følge eller virkning af en proces, et forløb, en indsats el.lign."
+        ],
+        "cite": [
+          "Resultatet af forhandlingerne vil formentlig være kendt om 10-14 dage",
+          "Når man laver eksperimentel forskning, er det meget vigtigt, at resultaterne kan rekonstrueres"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=resultat"
+      },
+      "fg": "fg_04",
+      "frank": 60,
+      "freq": 1,
+      "freq_total": 2
+    },
+    "en_rettighed": {
+      "word": "en rettighed",
+      "meaning": "a right",
+      "group": "fg_04",
+      "example": "Alle ansatte har de samme rettigheder.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "rettighed",
+        "senses": [
+          "ret eller beføjelse som man har eller kan gøre krav på med henvisning til fx gældende love, etiske regler eller tradition"
+        ],
+        "cite": [
+          "Børns rettigheder er nogle af dem, der er lettest at blæse på i en verden, hvor det er de stærke, der bestemmer",
+          "Warner Brothers .. sidder på rettighederne til de originale indspilninger"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=rettighed"
+      },
+      "fg": "fg_04",
+      "frank": 61,
+      "freq": 1,
+      "freq_total": 2
+    },
+    "samtidig": {
+      "word": "samtidig",
+      "meaning": "at the same time",
+      "group": "fg_05",
+      "example": "Hun arbejder og studerer samtidig.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "",
+        "head": "samtidig",
+        "senses": [
+          "som foregår eller findes på (omtrent) samme tid som noget andet",
+          "som lever på samme tid som en anden",
+          "i tilknytning til eller som supplement til noget andet"
+        ],
+        "cite": [
+          "Det store arrangement .. kulminerer i disse timer med samtidige koncerter i Moskva og København",
+          "Prøv aldrig at bremse og dreje samtidigt",
+          "Det er en ære for mig at have været Olof Palmes samtidige, sagde Kissinger",
+          "Forhøjet blodtryk er en folkesygdom, og samtidig er det en ikke ufarlig lidelse",
+          "Kriminalkommissæren ankommer samtidig med vognen fra mordkommissionen"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=samtidig"
+      },
+      "fg": "fg_05",
+      "frank": 62,
+      "freq": 1,
+      "freq_total": 2
+    },
+    "tilfældigvis": {
+      "word": "tilfældigvis",
+      "meaning": "by chance",
+      "group": "fg_05",
+      "example": "Jeg mødte tilfældigvis min gamle lærer i bussen.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "",
+        "head": "tilfældigvis",
+        "senses": [
+          "på en måde der er uventet, uforudset, vilkårlig eller ikke planlagt"
+        ],
+        "cite": [
+          "Jeg kom tilfældigvis til at stå ved siden af Anette",
+          "En uges tid senere stødte jeg tilfældigvis på min moster"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=tilf%C3%A6ldigvis"
+      },
+      "fg": "fg_05",
+      "frank": 65,
+      "freq": 1,
+      "freq_total": 2
+    },
+    "at_undersøge": {
+      "word": "at undersøge",
+      "meaning": "to examine, investigate",
+      "group": "fg_05",
+      "example": "Forskerne har undersøgt, hvor meget børn sover.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "undersøge",
+        "senses": [
+          "underkaste noget, fx en genstand, et materiale, et område eller en organisme, en nøje og detaljeret gennemgang, med henblik på at finde frem til og opnå sikker viden om dets beskaffenhed, sammensætning, struktur osv.",
+          "søge at udrede eller klarlægge et forhold, en sammenhæng eller en problematik, oftest i en organiseret sammenhæng og på grundlag af videnskabelige metoder"
+        ],
+        "cite": [
+          "Munden er det vigtigste føleorgan, som de [: spædbørn] udnytter, når genstande skal undersøges",
+          "med en kendermine vurderer og undersøger han det blå silkestof",
+          "Embedslægerne i Vejle amt vil undersøge hvorfor der er dobbelt så mange klager over vagtlægerne nu som under den forrige ordning",
+          "[han rejser] til Berlin for at undersøge, om de gamle oplevelser og erfaringer lader sig gentage"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=unders%C3%B8ge"
+      },
+      "fg": "fg_05",
+      "frank": 67,
+      "freq": 1,
+      "freq_total": 2
+    },
+    "at_åbne_for": {
+      "word": "at åbne (for)",
+      "meaning": "to open (up for)",
+      "group": "fg_05",
+      "example": "Den nye lov åbner for flere muligheder.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "åbne",
+        "senses": [
+          "bevæge noget fra en stilling hvor det danner et lukke, til en stilling der muliggør passage",
+          "give kunder eller besøgende adgang til en ny forretning eller et andet foretagende som man er indehaver af",
+          "give adgang for kunder eller besøgende, som regel på et fast tidspunkt",
+          "igangsætte tilførslen til eller udslippet fra et apparat ved at dreje eller trykke på en mekanisme"
+        ],
+        "cite": [
+          "En iskold vind slog hende i møde, idet hun åbnede hoveddøren",
+          "Hun åbnede for budet fra blomsterhandleren",
+          "jeg har i mange år drømt om at åbne mit eget galleri",
+          "Nordens største private klinik for barnløse åbner i denne uge i en villa på Frydendalsvej på Frederiksberg",
+          "Det ældre ægtepar var stået tidligt op for at åbne forretningen",
+          "forretningerne åbner først kl. ni"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=%C3%A5bne"
+      },
+      "fg": "fg_05",
+      "frank": 68,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "acceptabel": {
+      "word": "acceptabel",
+      "meaning": "acceptable",
+      "group": "fg_05",
+      "example": "Det er ikke acceptabelt at komme for sent hver dag.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "",
+        "head": "acceptabel",
+        "senses": [
+          "som (trods alt) kan accepteres; som er god nok (men dog kunne være bedre)"
+        ],
+        "cite": [
+          "I de to uger vi var på Mols, var det flot sommervejr de første 5-6 dage og acceptabelt ferievejr resten af tiden",
+          "[Medisteren] fik smagskarakteren 3,5 på skalaen fra 1 (uacceptabel) over 3 (acceptabel) til 5 (udmærket)"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=acceptabel"
+      },
+      "fg": "fg_05",
+      "frank": 69,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "en_advarsel_om_mod": {
+      "word": "en advarsel (om / mod)",
+      "meaning": "a warning (about / against)",
+      "group": "fg_05",
+      "example": "Lægerne kommer med en advarsel mod for meget sukker.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "advarsel",
+        "senses": [
+          "meddelelse om en farlig eller ubehagelig situation som bør undgås; meddelelse om en forestående fare"
+        ],
+        "cite": [
+          "en mand med irsk accent indtelefonerede en advarsel ca. 40 minutter inden bombesprængningen",
+          "Mange af [oprørerne] blev halshugget. Deres hoveder blev udstillet på pæle som en advarsel for andre"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=advarsel"
+      },
+      "fg": "fg_05",
+      "frank": 70,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "alene": {
+      "word": "alene",
+      "meaning": "alone; only",
+      "group": "fg_05",
+      "example": "Ikke alene er det billigt, men det er også sundt.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "",
+        "head": "alene",
+        "senses": [
+          "uden tilstedeværelse eller involvering af andre eller andet",
+          "miste sin ægtefælle (og derefter være eneste forsørger for sine børn)",
+          "komme i en situation uden tilstedeværelse af andre",
+          "være overladt til at klare sig selv"
+        ],
+        "cite": [
+          "De fleste kommer alene, andre kommer parvis",
+          "De lukker døren bag sig og er alene med hinanden",
+          "min mor blev alene med mig, da jeg var 14-15 år",
+          "Rikke lå længe og spekulerede, da hun var blevet alene",
+          "den som står alene med et barn eller to, er afhængig af fuld indtjening",
+          "en god parodi skal nu helst kunne stå alene"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=alene"
+      },
+      "fg": "fg_05",
+      "frank": 71,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "altså": {
+      "word": "altså",
+      "meaning": "so, that is",
+      "group": "fg_05",
+      "example": "Det er altså ikke kun et problem for de unge.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "",
+        "head": "altså",
+        "senses": [
+          "bruges for at angive en logisk følge eller årsagssammenhæng",
+          "bruges for at uddybe eller forklare det foregående nærmere",
+          "bruges for at understrege at noget forholder sig på en bestemt måde",
+          "bruges udråbsagtigt for at udtrykke irritation, bebrejdelse, engagement eller anden følelse"
+        ],
+        "cite": [
+          "Han kunne også bøje hovedet, så hagen rørte brystet. Altså var han ikke nakkestiv og havde ikke meningitis",
+          "En anelse varme var der stadig i ham. Han var altså ikke død",
+          "Hvis kortet viser Antarktis – altså landområdet ved Sydpolen – er det meget mystisk",
+          "Jeg har fået det indtryk, at du virker som en rød klud på en tyr. Altså ikke personligt, men dit firma",
+          "Nej, Steen – jeg kan altså ikke lide at blive fotograferet!",
+          "ja, det må du altså undskylde"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=alts%C3%A5"
+      },
+      "fg": "fg_05",
+      "frank": 72,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "en_anbefaling": {
+      "word": "en anbefaling",
+      "meaning": "a recommendation",
+      "group": "fg_05",
+      "example": "Sundhedsstyrelsens anbefaling er 30 minutters motion om dagen.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "anbefaling",
+        "senses": [
+          "udtalelse hvormed man anbefaler noget og opfordrer nogen til at bruge den pågældende genstand eller udføre den pågældende handling",
+          "skriftlig eller mundtlig rosende udtalelse fra en arbejdsgiver el.lign. om en ansat eller elev, som vedkommende kan bruge i jobsøgning"
+        ],
+        "cite": [
+          "flertallet af befolkningen sagde nej til politikernes massive anbefaling af Maastricht-traktaten",
+          "hver femte dansker drikker mere end Sundhedsstyrelsens anbefalinger",
+          "når han skal \"rigtig\" ud på arbejdsmarkedet engang står han jo med et godt papir på hånden, – en anbefaling fra et advokatkontor er jo nok ikke så tosset at have med sig"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=anbefaling"
+      },
+      "fg": "fg_05",
+      "frank": 73,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "en_ansøgning_om": {
+      "word": "en ansøgning (om)",
+      "meaning": "an application (for)",
+      "group": "fg_05",
+      "example": "Hun har sendt en ansøgning om et job i banken.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "ansøgning",
+        "senses": [
+          "det at ansøge om noget"
+        ],
+        "cite": [
+          "Ansøgning om ophold på julemærkehjem skal ske på et skema, som fås på julemærkets kontor",
+          "Ansøgning og bilag i 5 eksemplarer, mærket \"Stilling nr. 92006\" .. skal være Personalekontoret i hænde senest den 17. februar"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=ans%C3%B8gning"
+      },
+      "fg": "fg_05",
+      "frank": 74,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "arbejdsmæssigt_set": {
+      "word": "arbejdsmæssigt set",
+      "meaning": "from a work point of view",
+      "group": "fg_05",
+      "example": "Arbejdsmæssigt set er det en god by at bo i.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "fg": "fg_05",
+      "frank": 76,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "bekymrende": {
+      "word": "bekymrende",
+      "meaning": "worrying",
+      "group": "fg_06",
+      "example": "Det er bekymrende, at så mange unge er stressede.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "fg": "fg_06",
+      "frank": 80,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "at_beskytte_mod": {
+      "word": "at beskytte (mod)",
+      "meaning": "to protect (against)",
+      "group": "fg_06",
+      "example": "Loven skal beskytte børn mod reklamer.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "beskytte",
+        "senses": [
+          "forhindre at nogen eller noget lider skade eller overlast; sikre mod at nogen kommer i fare, i nød eller i en anden uønsket situation",
+          "værne mod uønsket konkurrence ved hjælp af love, toldafgifter, patentregistrering el.lign."
+        ],
+        "cite": [
+          "Et åbent, sårbart demokrati som det danske bliver man jo nødt til at beskytte",
+          "Loven beskytter den svage. Hvor ingen lov er, har den stærke retten",
+          "udviklingen [var] langsom og domineret af småvirksomheder, der snart blev beskyttet af høje toldmure"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=beskytte"
+      },
+      "fg": "fg_06",
+      "frank": 81,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "at_bevise": {
+      "word": "at bevise",
+      "meaning": "to prove",
+      "group": "fg_06",
+      "example": "Undersøgelsen beviser, at motion hjælper.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "bevise",
+        "senses": [
+          "give dokumentation for; sandsynliggøre"
+        ],
+        "cite": [
+          "jeg kan bevise rigtigheden af mine synspunkter, de hviler på uigendrivelige iagttagelser og på matematisk logik",
+          "hun [har] fået stjålet alle de papirer og lønsedler, der beviser, at hun har arbejdet næsten uafbrudt, siden hun var 16 år"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=bevise"
+      },
+      "fg": "fg_06",
+      "frank": 82,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "dernæst": {
+      "word": "dernæst",
+      "meaning": "next, then",
+      "group": "fg_06",
+      "example": "Først skal man søge, dernæst skal man til samtale.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "",
+        "head": "dernæst",
+        "senses": [
+          "umiddelbart efter den netop nævnte begivenhed",
+          "umiddelbart efter det netop nævnte i rækkefølge eller rangorden"
+        ],
+        "cite": [
+          "Først blev kattene affodret, dernæst var det hestenes tur",
+          "Efter kongen fulgte bisperne, og dernæst kom provster og præster"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=dern%C3%A6st"
+      },
+      "fg": "fg_06",
+      "frank": 84,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "en_eksponent_for": {
+      "word": "en eksponent (for)",
+      "meaning": "a representative, exponent (of)",
+      "group": "fg_06",
+      "example": "Hun er en typisk eksponent for den nye generation.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "eksponent",
+        "senses": [
+          "typisk repræsentant for en bestemt opfattelse eller type",
+          "tal der angiver den potens som et tal skal opløftes i, angivet ved et lille, løftet tal"
+        ],
+        "cite": [
+          "For mig er han eksponent for en gammeldags holdning til musikken"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=eksponent"
+      },
+      "fg": "fg_06",
+      "frank": 87,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "at_erkende": {
+      "word": "at erkende",
+      "meaning": "to admit, acknowledge",
+      "group": "fg_06",
+      "example": "Ministeren erkender, at der er et problem.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "erkende",
+        "senses": [
+          "tilstå eller indrømme at noget forholder sig på en bestemt måde",
+          "forstå og dermed (modvilligt) acceptere eller anerkende",
+          "nå til indsigt i noget gennem tænkning, undersøgelse eller erfaring"
+        ],
+        "cite": [
+          "Den sigtede erkendte at have affyret skuddet, men nægtede drabsforsøg",
+          "et forlag er primært en forretning og ikke en social institution, hvad en realistisk direktør naturligvis må erkende",
+          "Det eneste, jeg ved, det eneste, jeg kan erkende, er, at jég findes"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=erkende"
+      },
+      "fg": "fg_06",
+      "frank": 89,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "en_evne_til": {
+      "word": "en evne (til)",
+      "meaning": "an ability (to)",
+      "group": "fg_06",
+      "example": "Børn har en god evne til at lære sprog.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "evne",
+        "senses": [
+          "medfødt eller iboende mulighed for at handle, virke eller fungere på en bestemt måde; det at være i stand til at gøre noget bestemt, ofte noget eftertragtelsesværdigt"
+        ],
+        "cite": [
+          "Ingen egenskab er så afgørende som bilens evne til at undvige",
+          "praktisk håndelag og evner for arbejdsledelse vil være en fordel"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=evne"
+      },
+      "fg": "fg_06",
+      "frank": 90,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "at_fastholde": {
+      "word": "at fastholde",
+      "meaning": "to retain; to maintain",
+      "group": "fg_06",
+      "example": "Det er svært at fastholde de unge i uddannelse.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "fastholde",
+        "senses": [
+          "bevare eller opretholde noget i uændret form, fx et krav, en tilstand eller en ordning",
+          "sikre med et solidt greb at noget bliver på sin plads uden at kunne bevæges eller flyttes"
+        ],
+        "cite": [
+          "Vi vil fastholde såvel de nuværende takster som de nuværende åbningstider i daginstitutionerne",
+          "Den stramme udgiftspolitik skal fastholdes",
+          "Skabene fastholdes med skruetvinger og iskrues oppefra",
+          "Underholdning er at give oplevelser og at fastholde seerne"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=fastholde"
+      },
+      "fg": "fg_06",
+      "frank": 91,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "et_forbud_mod": {
+      "word": "et forbud (mod)",
+      "meaning": "a ban (on)",
+      "group": "fg_07",
+      "example": "Der er forbud mod rygning på skolen.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, intetkøn",
+        "head": "forbud",
+        "senses": [
+          "bestemmelse om at noget ikke må finde sted eller ikke må forekomme"
+        ],
+        "cite": [
+          "Jeg er .. ikke tilhænger af ideer om generelt forbud mod alkohol på arbejdspladsen",
+          "Vi har fået forbud mod at udtale os direkte til pressen"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=forbud"
+      },
+      "fg": "fg_07",
+      "frank": 92,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "en_forhindring_for": {
+      "word": "en forhindring (for)",
+      "meaning": "an obstacle (to)",
+      "group": "fg_07",
+      "example": "Prisen er en forhindring for mange familier.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "forhindring",
+        "senses": [
+          "det at forhindre",
+          "genstand som gør det vanskeligt at passere noget"
+        ],
+        "cite": [
+          "Den danske olie samt den klokkerene aftale med Saudi-Arabien lignede en plan til forhindring af den krise, vi er på vej ind i",
+          "Mange mennesker i Farum har været irriteret over de forhindringer, der i de sidste måneder er blevet lavet på vore lokalveje",
+          "han sidder ved bordet midt på tribunen og kikker på en elegant brun hest, der lige så elegant springer over en 1,80 meter høj forhindring"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=forhindring"
+      },
+      "fg": "fg_07",
+      "frank": 94,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "forkert": {
+      "word": "forkert",
+      "meaning": "wrong",
+      "group": "fg_07",
+      "example": "Det er forkert at tro, at alle unge er dovne.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "",
+        "head": "forkert",
+        "senses": [
+          "som ikke er rigtig eller velegnet i en bestemt sammenhæng eller situation",
+          "som ikke er i overensstemmelse med sandheden eller virkeligheden",
+          "ved en finte eller en anden overraskende manøvre opnå at en modstander, fx målmanden, står med vægten således fordelt på benene at han eller hun ikke kan nå bolden"
+        ],
+        "cite": [
+          "Mie har valgt en rigtig stil, men en helt forkert farve, som ikke klæder hende",
+          "Jeg har en enorm respekt for popmusik og synes, det er forkert at se ned på den",
+          "de danske oplysninger om, at kun 15 pct. af kyllingerne indeholder salmonella, er forkerte. Det rigtige tal er 40 pct.",
+          "Hun havde godt nok forventet et lidt større beløb, end hun fik udbetalt. Men måske huskede hun forkert",
+          "Statsministeren tøver et øjeblik med at fuldføre svaret på spørgsmålet. Er han fanget på det forkerte ben?"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=forkert"
+      },
+      "fg": "fg_07",
+      "frank": 95,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "at_forkorte": {
+      "word": "at forkorte",
+      "meaning": "to shorten",
+      "group": "fg_07",
+      "example": "Regeringen vil forkorte ventetiden på hospitalerne.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "forkorte",
+        "senses": [
+          "gøre en tekst kortere",
+          "gøre kortere i varighed",
+          "mindske i længde",
+          "dividere tæller og nævner i en brøk med et tal der går op i dem begge"
+        ],
+        "cite": [
+          "redaktionssekretariatet .. har mandat til at forkorte, omredigere eller kassere artikler",
+          "Million forkortes mio., undertiden ses dog også forkortelsen mill.",
+          "Rejsetiden til Århus vil være forkortet med en time",
+          "Skibsruterne kunne forkortes, når kompasset hjalp til at stikke genvej over havet"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=forkorte"
+      },
+      "fg": "fg_07",
+      "frank": 96,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "en_forpligtelse_til": {
+      "word": "en forpligtelse (til)",
+      "meaning": "an obligation (to)",
+      "group": "fg_07",
+      "example": "Arbejdsgiveren har en forpligtelse til at sikre et godt arbejdsmiljø.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "forpligtelse",
+        "senses": [
+          "pligt, løfte eller handlemåde som en person, institution el.lign. er retligt eller moralsk bundet af",
+          "det at man binder sig (eller føler at man binder sig) til at gøre noget bestemt"
+        ],
+        "cite": [
+          "Museet har en forpligtelse til at arrangere udstillinger i hele amtet",
+          "Når den gensidige forpligtelse er indgået, skal en supernational myndighed styre forsvaret",
+          "Send mig gratis og uden forpligtelser fællesbogen \"Danmarks Folkehøjskoler\", som indeholder oplysninger om de lange og korte kurser"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=forpligtelse"
+      },
+      "fg": "fg_07",
+      "frank": 98,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "en_forsikring": {
+      "word": "en forsikring",
+      "meaning": "an insurance",
+      "group": "fg_07",
+      "example": "Det er dyrt at have en forsikring på bilen.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "forsikring",
+        "senses": [
+          "aftale hvorved nogen, typisk et forsikringsselskab, forpligter sig til at yde erstatning ved skader eller ulykker der rammer aftalens anden part, mod at denne betaler et beløb (præmie), fx en gang om året",
+          "mundtlig eller skriftlig erklæring hvorved man forsikrer nogen om noget"
+        ],
+        "cite": [
+          "Mit råd er: Skal De ud og rejse, så sørg endelig for en forsikring",
+          "Vi har altid været gode til at fortælle kunderne hvad en forsikring dækkede, vi har nok ikke fremhævet tydeligt nok hvad en forsikring ikke dækker",
+          "Forbrugerrådet frygter, at momsforhøjelsen – trods regeringens forsikring om det modsatte – vil betyde prisforhøjelser"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=forsikring"
+      },
+      "fg": "fg_07",
+      "frank": 99,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "forskellig_fra": {
+      "word": "forskellig (fra)",
+      "meaning": "different (from)",
+      "group": "fg_07",
+      "example": "Livet på landet er meget forskelligt fra livet i byen.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "",
+        "head": "forskellig",
+        "senses": [
+          "som adskiller sig fra noget andet ved ikke at ligne eller ikke være identisk; som varierer fra situation til situation",
+          "flere eller temmelig mange af en slags"
+        ],
+        "cite": [
+          "Livet i Danmark er helt forskelligt fra livet i Vietnam",
+          "jeg valgte at servere en Samsøost fra Aså i tre forskellige udgaver – en ung, en mellemlagret og en gammel",
+          "Jeg kan nævne forskellige eksempler på ord, som alle stammer fra latin: prokura, skribent, student, patient"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=forskellig"
+      },
+      "fg": "fg_07",
+      "frank": 100,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "et_forslag_til_om": {
+      "word": "et forslag (til / om)",
+      "meaning": "a proposal, suggestion",
+      "group": "fg_07",
+      "example": "Kommunen har et forslag om at lukke to skoler.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, intetkøn",
+        "head": "forslag",
+        "senses": [
+          "(forelæggelse og anbefaling af) en idé, en plan, et råd, et middel el.lign. hvis anvendelighed andre kan tage stilling til",
+          "musikalsk forsiring der strejfer tonen lige over eller lige under hovedtonen inden denne sættes an",
+          "det at noget er tilstrækkeligt eller rækker langt"
+        ],
+        "cite": [
+          "Regeringens forslag til en stramning af udlændingeloven har været længe undervejs",
+          "Hverken løfter eller kristendom giver varme i stuen. Så er der mere forslag i en kokasse"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=forslag"
+      },
+      "fg": "fg_07",
+      "frank": 101,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "for_det_første": {
+      "word": "for det første",
+      "meaning": "firstly",
+      "group": "fg_07",
+      "example": "For det første er det billigt, for det andet er det sundt.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "fg": "fg_07",
+      "frank": 102,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "fysisk_set": {
+      "word": "fysisk set",
+      "meaning": "physically",
+      "group": "fg_07",
+      "example": "Fysisk set er arbejdet meget hårdt.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "fg": "fg_07",
+      "frank": 104,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "en_gevinst_ved": {
+      "word": "en gevinst (ved)",
+      "meaning": "a gain, benefit (of)",
+      "group": "fg_07",
+      "example": "Den største gevinst ved at flytte er mere tid.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "gevinst",
+        "senses": [
+          "materielt udbytte",
+          "værdigenstand, pengesum el.lign. som udloddes og kan vindes i en konkurrence, et spil el.lign."
+        ],
+        "cite": [
+          "spekulation i obligationer giver ikke længere de store gevinster",
+          "billederne er tågede og misfarvede og ikke nogen gevinst for en ellers æstetisk velopsat avisside",
+          "De deltager i lodtrækningen om ugens gevinster: 3 gange 200 kr."
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=gevinst"
+      },
+      "fg": "fg_07",
+      "frank": 105,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "at_glemme": {
+      "word": "at glemme",
+      "meaning": "to forget",
+      "group": "fg_07",
+      "example": "Mange glemmer at drikke vand i løbet af dagen.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "glemme",
+        "senses": [
+          "miste erindringen om; være ude af stand til at huske",
+          "ved en uopmærksomhed eller fejltagelse ikke huske at tage noget med sig",
+          "se bort fra eller undlade at inddrage noget vigtigt",
+          "opgiv det du forestiller dig"
+        ],
+        "cite": [
+          "Jeg har glemt, hvad jeg skulle købe og går tilbage",
+          "Da jeg forlod bilen i carporten, var jeg så åndsfraværende, at jeg glemte at slukke billygterne",
+          "Det var en hyggelig aften ... Men jeg glemte min lighter, som jeg har fået af min mor",
+          "vi glemmer helheden for den enkelte sag",
+          "Glem det daglige arbejde og nyd den stemning, der er indenfor hjemmets fire vægge",
+          "Der er alle mulige mennesker, der mener, at vi kan arbejde mindre. Glem det, venner, glem det"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=glemme"
+      },
+      "fg": "fg_07",
+      "frank": 106,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "at_idyllisere": {
+      "word": "at idyllisere",
+      "meaning": "to idealise, romanticise",
+      "group": "fg_08",
+      "example": "Mange idylliserer livet på landet.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "idyllisere",
+        "senses": [
+          "opfatte eller fremstille som mere fredfyldt, harmonisk og konfliktfri end virkeligheden er"
+        ],
+        "cite": [
+          "Hvis jeg husker [øen] større, renere, mere jomfruelig, grønnere, så er det tidens afstand, som kan have idylliseret den"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=idyllisere"
+      },
+      "fg": "fg_08",
+      "frank": 108,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "at_ignorere": {
+      "word": "at ignorere",
+      "meaning": "to ignore",
+      "group": "fg_08",
+      "example": "Man kan ikke ignorere problemet længere.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "ignorere",
+        "senses": [
+          "lade som om man ikke kender eller ved besked om; være ligeglad med"
+        ],
+        "cite": [
+          "trods mine ihærdige forsøg på at komme rigtig i kontakt med ham, lykkedes det ikke. Han ignorerede mig simpelthen"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=ignorere"
+      },
+      "fg": "fg_08",
+      "frank": 109,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "imens": {
+      "word": "imens",
+      "meaning": "meanwhile; while",
+      "group": "fg_08",
+      "example": "Hun lavede mad, og imens så børnene tv.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "",
+        "head": "imens",
+        "senses": [
+          "på samme tid som noget andet foregår; samtidig",
+          "= mens"
+        ],
+        "cite": [
+          "Karen rørte rundt i kaffen og så imens ned i den",
+          "\"Du renser lige tændrørene,\" sagde Hubert. \"Imens kigger jeg på strømfordeleren.\"",
+          "Vi spiser foran fjernsynet imens vi ser TV-avisen",
+          "Han gik hen til Dina og kyssede hende bag øret, alt imens han blinkede til mig"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=imens"
+      },
+      "fg": "fg_08",
+      "frank": 110,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "at_klage_over": {
+      "word": "at klage (over)",
+      "meaning": "to complain (about)",
+      "group": "fg_08",
+      "example": "Naboerne klager over larmen.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "klage",
+        "senses": [
+          "henvende sig til en ledende person eller myndighed med anmodning om undersøgelse eller påtale af et (påstået) kritisabelt, uretfærdigt eller retsstridigt forhold",
+          "afgive (høje) lyde som udtryk for smerte, sorg, fortvivlelse el.lign."
+        ],
+        "cite": [
+          "Alle, der mener, de er blevet fejlbehandlet, kan klage til Patientklagenævnet",
+          "skolefolk klager over børnenes opdragelse hjemmefra og giver forældrene skylden for skolens problemer",
+          "Drengen i rummet bag stuen gav en klagende lyd fra sig inde i mørket, og kvinden rejste sig hurtigt og skyndte sig derind",
+          "Jeg har enormt ondt i maven, klagede hun og håbede at få lidt medfølelse"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=klage"
+      },
+      "fg": "fg_08",
+      "frank": 115,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "en_kontrast_til": {
+      "word": "en kontrast (til)",
+      "meaning": "a contrast (to)",
+      "group": "fg_08",
+      "example": "I kontrast til byen er der meget stille på landet.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "kontrast",
+        "senses": [
+          "det at to fænomener, faktorer, forhold el.lign. fremstår som modsatte eller udpræget forskellige størrelser"
+        ],
+        "cite": [
+          "Disse rum stod i dyb kontrast til de små overfyldte lejligheder på Vesterbro, hvor han havde færdedes de sidste dage",
+          "Hans karakter og karriere er fyldt med kontraster. På en og samme gang kan han være hovski-snovski og let at begejstre. Beregnende og impulsiv. Visionær og pessimist"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=kontrast"
+      },
+      "fg": "fg_08",
+      "frank": 116,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "kulturelt_set": {
+      "word": "kulturelt set",
+      "meaning": "culturally",
+      "group": "fg_08",
+      "example": "Kulturelt set er der stor forskel på de to lande.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "fg": "fg_08",
+      "frank": 117,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "langt_fra": {
+      "word": "langt fra",
+      "meaning": "far from",
+      "group": "fg_08",
+      "example": "Langt fra alle unge bruger sociale medier hver dag.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "fg": "fg_08",
+      "frank": 118,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "at_lette": {
+      "word": "at lette",
+      "meaning": "to make easier, ease",
+      "group": "fg_08",
+      "example": "Robotter kan lette arbejdet for de ansatte.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "lette",
+        "senses": [
+          "gøre det nemmere at udføre en bestemt handling eller opnå et ønsket resultat",
+          "gøre mindre tung",
+          "hæve sig fra underlaget og stige op i luften; løfte sig (lidt)",
+          "løfte (delvis) op fra underlaget, evt. midlertidigt"
+        ],
+        "cite": [
+          "[Hun] vidste ikke, hvor hun skulle henvende sig for at lette sin syge datters tilværelse",
+          "Et uventet økonomisk tilskud letter stemningen betydeligt, selv om det frister Dem til at gøre mindre fornuftige og nyttige ting",
+          "Så trykkede han af, og braget fik fuglene til at lette fra søen og træerne omkring os",
+          "Midtvejs henne i andet sæt begyndte musikken .. for alvor at lette, og den sidste halve time var en ren fornøjelse",
+          "En særlig åbner kan lette låget på et stramt bæger",
+          "Hvis nationalfølelsen negligeres af en overordnet magt vil den blot vende endnu stærkere tilbage, når presset letter"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=lette"
+      },
+      "fg": "fg_08",
+      "frank": 119,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "en_livskvalitet": {
+      "word": "en livskvalitet",
+      "meaning": "quality of life",
+      "group": "fg_08",
+      "example": "Motion giver en bedre livskvalitet.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "livskvalitet",
+        "senses": [
+          "(grad af) kvalitet som tilværelsen har for det enkelte menneske"
+        ],
+        "cite": [
+          "en reel boligpolitik .. vil formindske arbejdsløsheden og forbedre livskvaliteten for mange mennesker",
+          "Ærlighed \"med lidt ekstra krydderi på\" står meget højt på listen over livskvaliteter, som betyder noget for Søren"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=livskvalitet"
+      },
+      "fg": "fg_08",
+      "frank": 120,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "at_lukke": {
+      "word": "at lukke",
+      "meaning": "to close",
+      "group": "fg_08",
+      "example": "Den lokale skole skal lukke næste år.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "lukke",
+        "senses": [
+          "bevæge noget dertil indrettet hen foran eller hen over en åbning så den spærres",
+          "samle enderne eller siderne af en genstand der indeholder noget, så der ikke længere er åbent ind til indholdet",
+          "(midlertidigt) hindre passage ad eller gennem",
+          "afbryde for tilførslen til eller udslippet fra et apparat ved at dreje eller trykke på en mekanisme"
+        ],
+        "cite": [
+          "\"Godnat,\" hvisker hun og lukker øjnene",
+          "Der var ingen færdsel gennem porten, og der var endnu to-tre timer til den skulle lukkes",
+          "Plastposen lukkes med en knude",
+          "Dejen lukkes omkring fyldet",
+          "en snestorm raser og lukker alle veje",
+          "Slagelsevej lukkes for den tunge trafik, dvs. biler over 3,5 tons"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=lukke"
+      },
+      "fg": "fg_08",
+      "frank": 121,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "mentalt_set": {
+      "word": "mentalt set",
+      "meaning": "mentally",
+      "group": "fg_09",
+      "example": "Mentalt set er det hårdt at arbejde om natten.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "fg": "fg_09",
+      "frank": 123,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "at_misforstå": {
+      "word": "at misforstå",
+      "meaning": "to misunderstand",
+      "group": "fg_09",
+      "example": "Mange misforstår, hvad ordet betyder.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "misforstå",
+        "senses": [
+          "forstå på en urigtig eller uheldig måde; opfatte nogens hensigt eller handlinger forkert"
+        ],
+        "cite": [
+          "jordemoderen [havde] misforstået rejsemålet. Friedrichs mor havde talt om Vestindien – ikke Indien",
+          "man [skal] ikke i misforstået godhed gøde altanjord overdrevent"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=misforst%C3%A5"
+      },
+      "fg": "fg_09",
+      "frank": 124,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "næsten_aldrig": {
+      "word": "næsten aldrig",
+      "meaning": "hardly ever",
+      "group": "fg_09",
+      "example": "Vi ser næsten aldrig fjernsyn.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "fg": "fg_09",
+      "frank": 126,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "at_omtale": {
+      "word": "at omtale",
+      "meaning": "to mention, refer to",
+      "group": "fg_09",
+      "example": "Problemet bliver ofte omtalt i medierne.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "omtale",
+        "senses": [
+          "nævne, beskrive eller redegøre for noget",
+          "tale om i bestemte vendinger eller på en bestemt måde; kalde"
+        ],
+        "cite": [
+          "Når atomindustrien selv skulle omtale hvad der skete, blev der brugt en masse eufemismer",
+          "AIDS er den mest omtalte sygdom det sidste par år",
+          "Amerikanske forældre kaldte i sin tid Elvis for feminin, [og] de omtalte The Beatles som bløde og pigede"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=omtale"
+      },
+      "fg": "fg_09",
+      "frank": 127,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "et_ønske_om": {
+      "word": "et ønske (om)",
+      "meaning": "a wish (for)",
+      "group": "fg_09",
+      "example": "Mange har et ønske om at arbejde mindre.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, intetkøn",
+        "head": "ønske",
+        "senses": [
+          "higen eller stræben efter noget",
+          "forhåbning om at nogen får eller oplever noget bestemt"
+        ],
+        "cite": [
+          "kan De forestille Dem nogen grund til, at nogen skulle nære noget ønske om at slå Deres mand ihjel?",
+          "Hvis jeg selv kunne vælge, så er mit største ønske stadig et roligt liv med en fast familie",
+          "Vel mødt og endnu engang vore bedste ønsker for det nye år"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=%C3%B8nske"
+      },
+      "fg": "fg_09",
+      "frank": 128,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "en_opfordring_til": {
+      "word": "en opfordring (til)",
+      "meaning": "a call, request (to)",
+      "group": "fg_09",
+      "example": "Lægerne kommer med en opfordring til at bevæge sig mere.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "opfordring",
+        "senses": [
+          "det at opfordre nogen til noget; ytring der opfordrer nogen til noget"
+        ],
+        "cite": [
+          "På opfordring af sin mor havde Christina lavet tre tegninger",
+          "Georg Brandes fik opfordring fra et forlag til at skrive en bog om jubilaren [: Holberg]"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=opfordring"
+      },
+      "fg": "fg_09",
+      "frank": 130,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "at_påstå": {
+      "word": "at påstå",
+      "meaning": "to claim",
+      "group": "fg_09",
+      "example": "Nogle påstår, at sociale medier gør os ensomme.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "påstå",
+        "senses": [
+          "fremsætte som en kendsgerning uden underbygning eller dokumentation",
+          "kræve som dom i en retssag"
+        ],
+        "cite": [
+          "Det er vælgerbedrag at påstå, at Danmark har råd til at være en slags socialkontor",
+          "Sagsøgte har påstået frifindelse"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=p%C3%A5st%C3%A5"
+      },
+      "fg": "fg_09",
+      "frank": 133,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "primært": {
+      "word": "primært",
+      "meaning": "primarily, mainly",
+      "group": "fg_09",
+      "example": "Bogen er primært skrevet for unge.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "fg": "fg_09",
+      "frank": 135,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "en_problematik": {
+      "word": "en problematik",
+      "meaning": "an issue, set of problems",
+      "group": "fg_09",
+      "example": "Artiklen handler om problematikken omkring stress.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "problematik",
+        "senses": [
+          "flere sammenhængende problemer som vedrører en bestemt sag eller et bestemt forhold, og som behandles eller søges løst som en helhed"
+        ],
+        "cite": [
+          "Den økologiske problematik, der er en af de nye dimensioner ved den offentlige bevidsthed, indebærer, at teknologien ikke kun fører nye goder med sig",
+          "Jeg har haft klienter med følgende symptomer og problematikker: Udbrændthed, trøstespisning, bulimi, incest .. angst, usikkerhed"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=problematik"
+      },
+      "fg": "fg_09",
+      "frank": 136,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "problematisk": {
+      "word": "problematisk",
+      "meaning": "problematic",
+      "group": "fg_10",
+      "example": "Det er problematisk, at mange unge ikke sover nok.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "",
+        "head": "problematisk",
+        "senses": [
+          "forbundet med problemer; som kan give anledning til kritik eller skepsis"
+        ],
+        "cite": [
+          "Brugerne på de to psykiatriske hospitaler peger her på klart problematiske sider af den psykiatriske virksomhed"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=problematisk"
+      },
+      "fg": "fg_10",
+      "frank": 137,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "at_have_råd_til": {
+      "word": "at have råd til",
+      "meaning": "to be able to afford",
+      "group": "fg_10",
+      "example": "Mange studerende har ikke råd til at bo alene.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "fg": "fg_10",
+      "frank": 138,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "en_reklame": {
+      "word": "en reklame",
+      "meaning": "an advert",
+      "group": "fg_10",
+      "example": "Børn ser mange reklamer for slik.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "reklame",
+        "senses": [
+          "det at gøre (offentligheden) opmærksom på kvaliteterne ved eller eksistensen af noget eller nogen"
+        ],
+        "cite": [
+          "I marts i år var hun på en tre ugers promotiontur på kryds og tværs af USA for at gøre reklame for pladen, som altså endnu ikke er udkommet",
+          "Jeg lægger noget vasketøj sammen, kikker lidt i ugeavisen og går de reklamer igennem, der lå i postkassen"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=reklame"
+      },
+      "fg": "fg_10",
+      "frank": 139,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "en_rente": {
+      "word": "en rente",
+      "meaning": "an interest rate",
+      "group": "fg_10",
+      "example": "Renten på lånet er steget.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "rente",
+        "senses": [
+          "periodisk ydelse som en långiver modtager som betaling for at låne sine penge ud, og som låntageren betaler for at låne pengene",
+          "den procentsats der ligger til grund for beregningen af den periodiske ydelse i forbindelse med et lån",
+          "den rente en kapital giver når renterne lægges sammen med kapitalen"
+        ],
+        "cite": [
+          "Ved forsinket betaling af renter og afdrag kan kreditor forlange kapitalen indfriet",
+          "Der betales årligt over 10.000 kroner i renter på statens gæld for hver dansker",
+          "Kreditforeningslån ydes med fast rente. Det vil sige, at renten er den samme i hele løbetiden",
+          "11,75 pct. p.a. i rente er hvad Sydbank Sønderjylland nu garanterer investorerne",
+          "Det her er hvad jeg har trænet og levet for, og nu kommer alt det hårde arbejde tilbage med renters rente"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=rente"
+      },
+      "fg": "fg_10",
+      "frank": 140,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "risikabel": {
+      "word": "risikabel",
+      "meaning": "risky",
+      "group": "fg_10",
+      "example": "Det er risikabelt at cykle uden hjelm.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "",
+        "head": "risikabel",
+        "senses": [
+          "forbundet med risiko"
+        ],
+        "cite": [
+          "Det er risikabelt at skifte arbejde og blive den sidst ankomne og dermed den første, der eventuelt bliver fyret",
+          "bankerne måtte acceptere stadig mere risikable udlån for i det hele taget at skaffe kunder"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=risikabel"
+      },
+      "fg": "fg_10",
+      "frank": 141,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "en_service": {
+      "word": "en service",
+      "meaning": "(a) service",
+      "group": "fg_10",
+      "example": "Butikken er kendt for sin gode service.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "service",
+        "senses": [
+          "tjeneste, ydelse eller hjælp som en forretning eller institution yder sine kunder eller klienter gratis eller mod betaling",
+          "(regelmæssigt udført) undersøgelse af apparater, maskiner, motorkøretøjer el.lign. med henblik på kontrol og vedligeholdelse"
+        ],
+        "cite": [
+          "De fleste borgere har det jo sådan, at de både ønsker lavere skatter og bedre offentlig service. Det er uforenelige mål",
+          "isvand med to glas kom uopfordret og blev fyldt op undervejs – fin service",
+          "Overgartneren fortæller, at han altid sender slåmaskinen til service nu, hvor alle har god tid til et grundigt eftersyn"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=service"
+      },
+      "fg": "fg_10",
+      "frank": 142,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "et_spørgsmål_om": {
+      "word": "et spørgsmål (om)",
+      "meaning": "a question; an issue",
+      "group": "fg_10",
+      "example": "Det er et spørgsmål om penge.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, intetkøn",
+        "head": "spørgsmål",
+        "senses": [
+          "sproglig ytring som rummer et uafklaret punkt, og som man fremsætter for at få dette punkt afklaret eller belyst af modtageren gennem dennes svar",
+          "anliggende, forhold eller problematik som giver anledning til overvejelser, diskussion, konflikt el.lign."
+        ],
+        "cite": [
+          "Da [børnene] kommer hjem, stiller jeg dem de sædvanlige spørgsmål: \"Har I haft det godt?\" \"Hvad har I lavet?\" \"Har I spist jeres madpakker?\" \"Hvem har I leget med?\"",
+          "Det store spørgsmål er, om der kan samles politisk flertal for at vedtage handlingsplanen",
+          "Spørgsmålet om ulighed og social uretfærdighed har været et hovedtema i kampen om skolen i dette århundrede",
+          "frelse er og bliver stadigvæk et spørgsmål om tro, ikke om gerninger – de være sig politiske, sociale eller moralske"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=sp%C3%B8rgsm%C3%A5l"
+      },
+      "fg": "fg_10",
+      "frank": 143,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "en_udbetaling": {
+      "word": "en udbetaling",
+      "meaning": "a payment, payout",
+      "group": "fg_10",
+      "example": "Udbetalingen af løn sker den sidste dag i måneden.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "udbetaling",
+        "senses": [
+          "det at udbetale et beløb",
+          "del af en (større) købesum som betales ved handelens indgåelse, fx ved huskøb"
+        ],
+        "cite": [
+          "Arbejdsministeren foreslår at ændre reglerne for udbetaling af arbejdsløshedsdagpenge",
+          "ud af sin sparsomme løn fik hun skrabet 5.000 kr. sammen til udbetalingen på et hus, som de så flyttede ind i"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=udbetaling"
+      },
+      "fg": "fg_10",
+      "frank": 145,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "en_udskrift": {
+      "word": "en udskrift",
+      "meaning": "a printout, transcript",
+      "group": "fg_10",
+      "example": "Du kan få en udskrift af dine papirer på kommunen.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn (",
+        "head": "udskrift",
+        "senses": [
+          "(papir med) tekst der indeholder bestemte oplysninger fra en anden tekst eller fra en samling af tekster, et register eller et arkiv",
+          "skriftlig gengivelse af hvad der siges på et indspillet lydbånd el.lign.",
+          "det der står uden på et brev"
+        ],
+        "cite": [
+          "Antallet af jobsøgere, som henvender sig til politiet for at få en udskrift af deres straffeattest, er flerdoblet på få år",
+          "[Den sociale Ankestyrelse kan] indhente sygehusjournaler eller udskrifter heraf",
+          "lav en udskrift af replikkerne under familiemiddagen"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=udskrift"
+      },
+      "fg": "fg_10",
+      "frank": 146,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "et_udvalg_af": {
+      "word": "et udvalg (af)",
+      "meaning": "a selection, range (of)",
+      "group": "fg_10",
+      "example": "Supermarkedet har et stort udvalg af økologiske varer.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, intetkøn",
+        "head": "udvalg",
+        "senses": [
+          "et antal forskellige varer, serviceydelser, kurser el.lign. som kunder eller brugere kan vælge mellem"
+        ],
+        "cite": [
+          "Føtex har et stort udvalg af sunde fødevarer",
+          "Udstillingen imponerer måske ikke ved sin størrelse, men byder til gengæld på et skønsomt udvalg af genrens førende mestre"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=udvalg"
+      },
+      "fg": "fg_10",
+      "frank": 147,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "uproblematisk": {
+      "word": "uproblematisk",
+      "meaning": "unproblematic",
+      "group": "fg_10",
+      "example": "Det er ikke uproblematisk at bruge mobilen i timerne.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "",
+        "head": "uproblematisk",
+        "senses": [
+          "uden problemer"
+        ],
+        "cite": [],
+        "url": "https://ordnet.dk/ddo/ordbog?query=uproblematisk"
+      },
+      "fg": "fg_10",
+      "frank": 149,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "urimelig": {
+      "word": "urimelig",
+      "meaning": "unreasonable, unfair",
+      "group": "fg_10",
+      "example": "Det er urimeligt, at huslejen stiger så meget.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "",
+        "head": "urimelig",
+        "senses": [
+          "ikke rimelig, fx uretfærdig, meget dyr, krævende eller på anden måde uacceptabel"
+        ],
+        "cite": [
+          "det er helt urimeligt, at alle, både høj og lav, men især høj, får tilskud til boligforbruget",
+          "Lad nu være med at være urimelig. Nogle gange skulle man ikke tro, du var otte år"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=urimelig"
+      },
+      "fg": "fg_10",
+      "frank": 150,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "en_kvalitet": {
+      "word": "en kvalitet",
+      "meaning": "(a) quality",
+      "group": "fg_10",
+      "example": "Kvaliteten af varerne er blevet bedre.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "kvalitet",
+        "senses": [
+          "grad af gode egenskaber som noget besidder, fx afhængigt af materialevalg, udførelse, avls- eller dyrkningsmetoder eller talent",
+          "det at noget opleves som godt eller positivt, fx at et produkt er fremstillet af gode materialer, er veludført eller har lignende gode egenskaber",
+          "et produkts bestanddele og forarbejdning som bestemmende for dets egenskaber, udseende og anvendelighed"
+        ],
+        "cite": [
+          "Kartofler til chips skal være af meget høj kvalitet, og det er de danske ikke",
+          "Ved at tage antallet af publikationer som mål for en forskers kvalitet, risikerer man at forveksle kvantitet med kvalitet",
+          "kunderne strømmede til for at købe seks flasker vin af kvalitet til under 200 kr.",
+          "Hvert år købte hun hele ruller med lærred af to forskellige kvaliteter. Den ene grov, den anden fin og blank og kridhvid"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=kvalitet"
+      },
+      "fg": "fg_10",
+      "frank": 151,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "en_vejledning": {
+      "word": "en vejledning",
+      "meaning": "guidance; instructions",
+      "group": "fg_11",
+      "example": "De unge kan få vejledning om uddannelse på skolen.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "vejledning",
+        "senses": [
+          "det at vejlede nogen",
+          "skriftligt materiale med råd, retningslinjer el.lign."
+        ],
+        "cite": [
+          "Der tilbydes vidtgående supervision og vejledning i arbejdet, ligesom nyansatte tilbydes en intern undervisning",
+          "Med hensyn til dosering, så følg altid vejledningen på emballagen"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=vejledning"
+      },
+      "fg": "fg_11",
+      "frank": 152,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "en_velstand": {
+      "word": "en velstand",
+      "meaning": "prosperity, wealth",
+      "group": "fg_11",
+      "example": "Velstanden i Danmark er steget de sidste 50 år.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "velstand",
+        "senses": [
+          "gode økonomiske forhold"
+        ],
+        "cite": [
+          "Vi fik opbygget velstand og velfærd i Danmark, men i 80'erne var der alligevel noget, der gik galt"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=velstand"
+      },
+      "fg": "fg_11",
+      "frank": 153,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "at_vise": {
+      "word": "at vise",
+      "meaning": "to show",
+      "group": "fg_11",
+      "example": "Undersøgelsen viser, at mange unge er stressede.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "vise",
+        "senses": [
+          "give nogen mulighed for at se noget bestemt ved fx at tage det frem, gøre det synligt eller undlade at skjule det",
+          "oplyse om hvordan noget forholder sig (fx hvor det befinder sig, hvordan det ser ud, eller hvordan det virker), ved at pege, udføre forskellige bevægelser eller handlinger og ofte forklare",
+          "angive vejen for nogen til et bestemt sted; ledsage nogen på en tur et bestemt sted og gøre opmærksom på interessante ting, fx på en udstilling",
+          "bære eller være (klart) vidnesbyrd om; vidne om"
+        ],
+        "cite": [
+          "Han viste Alice et billede af en smuk selskabsklædt kvinde",
+          "Ifølge Koranen må kvinder ikke vise arme, bryst, ben og hår",
+          "Næsten alle børn med ondt i maven peger på navlen, når de skal vise, hvor de har ondt",
+          "han viste Juline hvordan man red i trav, hvordan man tilpassede sig hestens rytme",
+          "jeg blev vist ud på terrassen og anbragt i en havestol",
+          "Jeg nød at vise dig rundt i Paris og håber, du er kommet godt hjem"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=vise"
+      },
+      "fg": "fg_11",
+      "frank": 154,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "at_vurdere": {
+      "word": "at vurdere",
+      "meaning": "to assess, judge",
+      "group": "fg_11",
+      "example": "Eksperterne vurderer, at priserne vil stige.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "vurdere",
+        "senses": [
+          "foretage en skønsmæssig (faglig) bedømmelse af et forhold, en tilstand, en begivenhed, en udvikling el.lign.",
+          "anslå eller fastsætte en bestemt pengemæssig værdi af noget, fx et maleri eller en bolig"
+        ],
+        "cite": [
+          "Digesvalernes bestand i Danmark har været i aftagende de seneste år, men nu vurderer eksperter, at bestanden er på vej op",
+          "Isaksons \"Siddende kvinde\" er vurderet til 200.000 kr.",
+          "Når du skal plante et træ eller en busk, skal du starte med nøje at vurdere afstanden til de nærmest stående vækster"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=vurdere"
+      },
+      "fg": "fg_11",
+      "frank": 155,
+      "freq": 1,
+      "freq_total": 1
+    },
+    "at_acceptere": {
+      "word": "at acceptere",
+      "meaning": "to accept",
+      "group": "fg_11",
+      "example": "Mange forældre accepterer ikke, at børnene bruger mobilen hele dagen.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "acceptere",
+        "senses": [
+          "gå ind for; gå med til; sige ja til",
+          "regne nogen eller noget som god(t) nok til at være med i en bestemt gruppe eller kategori"
+        ],
+        "cite": [
+          "vil de ansatte acceptere kortere arbejdstid uden fuld lønkompensation?",
+          "Big Bang-teorien er almindeligt accepteret blandt fysikere og astronomer",
+          "Man skal være her [: på Bornholm] i 3 generationer, før man accepteres som bornholmer"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=acceptere"
+      },
+      "fg": "fg_11",
+      "frank": 156,
+      "freq": 0,
+      "freq_total": 4
+    },
+    "at_ændre": {
+      "word": "at ændre",
+      "meaning": "to change",
+      "group": "fg_11",
+      "example": "Internettet har ændret vores måde at handle på.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "ændre",
+        "senses": [
+          "give en (lidt) anden form, karakter, egenskab el.lign.; gøre anderledes"
+        ],
+        "cite": [
+          "De håbede, at den nye konservative arbejdsminister ville ændre på forgængerens beslutninger",
+          "Alt det, jeg har været igennem, har ændret mig, og jeg er blevet ærligere – over for mig selv og andre"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=%C3%A6ndre"
+      },
+      "fg": "fg_11",
+      "frank": 157,
+      "freq": 0,
+      "freq_total": 3
+    },
+    "attraktiv": {
+      "word": "attraktiv",
+      "meaning": "attractive",
+      "group": "fg_11",
+      "example": "Byen er blevet mere attraktiv for unge familier.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "",
+        "head": "attraktiv",
+        "senses": [
+          "som virker indbydende eller tillokkende på mange mennesker"
+        ],
+        "cite": [
+          "Den indre by i Nykøbing F. skal gøres mere attraktiv at færdes og bo i. Centrum skal blive en levende bydel"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=attraktiv"
+      },
+      "fg": "fg_11",
+      "frank": 159,
+      "freq": 0,
+      "freq_total": 2
+    },
+    "at_dokumentere": {
+      "word": "at dokumentere",
+      "meaning": "to document, prove",
+      "group": "fg_11",
+      "example": "Man skal dokumentere, at man har et job.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "dokumentere",
+        "senses": [
+          "fremlægge (eller udgøre) bevismateriale for en påstand, uden at der nødvendigvis behøver foreligge noget skriftligt materiale"
+        ],
+        "cite": [
+          "Kan lystfiskeren dokumentere, at fisketegnet blot er glemt hjemme, så bliver bøden kun 50 kr.",
+          "Det er et vendepunkt i epidemien, at vi kan vaccinere og dermed bekæmpe den, så når vi skal dokumentere, hvordan epidemien forløb, skal vi også kunne dokumentere behandlingen ved h"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=dokumentere"
+      },
+      "fg": "fg_11",
+      "frank": 160,
+      "freq": 0,
+      "freq_total": 2
+    },
+    "at_foreslå": {
+      "word": "at foreslå",
+      "meaning": "to propose, suggest",
+      "group": "fg_11",
+      "example": "Regeringen har foreslået en ny lov.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "foreslå",
+        "senses": [
+          "fremlægge en idé eller en plan for en eller flere andre til overvejelse; fremsætte et forslag"
+        ],
+        "cite": [
+          "Det var dig selv, der foreslog, at jeg skulle finde et job, fordi vi har for få penge",
+          "Hvad med at køre en tur, foreslår han. – Jo, det kan vi da godt"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=foresl%C3%A5"
+      },
+      "fg": "fg_11",
+      "frank": 162,
+      "freq": 0,
+      "freq_total": 2
+    },
+    "at_fravælge": {
+      "word": "at fravælge",
+      "meaning": "to opt out of, choose not to have",
+      "group": "fg_11",
+      "example": "Flere unge fravælger at få bil.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "fravælge",
+        "senses": [
+          "undlade at vælge noget bestemt, evt. sådan at man derved automatisk vælger noget andet"
+        ],
+        "cite": [
+          "vi [må] altså konstatere, at et stort antal forældre netop i år har fravalgt Voldparkens Skole"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=frav%C3%A6lge"
+      },
+      "fg": "fg_11",
+      "frank": 163,
+      "freq": 0,
+      "freq_total": 2
+    },
+    "en_hensigt_med": {
+      "word": "en hensigt (med)",
+      "meaning": "an intention, purpose",
+      "group": "fg_11",
+      "example": "Hensigten med loven er at hjælpe børnene.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "hensigt",
+        "senses": [
+          "det som en person ønsker at opnå eller udføre og derfor målretter sine handlinger efter",
+          "have som bevidst og planlagt mål",
+          "have som formål; være målrettet mod"
+        ],
+        "cite": [
+          "Det havde hele tiden været hendes hensigt at lægge en blomst på faderens grav i anledning af højtiden",
+          "Det er lokalplanens hensigt, at der .. skal ledes trafik ind til centrets parkeringspladser på en naturlig måde",
+          "Han var ikke soldat, han havde ikke til hensigt at dræbe nogen",
+          "Den anvendte forskning har til hensigt at opnå viden om en bestemt produktionsproces"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=hensigt"
+      },
+      "fg": "fg_11",
+      "frank": 164,
+      "freq": 0,
+      "freq_total": 2
+    },
+    "indtil": {
+      "word": "indtil",
+      "meaning": "until",
+      "group": "fg_11",
+      "example": "Butikken har åbent indtil klokken 20.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "",
+        "head": "indtil",
+        "senses": [
+          "indtil det nuværende eller aktuelle tidspunkt",
+          "et (ubestemt) stykke tid fremover",
+          "tidsmæssigt frem til",
+          "nærmende sig et bestemt mål eller antal (uden at overskride det)"
+        ],
+        "cite": [
+          "Min tur hernede er indtil videre gået helt fint",
+          "Indtil videre bor han og Martin i farmoderens lejlighed",
+          "Han blev hos hende indtil midnat",
+          "Udstillingen er åben daglig fra 10.00 til 18.00 indtil 1. december",
+          "Gyvel er en indtil 2 m høj busk med stive, kantede grene",
+          "En kandidatliste kan indeholde navnene på indtil 14 kandidater"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=indtil"
+      },
+      "fg": "fg_11",
+      "frank": 165,
+      "freq": 0,
+      "freq_total": 2
+    },
+    "at_være_nødt_til": {
+      "word": "at være nødt til",
+      "meaning": "to have to, be forced to",
+      "group": "fg_11",
+      "example": "Vi er nødt til at spare på strømmen.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "fg": "fg_11",
+      "frank": 166,
+      "freq": 0,
+      "freq_total": 2
+    },
+    "at_overveje": {
+      "word": "at overveje",
+      "meaning": "to consider",
+      "group": "fg_12",
+      "example": "Jeg overvejer at skifte job.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "overveje",
+        "senses": [
+          "tænke over noget eller tænke på at gøre noget idet man vurderer hvad der taler for og imod",
+          "gennemtænke om man vil sige sin stilling op, ændre holdning i en sag el.lign."
+        ],
+        "cite": [
+          "Justitsministeriet overvejer en nedsættelse af prisen på kørekort",
+          "Alt skulle være perfekt og nøje overvejet, inden han foretog sig noget",
+          "Landstræner Jørgen Jønsson vil overveje sin stilling, hvis ikke Danmark mindst når til semifinalen"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=overveje"
+      },
+      "fg": "fg_12",
+      "frank": 167,
+      "freq": 0,
+      "freq_total": 2
+    },
+    "at_planlægge": {
+      "word": "at planlægge",
+      "meaning": "to plan",
+      "group": "fg_12",
+      "example": "Vi planlægger en tur til Norge.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "planlægge",
+        "senses": [
+          "forberede, fx ved at udarbejde (detaljerede) planer; have i sinde"
+        ],
+        "cite": [
+          "Hun har netop udgivet sin første LP, og hun er i gang med at planlægge sommerens koncert-turné"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=planl%C3%A6gge"
+      },
+      "fg": "fg_12",
+      "frank": 168,
+      "freq": 0,
+      "freq_total": 2
+    },
+    "at_aflaste": {
+      "word": "at aflaste",
+      "meaning": "to relieve, ease the burden on",
+      "group": "fg_12",
+      "example": "Flere pædagoger vil aflaste de travle forældre.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "aflaste",
+        "senses": [
+          "helt eller delvis befri for arbejde, besvær, problemer el.lign.",
+          "fjerne eller mindske trykket på noget"
+        ],
+        "cite": [
+          "mødrene [skal] aflastes i hjemmet de første par uger efter fødslen",
+          "skattesystemet straffer den familie, som lever af én indtægt og aflaster de offentlige institutioner",
+          "Optrænede rygmuskler støtter og aflaster rygraden"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=aflaste"
+      },
+      "fg": "fg_12",
+      "frank": 169,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "en_aftale": {
+      "word": "en aftale",
+      "meaning": "an agreement; an appointment",
+      "group": "fg_12",
+      "example": "Jeg har en aftale med lægen i morgen.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "aftale",
+        "senses": [
+          "ordning som to eller flere parter er blevet enige om; noget som to eller flere parter gensidigt lover hinanden"
+        ],
+        "cite": [
+          "Jeg havde en aftale med ham om, at han skulle vente på mig",
+          "Regeringen må leve op til aftalen om at sikre praktikplads til alle unge"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=aftale"
+      },
+      "fg": "fg_12",
+      "frank": 170,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "allerførst": {
+      "word": "allerførst",
+      "meaning": "first of all",
+      "group": "fg_12",
+      "example": "Allerførst vil jeg takke for invitationen.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "",
+        "head": "allerførst",
+        "senses": [
+          "først af alle; absolut først"
+        ],
+        "cite": [
+          "Klaus sad på allerførste række, hvortil billetterne kostede en frygtelig masse penge",
+          "Jeg skal være den allerførste til at beklage udviklingen"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=allerf%C3%B8rst"
+      },
+      "fg": "fg_12",
+      "frank": 171,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "almindelig": {
+      "word": "almindelig",
+      "meaning": "common, ordinary",
+      "group": "fg_12",
+      "example": "Det er almindeligt at cykle til arbejde i Danmark.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "",
+        "head": "almindelig",
+        "senses": [
+          "som ikke adskiller sig fra gennemsnittet; uden bemærkelsesværdige eller påfaldende egenskaber",
+          "som omfatter eller vedkommer alle; som er fælles for alle"
+        ],
+        "cite": [
+          "Det føles stadig som en luksus for mig at have nem adgang til en helt almindelig ostemad på et godt stykke rugbrød",
+          "I museets åbningstid er der adgang til parken via museet, hvor der betales almindelig entré",
+          "Udover den almindelige folkepension kan pensionister .. få 'tilskud' i form af boligydelse",
+          "Bogen omfatter 53 fugle, som alle er ret almindelige herhjemme"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=almindelig"
+      },
+      "fg": "fg_12",
+      "frank": 172,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "at_analysere": {
+      "word": "at analysere",
+      "meaning": "to analyse",
+      "group": "fg_12",
+      "example": "I skal analysere teksten og finde hovedpointen.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "analysere",
+        "senses": [
+          "foretage en analyse af"
+        ],
+        "cite": [
+          "eleverne udvikler deres færdighed i at analysere, fortolke og vurdere tekster",
+          "da politiet analyserede asken fra hans kakkelovn, viste den sig at stamme fra et menneske"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=analysere"
+      },
+      "fg": "fg_12",
+      "frank": 173,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "en_baggrund_for": {
+      "word": "en baggrund (for)",
+      "meaning": "a background, reason (for)",
+      "group": "fg_12",
+      "example": "Baggrunden for beslutningen er de høje priser.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "baggrund",
+        "senses": [
+          "forhold eller forudgående begivenhedsforløb der danner grundlag for noget og forklarer det",
+          "vigtige træk ved en persons livshistorie som er med til at forme personligheden og betinge det videre livsforløb"
+        ],
+        "cite": [
+          "Den svage udbredelse af ren blyfri benzin skal oven i købet ses på baggrund af en kolossal markedsføringsindsats",
+          "Monory er en særsyn i fransk politik. Han er en selvlært mand uden akademisk baggrund med en fortid som garageejer"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=baggrund"
+      },
+      "fg": "fg_12",
+      "frank": 174,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "at_belaste": {
+      "word": "at belaste",
+      "meaning": "to burden, put a strain on",
+      "group": "fg_12",
+      "example": "Flyrejser belaster miljøet meget.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "belaste",
+        "senses": [
+          "påføre udgifter eller omkostninger",
+          "udsætte for en bestemt spænding eller effekt"
+        ],
+        "cite": [
+          "når han nu kunne klare sig selv, og ikke belastede kommunens kasse, så var det jo i orden",
+          "Vi prøver nu at belaste dynamoen kraftigere ved at anvende henholdsvis 2 og 3 parallelforbundne pærer i stedet for én pære"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=belaste"
+      },
+      "fg": "fg_12",
+      "frank": 175,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "en_beliggenhed": {
+      "word": "en beliggenhed",
+      "meaning": "a location",
+      "group": "fg_12",
+      "example": "Lejligheden har en god beliggenhed tæt på stationen.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "beliggenhed",
+        "senses": [
+          "sted hvor en bygning el.lign. ligger"
+        ],
+        "cite": [
+          "Huset er .. på 157 kvm og med en god beliggenhed, tæt ved skov og strand"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=beliggenhed"
+      },
+      "fg": "fg_12",
+      "frank": 176,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "at_droppe": {
+      "word": "at droppe",
+      "meaning": "to drop, give up",
+      "group": "fg_12",
+      "example": "Mange unge dropper ud af gymnasiet.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "droppe",
+        "senses": [
+          "opgive (at gennemføre) noget; afbryde et forhold til nogen",
+          "nedkaste; lade falde"
+        ],
+        "cite": [
+          "I 1988 måtte Jyske Bank droppe et sagsanlæg mod en tidligere ansat",
+          "Med andre ord synes jeg ikke han er værd at holde på – så drop ham",
+          "Er det Nixon der dropper bomber i bjergene?",
+          "Evald droppede et par bemærkninger om det uheldige i at fortælle \"sådant\", når der var børn tilstede"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=droppe"
+      },
+      "fg": "fg_12",
+      "frank": 180,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "foreløbig": {
+      "word": "foreløbig",
+      "meaning": "for the time being; provisional",
+      "group": "fg_13",
+      "example": "Projektet kører foreløbig i et år.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "",
+        "head": "foreløbig",
+        "senses": [
+          "som gælder eller eksisterer i øjeblikket, men som evt. bliver ændret senere; ikke endegyldig"
+        ],
+        "cite": [
+          "Vi fik et foreløbigt svar og løfte om mere besked",
+          "Vejrudsigten lover regnbyger. Foreløbig skinner solen dog"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=forel%C3%B8big"
+      },
+      "fg": "fg_13",
+      "frank": 182,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "at_foretrække": {
+      "word": "at foretrække",
+      "meaning": "to prefer",
+      "group": "fg_13",
+      "example": "Mange foretrækker toget frem for bilen.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "foretrække",
+        "senses": [
+          "vælge noget på bekostning af noget andet; helst ville (have)"
+        ],
+        "cite": [
+          "Hun foretrækker mænd i den modne alder",
+          "Vore foretrukne rejsemål er England og Spanien, som vi besøger ca. 1 gang årligt"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=foretr%C3%A6kke"
+      },
+      "fg": "fg_13",
+      "frank": 183,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "at_forstyrre": {
+      "word": "at forstyrre",
+      "meaning": "to disturb",
+      "group": "fg_13",
+      "example": "Mobilen forstyrrer eleverne i undervisningen.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "forstyrre",
+        "senses": [
+          "genere eller afbryde nogen mens vedkommende ønsker at sove, koncentrere sig, arbejde eller være alene"
+        ],
+        "cite": [
+          "jeg havde trukket stikket ud, jeg ville ikke forstyrres",
+          "Ved højtlæsning driller han de andre børn eller kommer med forstyrrende lyde"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=forstyrre"
+      },
+      "fg": "fg_13",
+      "frank": 184,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "frivillig": {
+      "word": "frivillig",
+      "meaning": "voluntary",
+      "group": "fg_13",
+      "example": "Hun laver frivilligt arbejde i weekenden.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "",
+        "head": "frivillig",
+        "senses": [
+          "som sker eller foretages af fri vilje",
+          "som gør noget af egen fri vilje; som ikke er tvunget"
+        ],
+        "cite": [
+          "Ingen er tjent med tvang. Kun frivillige ordninger giver meningsfyldte uddannelser",
+          "Gustaf Munch-Petersen .. var blandt de 220 danske frivillige, der faldt i kampen mod fascisterne",
+          "Det er frivillige voksne rådgivere, der i deres fritid passer Børnetelefonen både i København og i Århus"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=frivillig"
+      },
+      "fg": "fg_13",
+      "frank": 186,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "god_til_for": {
+      "word": "god (til / for)",
+      "meaning": "good (at / for)",
+      "group": "fg_13",
+      "example": "Motion er godt for både krop og hoved.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "",
+        "head": "god",
+        "senses": [
+          "udstyret med de nødvendige eller rette positive egenskaber",
+          "rigelig med hensyn til størrelse, mængde eller omfang",
+          "med de moralsk rigtige eller ønskværdige kvaliteter",
+          "forbundet med positive, varme og glade følelser"
+        ],
+        "cite": [
+          "Måske har børnene gode argumenter ... og så må de jo lige høres først",
+          "Det var et godt børnehjem med en god skole",
+          "Hos os er der god afstand mellem bordene, så man kan sidde og tale sammen i fred og ro",
+          "Krigen kaldte mange gode egenskaber frem: Hjælpsomhed, næstekærlighed og fællesskabsfølelse",
+          "kunderne skulle nok indfinde sig, hvis de kendte begrebet god smag",
+          "Når man har haft en god oplevelse, deler man den da gerne med dem, man holder af"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=god"
+      },
+      "fg": "fg_13",
+      "frank": 187,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "at_håndtere": {
+      "word": "at håndtere",
+      "meaning": "to handle, deal with",
+      "group": "fg_13",
+      "example": "Mange unge har svært ved at håndtere stress.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "håndtere",
+        "senses": [
+          "behandle noget, fx et redskab eller et instrument, ved at bruge det rigtigt"
+        ],
+        "cite": [
+          "Mason håndterer et sportsrat lige så suverænt som sine trommestikker",
+          "Hvordan skal vi håndtere affaldet fra husholdninger og erhvervsvirksomheder?"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=h%C3%A5ndtere"
+      },
+      "fg": "fg_13",
+      "frank": 188,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "imod": {
+      "word": "imod",
+      "meaning": "against",
+      "group": "fg_13",
+      "example": "Mange forældre er imod mobiler i skolen.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "",
+        "head": "imod",
+        "senses": [
+          "med noget som genstand for modstand, uenighed eller opposition",
+          "med noget som kilde til ulempe, ubehag eller uvilje",
+          "i modsat retning",
+          "(hen til og) i fysisk kontakt med noget"
+        ],
+        "cite": [
+          "Det nytter ikke noget at kæmpe imod. Julen nærmer sig",
+          "Jeg sagde dem imod, og det kunne de ikke lide",
+          "Tanken om at skulle dele mit liv med et andet menneske er mig imod",
+          "sejlbåde må være parat til at starte motoren, hvis vinden er imod",
+          "Broen kan slet ikke tåle noget, og ryger der et 2.000 tons skib imod, så ramler det hele",
+          "Så snart der er noget, der går hende imod, så får hun dårlig mave"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=imod"
+      },
+      "fg": "fg_13",
+      "frank": 190,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "en_indretning": {
+      "word": "en indretning",
+      "meaning": "interior design, layout",
+      "group": "fg_13",
+      "example": "Indretningen af kontoret er vigtig for de ansatte.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "indretning",
+        "senses": [
+          "måde hvorpå noget er indrettet eller organiseret",
+          "genstand med en bestemt, teknisk funktion"
+        ],
+        "cite": [
+          "De to ejere har haft mulighed for at bestemme lokalernes opbygning og indretning",
+          "På mange måder er fagbevægelsen blevet en bremseklods for en fornuftig indretning af vort samfund",
+          "han var konstruktør af en række fantastiske mekaniske indretninger, fra klokkespil til hele menneskeefterligninger"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=indretning"
+      },
+      "fg": "fg_13",
+      "frank": 191,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "en_information": {
+      "word": "en information",
+      "meaning": "information",
+      "group": "fg_13",
+      "example": "Du kan finde mere information om kurset på nettet.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "information",
+        "senses": [
+          "viden der gives videre i en bestemt sammenhæng",
+          "sted hvor man kan indhente bestemte oplysninger",
+          "kodede oplysninger som automater, organismer og lignende systemer indeholder eller behandler"
+        ],
+        "cite": [
+          "Udstillingen og museet skal stille information om Grønland til rådighed for publikum",
+          "Målet for en TV-journalist .. er at skaffe seerne informationer, der er så tæt på virkeligheden som muligt",
+          "Han gik hen til informationen og bad om besked om sit fly",
+          "En datamat kan modtage, lagre, bearbejde og afgive informationer",
+          "Information om tilstanden i musklen sendes via de sensoriske nervefibre til hjernen"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=information"
+      },
+      "fg": "fg_13",
+      "frank": 192,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "at_klare": {
+      "word": "at klare",
+      "meaning": "to manage, cope with",
+      "group": "fg_13",
+      "example": "Hun klarer sig godt i skolen.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "klare",
+        "senses": [
+          "(være i stand til at) gennemføre en vanskelig opgave, opfylde strenge krav, gennemleve svære tider el.lign.",
+          "bringe en sag i orden eller til afslutning",
+          "gøre klar eller fri for urenheder",
+          "være fysisk overlegen"
+        ],
+        "cite": [
+          "Jeg tror faktisk godt, jeg kan klare at vaske gulvet selv",
+          "Når man er vant til at klare livet ved hjælp af alkohol, kan det være meget vanskeligt at undvære",
+          "De forskellige maskiner klarer tøjvask, opvask, rengøring og til dels også madlavning",
+          "Han klarede stemmen med en slurk whisky",
+          "Robert jog begge hænder gennem håret, som kunne han derved klare sine tanker",
+          "Slog du overhovedet ikke fra dig? – Jo .. men det var en af de store drenge fra femte klasse. Jeg kunne slet ikke klare ham"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=klare"
+      },
+      "fg": "fg_13",
+      "frank": 193,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "lignende": {
+      "word": "lignende",
+      "meaning": "similar",
+      "group": "fg_13",
+      "example": "Andre lande har lignende problemer.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "",
+        "head": "lignende",
+        "senses": [
+          "som er af samme slags",
+          "eller andet af samme slags"
+        ],
+        "cite": [
+          "Lejernes LO har sendt vores sag til Huslejenævnet sammen med mange lignende sager fra andre kommunale ejendomme",
+          "Flødeskummet kan i stedet for rom smages til med cognac eller lignende"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=lignende"
+      },
+      "fg": "fg_13",
+      "frank": 194,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "en_loyalitet": {
+      "word": "en loyalitet",
+      "meaning": "loyalty",
+      "group": "fg_13",
+      "example": "Firmaet belønner loyalitet over for kunderne.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "loyalitet",
+        "senses": [
+          "loyal opførsel eller holdning; det at være loyal"
+        ],
+        "cite": [
+          "mange politikere .. har intet engagement med i deres job, men sætter det at blive genvalgt højere end loyaliteten over for vælgerne"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=loyalitet"
+      },
+      "fg": "fg_13",
+      "frank": 195,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "en_mening_med": {
+      "word": "en mening (med)",
+      "meaning": "a meaning, point; an opinion",
+      "group": "fg_14",
+      "example": "Hvad er meningen med den nye regel?",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "mening",
+        "senses": [
+          "(subjektiv) opfattelse eller vurdering af og holdning til en bestemt sag eller sammenhæng",
+          "tanke-, begrebs- eller betydningsmæssigt indhold af et ord, en ytring, en handling el.lign.",
+          "det som en person (i tankerne) ønsker at opnå med en bestemt handling eller adfærd"
+        ],
+        "cite": [
+          "Bogholder Iversen har langt om længe samlet sig sammen til at gå ind til direktøren for at sige ham sin ærlige mening",
+          "Hun pakkede ikke sine meninger ind i hensynsfulde, kølende omslag. Hun kaldte en spade for en spade",
+          "Jeg forstod nogenlunde ordene, men ikke meningen",
+          "Meningen med et landshold er vel, at det er de bedste spillere, der skal deltage",
+          "Det var ikke min mening at gøre grin med dig. Min tunge løb af med mig"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=mening"
+      },
+      "fg": "fg_14",
+      "frank": 197,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "en_mobilitet": {
+      "word": "en mobilitet",
+      "meaning": "mobility",
+      "group": "fg_14",
+      "example": "Mobilitet på arbejdsmarkedet er vigtig for økonomien.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "mobilitet",
+        "senses": [
+          "det at være mobil"
+        ],
+        "cite": [
+          "Efter forskellige operationer var min egen mobilitet nedsat",
+          "Mobiliteten er blevet større, de unge generationer er mere villige til at flytte"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=mobilitet"
+      },
+      "fg": "fg_14",
+      "frank": 198,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "en_motivation": {
+      "word": "en motivation",
+      "meaning": "motivation",
+      "group": "fg_14",
+      "example": "Mange elever mangler motivation til at lave lektier.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "motivation",
+        "senses": [
+          "tilskyndelse til at handle på en bestemt måde",
+          "begrundelse for at handle på en bestemt måde"
+        ],
+        "cite": [
+          "når en bjergbestiger først har besteget Mount Everest, mister han motivationen for igen at betvinge bjergtoppe",
+          "man kan opnå en stærkere kunstnerisk effekt ved at underspille, lyder motivationen for Frits Helmuts Bodil"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=motivation"
+      },
+      "fg": "fg_14",
+      "frank": 199,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "at_ødelægge": {
+      "word": "at ødelægge",
+      "meaning": "to destroy, ruin",
+      "group": "fg_14",
+      "example": "Larmen ødelægger nattesøvnen for mange.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "ødelægge",
+        "senses": [
+          "gøre ubrugelig eller værdiløs"
+        ],
+        "cite": [
+          "Mindst 100 irakiske kampvogne skal være blevet totalt ødelagt under voldsomme kampe langs den saudi-kuwaitiske grænse",
+          "Edward Kennedy ødelagde selv sin politiske karriere, da han sammen med en sekretær kørte galt"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=%C3%B8del%C3%A6gge"
+      },
+      "fg": "fg_14",
+      "frank": 201,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "at_øge": {
+      "word": "at øge",
+      "meaning": "to increase",
+      "group": "fg_14",
+      "example": "Motion øger livskvaliteten.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "øge",
+        "senses": [
+          "gøre større eller mere omfangsrig ved at føje noget til; forstærke eller intensivere graden eller styrken af noget",
+          "forlænge eller forstørre ved fysisk at føje noget til"
+        ],
+        "cite": [
+          "timetallet skal øges så engelsk får mindst 4 timer om ugen",
+          "Cellernes evne til at optage ilt øges stærkt",
+          "skibsbevægelser kan øge skibes højde med c. 1 1/2 m"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=%C3%B8ge"
+      },
+      "fg": "fg_14",
+      "frank": 202,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "opmærksom_på": {
+      "word": "opmærksom (på)",
+      "meaning": "aware (of), attentive (to)",
+      "group": "fg_14",
+      "example": "Man skal være opmærksom på de skjulte priser.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "",
+        "head": "opmærksom",
+        "senses": [
+          "som har sine sanser eller sin opfattelsesevne rettet mod én bestemt ting",
+          "som viser interesse og omtanke for nogen",
+          "rette en modtagers sanser og opfattelsesevne mod et bestemt forhold, især ved at oplyse mundtligt eller skriftligt om det"
+        ],
+        "cite": [
+          "Jeg blev opmærksom på den dæmpede musik, der strømmede ud i stuen",
+          "Gæsterne så opmærksomt på den smukke enke",
+          "Vi havde det pragtfuldt sammen, og hun var så sød og opmærksom mod mig",
+          "Med et skilt på døren gør man opmærksom på, at man ikke ønsker at modtage reklamer",
+          "Jeg må gøre dig opmærksom på, at langt de fleste privatskoler her i landet ikke står for gamle specielle holdninger"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=opm%C3%A6rksom"
+      },
+      "fg": "fg_14",
+      "frank": 203,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "at_overkomme": {
+      "word": "at overkomme",
+      "meaning": "to manage, get through",
+      "group": "fg_14",
+      "example": "Det er svært at overkomme både job og familie.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "overkomme",
+        "senses": [
+          "have kræfter, tid og overskud til at udføre",
+          "komme over; overvinde"
+        ],
+        "cite": [
+          "mange har så travlt, at de ikke kan overkomme at skrive julekort",
+          "hun kan overkomme det utrolige arbejdsmæssigt",
+          "IBM .. har lagt systemet på hylden efter to års forgæves arbejde med at overkomme tekniske vanskeligheder ved OS/2 til PowerPC"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=overkomme"
+      },
+      "fg": "fg_14",
+      "frank": 204,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "at_problematisere": {
+      "word": "at problematisere",
+      "meaning": "to question, raise problems about",
+      "group": "fg_14",
+      "example": "Forfatteren problematiserer brugen af sociale medier.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "problematisere",
+        "senses": [
+          "påpege eller drøfte en bestemt problematik"
+        ],
+        "cite": [
+          "Så småt er det ved at blive tilladt at problematisere ældres sexliv",
+          "Hjernedødskriteriet er givetvis med til at problematisere en i forvejen vanskelig beslutning"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=problematisere"
+      },
+      "fg": "fg_14",
+      "frank": 206,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "relevant": {
+      "word": "relevant",
+      "meaning": "relevant",
+      "group": "fg_14",
+      "example": "Kurset er meget relevant for mit arbejde.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "",
+        "head": "relevant",
+        "senses": [
+          "interessant eller væsentlig i den givne sammenhæng"
+        ],
+        "cite": [
+          "Det i svarskriftet anførte omkring sagsøgerens salgsbestræbelser er ikke relevant for sagen",
+          "Det er nødvendigt at aktualisere, modernisere, gøre klassikerne relevante for os her og nu"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=relevant"
+      },
+      "fg": "fg_14",
+      "frank": 208,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "rigtig": {
+      "word": "rigtig",
+      "meaning": "right, correct; really",
+      "group": "fg_14",
+      "example": "Det er rigtigt, at priserne er steget.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "",
+        "head": "rigtig",
+        "senses": [
+          "som er i overensstemmelse med sandheden eller de faktiske forhold",
+          "som er passende eller bedst egnet i henhold til et bestemt formål eller kriterium; som giver det ønskede resultat",
+          "som ikke bare er en efterligning eller en ringere eller svækket udgave af noget",
+          "i overensstemmelse med god opførsel eller god moral"
+        ],
+        "cite": [
+          "beløbsstørrelserne lød fuldstændig rigtige i mine øren",
+          "Er det rigtigt, at han har overfaldet Svend Tyksen?",
+          "vi leverer kvalitet til tiden og til den rigtige pris",
+          "en gruppe fik den rigtige tablet, mens kontrolgruppen fik en uvirksom \"blindtablet\" uden at vide det",
+          "har du set hajer i levende live? – Kun i akvarier og sådan noget, men ikke rigtigt",
+          "jeg finder det moralsk rigtigt at støtte den svage part i en konflikt"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=rigtig"
+      },
+      "fg": "fg_14",
+      "frank": 209,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "en_sandsynlighed": {
+      "word": "en sandsynlighed",
+      "meaning": "a probability, likelihood",
+      "group": "fg_14",
+      "example": "Sandsynligheden for regn i morgen er stor.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "sandsynlighed",
+        "senses": [
+          "grad af mulighed for at noget bestemt vil ske eller komme til at gælde"
+        ],
+        "cite": [
+          "sandsynligheden for at finde drengen i live svandt time for time, minut for minut",
+          "sandsynligheden er 1/2 for at få plat og 1/2 for at få krone ved kast med en mønt"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=sandsynlighed"
+      },
+      "fg": "fg_14",
+      "frank": 210,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "skeptisk_over_for": {
+      "word": "skeptisk (over for)",
+      "meaning": "sceptical (about)",
+      "group": "fg_14",
+      "example": "Mange er skeptiske over for den nye teknologi.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "",
+        "head": "skeptisk",
+        "senses": [
+          "som forholder sig tvivlende eller mistroisk over for nogen eller noget, fx med hensyn til om noget vil kunne fungere, lykkes eller nås"
+        ],
+        "cite": [
+          "jeg må stille mig skeptisk over for, om der overhovedet kommer nogen resultater ud af alt dette udvalgsarbejde",
+          "Lise og Ove-Jørn Hansen vovede trods skeptiske røster springet og startede nyt hotel"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=skeptisk"
+      },
+      "fg": "fg_14",
+      "frank": 211,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "en_solidaritet": {
+      "word": "en solidaritet",
+      "meaning": "solidarity",
+      "group": "fg_15",
+      "example": "Skat handler om solidaritet med de svage.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "solidaritet",
+        "senses": [
+          "det at være solidarisk"
+        ],
+        "cite": [
+          "jeg er også overbevist om, at der hos danskerne er vilje til solidaritet med fattige, undertrykte, krigsramte mennesker andre steder i verden"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=solidaritet"
+      },
+      "fg": "fg_15",
+      "frank": 212,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "en_stabilitet": {
+      "word": "en stabilitet",
+      "meaning": "stability",
+      "group": "fg_15",
+      "example": "Børn har brug for stabilitet i hverdagen.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "stabilitet",
+        "senses": [
+          "det at være stabil"
+        ],
+        "cite": [
+          "Jeg havde ingen smerter, men en mærkelig følelse af manglende stabilitet i knæet resten af kampen"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=stabilitet"
+      },
+      "fg": "fg_15",
+      "frank": 213,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "at_stamme_fra": {
+      "word": "at stamme (fra)",
+      "meaning": "to come from, originate from",
+      "group": "fg_15",
+      "example": "Ordet stammer fra latin.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "stamme",
+        "senses": [
+          "være udviklet (som resultat) af; skyldes",
+          "kunne føre sit nationale eller kulturelle tilhørsforhold tilbage til; have som sit oprindelsesland eller som sin egentlige (stedlige eller tidsmæssige) tilknytning"
+        ],
+        "cite": [
+          "en væsentlig del af miljøproblemerne stammer fra vores store forbrug af energi",
+          "Han stammer fra Sønderjylland – har stadig charmerende sproglige reminiscenser derfra",
+          "Det ældste billede af Maria med barnet findes i Rom, det menes at stamme fra 200-tallet"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=stamme"
+      },
+      "fg": "fg_15",
+      "frank": 214,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "en_størrelse": {
+      "word": "en størrelse",
+      "meaning": "a size",
+      "group": "fg_15",
+      "example": "Størrelsen på lejligheden passer til en familie.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "størrelse",
+        "senses": [
+          "fysisk udstrækning som noget eller nogen har i én, to eller tre dimensioner",
+          "omfang af et forhold, et fænomen eller en faktor",
+          "afgrænset fænomen, forhold eller faktor"
+        ],
+        "cite": [
+          "Lad dejen hæve lunt til dobbelt størrelse",
+          "Tegn mønsteret op i hel størrelse, idet 1 tern = 1 cm x 1 cm",
+          "Opgavens størrelse afhænger af, hvor mange medlemmer gruppen har",
+          "Det er svært at få indtryk af den egentlige størrelse af Tunguskabegivenheden [: et kometnedslag]",
+          "Jul og søde sager er uadskillelige størrelser",
+          "Da ingen aner, hvad Gud er for en størrelse, kan man altid give ham skylden for hvad som helst"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=st%C3%B8rrelse"
+      },
+      "fg": "fg_15",
+      "frank": 215,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "at_støtte": {
+      "word": "at støtte",
+      "meaning": "to support",
+      "group": "fg_15",
+      "example": "Regeringen vil støtte de små virksomheder.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "støtte",
+        "senses": [
+          "yde moralsk, økonomisk eller anden hjælp og bistand",
+          "bære eller holde noget oppe så det ikke falder ned eller vælter",
+          "hvile med sin vægt mod eller på noget; læne sig op ad"
+        ],
+        "cite": [
+          "lægen vil også kunne støtte og vejlede dig, hvis du er kommet ud i et alkoholmisbrug",
+          "Nationalbanken måtte støtte kronen med salg af valuta fra valutareserven",
+          "Bordpladen er støttet af ét ben for enden, og ellers fastgjort på væggen",
+          "Støttet af sin venindes hånd hævede hun besværligt hovedet fra puden",
+          "Kim måtte ikke støtte på benet og havde smerter",
+          "Inde i spisestuen støttede hun sig til sin stok, mens hun så på mig"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=st%C3%B8tte"
+      },
+      "fg": "fg_15",
+      "frank": 216,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "at_styrke": {
+      "word": "at styrke",
+      "meaning": "to strengthen",
+      "group": "fg_15",
+      "example": "Fælles aktiviteter styrker sammenholdet.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "styrke",
+        "senses": [
+          "gøre stærkere, mere kraftfuld, mere magtfuld el.lign.",
+          "kvikke sig op eller få nye kræfter ved at spise eller drikke"
+        ],
+        "cite": [
+          "adskillige undersøgelser viser, at motion styrker både reaktionsevnen, koncentrationsevnen og hukommelsen",
+          "du tager dig af alle folk, der spørger om hjælp, det styrker dig, at der er nogen, der har behov for dig",
+          "min mand kom ind i stuen med en flaske Jägermeister og et par glas, så vi kunne styrke os lidt"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=styrke"
+      },
+      "fg": "fg_15",
+      "frank": 217,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "at_svække": {
+      "word": "at svække",
+      "meaning": "to weaken",
+      "group": "fg_15",
+      "example": "Stress kan svække immunforsvaret.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "svække",
+        "senses": [
+          "nedsætte eller forringe en indflydelse, dominans, position eller styrke; gøre mindre slagkraftig, tydelig eller fremtrædende",
+          "forringe nogens sundhedstilstand; gøre (legemligt) svag"
+        ],
+        "cite": [
+          "Uden et aktivt samspil med omverdenen vil vor danske kultur svækkes",
+          "Gå til lægen hvis De er plaget af træthed, mangler appetit, taber vægt, har blodmangel og føler Dem svækket",
+          "efterhånden som hørelsen blev svækket, mistede de interessen for at komme i kontakt med andre"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=sv%C3%A6kke"
+      },
+      "fg": "fg_15",
+      "frank": 218,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "at_tilbyde": {
+      "word": "at tilbyde",
+      "meaning": "to offer",
+      "group": "fg_15",
+      "example": "Firmaet tilbyder de ansatte gratis frokost.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "tilbyde",
+        "senses": [
+          "opfordre nogen til gratis eller mod betaling at tage imod noget fordelagtigt, at deltage i en aktivitet, el.lign.",
+          "stille sig til rådighed; fremsætte et tilbud",
+          "være til rådighed; opstå"
+        ],
+        "cite": [
+          "Da jeg blev tilbudt stillingen som landstræner syntes jeg, at det var en utrolig tillid man viste mig",
+          "minsandten om ikke hun tilbød mig en kop eftermiddagskaffe ovre hos hende!",
+          "Jeg selv har hverken tid eller lyst til at være en traditionel bedstemor, der tilbyder sig som babysitter hele tiden",
+          "hvem skulle, hvis gunstige vilkår tilbyder sig, kunne forhindre at det gennemføres?"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=tilbyde"
+      },
+      "fg": "fg_15",
+      "frank": 219,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "tryg": {
+      "word": "tryg",
+      "meaning": "safe, secure (feeling)",
+      "group": "fg_15",
+      "example": "Børnene skal føle sig trygge i skolen.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "",
+        "head": "tryg",
+        "senses": [
+          "rolig og afslappet i tillid til at andre beskytter og tager sig kærligt af én",
+          "beskyttet mod eller fri for fare eller risiko; som ikke giver anledning til bekymringer"
+        ],
+        "cite": [
+          "det er hvad jeg forstår ved lykke: At få et lille menneskebarn til at føle sig varm og tryg i denne forvirrede verden",
+          "Hvor er ægteskabet harmonisk og trygt, når alle de dumme begyndervanskeligheder er ryddet af vejen",
+          "Ærø er et meget trygt sted at bo. Den registrerede kriminalitet er den laveste i hele politikredsen",
+          "alle initiativer, der kan være med til at skabe et trygt miljø i nattelivet, synes jeg er en god idé"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=tryg"
+      },
+      "fg": "fg_15",
+      "frank": 220,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "uforståelig": {
+      "word": "uforståelig",
+      "meaning": "incomprehensible",
+      "group": "fg_15",
+      "example": "Det er uforståeligt, at billetten er så dyr.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "",
+        "head": "uforståelig",
+        "senses": [
+          "så uklar, ulogisk, urimelig eller meningsløs at det ikke er til at forstå"
+        ],
+        "cite": [
+          "følgebrevet fra det lokale folkeregister [er ofte] udformet i vanligt uforståeligt kancellisprog",
+          "det virker uforståeligt for os andre, at man flytter tilbage til et voldeligt ægteskab"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=uforst%C3%A5elig"
+      },
+      "fg": "fg_15",
+      "frank": 221,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "at_undvære": {
+      "word": "at undvære",
+      "meaning": "to do without",
+      "group": "fg_15",
+      "example": "Mange kan ikke undvære deres mobil.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "undvære",
+        "senses": [
+          "klare sig uden; trives uden; være foruden"
+        ],
+        "cite": [
+          "Jeg kunne ikke undvære den store by. Jeg måtte have folk omkring mig",
+          "intet måltid bør undvære en god opbagt sovs"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=undv%C3%A6re"
+      },
+      "fg": "fg_15",
+      "frank": 222,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "at_vælge": {
+      "word": "at vælge",
+      "meaning": "to choose",
+      "group": "fg_15",
+      "example": "Flere vælger at bo på landet.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "vælge",
+        "senses": [
+          "bestemme sig for én (eller flere) ting som man efter nærmere overvejelse foretrækker blandt to eller flere mulige",
+          "ved afstemning udpege én eller flere personer til at sidde i fx et parlament eller en bestyrelse, til at beklæde et offentligt embede el.lign."
+        ],
+        "cite": [
+          "Hvilken hunderace skal man vælge, stor eller lille, i en dyne af pels eller korthåret og silkeglat?",
+          "Han var den sidste, der blev valgt til en rolle i TV-serien",
+          "På generalforsamlingen blev Lene Olsen valgt til næstformand"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=v%C3%A6lge"
+      },
+      "fg": "fg_15",
+      "frank": 223,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "at_værdsætte": {
+      "word": "at værdsætte",
+      "meaning": "to appreciate, value",
+      "group": "fg_15",
+      "example": "Medarbejderne vil gerne føle sig værdsat.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "værdsætte",
+        "senses": [
+          "være glad og taknemmelig for; vurdere højt"
+        ],
+        "cite": [
+          "jernbanens naboer vil formentlig værdsætte, at forbikørende tog kun vil larme halvt så meget som nu",
+          "Når kvinder er ved at køre træt i deres ægteskaber, er det ofte, fordi de ikke længere føler sig elsket og værdsat"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=v%C3%A6rds%C3%A6tte"
+      },
+      "fg": "fg_15",
+      "frank": 224,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "væsentlig": {
+      "word": "væsentlig",
+      "meaning": "significant, essential",
+      "group": "fg_15",
+      "example": "Det er væsentligt at sove nok.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "",
+        "head": "væsentlig",
+        "senses": [
+          "som udgør eller vedrører en tings inderste og egentlige væsen, og som derfor er yderst vigtig"
+        ],
+        "cite": [
+          "udøvelse af fælles forældremyndighed forudsætter, at de kan blive enige om alle væsentlige spørgsmål vedrørende barnet",
+          "Han sang væsentligt bedre end degnen, der ellers kunne råbe hele sognet op"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=v%C3%A6sentlig"
+      },
+      "fg": "fg_15",
+      "frank": 225,
+      "freq": 0,
+      "freq_total": 1
+    },
+    "vant_til": {
+      "word": "vant (til)",
+      "meaning": "used (to)",
+      "group": "fg_15",
+      "example": "Jeg er ikke vant til at stå så tidligt op.",
+      "priority": 4,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-02",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "",
+        "head": "vant",
+        "senses": [
+          "fortrolig med fordi man tit har gjort eller oplevet det",
+          "som man er fortrolig med fordi det plejer at være sådan"
+        ],
+        "cite": [
+          "Hun var vant til at klare sig selv",
+          "øllet .. gjorde ham søvnig, han var ikke så vant til at drikke øl",
+          "Ungdomsårene er præget af opbrud fra vante forhold",
+          "Alt åndede tryghed, kun hun var slået ud af sin vante bane"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=vant"
+      },
+      "fg": "fg_15",
+      "frank": 226,
+      "freq": 0,
+      "freq_total": 1
     }
   }
 }

@@ -3822,5 +3822,2204 @@
    "sjælden sygdom"
   ],
   "brug_src": "DDO"
+ },
+ "en_konsekvens_af": {
+  "word": "konsekvens",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "konsekvensen",
+    "konsekvenser",
+    "konsekvenserne"
+   ]
+  ],
+  "grammar": [
+   "konsekvens af NOGET/at+SÆTNING",
+   "konsekvens af NOGET/at.. (for NOGET/NOGEN)",
+   "NOGEN tager/drager konsekvensen af NOGET/at+SÆTNING"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_grund_til": {
+  "word": "grund",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -e, -ene",
+  "forms": [
+   [
+    "grunden",
+    "grunde",
+    "grundene"
+   ]
+  ],
+  "grammar": [
+   "grund til NOGET/at..",
+   "af+ADJEKTIV grunde",
+   "NOGET går til grunde",
+   "NOGEN går til grunde",
+   "NOGET ligger til grund (for NOGET)",
+   "NOGEN/NOGET lægger grunden (til/for NOGET)",
+   "NOGEN lægger NOGET til grund (for NOGET/at+SÆTNING)"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_fordel_ved": {
+  "word": "fordel",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -e, -ene",
+  "forms": [
+   [
+    "fordelen",
+    "fordele",
+    "fordelene"
+   ]
+  ],
+  "grammar": [
+   "fordel ved NOGET/NOGEN/at.."
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_holdning_til": {
+  "word": "holdning",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "holdningen",
+    "holdninger",
+    "holdningerne"
+   ]
+  ],
+  "grammar": [
+   "holdning til/over_for NOGET/NOGEN/at.."
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_betingelse_for": {
+  "word": "betingelse",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-n, -r, -rne",
+  "forms": [
+   [
+    "betingelsen",
+    "betingelser",
+    "betingelserne"
+   ]
+  ],
+  "grammar": [
+   "betingelse for NOGET/at..",
+   "på NOGEN s/NOGET s betingelser kun i pluralis",
+   "på betingelse af at+SÆTNING/NOGET"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "et_argument_for_imod": {
+  "word": "argument",
+  "pos": "substantiv, intetkøn",
+  "gender": "et",
+  "inflection": "-et, -er, -erne",
+  "forms": [
+   [
+    "argumentet",
+    "argumenter",
+    "argumenterne"
+   ]
+  ],
+  "grammar": [
+   "argument for/(i)mod NOGET/at.."
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_behandle": {
+  "word": "behandle",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "behandler",
+    "behandlede",
+    "behandlet"
+   ]
+  ],
+  "grammar": [
+   "NOGEN behandler NOGEN+MÅDE",
+   "NOGEN behandler NOGEN som NOGEN/NOGET",
+   "NOGEN behandler NOGET (+MÅDE)",
+   "NOGET behandler NOGET",
+   "NOGEN behandler NOGET",
+   "NOGET/NOGEN behandler NOGET",
+   "NOGEN behandler NOGET/NOGEN (med NOGET)",
+   "NOGEN behandler NOGEN for/mod NOGET"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_interesse_for": {
+  "word": "interesse",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-n, -r, -rne",
+  "forms": [
+   [
+    "interessen",
+    "interesser",
+    "interesserne"
+   ]
+  ],
+  "grammar": [
+   "interesse for NOGET/NOGEN uden pluralis",
+   "interesse for at../NOGET uden pluralis",
+   "NOGEN s interesse i NOGET",
+   "i NOGEN s/NOGET s interesse",
+   "af interesse for NOGEN (at..)",
+   "af interesse for NOGET",
+   "af+ADJEKTIV interesse",
+   "af interesse for NOGET/NOGEN"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "et_mål": {
+  "word": "mål",
+  "pos": "substantiv, intetkøn",
+  "gender": "et",
+  "inflection": "-et, -, -ene",
+  "forms": [
+   [
+    "målet",
+    "mål",
+    "målene"
+   ]
+  ],
+  "grammar": [
+   "målet for NOGET",
+   "mål med NOGET/at+INFINITIV",
+   "NOGEN står på mål for NOGET/NOGEN",
+   "NOGEN tager mål (af NOGEN) (til NOGET)"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_plan_for": {
+  "word": "plan",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "betydning 1-3: -en, -er, -erne · betydning 4 og 5: Se bøjning i skema · eller -et, -er, -erne",
+  "forms": [
+   [
+    "planen",
+    "planer",
+    "planerne"
+   ],
+   [
+    "planet",
+    "planellerplaner",
+    "planeneellerplanerne"
+   ],
+   [
+    "planet",
+    "planer",
+    "planerne"
+   ]
+  ],
+  "grammar": [
+   "plan om at+INFINITIV/NOGET",
+   "plan for NOGET/hv+SÆTNING/at+INFINITIV",
+   "plan med NOGET/NOGEN",
+   "NOGEN lægger planer (for NOGET/NOGEN/hv+SÆTNING)",
+   "NOGEN lægger planer om at+INFINITIV/NOGET/hv+SÆTNING"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_fleksibilitet": {
+  "word": "fleksibilitet",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en",
+  "forms": [
+   [
+    "fleksibiliteten"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_overholde": {
+  "word": "overholde",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, ..holdt, ..holdt",
+  "forms": [
+   [
+    "overholder",
+    "overholdt",
+    "overholdt"
+   ]
+  ],
+  "grammar": [
+   "NOGEN/NOGET overholder NOGET"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_følge_af": {
+  "word": "følge",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-n, -r, -rne",
+  "forms": [
+   [
+    "følgen",
+    "følger",
+    "følgerne"
+   ]
+  ],
+  "grammar": [
+   "følge af NOGET/at+SÆTNING",
+   "NOGEN tager NOGET til følge",
+   "i følge med NOGEN/NOGET uden pluralis",
+   "NOGEN slår følge (med NOGEN)"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_husleje": {
+  "word": "husleje",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-n, -r, -rne",
+  "forms": [
+   [
+    "huslejen",
+    "huslejer",
+    "huslejerne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_konklusion": {
+  "word": "konklusion",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "konklusionen",
+    "konklusioner",
+    "konklusionerne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_løsning_på": {
+  "word": "løsning",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "løsningen",
+    "løsninger",
+    "løsningerne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "et_resultat_af": {
+  "word": "resultat",
+  "pos": "substantiv, intetkøn",
+  "gender": "et",
+  "inflection": "-et, -er, -erne",
+  "forms": [
+   [
+    "resultatet",
+    "resultater",
+    "resultaterne"
+   ]
+  ],
+  "grammar": [
+   "resultat af NOGET"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_rettighed": {
+  "word": "rettighed",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "rettigheden",
+    "rettigheder",
+    "rettighederne"
+   ]
+  ],
+  "grammar": [
+   "indskrænke NOGEN s rettigheder",
+   "have/købe/sikre_sig/.. rettighederne til NOGET/at+INFINITIV"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_undersøge": {
+  "word": "undersøge",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, ..søgte, ..søgt",
+  "forms": [
+   [
+    "undersøger",
+    "undersøgte",
+    "undersøgt"
+   ]
+  ],
+  "grammar": [
+   "NOGEN undersøger NOGET",
+   "NOGEN undersøger NOGEN/NOGET",
+   "NOGEN undersøger NOGET/NOGEN",
+   "NOGEN undersøger NOGET/hv+SÆTNING/om+SÆTNING",
+   "NOGEN undersøger NOGET/om+SÆTNING/hv+SÆTNING",
+   "NOGEN undersøger NOGEN"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_åbne_for": {
+  "word": "åbne",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "åbner",
+    "åbnede",
+    "åbnet"
+   ]
+  ],
+  "grammar": [
+   "NOGEN åbner (NOGET)",
+   "NOGEN åbner for NOGEN",
+   "DØR åbner (+ADVERBIAL)",
+   "NOGEN åbner NOGET",
+   "NOGET åbner sig",
+   "NOGEN/NOGET åbner NOGET",
+   "NOGET åbner",
+   "NOGEN åbner for NOGET",
+   "NOGEN åbner (for) sluserne",
+   "NOGEN/NOGET åbner ild (mod NOGEN)",
+   "NOGET/NOGEN åbner NOGEN s øjne (for NOGET/at+SÆTNING)",
+   "NOGEN/NOGET åbner op for NOGET/at+SÆTNING",
+   "NOGEN åbner sig ((over) for NOGEN)",
+   "der åbner sig NOGET"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_advarsel_om_mod": {
+  "word": "advarsel",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "eller uofficiel form: Se bøjning i skema",
+  "forms": [
+   [
+    "advarslen(elleruofficielform:advarselen)",
+    "advarsler",
+    "advarslerne"
+   ]
+  ],
+  "grammar": [
+   "advarsel til NOGEN om NOGET/at+SÆTNING",
+   "advarsel til NOGEN om at+SÆTNING/NOGET/hv+SÆTNING",
+   "advarsel til NOGEN"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_anbefaling": {
+  "word": "anbefaling",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "anbefalingen",
+    "anbefalinger",
+    "anbefalingerne"
+   ]
+  ],
+  "grammar": [
+   "anbefaling af NOGET/NOGEN til NOGEN",
+   "efter anbefaling fra NOGEN",
+   "på NOGEN s anbefaling"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_ansøgning_om": {
+  "word": "ansøgning",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "ansøgningen",
+    "ansøgninger",
+    "ansøgningerne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_beskytte_mod": {
+  "word": "beskytte",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "beskytter",
+    "beskyttede",
+    "beskyttet"
+   ]
+  ],
+  "grammar": [
+   "NOGEN/NOGET beskytter NOGEN/NOGET (mod NOGET/NOGEN) (med NOGET)",
+   "NOGET/NOGEN beskytter NOGET/NOGEN (mod NOGET)",
+   "NOGEN beskytter NOGET",
+   "NOGEN beskytter sig"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_bevise": {
+  "word": "bevise",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, beviste, bevist",
+  "forms": [
+   [
+    "beviser",
+    "beviste",
+    "bevist"
+   ]
+  ],
+  "grammar": [
+   "NOGEN/NOGET beviser NOGET/at+SÆTNING",
+   "NOGEN beviser NOGET/at+SÆTNING"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_eksponent_for": {
+  "word": "eksponent",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "eksponenten",
+    "eksponenter",
+    "eksponenterne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_erkende": {
+  "word": "erkende",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, erkendte, erkendt",
+  "forms": [
+   [
+    "erkender",
+    "erkendte",
+    "erkendt"
+   ]
+  ],
+  "grammar": [
+   "NOGEN erkender at../NOGET",
+   "NOGEN erkender at+SÆTNING/NOGET",
+   "NOGEN erkender NOGET"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_evne_til": {
+  "word": "evne",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-n, -r, -rne",
+  "forms": [
+   [
+    "evnen",
+    "evner",
+    "evnerne"
+   ]
+  ],
+  "grammar": [
+   "evne(r) til at+INFINITIV/NOGET",
+   "evne(r) for NOGET/at+INFINITIV",
+   "NOGEN s evne(r) som NOGEN",
+   "evner for NOGET/at+INFINITIV"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_fastholde": {
+  "word": "fastholde",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, ..holdt, ..holdt",
+  "forms": [
+   [
+    "fastholder",
+    "fastholdt",
+    "fastholdt"
+   ]
+  ],
+  "grammar": [
+   "NOGEN fastholder NOGET",
+   "NOGEN fastholder at+SÆTNING/NOGET/hv+SÆTNING",
+   "NOGET/NOGEN fastholder NOGEN",
+   "NOGEN fastholder NOGEN på NOGET"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "et_forbud_mod": {
+  "word": "forbud",
+  "pos": "substantiv, intetkøn",
+  "gender": "et",
+  "inflection": "eller uofficiel form: Se bøjning i skema",
+  "forms": [
+   [
+    "forbuddet(elleruofficielform:forbudet)",
+    "forbud",
+    "forbuddene(elleruofficielform:forbudene)"
+   ]
+  ],
+  "grammar": [
+   "nedlægge forbud mod at../NOGET",
+   "få forbud mod at../NOGET"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_forhindring_for": {
+  "word": "forhindring",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "forhindringen",
+    "forhindringer",
+    "forhindringerne"
+   ]
+  ],
+  "grammar": [
+   "forhindring for NOGET/NOGEN"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_forkorte": {
+  "word": "forkorte",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "forkorter",
+    "forkortede",
+    "forkortet"
+   ]
+  ],
+  "grammar": [
+   "NOGEN forkorter NOGET",
+   "NOGEN forkorter NOGET (til NOGET)",
+   "NOGEN forkorter NOGET (med NOGET)",
+   "NOGEN forkorter BRØK (med TAL)"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_forpligtelse_til": {
+  "word": "forpligtelse",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-n, -r, -rne",
+  "forms": [
+   [
+    "forpligtelsen",
+    "forpligtigelsen",
+    "forpligtelser",
+    "forpligtigelser",
+    "forpligtelserne",
+    "forpligtigelserne"
+   ]
+  ],
+  "grammar": [
+   "forpligtelse til at+INFINITIV/NOGET",
+   "forpligtelse over for NOGEN/NOGET"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_forsikring": {
+  "word": "forsikring",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "forsikringen",
+    "forsikringer",
+    "forsikringerne"
+   ]
+  ],
+  "grammar": [
+   "forsikring mod NOGET",
+   "forsikring af NOGET/NOGEN uden pluralis",
+   "forsikring om at../NOGET"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "et_forslag_til_om": {
+  "word": "forslag",
+  "pos": "substantiv, intetkøn",
+  "gender": "et",
+  "inflection": "-et, -, -ene",
+  "forms": [
+   [
+    "forslaget",
+    "forslag",
+    "forslagene"
+   ]
+  ],
+  "grammar": [
+   "forslag til NOGET/at+INFINITIV",
+   "forslag om NOGET/at..",
+   "forslag i NOGET"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_gevinst_ved": {
+  "word": "gevinst",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "gevinsten",
+    "gevinster",
+    "gevinsterne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_glemme": {
+  "word": "glemme",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, glemte, glemt",
+  "forms": [
+   [
+    "glemmer",
+    "glemte",
+    "glemt"
+   ]
+  ],
+  "grammar": [
+   "NOGEN glemmer NOGET/NOGEN/at../hv+SÆTNING",
+   "NOGEN glemmer at..",
+   "NOGEN glemmer NOGET/at+SÆTNING/hv+SÆTNING",
+   "NOGEN glemmer NOGET",
+   "NOGEN glemmer NOGET/NOGEN",
+   "NOGEN glemmer NOGET/at.."
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_idyllisere": {
+  "word": "idyllisere",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "idylliserer",
+    "idylliserede",
+    "idylliseret"
+   ]
+  ],
+  "grammar": [
+   "NOGEN/NOGET idylliserer NOGET/NOGEN"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_ignorere": {
+  "word": "ignorere",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "ignorerer",
+    "ignorerede",
+    "ignoreret"
+   ]
+  ],
+  "grammar": [
+   "NOGEN ignorerer NOGET/NOGEN/at+SÆTNING"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_klage_over": {
+  "word": "klage",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "klager",
+    "klagede",
+    "klaget"
+   ]
+  ],
+  "grammar": [
+   "NOGEN klager (til NOGEN) (over NOGET/NOGEN/at+SÆTNING)",
+   "NOGEN klager (sig) (over NOGET/NOGEN/at..)",
+   "NOGEN klager REPLIK",
+   "NOGEN klager (sig) (over NOGET)",
+   "NOGEN klager over NOGET/at+SÆTNING",
+   "NOGEN klager på NOGET"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_kontrast_til": {
+  "word": "kontrast",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "kontrasten",
+    "kontraster",
+    "kontrasterne"
+   ]
+  ],
+  "grammar": [
+   "kontrast til NOGET/NOGEN",
+   "kontrast mellem NOGET/NOGEN og NOGET/NOGEN"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_lette": {
+  "word": "lette",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "letter",
+    "lettede",
+    "lettet"
+   ]
+  ],
+  "grammar": [
+   "NOGEN/NOGET letter NOGET (for NOGEN)",
+   "NOGEN/NOGET letter NOGEN NOGET",
+   "NOGEN letter NOGET/NOGEN (for VÆGT)",
+   "NOGET/NOGEN letter (på) NOGET",
+   "NOGET/NOGEN letter NOGEN/NOGET for NOGET",
+   "NOGET/NOGEN letter (fra STED)",
+   "NOGET letter",
+   "NOGEN letter (på) NOGET",
+   "NOGET/det letter",
+   "NOGEN/NOGET letter NOGET/NOGEN/sig for NOGET",
+   "NOGEN letter NOGEN/NOGET for NOGET",
+   "NOGEN letter på låget (for/til NOGET/hv+SÆTNING)",
+   "NOGEN letter sig"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_livskvalitet": {
+  "word": "livskvalitet",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "livskvaliteten",
+    "livskvaliteter",
+    "livskvaliteterne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_lukke": {
+  "word": "lukke",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "lukker",
+    "lukkede",
+    "lukket"
+   ]
+  ],
+  "grammar": [
+   "NOGEN lukker NOGET (i)",
+   "NOGEN lukker NOGET for PERIODE",
+   "NOGEN lukker NOGET (med NOGET)",
+   "NOGEN lukker NOGET omkring NOGET",
+   "NOGEN lukker NOGET (om/omkring NOGET)",
+   "NOGEN lukker NOGET om/omkring NOGET/NOGEN",
+   "NOGET lukker (sig) om/omkring NOGEN/NOGET",
+   "NOGEN lukker HUL",
+   "NOGEN/NOGET lukker NOGET",
+   "NOGEN lukker NOGET for NOGEN/NOGET",
+   "NOGEN lukker NOGET (for NOGEN/NOGET)",
+   "NOGET lukker (+TIDSPUNKT/+TIDSRUM)",
+   "NOGEN lukker NOGET (+TIDSPUNKT/+TIDSRUM)",
+   "NOGET lukker",
+   "NOGEN lukker NOGET",
+   "NOGEN lukker for NOGET",
+   "NOGEN lukker (af) for NOGET",
+   "NOGEN/NOGET lukker NOGEN/NOGET ind/ud/.. (+ADVERBIAL)",
+   "NOGET lukker+ADVERBIAL",
+   "NOGEN lukker for MASKER",
+   "NOGEN lukker af (til NOGET)",
+   "NOGEN lukker NOGET af",
+   "NOGEN lukker af for NOGET i tilknytning hertil adjektivet aflukket",
+   "NOGET lukker NOGET af",
+   "NOGET lukker af for NOGET",
+   "NOGEN lukker af (over for NOGEN/NOGET)",
+   "NOGEN lukker i",
+   "NOGEN/NOGET lukker NOGEN inde",
+   "NOGEN lukker NOGET ned",
+   "NOGEN lukker ned for NOGET",
+   "NOGEN/NOGET lukker ned",
+   "NOGEN lukker NOGET op i tilknytning hertil adjektivet oplukket",
+   "NOGEN lukker op",
+   "NOGEN lukker op for NOGET",
+   "NOGEN lukker op for NOGET/at+SÆTNING",
+   "NOGEN lukker røven",
+   "NOGET lukker sig (i)",
+   "NOGET lukker sig (til)",
+   "NOGEN lukker sig ind (+STED)",
+   "NOGEN lukker sig inde (+STED)",
+   "NOGEN/NOGET lukker sig om sig selv",
+   "NOGEN/NOGET lukker NOGET til i tilknytning hertil adjektiv tillukket",
+   "NOGET lukker til",
+   "NOGEN lukker NOGET ud",
+   "NOGEN/NOGET lukker NOGEN/NOGET ude",
+   "NOGEN/NOGET lukker NOGEN ude (fra NOGET/at+INFINITIV)"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_misforstå": {
+  "word": "misforstå",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, ..forstod, -et",
+  "forms": [
+   [
+    "misforstår",
+    "misforstod",
+    "misforstået"
+   ]
+  ],
+  "grammar": [
+   "NOGEN misforstår NOGET/NOGEN/hv+SÆTNING",
+   "NOGEN misforstår NOGET"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_omtale": {
+  "word": "omtale",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, omtalte, omtalt",
+  "forms": [
+   [
+    "omtaler",
+    "omtalte",
+    "omtalt"
+   ]
+  ],
+  "grammar": [
+   "NOGEN omtaler NOGET/NOGEN (+MÅDE)",
+   "NOGEN omtaler NOGEN som_ NOGET/+ADVERBIAL"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "et_ønske_om": {
+  "word": "ønske",
+  "pos": "substantiv, intetkøn",
+  "gender": "et",
+  "inflection": "-t, -r, -rne",
+  "forms": [
+   [
+    "ønsket",
+    "ønsker",
+    "ønskerne"
+   ]
+  ],
+  "grammar": [
+   "ønske om at../NOGET"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_opfordring_til": {
+  "word": "opfordring",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "opfordringen",
+    "opfordringer",
+    "opfordringerne"
+   ]
+  ],
+  "grammar": [
+   "på opfordring af/fra NOGEN",
+   "opfordring til/om at+INFINITIV"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_påstå": {
+  "word": "påstå",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, påstod, -et",
+  "forms": [
+   [
+    "påstår",
+    "påstod",
+    "påstået"
+   ]
+  ],
+  "grammar": [
+   "NOGEN påstår at+SÆTNING",
+   "NOGEN påstår NOGET"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_problematik": {
+  "word": "problematik",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-ken, -ker, -kerne",
+  "forms": [
+   [
+    "problematikken",
+    "problematikker",
+    "problematikkerne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_reklame": {
+  "word": "reklame",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-n, -r, -rne",
+  "forms": [
+   [
+    "reklamen",
+    "reklamer",
+    "reklamerne"
+   ]
+  ],
+  "grammar": [
+   "gøre/lave reklame for NOGET/NOGEN"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_rente": {
+  "word": "rente",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-n, -r, -rne",
+  "forms": [
+   [
+    "renten",
+    "renter",
+    "renterne"
+   ]
+  ],
+  "grammar": [
+   "renter af KAPITAL",
+   "BELØB i rente(r)",
+   "rente på PROCENTSATS",
+   "PROCENTSATS i rente",
+   "rente på LÅN"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_service": {
+  "word": "service",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "eller uofficiel form: Se bøjning i skema",
+  "forms": [
+   [
+    "servicen",
+    "servicer(elleruofficielform:services)",
+    "servicerne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "et_spørgsmål_om": {
+  "word": "spørgsmål",
+  "pos": "substantiv, intetkøn",
+  "gender": "et",
+  "inflection": "-et, -, -ene",
+  "forms": [
+   [
+    "spørgsmålet",
+    "spørgsmål",
+    "spørgsmålene"
+   ]
+  ],
+  "grammar": [
+   "(det er) et spørgsmål om NOGET/at.."
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_udbetaling": {
+  "word": "udbetaling",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "udbetalingen",
+    "udbetalinger",
+    "udbetalingerne"
+   ]
+  ],
+  "grammar": [
+   "udbetaling af NOGET til NOGEN",
+   "udbetaling på BELØB",
+   "BELØB i udbetaling"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_udskrift": {
+  "word": "udskrift",
+  "pos": "substantiv, fælleskøn (",
+  "gender": "en",
+  "inflection": "eller -en ( eller -et), -er, -erne",
+  "forms": [
+   [
+    "udskriftenellerudskriftet",
+    "udskrifter",
+    "udskrifterne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "et_udvalg_af": {
+  "word": "udvalg",
+  "pos": "substantiv, intetkøn",
+  "gender": "et",
+  "inflection": "-et, -, -ene",
+  "forms": [
+   [
+    "udvalget",
+    "udvalg",
+    "udvalgene"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_kvalitet": {
+  "word": "kvalitet",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "kvaliteten",
+    "kvaliteter",
+    "kvaliteterne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_vejledning": {
+  "word": "vejledning",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "vejledningen",
+    "vejledninger",
+    "vejledningerne"
+   ]
+  ],
+  "grammar": [
+   "vejledning i/om/til NOGET",
+   "under vejledning af NOGEN",
+   "under NOGEN s vejledning"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_velstand": {
+  "word": "velstand",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en",
+  "forms": [
+   [
+    "velstanden"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_vise": {
+  "word": "vise",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, viste, vist",
+  "forms": [
+   [
+    "viser",
+    "viste",
+    "vist"
+   ]
+  ],
+  "grammar": [
+   "NOGEN viser (NOGEN) NOGET",
+   "NOGEN viser NOGET til NOGEN",
+   "NOGEN/NOGET viser NOGET",
+   "NOGEN viser NOGET",
+   "NOGEN viser (NOGEN) NOGET/hv+SÆTNING",
+   "NOGEN viser (NOGEN) NOGET/at+SÆTNING",
+   "NOGEN viser at+SÆTNING/NOGET",
+   "NOGEN viser NOGEN+RETNING/+STED",
+   "NOGET viser at+SÆTNING/NOGET",
+   "NOGET viser NOGET/at+SÆTNING/hv+SÆTNING/om+SÆTNING",
+   "NOGET viser NOGET/NOGEN",
+   "NOGET viser+RETNING",
+   "NOGEN viser+RETNING",
+   "NOGET viser NOGET/+ADVERBIAL",
+   "NOGEN har den godhed at+INFINITIV",
+   "NOGEN viser NOGEN den godhed at+INFINITIV",
+   "NOGEN skal vise NOGEN (at+SÆTNING/hv+SÆTNING)",
+   "NOGEN viser NOGEN den sidste ære",
+   "NOGEN viser NOGET/NOGEN frem (for NOGEN)",
+   "NOGEN viser/giver NOGEN baghjul",
+   "NOGEN/NOGET viser/giver NOGEN/NOGET baghjul",
+   "NOGET/NOGEN viser hen til NOGET/at+SÆTNING",
+   "NOGEN viser (NOGEN) hensyn",
+   "NOGEN viser hensyn til NOGET/NOGEN",
+   "NOGEN viser hensyn over for NOGEN",
+   "NOGEN viser sig (+STED)",
+   "NOGEN viser sig (+STED) (for NOGEN)",
+   "NOGEN viser sig som NOGEN",
+   "NOGEN viser sig (at være) NOGET",
+   "NOGEN viser sig (+ADVERBIAL)",
+   "det viser sig at+SÆTNING",
+   "NOGET/NOGEN viser sig (at være) NOGET",
+   "NOGET viser sig at+INFINITIV",
+   "der viser sig (at være) NOGET",
+   "NOGET viser sig (som NOGET)",
+   "NOGET viser sig (+ADVERBIAL)",
+   "NOGEN viser sig (for NOGEN)",
+   "NOGEN viser (NOGEN) tilbage til NOGET",
+   "NOGEN viser tilbage til at+SÆTNING",
+   "NOGET viser tilbage til NOGET",
+   "NOGEN viser NOGEN ud"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_vurdere": {
+  "word": "vurdere",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "vurderer",
+    "vurderede",
+    "vurderet"
+   ]
+  ],
+  "grammar": [
+   "NOGEN vurderer NOGET (til NOGET/at+INFINITIV)",
+   "NOGEN vurderer NOGET (+GRAD)",
+   "NOGEN vurderer NOGEN/NOGET til at+INFINITIV",
+   "NOGEN vurderer NOGEN/NOGET (+GRAD)",
+   "NOGEN vurderer NOGET som NOGET",
+   "NOGEN vurderer at+SÆTNING/hv+SÆTNING/om+SÆTNING",
+   "NOGEN vurderer NOGET"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_acceptere": {
+  "word": "acceptere",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "accepterer",
+    "accepterede",
+    "accepteret"
+   ]
+  ],
+  "grammar": [
+   "NOGEN accepterer NOGET/at+SÆTNING",
+   "NOGEN accepterer at+SÆTNING/NOGEN/NOGET",
+   "NOGEN accepterer NOGET",
+   "NOGEN accepterer NOGEN/NOGET (som NOGEN/NOGET)"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_ændre": {
+  "word": "ændre",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "ændrer",
+    "ændrede",
+    "ændret"
+   ]
+  ],
+  "grammar": [
+   "NOGEN/NOGET ændrer NOGEN/sig/NOGET",
+   "NOGEN/NOGET ændrer på/ved NOGET",
+   "NOGEN/NOGET ændrer NOGEN/NOGET",
+   "NOGEN/NOGET ændrer NOGET"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_dokumentere": {
+  "word": "dokumentere",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "dokumenterer",
+    "dokumenterede",
+    "dokumenteret"
+   ]
+  ],
+  "grammar": [
+   "NOGEN/NOGET dokumenterer NOGET/at+SÆTNING"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_foreslå": {
+  "word": "foreslå",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, ..slog, -et",
+  "forms": [
+   [
+    "foreslår",
+    "foreslog",
+    "foreslået"
+   ]
+  ],
+  "grammar": [
+   "NOGEN foreslår (NOGEN) NOGET/at../REPLIK",
+   "NOGET foreslås+PRÆTERITUM PARTICIPIUM/+ADJEKTIV",
+   "NOGET foreslår NOGET/at+SÆTNING"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_fravælge": {
+  "word": "fravælge",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, fravalgte, fravalgt",
+  "forms": [
+   [
+    "fravælger",
+    "fravalgte",
+    "fravalgt"
+   ]
+  ],
+  "grammar": [
+   "NOGEN fravælger NOGET"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_hensigt_med": {
+  "word": "hensigt",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "hensigten",
+    "hensigter",
+    "hensigterne"
+   ]
+  ],
+  "grammar": [
+   "hensigt med NOGET",
+   "med/i den hensigt at+INFINITIV",
+   "hensigten med NOGET/at+INFINITIV",
+   "hensigten bag NOGET",
+   "NOGET s hensigt",
+   "NOGEN har til hensigt at+INFINITIV",
+   "NOGET har til hensigt at+INFINITIV"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_overveje": {
+  "word": "overveje",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "overvejer",
+    "overvejede",
+    "overvejet"
+   ]
+  ],
+  "grammar": [
+   "NOGEN overvejer (NOGET/at+INFINITIV/om+SÆTNING/hv+SÆTNING)"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_planlægge": {
+  "word": "planlægge",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, ..lagde, ..lagt",
+  "forms": [
+   [
+    "planlægger",
+    "plagde",
+    "plagt"
+   ]
+  ],
+  "grammar": [
+   "NOGEN planlægger (NOGET/at..)"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_aflaste": {
+  "word": "aflaste",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "aflaster",
+    "aflastede",
+    "aflastet"
+   ]
+  ],
+  "grammar": [
+   "NOGEN/NOGET aflaster NOGEN/NOGET",
+   "NOGET aflaster NOGET"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_aftale": {
+  "word": "aftale",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-n, -r, -rne",
+  "forms": [
+   [
+    "aftalen",
+    "aftaler",
+    "aftalerne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_analysere": {
+  "word": "analysere",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "analyserer",
+    "analyserede",
+    "analyseret"
+   ]
+  ],
+  "grammar": [
+   "NOGEN analyserer NOGET"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_baggrund_for": {
+  "word": "baggrund",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -e, -ene",
+  "forms": [
+   [
+    "baggrunden",
+    "baggrunde",
+    "baggrundene"
+   ]
+  ],
+  "grammar": [
+   "med NOGET som baggrund",
+   "på baggrund af NOGET/at+SÆTNING",
+   "danne/skabe baggrund for NOGET/at..",
+   "have sin baggrund i NOGET/at+SÆTNING"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_belaste": {
+  "word": "belaste",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "belaster",
+    "belastede",
+    "belastet"
+   ]
+  ],
+  "grammar": [
+   "NOGEN belaster NOGET (med NOGET)",
+   "NOGET belaster NOGET",
+   "NOGET/NOGEN belaster NOGEN/NOGET (med NOGET)",
+   "NOGEN belaster NOGET/NOGEN (med NOGET)"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_beliggenhed": {
+  "word": "beliggenhed",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "beliggenheden",
+    "beliggenheder",
+    "beliggenhederne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_droppe": {
+  "word": "droppe",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "dropper",
+    "droppede",
+    "droppet"
+   ]
+  ],
+  "grammar": [
+   "NOGEN dropper NOGET/NOGEN",
+   "NOGEN dropper NOGET",
+   "NOGEN dropper ind (+STED)",
+   "NOGEN dropper ud (af NOGET)"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_foretrække": {
+  "word": "foretrække",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "præteritum participium brugt som foranstillet adjektiv: -r, ..trak, ..trukket · eller Se bøjning i skema",
+  "forms": [
+   [
+    "foretrækker",
+    "foretrak",
+    "foretrukket"
+   ],
+   [
+    "foretrukkenellerforetrukket",
+    "foretrukket",
+    "foretrukne"
+   ]
+  ],
+  "grammar": [
+   "NOGEN foretrækker NOGET/at../NOGEN (frem for NOGET/at../NOGEN)"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_forstyrre": {
+  "word": "forstyrre",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "forstyrrer",
+    "forstyrrede",
+    "forstyrret"
+   ]
+  ],
+  "grammar": [
+   "NOGEN forstyrrer NOGEN (i NOGET)",
+   "NOGEN/NOGET forstyrrer NOGET",
+   "NOGET forstyrrer NOGET",
+   "NOGET ødelægger ikke NOGEN s nattesøvn"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_håndtere": {
+  "word": "håndtere",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "håndterer",
+    "håndterede",
+    "håndteret"
+   ]
+  ],
+  "grammar": [
+   "NOGEN håndterer NOGET",
+   "NOGEN håndterer NOGET/NOGEN"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_indretning": {
+  "word": "indretning",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "indretningen",
+    "indretninger",
+    "indretningerne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_information": {
+  "word": "information",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "informationen",
+    "informationer",
+    "informationerne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_klare": {
+  "word": "klare",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "klarer",
+    "klarede",
+    "klaret"
+   ]
+  ],
+  "grammar": [
+   "NOGEN klarer NOGET/at+INFINITIV",
+   "NOGEN klarer NOGEN/NOGET/at+INFINITIV",
+   "NOGET/NOGEN klarer NOGET",
+   "NOGEN klarer NOGET",
+   "NOGEN/NOGET klarer NOGET/at+INFINITIV",
+   "NOGEN klarer NOGEN",
+   "NOGET klarer NOGET",
+   "NOGEN klarer frisag",
+   "det/NOGET klarer op",
+   "NOGEN/ANSIGT klarer op",
+   "NOGEN klarer sig (+ADVERBIAL)",
+   "NOGEN klarer sig med NOGET",
+   "NOGEN klarer skærene (for NOGEN)"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_loyalitet": {
+  "word": "loyalitet",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "loyaliteten",
+    "loyaliteter",
+    "loyaliteterne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_mening_med": {
+  "word": "mening",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "meningen",
+    "meninger",
+    "meningerne"
+   ]
+  ],
+  "grammar": [
+   "mening om NOGET/NOGEN/at..",
+   "efter NOGEN s mening",
+   "mening med NOGET/at..",
+   "mening med NOGET/at.. uden pluralis",
+   "meningen med NOGET/at+INFINITIV uden pluralis"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_mobilitet": {
+  "word": "mobilitet",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en",
+  "forms": [
+   [
+    "mobiliteten"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_motivation": {
+  "word": "motivation",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "motivationen",
+    "motivationer",
+    "motivationerne"
+   ]
+  ],
+  "grammar": [
+   "motivation for/til NOGET/at+INFINITIV"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_ødelægge": {
+  "word": "ødelægge",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, ødelagde, ødelagt",
+  "forms": [
+   [
+    "ødelægger",
+    "ødelagde",
+    "ødelagt"
+   ]
+  ],
+  "grammar": [
+   "NOGEN/NOGET ødelægger NOGET",
+   "NOGEN/NOGET ødelægger NOGEN",
+   "NOGET ødelægger ikke NOGEN s nattesøvn"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_øge": {
+  "word": "øge",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "eller uofficiel form: Se bøjning i skema",
+  "forms": [
+   [
+    "øger",
+    "øgede(elleruofficielform:øgte)",
+    "øget(elleruofficielform:øgt)"
+   ]
+  ],
+  "grammar": [
+   "NOGEN/NOGET øger NOGET",
+   "NOGET øger",
+   "NOGEN øger (NOGET) til STILLING"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_overkomme": {
+  "word": "overkomme",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, ..kom, -t",
+  "forms": [
+   [
+    "overkommer",
+    "overkom",
+    "overkommet"
+   ]
+  ],
+  "grammar": [
+   "NOGEN overkommer NOGET/at+INFINITIV",
+   "NOGEN overkommer NOGET"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_problematisere": {
+  "word": "problematisere",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "problematiserer",
+    "problematiserede",
+    "problematiseret"
+   ]
+  ],
+  "grammar": [
+   "NOGEN/NOGET problematiserer NOGET"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_sandsynlighed": {
+  "word": "sandsynlighed",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "sandsynligheden",
+    "sandsynligheder",
+    "sandsynlighederne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_solidaritet": {
+  "word": "solidaritet",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en",
+  "forms": [
+   [
+    "solidariteten"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_stabilitet": {
+  "word": "stabilitet",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en",
+  "forms": [
+   [
+    "stabiliteten"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_stamme_fra": {
+  "word": "stamme",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "stammer",
+    "stammede",
+    "stammet"
+   ]
+  ],
+  "grammar": [
+   "NOGEN/NOGET stammer fra NOGET/NOGEN",
+   "NOGET stammer fra NOGET/NOGEN",
+   "NOGEN stammer fra NOGEN/NOGET",
+   "NOGEN stammer NOGET op i tilknytning hertil adjektivet opstammet",
+   "NOGEN stammer",
+   "NOGEN stammer (REPLIK/NOGET)"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_størrelse": {
+  "word": "størrelse",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-n, -r, -rne",
+  "forms": [
+   [
+    "størrelsen",
+    "størrelser",
+    "størrelserne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_støtte": {
+  "word": "støtte",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "støtter",
+    "støttede",
+    "støttet"
+   ]
+  ],
+  "grammar": [
+   "NOGEN støtter NOGEN/NOGET",
+   "NOGEN støtter NOGET/at+SÆTNING",
+   "NOGET støtter NOGET",
+   "NOGET/NOGEN støtter NOGET (med NOGET)",
+   "NOGEN/NOGET støtter NOGEN (+RETNING)",
+   "NOGEN støtter (sig)+ADVERBIAL",
+   "NOGEN støtter NOGET+ADVERBIAL",
+   "NOGEN støtter op (om/omkring/bag NOGEN/NOGET)",
+   "NOGEN støtter sig til NOGET/NOGEN"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_styrke": {
+  "word": "styrke",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "styrker",
+    "styrkede",
+    "styrket"
+   ]
+  ],
+  "grammar": [
+   "NOGEN/NOGET styrker NOGET/NOGEN",
+   "NOGEN styrker sig (på/med NOGET)"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_svække": {
+  "word": "svække",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "svækker",
+    "svækkede",
+    "svækket"
+   ]
+  ],
+  "grammar": [
+   "NOGET/NOGEN svækker NOGET/NOGEN",
+   "NOGET svækker NOGEN/NOGET",
+   "NOGET svækker NOGET"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_tilbyde": {
+  "word": "tilbyde",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, tilbød, tilbudt",
+  "forms": [
+   [
+    "tilbyder",
+    "tilbød",
+    "tilbudt"
+   ]
+  ],
+  "grammar": [
+   "NOGEN tilbyder (NOGEN) NOGET",
+   "NOGEN tilbyder (NOGEN) at+INFINITIV",
+   "NOGEN tilbyder NOGEN at..",
+   "NOGEN tilbyder sig (som+SUBSTANTIV)",
+   "NOGET tilbyder sig"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_undvære": {
+  "word": "undvære",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "undværer",
+    "undværede",
+    "undværet"
+   ]
+  ],
+  "grammar": [
+   "NOGEN/NOGET undværer NOGET/NOGEN"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_vælge": {
+  "word": "vælge",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, valgte, valgt",
+  "forms": [
+   [
+    "vælger",
+    "valgte",
+    "valgt"
+   ]
+  ],
+  "grammar": [
+   "NOGEN vælger NOGET/NOGEN/hv+SÆTNING/om+SÆTNING (ud_fra/efter NOGET)",
+   "NOGEN vælger (i)mellem NOGET/NOGEN og NOGET/NOGEN",
+   "NOGEN vælger sig NOGET/NOGEN",
+   "NOGEN vælger at+INFINITIV/NOGET",
+   "NOGEN vælger NOGEN (til NOGET/at+INFINITIV)",
+   "NOGEN vælger NOGEN som NOGET",
+   "NOGEN vælger NOGET/NOGEN fra",
+   "NOGEN vælger NOGEN ind (i NOGET)",
+   "NOGEN vælger NOGET/NOGEN til",
+   "NOGEN vælger NOGET/NOGEN ud (af NOGET/NOGLE)"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_værdsætte": {
+  "word": "værdsætte",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, ..satte, ..sat",
+  "forms": [
+   [
+    "værdsætter",
+    "..satte",
+    "..sat"
+   ]
+  ],
+  "grammar": [
+   "NOGEN værdsætter NOGET/at../NOGEN"
+  ],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
  }
 }

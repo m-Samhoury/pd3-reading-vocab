@@ -1936,5 +1936,1069 @@
    "opbakning til noget / fra nogen: bred opbakning til planen"
   ],
   "prep": "opbakning til"
+ },
+ "en_konsekvens_af": {
+  "construction": [
+   "konsekvensen af noget; få konsekvenser for nogen",
+   "konsekvensen af noget (the consequence of sth); få konsekvenser for nogen (have consequences for sb)"
+  ],
+  "prep": "konsekvensen af noget"
+ },
+ "som_nævnt": {
+  "construction": [
+   "Som nævnt + verbum på plads 2: Som nævnt er prisen steget.",
+   "As mentioned + verb in 2nd place: Som nævnt er prisen steget."
+  ],
+  "prep": "som nævnt + V2: Som nævnt er …"
+ },
+ "en_grund_til": {
+  "construction": [
+   "grunden til, at …; af den grund",
+   "grunden til, at … (the reason why …); af den grund (for that reason)"
+  ],
+  "prep": "grunden til noget"
+ },
+ "en_fordel_ved": {
+  "construction": [
+   "en fordel ved noget; have fordel af noget; til fordel for",
+   "en fordel ved noget (an advantage of sth); have fordel af (benefit from); til fordel for (in favour of)"
+  ],
+  "prep": "en fordel ved noget"
+ },
+ "en_holdning_til": {
+  "construction": [
+   "have en holdning til noget",
+   "have en holdning til noget (have an opinion on sth)"
+  ],
+  "prep": "en holdning til noget"
+ },
+ "modsat": {
+  "construction": [
+   "modsat mange andre …; det modsatte af noget",
+   "modsat mange andre (unlike many others); det modsatte af noget (the opposite of sth)"
+  ],
+  "prep": "modsat + navneord / i modsætning til"
+ },
+ "en_betingelse_for": {
+  "construction": [
+   "en betingelse for noget; på betingelse af, at …",
+   "en betingelse for noget (a condition for sth); på betingelse af, at … (on condition that …)"
+  ],
+  "prep": "en betingelse for noget"
+ },
+ "hermed": {
+  "construction": [
+   "Hermed + verbum på plads 2: Hermed er sagen afgjort.",
+   "Hermed + verb in 2nd place: Hermed er sagen afgjort."
+  ],
+  "prep": "hermed + V2: Hermed er …"
+ },
+ "et_argument_for_imod": {
+  "construction": [
+   "et argument for noget; et argument imod noget",
+   "et argument for noget (an argument for sth); et argument imod noget (against sth)"
+  ],
+  "prep": "et argument for / imod noget"
+ },
+ "at_behandle": {
+  "construction": [
+   "behandle nogen for noget; behandle et emne",
+   "behandle nogen for noget (treat sb for sth); behandle et emne (deal with a topic)"
+  ],
+  "prep": "blive behandlet for en sygdom"
+ },
+ "herudover": {
+  "construction": [
+   "Herudover + verbum på plads 2: Herudover har vi en have.",
+   "Herudover + verb in 2nd place: Herudover har vi en have."
+  ],
+  "prep": "herudover + V2: Herudover har …"
+ },
+ "en_interesse_for": {
+  "construction": [
+   "have interesse for noget; være interesseret i noget",
+   "have interesse for noget (be interested in sth); være interesseret i noget"
+  ],
+  "prep": "interesse for noget"
+ },
+ "et_mål": {
+  "construction": [
+   "målet med noget; nå et mål; have som mål at …",
+   "målet med noget (the aim of sth); nå et mål (reach a goal); have som mål at …"
+  ],
+  "prep": "målet med noget / nå et mål"
+ },
+ "en_plan_for": {
+  "construction": [
+   "en plan for noget; have planer om at + infinitiv",
+   "en plan for noget (a plan for sth); have planer om at … (plan to …)"
+  ],
+  "prep": "planer for noget / planer om at …"
+ },
+ "at_have_tid_til": {
+  "construction": [
+   "have tid til noget; have tid til at + infinitiv",
+   "have tid til noget (have time for sth); have tid til at … (have time to …)"
+  ],
+  "prep": "have tid til noget / til at …"
+ },
+ "vanskelig": {
+  "construction": [
+   "det er vanskeligt at + infinitiv; vanskelig for nogen",
+   "det er vanskeligt at + infinitive (it is difficult to …); vanskelig for nogen"
+  ],
+  "prep": "vanskelig at + infinitiv"
+ },
+ "en_fleksibilitet": {
+  "construction": [
+   "fleksibilitet i arbejdet; give fleksibilitet",
+   "fleksibilitet i arbejdet (flexibility at work); give fleksibilitet (give flexibility)"
+  ],
+  "prep": "fleksibilitet i noget"
+ },
+ "at_overholde": {
+  "construction": [
+   "overholde noget (reglerne, en aftale, en frist)",
+   "overholde noget (keep the rules, an agreement, a deadline)"
+  ],
+  "prep": "overholde reglerne"
+ },
+ "afhængig_af": {
+  "construction": [
+   "være afhængig af noget / nogen",
+   "være afhængig af noget (depend on sth / be addicted to sth)"
+  ],
+  "prep": "afhængig af noget"
+ },
+ "en_følge_af": {
+  "construction": [
+   "følgen af noget; som følge af noget",
+   "følgen af noget (the result of sth); som følge af noget (as a result of sth)"
+  ],
+  "prep": "følgen af noget / som følge af"
+ },
+ "en_husleje": {
+  "construction": [
+   "betale husleje; huslejen stiger",
+   "betale husleje (pay rent); huslejen stiger (the rent goes up)"
+  ],
+  "prep": "huslejen for en lejlighed"
+ },
+ "en_konklusion": {
+  "construction": [
+   "konklusionen er, at …; komme frem til en konklusion",
+   "konklusionen er, at … (the conclusion is that …); komme frem til en konklusion (reach a conclusion)"
+  ],
+  "prep": "konklusionen på / af noget"
+ },
+ "en_løsning_på": {
+  "construction": [
+   "en løsning på et problem; finde en løsning",
+   "en løsning på et problem (a solution to a problem); finde en løsning (find a solution)"
+  ],
+  "prep": "en løsning på noget"
+ },
+ "muligvis": {
+  "construction": [
+   "ADV, efter verbet: Han kommer muligvis i morgen.",
+   "ADV, after the verb: Han kommer muligvis i morgen."
+  ],
+  "prep": "muligvis efter verbet"
+ },
+ "et_resultat_af": {
+  "construction": [
+   "resultatet af noget; resultatet er, at …",
+   "resultatet af noget (the result of sth); resultatet er, at …"
+  ],
+  "prep": "resultatet af noget"
+ },
+ "en_rettighed": {
+  "construction": [
+   "have ret til noget; rettigheder for nogen",
+   "have ret til noget (have the right to sth); rettigheder for nogen (rights for sb)"
+  ],
+  "prep": "rettigheder for nogen"
+ },
+ "samtidig": {
+  "construction": [
+   "samtidig med noget; samtidig med, at …",
+   "samtidig med noget (at the same time as sth); samtidig med, at … (while …)"
+  ],
+  "prep": "samtidig med, at …"
+ },
+ "tilfældigvis": {
+  "construction": [
+   "tilfældig (adj.); en tilfældighed (navneord); tilfældigvis (adv.)",
+   "tilfældig (random); en tilfældighed (a coincidence); tilfældigvis (by chance)"
+  ],
+  "prep": "tilfældigvis efter verbet"
+ },
+ "at_undersøge": {
+  "construction": [
+   "undersøge noget; undersøge, om …",
+   "undersøge noget (examine sth); undersøge, om … (find out whether …)"
+  ],
+  "prep": "undersøge noget / undersøge, om …"
+ },
+ "at_åbne_for": {
+  "construction": [
+   "åbne noget; åbne for noget; åbne op for noget",
+   "åbne noget (open sth); åbne (op) for noget (open up for sth)"
+  ],
+  "prep": "åbne for noget"
+ },
+ "acceptabel": {
+  "construction": [
+   "det er acceptabelt at + infinitiv",
+   "det er acceptabelt at … (it is acceptable to …)"
+  ],
+  "prep": "acceptabel for nogen"
+ },
+ "en_advarsel_om_mod": {
+  "construction": [
+   "en advarsel om noget; en advarsel mod noget",
+   "en advarsel om noget (a warning about sth); en advarsel mod noget (a warning against sth)"
+  ],
+  "prep": "en advarsel om / mod noget"
+ },
+ "alene": {
+  "construction": [
+   "bo alene; ikke alene … men også",
+   "bo alene (live alone); ikke alene … men også (not only … but also)"
+  ],
+  "prep": "alene / ikke alene … men også"
+ },
+ "altså": {
+  "construction": [
+   "Det er altså vigtigt …; Altså + V2",
+   "Det er altså vigtigt … (so it is important …); Altså + verb in 2nd place"
+  ],
+  "prep": "altså efter verbet / først i sætningen"
+ },
+ "en_anbefaling": {
+  "construction": [
+   "følge en anbefaling; en anbefaling om noget",
+   "følge en anbefaling (follow a recommendation); en anbefaling om noget"
+  ],
+  "prep": "en anbefaling om / af noget"
+ },
+ "en_ansøgning_om": {
+  "construction": [
+   "sende en ansøgning om noget",
+   "sende en ansøgning om noget (send an application for sth)"
+  ],
+  "prep": "en ansøgning om noget"
+ },
+ "arbejdsmæssigt_set": {
+  "construction": [
+   "arbejdsmæssigt set + verbum på plads 2",
+   "arbejdsmæssigt set + verb in 2nd place"
+  ],
+  "prep": "X-mæssigt set + V2"
+ },
+ "bekymrende": {
+  "construction": [
+   "det er bekymrende, at …",
+   "det er bekymrende, at … (it is worrying that …)"
+  ],
+  "prep": "det er bekymrende, at …"
+ },
+ "at_beskytte_mod": {
+  "construction": [
+   "beskytte nogen mod noget; være beskyttet mod noget",
+   "beskytte nogen mod noget (protect sb against sth); være beskyttet mod noget"
+  ],
+  "prep": "beskytte nogen mod noget"
+ },
+ "at_bevise": {
+  "construction": [
+   "bevise noget; bevise, at …",
+   "bevise noget (prove sth); bevise, at … (prove that …)"
+  ],
+  "prep": "bevise noget / bevise, at …"
+ },
+ "dernæst": {
+  "construction": [
+   "Først …, dernæst …; Dernæst + verbum på plads 2",
+   "Først …, dernæst … (first …, then …); Dernæst + verb in 2nd place"
+  ],
+  "prep": "dernæst + V2"
+ },
+ "en_eksponent_for": {
+  "construction": [
+   "være eksponent for noget",
+   "være eksponent for noget (be a representative of sth)"
+  ],
+  "prep": "en eksponent for noget"
+ },
+ "at_erkende": {
+  "construction": [
+   "erkende noget; erkende, at …",
+   "erkende noget (admit sth); erkende, at … (acknowledge that …)"
+  ],
+  "prep": "erkende noget / erkende, at …"
+ },
+ "en_evne_til": {
+  "construction": [
+   "have evne til at + infinitiv; have evner inden for noget",
+   "have evne til at … (have the ability to …); have evner inden for noget"
+  ],
+  "prep": "evnen til at + infinitiv"
+ },
+ "at_fastholde": {
+  "construction": [
+   "fastholde medarbejdere; fastholde, at …",
+   "fastholde medarbejdere (retain employees); fastholde, at … (insist that …)"
+  ],
+  "prep": "fastholde nogen / fastholde, at …"
+ },
+ "et_forbud_mod": {
+  "construction": [
+   "et forbud mod noget; indføre et forbud",
+   "et forbud mod noget (a ban on sth); indføre et forbud (introduce a ban)"
+  ],
+  "prep": "et forbud mod noget"
+ },
+ "en_forhindring_for": {
+  "construction": [
+   "være en forhindring for noget",
+   "være en forhindring for noget (be an obstacle to sth)"
+  ],
+  "prep": "en forhindring for noget / nogen"
+ },
+ "forkert": {
+  "construction": [
+   "det er forkert at + infinitiv; gøre noget forkert",
+   "det er forkert at … (it is wrong to …); gøre noget forkert (do sth wrong)"
+  ],
+  "prep": "det er forkert at + infinitiv"
+ },
+ "at_forkorte": {
+  "construction": [
+   "forkorte noget (arbejdstiden, ventetiden)",
+   "forkorte noget (shorten working hours, the waiting time)"
+  ],
+  "prep": "forkorte noget"
+ },
+ "en_forpligtelse_til": {
+  "construction": [
+   "have en forpligtelse til at + infinitiv; være forpligtet til at …",
+   "have en forpligtelse til at … (have an obligation to …); være forpligtet til at …"
+  ],
+  "prep": "en forpligtelse til at + infinitiv"
+ },
+ "en_forsikring": {
+  "construction": [
+   "tegne en forsikring; en forsikring mod noget",
+   "tegne en forsikring (take out insurance); en forsikring mod noget (insurance against sth)"
+  ],
+  "prep": "en forsikring mod noget"
+ },
+ "forskellig_fra": {
+  "construction": [
+   "være forskellig fra noget / nogen",
+   "være forskellig fra noget (be different from sth)"
+  ],
+  "prep": "forskellig fra noget"
+ },
+ "et_forslag_til_om": {
+  "construction": [
+   "et forslag til noget; et forslag om at + infinitiv",
+   "et forslag til noget (a suggestion for sth); et forslag om at … (a proposal to …)"
+  ],
+  "prep": "et forslag til / om noget"
+ },
+ "for_det_første": {
+  "construction": [
+   "For det første …, for det andet … (+ verbum på plads 2)",
+   "For det første …, for det andet … (+ verb in 2nd place)"
+  ],
+  "prep": "for det første + V2"
+ },
+ "fysisk_set": {
+  "construction": [
+   "fysisk set + verbum på plads 2",
+   "fysisk set + verb in 2nd place"
+  ],
+  "prep": "X set + V2"
+ },
+ "en_gevinst_ved": {
+  "construction": [
+   "en gevinst ved noget; have gevinst af noget",
+   "en gevinst ved noget (a benefit of sth); have gevinst af noget (benefit from sth)"
+  ],
+  "prep": "en gevinst ved noget"
+ },
+ "at_glemme": {
+  "construction": [
+   "glemme noget; glemme at + infinitiv",
+   "glemme noget (forget sth); glemme at … (forget to …)"
+  ],
+  "prep": "glemme noget / glemme at + infinitiv"
+ },
+ "at_idyllisere": {
+  "construction": [
+   "idyllisere noget (fortiden, livet på landet)",
+   "idyllisere noget (romanticise the past, country life)"
+  ],
+  "prep": "idyllisere noget"
+ },
+ "at_ignorere": {
+  "construction": [
+   "ignorere noget; ignorere nogen",
+   "ignorere noget (ignore sth); ignorere nogen (ignore sb)"
+  ],
+  "prep": "ignorere noget / nogen"
+ },
+ "imens": {
+  "construction": [
+   "Imens + verbum på plads 2; imens han sover (SUB)",
+   "Imens + verb in 2nd place; imens han sover (while he sleeps)"
+  ],
+  "prep": "imens + V2 / imens (= mens) + ledsætning"
+ },
+ "at_klage_over": {
+  "construction": [
+   "klage over noget; klage til nogen",
+   "klage over noget (complain about sth); klage til nogen (complain to sb)"
+  ],
+  "prep": "klage over noget"
+ },
+ "en_kontrast_til": {
+  "construction": [
+   "i kontrast til noget; stå i kontrast til noget",
+   "i kontrast til noget (in contrast to sth); stå i kontrast til noget"
+  ],
+  "prep": "i kontrast til noget"
+ },
+ "kulturelt_set": {
+  "construction": [
+   "kulturelt set + verbum på plads 2",
+   "kulturelt set + verb in 2nd place"
+  ],
+  "prep": "X set + V2"
+ },
+ "langt_fra": {
+  "construction": [
+   "det er langt fra nok; langt fra alle",
+   "det er langt fra nok (it is far from enough); langt fra alle (far from everyone)"
+  ],
+  "prep": "langt fra + adjektiv / navneord"
+ },
+ "at_lette": {
+  "construction": [
+   "lette noget; lette arbejdet for nogen",
+   "lette noget (make sth easier); lette arbejdet for nogen (ease the work for sb)"
+  ],
+  "prep": "lette noget for nogen"
+ },
+ "en_livskvalitet": {
+  "construction": [
+   "give / øge livskvaliteten",
+   "give / øge livskvaliteten (give / raise quality of life)"
+  ],
+  "prep": "livskvalitet for nogen"
+ },
+ "at_lukke": {
+  "construction": [
+   "lukke noget; lukke ned for noget",
+   "lukke noget (close sth); lukke ned for noget (shut sth down)"
+  ],
+  "prep": "lukke noget / lukke ned"
+ },
+ "mentalt_set": {
+  "construction": [
+   "mentalt set + verbum på plads 2",
+   "mentalt set + verb in 2nd place"
+  ],
+  "prep": "X set + V2"
+ },
+ "at_misforstå": {
+  "construction": [
+   "misforstå noget; misforstå nogen",
+   "misforstå noget (misunderstand sth); misforstå nogen (misunderstand sb)"
+  ],
+  "prep": "misforstå noget / nogen"
+ },
+ "næsten_aldrig": {
+  "construction": [
+   "ADV, efter verbet: Han kommer næsten aldrig.",
+   "ADV, after the verb: Han kommer næsten aldrig."
+  ],
+  "prep": "næsten aldrig efter verbet"
+ },
+ "at_omtale": {
+  "construction": [
+   "omtale noget; omtale nogen som …",
+   "omtale noget (mention sth); omtale nogen som … (refer to sb as …)"
+  ],
+  "prep": "omtale noget / nogen"
+ },
+ "et_ønske_om": {
+  "construction": [
+   "et ønske om noget; et ønske om at + infinitiv",
+   "et ønske om noget (a wish for sth); et ønske om at … (a wish to …)"
+  ],
+  "prep": "et ønske om noget / om at + infinitiv"
+ },
+ "en_opfordring_til": {
+  "construction": [
+   "en opfordring til noget; opfordre nogen til at + infinitiv",
+   "en opfordring til noget (a call for sth); opfordre nogen til at … (urge sb to …)"
+  ],
+  "prep": "en opfordring til nogen om at + infinitiv"
+ },
+ "at_påstå": {
+  "construction": [
+   "påstå, at …; påstå noget",
+   "påstå, at … (claim that …); påstå noget (claim sth)"
+  ],
+  "prep": "påstå, at …"
+ },
+ "primært": {
+  "construction": [
+   "ADV, efter verbet: Det handler primært om penge.",
+   "ADV, after the verb: Det handler primært om penge."
+  ],
+  "prep": "primært efter verbet"
+ },
+ "en_problematik": {
+  "construction": [
+   "problematikken omkring / om noget",
+   "problematikken omkring noget (the issue around sth)"
+  ],
+  "prep": "problematikken omkring noget"
+ },
+ "problematisk": {
+  "construction": [
+   "det er problematisk, at …; problematisk for nogen",
+   "det er problematisk, at … (it is problematic that …)"
+  ],
+  "prep": "det er problematisk, at …"
+ },
+ "at_have_råd_til": {
+  "construction": [
+   "have råd til noget; have råd til at + infinitiv",
+   "have råd til noget (afford sth); have råd til at … (afford to …)"
+  ],
+  "prep": "have råd til noget / til at …"
+ },
+ "en_reklame": {
+  "construction": [
+   "en reklame for noget; reklamere for noget",
+   "en reklame for noget (an ad for sth); reklamere for noget (advertise sth)"
+  ],
+  "prep": "en reklame for noget"
+ },
+ "en_rente": {
+  "construction": [
+   "renten stiger / falder; renten på et lån",
+   "renten stiger / falder (interest rates rise / fall); renten på et lån"
+  ],
+  "prep": "renten på noget"
+ },
+ "risikabel": {
+  "construction": [
+   "det er risikabelt at + infinitiv",
+   "det er risikabelt at … (it is risky to …)"
+  ],
+  "prep": "det er risikabelt at + infinitiv"
+ },
+ "en_service": {
+  "construction": [
+   "god service; service til kunderne",
+   "god service (good service); service til kunderne (service to the customers)"
+  ],
+  "prep": "service for / til kunderne"
+ },
+ "et_spørgsmål_om": {
+  "construction": [
+   "stille et spørgsmål; det er et spørgsmål om …",
+   "stille et spørgsmål (ask a question); det er et spørgsmål om … (it is a matter of …)"
+  ],
+  "prep": "et spørgsmål om noget"
+ },
+ "en_udbetaling": {
+  "construction": [
+   "en udbetaling af løn / penge",
+   "en udbetaling af løn / penge (a payment of wages / money)"
+  ],
+  "prep": "en udbetaling af noget"
+ },
+ "en_udskrift": {
+  "construction": [
+   "en udskrift af noget",
+   "en udskrift af noget (a printout of sth)"
+  ],
+  "prep": "en udskrift af noget"
+ },
+ "et_udvalg_af": {
+  "construction": [
+   "et stort udvalg af noget",
+   "et stort udvalg af noget (a wide range of sth)"
+  ],
+  "prep": "udvalget af noget"
+ },
+ "uproblematisk": {
+  "construction": [
+   "det er (ikke) uproblematisk at + infinitiv",
+   "det er (ikke) uproblematisk at … (it is (not) unproblematic to …)"
+  ],
+  "prep": "det er uproblematisk at + infinitiv"
+ },
+ "urimelig": {
+  "construction": [
+   "det er urimeligt, at …; urimelig over for nogen",
+   "det er urimeligt, at … (it is unfair that …); urimelig over for nogen"
+  ],
+  "prep": "det er urimeligt, at …"
+ },
+ "en_kvalitet": {
+  "construction": [
+   "kvaliteten af noget; af høj kvalitet",
+   "kvaliteten af noget (the quality of sth); af høj kvalitet (of high quality)"
+  ],
+  "prep": "kvaliteten af noget"
+ },
+ "en_vejledning": {
+  "construction": [
+   "få vejledning i noget; en vejledning til noget",
+   "få vejledning i noget (get guidance on sth); en vejledning til noget (instructions for sth)"
+  ],
+  "prep": "vejledning i / om noget"
+ },
+ "en_velstand": {
+  "construction": [
+   "velstanden stiger",
+   "velstanden stiger (prosperity rises)"
+  ],
+  "prep": "velstanden i et land"
+ },
+ "at_vise": {
+  "construction": [
+   "vise noget; vise, at …; det viser sig, at …",
+   "vise noget (show sth); vise, at … (show that …); det viser sig, at … (it turns out that …)"
+  ],
+  "prep": "vise noget / vise, at …"
+ },
+ "at_vurdere": {
+  "construction": [
+   "vurdere noget; vurdere, at …; vurdere, om …",
+   "vurdere noget (assess sth); vurdere, at … (judge that …)"
+  ],
+  "prep": "vurdere noget / vurdere, at …"
+ },
+ "at_acceptere": {
+  "construction": [
+   "acceptere noget; acceptere, at …",
+   "acceptere noget (accept sth); acceptere, at … (accept that …)"
+  ],
+  "prep": "acceptere noget / acceptere, at …"
+ },
+ "at_ændre": {
+  "construction": [
+   "ændre noget; ændre sig; ændre på noget",
+   "ændre noget (change sth); ændre sig (change oneself, become different); ændre på noget"
+  ],
+  "prep": "ændre noget / ændre sig"
+ },
+ "attraktiv": {
+  "construction": [
+   "attraktiv for nogen",
+   "attraktiv for nogen (attractive to sb)"
+  ],
+  "prep": "attraktiv for nogen"
+ },
+ "at_dokumentere": {
+  "construction": [
+   "dokumentere noget; dokumentere, at …",
+   "dokumentere noget (document sth); dokumentere, at … (prove that …)"
+  ],
+  "prep": "dokumentere noget"
+ },
+ "at_foreslå": {
+  "construction": [
+   "foreslå noget; foreslå, at …; foreslå nogen at + infinitiv",
+   "foreslå noget (suggest sth); foreslå, at … (suggest that …)"
+  ],
+  "prep": "foreslå noget / foreslå, at …"
+ },
+ "at_fravælge": {
+  "construction": [
+   "fravælge noget (bilen, kød, tv)",
+   "fravælge noget (choose not to have the car, meat, TV)"
+  ],
+  "prep": "fravælge noget"
+ },
+ "en_hensigt_med": {
+  "construction": [
+   "hensigten med noget; have til hensigt at + infinitiv",
+   "hensigten med noget (the purpose of sth); have til hensigt at … (intend to …)"
+  ],
+  "prep": "hensigten med noget"
+ },
+ "indtil": {
+  "construction": [
+   "indtil i morgen; indtil han kommer (SUB)",
+   "indtil i morgen (until tomorrow); indtil han kommer (until he comes)"
+  ],
+  "prep": "indtil + tid / indtil + ledsætning"
+ },
+ "at_være_nødt_til": {
+  "construction": [
+   "være nødt til at + infinitiv",
+   "være nødt til at + infinitive (have to …)"
+  ],
+  "prep": "være nødt til at + infinitiv"
+ },
+ "at_overveje": {
+  "construction": [
+   "overveje noget; overveje at + infinitiv; overveje, om …",
+   "overveje noget (consider sth); overveje at … (think about doing …); overveje, om …"
+  ],
+  "prep": "overveje noget / overveje at + infinitiv"
+ },
+ "at_planlægge": {
+  "construction": [
+   "planlægge noget; planlægge at + infinitiv",
+   "planlægge noget (plan sth); planlægge at … (plan to …)"
+  ],
+  "prep": "planlægge noget / planlægge at + infinitiv"
+ },
+ "at_aflaste": {
+  "construction": [
+   "aflaste nogen (forældre, de ansatte)",
+   "aflaste nogen (relieve parents, the staff)"
+  ],
+  "prep": "aflaste nogen"
+ },
+ "en_aftale": {
+  "construction": [
+   "lave en aftale med nogen om noget",
+   "lave en aftale med nogen om noget (make an agreement with sb about sth)"
+  ],
+  "prep": "en aftale om noget / med nogen"
+ },
+ "allerførst": {
+  "construction": [
+   "Allerførst + verbum på plads 2",
+   "Allerførst + verb in 2nd place"
+  ],
+  "prep": "allerførst + V2"
+ },
+ "almindelig": {
+  "construction": [
+   "det er almindeligt at + infinitiv; almindelig for nogen",
+   "det er almindeligt at … (it is common to …)"
+  ],
+  "prep": "det er almindeligt at + infinitiv"
+ },
+ "at_analysere": {
+  "construction": [
+   "analysere noget",
+   "analysere noget (analyse sth)"
+  ],
+  "prep": "analysere noget"
+ },
+ "en_baggrund_for": {
+  "construction": [
+   "baggrunden for noget; på baggrund af noget",
+   "baggrunden for noget (the reason for sth); på baggrund af noget (on the basis of sth)"
+  ],
+  "prep": "baggrunden for noget"
+ },
+ "at_belaste": {
+  "construction": [
+   "belaste miljøet; belaste nogen",
+   "belaste miljøet (harm the environment); belaste nogen (put a strain on sb)"
+  ],
+  "prep": "belaste noget / nogen"
+ },
+ "en_beliggenhed": {
+  "construction": [
+   "en god / central beliggenhed",
+   "en god / central beliggenhed (a good / central location)"
+  ],
+  "prep": "beliggenheden af noget"
+ },
+ "at_droppe": {
+  "construction": [
+   "droppe noget; droppe ud af en uddannelse",
+   "droppe noget (drop sth); droppe ud af en uddannelse (drop out of education)"
+  ],
+  "prep": "droppe noget / droppe ud af"
+ },
+ "foreløbig": {
+  "construction": [
+   "ADV, efter verbet: Vi har foreløbig ingen plan.",
+   "ADV, after the verb: Vi har foreløbig ingen plan."
+  ],
+  "prep": "foreløbig efter verbet"
+ },
+ "at_foretrække": {
+  "construction": [
+   "foretrække noget frem for noget; foretrække at + infinitiv",
+   "foretrække noget frem for noget (prefer sth to sth); foretrække at … (prefer to …)"
+  ],
+  "prep": "foretrække noget frem for noget"
+ },
+ "at_forstyrre": {
+  "construction": [
+   "forstyrre nogen; forstyrre nogen i noget",
+   "forstyrre nogen (disturb sb); forstyrre nogen i noget (disturb sb in sth)"
+  ],
+  "prep": "forstyrre nogen i noget"
+ },
+ "frivillig": {
+  "construction": [
+   "lave frivilligt arbejde; det er frivilligt at + infinitiv",
+   "lave frivilligt arbejde (do voluntary work); det er frivilligt at … (it is voluntary to …)"
+  ],
+  "prep": "frivilligt arbejde"
+ },
+ "god_til_for": {
+  "construction": [
+   "være god til noget; være god for nogen",
+   "være god til noget (be good at sth); være god for nogen (be good for sb)"
+  ],
+  "prep": "god til noget / god for nogen"
+ },
+ "at_håndtere": {
+  "construction": [
+   "håndtere noget (stress, et problem)",
+   "håndtere noget (handle stress, a problem)"
+  ],
+  "prep": "håndtere noget"
+ },
+ "imod": {
+  "construction": [
+   "være imod noget; stemme imod noget",
+   "være imod noget (be against sth); stemme imod noget (vote against sth)"
+  ],
+  "prep": "imod noget / være imod"
+ },
+ "en_indretning": {
+  "construction": [
+   "indretningen af et rum / en bolig",
+   "indretningen af et rum (the layout / furnishing of a room)"
+  ],
+  "prep": "indretningen af noget"
+ },
+ "en_information": {
+  "construction": [
+   "information om noget; få information",
+   "information om noget (information about sth); få information (get information)"
+  ],
+  "prep": "information om noget"
+ },
+ "at_klare": {
+  "construction": [
+   "klare noget; klare sig godt",
+   "klare noget (manage sth); klare sig godt (do well)"
+  ],
+  "prep": "klare noget / klare sig"
+ },
+ "lignende": {
+  "construction": [
+   "lignende problemer; og lignende (o.l.)",
+   "lignende problemer (similar problems); og lignende (and the like)"
+  ],
+  "prep": "lignende + navneord / og lignende"
+ },
+ "en_loyalitet": {
+  "construction": [
+   "loyalitet over for nogen / noget",
+   "loyalitet over for nogen (loyalty to sb)"
+  ],
+  "prep": "loyalitet over for nogen"
+ },
+ "en_mening_med": {
+  "construction": [
+   "meningen med noget; have en mening om noget",
+   "meningen med noget (the point of sth); have en mening om noget (have an opinion about sth)"
+  ],
+  "prep": "meningen med noget"
+ },
+ "en_mobilitet": {
+  "construction": [
+   "mobilitet på arbejdsmarkedet",
+   "mobilitet på arbejdsmarkedet (mobility in the labour market)"
+  ],
+  "prep": "mobilitet på arbejdsmarkedet"
+ },
+ "en_motivation": {
+  "construction": [
+   "motivation for noget; motivation til at + infinitiv",
+   "motivation for noget (motivation for sth); motivation til at … (motivation to …)"
+  ],
+  "prep": "motivation for noget / til at + infinitiv"
+ },
+ "at_ødelægge": {
+  "construction": [
+   "ødelægge noget; ødelægge noget for nogen",
+   "ødelægge noget (destroy sth); ødelægge noget for nogen (ruin sth for sb)"
+  ],
+  "prep": "ødelægge noget for nogen"
+ },
+ "at_øge": {
+  "construction": [
+   "øge noget; øges (= stige)",
+   "øge noget (increase sth); øges (increase, rise)"
+  ],
+  "prep": "øge noget"
+ },
+ "opmærksom_på": {
+  "construction": [
+   "være opmærksom på noget; gøre nogen opmærksom på noget",
+   "være opmærksom på noget (be aware of sth); gøre nogen opmærksom på noget (make sb aware of sth)"
+  ],
+  "prep": "opmærksom på noget"
+ },
+ "at_overkomme": {
+  "construction": [
+   "kunne overkomme noget",
+   "kunne overkomme noget (be able to manage sth)"
+  ],
+  "prep": "overkomme noget"
+ },
+ "at_problematisere": {
+  "construction": [
+   "problematisere noget",
+   "problematisere noget (question / raise problems about sth)"
+  ],
+  "prep": "problematisere noget"
+ },
+ "relevant": {
+  "construction": [
+   "relevant for nogen / noget",
+   "relevant for nogen (relevant to sb)"
+  ],
+  "prep": "relevant for nogen / noget"
+ },
+ "rigtig": {
+  "construction": [
+   "det er rigtigt, at …; rigtig god",
+   "det er rigtigt, at … (it is true that …); rigtig god (really good)"
+  ],
+  "prep": "det er rigtigt, at … / rigtig + adjektiv"
+ },
+ "en_sandsynlighed": {
+  "construction": [
+   "sandsynligheden for noget; med stor sandsynlighed",
+   "sandsynligheden for noget (the probability of sth); med stor sandsynlighed (most likely)"
+  ],
+  "prep": "sandsynligheden for noget"
+ },
+ "skeptisk_over_for": {
+  "construction": [
+   "være skeptisk over for noget / nogen",
+   "være skeptisk over for noget (be sceptical about sth)"
+  ],
+  "prep": "skeptisk over for noget"
+ },
+ "en_solidaritet": {
+  "construction": [
+   "solidaritet med nogen",
+   "solidaritet med nogen (solidarity with sb)"
+  ],
+  "prep": "solidaritet med nogen"
+ },
+ "en_stabilitet": {
+  "construction": [
+   "stabilitet i noget; skabe stabilitet",
+   "stabilitet i noget (stability in sth); skabe stabilitet (create stability)"
+  ],
+  "prep": "stabilitet i noget"
+ },
+ "at_stamme_fra": {
+  "construction": [
+   "stamme fra noget",
+   "stamme fra noget (originate from sth)"
+  ],
+  "prep": "stamme fra noget"
+ },
+ "en_størrelse": {
+  "construction": [
+   "størrelsen på noget; i samme størrelse",
+   "størrelsen på noget (the size of sth); i samme størrelse (the same size)"
+  ],
+  "prep": "størrelsen på noget"
+ },
+ "at_støtte": {
+  "construction": [
+   "støtte nogen; støtte op om noget; få støtte til noget",
+   "støtte nogen (support sb); støtte op om noget (back sth); få støtte til noget (get support for sth)"
+  ],
+  "prep": "støtte nogen / noget / støtte til"
+ },
+ "at_styrke": {
+  "construction": [
+   "styrke noget (sammenholdet, økonomien)",
+   "styrke noget (strengthen unity, the economy)"
+  ],
+  "prep": "styrke noget"
+ },
+ "at_svække": {
+  "construction": [
+   "svække noget (helbredet, økonomien)",
+   "svække noget (weaken health, the economy)"
+  ],
+  "prep": "svække noget"
+ },
+ "at_tilbyde": {
+  "construction": [
+   "tilbyde nogen noget; tilbyde at + infinitiv",
+   "tilbyde nogen noget (offer sb sth); tilbyde at … (offer to …)"
+  ],
+  "prep": "tilbyde nogen noget / tilbyde at + infinitiv"
+ },
+ "tryg": {
+  "construction": [
+   "føle sig tryg; være tryg ved noget",
+   "føle sig tryg (feel safe); være tryg ved noget (feel comfortable with sth)"
+  ],
+  "prep": "tryg ved noget"
+ },
+ "uforståelig": {
+  "construction": [
+   "det er uforståeligt, at …; uforståelig for nogen",
+   "det er uforståeligt, at … (it is incomprehensible that …)"
+  ],
+  "prep": "uforståelig for nogen"
+ },
+ "at_undvære": {
+  "construction": [
+   "kunne undvære noget; ikke kunne undvære noget",
+   "kunne undvære noget (be able to do without sth)"
+  ],
+  "prep": "undvære noget"
+ },
+ "at_vælge": {
+  "construction": [
+   "vælge noget; vælge at + infinitiv; vælge mellem",
+   "vælge noget (choose sth); vælge at … (choose to …); vælge mellem (choose between)"
+  ],
+  "prep": "vælge noget / vælge at + infinitiv"
+ },
+ "at_værdsætte": {
+  "construction": [
+   "værdsætte noget; værdsætte nogen",
+   "værdsætte noget (appreciate sth); værdsætte nogen (value sb)"
+  ],
+  "prep": "værdsætte noget / nogen"
+ },
+ "væsentlig": {
+  "construction": [
+   "det er væsentligt at + infinitiv; væsentlig for noget",
+   "det er væsentligt at … (it is essential to …); væsentlig for noget"
+  ],
+  "prep": "det er væsentligt at + infinitiv"
+ },
+ "vant_til": {
+  "construction": [
+   "være vant til noget; være vant til at + infinitiv",
+   "være vant til noget (be used to sth); være vant til at … (be used to doing …)"
+  ],
+  "prep": "vant til noget / vant til at + infinitiv"
  }
 }
