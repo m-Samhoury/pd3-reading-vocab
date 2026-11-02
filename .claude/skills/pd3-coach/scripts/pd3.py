@@ -29,6 +29,8 @@ Usage (run with python3 -I):
                                        #   (cards in senses.json use its hand-labelled sentences instead)
   pd3.py translate                     # English for every DDO definition (Google Translate) -> translations.json
   pd3.py l3gaps                        # real Læsning 3 gaps + linking-word sentences from those texts -> l3-gaps.json
+  pd3.py mockpool                      # real sentences from L1, 2A and 2B (never the L3 / old-2B text) for the
+                                       #   "Mock Læsning 3" -> mock-pool.json (needs logic.json)
                                        #   (the "Hvilken slags?" drill; needs logic.json)
   pd3.py page                          # rebuild <project>/assisted-learning.html (also automatic when the deck
                                        #   changes); open it from disk, progress is kept in the browser
@@ -714,6 +716,81 @@ def cmd_l3gaps(a):
     print(f"{len(items)} items -> {os.path.join(DATA, 'l3-gaps.json')}")
 
 
+# ---------- Mock Læsning 3: sentences from L1, 2A and 2B ----------
+
+MOCK_BAD = re.compile(r"\d{3,}|_{2,}|\.{3}|…|\(\d+\)|www|@|MAJ|NOVEMBER")
+# verbs whose present tense is also a noun or adjective ("varer"), so a gap would be ambiguous
+MOCK_NOVERB = {"at_vare", "at_fordele", "at_styrke", "at_støtte", "at_sikre", "at_lette"}
+MOCK_NOCONN = {"da", "for", "så", "om", "når", "at", "og", "i", "af", "til", "på", "med", "ved", "men", "hvis", "som", "der", "dog"}
+
+
+def mock_sections(sitting, e):
+    """[(label, text)]: L1, 2A and (new format only) 2B. Before Nov 2022 2B was the L3-type gap task, so it is left out."""
+    out = []
+    for i, rel in enumerate(e["files"].get("L1_txt", [])):
+        if rel.lower().endswith(".pdf"):
+            out.append(("L1", reading_text(sitting, "L1_txt", rel, i)))
+    new = e["format"] == "new"
+    for i, rel in enumerate(e["files"].get("L2_txt", [])):
+        if not rel.lower().endswith(".pdf"):
+            continue
+        t = reading_text(sitting, "L2_txt", rel, i)
+        m3 = re.search(r"(?m)^[^\n]*Delprøve\s*3\s*[–-]\s*(?!fort)", t) if new else None
+        m2 = re.search(r"(?m)^[^\n]*Delprøve\s*2\s*[B8]\s*[–-]\s*(?!fort)", t)
+        out.append(("2A", t[:(m2 or m3).start()] if (m2 or m3) else t))
+        if new and m2:
+            out.append(("2B", t[m2.start():m3.start() if m3 else len(t)]))
+    return out
+
+
+def mock_pairs(text):
+    for p in re.split(r"\n\s*\n", text):
+        p = re.sub(r"\s+", " ", p).strip()
+        ss = re.split(r"(?<=[.!?])\s+(?=[A-ZÆØÅ«»\"„])", p)
+        for j, s in enumerate(ss):
+            if 7 <= len(s.split()) <= 30 and s[-1] in ".!?" and not MOCK_BAD.search(s):
+                prev = ss[j - 1] if j else ""
+                if prev and (len(prev.split()) > 32 or MOCK_BAD.search(prev) or prev[-1] not in ".!?"):
+                    prev = ""
+                yield prev, s
+
+
+def cmd_mockpool(a):
+    import random
+    idx, cards, logic = index(), load("vocab.json", {"cards": {}})["cards"], load("logic.json", {})
+    lg = {}
+    for k in ("tilføjelse", "modargument", "følge", "ulogisk"):
+        for _, ids in logic.get(k, []):
+            for cid, wt in ids:
+                lg.setdefault(cid, wt)
+    pats = {}
+    for cid, c in cards.items():
+        w = nfc(c["word"]).lower()
+        if lg.get(cid) in ("ADV", "SUB", "PRAEP"):
+            alts = [v for v in word_variants(c["word"]) if "…" not in v and not v.startswith(("at ", "en ", "et ")) and " / " not in v and v not in MOCK_NOCONN]
+            if alts:
+                pats[cid] = ("conn", re.compile(r"(?<![\wæøå])(" + "|".join(re.escape(x) for x in sorted(set(alts), key=len, reverse=True)) + r")(?![\wæøå])", re.I))
+        elif w.startswith("at ") and "(" not in w and " " not in w[3:] and w[3:].endswith("e") and len(w) > 6 and w[3:] not in ("være", "gøre", "tage") and cid not in MOCK_NOVERB:
+            pats[cid] = ("verb", re.compile(r"(?<![\wæøå])(" + re.escape(w[3:]) + r"r?)(?![\wæøå])", re.I))
+        elif re.match(r"(en|et) \w+$", w):
+            pats[cid] = ("noun", re.compile(r"(?<![\wæøå])(" + w.replace(" ", r"\s+") + r")(?![\wæøå])", re.I))
+    pool = {}
+    for sitting in sorted(idx, reverse=True):
+        if sitting < "2014":
+            continue
+        for sec, text in mock_sections(sitting, idx[sitting]):
+            for prev, s in mock_pairs(text):
+                for cid, (kind, pat) in pats.items():
+                    m = pat.search(s)
+                    if m and (prev or (kind != "conn" and m.start() > 0)) and (kind != "conn" or prev):
+                        pool.setdefault(cid, []).append({"kind": kind, "card": cid, "src": f"{sitting} {sec}", "prev": prev, "s": s, "at": m.start(), "w": m.group(1)})
+    random.seed(7)
+    out = {cid: random.sample(v, min(len(v), 8)) for cid, v in pool.items()}
+    save("mock-pool.json", {"built": TODAY.isoformat(), "items": out})
+    n = sum(len(v) for v in out.values())
+    print(f"{n} sentences for {len(out)} words -> {os.path.join(DATA, 'mock-pool.json')}")
+
+
 # ---------- Assisted Learning page ----------
 
 PAGE = os.path.join(ROOT, "assisted-learning.html")
@@ -759,7 +836,7 @@ def build_page():
             c["dict"]["senses_en"] = [tr.get(s, "") for s in c["dict"]["senses"]]
     senses = {cid: {k: v for k, v in e.items() if k != "sentences"} for cid, e in load("senses.json", {}).items()}
     deck = {"cards": cards, "profile": load("profile.json", {}), "senses": senses, "tips": load("tips.json", {}), "info": load("wordinfo.json", {}), "grammar": load("grammar.json", {}),
-            "logic": load("logic.json", {}), "l3": load("l3-gaps.json", {}).get("items", []),
+            "logic": load("logic.json", {}), "l3": load("l3-gaps.json", {}).get("items", []), "mock": load("mock-pool.json", {}).get("items", {}),
             "sentences": load("exam-sentences.json", {}).get("sentences", {}), "built": TODAY.isoformat()}
     js = "window.PD3_DECK = " + json.dumps(deck, ensure_ascii=False).replace("</", "<\\/") + ";"
     html = open(tpl, encoding="utf-8").read().replace("window.PD3_DECK = null; /*DECK*/", js)
@@ -823,7 +900,7 @@ def main():
     q = vs.add_parser("list"); q.add_argument("--group"); q.add_argument("--priority", type=int)
     vs.add_parser("groups")
     q = vs.add_parser("enrich"); q.add_argument("files", nargs="+")
-    sp.add_parser("sentences"); sp.add_parser("translate"); sp.add_parser("l3gaps")
+    sp.add_parser("sentences"); sp.add_parser("translate"); sp.add_parser("l3gaps"); sp.add_parser("mockpool")
     sp.add_parser("page")
     p = sp.add_parser("mistake"); ms = p.add_subparsers(dest="mcmd", required=True)
     q = ms.add_parser("add"); q.add_argument("pattern"); q.add_argument("--category", required=True)
@@ -833,7 +910,7 @@ def main():
     a = ap.parse_args()
     {"init": cmd_init, "status": cmd_status, "index": lambda a: print(f"{len(build_index())} sittings indexed"),
      "sittings": cmd_sittings, "pick": cmd_pick, "get": cmd_get, "log": cmd_log,
-     "vocab": cmd_vocab, "mistake": cmd_mistake, "sentences": cmd_sentences, "translate": cmd_translate, "l3gaps": cmd_l3gaps,
+     "vocab": cmd_vocab, "mistake": cmd_mistake, "sentences": cmd_sentences, "translate": cmd_translate, "l3gaps": cmd_l3gaps, "mockpool": cmd_mockpool,
      "page": lambda a: print(build_page() or "template missing")}[a.cmd](a)
 
 

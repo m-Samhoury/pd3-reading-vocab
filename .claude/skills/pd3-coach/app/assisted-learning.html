@@ -741,6 +741,35 @@ input.vgap.right { border-color: var(--ok); background: var(--ok-bg); } input.vg
 .tvck { display: grid; place-items: center; width: 44px; min-height: 56px; cursor: pointer; }
 .tvck input { width: 20px; height: 20px; margin: 0; cursor: pointer; }
 @keyframes tvrise { from { transform: translateY(.35em); opacity: 0; } }
+/* Mock Læsning 3 */
+.mkpill { display: inline-flex; align-items: center; padding: 2px 10px; border-radius: 999px; background: var(--md-sys-color-tertiary); color: var(--md-sys-color-on-tertiary); font: 800 .74rem system-ui, sans-serif; letter-spacing: .08em; }
+.mkbanner { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 8px 16px; margin-top: 16px; padding: 18px 22px; border-radius: 28px; border: 2px dashed var(--md-sys-color-tertiary); background: var(--md-sys-color-tertiary-container); color: var(--md-sys-color-on-tertiary-container); }
+.mkbanner .btn { white-space: nowrap; }
+.mkbanner b { font-family: 'Gabarito', sans-serif; font-size: 1.2rem; } .mkbanner p { margin: 2px 0 0; font-size: .92rem; opacity: .9; }
+.mknote { margin: 12px 0; padding: 10px 14px; border-radius: 14px; background: var(--md-sys-color-tertiary-container); color: var(--md-sys-color-on-tertiary-container); font-size: .92rem; }
+.mock .counter > span:first-child { display: inline-flex; align-items: center; gap: 8px; }
+.mksents { margin: 0; padding-left: 1.6em; display: grid; gap: 14px; line-height: 1.7; }
+.mkprev { color: var(--soft); } .mkgap { display: inline-block; min-width: 4.2em; padding: 0 6px; border-radius: 8px; background: var(--md-sys-color-surface-container-high); font-weight: 700; text-align: center; white-space: nowrap; }
+.mktext, .mktable { margin-top: 14px; } .mktable h2 { margin: 0 0 10px; font-size: 1.15rem; }
+.mkgrid { display: grid; gap: 4px; }
+.mkrow { display: grid; grid-template-columns: 2.2em repeat(4, minmax(0, 1fr)); gap: 4px; align-items: stretch; }
+.mkrow.head { font-weight: 800; text-align: center; color: var(--soft); } .mkrow .mkn { align-self: center; font-weight: 800; text-align: center; }
+.mkrow.ex { border-bottom: 1px dashed var(--rule-strong); padding-bottom: 6px; margin-bottom: 2px; }
+.mkcell { display: flex; align-items: center; gap: 4px; min-height: 48px; padding: 6px 10px; border: 1px solid var(--rule-strong); border-radius: 12px; background: var(--sheet); color: inherit; font: inherit; text-align: left; cursor: pointer; overflow-wrap: break-word; }
+.mkcell .ab { display: none; font-weight: 800; color: var(--soft); min-width: 1.2em; } .mkcell .mkx { font-weight: 800; }
+.mkcell:hover:not(:disabled) { background: var(--md-sys-color-surface-container-high); }
+.mkcell.sel { border-color: var(--md-sys-color-primary); background: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container); font-weight: 600; }
+.mkcell.right { border-color: var(--ok); background: var(--ok-bg); color: inherit; } .mkcell.wrong { border-color: var(--bad); background: var(--bad-bg); color: inherit; }
+.mkcell:disabled { cursor: default; } .mkrow.ex .mkcell:not(.sel) { opacity: .7; }
+.mkresult { display: flex; align-items: baseline; gap: 12px; margin-top: 12px; }
+.mkreview { margin-top: 18px; display: grid; gap: 12px; } .mkreview h2 { margin: 0; font-size: 1.15rem; }
+.mkrev { padding: 14px 16px; border-radius: 20px; border-left: 6px solid var(--bad); background: var(--md-sys-color-surface-container-low); } .mkrev.ok { border-left-color: var(--ok); }
+.mkrev header { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; } .mkrev p { margin: 8px 0 0; } .mkfull { line-height: 1.65; }
+@media (max-width: 600px) {
+  .mkbanner { grid-template-columns: 1fr; } .mkbanner .btn { justify-content: center; }
+  .mkrow { grid-template-columns: 1.8em repeat(2, minmax(0, 1fr)); } .mkrow .mkn { grid-row: span 2; } .mkrow.head { display: none; }
+  .mkcell { padding: 6px 8px; font-size: .92rem; gap: 3px; } .mkcell .ab { display: inline; }
+}
 </style>
 </head>
 <body>
@@ -1050,6 +1079,15 @@ const I18N = {
   "lg.step1": ["1. Hvilken slags logik?", "1. Which kind of logic?"], "lg.step2": ["2. Hvilket ord passer?", "2. Which word fits?"],
   "lg.cat.miss": ["Du valgte «{0}», men det er «{1}».", "You chose “{0}”, but it is “{1}”."], "lg.word.miss": ["Du valgte «{0}»; det rigtige ord er «{1}».", "You chose “{0}”; the right word is “{1}”."],
   "lg.others": ["De andre muligheder:", "The other options:"], "lg.means": ["{0} = {1}", "{0} = {1}"],
+  "mk.pill": ["MOCK", "MOCK"], "mk.title": ["Læsning 3 · mock", "Reading 3 · mock"], "mk.go": ["Start mock", "Start mock"],
+  "mk.s": ["8 huller i rigtige sætninger fra Læsning 1, 2A og 2B, med svartabel som i prøven", "8 gaps in real sentences from Reading 1, 2A and 2B, with an answer table like the exam"],
+  "mk.last": ["Seneste: {0}/8", "Last: {0}/8"],
+  "mk.instr": ["Der er fjernet otte ord eller udtryk, og de otte huller er angivet med tallene 1–8. Vælg i svararket nedenfor det ord eller udtryk (A, B, C eller D), der passer til hvert hul. Der er et eksempel angivet som 0. Der gives 1 point for hvert korrekt svar.", "Eight words or phrases have been removed and the gaps are numbered 1–8. In the answer sheet below, choose the word or phrase (A, B, C or D) that fits each gap. Row 0 is an example. 1 point for each correct answer."],
+  "mk.note": ["Det her er en mock: rigtige sætninger fra tidligere Læsning 1, 2A og 2B, sat sammen som en Læsning 3. Sætningerne er fra forskellige tekster, så de hænger ikke sammen som en tekst.", "This is a mock: real sentences from past Reading 1, 2A and 2B, put together like a Reading 3. They come from different texts, so they don't form one text."],
+  "mk.sheet": ["Svarark", "Answer sheet"], "mk.n": ["{0} af {1} besvaret", "{0} of {1} answered"], "mk.submit": ["Aflever", "Hand in"], "mk.score": ["{0} af {1} point", "{0} of {1} points"],
+  "mk.new": ["Ny mock", "New mock"], "mk.gap": ["Hul {0}", "Gap {0}"], "mk.your": ["Dit svar: {0}", "Your answer: {0}"], "mk.right": ["Rigtigt: {0}", "Correct: {0}"], "mk.none": ["Ikke besvaret", "Not answered"],
+  "mk.alt": ["I en mock kan et andet bindeord af og til også passe. Teksten har brugt det rigtige, og hvilken slags det er, kan du se ovenfor.", "In a mock another linking word can occasionally fit too. The text used the right one; the kind is shown above."],
+  "mk.review": ["Gennemgang", "Review"], "mk.few": ["Der er ikke sætninger nok til en mock endnu (kør pd3.py mockpool).", "Not enough sentences for a mock yet (run pd3.py mockpool)."],
 };
 function t(key, ...args) {
   const e = I18N[key];
@@ -1314,7 +1352,7 @@ function load() {
     $("#app").innerHTML = `<div class="err" style="margin-top:32px">${t("nodeck")}<br><br><code>python3 -I .claude/skills/pd3-coach/scripts/pd3.py page</code></div>`;
     return;
   }
-  DB = { today: iso(new Date()), profile: deck.profile || {}, sentences: deck.sentences || {}, senses: deck.senses || {}, tips: deck.tips || {}, info: deck.info || {}, grammar: deck.grammar || {}, logic: deck.logic || {}, l3: deck.l3 || [], cards: {} };
+  DB = { today: iso(new Date()), profile: deck.profile || {}, sentences: deck.sentences || {}, senses: deck.senses || {}, tips: deck.tips || {}, info: deck.info || {}, grammar: deck.grammar || {}, logic: deck.logic || {}, l3: deck.l3 || [], mock: deck.mock || {}, cards: {} };
   const saved = readProgress();
   for (const [id, c] of Object.entries(deck.cards)) DB.cards[id] = { id, ...c, history: c.history || [], ...(saved[id] || {}) };
   addFreqGroups();
@@ -1535,6 +1573,7 @@ function home() {
           ...(lgItems().length ? [tvRow(`id="logic"`, t("lg.drill"), `<small>${t("lg.drill.s")}</small>`, `${lgDone()}<small>${t("tv.of", lgItems().length)}</small>`, t("tv.v.test"), t("lg.drill.l"))] : [])]) + (nLearned ? "" : empty("pencil", t("h.ex.none"))),
         `<button type="button" class="txtbtn" id="exer"${nLearned ? "" : " disabled"}>${ICONS.pencil}${t("tv.exall")}</button>`)}
     </div>`}
+    ${gview || !mkReady() ? "" : `<section class="mkbanner"><span class="mkpill">${t("mk.pill")}</span><div><b>${t("mk.title")}</b><p>${t("mk.s")}${mkLast() != null ? ` · ${t("mk.last", mkLast())}` : ""}</p></div><button type="button" class="btn solid" id="mockGo">${ICONS.pencil}${t("mk.go")}</button></section>`}
     ${gview ? "" : `<nav class="tvlinks" aria-label="${esc(t("tv.more"))}">
       <a href="#emner" id="allTopics">${t("tv.topics")} <span>${t("tv.topics.s", gs.length)}</span></a>
       ${lgItems().length ? `<a href="#tankegang" id="tkLink">${t("lg.title")} <span>${t("lg.link.s")}</span></a>` : ""}
@@ -1545,6 +1584,7 @@ function home() {
   if ($("#exer")) $("#exer").onclick = () => startExercise(null);
   if ($("#conf")) $("#conf").onclick = () => startConfusables(null);
   if ($("#logic")) $("#logic").onclick = () => startLogic();
+  if ($("#mockGo")) $("#mockGo").onclick = startMock;
   if ($("#tkLink")) $("#tkLink").onclick = e => { e.preventDefault(); tankegang(); };
   document.querySelectorAll("[data-rev]").forEach(b => b.onclick = () => startSession({ groups: [b.dataset.rev], fresh: 0 }));
   document.querySelectorAll("[data-learn]").forEach(b => b.onclick = () => startSession({ groups: [b.dataset.learn], reviews: 0 }));
@@ -3019,6 +3059,108 @@ function lgWhy(x, extra) {
     ${noteText(c) ? `<p class="soft small" lang="da">${b(noteText(c))}</p>` : ""}
     ${others.length ? `<p class="small"><span class="soft">${t("lg.others")}</span> ${others.join(" · ")}</p>` : ""}
     <p><button type="button" class="linkbtn" data-more>${t("b.more")}</button></p>`;
+}
+
+// ---------- Mock Læsning 3: 8 gaps in real sentences from Læsning 1, 2A and 2B (pd3-data/mock-pool.json) ----------
+// Built like the real Delprøve 3: a gap, four options A–D, an answer table with an example row 0. It is a mock, not a real
+// exam: the sentences come from different texts. Practice only (no SM-2); the score and the sentences used are kept per browser.
+const MK_KEY = "pd3-assisted-learning:mock:v1";
+let MK = null;
+function mkStore() { try { return JSON.parse(localStorage.getItem(MK_KEY) || "{}"); } catch (e) { return {}; } }
+function mkWrite(st) { try { localStorage.setItem(MK_KEY, JSON.stringify(st)); } catch (e) { /* ignore */ } }
+const mkPool = () => Object.values(DB.mock || {}).flat().filter(x => DB.cards[x.card] && (x.kind === "conn" || x.s.split(" ").length >= 10)).map(x => ({ ...x, key: x.src + "|" + x.s.slice(0, 30) }));
+const mkReady = () => mkPool().length >= 40;
+const mkLast = () => { const s = (mkStore().scores || []).slice(-1)[0]; return s ? s[1] : null; };
+const mkPlain = w => /^[a-zæøå]+( [a-zæøå]+){0,2}$/.test(w);
+// the answer as the sentence has it, plus three words of the same kind and form
+function mkOptions(x) {
+  const c = DB.cards[x.card], low = x.s.toLowerCase(), cardsAll = cards();
+  let wrong = [];
+  if (x.kind === "conn") {
+    // wrong words come from kinds that clearly do not fit (never the answer's own kind, never the kind that often fits with it)
+    const [k, wt] = LG[x.card], ok = id => id !== x.card && DB.cards[id] && ["ADV", "SUB", "PRAEP"].includes(LG[id][1]) && mkPlain(DB.cards[id].word) && !low.includes(DB.cards[id].word);
+    const kinds = { "tilføjelse": ["modargument", "modargument", "ulogisk"], "følge": ["modargument", "modargument", "ulogisk"], "modargument": ["tilføjelse", "følge", "følge"], "ulogisk": ["tilføjelse", "følge", "følge"] }[k];
+    const taken = new Set();
+    wrong = kinds.map(kk => {
+      const ids = shuffle(Object.keys(LG).filter(id => LG[id][0] === kk && ok(id) && !taken.has(id)));
+      const id = ids.find(i => LG[i][1] === wt) || ids[0];
+      taken.add(id);
+      return DB.cards[id]?.word;
+    }).filter(Boolean);
+  } else if (x.kind === "verb") {
+    const pres = /r$/i.test(x.w), regular = w => /^at [a-zæøå]+e$/.test(w) && !/^at (være|gøre|tage|sige|se)$/.test(w);
+    const mates = new Set(CONFUSABLES.filter(p => p.includes(x.card)).flat());
+    wrong = shuffle(cardsAll.filter(y => y.id !== x.card && regular(y.word) && y.group !== c.group && !mates.has(y.id) && (y.priority || 3) >= 2)).map(y => y.word.slice(3) + (pres ? "r" : "")).filter(w => !low.includes(w)).slice(0, 3);
+  } else {
+    wrong = shuffle(cardsAll.filter(y => y.id !== x.card && /^(en|et) [a-zæøå]+$/.test(y.word) && !low.includes(y.word.split(" ")[1]))).map(y => y.word).slice(0, 3);
+  }
+  const lowW = lowFirst(x.w), all = shuffle([lowW, ...wrong.slice(0, 3)]);
+  return { opts: all, right: all.indexOf(lowW) };
+}
+function mkBuild() {
+  const st = mkStore(), used = new Set(st.used || []), pool = mkPool();
+  const fresh = list => { const f = list.filter(x => !used.has(x.key)); return shuffle(f.length >= 4 ? f : list); };
+  const chosen = [], free = y => !chosen.some(z => z.card === y.card || z.s === y.s);
+  const conns = fresh(pool.filter(x => x.kind === "conn" && LG[x.card]));
+  for (const [k] of LG_CATS) { const x = conns.find(y => LG[y.card][0] === k && free(y)); if (x) chosen.push(x); }   // one linking word of each kind of logic
+  const nouns = fresh(pool.filter(x => x.kind === "noun")), n = nouns.find(free);
+  if (n) chosen.push(n);
+  fresh(pool.filter(x => x.kind === "verb")).forEach(x => { if (chosen.length < 9 && free(x)) chosen.push(x); });
+  if (chosen.length < 9) conns.forEach(x => { if (chosen.length < 9 && free(x)) chosen.push(x); });
+  const items = shuffle(chosen.slice(0, 9)).map(x => ({ ...x, ...mkOptions(x) }));
+  const ex = items.findIndex(x => x.kind === "verb") >= 0 ? items.findIndex(x => x.kind === "verb") : 0;
+  const example = items.splice(ex, 1)[0];
+  return { example, items, ans: Array(items.length).fill(null), done: false };
+}
+function startMock() {
+  if (!mkReady()) { alert(t("mk.few")); return; }
+  S = null; FC = null; GS = null;
+  MK = mkBuild();
+  mockView();
+}
+const MK_L = ["A", "B", "C", "D"];
+const mkShow = (x, o) => x.at === 0 ? capFirst(o) : o;
+function mockView() {
+  const m = MK, n = m.items.length, got = m.ans.filter(a => a != null).length;
+  const gap = i => `<span class="mkgap">(${i})&nbsp;…</span>`;
+  const sent = (x, g) => `${x.prev ? `<span class="mkprev">${esc(x.prev)} </span>` : ""}${esc(x.s.slice(0, x.at))}${g}${esc(x.s.slice(x.at + x.w.length))}`;
+  const rowCells = (x, i, ex) => x.opts.map((o, j) => {
+    const sel = ex ? j === x.right : m.ans[i] === j;
+    const cls = ["mkcell", sel ? "sel" : "", m.done && !ex ? (j === x.right ? "right" : sel ? "wrong" : "") : ""].join(" ");
+    return `<button type="button" class="${cls}" data-r="${i}" data-o="${j}" aria-pressed="${sel}" aria-label="${MK_L[j]}: ${esc(mkShow(x, o))}"${m.done || ex ? " disabled" : ""}><span class="ab">${MK_L[j]}</span><span class="mkx">${sel ? "X " : ""}</span><span lang="da">${esc(mkShow(x, o))}</span></button>`; }).join("");
+  const rows = [`<div class="mkrow ex"><span class="mkn">0</span>${rowCells(m.example, -1, true)}</div>`, ...m.items.map((x, i) => `<div class="mkrow"><span class="mkn">${i + 1}</span>${rowCells(x, i, false)}</div>`)].join("");
+  const score = m.items.filter((x, i) => m.ans[i] === x.right).length;
+  const review = m.done ? `<section class="mkreview"><h2>${t("mk.review")}</h2>${m.items.map((x, i) => {
+    const c = DB.cards[x.card], ok = m.ans[i] === x.right, k = x.kind === "conn" && LG[x.card] ? lgCat(LG[x.card][0]) : null;
+    return `<article class="mkrev ${ok ? "ok" : "bad"}"><header><b>${t("mk.gap", i + 1)}</b><span class="tag">${esc(x.src.replace(" ", " · "))}</span>${k ? `<span class="lgpill lg-${k[1]}">${k[2]} ${t("lg.c." + k[0])}</span>` : ""}</header>
+      <p class="mkfull" lang="da">${sent(x, `<mark class="hl">${esc(x.w)}</mark>`)}</p>
+      <p class="small">${ok ? "✓ " : "✗ "}${m.ans[i] == null ? t("mk.none") : t("mk.your", `<b lang="da">${esc(mkShow(x, x.opts[m.ans[i]]))}</b>`)}${ok ? "" : ` · ${t("mk.right", `<b lang="da">${esc(mkShow(x, x.opts[x.right]))}</b>`)}`}</p>
+      <p class="small soft"><b lang="da">${esc(c.word)}</b> = ${esc(c.meaning)}${AI()}</p>${ok || x.kind !== "conn" ? "" : `<p class="small soft">${t("mk.alt")}</p>`}
+      <div class="trrow">${trLink(x.s).replace(t("m.tr"), t("tr.sent"))}<button type="button" class="linkbtn" data-more="${esc(x.card)}">${t("b.more")}</button></div></article>`; }).join("")}</section>` : "";
+  $("#app").innerHTML = `<div class="narrow mock">
+    <div class="counter"><span><span class="mkpill">${t("mk.pill")}</span> ${t("mk.title")}</span><button class="btn quiet" id="mkquit">✕ ${t("s.end")}</button></div>
+    <p class="mknote">${t("mk.note")}</p>
+    ${m.done ? `<div class="sheet q mkresult"><span class="score">${score}/${n}</span><span class="soft">${t("mk.score", score, n)}</span></div>` : `<div class="sheet q"><p class="small">${t("mk.instr")}</p></div>`}
+    <div class="sheet q mktext"><ol class="mksents">${m.items.map((x, i) => `<li value="${i + 1}" lang="da">${sent(x, gap(i + 1))}</li>`).join("")}</ol></div>
+    <section class="sheet q mktable"><h2>${t("mk.sheet")}</h2><div class="mkgrid"><div class="mkrow head"><span class="mkn"></span>${MK_L.map(l => `<span>${l}</span>`).join("")}</div>${rows}</div>
+      ${m.done ? `<div class="row next"><button class="btn solid" id="mknew">${t("mk.new")}</button><button class="btn quiet" id="mkhome">${t("gm.back")}</button></div>`
+        : `<div class="row next"><button class="btn solid" id="mkdone"${got ? "" : " disabled"}>${t("mk.submit")}</button><span class="soft small">${t("mk.n", got, n)}</span></div>`}</section>
+    ${review}</div>`;
+  $("#mkquit").onclick = () => { MK = null; home(); window.scrollTo(0, 0); };
+  document.querySelectorAll(".mkcell:not([disabled])").forEach(b => b.onclick = () => {
+    const i = +b.dataset.r, y = window.scrollY; m.ans[i] = +b.dataset.o; mockView(); window.scrollTo(0, y);
+    document.querySelector(`.mkcell[data-r="${i}"][data-o="${b.dataset.o}"]`)?.focus({ preventScroll: true });
+  });
+  if ($("#mkdone")) $("#mkdone").onclick = () => {
+    const st = mkStore(); m.done = true;
+    st.scores = [...(st.scores || []), [iso(new Date()), m.items.filter((x, i) => m.ans[i] === x.right).length]].slice(-20);
+    st.used = [...new Set([...(st.used || []), ...m.items.map(x => x.key), m.example.key])].slice(-300);
+    mkWrite(st); mockView(); $(".mkresult")?.scrollIntoView({ block: "start" });
+  };
+  if ($("#mknew")) $("#mknew").onclick = () => { startMock(); window.scrollTo(0, 0); };
+  if ($("#mkhome")) $("#mkhome").onclick = () => { MK = null; home(); window.scrollTo(0, 0); };
+  document.querySelectorAll("[data-more]").forEach(b => b.onclick = () => explain(DB.cards[b.dataset.more]));
+  bindTr($("#app"));
 }
 
 // ---------- summary ----------
