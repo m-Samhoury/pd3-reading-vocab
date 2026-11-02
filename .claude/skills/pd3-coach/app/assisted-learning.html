@@ -69,6 +69,7 @@
   --hl: var(--md-sys-color-tertiary-container); --hl-ink: var(--md-sys-color-on-tertiary-container);
   --accent: var(--md-sys-color-primary); --accent-ink: var(--md-sys-color-on-primary);
   --accent-soft: var(--md-sys-color-primary-container); --accent-text: var(--md-sys-color-on-primary-container);
+  --pic-a: var(--accent); --pic-b: var(--accent-soft);
   --blue: var(--md-sys-color-secondary); --blue-soft: var(--md-sys-color-secondary-container); --blue-text: var(--md-sys-color-on-secondary-container);
   --violet: var(--md-sys-color-tertiary); --violet-soft: var(--md-sys-color-tertiary-container); --violet-text: var(--md-sys-color-on-tertiary-container);
   --link: var(--md-sys-color-primary); --ok: #1f7a46; --ok-bg: #dff3e6; --bad: var(--md-sys-color-error); --bad-bg: var(--md-sys-color-error-container);
@@ -614,6 +615,26 @@ input.vgap.right { border-color: var(--ok); background: var(--ok-bg); } input.vg
 .fcbtns .btn { min-width: 150px; }
 .fcno { color: var(--bad); }
 .fcno:hover { border-color: var(--bad); }
+.fcpic { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin: 12px auto; padding: 10px; max-width: 100%; border-radius: 16px; background: var(--pic-b); color: var(--pic-a); }
+.fcpic svg { display: block; height: 150px; width: auto; max-width: 100%; }
+.fcpic img { display: block; width: auto; height: auto; max-width: 100%; max-height: 170px; border-radius: 12px; object-fit: contain; }
+.fcpic figcaption { width: 100%; text-align: center; }
+.fcres { margin-top: 6px; font-weight: 600; }
+.fcres.ok { color: var(--ok); } .fcres.near { color: var(--warn); } .fcres.bad { color: var(--bad); }
+.fcans { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: center; width: 100%; margin-top: 12px; }
+.fcans input.answer { flex: 1 1 200px; font-size: 1.15rem; }
+.fcans .letters { margin-top: 0; }
+.fcforms { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 12px; }
+.pill { display: inline-flex; padding: 3px 10px; border-radius: 999px; background: var(--blue-soft); color: var(--blue-text); font-size: .88rem; }
+.fcsegs { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.fcset { margin: 12px 0 0; }
+.fcbatches { list-style: none; margin: 16px 0 0; padding: 0; display: grid; gap: 8px; }
+.fcbat { width: 100%; display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: 14px; border: 1px solid var(--rule); background: var(--sheet); color: inherit; font: inherit; text-align: left; cursor: pointer; }
+.fcbat:hover { border-color: var(--accent); }
+.fcbat .fcnm { flex: 1; display: grid; gap: 2px; min-width: 0; }
+.fcbat .fcnm small { color: var(--soft); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.fcmark { width: 22px; text-align: center; font-weight: 700; color: var(--faint); }
+.fcmark.done { color: var(--ok); } .fcmark.cur { color: var(--accent); }
 /* summary */
 .score { font-family: var(--head); font-size: 3.4rem; font-weight: 700; letter-spacing: -.03em; line-height: 1; color: var(--accent); }
 .list { margin: 0; padding: 0; list-style: none; }
@@ -834,12 +855,24 @@ const I18N = {
   "h.conf": ["Forvekslingsord", "Confusables drill"],
   "h.fc": ["Flashcards", "Flashcards"], "h.fc.t": ["Vend kortene i de valgte grupper, og sig selv, om du kunne ordet. Påvirker ikke din plan.", "Flip the cards in the selected groups and say whether you knew the word. Doesn't change your schedule."],
   "fc.da": ["Dansk → engelsk", "Danish → English"], "fc.en": ["Engelsk → dansk", "English → Danish"], "fc.home": ["← Hjem", "← Home"],
-  "fc.flip": ["Vend kortet", "Flip the card"], "fc.no": ["✗ Igen", "✗ Again"], "fc.yes": ["✓ Kunne den", "✓ Knew it"],
+  "fc.flip": ["Vend kortet", "Flip the card"], "fc.show": ["Vis svaret", "Show the answer"], "fc.no": ["✗ Igen", "✗ Again"], "fc.yes": ["✓ Kunne den", "✓ Knew it"],
   "fc.q.en": ["Hvad hedder det på dansk?", "What is it in Danish?"], "fc.tap": ["Tryk på kortet (eller mellemrum) for at vende det", "Tap the card (or press Space) to flip it"],
-  "fc.left": ["{0} tilbage · {1} kunne du", "{0} left · {1} known"], "fc.ddo": ["Ordbogen", "Dictionary"], "fc.exam": ["Fra prøven", "From the exam"], "fc.eg": ["Eksempel", "Example"],
+  "fc.ddo": ["Ordbogen", "Dictionary"], "fc.exam": ["Fra prøven", "From the exam"], "fc.eg": ["Eksempel", "Example"], "fc.src": ["kilde", "source"],
   "fc.keys": ["Mellemrum = vend · 1 = igen · 2 = kunne den. Kun øvelse – din plan ændres ikke.", "Space = flip · 1 = again · 2 = knew it. Practice only: your schedule doesn't change."],
+  "fc.keys.type": ["Skriv svaret og tryk Enter · Enter igen = gå videre · 1 = igen · 2 = kunne den.", "Type the answer and press Enter · Enter again = continue · 1 = again · 2 = knew it."],
   "fc.done": ["Flashcards · færdig", "Flashcards · done"], "fc.score": ["{0} af {1} kunne du i første forsøg", "You knew {0} of {1} on the first try"],
-  "fc.hard": ["Skulle ses igen", "Needed another look"], "fc.again": ["Øv de svære igen · {0}", "Practise the hard ones · {0}"], "fc.new": ["Ny runde", "New round"],
+  "fc.n": ["{0} ord", "{0} words"], "fc.count": ["{0} ord · {1} portioner à 20", "{0} words · {1} batches of 20"],
+  "fc.bat": ["Portion {0} · {1} ord", "Batch {0} · {1} words"], "fc.st.done": ["færdig", "done"], "fc.st.cur": ["i gang", "in progress"], "fc.st.new": ["ikke startet", "not started"],
+  "fc.resume": ["Fortsæt", "Continue"], "fc.shuffle": ["Bland igen", "Shuffle again"], "fc.confirm": ["Bland igen? Portionerne starter forfra.", "Shuffle again? The batches start over."],
+  "fc.dir.l": ["Retning", "Direction"], "fc.mode.l": ["Svar", "Answer"], "fc.m.flip": ["Vend kortet", "Flip the card"], "fc.m.type": ["Skriv svaret", "Type the answer"],
+  "fc.check": ["Tjek", "Check"], "fc.hint.da": ["Skriv den engelske betydning", "Type the English meaning"], "fc.hint.en": ["Skriv det danske ord", "Type the Danish word"],
+  "fc.typed": ["Du skrev", "You typed"], "fc.r.ok": ["Rigtigt", "Right"], "fc.r.near": ["Næsten – tjek stavningen", "Almost – check the spelling"], "fc.r.bad": ["Forkert. Det rigtige ord er", "Wrong. The right word is"],
+  "fc.chunk.fam": ["Ordfamilie og bøjning", "Word family and forms"], "fc.chunk.use": ["Bruges sådan", "Used like this"],
+  "fc.wrong.t": ["Forkert-bunke: {0} ord", "Wrong pile: {0} words"], "fc.wrong.s": ["Ordene du ikke kunne første gang. Øv dem, til hvert kort er rigtigt.", "The words you missed the first time. Practise them until every card is right."],
+  "fc.practice": ["Øv forkert-bunken", "Practise the wrong pile"], "fc.prog": ["Portion {0}/{1} · Forkert-bunke: {2}", "Batch {0}/{1} · Wrong pile: {2}"],
+  "fc.round": ["Runde {0} · {1} tilbage", "Round {0} · {1} left"], "fc.bdone": ["Portion {0} af {1} · færdig", "Batch {0} of {1} · done"],
+  "fc.wrongdone": ["Forkert i første forsøg", "Missed on the first try"], "fc.next": ["Næste portion", "Next batch"], "fc.repeat": ["Gentag portionen", "Repeat this batch"],
+  "fc.alldone": ["Alle {0} portioner er færdige.", "All {0} batches are done."],
   "h.ex": ["Øvelse", "Exercise"], "h.ex.t": ["B2-øvelser i de ord, du allerede har lært i de valgte grupper. Påvirker ikke din plan.", "B2 exercises on the words you've already learnt in the selected groups. Doesn't change your schedule."],
   "h.ex.none": ["Ingen lærte ord i de valgte grupper endnu. Lær nogle ord først.", "No learnt words in the selected groups yet. Learn some words first."],
   "r.ex": ["Øvelse: dine svar ændrer ikke, hvornår ordene skal gentages.", "Exercise: your answers don't change when the words come up for review."],
@@ -1344,7 +1377,7 @@ function flipLang() {
   // screens that redraw without losing anything are drawn again, so nothing is left in the old language
   if ($("#go")) { const y = window.scrollY; home(); window.scrollTo(0, y); }
   else if ($("#lgboard")) { const y = window.scrollY; tankegang(); window.scrollTo(0, y); }
-  else if (FC && $("#fcard")) flashCard();
+  else if (FC) fcRender();
   if ($("#findbar").classList.contains("open")) findDraw();
 }
 
@@ -1356,7 +1389,7 @@ function load() {
     $("#app").innerHTML = `<div class="err" style="margin-top:32px">${t("nodeck")}<br><br><code>python3 -I .claude/skills/pd3-coach/scripts/pd3.py page</code></div>`;
     return;
   }
-  DB = { today: iso(new Date()), profile: deck.profile || {}, sentences: deck.sentences || {}, senses: deck.senses || {}, tips: deck.tips || {}, info: deck.info || {}, grammar: deck.grammar || {}, logic: deck.logic || {}, l3: deck.l3 || [], mock: deck.mock || {}, cards: {} };
+  DB = { today: iso(new Date()), profile: deck.profile || {}, sentences: deck.sentences || {}, senses: deck.senses || {}, tips: deck.tips || {}, info: deck.info || {}, grammar: deck.grammar || {}, logic: deck.logic || {}, l3: deck.l3 || [], mock: deck.mock || {}, images: deck.images || {}, cards: {} };
   const saved = readProgress();
   for (const [id, c] of Object.entries(deck.cards)) DB.cards[id] = { id, ...c, history: c.history || [], ...(saved[id] || {}) };
   addFreqGroups();
@@ -1567,7 +1600,7 @@ function home() {
       ${tvCol("review", "repeat", t("tv.v.review"), k.due, t("tv.due.u"),
         due.length ? list(due.map(g => tvRow(`data-rev="${esc(g)}"`, esc(gname(g)), `<small>${esc(setName(g))}</small>`, dueIn(groupsBy[g]), t("tv.v.review"), t("tv.l.review", gname(g)), false, g))) :
         empty(nLearned ? "check" : "repeat", t(nLearned ? "tv.rev.done" : "tv.rev.first")),
-        `<button type="button" class="txtbtn" id="flash">${ICONS.cards}${t("h.fc")}</button>`)}
+        `<button type="button" class="txtbtn" id="flash">${ICONS.cards}${t("h.fc")} · ${t("fc.n", fcCount(groupsBy))}</button>`)}
       ${tvCol("learn", "spark", t("tv.learn"), k.fresh, t("tv.new.u"),
         fresh.length ? list(freshShown.map(g => tvRow(`data-learn="${esc(g)}"`, esc(gname(g)), wordDots(groupsBy[g]), newIn(groupsBy[g]), t("tv.v.learn"), t("tv.l.learn", gname(g)), !k.newLeft, g))) : empty("check", t("tv.learn.done")),
         fresh.length > 5 ? `<button type="button" class="txtbtn" id="learnAll" aria-expanded="${learnAll}">${t(learnAll ? "tv.fewer" : "tv.all", fresh.length)}</button>` : "")}
@@ -1583,8 +1616,8 @@ function home() {
       ${lgItems().length ? `<a href="#tankegang" id="tkLink">${t("lg.title")} <span>${t("lg.link.s")}</span></a>` : ""}
     </nav>${pickBar(groupsBy)}`}`;
   if ($("#go")) $("#go").onclick = () => startSession({});
-  // flashcards on the words you have learnt; before that, on the ticked topics (or all)
-  if ($("#flash")) $("#flash").onclick = () => nLearned ? startFlash(null, learnedIn(null).map(c => c.id)) : startFlash(picked.length ? picked : null);
+  // flashcards on the ticked topics (or all words when none are ticked)
+  if ($("#flash")) $("#flash").onclick = () => startFlash(picked.length ? picked : null);
   if ($("#exer")) $("#exer").onclick = () => startExercise(null);
   if ($("#conf")) $("#conf").onclick = () => startConfusables(null);
   if ($("#logic")) $("#logic").onclick = () => startLogic();
@@ -1614,7 +1647,8 @@ function topicsView() {
   const key = [["wk", "st.known"], ["wl", "st.learn"], ["wd", "tv.key.due"], ["", "st.new"]].map(([c, l]) => `<span><span class="wdots"><i class="${c}"></i></span>${t(l)}</span>`).join("");
   $("#app").innerHTML = `
     <div class="top"><a href="#" class="tvback" id="thome">${t("gm.back")}</a><h1>${t("tv.topics")}</h1><p class="soft">${t("tv.topics.intro")}</p>
-      <div class="tvkey">${key}</div></div>
+      <div class="tvkey">${key}</div>
+      <div class="row"><button type="button" class="btn quiet" id="tvFlash">${ICONS.cards}${t("h.fc")} · ${t("fc.n", fcCount(groupsBy))}</button></div></div>
     ${[1, 2, 3, 4].filter(pr => tier(pr).length).map(pr => `<section class="tvset"><header><h2>${t("p." + pr)}</h2><span class="soft">${t("tv.n.topics", tier(pr).length)}</span>
       <button type="button" class="txtbtn" data-tier="${pr}">${t(tier(pr).every(g => picked.includes(g)) ? "pk.tnone" : "pk.tall")}</button></header>${pr === 4 ? `<p class="soft small">${t("p.4.s")}</p>` : ""}
       <ul class="tvtbl">${tier(pr).map(g => { const cs = groupsBy[g], d = dueIn(cs), seen = cs.filter(c => c.history.length).length;
@@ -1622,6 +1656,7 @@ function topicsView() {
     ${pickBar(groupsBy)}`;
   const redraw = () => { const y = window.scrollY; topicsView(); window.scrollTo(0, y); };
   $("#thome").onclick = e => { e.preventDefault(); home(); window.scrollTo(0, 0); };
+  $("#tvFlash").onclick = () => startFlash(picked.length ? picked : null);
   document.querySelectorAll(".tvtbl input").forEach(i => i.onchange = () => { const g = i.dataset.g; setPicked(i.checked ? [...picked, g] : picked.filter(x => x !== g)); redraw(); $(`.tvtbl input[data-g="${CSS.escape(g)}"]`)?.focus(); });
   document.querySelectorAll("[data-tier]").forEach(b => b.onclick = () => { const gs = tier(+b.dataset.tier), all = gs.every(g => picked.includes(g)); setPicked(all ? picked.filter(g => !gs.includes(g)) : [...new Set([...picked, ...gs])]); redraw(); });
   bindPickBar(redraw);
@@ -1707,6 +1742,8 @@ function startSession({ groups = null, reviews = REVIEW_LIMIT, fresh = BATCH }) 
 }
 // ---------- Øvelse: extra B2 practice on words already learnt ----------
 // words reviewed at least once, in the selected groups (all when none are selected)
+// how many distinct words the flashcards would cover: the ticked topics, or all words
+function fcCount(groupsBy) { return new Set((picked.length ? picked.flatMap(g => groupsBy[g] || []) : cards()).map(c => c.id)).size; }
 function learnedIn(groups) { return cards().filter(c => c.history.length && (!groups || inGroups(c, groups))); }
 function startExercise(groups) {
   const pool = learnedIn(groups);
@@ -2358,98 +2395,304 @@ function renderPairSame(it) {
 }
 
 // ---------- flashcards ----------
-// Practice only, like Øvelse: flip the card and say whether you knew it. "Igen" puts the card back a few
-// places down the pile, so a round ends when every card has been known once. The SM-2 schedule doesn't change.
-const FC_DIR = "pd3-assisted-learning:fcdir";
+// Practice only, like Øvelse: nothing here calls grade(), so the SM-2 schedule never changes.
+// A selection is cut into batches of 20 (group order, shuffled within each group). A batch gets one pass with
+// "Kunne den" / "Igen"; the wrong pile is then drilled in rounds until every card is right, and only then the next batch.
+// Progress per selection is kept in localStorage (FCB_KEY), so closing the page and coming back resumes the same card.
+const FC_DIR = "pd3-assisted-learning:fcdir", FC_MODE = "pd3-assisted-learning:fcmode", FCB_KEY = "pd3-assisted-learning:fcbatch:v1";
+const FC_SIZE = 20;
 let FC = null;
+const fcBatches = () => Math.ceil(FC.st.order.length / FC_SIZE);
+const fcIds = bi => FC.st.order.slice(bi * FC_SIZE, bi * FC_SIZE + FC_SIZE);
+function fcStore() { try { return JSON.parse(localStorage.getItem(FCB_KEY) || "{}"); } catch (e) { return {}; } }
+function fcSave() {
+  const all = fcStore(); all[FC.scope] = FC.st;
+  try { localStorage.setItem(FCB_KEY, JSON.stringify(all)); } catch (e) { /* ignore */ }
+}
+function fcSaveCur() { FC.st.cur = { bi: FC.bi, phase: FC.phase, queue: FC.queue, pile: FC.pile, first: FC.first, loop: FC.loop }; fcSave(); }
+// cards in group order, shuffled within each group, so a group stays together in its batches
+function fcOrder(ids) {
+  const at = id => Math.min(...groupsOf(DB.cards[id]).map(g => GROUP_ORDER.indexOf(g)));
+  const by = {};
+  ids.forEach(id => (by[at(id)] = by[at(id)] || []).push(id));
+  return Object.keys(by).map(Number).sort((a, b) => a - b).flatMap(k => shuffle(by[k]));
+}
+// the stored order stays; cards that left the selection are dropped, new ones are appended
+function fcLoad(scope, pool) {
+  const have = new Set(pool), old = fcStore()[scope];
+  if (!old || !Array.isArray(old.order)) return { order: fcOrder(pool), done: [], score: {}, cur: null };
+  const kept = old.order.filter(id => have.has(id)), seen = new Set(kept);
+  old.order = [...kept, ...fcOrder(pool.filter(id => !seen.has(id)))];
+  old.done = (old.done || []).filter(bi => bi * FC_SIZE < old.order.length);
+  old.score = old.score || {};
+  if (old.cur && old.cur.bi * FC_SIZE >= old.order.length) old.cur = null;
+  if (old.cur) { old.cur.queue = old.cur.queue.filter(id => have.has(id)); old.cur.pile = old.cur.pile.filter(id => have.has(id)); }
+  return old;
+}
+function fcScope(groups, ids) {
+  if (ids) { let h = 0; for (const ch of [...ids].sort().join(",")) h = (h * 31 + ch.charCodeAt(0)) | 0; return "ids:" + (h >>> 0).toString(36); }
+  return groups ? "groups:" + [...groups].sort().join(",") : "all";
+}
+function fcTitle() {
+  if (FC.groups) return `${t("h.fc")} · ${FC.groups.length === 1 ? gname(FC.groups[0]) : FC.groups.length <= 3 ? FC.groups.map(gname).join(" · ") : t("s.groups", FC.groups.length)}`;
+  return FC.kind === "all" ? `${t("h.fc")} · ${t("tv.topics")}` : t("h.fc");
+}
 function startFlash(groups, ids) {
-  const pool = ids ? ids.map(id => DB.cards[id]) : cards().filter(c => !groups || inGroups(c, groups));
-  let dir = "da";
-  try { dir = localStorage.getItem(FC_DIR) === "en" ? "en" : "da"; } catch (e) { /* ignore */ }
+  const pool = ids ? ids.filter(id => DB.cards[id]) : cards().filter(c => !groups || inGroups(c, groups)).map(c => c.id);
+  if (!pool.length) { alert(t("g.empty")); return; }
+  let dir = "da", mode = "flip";
+  try { dir = localStorage.getItem(FC_DIR) === "en" ? "en" : "da"; mode = localStorage.getItem(FC_MODE) === "type" ? "type" : "flip"; } catch (e) { /* ignore */ }
   S = null;
-  FC = { groups, pile: shuffle(pool.map(c => c.id)), total: pool.length, known: 0, again: new Set(), sent: {}, dir, flipped: false };
-  flashCard();
+  const scope = fcScope(groups, ids ? pool : null);
+  FC = { scope, kind: groups ? "groups" : ids ? "ids" : "all", groups, st: null, screen: "setup", dir, mode, sent: {},
+    bi: 0, phase: "first", queue: [], pile: [], first: {}, loop: 1, flipped: false, typed: "", result: null };
+  FC.st = fcLoad(scope, pool);
+  fcSave();
+  fcRender();
   window.scrollTo(0, 0);
 }
-function flashFaces(c) {
+// one batch: enter it (resuming the saved card if it is the one in progress), then decide what is shown next
+function fcEnter(bi) {
+  const cur = FC.st.cur && FC.st.cur.bi === bi ? FC.st.cur : null;
+  if (!cur) { FC.st.done = FC.st.done.filter(x => x !== bi); delete FC.st.score[bi]; }
+  FC.bi = bi;
+  if (cur) Object.assign(FC, { phase: cur.phase, queue: cur.queue, pile: cur.pile, first: cur.first, loop: cur.loop });
+  else Object.assign(FC, { phase: "first", queue: shuffle(fcIds(bi)), pile: [], first: {}, loop: 1 });
+  fcAdvance();
+  window.scrollTo(0, 0);
+}
+function fcResume() {
+  if (FC.st.done.length >= fcBatches()) { FC.screen = "allDone"; return fcRender(); }
+  const bi = FC.st.cur ? FC.st.cur.bi : [...Array(fcBatches()).keys()].find(b => !FC.st.done.includes(b));
+  fcEnter(bi);
+}
+// the phase machine: first pass → wrong pile screen → drill rounds → batch done
+function fcAdvance() {
+  if (FC.phase === "first" && !FC.queue.length) {
+    FC.pile = fcIds(FC.bi).filter(id => FC.first[id] === false);
+    if (FC.pile.length) FC.phase = "wrongShow";
+    else return fcBatchDone();
+  }
+  if (FC.phase === "wrong" && !FC.queue.length) {
+    if (!FC.pile.length) return fcBatchDone();
+    FC.loop++; FC.queue = shuffle(FC.pile);
+  }
+  FC.screen = FC.phase === "wrongShow" ? "wrongShow" : "card";
+  FC.flipped = false; FC.typed = ""; FC.result = null;
+  fcSaveCur(); fcRender();
+}
+function fcPractice() { FC.phase = "wrong"; FC.queue = shuffle(FC.pile); FC.loop = 1; fcAdvance(); }
+function fcAnswer(knew) {
+  if (FC.screen !== "card" || !FC.flipped || !FC.queue.length) return;
+  const id = FC.queue.shift();
+  if (FC.phase === "first") FC.first[id] = knew;
+  else if (knew) FC.pile = FC.pile.filter(x => x !== id);
+  fcAdvance();
+}
+function fcBatchDone() {
+  const ids = fcIds(FC.bi), ok = ids.filter(id => FC.first[id]).length;
+  FC.st.score[FC.bi] = { ok, n: ids.length, wrong: ids.filter(id => FC.first[id] === false) };
+  if (!FC.st.done.includes(FC.bi)) FC.st.done.push(FC.bi);
+  FC.st.cur = null;
+  FC.screen = FC.st.done.length >= fcBatches() ? "allDone" : "batchDone";
+  fcSave(); fcRender();
+}
+function fcReshuffle() {
+  if (!confirm(t("fc.confirm"))) return;
+  FC.st.order = fcOrder(FC.st.order); FC.st.done = []; FC.st.score = {}; FC.st.cur = null;
+  FC.screen = "setup"; fcSave(); fcRender();
+}
+// how far the batch is: first pass counts the batch; the drill counts the rounds' right answers on top
+function fcPlan() {
+  const n = fcIds(FC.bi).length;
+  if (FC.phase === "first") return { done: n - FC.queue.length, total: n, wrong: Object.values(FC.first).filter(x => x === false).length };
+  const W = fcIds(FC.bi).filter(id => FC.first[id] === false).length;
+  return { done: n + W - FC.pile.length, total: n + W, wrong: FC.pile.length };
+}
+function fcFlip() {
+  FC.flipped = !FC.flipped;
+  $("#fcard .fcin").classList.toggle("flipped", FC.flipped);
+  fcButtons();
+}
+// type mode: Tjek judges an English → Danish answer (right, almost, wrong) and shows it on the back; Danish → English only records the text
+function fcCheck() {
+  const c = DB.cards[FC.queue[0]], v = FC.typed.trim();
+  FC.flipped = true; FC.result = null;
+  if (v && FC.dir === "en") {
+    const right = isAnswer(c, v), near = !right && nearMiss(c, v);
+    FC.result = { kind: right ? "right" : near ? "near" : "wrong", ok: right || near };
+  } else if (v) FC.result = { kind: null, ok: null };
+  fcRender();
+  $("#fcard")?.focus({ preventScroll: true });
+}
+
+// ---------- screens ----------
+function fcRender() {
+  if (!FC) return;
+  const html = FC.screen === "setup" ? fcSetup() : FC.screen === "card" ? fcCard() : FC.screen === "wrongShow" ? fcWrong()
+    : FC.screen === "batchDone" ? fcBatchScreen() : fcAll();
+  $("#app").innerHTML = html;
+  fcBind();
+}
+function fcBind() {
+  const on = (sel, f) => { const el = $(sel); if (el) el.onclick = f; };
+  on("#fcHome", home); on("#fcHomeBtn", home);
+  on("#fcGo", fcResume); on("#fcShuffle", fcReshuffle); on("#fcPractice", fcPractice);
+  on("#fcNext", () => fcEnter(FC.bi + 1)); on("#fcRepeat", () => fcEnter(FC.bi));
+  document.querySelectorAll(".fcbat").forEach(b => b.onclick = () => fcEnter(+b.dataset.bi));
+  document.querySelectorAll("[data-dir]").forEach(b => b.onclick = () => {
+    FC.dir = b.dataset.dir; FC.flipped = false; FC.typed = ""; FC.result = null;
+    try { localStorage.setItem(FC_DIR, FC.dir); } catch (e) { /* ignore */ }
+    fcRender(); document.querySelector(`[data-dir="${FC.dir}"]`)?.focus();
+  });
+  document.querySelectorAll("[data-mode]").forEach(b => b.onclick = () => {
+    FC.mode = b.dataset.mode; FC.flipped = false; FC.typed = ""; FC.result = null;
+    try { localStorage.setItem(FC_MODE, FC.mode); } catch (e) { /* ignore */ }
+    fcRender(); document.querySelector(`[data-mode="${FC.mode}"]`)?.focus();
+  });
+  if ($("#fcard")) fcBindCard();
+}
+function fcSegs() {
+  return `<div class="fcsegs"><div class="seg" role="group" aria-label="${esc(t("fc.dir.l"))}">${["da", "en"].map(x => `<button type="button" data-dir="${x}" aria-pressed="${FC.dir === x}">${t("fc." + x)}</button>`).join("")}</div>
+    <div class="seg" role="group" aria-label="${esc(t("fc.mode.l"))}">${["flip", "type"].map(x => `<button type="button" data-mode="${x}" aria-pressed="${FC.mode === x}">${t("fc.m." + x)}</button>`).join("")}</div></div>`;
+}
+function fcSetup() {
+  const n = FC.st.order.length, nb = fcBatches(), cur = FC.st.cur;
+  const rows = Array.from({ length: nb }, (_, bi) => {
+    const ids = fcIds(bi), st = FC.st.done.includes(bi) ? "done" : cur && cur.bi === bi ? "cur" : "new";
+    return `<li><button type="button" class="fcbat" data-bi="${bi}"><span class="fcmark ${st}" aria-hidden="true">${{ done: "✓", cur: "◐", new: "○" }[st]}</span>
+      <span class="fcnm"><b>${t("fc.bat", bi + 1, ids.length)}</b><small lang="da">${ids.slice(0, 3).map(id => esc(DB.cards[id].word)).join(" · ")}</small></span><span class="soft small">${t("fc.st." + st)}</span></button></li>`;
+  }).join("");
+  return `<div class="narrow" id="fcroot"><div class="sheet q fcscreen" id="fcsetup">
+    <div class="fctop"><button type="button" class="btn quiet" id="fcHome">${t("fc.home")}</button></div>
+    <h1 class="fcset">${esc(fcTitle())}</h1>
+    <p class="soft">${t("fc.count", n, nb)}</p>
+    ${fcSegs()}
+    <ol class="fcbatches">${rows}</ol>
+    <div class="row next"><button type="button" class="btn solid" id="fcGo">${t("fc.resume")}</button><button type="button" class="btn quiet" id="fcShuffle">${t("fc.shuffle")}</button></div></div></div>`;
+}
+function fcRow(c) { return `<li><div><b lang="da">${esc(c.word)}</b>${prepLine(c)}</div><span class="soft">${esc(c.meaning)}</span></li>`; }
+function fcWrong() {
+  return `<div class="narrow" id="fcroot"><div class="sheet q fcscreen" id="fcwrong">
+    <div class="fctop"><button type="button" class="btn quiet" id="fcHome">${t("fc.home")}</button><span class="kind">${esc(fcTitle())}</span></div>
+    <div class="kind" style="margin-top:16px">${t("fc.wrong.t", FC.pile.length)}</div>
+    <p class="soft">${t("fc.wrong.s")}</p>
+    <ul class="list">${FC.pile.map(id => fcRow(DB.cards[id])).join("")}</ul>
+    <div class="row next"><button type="button" class="btn solid" id="fcPractice">${t("fc.practice")}</button></div></div></div>`;
+}
+function fcBatchScreen() {
+  const sc = FC.st.score[FC.bi] || { ok: 0, n: 0, wrong: [] }, nb = fcBatches();
+  return `<div class="narrow" id="fcroot"><div class="sheet q fcscreen" id="fcdone">
+    <div class="kind">${t("fc.bdone", FC.bi + 1, nb)}</div>
+    <div class="row" style="align-items:baseline;margin-top:10px"><span class="score">${Math.round(100 * sc.ok / sc.n)}%</span><span class="soft">${t("fc.score", sc.ok, sc.n)}</span></div>
+    ${sc.wrong.length ? `<div class="block"><span class="lbl">${t("fc.wrongdone")}</span><ul class="list">${sc.wrong.map(id => fcRow(DB.cards[id])).join("")}</ul></div>` : ""}
+    <div class="row next">${FC.bi + 1 < nb ? `<button type="button" class="btn solid" id="fcNext">${t("fc.next")}</button>` : ""}<button type="button" class="btn" id="fcRepeat">${t("fc.repeat")}</button><button type="button" class="btn quiet" id="fcHomeBtn">${t("r.home")}</button></div></div></div>`;
+}
+function fcAll() {
+  const all = Object.values(FC.st.score), ok = all.reduce((a, s) => a + s.ok, 0), n = all.reduce((a, s) => a + s.n, 0);
+  return `<div class="narrow" id="fcroot"><div class="sheet q fcscreen" id="fcalldone">
+    <div class="kind">${t("fc.done")}</div>
+    <div class="row" style="align-items:baseline;margin-top:10px"><span class="score">${n ? Math.round(100 * ok / n) : 0}%</span><span class="soft">${t("fc.score", ok, n)}</span></div>
+    <p class="soft">${t("fc.alldone", fcBatches())}</p>
+    <div class="row next"><button type="button" class="btn solid" id="fcHomeBtn">${t("r.home")}</button><button type="button" class="btn quiet" id="fcShuffle">${t("fc.shuffle")}</button></div></div></div>`;
+}
+
+// ---------- the card ----------
+function picHtml(c) {
+  const p = DB.images && DB.images[c.id];
+  if (!p) return "";
+  const alt = esc(LANG === "en" ? p.alt_en || p.alt_da || "" : p.alt_da || p.alt_en || "");
+  if (p.kind === "svg" && p.svg) return `<figure class="fcpic" role="img" aria-label="${alt}">${p.svg}</figure>`;
+  if (p.kind === "photo" && p.file) return `<figure class="fcpic"><img src="${esc(p.file)}" alt="${alt}" width="${+p.w || 480}" height="${+p.h || 320}" loading="lazy" onerror="this.closest('figure').remove()"><figcaption class="small soft">${esc(p.credit || "")}${p.source ? ` · <a href="${esc(p.source)}" target="_blank" rel="noopener">${t("fc.src")}</a>` : ""}</figcaption></figure>`;
+  return "";
+}
+// the word's chunk: word family / forms, and how it is used (up to 4 forms, 2 constructions, 3 brug)
+function fcChunk(c) {
+  const f = DB.info[c.id];
+  if (!f) return "";
+  const fam = [f.inflection, ...(f.forms || []).slice(0, 4).map(fs => (Array.isArray(fs) ? fs.join(" ") : String(fs)))].filter(Boolean);
+  // the construction already shown under the word (prepLine) is not repeated
+  const prep = DB.tips[c.id] && DB.tips[c.id].prep, same = x => prep && String(x).trim().toLowerCase() === prep.trim().toLowerCase();
+  const use = [...(f.construction || []).filter(x => !same(x)).slice(0, 2), ...(f.brug || []).slice(0, 3)];
+  const pills = xs => `<div class="fcforms" lang="da">${xs.map(x => `<span class="pill">${esc(x)}</span>`).join("")}</div>`;
+  if (!fam.length && !use.length) return "";
+  return `<div class="block fcchunk">${fam.length ? `<span class="lbl">${t("fc.chunk.fam")}</span>${pills(fam)}` : ""}${use.length ? `<span class="lbl">${t("fc.chunk.use")}</span>${pills(use)}` : ""}</div>`;
+}
+// the construction bullet from tips.json: the reason shown after a wrong answer
+function fcWhy(c) {
+  const tp = DB.tips[c.id] && DB.tips[c.id].construction;
+  return tp ? `<div class="whybox"><span lang="da">${esc(tp[0])}</span><div class="en-def" lang="en">${esc(tp[1])}</div></div>` : "";
+}
+function fcFaces(c) {
   if (!(c.id in FC.sent)) FC.sent[c.id] = ctxSentence(c);
   const ex = FC.sent[c.id], d = c.dict && c.dict.senses && c.dict.senses.length ? c.dict : null;
-  const word = `<div class="head"><span class="big" lang="da">${esc(c.word)}</span>${wtype(c) ? `<span class="tag">${esc(wtype(c))}</span>` : ""}</div>${prepLine(c)}`;
+  const en = FC.dir === "en", type = FC.mode === "type", pic = picHtml(c);
+  const head = `<div class="head"><span class="fcw" lang="da">${esc(c.word)}</span>${wtype(c) ? `<span class="tag">${esc(wtype(c))}</span>` : ""}</div>${prepLine(c)}`;
   const sentence = ex ? `<div class="block"><span class="lbl">${t("fc.exam")}</span><div class="ex" lang="da">${hlSentence(c, ex.s, ex.m)} ${trLink(ex.s)}</div></div>`
     : c.example ? `<div class="block"><span class="lbl">${t("fc.eg")}</span><div class="ex" lang="da">${hlSentence(c, c.example)} ${trLink(c.example)}</div></div>` : "";
   const def = d ? `<div class="block"><span class="lbl">${t("fc.ddo")}</span><div lang="da">${esc(d.senses[0])}</div>${d.senses_en && d.senses_en[0] ? `<div class="en">${esc(d.senses_en[0])}</div>` : ""}</div>` : "";
-  const front = FC.dir === "en"
-    ? `<div class="kind">${t("fc.q.en")}</div><div class="fcq" style="margin-top:12px">${esc(c.meaning)}</div>`
+  const input = type ? `<div class="fcans"><input class="answer" id="fcAns" lang="${en ? "da" : "en"}" autocomplete="off" autocapitalize="off" spellcheck="false" value="${esc(FC.typed)}" aria-label="${esc(t(en ? "fc.hint.en" : "fc.hint.da"))}">${letters()}<button type="button" class="btn solid" id="fcCheck">${t("fc.check")}</button></div>` : "";
+  const front = en
+    ? `<div class="kind">${t("fc.q.en")}</div><div class="fcq" style="margin-top:12px">${esc(c.meaning)}</div>${pic}`
     : `<span class="big" lang="da">${esc(c.word)}</span>${wtype(c) ? `<span class="tag" style="margin-top:10px">${esc(wtype(c))}</span>` : ""}${prepLine(c)}`;
-  const back = FC.dir === "en" ? `${word}<div class="meaning">${esc(c.meaning)}</div>` : `<div class="head"><span class="fcw" lang="da">${esc(c.word)}</span>${wtype(c) ? `<span class="tag">${esc(wtype(c))}</span>` : ""}</div><div class="meaning">${esc(c.meaning)}</div>${prepLine(c)}`;
-  return [front + `<div class="fchint">${t("fc.tap")}</div>`,
-    back + def + sentence + `<div class="row" style="margin-top:auto;padding-top:16px"><span class="spacer"></span><button type="button" class="btn quiet small" id="fcMore">${t("b.more")}</button></div>`];
+  const r = FC.result, typed = FC.typed.trim();
+  const res = r && r.kind === "right" ? `<div class="fcres ok">✓ ${t("fc.r.ok")}</div>`
+    : r && r.kind === "near" ? `<div class="fcres near">≈ ${t("fc.r.near")}: <b lang="da">${esc(c.word)}</b></div>`
+    : r && r.kind === "wrong" ? `<div class="fcres bad">✗ ${t("fc.r.bad")}: <b lang="da">${esc(c.word)}</b></div>${fcWhy(c)}`
+    : typed ? `<div class="fcres">${t("fc.typed")}: <b lang="en">${esc(typed)}</b></div>` : "";
+  const back = `${res}${en ? "" : pic}${head}<div class="meaning">${esc(c.meaning)}</div>${def}${sentence}${fcChunk(c)}`;
+  // typing: the question, the hint and the answer box stay together (no auto margin pushing them down)
+  return [front + (type ? `<p class="soft small" style="margin-top:14px">${t(en ? "fc.hint.en" : "fc.hint.da")}</p>${input}` : `<div class="fchint">${t("fc.tap")}</div>`),
+    back + `<div class="row" style="margin-top:auto;padding-top:16px"><span class="spacer"></span><button type="button" class="btn quiet small" id="fcMore">${t("b.more")}</button></div>`];
 }
-function flashCard() {
-  if (!FC.pile.length) return flashDone();
-  const c = DB.cards[FC.pile[0]], [front, back] = flashFaces(c);
-  const title = t("h.fc") + (FC.groups ? ` · ${FC.groups.length === 1 ? gname(FC.groups[0]) : t("s.groups", FC.groups.length)}` : "");
-  $("#app").innerHTML = `<div class="narrow">
-    <div class="fctop"><button type="button" class="btn quiet" id="fcHome">${t("fc.home")}</button><span class="kind">${esc(title)}</span><span class="spacer"></span>
-      <div class="seg" role="group">${["da", "en"].map(x => `<button type="button" data-dir="${x}" aria-pressed="${FC.dir === x}">${t("fc." + x)}</button>`).join("")}</div></div>
-    <div class="fcprog"><div class="bar"><span style="width:${(100 * FC.known / FC.total).toFixed(1)}%"></span></div><span class="soft small">${t("fc.left", FC.pile.length, FC.known)}</span></div>
+function fcCard() {
+  const c = DB.cards[FC.queue[0]], [front, back] = fcFaces(c), p = fcPlan(), type = FC.mode === "type";
+  return `<div class="narrow" id="fcroot">
+    <div class="fctop"><button type="button" class="btn quiet" id="fcHome">${t("fc.home")}</button><span class="kind">${esc(fcTitle())}</span><span class="spacer"></span>${fcSegs()}</div>
+    <div class="fcprog"><div class="bar"><span style="width:${(100 * p.done / p.total).toFixed(1)}%"></span></div>
+      <span class="soft small">${t("fc.prog", FC.bi + 1, fcBatches(), p.wrong)}${FC.phase === "wrong" && FC.loop > 1 ? ` · ${t("fc.round", FC.loop, FC.pile.length)}` : ""}</span></div>
     <div class="fcard" id="fcard" role="button" tabindex="0" aria-label="${esc(t("fc.flip"))}">
       <div class="fcin${FC.flipped ? " flipped" : ""}"><div class="face front">${front}</div><div class="face back">${back}</div></div></div>
     <div class="row fcbtns" id="fcBtns"></div>
-    <p class="soft small" style="text-align:center;margin-top:14px">${t("fc.keys")}</p></div>`;
-  $("#fcHome").onclick = home;
-  document.querySelectorAll(".seg [data-dir]").forEach(b => b.onclick = () => {
-    FC.dir = b.dataset.dir; FC.flipped = false;
-    try { localStorage.setItem(FC_DIR, FC.dir); } catch (e) { /* ignore */ }
-    flashCard();
-  });
-  $("#fcard").onclick = e => { if (!e.target.closest("button, a")) flashFlip(); };
+    <p class="soft small" style="text-align:center;margin-top:14px">${t(type ? "fc.keys.type" : "fc.keys")}</p></div>`;
+}
+function fcBindCard() {
+  const c = DB.cards[FC.queue[0]], inp = $("#fcAns");
+  $("#fcard").onclick = e => { if (!e.target.closest("button, a, input, .fcans, .letters")) fcFlip(); };
   $("#fcMore").onclick = () => explain(c);
   bindTr($("#fcard"));
-  flashButtons();
-  $("#fcard").focus({ preventScroll: true });
+  $("#fcCheck")?.addEventListener("click", fcCheck);
+  if (inp) {
+    inp.oninput = () => { FC.typed = inp.value; };
+    inp.onkeydown = e => { if (e.key === "Enter") { e.preventDefault(); FC.typed = inp.value; fcCheck(); } };
+    bindLetters(inp, $("#fcard"));
+  }
+  fcButtons();
+  (inp && !FC.flipped ? inp : $("#fcard")).focus({ preventScroll: true });
 }
-function flashButtons() {
+function fcButtons() {
   const box = $("#fcBtns"), face = s => $("#fcard .face." + s);
   // only the visible side can be tabbed into
   face("front").inert = FC.flipped; face("back").inert = !FC.flipped;
   box.innerHTML = FC.flipped
     ? `<button type="button" class="btn fcno" id="fcNo">${t("fc.no")}</button><button type="button" class="btn solid" id="fcYes">${t("fc.yes")}</button>`
-    : `<button type="button" class="btn solid" id="fcFlip">${t("fc.flip")}</button>`;
-  if (FC.flipped) { $("#fcNo").onclick = () => flashAnswer(false); $("#fcYes").onclick = () => flashAnswer(true); }
-  else $("#fcFlip").onclick = flashFlip;
-}
-function flashFlip() {
-  FC.flipped = !FC.flipped;
-  $("#fcard .fcin").classList.toggle("flipped", FC.flipped);
-  flashButtons();
-}
-function flashAnswer(knew) {
-  if (!FC.flipped) return;
-  const id = FC.pile.shift();
-  if (knew) FC.known++;
-  else { FC.again.add(id); FC.pile.splice(Math.min(3, FC.pile.length), 0, id); }
-  FC.flipped = false;
-  flashCard();
-}
-function flashDone() {
-  const hard = [...FC.again].map(id => DB.cards[id]), groups = FC.groups;
-  $("#app").innerHTML = `<div class="narrow"><div class="sheet q" style="margin-top:28px">
-    <div class="kind">${t("fc.done")}</div>
-    <div class="row" style="align-items:baseline;margin-top:10px"><span class="score">${Math.round(100 * (FC.total - hard.length) / FC.total)}%</span><span class="soft">${t("fc.score", FC.total - hard.length, FC.total)}</span></div>
-    ${hard.length ? `<div class="block"><span class="lbl">${t("fc.hard")}</span><ul class="list">${hard.map(c => `<li><b lang="da">${esc(c.word)}</b><span class="soft">${esc(c.meaning)}</span></li>`).join("")}</ul></div>` : ""}
-    <div class="row next">${hard.length ? `<button class="btn solid" id="fcHard">${t("fc.again", hard.length)}</button>` : ""}
-      <button class="btn${hard.length ? "" : " solid"}" id="fcNew">${t("fc.new")}</button><button class="btn quiet" id="home">${t("r.home")}</button></div></div></div>`;
-  if (hard.length) $("#fcHard").onclick = () => startFlash(groups, hard.map(c => c.id));
-  $("#fcNew").onclick = () => startFlash(groups);
-  $("#home").onclick = home;
+    : `<button type="button" class="btn solid" id="fcFlip">${t(FC.mode === "type" ? "fc.show" : "fc.flip")}</button>`;
+  if (FC.flipped) { $("#fcNo").onclick = () => fcAnswer(false); $("#fcYes").onclick = () => fcAnswer(true); }
+  else $("#fcFlip").onclick = fcFlip;
 }
 document.addEventListener("keydown", e => {
-  if (!FC || !$("#fcard") || document.querySelector("dialog[open]") || e.target.closest?.("#findbar")) return;
+  if (!FC || document.querySelector("dialog[open]") || e.target.closest?.("#findbar")) return;
+  if (e.target.matches?.("input, textarea")) return;   // the answer box: Enter checks it (fcBindCard)
   const onBtn = e.target.closest?.("button, a") && e.target.id !== "fcard";
-  if ((e.key === " " || e.key === "Enter") && !onBtn) { e.preventDefault(); flashFlip(); }
-  else if (e.key === "1" || e.key === "ArrowLeft") { e.preventDefault(); flashAnswer(false); }
-  else if (e.key === "2" || e.key === "ArrowRight") { e.preventDefault(); flashAnswer(true); }
+  if (FC.screen === "card") {
+    if (e.key === "Enter" && FC.flipped && FC.result && !onBtn) { e.preventDefault(); if (FC.result.ok != null) fcAnswer(FC.result.ok); }
+    else if ((e.key === " " || e.key === "Enter") && !onBtn) { e.preventDefault(); fcFlip(); }
+    else if (e.key === "1" || e.key === "ArrowLeft") { e.preventDefault(); fcAnswer(false); }
+    else if (e.key === "2" || e.key === "ArrowRight") { e.preventDefault(); fcAnswer(true); }
+    return;
+  }
+  // the other screens: Enter presses their main button
+  if (e.key === "Enter" && !onBtn) { const b = document.querySelector("#fcroot .btn.solid"); if (b) { e.preventDefault(); b.click(); } }
 });
 
 // ---------- find a word ----------
