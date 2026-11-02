@@ -2964,19 +2964,17 @@ function startLogic(only) {
   GS = { type: "logic", queue: q, i: 0, results: [], title: t("lg.drill") };
   grStep();
 }
-// the answer plus one word from each other kind (same word type where possible)
-function lgOptions(x) {
-  if (x.opts) return x.opts.map(lowFirst);
+// the words of the kind you picked: the answer (if you picked the right kind) and up to three others of that kind,
+// preferring other word types (only one of them fits the sentence's word order)
+function lgOptions(x, k) {
   const low = x.s.toLowerCase(), wt = LG[x.card][1], word = lowFirst(x.w);
-  const plain = id => /^[a-zæøå]+( [a-zæøå]+){0,2}$/.test(DB.cards[id].word) && ["ADV", "SUB", "KOO", "PRAEP"].includes(LG[id][1]) && !low.includes(DB.cards[id].word);
-  const others = LG_CATS.map(([k]) => k).filter(k => k !== x.cat).map(k => {
-    const ids = shuffle(Object.keys(LG).filter(id => LG[id][0] === k && plain(id)));
-    return DB.cards[ids.find(id => LG[id][1] === wt) || ids[0]]?.word;
-  }).filter(Boolean);
-  return shuffle([word, ...others]);
+  const plain = id => /^[a-zæøå]+( [a-zæøå]+){0,2}$/.test(DB.cards[id].word) && ["ADV", "SUB", "KOO", "PRAEP"].includes(LG[id][1]) && !low.includes(DB.cards[id].word) && DB.cards[id].word !== word;
+  const ids = shuffle(Object.keys(LG).filter(id => LG[id][0] === k && plain(id))).sort((a, b) => (LG[a][1] === wt) - (LG[b][1] === wt));
+  const ws = ids.slice(0, k === x.cat ? 3 : 4).map(id => DB.cards[id].word);
+  return shuffle(k === x.cat ? [word, ...ws] : ws);
 }
 function grLogic(x) {
-  const opts = lgOptions(x), right = x.opts ? x.ans : opts.indexOf(lowFirst(x.w));
+  let opts = [], right = -1;
   const show = o => x.at === 0 ? capFirst(o) : o, cats = LG_CATS;
   let cat = null;
   grFrame(x, `${x.prev ? `<p class="lgprev" lang="da">${esc(x.prev)}</p>` : ""}<div class="gsent" lang="da">${esc(x.s.slice(0, x.at))}<span class="gap" id="ggap">&nbsp;</span>${esc(x.s.slice(x.at + x.w.length))}</div>
@@ -2991,6 +2989,7 @@ function grLogic(x) {
     grFeedback(x, !give && cat === x.cat && word === right, give, { cat, word: word == null ? null : opts[word], opts });
   };
   const step2 = () => {
+    opts = lgOptions(x, cat); right = cat === x.cat ? opts.indexOf(lowFirst(x.w)) : -1;
     $("#lgstep").textContent = t("lg.step2");
     $("#lgopts").innerHTML = opts.map((o, i) => `<button type="button" class="btn opt lgopt" data-i="${i}" lang="da"><span class="k">${i + 1}</span>${esc(show(o))}</button>`).join("");
     document.querySelectorAll(".lgopt").forEach(b => b.onclick = () => finish(+b.dataset.i, false));
@@ -2999,7 +2998,7 @@ function grLogic(x) {
   const pickCat = k => {
     cat = k;
     document.querySelectorAll(".lgcat").forEach(b => b.classList.toggle("sel", b.dataset.c === k));   // stays clickable until a word is picked: you can change your mind
-    if (!$(".lgopt")) step2();
+    step2();
   };
   document.querySelectorAll(".lgcat").forEach(b => b.onclick = () => pickCat(b.dataset.c));
   GS.keys = e => { const n = +e.key; if (n >= 1 && n <= cats.length && !document.querySelector(".lgopt") && document.querySelector(".lgcat:not(:disabled)")) pickCat(cats[n - 1][0]); };
