@@ -2998,11 +2998,11 @@ function grLogic(x) {
   };
   const pickCat = k => {
     cat = k;
-    document.querySelectorAll(".lgcat").forEach(b => { b.disabled = true; b.classList.toggle("sel", b.dataset.c === k); });
-    step2();
+    document.querySelectorAll(".lgcat").forEach(b => b.classList.toggle("sel", b.dataset.c === k));   // stays clickable until a word is picked: you can change your mind
+    if (!$(".lgopt")) step2();
   };
   document.querySelectorAll(".lgcat").forEach(b => b.onclick = () => pickCat(b.dataset.c));
-  GS.keys = e => { const n = +e.key; if (n >= 1 && n <= cats.length && document.querySelector(".lgcat:not(:disabled)")) pickCat(cats[n - 1][0]); };
+  GS.keys = e => { const n = +e.key; if (n >= 1 && n <= cats.length && !document.querySelector(".lgopt") && document.querySelector(".lgcat:not(:disabled)")) pickCat(cats[n - 1][0]); };
   $("#gbtns").innerHTML = `<button class="btn quiet" id="idk">${t("gm.give")}</button>`;
   $("#idk").onclick = () => finish(null, true);
 }
