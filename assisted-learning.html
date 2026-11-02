@@ -1087,6 +1087,7 @@ const I18N = {
   "mk.sheet": ["Svarark", "Answer sheet"], "mk.n": ["{0} af {1} besvaret", "{0} of {1} answered"], "mk.submit": ["Aflever", "Hand in"], "mk.score": ["{0} af {1} point", "{0} of {1} points"],
   "mk.new": ["Ny mock", "New mock"], "mk.gap": ["Hul {0}", "Gap {0}"], "mk.your": ["Dit svar: {0}", "Your answer: {0}"], "mk.right": ["Rigtigt: {0}", "Correct: {0}"], "mk.none": ["Ikke besvaret", "Not answered"],
   "mk.alt": ["I en mock kan et andet bindeord af og til også passe. Teksten har brugt det rigtige, og hvilken slags det er, kan du se ovenfor.", "In a mock another linking word can occasionally fit too. The text used the right one; the kind is shown above."],
+  "mk.sel": ["Kun ord fra de {0} valgte emner", "Only words from the {0} selected topics"], "mk.fill": ["{0} af hullerne er fra andre emner, fordi de valgte emner ikke har sætninger nok.", "{0} of the gaps are from other topics because the selected topics don't have enough sentences."],
   "mk.review": ["Gennemgang", "Review"], "mk.few": ["Der er ikke sætninger nok til en mock endnu (kør pd3.py mockpool).", "Not enough sentences for a mock yet (run pd3.py mockpool)."],
 };
 function t(key, ...args) {
@@ -1573,7 +1574,7 @@ function home() {
           ...(lgItems().length ? [tvRow(`id="logic"`, t("lg.drill"), `<small>${t("lg.drill.s")}</small>`, `${lgDone()}<small>${t("tv.of", lgItems().length)}</small>`, t("tv.v.test"), t("lg.drill.l"))] : [])]) + (nLearned ? "" : empty("pencil", t("h.ex.none"))),
         `<button type="button" class="txtbtn" id="exer"${nLearned ? "" : " disabled"}>${ICONS.pencil}${t("tv.exall")}</button>`)}
     </div>`}
-    ${gview || !mkReady() ? "" : `<section class="mkbanner"><span class="mkpill">${t("mk.pill")}</span><div><b>${t("mk.title")}</b><p>${t("mk.s")}${mkLast() != null ? ` · ${t("mk.last", mkLast())}` : ""}</p></div><button type="button" class="btn solid" id="mockGo">${ICONS.pencil}${t("mk.go")}</button></section>`}
+    ${gview || !mkReady() ? "" : `<section class="mkbanner"><span class="mkpill">${t("mk.pill")}</span><div><b>${t("mk.title")}</b><p>${t("mk.s")}${picked.length ? ` · ${t("mk.sel", picked.length)}` : ""}${mkLast() != null ? ` · ${t("mk.last", mkLast())}` : ""}</p></div><button type="button" class="btn solid" id="mockGo">${ICONS.pencil}${t("mk.go")}</button></section>`}
     ${gview ? "" : `<nav class="tvlinks" aria-label="${esc(t("tv.more"))}">
       <a href="#emner" id="allTopics">${t("tv.topics")} <span>${t("tv.topics.s", gs.length)}</span></a>
       ${lgItems().length ? `<a href="#tankegang" id="tkLink">${t("lg.title")} <span>${t("lg.link.s")}</span></a>` : ""}
@@ -3099,18 +3100,24 @@ function mkOptions(x) {
 }
 function mkBuild() {
   const st = mkStore(), used = new Set(st.used || []), pool = mkPool();
+  const sel = x => !picked.length || inGroups(DB.cards[x.card], picked);   // the ticked topics; all words when none are ticked
   const fresh = list => { const f = list.filter(x => !used.has(x.key)); return shuffle(f.length >= 4 ? f : list); };
   const chosen = [], free = y => !chosen.some(z => z.card === y.card || z.s === y.s);
-  const conns = fresh(pool.filter(x => x.kind === "conn" && LG[x.card]));
-  for (const [k] of LG_CATS) { const x = conns.find(y => LG[y.card][0] === k && free(y)); if (x) chosen.push(x); }   // one linking word of each kind of logic
-  const nouns = fresh(pool.filter(x => x.kind === "noun")), n = nouns.find(free);
-  if (n) chosen.push(n);
-  fresh(pool.filter(x => x.kind === "verb")).forEach(x => { if (chosen.length < 9 && free(x)) chosen.push(x); });
-  if (chosen.length < 9) conns.forEach(x => { if (chosen.length < 9 && free(x)) chosen.push(x); });
+  const fill = (pl, n) => {
+    const conns = fresh(pl.filter(x => x.kind === "conn" && LG[x.card]));
+    for (const [k] of LG_CATS) { const x = conns.find(y => LG[y.card][0] === k && free(y)); if (x && chosen.length < n) chosen.push(x); }   // one linking word of each kind of logic
+    const nn = fresh(pl.filter(x => x.kind === "noun")).find(free);
+    if (nn && chosen.length < n) chosen.push(nn);
+    fresh(pl.filter(x => x.kind === "verb")).forEach(x => { if (chosen.length < n && free(x)) chosen.push(x); });
+    conns.forEach(x => { if (chosen.length < n && free(x)) chosen.push(x); });
+  };
+  fill(pool.filter(sel), 9);
+  const inside = chosen.length;
+  if (chosen.length < 9) fill(pool.filter(x => !sel(x)), 9);   // too few sentences in the ticked topics: the rest comes from the other words
   const items = shuffle(chosen.slice(0, 9)).map(x => ({ ...x, ...mkOptions(x) }));
   const ex = items.findIndex(x => x.kind === "verb") >= 0 ? items.findIndex(x => x.kind === "verb") : 0;
   const example = items.splice(ex, 1)[0];
-  return { example, items, ans: Array(items.length).fill(null), done: false };
+  return { example, items, ans: Array(items.length).fill(null), done: false, outside: picked.length ? Math.min(9, chosen.length) - Math.min(9, inside) : 0, topics: picked.length };
 }
 function startMock() {
   if (!mkReady()) { alert(t("mk.few")); return; }
@@ -3139,7 +3146,7 @@ function mockView() {
       <div class="trrow">${trLink(x.s).replace(t("m.tr"), t("tr.sent"))}<button type="button" class="linkbtn" data-more="${esc(x.card)}">${t("b.more")}</button></div></article>`; }).join("")}</section>` : "";
   $("#app").innerHTML = `<div class="narrow mock">
     <div class="counter"><span><span class="mkpill">${t("mk.pill")}</span> ${t("mk.title")}</span><button class="btn quiet" id="mkquit">✕ ${t("s.end")}</button></div>
-    <p class="mknote">${t("mk.note")}</p>
+    <p class="mknote">${t("mk.note")}${m.topics ? ` ${t("mk.sel", m.topics)}.` : ""}${m.outside ? ` ${t("mk.fill", m.outside)}` : ""}</p>
     ${m.done ? `<div class="sheet q mkresult"><span class="score">${score}/${n}</span><span class="soft">${t("mk.score", score, n)}</span></div>` : `<div class="sheet q"><p class="small">${t("mk.instr")}</p></div>`}
     <div class="sheet q mktext"><ol class="mksents">${m.items.map((x, i) => `<li value="${i + 1}" lang="da">${sent(x, gap(i + 1))}</li>`).join("")}</ol></div>
     <section class="sheet q mktable"><h2>${t("mk.sheet")}</h2><div class="mkgrid"><div class="mkrow head"><span class="mkn"></span>${MK_L.map(l => `<span>${l}</span>`).join("")}</div>${rows}</div>
