@@ -742,6 +742,16 @@ input.vgap.right { border-color: var(--ok); background: var(--ok-bg); } input.vg
 .lgcat { border-left: 6px solid var(--lgink); } .lgcat > span:last-child { line-height: 1.25; }
 .lgpill { display: inline-flex; align-items: center; gap: 6px; padding: 1px 10px; border-radius: 999px; background: var(--lgbg); color: var(--lgink); font-weight: 700; }
 .lgopt .g { margin-left: auto; padding-left: 8px; }
+.sobtns { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.socard { margin-top: 16px; padding: 18px 20px; border-radius: 22px; border: 2px solid var(--rule-strong); background: var(--md-sys-color-surface-container-low); touch-action: none; user-select: none; -webkit-user-select: none; cursor: grab; }
+.socard.picked { border-color: var(--accent); background: var(--accent-soft); }
+.socard.dragging { opacity: .45; cursor: grabbing; }
+.sowrd { font-size: 1.9rem; font-weight: 700; line-height: 1.2; overflow-wrap: anywhere; }
+.socard .prepline { margin-top: 8px; } .socard > .small { margin-top: 6px; }
+.soex { margin: 12px 0 0; line-height: 1.6; color: var(--soft); }
+.sob { touch-action: manipulation; } .sob.over { outline: 3px dashed var(--accent); outline-offset: 2px; }
+.sogh { position: fixed; left: 0; top: 0; z-index: 60; pointer-events: none; padding: 10px 16px; border-radius: 14px; background: var(--md-sys-color-surface-container-highest); box-shadow: var(--shadow); font-size: 1.2rem; font-weight: 700; white-space: nowrap; }
+@media (max-width: 480px) { .sowrd { font-size: 1.6rem; } }
 @media (max-width: 480px) { .opts.lgcats { grid-template-columns: 1fr; } }
 @media (max-width: 700px) { .lgboard, .lgpair { grid-template-columns: 1fr; } .lgcol > header { padding: 14px 16px; } .lgbody { padding: 2px 12px 10px; } }
 @media (max-width: 860px) { .tvboard { grid-template-columns: 1fr; } .tvgo { width: 100%; justify-content: center; } }
@@ -1114,7 +1124,16 @@ const I18N = {
   "lg.nofit.s": ["Hvorfor ikke «{0}»? «{0}» = {1}. Det har samme ordstilling og samme slags logik, men en anden betydning, og den passer ikke her. ", "Why not “{0}”? “{0}” = {1}. Same word order and same kind of logic, but a different meaning that doesn't fit here. "],
   "lg.nofit.r": ["Her skal der stå «{0}» = {1}.", "Here the sentence needs “{0}” = {1}."],
   "lg.cat.miss": ["Du valgte «{0}», men det er «{1}».", "You chose “{0}”, but it is “{1}”."], "lg.word.miss": ["Du valgte «{0}»; det rigtige ord er «{1}».", "You chose “{0}”; the right word is “{1}”."],
-  "lg.others": ["De andre muligheder:", "The other options:"], "lg.means": ["{0} = {1}", "{0} = {1}"],
+  "lg.others": ["De andre muligheder:", "The other options:"],
+  "so.title": ["Sortér ordene", "Sort the words"], "so.tab": ["Vælg sæt", "Choose a set"], "so.tab.logic": ["Slags logik", "Kind of logic"], "so.tab.order": ["Ordstilling", "Word order"],
+  "so.q": ["Hvilken bucket hører ordet til?", "Which bucket does the word belong in?"],
+  "so.drag": ["Træk ordet til en bucket. Eller tryk på ordet og så på en bucket. Tallene 1–4 virker også.", "Drag the word to a bucket. Or tap the word and then a bucket. The keys 1–4 work too."],
+  "so.picked": ["Ordet er valgt: tryk på den bucket, det hører til.", "Word picked: tap the bucket it belongs to."],
+  "so.notin": ["«{0}» er ikke {1}. {2}", "“{0}” is not {1}. {2}"], "so.right": ["Det rigtige er {0}: {1}", "The right one is {0}: {1}"],
+  "so.pass": ["Igen: de forkerte", "Again: the wrong ones"], "so.pile": ["Forkert endnu, kommer igen efter runden: {0}.", "Still wrong, back after the round: {0}."],
+  "so.sum": ["første gang rigtige", "right the first time"], "so.wrongs": ["Ord, du fik forkert første gang", "Words you got wrong the first time"],
+  "so.none": ["Alle ordene var rigtige første gang.", "All the words were right the first time."],
+  "so.again": ["Ny runde", "New round"], "so.back": ["Tilbage til Tankegang", "Back to Logic"], "lg.means": ["{0} = {1}", "{0} = {1}"],
   "mk.pill": ["MOCK", "MOCK"], "mk.title": ["Læsning 3 · mock", "Reading 3 · mock"], "mk.go": ["Start mock", "Start mock"],
   "mk.s": ["8 huller i rigtige sætninger fra Læsning 1, 2A og 2B, med svartabel som i prøven", "8 gaps in real sentences from Reading 1, 2A and 2B, with an answer table like the exam"],
   "mk.last": ["Seneste: {0}/8", "Last: {0}/8"],
@@ -1377,6 +1396,7 @@ function flipLang() {
   // screens that redraw without losing anything are drawn again, so nothing is left in the old language
   if ($("#go")) { const y = window.scrollY; home(); window.scrollTo(0, y); }
   else if ($("#lgboard")) { const y = window.scrollY; tankegang(); window.scrollTo(0, y); }
+  else if ($("#soBox")) { const y = window.scrollY; soRender(); window.scrollTo(0, y); }
   else if (FC) fcRender();
   if ($("#findbar").classList.contains("open")) findDraw();
 }
@@ -1404,6 +1424,7 @@ function load() {
 function route() {
   if (location.hash === "#tankegang") { history.replaceState(null, "", location.pathname + location.search); return tankegang(); }
   if (location.hash === "#grammatik") { history.replaceState(null, "", location.pathname + location.search); return grammarHome(); }
+  if (location.hash === "#sorter") { history.replaceState(null, "", location.pathname + location.search); return soStart(); }
   if (!location.hash.startsWith("#find")) return;
   const q = decodeURIComponent(location.hash.slice(6));
   history.replaceState(null, "", location.pathname + location.search);
@@ -3225,13 +3246,14 @@ function tankegang() {
   $("#app").innerHTML = `
     <div class="top"><a href="#" class="tvback" id="thome">${t("gm.back")}</a>
       <div class="tvhead"><div><h1>${t("lg.title")}</h1><p class="soft">${t("lg.intro")}</p></div>
-        ${lgItems().length ? `<button type="button" class="btn solid tvgo" id="lgGo">${ICONS.pencil}${t("lg.drill")}</button>` : ""}</div>
+        ${lgItems().length ? `<div class="sobtns"><button type="button" class="btn solid tvgo" id="lgGo">${ICONS.pencil}${t("lg.drill")}</button><button type="button" class="btn tvgo" id="soGo">${ICONS.swap}${t("so.title")}</button></div>` : ""}</div>
       <div class="lgpair"><p class="lgex lg-f"><span aria-hidden="true">➡️</span><span lang="da">Det regnede. <b>Derfor</b> blev vi hjemme.</span></p>
         <p class="lgex lg-u"><span aria-hidden="true">↪️</span><span lang="da">Det regnede. <b>Alligevel</b> gik vi en tur.</span></p></div>
       <ul class="lgleg" aria-label="${esc(t("lg.leg"))}">${leg.map(w => `<li><span class="wo">${t("lg.tag." + w)}</span><span lang="da">${ex[w]}</span><span>${t("lg.leg." + w)}</span></li>`).join("")}</ul></div>
     <div class="lgboard" id="lgboard">${LG_CATS.map(col).join("")}</div>`;
   $("#thome").onclick = e => { e.preventDefault(); home(); window.scrollTo(0, 0); };
   if ($("#lgGo")) $("#lgGo").onclick = () => startLogic();
+  if ($("#soGo")) $("#soGo").onclick = () => soStart();
   document.querySelectorAll(".lgchip").forEach(b => b.onclick = () => explain(DB.cards[b.dataset.id]));
   document.querySelectorAll("[data-lgfc]").forEach(b => b.onclick = () => startFlash(null, lgRows(b.dataset.lgfc).flatMap(r => r[1].map(x => x[0]))));
   window.scrollTo(0, 0);
@@ -3315,6 +3337,140 @@ function lgWhy(x, extra) {
     ${noteText(c) ? `<p class="soft small" lang="da">${b(noteText(c))}</p>` : ""}
     ${others.length ? `<p class="small"><span class="soft">${t("lg.others")}</span> ${others.join(" · ")}</p>` : ""}
     <p><button type="button" class="linkbtn" data-more>${t("b.more")}</button></p>`;
+}
+
+// ---------- Sortér ordene: one word, dragged (or tapped) into the right bucket ----------
+// Two sets: the four kinds of logic, or the word order (V2, bisætning, hovedsætning, + navneord). A round is 10 words; a word
+// answered wrong comes back after the round until it is right. The score is the first try. Practice only: no SM-2, own key.
+const SO_KEY = "pd3-assisted-learning:sort:v1";
+const SO_SETS = {
+  logic: LG_CATS.map(([k, cl]) => [k, `lg-${cl}`]),
+  order: [["ADV", "lg-t"], ["SUB", "lg-m"], ["KOO", "lg-f"], ["PRAEP", "lg-u"]]
+};
+let SO = null;   // { set, queue, i, total, pile, pass, first: {id: right on the first try}, ans: null | {b, ok}, picked, done }
+function soStore() { try { return JSON.parse(localStorage.getItem(SO_KEY) || "{}"); } catch (e) { return {}; } }
+function soWrite(st) { try { localStorage.setItem(SO_KEY, JSON.stringify(st)); } catch (e) { /* ignore */ } }
+const soPool = set => Object.keys(LG).filter(id => DB.cards[id] && (set === "logic" || SO_SETS.order.some(([k]) => k === LG[id][1])));
+const soKey = (set, id) => set === "logic" ? LG[id][0] : LG[id][1];
+const soLabel = (set, k) => set === "logic" ? `${lgCat(k)[2]} ${t("lg.c." + k)}` : t("lg.tag." + k);
+function soStart(set) {
+  const st = soStore();
+  set = set || st.set || "logic";
+  st.set = set; soWrite(st);
+  const words = st.words || {}, rank = id => (words[id] && words[id][0] > 0 ? 1 : 0);   // answered right first time: later
+  const queue = shuffle(soPool(set)).sort((a, b) => rank(a) - rank(b)).slice(0, 10);
+  if (!queue.length) return;
+  SO = { set, queue, i: 0, total: queue.length, pile: [], pass: 1, first: {}, ans: null, picked: false, done: false };
+  GS = { type: "sort", keys: soKeys };
+  soRender(); window.scrollTo(0, 0);
+}
+const soKeys = e => {
+  if (!SO || SO.done) return;
+  if (e.key === "Enter" && SO.ans) { e.preventDefault(); $("#nx")?.click(); return; }
+  const n = +e.key, keys = SO_SETS[SO.set];
+  if (!SO.ans && n >= 1 && n <= keys.length) soAnswer(keys[n - 1][0]);
+};
+function soAnswer(b) {
+  if (!SO || SO.done || SO.ans) return;
+  const id = SO.queue[SO.i], ok = b === soKey(SO.set, id);
+  if (!(id in SO.first)) {   // only the first try of a word in a round counts
+    SO.first[id] = ok;
+    const st = soStore(), words = st.words || {}, x = words[id] || [0, 0];
+    words[id] = [x[0] + (ok ? 1 : 0), x[1] + 1]; st.words = words; soWrite(st);
+  }
+  if (!ok && !SO.pile.includes(id)) SO.pile.push(id);
+  SO.ans = { b, ok }; SO.picked = false;
+  soRender();
+  $("#nx")?.focus({ preventScroll: true });
+  $("#fb")?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+}
+function soNext() {
+  if (!SO || !SO.ans) return;
+  SO.ans = null; SO.picked = false; SO.i++;
+  if (SO.i >= SO.queue.length) {
+    if (SO.pile.length) { SO.queue = shuffle(SO.pile); SO.pile = []; SO.i = 0; SO.pass++; }   // the wrong ones come back until right
+    else SO.done = true;
+  }
+  soRender(); window.scrollTo(0, 0);
+}
+// one short example: a Læsning 3 sentence with the word highlighted, else an exam sentence (both under ~100 characters)
+function soExample(id) {
+  const c = DB.cards[id], l = DB.l3.find(x => x.card === id && x.s.length < 100);
+  if (l) return `<p class="soex" lang="da">${esc(l.s.slice(0, l.at))}<mark class="hl">${esc(l.w)}</mark>${esc(l.s.slice(l.at + l.w.length))}</p>`;
+  const e = examSentences(c).find(x => x.s.length < 100);
+  return e ? `<p class="soex" lang="da">${hlSentence(c, e.s, e.m)}</p>` : "";
+}
+// drag with the pointer (mouse or touch); a tap without a move picks the word up, and the next tap on a bucket answers
+function soDrag(card) {
+  let id = null, sx = 0, sy = 0, ghost = null;
+  const at = (x, y) => document.elementFromPoint(x, y)?.closest(".sob:not([disabled])");
+  const over = b => document.querySelectorAll(".sob").forEach(o => o.classList.toggle("over", o === b));
+  card.onpointerdown = e => { if (SO.ans) return; id = e.pointerId; sx = e.clientX; sy = e.clientY; ghost = null; card.setPointerCapture(id); };
+  card.onpointermove = e => {
+    if (e.pointerId !== id) return;
+    if (!ghost) {
+      if (Math.hypot(e.clientX - sx, e.clientY - sy) < 8) return;
+      ghost = document.createElement("div"); ghost.className = "sogh"; ghost.textContent = DB.cards[SO.queue[SO.i]].word;
+      document.body.append(ghost); card.classList.add("dragging");
+    }
+    ghost.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
+    over(at(e.clientX, e.clientY));
+  };
+  const end = (e, drop) => {
+    if (e.pointerId !== id) return; id = null;
+    if (!ghost) { SO.picked = !SO.picked; soRender(); return; }   // a tap
+    const b = drop ? at(e.clientX, e.clientY) : null;
+    ghost.remove(); ghost = null; card.classList.remove("dragging"); over(null);
+    if (b) soAnswer(b.dataset.b);
+  };
+  card.onpointerup = e => end(e, true);
+  card.onpointercancel = e => end(e, false);
+}
+function soRender() {
+  if (!SO) return;
+  if (SO.done) return soEnd();
+  const id = SO.queue[SO.i], c = DB.cards[id], a = SO.ans, rightKey = soKey(SO.set, id);
+  // the explanation of a kind of logic (notin: what it means; why: when it fits) or of a word order
+  const expl = (k, mode) => SO.set === "logic" ? t((mode === "notin" ? "lg.d." : "lg.why.") + k) : t("lg.wo." + k, capFirst(c.word), lowFirst(c.word));
+  const bucket = ([k, cl], i) => `<button type="button" class="btn opt lgcat sob ${cl}${a && k === rightKey ? " right" : ""}${a && !a.ok && k === a.b ? " wrong" : ""}" data-b="${k}"${a ? " disabled" : ""}><span class="k">${i + 1}</span><span>${soLabel(SO.set, k)}</span></button>`;
+  const card = `<div class="socard${SO.picked ? " picked" : ""}" id="soWord">
+      <div class="sowrd" lang="da">${esc(c.word)}</div>${prepLine(c)}
+      <div class="small soft">${esc(c.meaning)}${AI()}</div>${soExample(id)}
+      <p class="small soft">${SO.picked ? t("so.picked") : t("so.drag")}</p></div>`;
+  const meaning = `<p><b lang="da">${esc(c.word)}</b> = ${esc(c.meaning)}</p>`;
+  const fb = !a ? "" : `<div class="feedback ${a.ok ? "ok" : "bad"}"><h3>${a.ok ? t("gm.right") : t("gm.wrong")}</h3>
+      ${a.ok ? `<p>${expl(rightKey, "why")}</p>` : `<p>${t("so.notin", esc(c.word), soLabel(SO.set, a.b), expl(a.b, "notin"))}</p><p>${t("so.right", soLabel(SO.set, rightKey), expl(rightKey, "why"))}</p>`}
+      ${meaning}</div>
+    <div class="row next"><button class="btn solid" id="nx">${t("b.next")}</button><button type="button" class="btn quiet" data-more>${t("b.more")}</button></div>`;
+  $("#app").innerHTML = `<div class="narrow" id="soBox">
+    <div class="counter"><span>${t("so.title")} · ${t("s.count", SO.i + 1, SO.queue.length)}${SO.pass > 1 ? ` · <span class="lgpill lg-u">${t("so.pass")}</span>` : ""}</span><button class="btn quiet" id="soquit">✕ ${t("s.end")}</button></div>
+    <div class="bar sessionbar" aria-hidden="true"><span style="width:${100 * Object.keys(SO.first).length / SO.total}%"></span></div>
+    <div class="tvseg" role="group" aria-label="${esc(t("so.tab"))}">${Object.keys(SO_SETS).map(s => `<button type="button" data-set="${s}" aria-pressed="${SO.set === s}">${t("so.tab." + s)}</button>`).join("")}</div>
+    <div class="sheet q">
+      <p class="prompt">${t("so.q")}</p>
+      ${card}
+      <div class="opts lgcats" id="soBuckets">${SO_SETS[SO.set].map(bucket).join("")}</div>
+      <div id="fb">${fb}</div>
+      ${SO.pile.length ? `<p class="small soft">${t("so.pile", SO.pile.length)}</p>` : ""}
+    </div></div>`;
+  $("#soquit").onclick = () => { SO = null; tankegang(); window.scrollTo(0, 0); };
+  document.querySelectorAll("[data-set]").forEach(b => b.onclick = () => { if (b.dataset.set !== SO.set) soStart(b.dataset.set); });
+  document.querySelectorAll(".sob:not([disabled])").forEach(b => b.onclick = () => soAnswer(b.dataset.b));
+  if ($("#nx")) $("#nx").onclick = () => soNext();
+  document.querySelectorAll("#fb [data-more]").forEach(b => b.onclick = () => explain(DB.cards[SO.queue[SO.i]]));
+  if (!a) soDrag($("#soWord"));
+}
+function soEnd() {
+  GS = { type: "sort", keys: null };
+  const right = Object.values(SO.first).filter(Boolean).length, wrong = Object.keys(SO.first).filter(id => !SO.first[id]);
+  $("#app").innerHTML = `<div class="narrow" id="soBox"><div class="sheet q" style="margin-top:28px">
+    <div class="kind">${t("so.title")} · ${t("so.tab." + SO.set)}</div>
+    <div class="row" style="align-items:baseline;margin-top:10px"><span class="score">${right}/${SO.total}</span><span class="soft">${t("so.sum")}</span></div>
+    ${wrong.length ? `<div class="block"><span class="lbl">${t("so.wrongs")}</span><ul class="list">${wrong.map(id => `<li><b lang="da">${esc(DB.cards[id].word)}</b><span class="soft">${esc(DB.cards[id].meaning)}</span><span class="spacer"></span><span class="small soft">${esc(soLabel(SO.set, soKey(SO.set, id)))}</span></li>`).join("")}</ul></div>` : `<p class="block">${t("so.none")}</p>`}
+    <div class="row next"><button class="btn solid" id="soAgain">${t("so.again")}</button><button class="btn quiet" id="soBack">${t("so.back")}</button></div></div></div>`;
+  $("#soAgain").onclick = () => soStart(SO.set);
+  $("#soBack").onclick = () => { SO = null; tankegang(); window.scrollTo(0, 0); };
+  window.scrollTo(0, 0);
 }
 
 // ---------- Mock Læsning 3: 8 gaps in real sentences from Læsning 1, 2A and 2B (pd3-data/mock-pool.json) ----------
