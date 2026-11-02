@@ -1,0 +1,3747 @@
+{
+  "built": "2026-11-02",
+  "items": {
+    "at_betyde": [
+      {
+        "kind": "verb",
+        "card": "at_betyde",
+        "src": "2020v 2A",
+        "prev": "",
+        "s": "Det betyder dog ikke, at hun har fortrudt et øjeblik – tværtimod: Det var det helt rigtige.",
+        "at": 4,
+        "w": "betyder"
+      },
+      {
+        "kind": "verb",
+        "card": "at_betyde",
+        "src": "2023v L1",
+        "prev": "Det samme gælder det mere end 1,4 milliard år gamle grundfjeld, der er synligt på store dele af øen samt på øgruppen Ertholmene nordøst for Bornholm.",
+        "s": "Det synlige grundfjeld betyder blandt andet, at Bornholm som det eneste sted i landet har klippekyster.",
+        "at": 23,
+        "w": "betyder"
+      },
+      {
+        "kind": "verb",
+        "card": "at_betyde",
+        "src": "2020v 2A",
+        "prev": "Hvis en virksomhed mister erfarne medarbejdere, fordi de rykker videre til et andet job, kan det nemlig være forbundet med tab af viden.",
+        "s": "Det betyder også ekstra udgifter og ekstra arbejdstimer ved oplæring af nye medarbejdere.",
+        "at": 4,
+        "w": "betyder"
+      },
+      {
+        "kind": "verb",
+        "card": "at_betyde",
+        "src": "2018s L1",
+        "prev": "Sæsonmedarbejdere vil blive ansat i Universe som en helhed og ikke tilknyttet en bestemt afdeling.",
+        "s": "Det betyder, at de kan komme til at varetage vagter i flere områder alt afhængigt af, hvilke kompetencer de vil blive lært op i.",
+        "at": 4,
+        "w": "betyder"
+      },
+      {
+        "kind": "verb",
+        "card": "at_betyde",
+        "src": "2024s L1",
+        "prev": "",
+        "s": "March betyder ifølge ordbogen ”en organiseret vandring”.",
+        "at": 6,
+        "w": "betyder"
+      },
+      {
+        "kind": "verb",
+        "card": "at_betyde",
+        "src": "2024s 2B",
+        "prev": "Det er bare ikke helt entydigt, hvad en fire-dages arbejdsuge egentlig er.",
+        "s": "I nogle virksomheder betyder det, at man arbejder 37 timer på fire dage.",
+        "at": 21,
+        "w": "betyder"
+      },
+      {
+        "kind": "verb",
+        "card": "at_betyde",
+        "src": "2018v 2A",
+        "prev": "",
+        "s": "Det betyder også, at de nu uden forstyrrende flytteplaner kan glæde sig til den kommende familieforøgelse.",
+        "at": 4,
+        "w": "betyder"
+      },
+      {
+        "kind": "verb",
+        "card": "at_betyde",
+        "src": "2024s 2B",
+        "prev": "I nogle virksomheder betyder det, at man arbejder 37 timer på fire dage.",
+        "s": "I andre betyder det, at man også arbejder færre timer om ugen.",
+        "at": 8,
+        "w": "betyder"
+      }
+    ],
+    "desuden": [
+      {
+        "kind": "conn",
+        "card": "desuden",
+        "src": "2018v L1",
+        "prev": "Under opholdet følger eleverne højskolens almindelige undervisning.",
+        "s": "Eleverne modtager desuden vejledning om uddannelses- og erhvervsmuligheder.",
+        "at": 18,
+        "w": "desuden"
+      },
+      {
+        "kind": "conn",
+        "card": "desuden",
+        "src": "2015v L1",
+        "prev": "På de fleste uddannelser skal du regne med udgifter til fotokopier og lignende.",
+        "s": "Desuden skal du som regel selv anskaffe dig en lommeregner og visse ordbøger/ fagbøger.",
+        "at": 0,
+        "w": "Desuden"
+      },
+      {
+        "kind": "conn",
+        "card": "desuden",
+        "src": "2023v L1",
+        "prev": "I den brede sprækkedal, der adskiller Hammerknuden fra det øvrige Bornholm, ligger øens største sø, Hammer Sø, der nærmest har karakter af en bjergsø.",
+        "s": "I sprækkedalene finder man desuden de eneste naturlige vandfald i Danmark, hvoraf det knap 20 meter høje vandfald i Døndalen er det bedst kendte.",
+        "at": 27,
+        "w": "desuden"
+      },
+      {
+        "kind": "conn",
+        "card": "desuden",
+        "src": "2017s L1",
+        "prev": "Læs historiske opskrifter eller venligst mere på menukortet.",
+        "s": "Der er desuden rig mulighed for at kombinere arrangementet med eksempelvis en rundvisning, ølsmagning i det historiske bryggeri, musik under middagen, skattejagter og meget mere.",
+        "at": 7,
+        "w": "desuden"
+      },
+      {
+        "kind": "conn",
+        "card": "desuden",
+        "src": "2020v L1",
+        "prev": "Formålet med undervisningen er at sprede viden om og forståelse for det danske samfund og den danske kultur og gøre danskerne til aktive medborgere.",
+        "s": "Desuden er det vigtigt for AOF at være med til at udbrede demokrati i Danmark, og det skal gøres med udgangspunkt i viden, udvikling og samvær.",
+        "at": 0,
+        "w": "Desuden"
+      },
+      {
+        "kind": "conn",
+        "card": "desuden",
+        "src": "2015s L1",
+        "prev": "Den kan også give mulighed for praktikophold, eller at du - på de gymnasier der tilbyder dette - tager dele af undervisningen ved en udenlandsk uddannelsesinstitution.",
+        "s": "Desuden skal uddan nelsesstedet tilbyde rådgivning og vejledning under din uddannelse.",
+        "at": 0,
+        "w": "Desuden"
+      },
+      {
+        "kind": "conn",
+        "card": "desuden",
+        "src": "2023v 2B",
+        "prev": "Dels er det en god idé at bruge forskellige adgangskoder til forskellige tjenester, så hackere ikke pludselig får adgang til alle ens data og tjenester.",
+        "s": "Desuden bør man beskytte sig med et godt antivirusprogram, både på sin computer og på alle sine andre digitale enheder.",
+        "at": 0,
+        "w": "Desuden"
+      },
+      {
+        "kind": "conn",
+        "card": "desuden",
+        "src": "2018s L1",
+        "prev": "Det er afgørende, at du har situationsfornemmelse, er rummelig og har god kulturforståelse.",
+        "s": "Du skal desuden kunne arbejde minimum to dage om ugen og altid hver anden fredag.",
+        "at": 8,
+        "w": "desuden"
+      }
+    ],
+    "at_opleve": [
+      {
+        "kind": "verb",
+        "card": "at_opleve",
+        "src": "2018s L1",
+        "prev": "Dine kolleger og ledere hjælper og støtter dig i udviklingen, så du opbygger dine salgs- og servicekompetencer.",
+        "s": "Du er det første, tivoligæsten oplever af Tivoli, så du har et stort ansvar for at sikre en god begyndelse på Tivolituren.",
+        "at": 31,
+        "w": "oplever"
+      },
+      {
+        "kind": "verb",
+        "card": "at_opleve",
+        "src": "2023v L1",
+        "prev": "",
+        "s": "Det nye Hammershus Besøgscenter giver en helt ny måde at opleve Hammershus på.",
+        "at": 57,
+        "w": "opleve"
+      },
+      {
+        "kind": "verb",
+        "card": "at_opleve",
+        "src": "2021s L1",
+        "prev": "",
+        "s": "udenlandske fortællinger, og det er også her, man kan opleve workshops og visninger af stykker under udvikling.",
+        "at": 54,
+        "w": "opleve"
+      },
+      {
+        "kind": "verb",
+        "card": "at_opleve",
+        "src": "2023v L1",
+        "prev": "af øens fire rundkirker.",
+        "s": "Nylars Rundkirke er den bedst bevarede af de bornholmske rundkirker, og endelig kan man opleve Nyker Rundkirke, der er den mindste og sandsynligvis også den yngste af Bornholms rundkirker.",
+        "at": 88,
+        "w": "opleve"
+      },
+      {
+        "kind": "verb",
+        "card": "at_opleve",
+        "src": "2016s L1",
+        "prev": "Eller kunne du tænke dig at arbejde med dit fag under væsentligt anderledes omgivelser?",
+        "s": "Vi oplever et stigende antal erhvervsaktive, som ønsker en meningsfuld ferie eller en pause fra karrieren.",
+        "at": 3,
+        "w": "oplever"
+      },
+      {
+        "kind": "verb",
+        "card": "at_opleve",
+        "src": "2018s L1",
+        "prev": "Du kan bygge vandraketter, grave med en rigtig gravemaskine, køre tohjulede segways og løfte en bil.",
+        "s": "Du kan også opleve fortællingen om, hvordan en af Danmarks største industrivirksomheder er blevet til.",
+        "at": 12,
+        "w": "opleve"
+      },
+      {
+        "kind": "verb",
+        "card": "at_opleve",
+        "src": "2023v L1",
+        "prev": "Hammershus er Nordeuropas største borgruin og Bornholms mest besøgte seværdighed.",
+        "s": "Og det er ikke så underligt, for her kan man virkelig få gang i fantasien og opleve den bornholmske historie.",
+        "at": 77,
+        "w": "opleve"
+      },
+      {
+        "kind": "verb",
+        "card": "at_opleve",
+        "src": "2016s L1",
+        "prev": "",
+        "s": "Afrika Som frivillig hos Projects Abroad kan du opleve Afrika og alt hvad dette enestående kontinent byder på.",
+        "at": 48,
+        "w": "opleve"
+      }
+    ],
+    "derfor": [
+      {
+        "kind": "conn",
+        "card": "derfor",
+        "src": "2022v 2A",
+        "prev": "Vi skiftede tag på gamle ejendomme, satte køkkener op og den slags,” siger Anders.",
+        "s": "Derfor valgte han til sidst at starte sit eget snedkerværksted. ”I modsætning til de fleste andre værksteder, satser jeg ikke på nye møbler.",
+        "at": 0,
+        "w": "Derfor"
+      },
+      {
+        "kind": "conn",
+        "card": "derfor",
+        "src": "2020v L1",
+        "prev": "Underviseren hos AOF Favrskov er meget erfaren, og han har både viden om spejlreflekskameraer og kameraer i smartphones.",
+        "s": "Derfor er kurset perfekt for de fleste.",
+        "at": 0,
+        "w": "Derfor"
+      },
+      {
+        "kind": "conn",
+        "card": "derfor",
+        "src": "2015v L1",
+        "prev": "Vigtig beslutning at vælge ungdomsuddannelse Du påvirkes af meninger fra mange sider.",
+        "s": "Derfor er det vigtigt, at du selv indsamler så mange oplysninger som muligt, så du kan foretage din egen vurdering.",
+        "at": 0,
+        "w": "Derfor"
+      },
+      {
+        "kind": "conn",
+        "card": "derfor",
+        "src": "2016s L1",
+        "prev": "Du kan bidrage med livserfaring, og alle projekter kan drage nytte af din frivillige arbejdskraft.",
+        "s": "Har du tid, lyst og energi er der derfor ingen hindring for at du rejser ud som volontør.",
+        "at": 34,
+        "w": "derfor"
+      },
+      {
+        "kind": "conn",
+        "card": "derfor",
+        "src": "2023v 2B",
+        "prev": "For mange unge mennesker er en verden uden internet faktisk helt utænkelig.",
+        "s": "Det har derfor aldrig været vigtigere at bekymre sig om datasikkerhed, end det er nu, og det gælder både for privatpersoner og virksomheder.",
+        "at": 8,
+        "w": "derfor"
+      },
+      {
+        "kind": "conn",
+        "card": "derfor",
+        "src": "2016s L1",
+        "prev": "VOKSENFRIVILLIG?",
+        "s": "Vi ser stadigt flere voksne danskere som ønsker en meningsfuld ferie, og som derfor vælger at bruge ferien på frivilligt arbejde i udlandet.",
+        "at": 77,
+        "w": "derfor"
+      },
+      {
+        "kind": "conn",
+        "card": "derfor",
+        "src": "2019s 2A",
+        "prev": "Men der er ifølge de velgørende organisationer brug for mange flere penge, end det offentlige system har råd til.",
+        "s": "Organisationerne har derfor en stor opgave i at fortælle danskerne, at der er hårdt brug for mere hjælp.",
+        "at": 21,
+        "w": "derfor"
+      },
+      {
+        "kind": "conn",
+        "card": "derfor",
+        "src": "2023v 2A",
+        "prev": "De forstod ikke altid, hvor jeg ville hen med mine ideer.",
+        "s": "Jeg endte derfor med at lave for mange opgaver selv.",
+        "at": 10,
+        "w": "derfor"
+      }
+    ],
+    "blandt_andet": [
+      {
+        "kind": "conn",
+        "card": "blandt_andet",
+        "src": "2021v L1",
+        "prev": "Den lever året rundt og laver lokale såvel som nationale arrangementer både forår, sommer, efterår og vinter.",
+        "s": "Det gør den blandt andet gennem projektet Film for alle, hvor OFF året rundt støtter den danske filmkultur og arbejder på at dyrke og udbrede mangfoldige filmtilbud til alle.",
+        "at": 12,
+        "w": "blandt andet"
+      },
+      {
+        "kind": "conn",
+        "card": "blandt_andet",
+        "src": "2023v L1",
+        "prev": "Det samme gælder det mere end 1,4 milliard år gamle grundfjeld, der er synligt på store dele af øen samt på øgruppen Ertholmene nordøst for Bornholm.",
+        "s": "Det synlige grundfjeld betyder blandt andet, at Bornholm som det eneste sted i landet har klippekyster.",
+        "at": 31,
+        "w": "blandt andet"
+      },
+      {
+        "kind": "conn",
+        "card": "blandt_andet",
+        "src": "2022v L1",
+        "prev": "spillere har lagt stemme til de forskellige figurer, hvilket gør, at blandt andet de forskellige nordiske guder træder i karakter.",
+        "s": "I tegnefilmen bliver myterne gjort lettilgængelige, blandt andet ved at vikingernes guder bliver gjort menneskelige, så man kan identificere sig med dem.",
+        "at": 52,
+        "w": "blandt andet"
+      },
+      {
+        "kind": "conn",
+        "card": "blandt_andet",
+        "src": "2022v L1",
+        "prev": "Fx lærte vi om, at mange af de danske navne på ugedage og steder ligner navne på de nordiske guder.",
+        "s": "Jeg vidste godt, at de nordiske vikinger blandt andet kunne sejle til England, hvor de handlede, og at mange af dem faktisk også blev der.",
+        "at": 41,
+        "w": "blandt andet"
+      },
+      {
+        "kind": "conn",
+        "card": "blandt_andet",
+        "src": "2021v L1",
+        "prev": "Der er både fordele for ambassadøren, der sælger billetter, og for dem, der køber en billet gennem en ambassadør.",
+        "s": "Blandt andet belønnes man med point, hver gang man sælger en billet.",
+        "at": 0,
+        "w": "Blandt andet"
+      },
+      {
+        "kind": "conn",
+        "card": "blandt_andet",
+        "src": "2023v L1",
+        "prev": "Børneruten er lagt på gode cykelstier væk fra bilerne.",
+        "s": "Blandt andet kører man på mange dele af ruten på det nedlagte jernbanespor midt i landskabet, langt væk fra den øvrige trafik, hvilket betyder, at børneruten her er meget trafiksikker.",
+        "at": 0,
+        "w": "Blandt andet"
+      },
+      {
+        "kind": "conn",
+        "card": "blandt_andet",
+        "src": "2021s 2A",
+        "prev": "Mennesker har altid udledt drivhusgasser.",
+        "s": "Problemet er, at vi udleder mere end tidligere, blandt andet CO2.",
+        "at": 48,
+        "w": "blandt andet"
+      },
+      {
+        "kind": "conn",
+        "card": "blandt_andet",
+        "src": "2023v L1",
+        "prev": "Ved Helligdomsklipperne, på Hammerknuden og flere andre steder falder klippesiderne lodret ned i havet.",
+        "s": "Neden for blandt andet Hammershus fungerer klippesiderne som fuglefjeld med ynglende alke, lomvier og vandrefalke.",
+        "at": 10,
+        "w": "blandt andet"
+      }
+    ],
+    "især": [
+      {
+        "kind": "conn",
+        "card": "især",
+        "src": "2014s 2A",
+        "prev": "Det er typisk de små filialer, som må lukke, fordi de er umoderne og har for lidt åbent.",
+        "s": "Lukningerne rammer især de svage brugere: børnene, de ældre og de fysisk handicappede, som har svært ved at fragte sig selv hen til de nye, centrale storbiblioteker.",
+        "at": 19,
+        "w": "især"
+      },
+      {
+        "kind": "conn",
+        "card": "især",
+        "src": "2018s L1",
+        "prev": "Cirkusrevyen er i dag den største danske revy.",
+        "s": "Den er berømt for fra begyndelsen at have haft traditionel underholdning med revystjerner og dansenumre, men i nyere tid er den især blevet berømt for parodier og politisk satire.",
+        "at": 128,
+        "w": "især"
+      },
+      {
+        "kind": "conn",
+        "card": "især",
+        "src": "2019v 2A",
+        "prev": "Der er også en meget fleksibel arbejdskultur, hvor den enkelte medarbejder har relativt meget ansvar.",
+        "s": "Det er dog især den gode work-life-balance, som mange herboende udlændinge fremhæver.",
+        "at": 11,
+        "w": "især"
+      },
+      {
+        "kind": "conn",
+        "card": "især",
+        "src": "2020s 2A",
+        "prev": "Man forventer nemlig, at behovet for udenlandsk arbejdskraft vil stige.",
+        "s": "Det skyldes, at virksomhederne i fremtiden må rekruttere flere især højt specialiserede medarbejdere fra udlandet.",
+        "at": 63,
+        "w": "især"
+      },
+      {
+        "kind": "conn",
+        "card": "især",
+        "src": "2014v 2A",
+        "prev": "Så læste jeg en artikel om 5:2-kuren og om folk, der havde succes med metoden.",
+        "s": "Jeg syntes især, det var positivt, at man de fleste dage kunne spise, som man plejer.",
+        "at": 11,
+        "w": "især"
+      },
+      {
+        "kind": "conn",
+        "card": "især",
+        "src": "2015s 2A",
+        "prev": "Kon flikterne kan dreje sig om fordelingen af arbejds opgaverne.",
+        "s": "De kan også dreje sig om, hvordan arbejdet skal gøres, eller hvor lang tid kvinden og manden hver især bruger på husarbejdet.",
+        "at": 98,
+        "w": "især"
+      },
+      {
+        "kind": "conn",
+        "card": "især",
+        "src": "2017s L1",
+        "prev": "Knallerten var ikke kun et transportmiddel, men også en vigtig side af ungdomskulturen.",
+        "s": "Især drengene hakkede og borede deres knallerter i håb om at kunne imponere hinanden – og pigerne.",
+        "at": 0,
+        "w": "Især"
+      },
+      {
+        "kind": "conn",
+        "card": "især",
+        "src": "2015s 2A",
+        "prev": "Kon flikterne kan dreje sig om fordelingen af arbejds opgaverne.",
+        "s": "De kan også dreje sig om, hvordan arbejdet skal gøres, eller hvor lang tid kvinden og manden hver især bruger på husarbejdet.",
+        "at": 98,
+        "w": "især"
+      }
+    ],
+    "at_bestille": [
+      {
+        "kind": "verb",
+        "card": "at_bestille",
+        "src": "2021s L1",
+        "prev": "Kom i god tid, så du kan nyde vores smukke bygning indefra en halv time før forestillingens start.",
+        "s": "Her er der mulighed for at hænge overtøj og store tasker i vores garderober, bestille pausedrinks og få programmer til dagens forestilling.",
+        "at": 77,
+        "w": "bestille"
+      },
+      {
+        "kind": "verb",
+        "card": "at_bestille",
+        "src": "2024s L1",
+        "prev": "Der er mange muligheder for god forplejning under marchen.",
+        "s": "Man kan på forhånd bestille og købe morgen- og aftensmad til marchdagene, når man tilmelder sig online.",
+        "at": 19,
+        "w": "bestille"
+      },
+      {
+        "kind": "verb",
+        "card": "at_bestille",
+        "src": "2021s L1",
+        "prev": "Indehavere af et officielt ledsagerkort, udstedt af Danske Handicaporganisationer, Dansk Blindesamfund eller tilsvarende organisation fra et EU land, tilbydes en gratis (+ serviceomkostninger) ledsagerbillet til Det Kongelige Teaters egne forestillinger.",
+        "s": "Ønsker du at bestille en gratis ledsagerbillet i forbindelse med køb af kørestolsplads, skal du kontakte Det Kongelige Teaters Kundecenter på tlf. 33 69 69 69.",
+        "at": 13,
+        "w": "bestille"
+      },
+      {
+        "kind": "verb",
+        "card": "at_bestille",
+        "src": "2019v L1",
+        "prev": "Det Danske Filminstituts Billed- & Plakatarkiv er et filmhistorisk arkiv, som er åbent for alle interesserede.",
+        "s": "Publikum har mulighed for at bestille kopier af arkivets billeder og plakater.",
+        "at": 29,
+        "w": "bestille"
+      },
+      {
+        "kind": "verb",
+        "card": "at_bestille",
+        "src": "2024s L1",
+        "prev": "Det giver adgang til rastepladser, toiletter og førstehjælp på ruterne.",
+        "s": "Ved tilmelding har man mulighed for at bestille og købe en række tilvalg i forhold til indkvartering og forplejning.",
+        "at": 39,
+        "w": "bestille"
+      },
+      {
+        "kind": "verb",
+        "card": "at_bestille",
+        "src": "2020s L1",
+        "prev": "Ved digitaliseringen bliver fotos samtidig tilgængelige for alle på fotoarkivet Samlinger online.",
+        "s": "Som bestiller får man således anvendelsesret, men ikke eneret til brug af materialet.",
+        "at": 4,
+        "w": "bestiller"
+      },
+      {
+        "kind": "verb",
+        "card": "at_bestille",
+        "src": "2022v 2A",
+        "prev": "",
+        "s": "Det var mere opgaverne, der var nogle andre, end han havde håbet. ”Efterhånden er der ikke særlig mange, der bestiller håndlavede møbler, så for det meste lavede vi almindeligt tømrerarbejde.",
+        "at": 109,
+        "w": "bestiller"
+      },
+      {
+        "kind": "verb",
+        "card": "at_bestille",
+        "src": "2022s L1",
+        "prev": "Her er det gratis.",
+        "s": "Man kan også bestille Ø-passet og få det tilsendt mod et gebyr via hjemmesiden oepas.dk.",
+        "at": 13,
+        "w": "bestille"
+      }
+    ],
+    "at_undvære": [
+      {
+        "kind": "verb",
+        "card": "at_undvære",
+        "src": "2021s 2A",
+        "prev": "Men det kunne jeg, og det gik endda hurtigt.",
+        "s": "Det har været sværere for mig at undvære kød på middagsbordet, men jeg er efterhånden ved at vænne mig til det.",
+        "at": 33,
+        "w": "undvære"
+      },
+      {
+        "kind": "verb",
+        "card": "at_undvære",
+        "src": "2020s 2A",
+        "prev": "De skal også finde en ny midlertidig bolig og opbygge et nyt netværk i udlandet.",
+        "s": "Hjemme i Danmark har de måske en kæreste, de må undvære.",
+        "at": 48,
+        "w": "undvære"
+      },
+      {
+        "kind": "verb",
+        "card": "at_undvære",
+        "src": "2024s L1",
+        "prev": "",
+        "s": "Traditionen med at tage til Viborg og vandre sammen med tusinder af andre mennesker vil vi slet ikke undvære.",
+        "at": 101,
+        "w": "undvære"
+      }
+    ],
+    "fordi": [
+      {
+        "kind": "conn",
+        "card": "fordi",
+        "src": "2019v 2A",
+        "prev": "Han havde dog kun kigget på Storbritannien, fordi han mente, det var nemmest at flytte til et land, hvor han kunne sproget på forhånd.",
+        "s": "Men han havde endnu ikke besluttet sig, fordi han var glad for sit arbejde i Rumænien.",
+        "at": 40,
+        "w": "fordi"
+      },
+      {
+        "kind": "conn",
+        "card": "fordi",
+        "src": "2016v L1",
+        "prev": "Efter det gik jeg på handelsskolen i Ballerup, hvor jeg fik afsluttet min hg-eksamen.",
+        "s": "Jeg valgte at gå på studenterkursus, fordi det giver mulighed for at søge ind på en videregående uddannelse.",
+        "at": 37,
+        "w": "fordi"
+      },
+      {
+        "kind": "conn",
+        "card": "fordi",
+        "src": "2015v 2A",
+        "prev": "I den situation prøver nogle mænd på andre måder at genvinde den status, de har mistet.",
+        "s": "Og dér er ekstreme sportsgrene ideelle, fordi de netop handler om fysik.",
+        "at": 40,
+        "w": "fordi"
+      },
+      {
+        "kind": "conn",
+        "card": "fordi",
+        "src": "2020v 2A",
+        "prev": "Selvom flere unge ser korte midlertidige ansættelser som led i deres karriere, ønsker de fleste unge dog en længerevarende fastansættelse ligesom deres ældre kolleger.",
+        "s": "Det er blot sværere at finde et fast job som ung og nyuddannet, fordi flere virksomheder end tidligere kun tilbyder korte midlertidige ansættelser.",
+        "at": 64,
+        "w": "fordi"
+      },
+      {
+        "kind": "conn",
+        "card": "fordi",
+        "src": "2020v 2A",
+        "prev": "Dog kan der også være ulemper.",
+        "s": "Hvis en virksomhed mister erfarne medarbejdere, fordi de rykker videre til et andet job, kan det nemlig være forbundet med tab af viden.",
+        "at": 48,
+        "w": "fordi"
+      },
+      {
+        "kind": "conn",
+        "card": "fordi",
+        "src": "2022s 2A",
+        "prev": "Anne Lund medgiver, at selve ordet ’personlighedstest’ er uheldigt. ”Man burde kalde det en personlighedsprofil i stedet.",
+        "s": "Det er nemlig ikke en eksamen, og der er hverken rigtige eller forkerte svar,” siger hun. ”Det er altså et uheldigt ordvalg, fordi en personlighedstest egentlig ikke er en test.",
+        "at": 125,
+        "w": "fordi"
+      },
+      {
+        "kind": "conn",
+        "card": "fordi",
+        "src": "2022s 2A",
+        "prev": "Det er der flere grunde til.",
+        "s": "Nogle gange er det, fordi der ganske enkelt ikke er så mange jobs i netop deres branche.",
+        "at": 20,
+        "w": "fordi"
+      },
+      {
+        "kind": "conn",
+        "card": "fordi",
+        "src": "2016v L1",
+        "prev": "Efter det gik jeg på handelsskolen i Ballerup, hvor jeg fik afsluttet min hg-eksamen.",
+        "s": "Jeg valgte at gå på studenterkursus, fordi det giver mulighed for at søge ind på en videregående uddannelse.",
+        "at": 37,
+        "w": "fordi"
+      }
+    ],
+    "at_klare": [
+      {
+        "kind": "verb",
+        "card": "at_klare",
+        "src": "2023v 2A",
+        "prev": "”Jeg måtte relativt hurtigt erkende, at jeg ikke kunne klare at arbejde så meget, og at jeg måtte blive bedre til nogle gange at slippe kontrollen.",
+        "s": "Og afdelingen gik jo ikke i stå, fordi jeg trak mig lidt og i stedet bad medarbejderne klare flere opgaver selv.",
+        "at": 87,
+        "w": "klare"
+      },
+      {
+        "kind": "verb",
+        "card": "at_klare",
+        "src": "2019v 2A",
+        "prev": "Det kræver politiske beslutninger, om man vil forsøge at øge indvandringen af udenlandsk arbejdskraft i Danmark.",
+        "s": "Det kan dog vise sig at være nødvendigt, hvis COWI og andre danske firmaer skal kunne klare sig i den internationale konkurrence i fremtiden.",
+        "at": 86,
+        "w": "klare"
+      },
+      {
+        "kind": "verb",
+        "card": "at_klare",
+        "src": "2021v 2A",
+        "prev": "",
+        "s": "De mange skriftlige opgaver i gymnasiet kan være en af årsagerne til, at mange unge ikke kan klare presset i skolen.",
+        "at": 93,
+        "w": "klare"
+      },
+      {
+        "kind": "verb",
+        "card": "at_klare",
+        "src": "2019v 2A",
+        "prev": "",
+        "s": "Hvis danske firmaer ikke kan tiltrække nok internationale talenter, vil der være risiko for, at de ikke kan klare sig i den internationale konkurrence i fremtiden.",
+        "at": 108,
+        "w": "klare"
+      },
+      {
+        "kind": "verb",
+        "card": "at_klare",
+        "src": "2020s 2A",
+        "prev": "Det skyldes, at virksomhederne i fremtiden må rekruttere flere især højt specialiserede medarbejdere fra udlandet.",
+        "s": "Det må de for at kunne klare sig i den internationale konkurrence.",
+        "at": 23,
+        "w": "klare"
+      },
+      {
+        "kind": "verb",
+        "card": "at_klare",
+        "src": "2021s 2A",
+        "prev": "",
+        "s": "svært ved at reagere på klimaproblemet, fordi vi oplever, det ligger ude i fremtiden, og fordi vi ikke har klare billeder på nethinden.",
+        "at": 107,
+        "w": "klare"
+      },
+      {
+        "kind": "verb",
+        "card": "at_klare",
+        "src": "2016v 2A",
+        "prev": "Men hun er ikke nervøs for, at det vil få en ødelæggende indflydelse.",
+        "s": "For eksempel spiller børn ofte spil som Minecraft, hvor de skal bygge verdener op og ikke kun spil, hvor de skal klare en bane.",
+        "at": 113,
+        "w": "klare"
+      },
+      {
+        "kind": "verb",
+        "card": "at_klare",
+        "src": "2015v L1",
+        "prev": "",
+        "s": "Ingen uddannelse = store konsekvenser Når det gælder om at få job og klare sig på arbejdsmarkedet, er uddannelse en vigtig forudsætning.",
+        "at": 69,
+        "w": "klare"
+      }
+    ],
+    "selvom": [
+      {
+        "kind": "conn",
+        "card": "selvom",
+        "src": "2022v L1",
+        "prev": "Eksemplerne har det til fælles, at de bruger vikingen som et symbol på noget trygt, noget vi kender, og noget som vi kan stole på.",
+        "s": "I begge logoer findes den hjelm med horn, som vi i dag straks forbinder med vikinger, selvom det er historisk ukorrekt.",
+        "at": 86,
+        "w": "selvom"
+      },
+      {
+        "kind": "conn",
+        "card": "selvom",
+        "src": "2020s 2A",
+        "prev": "Det vil sige, at de udenlandske studerende set i det lange perspektiv bidrager økonomisk til det danske samfund.",
+        "s": "Også selvom de får betalt uddannelsen og måske også kan få SU, mens de studerer.",
+        "at": 5,
+        "w": "selvom"
+      },
+      {
+        "kind": "conn",
+        "card": "selvom",
+        "src": "2018s 2A",
+        "prev": "I forbindelse med børnefødsler er det i langt de fleste familier kvinden, der tager en lang orlov og ikke manden.",
+        "s": "Det gør hun, selvom det har vist sig, at det betyder meget for hendes karrieremuligheder efter barselsorloven.",
+        "at": 13,
+        "w": "selvom"
+      },
+      {
+        "kind": "conn",
+        "card": "selvom",
+        "src": "2018v L1",
+        "prev": "Det gjorde en kæmpe forskel!",
+        "s": "Også selvom der stadig var et skoleskema, jeg skulle følge, og lærere, der fortalte mig, hvad jeg skulle gøre.",
+        "at": 5,
+        "w": "selvom"
+      },
+      {
+        "kind": "conn",
+        "card": "selvom",
+        "src": "2020v L1",
+        "prev": "Og det var virkelig både afstressende, fyldt med nærvær, og så var det et telefonfrit rum.",
+        "s": "På kurset øver man sig i at skabe ro og balance, og selvom det var ret svært i begyndelsen, kunne jeg mærke en bedring gang for gang.",
+        "at": 52,
+        "w": "selvom"
+      },
+      {
+        "kind": "conn",
+        "card": "selvom",
+        "src": "2016s 2A",
+        "prev": "Sådan er det ikke her.",
+        "s": "Alle laver deres lektier, også selvom de ikke vil have en boglig uddannelse.",
+        "at": 31,
+        "w": "selvom"
+      },
+      {
+        "kind": "conn",
+        "card": "selvom",
+        "src": "2019v 2A",
+        "prev": "Der er brug for højtuddannede udlændinge i Danmark.",
+        "s": "Men selvom der er mange fordele ved at bo og arbejde i Danmark, kan det være svært for danske firmaer at tiltrække nok udenlandske specialister.",
+        "at": 4,
+        "w": "selvom"
+      },
+      {
+        "kind": "conn",
+        "card": "selvom",
+        "src": "2015s 2A",
+        "prev": "Kvinderne har historisk set været bundet til hjem met, og det er stadig primært kvinderne, der tager sig af de daglige, rutinemæssige pligter derhjemme.",
+        "s": "Sådan er det, selvom kvinderne i dag også har ude arbejde.",
+        "at": 14,
+        "w": "selvom"
+      }
+    ],
+    "at_anbefale": [
+      {
+        "kind": "verb",
+        "card": "at_anbefale",
+        "src": "2014v 2A",
+        "prev": "Det er dog ikke alle, der tror, at det er sundt at faste.",
+        "s": "Preben Vestergaard Hansen fra Professions højskolen Metropol forsker i ernæring og sundhed, og han vil ikke anbefale fastemetoden til folk, der gerne vil tabe sig.",
+        "at": 108,
+        "w": "anbefale"
+      },
+      {
+        "kind": "verb",
+        "card": "at_anbefale",
+        "src": "2017s L1",
+        "prev": "",
+        "s": "I den ældste del af Den Gamle By anbefaler vi, at man undgår Vestergade, som er stejl og belagt med toppede brosten.",
+        "at": 33,
+        "w": "anbefaler"
+      },
+      {
+        "kind": "verb",
+        "card": "at_anbefale",
+        "src": "2018v L1",
+        "prev": "Også selvom der stadig var et skoleskema, jeg skulle følge, og lærere, der fortalte mig, hvad jeg skulle gøre.",
+        "s": "Det er bestemt ikke sidste gang, at jeg tager på højskole, og jeg kan varmt anbefale det til andre.",
+        "at": 76,
+        "w": "anbefale"
+      },
+      {
+        "kind": "verb",
+        "card": "at_anbefale",
+        "src": "2024s L1",
+        "prev": "Som frivillig møder jeg en masse mennesker, både koncertgæster og andre frivillige, og som et særligt plus har jeg også fået nye venner.",
+        "s": "Jeg har også gratis adgang til de fleste koncerter, så jeg kan kun anbefale at blive frivillig på Paletten.",
+        "at": 67,
+        "w": "anbefale"
+      },
+      {
+        "kind": "verb",
+        "card": "at_anbefale",
+        "src": "2016s L1",
+        "prev": "”Man sidder i Afrika og er omfavnet af 30 grader og der er langt hjem.",
+        "s": "Jeg kan af hjertet anbefale at tage sådan en rejse.",
+        "at": 19,
+        "w": "anbefale"
+      },
+      {
+        "kind": "verb",
+        "card": "at_anbefale",
+        "src": "2022v 2B",
+        "prev": "Fælles for alle disse råd er, at de er meget konkrete.",
+        "s": "Fx anbefaler de, at børn og unge undervises i iværksætteri i skolen.",
+        "at": 3,
+        "w": "anbefaler"
+      },
+      {
+        "kind": "verb",
+        "card": "at_anbefale",
+        "src": "2017s L1",
+        "prev": "",
+        "s": "Et minus er, at der kan være for mange mennesker, så jeg anbefaler ikke, at man besøger Den Gamle By i weekenden.",
+        "at": 57,
+        "w": "anbefaler"
+      },
+      {
+        "kind": "verb",
+        "card": "at_anbefale",
+        "src": "2019v L1",
+        "prev": "Alle andre er jo i samme situation som mig.",
+        "s": "Jeg vil virkelig anbefale babybio i Kinorama til alle jer mødre og fædre derude, som har lyst til at komme lidt ud, mens I er på barsel.",
+        "at": 17,
+        "w": "anbefale"
+      }
+    ],
+    "at_vælge": [
+      {
+        "kind": "verb",
+        "card": "at_vælge",
+        "src": "2016s L1",
+        "prev": "Du har mulighed for at vælge om du selv vil arrangere og booke dine flybilletter, eller om du vil lade os gøre det for dig.",
+        "s": "Uanset hvilken løsning du vælger, vil du naturligvis blive hentet i lufthavnen af vort lokale personale, og fulgt til dit projekt.",
+        "at": 26,
+        "w": "vælger"
+      },
+      {
+        "kind": "verb",
+        "card": "at_vælge",
+        "src": "2015v L1",
+        "prev": "Diagrammet nedenfor viser dine valg- muligheder med henblik på valg af ungdomsuddannelse.",
+        "s": "Langt de fleste vælger at starte på en erhvervsuddannelse eller en gymnasial uddannelse.",
+        "at": 16,
+        "w": "vælger"
+      },
+      {
+        "kind": "verb",
+        "card": "at_vælge",
+        "src": "2015s L1",
+        "prev": "Hvis den ene uge er på STX eller HF, skal du også en uge på et brobygningsforløb på en erhvervsuddannelse (EUD) eller et erhvervsgymna sium (HHX eller HTX).",
+        "s": "Du kan vælge at deltage i frivillig brobygning i yderligere 4 uger.",
+        "at": 7,
+        "w": "vælge"
+      },
+      {
+        "kind": "verb",
+        "card": "at_vælge",
+        "src": "2015v L1",
+        "prev": "Vælg det grundforløb, der passer bedst til dig Når du starter på landbrugsuddannelsens grundforløb, har du to muligheder.",
+        "s": "Du kan enten vælge at tage vores normale 20-ugers grundforløb, eller du kan tage vores 40-ugers grundforløb med undervisning i fag på E-niveau, som fx engelsk og matematik.",
+        "at": 13,
+        "w": "vælge"
+      },
+      {
+        "kind": "verb",
+        "card": "at_vælge",
+        "src": "2020s L1",
+        "prev": "Det er simpelthen ikke muligt at se alt og at gå i detaljer med det hele.",
+        "s": "Det er nok en god ide at vælge et par af udstillingerne ud og gå i dybden med disse og så se museet lidt efter lidt, fordelt på flere besøg.",
+        "at": 25,
+        "w": "vælge"
+      },
+      {
+        "kind": "verb",
+        "card": "at_vælge",
+        "src": "2019s L1",
+        "prev": "",
+        "s": "Det er festivalens bestyrelse, der vælger årets prismodtager, og overrækkelsen sker oftest i forbindelse med søndagens afslutningskoncert.",
+        "at": 35,
+        "w": "vælger"
+      },
+      {
+        "kind": "verb",
+        "card": "at_vælge",
+        "src": "2015v L1",
+        "prev": "",
+        "s": "Bliv en del af fællesskabet Mange af skolens elever vælger at bo på Agroskolen.",
+        "at": 52,
+        "w": "vælger"
+      },
+      {
+        "kind": "verb",
+        "card": "at_vælge",
+        "src": "2018v L1",
+        "prev": "Et langt ophold varer minimum 8 uger og helt op til 40 uger.",
+        "s": "På et langt ophold vælger man et par hovedfag og nogle sidefag.",
+        "at": 19,
+        "w": "vælger"
+      }
+    ],
+    "at_fastholde": [
+      {
+        "kind": "verb",
+        "card": "at_fastholde",
+        "src": "2022s L1",
+        "prev": "Men der er store forskelle øerne imellem.",
+        "s": "De øer, der har sværest ved at fastholde en helårsbefolkning, er øer med en kombination af lang sejltid, fravær af skole og ringe adgang til basal offentlig service.",
+        "at": 31,
+        "w": "fastholde"
+      },
+      {
+        "kind": "verb",
+        "card": "at_fastholde",
+        "src": "2024s 2B",
+        "prev": "Fælles for dem alle er, at de gerne vil gøre arbejdsugen mere fleksibel for de ansatte.",
+        "s": "Dels for lettere at kunne fastholde dem, der allerede er ansat, dels for lettere at kunne rekruttere nye, efterspurgte kræfter.",
+        "at": 26,
+        "w": "fastholde"
+      },
+      {
+        "kind": "verb",
+        "card": "at_fastholde",
+        "src": "2018v L1",
+        "prev": "",
+        "s": "Testrup højskoles elevforening sørger for, at alle tidligere elever kan fastholde kontakten til Testrup – uanset hvor i verden de befinder sig.",
+        "at": 72,
+        "w": "fastholde"
+      }
+    ],
+    "at_tilbyde": [
+      {
+        "kind": "verb",
+        "card": "at_tilbyde",
+        "src": "2015s L1",
+        "prev": "",
+        "s": "Det enkelte gymnasium kan arrangere temadage og fællesarrangementer på tværs af klasser og årgange og tilbyde studiekredse og lektiecafe.",
+        "at": 102,
+        "w": "tilbyde"
+      },
+      {
+        "kind": "verb",
+        "card": "at_tilbyde",
+        "src": "2015s L1",
+        "prev": "",
+        "s": "Den enkelte skole kan arrangere temadage og fælles arrangementer på tværs af klasser og årgange og tilbyde studiekredse og lektiecafe.",
+        "at": 99,
+        "w": "tilbyde"
+      },
+      {
+        "kind": "verb",
+        "card": "at_tilbyde",
+        "src": "2020s 2A",
+        "prev": "Det er svært for de unge at overskue processen fra start til slut.",
+        "s": "De skal for det første undersøge og sætte sig ind i, hvilke fag forskellige universiteter i udlandet tilbyder.",
+        "at": 101,
+        "w": "tilbyder"
+      },
+      {
+        "kind": "verb",
+        "card": "at_tilbyde",
+        "src": "2015v L1",
+        "prev": "Kompetencecenteret holder til i moderne og veludstyrede lokaler, som gør det særdeles attraktivt til afholdelse af arrangementer af forskellig art.",
+        "s": "Vi kan bl.a. tilbyde forplejning, overnatning og gode undervisningslokaler og medvirke ved den praktiske planlægning og afvikling af arrangementet.",
+        "at": 13,
+        "w": "tilbyde"
+      },
+      {
+        "kind": "verb",
+        "card": "at_tilbyde",
+        "src": "2016s L1",
+        "prev": "Mange af projekterne er åbne for alle med engagement og interesse for menneskerettigheder, mens andre kræver relevante kvalifikationer.",
+        "s": "Vi tilbyder en bred vifte af muligheder, som eksempelvis at arbejde for lokale advokatfirmaer.",
+        "at": 3,
+        "w": "tilbyder"
+      },
+      {
+        "kind": "verb",
+        "card": "at_tilbyde",
+        "src": "2015s L1",
+        "prev": "",
+        "s": "Det enkelte gymnasium kan arrangere temadage og fællesarrangementer på tværs af klasser og årgange og tilbyde studiekredse og lektiecafe.",
+        "at": 102,
+        "w": "tilbyde"
+      },
+      {
+        "kind": "verb",
+        "card": "at_tilbyde",
+        "src": "2017v L1",
+        "prev": "Oplevelser med kryb og kravl Lyder et møde med slanger, øgler og kakerlakker spændende, eller rejser hårene sig i nakken på dig og dine venner?",
+        "s": "Vi tilbyder jer en spændende mulighed for at møde dyr, der ofte vækker stærke følelser dyrene sammen og få mulighed for at hjælpe hinanden.",
+        "at": 3,
+        "w": "tilbyder"
+      },
+      {
+        "kind": "verb",
+        "card": "at_tilbyde",
+        "src": "2020s L1",
+        "prev": "",
+        "s": "Fotosalg Nationalmuseet tilbyder også fotosalg til både kommercielle og non-profit formål.",
+        "at": 24,
+        "w": "tilbyder"
+      }
+    ],
+    "nemlig": [
+      {
+        "kind": "conn",
+        "card": "nemlig",
+        "src": "2018s 2A",
+        "prev": "Det er overraskende, at det går så dårligt med ligestillingen i toppen af dansk erhvervsliv.",
+        "s": "Der er nemlig i Danmark en høj grad af frihed for både kvinder og mænd til at vælge den uddannelse, det arbejde og det liv, de ønsker.",
+        "at": 7,
+        "w": "nemlig"
+      },
+      {
+        "kind": "conn",
+        "card": "nemlig",
+        "src": "2020s 2A",
+        "prev": "Det blev dog ikke aktuelt for Eva at undersøge mulighederne nærmere.",
+        "s": "Hun blev nemlig inspireret af sin kusine til at søge til Cardiff University.",
+        "at": 9,
+        "w": "nemlig"
+      },
+      {
+        "kind": "conn",
+        "card": "nemlig",
+        "src": "2015v 2A",
+        "prev": "Men her havde han et problem.",
+        "s": "Han havde nemlig aldrig rigtigt lært at svømme crawl, så det skulle der arbejdes meget med.",
+        "at": 10,
+        "w": "nemlig"
+      },
+      {
+        "kind": "conn",
+        "card": "nemlig",
+        "src": "2018v 2A",
+        "prev": "Men i mange tilfælde er det kun en lille del af institutionen, der skal flytte ud, og så kan det have den modsatte effekt.",
+        "s": "Så kan der nemlig blive behov for ledere, kantine og reception både i den gamle og den nye afdeling.",
+        "at": 11,
+        "w": "nemlig"
+      },
+      {
+        "kind": "conn",
+        "card": "nemlig",
+        "src": "2020v 2A",
+        "prev": "fra.",
+        "s": "Det er nemlig ikke noget problem at sige sit job op, hvis man nemt kan finde et andet job.",
+        "at": 7,
+        "w": "nemlig"
+      },
+      {
+        "kind": "conn",
+        "card": "nemlig",
+        "src": "2023v L1",
+        "prev": "Men Nancy har også en unik tilknytning til de underjordiske.",
+        "s": "Hun er nemlig udvalgt til at spille en særlig rolle i den verden, som følger efter undergangen.",
+        "at": 7,
+        "w": "nemlig"
+      },
+      {
+        "kind": "conn",
+        "card": "nemlig",
+        "src": "2020s 2A",
+        "prev": "Samtidig peges der dog fra politisk side på, at det er en balancegang, hvor mange udenlandske studerende Danmark kan tage imod.",
+        "s": "Det koster nemlig at betale for studiepladser og måske også SU til de udenlandske studerende.",
+        "at": 11,
+        "w": "nemlig"
+      },
+      {
+        "kind": "conn",
+        "card": "nemlig",
+        "src": "2015s 2A",
+        "prev": "Det har ifølge kønsforsker dr. polit. og sociolog Helene Aarseth, Center for tværfaglig kønsforskning, Oslo Universitet, haft en positiv betydning for husarbejdet.",
+        "s": "Mænd engagerer sig nemlig mere i det, de laver, fx i madlavningen.",
+        "at": 19,
+        "w": "nemlig"
+      }
+    ],
+    "at_vise": [
+      {
+        "kind": "verb",
+        "card": "at_vise",
+        "src": "2023v L1",
+        "prev": "",
+        "s": "På bogens første side er der trykt et kort over øen, hvilket skal vise sig at være til stor hjælp.",
+        "at": 66,
+        "w": "vise"
+      },
+      {
+        "kind": "verb",
+        "card": "at_vise",
+        "src": "2019s 2A",
+        "prev": "Kvinder og mænd donerer forskelligt Der findes mange undersøgelser af, hvem der giver penge til velgørenhed.",
+        "s": "Fx viser det sig, at der er markant flere kvinder end mænd, der giver penge, når der er indsamling.",
+        "at": 3,
+        "w": "viser"
+      },
+      {
+        "kind": "verb",
+        "card": "at_vise",
+        "src": "2023v L1",
+        "prev": "Alle cykelruter på Bornholm er markeret med et grønt skilt med et nummer.",
+        "s": "Nummeret viser hvilken rute, man befinder sig på.",
+        "at": 9,
+        "w": "viser"
+      },
+      {
+        "kind": "verb",
+        "card": "at_vise",
+        "src": "2019v L1",
+        "prev": "Ppladserne er gratis, og billetterne er billige.",
+        "s": "De er også hurtige til at vise premierefilmene, men det er selvfølgelig ikke som at komme til Aalborg i en kæmpe biograf.",
+        "at": 26,
+        "w": "vise"
+      },
+      {
+        "kind": "verb",
+        "card": "at_vise",
+        "src": "2024s 2B",
+        "prev": "Der er konkurrence om de kvalificerede medarbejdere, og undersøgelser viser, at medarbejderne bliver mere loyale over for virksomheden, hvis de ikke skal arbejde så mange timer.",
+        "s": "Undersøgelser viser også, at det kan blive lettere at rekruttere nye medarbejdere.",
+        "at": 14,
+        "w": "viser"
+      },
+      {
+        "kind": "verb",
+        "card": "at_vise",
+        "src": "2023v 2A",
+        "prev": "Det er en almindelige bekymring for mange, som bliver ledere i den samme virksomhed, som de er rekrutteret i.",
+        "s": "Men ofte viser det sig, at frygten er ubegrundet. ”Det voldte faktisk ikke de store problemer, da det kom til stykket.",
+        "at": 9,
+        "w": "viser"
+      },
+      {
+        "kind": "verb",
+        "card": "at_vise",
+        "src": "2022s 2A",
+        "prev": "De kan eventuelt løse nogle rigtige arbejdsopgaver sammen med nogle, der allerede er ansat i virksomheden.",
+        "s": "Så kan man se, hvordan de præsterer i praksis,” siger han og fortsætter: ”Den model vil også vise noget om kandidaternes evne til at samarbejde.",
+        "at": 93,
+        "w": "vise"
+      },
+      {
+        "kind": "verb",
+        "card": "at_vise",
+        "src": "2023v L1",
+        "prev": "Der arbejdes tæt sammen med partnere på både lokalt, regionalt og nationalt niveau om at sætte Danmark på Europakortet som en attraktiv cykeldestination.",
+        "s": "Cykelmærkeordningen Bed+Bike viser vej til cykelvenlige overnatningssteder i hele Danmark.",
+        "at": 29,
+        "w": "viser"
+      }
+    ],
+    "altså": [
+      {
+        "kind": "conn",
+        "card": "altså",
+        "src": "2015s L1",
+        "prev": "Bemærk: For at kunne skifte til stx, skal du opfylde de optagelseskrav, der er til stx-uddannelsen.",
+        "s": "Det er altså ikke nok at være godkendt til IB-uddannelsen.",
+        "at": 7,
+        "w": "altså"
+      },
+      {
+        "kind": "conn",
+        "card": "altså",
+        "src": "2021s L1",
+        "prev": "et af de bedst sælgende danske album nogensinde.",
+        "s": "Det er altså et kulturklenodie af de helt store, der her er lavet som musical.",
+        "at": 7,
+        "w": "altså"
+      },
+      {
+        "kind": "conn",
+        "card": "altså",
+        "src": "2016v L1",
+        "prev": "En del kursister har gået i gymnasiet/hf/ hhx/htx, andre har været i erhvervslivet i en periode, nogle har været på højskole, og andre har rejst rundt i verden.",
+        "s": "De fleste har altså prøvet andet end blot at gå i skole.",
+        "at": 14,
+        "w": "altså"
+      },
+      {
+        "kind": "conn",
+        "card": "altså",
+        "src": "2015v L1",
+        "prev": "Du tager eux i forbindelse med, at du tager din erhvervsuddannelse.",
+        "s": "Bagefter kan du altså læse videre og videreuddanne dig på samme vilkår som andre med gymnasial uddannelse.",
+        "at": 16,
+        "w": "altså"
+      },
+      {
+        "kind": "conn",
+        "card": "altså",
+        "src": "2016s L1",
+        "prev": "Depositummet er en del af den samlede pris for projektet, og fratrækkes dermed din endelige faktura.",
+        "s": "Depositummet returneres altså ikke, når du kommer hjem.",
+        "at": 24,
+        "w": "altså"
+      },
+      {
+        "kind": "conn",
+        "card": "altså",
+        "src": "2024s 2B",
+        "prev": "Undersøgelser viser også, at det kan blive lettere at rekruttere nye medarbejdere.",
+        "s": "En fire-dages arbejdsuge kan altså være en fordel i konkurrencen om medarbejdere.",
+        "at": 29,
+        "w": "altså"
+      },
+      {
+        "kind": "conn",
+        "card": "altså",
+        "src": "2022s 2A",
+        "prev": "Anne Lund medgiver, at selve ordet ’personlighedstest’ er uheldigt. ”Man burde kalde det en personlighedsprofil i stedet.",
+        "s": "Det er nemlig ikke en eksamen, og der er hverken rigtige eller forkerte svar,” siger hun. ”Det er altså et uheldigt ordvalg, fordi en personlighedstest egentlig ikke er en test.",
+        "at": 98,
+        "w": "altså"
+      },
+      {
+        "kind": "conn",
+        "card": "altså",
+        "src": "2015v L1",
+        "prev": "Økonomi Uddannelsen er gratis.",
+        "s": "Du får elevløn fra den dag, din uddannelsesaftale træder i kraft, altså både i praktik- og skoleperioderne.",
+        "at": 66,
+        "w": "altså"
+      }
+    ],
+    "derudover": [
+      {
+        "kind": "conn",
+        "card": "derudover",
+        "src": "2016s L1",
+        "prev": "Med andre ord kan du ”hoppe af og på” vores projekter når det bedst passer dig.",
+        "s": "Derudover tager vi dine personlige kvalifikationer og præferencer med i betragtning, når vi finder det rigtige projekt til dig.",
+        "at": 0,
+        "w": "Derudover"
+      },
+      {
+        "kind": "conn",
+        "card": "derudover",
+        "src": "2018v L1",
+        "prev": "Det betyder blandt andet, at skolen aktivt forsøger at begrænse madspild ved at genanvende alle madrester, hvis det er muligt.",
+        "s": "Derudover er der fokus på økologi, på at minimere kødforbruget og på at bruge lokale fødevarer.",
+        "at": 0,
+        "w": "Derudover"
+      },
+      {
+        "kind": "conn",
+        "card": "derudover",
+        "src": "2021v L1",
+        "prev": "I kan også besøge hans barndomshjem, hvilket var stedet, hvorfra han opdagede verden og påbegyndte sit digtereventyr.",
+        "s": "Derudover vil I, når I går en tur gennem byens gamle gader, kunne mærke stemningen fra dengang og gå på opdagelse i H.C.",
+        "at": 0,
+        "w": "Derudover"
+      },
+      {
+        "kind": "conn",
+        "card": "derudover",
+        "src": "2023s L1",
+        "prev": "Her er der både kanoner, smedje, butik, udstilling, legeplads og mange andre sjove aktiviteter og spændende fortællinger.",
+        "s": "Derudover er der plads til at få et hvil fra kampens strabadser og spise sin medbragte madpakke.",
+        "at": 0,
+        "w": "Derudover"
+      },
+      {
+        "kind": "conn",
+        "card": "derudover",
+        "src": "2019v L1",
+        "prev": "I Cinematekets butik kan man finde et stort udvalg af blu-rays, DVD’er med film fra hele filmhistorien, CD’er med filmmusik og nu også lp-plader med filmmusik, noget man ikke har solgt tidligere.",
+        "s": "Derudover kan man bl.a. købe filmplakater, sjove gadgets og legetøj.",
+        "at": 0,
+        "w": "Derudover"
+      },
+      {
+        "kind": "conn",
+        "card": "derudover",
+        "src": "2015v L1",
+        "prev": "Skolen ligger i udkanten af Holstebro, og både undervisningslokaler, stalde, væksthus og værksteder er samlet ét sted.",
+        "s": "Derudover er der køkken og kantine og mulighed for at bo på skolen.",
+        "at": 0,
+        "w": "Derudover"
+      },
+      {
+        "kind": "conn",
+        "card": "derudover",
+        "src": "2016s L1",
+        "prev": "Vores ansatte står altid standby, således at de kan være hos dig i løbet af højst nogle få timer, hvis der mod forventning skulle opstå et problem.",
+        "s": "Derudover står vores danske kontor til rådighed både før og under opholdet, og du er altid meget velkommen til at ringe til os, hvis du har spørgsmål.",
+        "at": 0,
+        "w": "Derudover"
+      },
+      {
+        "kind": "conn",
+        "card": "derudover",
+        "src": "2016v L1",
+        "prev": "Fuldtidsstuderende over 25 år kan i visse tilfælde få SVU (Statens Voksenuddannelsesstøtte).",
+        "s": "Derudover kan du få rabat på den daglige transport.",
+        "at": 0,
+        "w": "Derudover"
+      }
+    ],
+    "til_gengæld": [
+      {
+        "kind": "conn",
+        "card": "til_gengæld",
+        "src": "2016s L1",
+        "prev": "Vi tilbyder en bred vifte af muligheder, som eksempelvis at arbejde for lokale advokatfirmaer.",
+        "s": "NGO’er Alle vores projekter indenfor Jura og Menneskerettigheder byder på hårdt arbejde, der til gengæld belønnes rigeligt i helt enestående erfaringer, indsigt og oplevelser!",
+        "at": 93,
+        "w": "til gengæld"
+      },
+      {
+        "kind": "conn",
+        "card": "til_gengæld",
+        "src": "2015s 2A",
+        "prev": "”Det er mig, der laver det meste indendørs.",
+        "s": "Til gengæld laver Peter meget arbejde på huset.",
+        "at": 0,
+        "w": "Til gengæld"
+      },
+      {
+        "kind": "conn",
+        "card": "til_gengæld",
+        "src": "2018v 2A",
+        "prev": "Glade borgmestre byder velkommen Medarbejderne på de institutioner, der skal flytte ud, er måske ikke glade for at flytte.",
+        "s": "Til gengæld vækker det jubel hos borgmestrene i de kommuner, der skal modtage de nye arbejdspladser.",
+        "at": 0,
+        "w": "Til gengæld"
+      },
+      {
+        "kind": "conn",
+        "card": "til_gengæld",
+        "src": "2023v 2A",
+        "prev": "Men ofte viser det sig, at frygten er ubegrundet. ”Det voldte faktisk ikke de store problemer, da det kom til stykket.",
+        "s": "Til gengæld savnede jeg nogle kolleger, jeg kunne sparre med om min nye rolle.",
+        "at": 0,
+        "w": "Til gengæld"
+      },
+      {
+        "kind": "conn",
+        "card": "til_gengæld",
+        "src": "2023v L1",
+        "prev": "Om foråret er Østersøen stadig kold, og i april og maj er Bornholm en af landets koldeste egne.",
+        "s": "Til gengæld holder havet længe på sommervarmen, og fra august til december ligger Bornholm oppe blandt landets ti varmeste kommuner.",
+        "at": 0,
+        "w": "Til gengæld"
+      },
+      {
+        "kind": "conn",
+        "card": "til_gengæld",
+        "src": "2015s 2A",
+        "prev": "\"Det er mig, der laver det meste indendørs.",
+        "s": "Til gengæld laver Peter meget arbejde på huset.",
+        "at": 0,
+        "w": "Til gengæld"
+      },
+      {
+        "kind": "conn",
+        "card": "til_gengæld",
+        "src": "2017v L1",
+        "prev": "I Europas største girafstald er der en helt særlig stemning, når vi betragter de smukke giraffer - og de betragter os.",
+        "s": "Hos lemurerne er der til gengæld fuld fart på - det er umuligt ikke at blive i godt humør her!",
+        "at": 21,
+        "w": "til gengæld"
+      },
+      {
+        "kind": "conn",
+        "card": "til_gengæld",
+        "src": "2015s 2A",
+        "prev": "Og det er vi enige om at prioritere,\" siger Peter og fortsæt ter: \"Det er Eva, der laver mad, gør rent og vasker tøj til hverdag.",
+        "s": "Til gengæld køber jeg næsten altid ind, og jeg afleverer også altid børnene om mor genen, da Eva skal gå tidligt.",
+        "at": 0,
+        "w": "Til gengæld"
+      }
+    ],
+    "således": [
+      {
+        "kind": "conn",
+        "card": "således",
+        "src": "2019s L1",
+        "prev": "Derfor kan byer, der har en kendt musikfestival, trække turister til, og derfor bliver der fra både byer og koncertarrangørers side gjort en indsats for at etablere nye musikfestivaler.",
+        "s": "Således er der inden for de senere år opstået en række nye musikfestivaler, der for at blive kendte prøver at skille sig ud fra de traditionelle typer af musikfestivaler.",
+        "at": 0,
+        "w": "Således"
+      },
+      {
+        "kind": "conn",
+        "card": "således",
+        "src": "2023v L1",
+        "prev": "Nedbøren påvirkes af havet samt det kuperede terræn, der bidrager til bygedannelsen.",
+        "s": "Der falder således også mest nedbør over Almindingen i øens kuperede midte.",
+        "at": 11,
+        "w": "således"
+      },
+      {
+        "kind": "conn",
+        "card": "således",
+        "src": "2016s 2A",
+        "prev": "At lærerne og eleverne skulle være næsten ligeværdige parter betød nemlig også, at pædagogikken blev ændret.",
+        "s": "Man praktiserer således i dag på de fleste skoler en antiautoritær pædagogik med fokus på dialog med eleverne og deres forældre.",
+        "at": 16,
+        "w": "således"
+      },
+      {
+        "kind": "conn",
+        "card": "således",
+        "src": "2020s L1",
+        "prev": "Med ideen om et Nationalmuseum fulgte håbet om, at den uvidende befolkning kunne løftes op på et højere moralsk trin og hjælpes til en bedre adfærd.",
+        "s": "Museet skulle således både kunne danne, uddanne, oplyse og opdrage.",
+        "at": 14,
+        "w": "således"
+      },
+      {
+        "kind": "conn",
+        "card": "således",
+        "src": "2022v L1",
+        "prev": "VIKING er et eksempel på et firma, der har brugt vikinger både i firmaets navn og i det kunstneriske udtryk, som virksomheden benytter sig af.",
+        "s": "Således er der både på indpakningen af blyanterne, på firmaets andre produkter og på firmaets hjemmeside afbilledet et vikingeskib og forskellige kunstneriske symboler fra vikingetiden.",
+        "at": 0,
+        "w": "Således"
+      },
+      {
+        "kind": "conn",
+        "card": "således",
+        "src": "2016s L1",
+        "prev": "Forsikringen dækker så snart, at den fulde betaling har fundet sted.",
+        "s": "Forsikringen dækker ikke frivillige over 65 år, så befinder du dig i denne gruppe, beder vi dig kontakte os, således at vi kan tegne en speciel forsikring til dig.",
+        "at": 109,
+        "w": "således"
+      },
+      {
+        "kind": "conn",
+        "card": "således",
+        "src": "2015s 2A",
+        "prev": "Mænd engagerer sig nemlig mere i det, de laver, fx i madlavningen.",
+        "s": "Madlavning ender således med at blive en hobby for mændene, hvor de lægger tid og energi i at nå et godt resultat.",
+        "at": 17,
+        "w": "således"
+      },
+      {
+        "kind": "conn",
+        "card": "således",
+        "src": "2023s L1",
+        "prev": "Der blev ikke givet spiritusbevilling til forsamlingshuse, for på den måde forsøgte de tyske myndigheder at forhindre disse møder.",
+        "s": "Det var således ikke tilladt at nyde alkohol, fx den traditionelle kaffepunch, så danskerne begyndte i stedet at mødes til kaffe- og kagebord.",
+        "at": 8,
+        "w": "således"
+      }
+    ],
+    "at_medføre": [
+      {
+        "kind": "verb",
+        "card": "at_medføre",
+        "src": "2015s 2A",
+        "prev": "Men i den ligestillede familie, hvor begge har arbejde ude, og begge må tage del i arbejdet i hjemmet, forholder mænd sig til madlavning på en ny måde.",
+        "s": "Det medfører, at madlavning ændrer status fra almindeligt husmorarbejde til hobby og fritidsinteresse . ..",
+        "at": 4,
+        "w": "medfører"
+      },
+      {
+        "kind": "verb",
+        "card": "at_medføre",
+        "src": "2016v 2A",
+        "prev": "Og hvis de holder op med at spille, falder dopaminniveauet i hjernen.",
+        "s": "Det kan medføre, at børnene for eksempel bliver i dårligt humør, og så skal der et nyt spil til for at få niveauet op og dermed gøre dem glade igen.",
+        "at": 8,
+        "w": "medføre"
+      },
+      {
+        "kind": "verb",
+        "card": "at_medføre",
+        "src": "2021s L1",
+        "prev": "Rundvisninger på teatret sker under hensyntagen til kunsten.",
+        "s": "Der kan være prøver på scener, der medfører, at vi ikke kan garantere, at turen går forbi alle scener.",
+        "at": 35,
+        "w": "medfører"
+      },
+      {
+        "kind": "verb",
+        "card": "at_medføre",
+        "src": "2023v L1",
+        "prev": "Der falder således også mest nedbør over Almindingen i øens kuperede midte.",
+        "s": "Om vinteren kan kold luft fra øst danne snebyger over den relativt lune Østersø, hvilket visse år medfører et kraftigt snefald på øen.",
+        "at": 98,
+        "w": "medfører"
+      }
+    ],
+    "derimod": [
+      {
+        "kind": "conn",
+        "card": "derimod",
+        "src": "2023v L1",
+        "prev": "I virkeligheden bevæger Bornholm sig ikke meget.",
+        "s": "Det gør resten af verden derimod, men Burgundia er, blandt mange, mange ting, en lang argumentation for, at Bornholm er verdens selvfølgelige centrum.",
+        "at": 25,
+        "w": "derimod"
+      },
+      {
+        "kind": "conn",
+        "card": "derimod",
+        "src": "2018v 2A",
+        "prev": "Hvis arbejdspladsen flytter til et andet sted på Sjælland, kan man pendle, og mange vælger at flytte med.",
+        "s": "Flytter arbejdspladsen derimod til en anden landsdel, så vælger mange ikke at flytte med.",
+        "at": 23,
+        "w": "derimod"
+      },
+      {
+        "kind": "conn",
+        "card": "derimod",
+        "src": "2020s 2A",
+        "prev": "De unge skal også vælge uddannelser, hvor man har erfaring for, at de bliver og arbejder efter endt uddannelse.",
+        "s": "På uddannelser, hvor de studerende hurtigt rejser hjem igen, skal antallet af pladser derimod ikke være for højt.",
+        "at": 86,
+        "w": "derimod"
+      },
+      {
+        "kind": "conn",
+        "card": "derimod",
+        "src": "2018s 2A",
+        "prev": "Hvis man som medarbejder er væk fra arbejdet så længe, kan det sende et signal til arbejdsgiveren om, at man ikke er ambitiøs og engageret.",
+        "s": "Hvis man derimod deles mere lige i familien, viser man, at der er opbakning hjemmefra, og det påvirker de positive forventninger til kvinden.",
+        "at": 9,
+        "w": "derimod"
+      },
+      {
+        "kind": "conn",
+        "card": "derimod",
+        "src": "2023v L1",
+        "prev": "Om vinteren kan kold luft fra øst danne snebyger over den relativt lune Østersø, hvilket visse år medfører et kraftigt snefald på øen.",
+        "s": "Om foråret og i den tidlige sommer er Østersøen derimod kold og nedbørsmængderne tilsvarende små.",
+        "at": 48,
+        "w": "derimod"
+      },
+      {
+        "kind": "conn",
+        "card": "derimod",
+        "src": "2023v L1",
+        "prev": "Hans Henrik Møller har givet sin hjemstavnsroman undertitlen ”Roman om Øen, Himlen og Havet”, og bogen er inddelt i tre sektioner efter hvert af disse temaer.",
+        "s": "Men der er ikke tale om rejsebeskrivelse af hverken øen, himlen eller havet omkring Bornholm, men derimod om en fantasifuld fortælling fortalt af en til tider ret vidtløftig fortællerstemme.",
+        "at": 98,
+        "w": "derimod"
+      },
+      {
+        "kind": "conn",
+        "card": "derimod",
+        "src": "2016s L1",
+        "prev": "Jo længere du bliver på hvert projekt, desto større personligt udbytte vil du få.",
+        "s": "Du betaler ikke dobbelt pris for at deltage på to projekter – derimod betaler du prisen for det dyreste projekt, og dernæst lægges prisen for de ekstra uger oveni.",
+        "at": 62,
+        "w": "derimod"
+      },
+      {
+        "kind": "conn",
+        "card": "derimod",
+        "src": "2021s 2A",
+        "prev": "Det har været sværere for mig at undvære kød på middagsbordet, men jeg er efterhånden ved at vænne mig til det.",
+        "s": "Derimod har jeg stadig svært ved, at vi må begrænse, hvilke lande vi holder ferie i.",
+        "at": 0,
+        "w": "Derimod"
+      }
+    ],
+    "i_stedet_for": [
+      {
+        "kind": "conn",
+        "card": "i_stedet_for",
+        "src": "2018v 2A",
+        "prev": "Parret begyndte også at kigge efter en bolig.",
+        "s": "Først tænkte de på at flytte til Aalborg i stedet for til Hjørring.",
+        "at": 41,
+        "w": "i stedet for"
+      },
+      {
+        "kind": "conn",
+        "card": "i_stedet_for",
+        "src": "2014v 2A",
+        "prev": "Det havde jeg aldrig troet, jeg kunne.",
+        "s": "I stedet hører jeg musik eller laver et eller andet kreativt.",
+        "at": 0,
+        "w": "I stedet"
+      },
+      {
+        "kind": "conn",
+        "card": "i_stedet_for",
+        "src": "2023s L1",
+        "prev": "Det krævede ingen spiritusbevilling, og tyskerne kunne ikke forhindre dansksindede taler og sange hen over det veldækkede kagebord.",
+        "s": "Da intet forsamlingshus havde kapacitet til at lave kager til så mange mennesker, medbragte deltagerne i stedet for selv kager til et fælles kaffebord.",
+        "at": 103,
+        "w": "i stedet for"
+      },
+      {
+        "kind": "conn",
+        "card": "i_stedet_for",
+        "src": "2017s 2A",
+        "prev": "Han skal dermed ikke træffe de overordnede beslutninger i store projekter, og det er i dag helt afgørende for Gert, selvom det tidligere var modsat.",
+        "s": "I stedet for bidrager han som konsulent med sin faglige ekspertise i forskellige projekter.",
+        "at": 0,
+        "w": "I stedet for"
+      },
+      {
+        "kind": "conn",
+        "card": "i_stedet_for",
+        "src": "2015s 2A",
+        "prev": "Det er mændene, der laver det udendørs arbejde.",
+        "s": "Men når de så laver indendørs husarbejde, køber de ind og laver mad i stedet for at vaske tøj og skifte ble.",
+        "at": 68,
+        "w": "i stedet for"
+      },
+      {
+        "kind": "conn",
+        "card": "i_stedet_for",
+        "src": "2014v 2A",
+        "prev": "Man taber også muskler.",
+        "s": "Det særlige ved faste metoden i forhold til en traditionel slankekur er dog ifølge fortalerne for fastemetoden, at kroppen bliver bedre til at tabe fedt i stedet for muskler.",
+        "at": 153,
+        "w": "i stedet for"
+      },
+      {
+        "kind": "conn",
+        "card": "i_stedet_for",
+        "src": "2023v 2A",
+        "prev": "”Jeg måtte relativt hurtigt erkende, at jeg ikke kunne klare at arbejde så meget, og at jeg måtte blive bedre til nogle gange at slippe kontrollen.",
+        "s": "Og afdelingen gik jo ikke i stå, fordi jeg trak mig lidt og i stedet bad medarbejderne klare flere opgaver selv.",
+        "at": 60,
+        "w": "i stedet"
+      },
+      {
+        "kind": "conn",
+        "card": "i_stedet_for",
+        "src": "2021v 2A",
+        "prev": "For at mindske presset på de unge, har man på nogle gymnasier eksperimenteret med karakterfri klasser.",
+        "s": "I stedet for at få karakterer har eleverne fået en feedback fra læreren med fokus på, hvor eleverne har udviklet sig i de forskellige fag.",
+        "at": 0,
+        "w": "I stedet for"
+      }
+    ],
+    "endelig": [
+      {
+        "kind": "conn",
+        "card": "endelig",
+        "src": "2023v 2B",
+        "prev": "Man kan dog tjekke kvaliteten hos uafhængige testvirksomheder, hvor man kan læse gratis analyser og anmeldelser af blandt andet de antivirusprogrammer, man kan finde på nettet.",
+        "s": "Endelig er det også vigtigt altid at holde sine enheder opdaterede, gerne automatisk.",
+        "at": 0,
+        "w": "Endelig"
+      },
+      {
+        "kind": "conn",
+        "card": "endelig",
+        "src": "2023s 2B",
+        "prev": "Det kan fx være særligt undervisningsmateriale, særligt værktøj eller en speciel indretning af kontoret.",
+        "s": "Endelig kan nyuddannede med et handicap også få løntilskud i deres første job.",
+        "at": 0,
+        "w": "Endelig"
+      },
+      {
+        "kind": "conn",
+        "card": "endelig",
+        "src": "2017s 2A",
+        "prev": "Det bliver også brugt om den tilstand, hvor man er ramt af livets naturlige bekymringer.",
+        "s": "Og endelig bliver det brugt om den tilstand, der har den kliniske diagnose depression.",
+        "at": 3,
+        "w": "endelig"
+      },
+      {
+        "kind": "conn",
+        "card": "endelig",
+        "src": "2015v L1",
+        "prev": "Fastfood som sushi og færdigretter til den travle forbruger er et marked i vækst og med gode indtjeningsmuligheder.",
+        "s": "Endelig har forbrugernes fokus på sunde nordiske fødevare banet vejen for store uudnyttede potentialer i erhvervet.",
+        "at": 0,
+        "w": "Endelig"
+      },
+      {
+        "kind": "conn",
+        "card": "endelig",
+        "src": "2023v L1",
+        "prev": "af øens fire rundkirker.",
+        "s": "Nylars Rundkirke er den bedst bevarede af de bornholmske rundkirker, og endelig kan man opleve Nyker Rundkirke, der er den mindste og sandsynligvis også den yngste af Bornholms rundkirker.",
+        "at": 72,
+        "w": "endelig"
+      },
+      {
+        "kind": "conn",
+        "card": "endelig",
+        "src": "2023s 2B",
+        "prev": "En tredjedel af dem mente, allerede mens de var studerende, at deres handicap ville få en betydning for, om de overhovedet kunne få et job.",
+        "s": "Og halvdelen mente, at deres handicap ville få stor betydning for, hvordan de ville klare deres job, hvis de endelig fik et.",
+        "at": 109,
+        "w": "endelig"
+      },
+      {
+        "kind": "conn",
+        "card": "endelig",
+        "src": "2022s 2A",
+        "prev": "Selvom hun måtte revidere sine forventninger undervejs, tænker hun ikke længere så meget på, at året med jobsøgning var frustrerende.",
+        "s": "Hun er blot glad for, at det via aktivt brug af sit netværk på de sociale medier endelig lykkedes hende at få et job.",
+        "at": 81,
+        "w": "endelig"
+      },
+      {
+        "kind": "conn",
+        "card": "endelig",
+        "src": "2016s L1",
+        "prev": "Dette gælder især vores fransk- og spansktalende destinationer, samt projekter der ofte bruges som praktikophold.",
+        "s": "Kontakt os derfor endelig og hør nærmere om anbefalingerne.",
+        "at": 18,
+        "w": "endelig"
+      }
+    ],
+    "tværtimod": [
+      {
+        "kind": "conn",
+        "card": "tværtimod",
+        "src": "2023v L1",
+        "prev": "De håbløse og ydmygende levevilkår knækker ikke Pelle, som de har knækket så mange omkring ham.",
+        "s": "Han føler tværtimod, at han er skabt til noget stort.",
+        "at": 10,
+        "w": "tværtimod"
+      },
+      {
+        "kind": "conn",
+        "card": "tværtimod",
+        "src": "2014s 2A",
+        "prev": "Men ikke alle mener, at det går i den rigtige retning.",
+        "s": "Formanden for Bibliotekarforbundet, Pernille Drost, peger tværtimod på, at der er tale om en afvikling.",
+        "at": 58,
+        "w": "tværtimod"
+      }
+    ],
+    "at_planlægge": [
+      {
+        "kind": "verb",
+        "card": "at_planlægge",
+        "src": "2015v L1",
+        "prev": "",
+        "s": "Vi kan desuden planlægge og afholde kompetenceudvikling og arrangementer ude i landet, så du lokalt kan få præcis det kursus eller arrangement, du ønsker.",
+        "at": 15,
+        "w": "planlægge"
+      },
+      {
+        "kind": "verb",
+        "card": "at_planlægge",
+        "src": "2023v L1",
+        "prev": "",
+        "s": "misbruger ’Træner-Thomas’, som hun i al hemmelighed planlægger at forlade.",
+        "at": 52,
+        "w": "planlægger"
+      },
+      {
+        "kind": "verb",
+        "card": "at_planlægge",
+        "src": "2016s 2A",
+        "prev": "",
+        "s": "Læreren skulle stadig planlægge undervisningen i de forskellige fag, men han skulle ikke længere være en autoritet, som eleverne var bange for.",
+        "at": 22,
+        "w": "planlægge"
+      },
+      {
+        "kind": "verb",
+        "card": "at_planlægge",
+        "src": "2015s L1",
+        "prev": "",
+        "s": "Danmark har et veludbygget vejledningssystem, som sik rer, at alle har mulighed for at planlægge uddannelses- og erhvervskarriere med en vejleder.",
+        "at": 87,
+        "w": "planlægge"
+      },
+      {
+        "kind": "verb",
+        "card": "at_planlægge",
+        "src": "2015v L1",
+        "prev": "Og frygt ikke!",
+        "s": "Du planlægger altså ikke HELE dit liv.",
+        "at": 3,
+        "w": "planlægger"
+      },
+      {
+        "kind": "verb",
+        "card": "at_planlægge",
+        "src": "2015s L1",
+        "prev": "",
+        "s": "Introduktionskurser UU planlægger i fællesskab med ungdomsuddannelserne introduktionskurser for elever i 8. klasse.",
+        "at": 23,
+        "w": "planlægger"
+      },
+      {
+        "kind": "verb",
+        "card": "at_planlægge",
+        "src": "2017s L1",
+        "prev": "",
+        "s": "Vi planlægger dagen i Den Gamle By i fællesskab.",
+        "at": 3,
+        "w": "planlægger"
+      }
+    ],
+    "at_kræve": [
+      {
+        "kind": "verb",
+        "card": "at_kræve",
+        "src": "2021s L1",
+        "prev": "Rundvisningerne tager 75 minutter og gennemføres på kunstens præmisser.",
+        "s": "Prøver, der trækker ud, eller sceneteknik, der kræver akut justering, kan bevirke, at vi ikke kan gå den vante rute.",
+        "at": 47,
+        "w": "kræver"
+      },
+      {
+        "kind": "verb",
+        "card": "at_kræve",
+        "src": "2019v 2A",
+        "prev": "",
+        "s": "Det kræver politiske beslutninger, om man vil forsøge at øge indvandringen af udenlandsk arbejdskraft i Danmark.",
+        "at": 4,
+        "w": "kræver"
+      },
+      {
+        "kind": "verb",
+        "card": "at_kræve",
+        "src": "2016v L1",
+        "prev": "",
+        "s": "Student på 2 år At tage en studentereksamen på blot to år kræver, at du har fokus på de faglige mål og deltager aktivt i undervisningen.",
+        "at": 58,
+        "w": "kræver"
+      },
+      {
+        "kind": "verb",
+        "card": "at_kræve",
+        "src": "2015v L1",
+        "prev": "",
+        "s": "gode uddannelsesvaner At gennemføre en uddannelse vil kræve en indsats af dig.",
+        "at": 54,
+        "w": "kræve"
+      },
+      {
+        "kind": "verb",
+        "card": "at_kræve",
+        "src": "2019v 2A",
+        "prev": "Det har indtil nu generelt være muligt for COWI at få nok dygtige medarbejdere til projekter uden at skulle rekruttere i udlandet.",
+        "s": "Det er stadig muligt til projekter i Danmark, men det samme gælder ikke for internationale projekter, der kræver højt specialiserede medarbejdere.",
+        "at": 106,
+        "w": "kræver"
+      },
+      {
+        "kind": "verb",
+        "card": "at_kræve",
+        "src": "2023s L1",
+        "prev": "",
+        "s": "indstilling var, at 'den der gør sin pligt, kan også kræve sin ret'.",
+        "at": 53,
+        "w": "kræve"
+      },
+      {
+        "kind": "verb",
+        "card": "at_kræve",
+        "src": "2016s L1",
+        "prev": "jura & menneSkerettigHeder Hvis du har interesse for menneskerettighedsspørgsmål eller er interesseret i en karriere inden for juraens verden, tilbyder Projects Abroad en række projekter, der er oplagte for dig.",
+        "s": "Mange af projekterne er åbne for alle med engagement og interesse for menneskerettigheder, mens andre kræver relevante kvalifikationer.",
+        "at": 102,
+        "w": "kræver"
+      },
+      {
+        "kind": "verb",
+        "card": "at_kræve",
+        "src": "2016s L1",
+        "prev": "Skal jeg kunne tale lokalsproget?",
+        "s": "Størstedelen af vores projekter kræver ingen særlige sprogkundskaber, selvom det naturligvis altid er en fordel at lære sig nogle basale fraser inden afrejse.",
+        "at": 32,
+        "w": "kræver"
+      }
+    ],
+    "en_påstand": [
+      {
+        "kind": "noun",
+        "card": "en_påstand",
+        "src": "2023v L1",
+        "prev": "Det gør resten af verden derimod, men Burgundia er, blandt mange, mange ting, en lang argumentation for, at Bornholm er verdens selvfølgelige centrum.",
+        "s": "Det er jo en påstand, der kræver, at man skærer en hæl og klipper en tå.",
+        "at": 10,
+        "w": "en påstand"
+      }
+    ],
+    "at_bekræfte": [
+      {
+        "kind": "verb",
+        "card": "at_bekræfte",
+        "src": "2023v 2A",
+        "prev": "Overgangen fra at være almindelig medarbejder til at være leder er svær for mange.",
+        "s": "Det kan både Mette Dalgaard og Henriette Friis bekræfte.",
+        "at": 47,
+        "w": "bekræfte"
+      }
+    ],
+    "at_erkende": [
+      {
+        "kind": "verb",
+        "card": "at_erkende",
+        "src": "2018s 2A",
+        "prev": "Der skal også ske en ændring i opfattelsen af lederrollen.",
+        "s": "De nuværende ledelser må erkende, at der er brug for kvindernes kompetencer.",
+        "at": 25,
+        "w": "erkende"
+      },
+      {
+        "kind": "verb",
+        "card": "at_erkende",
+        "src": "2016v 2A",
+        "prev": "Hun er lektor på Institut for Kommunikation og Kultur på Aarhus Universitet og har forsket i børns brug af de nye kreative digitale medier.",
+        "s": "Hun erkender dog, at mange børn derhjemme mest sidder alene med deres tablet, og at de nogle gange foretrækker tabletten frem for at lege med kammerater.",
+        "at": 4,
+        "w": "erkender"
+      },
+      {
+        "kind": "verb",
+        "card": "at_erkende",
+        "src": "2023v 2A",
+        "prev": "",
+        "s": "”Jeg måtte relativt hurtigt erkende, at jeg ikke kunne klare at arbejde så meget, og at jeg måtte blive bedre til nogle gange at slippe kontrollen.",
+        "at": 28,
+        "w": "erkende"
+      }
+    ],
+    "at_forhindre": [
+      {
+        "kind": "verb",
+        "card": "at_forhindre",
+        "src": "2023v 2B",
+        "prev": "De fejl kan softwarefirmaet løbende rette gennem opdateringer.",
+        "s": "Der er således professionelle udviklere, der hele tiden arbejder på at forhindre uønsket adgang til brugernes enheder.",
+        "at": 71,
+        "w": "forhindre"
+      },
+      {
+        "kind": "verb",
+        "card": "at_forhindre",
+        "src": "2023s L1",
+        "prev": "Det var således ikke tilladt at nyde alkohol, fx den traditionelle kaffepunch, så danskerne begyndte i stedet at mødes til kaffe- og kagebord.",
+        "s": "Det krævede ingen spiritusbevilling, og tyskerne kunne ikke forhindre dansksindede taler og sange hen over det veldækkede kagebord.",
+        "at": 60,
+        "w": "forhindre"
+      },
+      {
+        "kind": "verb",
+        "card": "at_forhindre",
+        "src": "2023s L1",
+        "prev": "",
+        "s": "Der blev ikke givet spiritusbevilling til forsamlingshuse, for på den måde forsøgte de tyske myndigheder at forhindre disse møder.",
+        "at": 108,
+        "w": "forhindre"
+      }
+    ],
+    "omvendt": [
+      {
+        "kind": "conn",
+        "card": "omvendt",
+        "src": "2023s L1",
+        "prev": "En måned senere var der afstemning i den sydlige zone, der blandt andet omfattede Flensborg samt øerne Sylt og Föhr.",
+        "s": "Her var resultatet lige omvendt, idet 80 procent stemte for at forblive tysk.",
+        "at": 24,
+        "w": "omvendt"
+      }
+    ],
+    "at_overveje": [
+      {
+        "kind": "verb",
+        "card": "at_overveje",
+        "src": "2016s L1",
+        "prev": "Ja.",
+        "s": "Vi afholder jævnligt inspirationsmøder rundt om i Danmark for alle som overvejer at rejse ud som ulandsfrivillige.",
+        "at": 71,
+        "w": "overvejer"
+      },
+      {
+        "kind": "verb",
+        "card": "at_overveje",
+        "src": "2016s L1",
+        "prev": "",
+        "s": "journaliStik Hvis du overvejer en karriere indenfor journalistik, eller savner en pause fra igangværende studier eller arbejde, giver et journalistikprojekt dig helt unik erfaring indenfor faget.",
+        "at": 21,
+        "w": "overvejer"
+      },
+      {
+        "kind": "verb",
+        "card": "at_overveje",
+        "src": "2023s L1",
+        "prev": "",
+        "s": "Hjælp til medfølgende partnere i hele Syddanmark Flytter du – eller overvejer du at flytte – med din partner, som har fået job i Syddanmark?",
+        "at": 68,
+        "w": "overvejer"
+      },
+      {
+        "kind": "verb",
+        "card": "at_overveje",
+        "src": "2017s L1",
+        "prev": "",
+        "s": "Har du en genstand, som du overvejer at forære til Den Gamle By, så send en mail med beskrivelse og foto af genstanden.",
+        "at": 27,
+        "w": "overvejer"
+      }
+    ],
+    "samtidig": [
+      {
+        "kind": "conn",
+        "card": "samtidig",
+        "src": "2019v L1",
+        "prev": "Det største biograflærred findes dog et andet sted i København, nemlig i Cinemaxx på Fisketorvet.",
+        "s": "Det er samtidig det største i Skandinavien.",
+        "at": 7,
+        "w": "samtidig"
+      },
+      {
+        "kind": "conn",
+        "card": "samtidig",
+        "src": "2016s L1",
+        "prev": "Hvad enten du læser medicin, til fysioterapeut, sygeplejerske, journalist eller noget helt femte, kan et praktikhold på et af vores projekter give dig en masse erfaring inden for dit fagområde.",
+        "s": "Med andre ord, du kan prøve din teori af i praksis samtidig med at du oplever forholdene i et udviklingsland.",
+        "at": 51,
+        "w": "samtidig"
+      },
+      {
+        "kind": "conn",
+        "card": "samtidig",
+        "src": "2018v L1",
+        "prev": "Testrup højskoles elevforening sørger for, at alle tidligere elever kan fastholde kontakten til Testrup – uanset hvor i verden de befinder sig.",
+        "s": "Samtidig muliggør elevforeningens hjemmeside kontakten til ens gamle højskolevenner.",
+        "at": 0,
+        "w": "Samtidig"
+      },
+      {
+        "kind": "conn",
+        "card": "samtidig",
+        "src": "2020v L1",
+        "prev": "Samlet set går mange tusind mennesker til undervisning på AOF’s aftenskoler hver uge, hvor de bliver klogere på alt fra madlavning, Mellemøsten og motion til sprog og syning.",
+        "s": "Samtidig modtager mange voksne, både danskere og flygtninge/indvandrere, undervisning hos AOF, så de kan lære at læse det, som de har brug for i deres hverdag.",
+        "at": 0,
+        "w": "Samtidig"
+      },
+      {
+        "kind": "conn",
+        "card": "samtidig",
+        "src": "2016s 2A",
+        "prev": "Disciplin og udenadslære blev afløst af en undervisning, hvor eleverne og deres synspunkter i langt højere grad kom i centrum.",
+        "s": "Men samtidig opstod der i mange klasser problemer med uro i timerne, en ny udfordring for lærerne.",
+        "at": 4,
+        "w": "samtidig"
+      },
+      {
+        "kind": "conn",
+        "card": "samtidig",
+        "src": "2023s L1",
+        "prev": "De flyttede til Tønder for at spare tid på transport og på grund af de lavere boligpriser.",
+        "s": "Samtidig er de kommet tættere på Tyskland, hvor Jon har boet og studeret.",
+        "at": 0,
+        "w": "Samtidig"
+      },
+      {
+        "kind": "conn",
+        "card": "samtidig",
+        "src": "2014v 2A",
+        "prev": "To dage om ugen spiser hun kun et blødkogt æg til morgenmad og lidt salat til aftensmad.",
+        "s": "Hermed opnår Anne Johansen ifølge tilhængerne af fastemetoden et sundere og bedre liv, samtidig med at hun forsinker aldringsprocessen.",
+        "at": 87,
+        "w": "samtidig"
+      },
+      {
+        "kind": "conn",
+        "card": "samtidig",
+        "src": "2019s 2A",
+        "prev": "Men samlet set er der flere kvinder, der donerer penge end mænd.",
+        "s": "Organisationerne vil gerne øge antallet af mandlige donorer, samtidig med at de holder fast i de kvindelige donorer.",
+        "at": 61,
+        "w": "samtidig"
+      }
+    ],
+    "alligevel": [
+      {
+        "kind": "conn",
+        "card": "alligevel",
+        "src": "2022v L1",
+        "prev": "På nogle sociale områder var der en form for ligestilling i vikingetiden.",
+        "s": "Der er ingen tvivl om, at kvinder ikke havde så meget politisk magt dengang, men der er alligevel meget, der tyder på, at kvinder både var selvstændige og havde rettigheder.",
+        "at": 88,
+        "w": "alligevel"
+      },
+      {
+        "kind": "conn",
+        "card": "alligevel",
+        "src": "2020v L1",
+        "prev": "Jeg lærte i første del af kurset rigtig meget om råvarer og god køkkenhygiejne.",
+        "s": "Men det bedste var alligevel, at vi lærte at tilberede et festmåltid, som jeg faktisk vil kunne lave derhjemme også.",
+        "at": 19,
+        "w": "alligevel"
+      },
+      {
+        "kind": "conn",
+        "card": "alligevel",
+        "src": "2020v 2A",
+        "prev": "Med ti års anciennitet i virksomheden kendte hun faktisk også sin nye afdeling ganske godt og rykkede blot 50 meter længere ned ad gangen.",
+        "s": "Alligevel repræsenterer skiftet et væsentligt vendepunkt i hendes karriere, fordi det har ført hende ind på et spor, som hun målrettet er gået efter.",
+        "at": 0,
+        "w": "Alligevel"
+      },
+      {
+        "kind": "conn",
+        "card": "alligevel",
+        "src": "2015s L1",
+        "prev": "Optagelse efter konkret vurdering Det er lederen af det gymnasium, du har søgt optagelse på, der afgør, om du har krav på optagelse.",
+        "s": "Hvis du ikke opfylder alle kravene, kan lederen vurdere ud fra dine standpunktskarakterer og tidligere prøver, om du kan optages alligevel.",
+        "at": 129,
+        "w": "alligevel"
+      },
+      {
+        "kind": "conn",
+        "card": "alligevel",
+        "src": "2022s 2A",
+        "prev": "Det mener Anne Lund i hvert fald.",
+        "s": "Hun mener nemlig, at man spilder mange ressourcer på at ansætte en medarbejder, der alligevel ikke passer til jobbet.",
+        "at": 84,
+        "w": "alligevel"
+      },
+      {
+        "kind": "conn",
+        "card": "alligevel",
+        "src": "2019s L1",
+        "prev": "På de store festivaler er budgettet til at betale de optrædende musikere på mange millioner kroner.",
+        "s": "Mange musikfestivaler skaber alligevel et overskud, som de efterfølgende uddeler til forskellige former for velgørende formål.",
+        "at": 29,
+        "w": "alligevel"
+      },
+      {
+        "kind": "conn",
+        "card": "alligevel",
+        "src": "2019s 2A",
+        "prev": "Og nu, hvor jeg ikke skal af sted på arbejde hver dag, kan jeg også sagtens passe det ind i min hverdag med to dage om ugen i genbrugsbutikken.",
+        "s": "Og min kone synes også, det er fint – hun er jo alligevel på arbejde,” siger Niels Pedersen.",
+        "at": 48,
+        "w": "alligevel"
+      },
+      {
+        "kind": "conn",
+        "card": "alligevel",
+        "src": "2021v L1",
+        "prev": "Brændeovnen brænder forgæves.",
+        "s": "Alligevel finder man det hele i det lille barndomshjem.",
+        "at": 0,
+        "w": "Alligevel"
+      }
+    ],
+    "at_undersøge": [
+      {
+        "kind": "verb",
+        "card": "at_undersøge",
+        "src": "2020s 2A",
+        "prev": "Men London er en meget dyr by at bo i, og hun var også nervøs for, om det var for svært at komme ind på universitetet.",
+        "s": "Det blev dog ikke aktuelt for Eva at undersøge mulighederne nærmere.",
+        "at": 37,
+        "w": "undersøge"
+      },
+      {
+        "kind": "verb",
+        "card": "at_undersøge",
+        "src": "2015s L1",
+        "prev": "",
+        "s": "X Når dine faglige kompetencer vurderes, handler det om at undersøge, om du vil kunne følge med i de forskellige fag på ungdomsuddannelsen.",
+        "at": 59,
+        "w": "undersøge"
+      },
+      {
+        "kind": "verb",
+        "card": "at_undersøge",
+        "src": "2016s L1",
+        "prev": "",
+        "s": "hvordan aberne pilede ud for at undersøge deres nye territorium.",
+        "at": 32,
+        "w": "undersøge"
+      },
+      {
+        "kind": "verb",
+        "card": "at_undersøge",
+        "src": "2021s 2A",
+        "prev": "Det er Torben enig i: ”Uden opbakning går det selvfølgelig ikke.",
+        "s": "Desuden er det en god idé at undersøge grundigt, hvor det kan betale sig at skære ned på forbruget.",
+        "at": 29,
+        "w": "undersøge"
+      },
+      {
+        "kind": "verb",
+        "card": "at_undersøge",
+        "src": "2015v L1",
+        "prev": "Der kan være forskellige regler for erhvervsskoler og landbrugsskoler.",
+        "s": "Spørg uddannelsesstederne om bo-muligheder og priser, eller få din UU-vejleder til at hjælpe dig med at undersøge og afklare mulighederne for at bo på skolen.",
+        "at": 104,
+        "w": "undersøge"
+      },
+      {
+        "kind": "verb",
+        "card": "at_undersøge",
+        "src": "2019v 2A",
+        "prev": "En svær beslutning Andrei havde som mange andre unge rumænere overvejet at søge job i udlandet.",
+        "s": "Han havde allerede været i gang med at undersøge mulighederne.",
+        "at": 39,
+        "w": "undersøge"
+      },
+      {
+        "kind": "verb",
+        "card": "at_undersøge",
+        "src": "2023s 2B",
+        "prev": "Sikkert er det dog, at der er færre nyuddannede med et handicap, der kommer i arbejde, end nyuddannede uden et handicap.",
+        "s": "Måske er det ikke så overraskende, men det var alligevel interessant nok til, at VIA University College satte sig for at undersøge det nærmere.",
+        "at": 121,
+        "w": "undersøge"
+      },
+      {
+        "kind": "verb",
+        "card": "at_undersøge",
+        "src": "2020s 2A",
+        "prev": "Det er svært for de unge at overskue processen fra start til slut.",
+        "s": "De skal for det første undersøge og sætte sig ind i, hvilke fag forskellige universiteter i udlandet tilbyder.",
+        "at": 23,
+        "w": "undersøge"
+      }
+    ],
+    "at_behandle": [
+      {
+        "kind": "verb",
+        "card": "at_behandle",
+        "src": "2018v L1",
+        "prev": "Lærerne underviser i det, de brænder for og er derfor inspirerende og nærværende.",
+        "s": "De behandler eleverne som voksne mennesker og er også gode at tale med om studieretninger, eller om hvordan man kan bruge det, man er god til.",
+        "at": 3,
+        "w": "behandler"
+      },
+      {
+        "kind": "verb",
+        "card": "at_behandle",
+        "src": "2023s 2B",
+        "prev": "Det er nemlig kommunerne, der afgør, hvor møllerne skal sættes op.",
+        "s": "Det er også kommunerne, der skal behandle klager fra borgerne.",
+        "at": 33,
+        "w": "behandle"
+      }
+    ],
+    "imidlertid": [
+      {
+        "kind": "conn",
+        "card": "imidlertid",
+        "src": "2022v L1",
+        "prev": "Vikinger benyttes også til markedsføring i logoerne for Stryhn’s og GØL.",
+        "s": "Vikingen i de to logoer adskiller sig imidlertid markant.",
+        "at": 38,
+        "w": "imidlertid"
+      },
+      {
+        "kind": "conn",
+        "card": "imidlertid",
+        "src": "2020v L1",
+        "prev": "selv med nye logoer, slogans og tv-spots, hvilket skulle strømline deres image.",
+        "s": "Kritikerne mente imidlertid, at oplysningsforbundene på den måde ikke levede op til de værdier, som de havde stået for i så mange år.",
+        "at": 17,
+        "w": "imidlertid"
+      },
+      {
+        "kind": "conn",
+        "card": "imidlertid",
+        "src": "2018v L1",
+        "prev": "Som kursist på en folkehøjskole vil man som hovedregel få opholdstilladelse for kursets varighed.",
+        "s": "Man kan imidlertid søge om at få tilladelsen forlænget, dog højst til 18 måneder.",
+        "at": 8,
+        "w": "imidlertid"
+      },
+      {
+        "kind": "conn",
+        "card": "imidlertid",
+        "src": "2014s 2A",
+        "prev": "Hun elsker sit arbejde og vil, hvis helbredet holder, gerne fortsætte, til hun er 70.",
+        "s": "Ti år er imidlertid længe at se frem i en branche, hvor ’omstillingsparathed’ er et nøgleord, og hvor dødsdommen flere gange har været afsagt over bibliotekarfaget.",
+        "at": 9,
+        "w": "imidlertid"
+      }
+    ],
+    "at_foretrække": [
+      {
+        "kind": "verb",
+        "card": "at_foretrække",
+        "src": "2020v 2A",
+        "prev": "",
+        "s": "Usikkerhed i ansættelsen Når ansatte i korte midlertidige ansættelser generelt foretrækker en længerevarende fastansættelse, skyldes det ønsket om mere tryghed i deres arbejdsliv.",
+        "at": 79,
+        "w": "foretrækker"
+      },
+      {
+        "kind": "verb",
+        "card": "at_foretrække",
+        "src": "2018s L1",
+        "prev": "Tivoli søger løbende servicestjerner til de tre sæsoner: Sommer, Halloween og Jul i Tivoli.",
+        "s": "Vi foretrækker ansøgere, der har lyst til at arbejde i alle sæsoner.",
+        "at": 3,
+        "w": "foretrækker"
+      },
+      {
+        "kind": "verb",
+        "card": "at_foretrække",
+        "src": "2016v 2A",
+        "prev": "Hun er lektor på Institut for Kommunikation og Kultur på Aarhus Universitet og har forsket i børns brug af de nye kreative digitale medier.",
+        "s": "Hun erkender dog, at mange børn derhjemme mest sidder alene med deres tablet, og at de nogle gange foretrækker tabletten frem for at lege med kammerater.",
+        "at": 99,
+        "w": "foretrækker"
+      },
+      {
+        "kind": "verb",
+        "card": "at_foretrække",
+        "src": "2022v 2B",
+        "prev": "",
+        "s": "Der er lønmodtagere, der foretrækker et almindeligt arbejde fra ni til fem og med fast løn en gang om måneden.",
+        "at": 25,
+        "w": "foretrækker"
+      }
+    ],
+    "at_dokumentere": [
+      {
+        "kind": "verb",
+        "card": "at_dokumentere",
+        "src": "2018v L1",
+        "prev": "",
+        "s": "Statsborgere fra lande uden for EU/EØS, for hvem der gælder krav om ansøgning om opholdstilladelse, skal kunne dokumentere en række forhold, hvis de ønsker at gå på højskole i Danmark.",
+        "at": 111,
+        "w": "dokumentere"
+      },
+      {
+        "kind": "verb",
+        "card": "at_dokumentere",
+        "src": "2018v L1",
+        "prev": "",
+        "s": "skal man kunne dokumentere, at man kan tale enten dansk, svensk, norsk, engelsk eller tysk på et rimeligt niveau samt tale det sprog, som undervisningen gennemføres på.",
+        "at": 15,
+        "w": "dokumentere"
+      },
+      {
+        "kind": "verb",
+        "card": "at_dokumentere",
+        "src": "2022v 2B",
+        "prev": "I dag er det sådan, at bankerne er tvunget til at stille en masse krav til en iværksætter, før de vil låne vedkommende penge.",
+        "s": "Man skal blandt andet kunne fremvise regnskaber for flere år og dokumentere, at man kan tjene penge.",
+        "at": 64,
+        "w": "dokumentere"
+      }
+    ],
+    "ligeledes": [
+      {
+        "kind": "conn",
+        "card": "ligeledes",
+        "src": "2022s L1",
+        "prev": "Mandøbussen arrangerer også køreture rundt på Mandø.",
+        "s": "Turen foregår i traktorbussen, så ældre og dårligt gående ligeledes kan se øen.",
+        "at": 58,
+        "w": "ligeledes"
+      },
+      {
+        "kind": "conn",
+        "card": "ligeledes",
+        "src": "2015v L1",
+        "prev": "Du lærer om grundtilberedningsmetoderne, og du kan bruge dem, når du marinerer, graver eller røger fisk.",
+        "s": "Du lærer ligeledes at fremstille sushi, sund fastfood samt forskellige færdigretter af fisk og skaldyr.",
+        "at": 9,
+        "w": "ligeledes"
+      },
+      {
+        "kind": "conn",
+        "card": "ligeledes",
+        "src": "2015v L1",
+        "prev": "Du bliver godt rustet til at rådgive kunder om indkøb af fisk.",
+        "s": "Du kan ligeledes indgå i dialog med kunden om tilberedningsmetoder, menusammensætninger og opbygning af måltider primært baseret på fisk og skaldyr.",
+        "at": 7,
+        "w": "ligeledes"
+      }
+    ],
+    "at_fravælge": [
+      {
+        "kind": "verb",
+        "card": "at_fravælge",
+        "src": "2022s L1",
+        "prev": "",
+        "s": "Ved at fravælge de varmeste måneder minimerer man risikoen for at østersene indeholder giftige alger.",
+        "at": 7,
+        "w": "fravælge"
+      },
+      {
+        "kind": "verb",
+        "card": "at_fravælge",
+        "src": "2019v 2A",
+        "prev": "De peger også på, at man kan nedsætte topskatten for udenlandske medarbejdere.",
+        "s": "Det er nemlig sandsynligt, at den høje topskat får nogle udlændinge til at fravælge Danmark.",
+        "at": 75,
+        "w": "fravælge"
+      }
+    ],
+    "en_aftale": [
+      {
+        "kind": "noun",
+        "card": "en_aftale",
+        "src": "2022s L1",
+        "prev": "Der er i de seneste år kommet hurtigt internet på de fleste øer, og netop dette har været afgørende for, at flere nu arbejder som selvstændige fra en lille ø.",
+        "s": "Der er dog også mange øboere, der pendler – nogle med en aftale om delvis hjemmearbejdsplads.",
+        "at": 54,
+        "w": "en aftale"
+      },
+      {
+        "kind": "noun",
+        "card": "en_aftale",
+        "src": "2015v L1",
+        "prev": "",
+        "s": "Hvis du vil vide mere Du er altid velkommen til at ringe til os og få en aftale om at se skolen.",
+        "at": 70,
+        "w": "en aftale"
+      }
+    ],
+    "et_behov": [
+      {
+        "kind": "noun",
+        "card": "et_behov",
+        "src": "2022s L1",
+        "prev": "Udgangspunkt var, at det ikke nytter med bosætningskampagner, branding m.m., hvis der ikke er ledige, anvendelige boliger på øerne.",
+        "s": "Projektet viste bl.a. et behov for flere lejeboliger, som kan være attraktive for potentielle tilflyttere, der ikke er parate til at købe en bolig.",
+        "at": 22,
+        "w": "et behov"
+      }
+    ],
+    "at_optage": [
+      {
+        "kind": "verb",
+        "card": "at_optage",
+        "src": "2016v L1",
+        "prev": "Studieplads For at være sikker på en plads skal du søge om optagelse inden sommerferien.",
+        "s": "Såfremt der er ledige pladser, optager vi også kursister i august inden studiestart.",
+        "at": 31,
+        "w": "optager"
+      },
+      {
+        "kind": "verb",
+        "card": "at_optage",
+        "src": "2022s L1",
+        "prev": "Heldigvis hjalp Strynøs bosætningsgruppe os fra starten.",
+        "s": "De svarede på vores spørgsmål, og det var også dem, der bakkede os op, da vi fik problemer med at optage boliglån.",
+        "at": 98,
+        "w": "optage"
+      },
+      {
+        "kind": "verb",
+        "card": "at_optage",
+        "src": "2019v L1",
+        "prev": "FILM-X er et tilbud til bl.a. skoleklasser, som i Cinematekets filmstudier kan skabe deres egne film i et professionelt miljø.",
+        "s": "Eleverne kommer gennem en klassisk produktionsproces, hvor de idéudvikler, optager og klipper med professionelt filmudstyr.",
+        "at": 75,
+        "w": "optager"
+      },
+      {
+        "kind": "verb",
+        "card": "at_optage",
+        "src": "2018v L1",
+        "prev": "På Oure Højskole på Fyn har man på sit højskoleophold mulighed for at deltage i en professionel træneruddannelse som fx fodboldtræner.",
+        "s": "Oure Fodboldtræner Akademi optager kun 12 trænertalenter om året, og for at komme ind skal man sende en motiveret ansøgning, hvor man fortæller om sin baggrund, erfaringer og ambitioner.",
+        "at": 27,
+        "w": "optager"
+      },
+      {
+        "kind": "verb",
+        "card": "at_optage",
+        "src": "2016v L1",
+        "prev": "Studieplads For at være sikker på en plads skal du søge om optagelse inden sommerferien.",
+        "s": "Såfremt der er ledige pladser, optager vi også kursister i august inden studiestart.",
+        "at": 31,
+        "w": "optager"
+      }
+    ],
+    "at_understrege": [
+      {
+        "kind": "verb",
+        "card": "at_understrege",
+        "src": "2022s 2A",
+        "prev": "",
+        "s": "Kamilla har ikke fortrudt sit valg, men hun understreger, at det faktisk var svært at finde et job.",
+        "at": 44,
+        "w": "understreger"
+      }
+    ],
+    "at_ændre": [
+      {
+        "kind": "verb",
+        "card": "at_ændre",
+        "src": "2015s 2A",
+        "prev": "Men i den ligestillede familie, hvor begge har arbejde ude, og begge må tage del i arbejdet i hjemmet, forholder mænd sig til madlavning på en ny måde.",
+        "s": "Det medfører, at madlavning ændrer status fra almindeligt husmorarbejde til hobby og fritidsinteresse . ..",
+        "at": 28,
+        "w": "ændrer"
+      },
+      {
+        "kind": "verb",
+        "card": "at_ændre",
+        "src": "2015s 2A",
+        "prev": "Samtidig kan man gøre det ekstra dyrt at køre ind i hovedstaden i myldretiden.",
+        "s": "Dette vil få nogle bilister til at ændre trafikvaner.",
+        "at": 35,
+        "w": "ændre"
+      },
+      {
+        "kind": "verb",
+        "card": "at_ændre",
+        "src": "2016s L1",
+        "prev": "",
+        "s": "kan ændre den måde, de ser på verden.",
+        "at": 4,
+        "w": "ændre"
+      },
+      {
+        "kind": "verb",
+        "card": "at_ændre",
+        "src": "2020v L1",
+        "prev": "Aftenskolen er under konstant forandring.",
+        "s": "Rammerne ændrer sig løbende, og nye muligheder dukker op.",
+        "at": 9,
+        "w": "ændrer"
+      },
+      {
+        "kind": "verb",
+        "card": "at_ændre",
+        "src": "2018v 2A",
+        "prev": "",
+        "s": "Langt de fleste statslige arbejdspladser har altid ligget i København, men dette er ved at ændre sig.",
+        "at": 91,
+        "w": "ændre"
+      },
+      {
+        "kind": "verb",
+        "card": "at_ændre",
+        "src": "2022s 2A",
+        "prev": "",
+        "s": "Men det vigtigste for Martin Holm er dog, at man ændrer synet på rekruttering.",
+        "at": 49,
+        "w": "ændrer"
+      },
+      {
+        "kind": "verb",
+        "card": "at_ændre",
+        "src": "2017v 2A",
+        "prev": "",
+        "s": "”Andre ideer med deleøkonomi, for eksempel Airbnb, lægger op til, at folk skal ændre deres adfærd.",
+        "at": 79,
+        "w": "ændre"
+      },
+      {
+        "kind": "verb",
+        "card": "at_ændre",
+        "src": "2020s L1",
+        "prev": "",
+        "s": "Mange af museets fotos er tilgængelige under en særlig licens, der tillader, at man kan bearbejde, ændre og udbygge billedet, også til kommercielle formål, så længe museet og fotografen krediteres.",
+        "at": 99,
+        "w": "ændre"
+      }
+    ],
+    "at_håndtere": [
+      {
+        "kind": "verb",
+        "card": "at_håndtere",
+        "src": "2021v 2A",
+        "prev": "",
+        "s": "Unge håndterer pres forskelligt Ikke alle unge under pres får stresssymptomer.",
+        "at": 5,
+        "w": "håndterer"
+      },
+      {
+        "kind": "verb",
+        "card": "at_håndtere",
+        "src": "2021v 2A",
+        "prev": "Unge håndterer pres forskelligt Ikke alle unge under pres får stresssymptomer.",
+        "s": "Studiet af de to 2.g-årgange på to gymnasier i Aalborg viser, at de unge, der ikke er stressede, er bedre til at håndtere kravene.",
+        "at": 113,
+        "w": "håndtere"
+      },
+      {
+        "kind": "verb",
+        "card": "at_håndtere",
+        "src": "2018s L1",
+        "prev": "heder.",
+        "s": "Vi hjælper dig til at kunne tage ansvar, håndtere konflikter, samarbejde, være en god kollega og til i det hele taget at kunne glæde sig over at have et arbejde.",
+        "at": 41,
+        "w": "håndtere"
+      }
+    ],
+    "at_reducere": [
+      {
+        "kind": "verb",
+        "card": "at_reducere",
+        "src": "2015s 2A",
+        "prev": "",
+        "s": "I nogle storbyer i verden har man forsøgt at reducere trafikproblemerne ved at opkræve en afgift for at køre ind i byen.",
+        "at": 45,
+        "w": "reducere"
+      },
+      {
+        "kind": "verb",
+        "card": "at_reducere",
+        "src": "2021v 2A",
+        "prev": "I forhold til uddannelsesvalg er de unge med mindre stress åbne overfor, at der er mange veje til en god uddannelse.",
+        "s": "De ser på forskellige uddannelsesmuligheder i stedet for at fokusere på enkelte prestigeuddannelser, og det er med til at reducere presset.",
+        "at": 122,
+        "w": "reducere"
+      }
+    ],
+    "at_lukke": [
+      {
+        "kind": "verb",
+        "card": "at_lukke",
+        "src": "2014s 2A",
+        "prev": "",
+        "s": "“Men grundlæggende er jeg skeptisk over for, at man lukker så mange filialer.",
+        "at": 52,
+        "w": "lukker"
+      },
+      {
+        "kind": "verb",
+        "card": "at_lukke",
+        "src": "2018s L1",
+        "prev": "Du skal holde pause på præcis det tidspunkt, der er aftalt, så der hele tiden er en kollega på alle forlystelser.",
+        "s": "Forlystelserne skal åbne og lukke på det tidspunkt, gæsterne forventer det.",
+        "at": 28,
+        "w": "lukke"
+      },
+      {
+        "kind": "verb",
+        "card": "at_lukke",
+        "src": "2014s 2A",
+        "prev": "",
+        "s": "I nogle tilfælde er der dog god mening i at lukke biblioteker, mener Henrik Jochumsen, kultursociolog og lektor ved Danmarks Biblioteksskole.",
+        "at": 44,
+        "w": "lukke"
+      },
+      {
+        "kind": "verb",
+        "card": "at_lukke",
+        "src": "2021s L1",
+        "prev": "Hvornår lukker dørene?",
+        "s": "Vores forestillinger starter præcist, og dørene lukker derfor også ved forestillingens start.",
+        "at": 48,
+        "w": "lukker"
+      },
+      {
+        "kind": "verb",
+        "card": "at_lukke",
+        "src": "2014s 2A",
+        "prev": "",
+        "s": "I Them lukker borgerne for eksempel sig selv ind på biblioteket med et særligt chiplånerkort.",
+        "at": 7,
+        "w": "lukker"
+      },
+      {
+        "kind": "verb",
+        "card": "at_lukke",
+        "src": "2014s 2A",
+        "prev": "",
+        "s": "Det er typisk de små filialer, som må lukke, fordi de er umoderne og har for lidt åbent.",
+        "at": 38,
+        "w": "lukke"
+      }
+    ],
+    "at_garantere": [
+      {
+        "kind": "verb",
+        "card": "at_garantere",
+        "src": "2015v L1",
+        "prev": "",
+        "s": "Praktikplads Danmarks Fiskeriforening garanterer, at der er en praktikplads til dig, hvis det er muligt, og hvis skolen finder dig egnet.",
+        "at": 38,
+        "w": "garanterer"
+      },
+      {
+        "kind": "verb",
+        "card": "at_garantere",
+        "src": "2016s L1",
+        "prev": "Du kan også deltage i arbejdet med at frembringe mere information og viden om den fascinerende inkacivilisation i den Hellige Dal i Peru.",
+        "s": "Uanset dit valg, vil arbejdet som frivillig inden for Arkæologi garantere dig en oplevelse udover det sædvanlige!",
+        "at": 64,
+        "w": "garantere"
+      },
+      {
+        "kind": "verb",
+        "card": "at_garantere",
+        "src": "2021s L1",
+        "prev": "Rundvisninger på teatret sker under hensyntagen til kunsten.",
+        "s": "Der kan være prøver på scener, der medfører, at vi ikke kan garantere, at turen går forbi alle scener.",
+        "at": 60,
+        "w": "garantere"
+      },
+      {
+        "kind": "verb",
+        "card": "at_garantere",
+        "src": "2016s L1",
+        "prev": "Du vil både opleve noget nyt og fremmed, men også noget velkendt i Moldova og Rumænien, hvor Projects Abroad arbejder.",
+        "s": "Du har i de to østeuropæiske destinationer mulighed for at arbejde frivilligt på vidt forskellige projekter, der alle garanterer store oplevelser og muligheden for virkelig at gøre en forskel.",
+        "at": 118,
+        "w": "garanterer"
+      }
+    ],
+    "at_begrænse": [
+      {
+        "kind": "verb",
+        "card": "at_begrænse",
+        "src": "2021s 2A",
+        "prev": "Samtidig belaster produktionen af kød jorden og vandressourcerne.",
+        "s": "Det vil altså give god mening at begrænse folks forbrug af kød.",
+        "at": 33,
+        "w": "begrænse"
+      },
+      {
+        "kind": "verb",
+        "card": "at_begrænse",
+        "src": "2021s 2A",
+        "prev": "Det har været sværere for mig at undvære kød på middagsbordet, men jeg er efterhånden ved at vænne mig til det.",
+        "s": "Derimod har jeg stadig svært ved, at vi må begrænse, hvilke lande vi holder ferie i.",
+        "at": 43,
+        "w": "begrænse"
+      },
+      {
+        "kind": "verb",
+        "card": "at_begrænse",
+        "src": "2018v L1",
+        "prev": "En af skolens værdier er tanken om bæredygtighed.",
+        "s": "Det betyder blandt andet, at skolen aktivt forsøger at begrænse madspild ved at genanvende alle madrester, hvis det er muligt.",
+        "at": 55,
+        "w": "begrænse"
+      },
+      {
+        "kind": "verb",
+        "card": "at_begrænse",
+        "src": "2021s 2A",
+        "prev": "Desuden er det en god idé at undersøge grundigt, hvor det kan betale sig at skære ned på forbruget.",
+        "s": "Der findes masser af gratis CO2-beregnere på nettet, som kan hjælpe en til at finde ud af, hvor man får mest ud af at begrænse sin CO2-udledning.",
+        "at": 118,
+        "w": "begrænse"
+      }
+    ],
+    "ellers": [
+      {
+        "kind": "conn",
+        "card": "ellers",
+        "src": "2021s 2A",
+        "prev": "”Før man gør noget som helst andet, bør man sikre sig, at familien bakker op om projektet og har mod på at udfordre de gamle vaner.",
+        "s": "Ellers risikerer man både, at projektet mislykkes, og at nogle bliver sure,” siger Marianne.",
+        "at": 0,
+        "w": "Ellers"
+      },
+      {
+        "kind": "conn",
+        "card": "ellers",
+        "src": "2016s L1",
+        "prev": "Du kan for eksempel hjælpe med at bygge nye børnehjem og skoler i Tanzania, hjælpe til hos en nomadefamilie i Mongoliet eller udforske Khmer-kulturen i Cambodja.",
+        "s": "Uanset hvilket projekt du vælger, vil du opleve at blive en del af lokalsamfundet og på den måde få en enestående oplevelse, som man ellers ikke får på almindelige rejser.",
+        "at": 133,
+        "w": "ellers"
+      },
+      {
+        "kind": "conn",
+        "card": "ellers",
+        "src": "2019v L1",
+        "prev": "faktisk noget, de store biografer ikke har.",
+        "s": "De frivillige, der passer biografen, ved nemlig rigtig meget om film, og det synes jeg ellers ikke, man oplever så tit hos personalet i de store biografer.",
+        "at": 87,
+        "w": "ellers"
+      },
+      {
+        "kind": "conn",
+        "card": "ellers",
+        "src": "2017v 2A",
+        "prev": "”Som stor virksomhed er man ofte bange for at lave noget nyt, fordi det risikerer at kannibalisere det eksisterende forretningsområde.",
+        "s": "Men virksomhederne er nødt til at gøre det, ellers gør andre det.",
+        "at": 44,
+        "w": "ellers"
+      },
+      {
+        "kind": "conn",
+        "card": "ellers",
+        "src": "2017s L1",
+        "prev": "Et minus er, at der kan være for mange mennesker, så jeg anbefaler ikke, at man besøger Den Gamle By i weekenden.",
+        "s": "Vi var der så også lige den dag, hvor det blæste allermest, men ellers var det super hyggeligt.",
+        "at": 64,
+        "w": "ellers"
+      },
+      {
+        "kind": "conn",
+        "card": "ellers",
+        "src": "2019v 2A",
+        "prev": "Han går faktisk til dansk sammen med én af sine kolleger, og de taler nogle gange dansk sammen i frokostpausen.",
+        "s": "Men ellers er det mest i fritiden, Andrei kommunikerer på dansk.",
+        "at": 4,
+        "w": "ellers"
+      }
+    ],
+    "at_belaste": [
+      {
+        "kind": "verb",
+        "card": "at_belaste",
+        "src": "2021s 2A",
+        "prev": "Der udledes mere end i hele transportsektoren.",
+        "s": "Samtidig belaster produktionen af kød jorden og vandressourcerne.",
+        "at": 9,
+        "w": "belaster"
+      }
+    ],
+    "at_fremhæve": [
+      {
+        "kind": "verb",
+        "card": "at_fremhæve",
+        "src": "2019v 2A",
+        "prev": "Der er også en meget fleksibel arbejdskultur, hvor den enkelte medarbejder har relativt meget ansvar.",
+        "s": "Det er dog især den gode work-life-balance, som mange herboende udlændinge fremhæver.",
+        "at": 75,
+        "w": "fremhæver"
+      },
+      {
+        "kind": "verb",
+        "card": "at_fremhæve",
+        "src": "2020v L1",
+        "prev": "Formålet med deltagelsen i et folkeoplysende kursus er, at det skal give mulighed for at udvikle en lang række forskellige kompetencer, der ikke nødvendigvis hænger sammen med selve faget.",
+        "s": "Flere af oplysningsforbundene fremhæver fx den personlige udvikling som lige så vigtig som den faglige.",
+        "at": 30,
+        "w": "fremhæver"
+      }
+    ],
+    "at_udvide": [
+      {
+        "kind": "verb",
+        "card": "at_udvide",
+        "src": "2019v 2A",
+        "prev": "Det er projekter som for eksempel bygning af jernbanenet, metroringe og letbaner.",
+        "s": "COWI satser på at udvide sine internationale aktiviteter i de kommende år.",
+        "at": 18,
+        "w": "udvide"
+      },
+      {
+        "kind": "verb",
+        "card": "at_udvide",
+        "src": "2017v 2A",
+        "prev": "Landmændene var begrænsede af at skulle kende nogen med de rigtige maskiner, og så var alt papirarbejde manuelt.",
+        "s": "Så tænkte jeg, at vi må kunne udvide de netværk og gøre betalingen automatisk,” siger Søren.",
+        "at": 30,
+        "w": "udvide"
+      },
+      {
+        "kind": "verb",
+        "card": "at_udvide",
+        "src": "2020v L1",
+        "prev": "",
+        "s": "FOF arbejder for at udvide den enkeltes indsigt.",
+        "at": 20,
+        "w": "udvide"
+      },
+      {
+        "kind": "verb",
+        "card": "at_udvide",
+        "src": "2020v L1",
+        "prev": "",
+        "s": "FOF tilbyder undervisning og samvær, der tilstræber at udvide den enkeltes horisont både kulturelt, socialt og fagligt.",
+        "at": 55,
+        "w": "udvide"
+      }
+    ],
+    "derefter": [
+      {
+        "kind": "conn",
+        "card": "derefter",
+        "src": "2016v L1",
+        "prev": "Specialpædagogisk støtte (SPS) Har du en funktionsnedsættelse eller tilsvarende svære vanskeligheder (ordblind, blind, svagtsynet, døv, hørehæmmet, bevægelseshæmmet eller psykiske vanskeligheder), kan du få rådgivning, vejledning og hjælp via SPS.",
+        "s": "Det er vigtigt, at du, allerede når du tilmelder dig eller hurtigst muligt derefter, gør opmærksom på, at du eventuelt vil få behov for SPS for at kunne gennemføre uddannelsen.",
+        "at": 75,
+        "w": "derefter"
+      },
+      {
+        "kind": "conn",
+        "card": "derefter",
+        "src": "2016v 2A",
+        "prev": "Det kan være et godt pædagogisk redskab i undervisningen.",
+        "s": "Eleverne kan for eksempel bruge en tablet til en skattejagt eller til at tage billeder af dyr og planter, som de ser i naturen, og derefter søge informationer om dem.",
+        "at": 131,
+        "w": "derefter"
+      },
+      {
+        "kind": "conn",
+        "card": "derefter",
+        "src": "2020v L1",
+        "prev": "Jeg havde her mulighed for at gå til guitar lige efter endt arbejdsdag i samme bygning, som jeg i forvejen arbejder i.",
+        "s": "Så kl. 20 fik jeg fri, og derefter kunne jeg bare gå to etager ned i bygningen og lære at spille guitar.",
+        "at": 26,
+        "w": "derefter"
+      },
+      {
+        "kind": "conn",
+        "card": "derefter",
+        "src": "2015v L1",
+        "prev": "Uddannelsen er en vekseluddannelse og består af 3 praktikperioder på hver ca. 6 måneder samt to skoleperioder på Fiskeriskolen på hver 11 uger.",
+        "s": "Uddannelsen starter med et praktikophold (ca. 6 måneder) og derefter et skoleophold på 11 uger.",
+        "at": 60,
+        "w": "derefter"
+      },
+      {
+        "kind": "conn",
+        "card": "derefter",
+        "src": "2016v L1",
+        "prev": "Specialpædagogisk støtte (SPS) Har du en funktionsnedsættelse eller tilsvarende svære vanskeligheder (ordblind, blind, svagtsynet, døv, hørehæmmet, bevægelseshæmmet eller psykiske vanskeligheder), kan du få rådgivning, vejledning og hjælp via SPS.",
+        "s": "Det er vigtigt, at du, allerede når du tilmelder dig eller hurtigst muligt derefter, gør opmærksom på, at du eventuelt vil få behov for SPS for at kunne gennemføre uddannelsen.",
+        "at": 75,
+        "w": "derefter"
+      }
+    ],
+    "en_mulighed": [
+      {
+        "kind": "noun",
+        "card": "en_mulighed",
+        "src": "2018s L1",
+        "prev": "Her vil du få en introduktion til Legoland og til jobbet.",
+        "s": "Her vil vi også få en mulighed for at høre mere om dig og dine kompetencer.",
+        "at": 19,
+        "w": "en mulighed"
+      },
+      {
+        "kind": "noun",
+        "card": "en_mulighed",
+        "src": "2015s 2A",
+        "prev": "",
+        "s": "Det kunne f.eks. være en mulighed at indføre roadpricing.",
+        "at": 22,
+        "w": "en mulighed"
+      },
+      {
+        "kind": "noun",
+        "card": "en_mulighed",
+        "src": "2020v 2A",
+        "prev": "",
+        "s": "Trine Sundsvald ville gerne blive på sin arbejdsplads, og hun så derfor en mulighed i at skifte til et projektlederteam i en anden afdeling.",
+        "at": 72,
+        "w": "en mulighed"
+      }
+    ],
+    "et_mål": [
+      {
+        "kind": "noun",
+        "card": "et_mål",
+        "src": "2015v 2A",
+        "prev": "",
+        "s": "har de måske nemmere ved at træne måned efter måned for at nå et mål ude i fremtiden,” siger Reinhard Stelter, professor ved Institut for Idræt, Københavns Universitet2.",
+        "at": 62,
+        "w": "et mål"
+      },
+      {
+        "kind": "noun",
+        "card": "et_mål",
+        "src": "2020v 2A",
+        "prev": "",
+        "s": "I Danmark er jobomsætningen, der er et mål for, hvor mange der starter i et nyt job, en af de største i Europa.",
+        "at": 36,
+        "w": "et mål"
+      },
+      {
+        "kind": "noun",
+        "card": "et_mål",
+        "src": "2016v 2A",
+        "prev": "Men undersøgelser af større børn viser, at børn oplever en forventningens glæde, når de spiller computerspil.",
+        "s": "Computerspil handler nemlig om, at der er et mål, man skal nå.",
+        "at": 42,
+        "w": "et mål"
+      }
+    ],
+    "at_omfatte": [
+      {
+        "kind": "verb",
+        "card": "at_omfatte",
+        "src": "2015v L1",
+        "prev": "",
+        "s": "Undervisningen Undervisningen på grundforløbet omfatter forskellige undervisningsformer, projekter og tværfaglige emner.",
+        "at": 47,
+        "w": "omfatter"
+      },
+      {
+        "kind": "verb",
+        "card": "at_omfatte",
+        "src": "2017s L1",
+        "prev": "",
+        "s": "Selskaber skal omfatte minimum 12 personer inden for museets åbningstid og minimum 20 personer uden for åbningstiden.",
+        "at": 15,
+        "w": "omfatte"
+      },
+      {
+        "kind": "verb",
+        "card": "at_omfatte",
+        "src": "2020s L1",
+        "prev": "",
+        "s": "Samlingen omfatter musikinstrumenter fra Europa, Asien og Afrika fra bronzealderen og frem til vor tid.",
+        "at": 10,
+        "w": "omfatter"
+      },
+      {
+        "kind": "verb",
+        "card": "at_omfatte",
+        "src": "2018v L1",
+        "prev": "",
+        "s": "Højskolernes ugepris omfatter både undervisning, kost og logi.",
+        "at": 21,
+        "w": "omfatter"
+      },
+      {
+        "kind": "verb",
+        "card": "at_omfatte",
+        "src": "2020s L1",
+        "prev": "Fotosalg Nationalmuseet tilbyder også fotosalg til både kommercielle og non-profit formål.",
+        "s": "Nationalmuseets fotosalg omfatter både arkivfotos og nyoptagelser af museets genstande.",
+        "at": 25,
+        "w": "omfatter"
+      },
+      {
+        "kind": "verb",
+        "card": "at_omfatte",
+        "src": "2020s L1",
+        "prev": "",
+        "s": "UNESCOmonumenterne omfatter de to runesten foran kirken, selve Jelling Kirke og de to store høje nord og syd herfor.",
+        "at": 19,
+        "w": "omfatter"
+      },
+      {
+        "kind": "verb",
+        "card": "at_omfatte",
+        "src": "2020s L1",
+        "prev": "",
+        "s": "Musikmuseets samling af tidsskrifter dækker hovedsageligt emner inden for musikinstrumenter og dansk/nordisk musikliv og -historie, men omfatter også titler af bredere musikalsk eller museumsfaglig karakter.",
+        "at": 136,
+        "w": "omfatter"
+      },
+      {
+        "kind": "verb",
+        "card": "at_omfatte",
+        "src": "2017v L1",
+        "prev": "Odense Zoo ligger på begge sider af Odense Å og er forbundet med to gangbroer.",
+        "s": "Havens område omfatter blandt andet det areal, som Fyns Tivoli tidligere lå på.",
+        "at": 14,
+        "w": "omfatter"
+      }
+    ],
+    "dermed": [
+      {
+        "kind": "conn",
+        "card": "dermed",
+        "src": "2017s 2A",
+        "prev": "I dag er Gert ikke længere projektleder.",
+        "s": "Han skal dermed ikke træffe de overordnede beslutninger i store projekter, og det er i dag helt afgørende for Gert, selvom det tidligere var modsat.",
+        "at": 9,
+        "w": "dermed"
+      },
+      {
+        "kind": "conn",
+        "card": "dermed",
+        "src": "2016s L1",
+        "prev": "Det er vigtigt, at du er motiveret for at observere og lære af det kyndige personale.",
+        "s": "Du vil dermed få en enestående mulighed for at opleve vilkårene for de forskellige medicinske fag i et udviklingsland.",
+        "at": 7,
+        "w": "dermed"
+      },
+      {
+        "kind": "conn",
+        "card": "dermed",
+        "src": "2019s L1",
+        "prev": "Man kan også vælge at tilkøbe en festivalbolig.",
+        "s": "De fleste køber og bor i gode kvalitetstelte, som er slået op på forhånd og dermed sikrer, at man får en bestemt plads uden stress.",
+        "at": 76,
+        "w": "dermed"
+      },
+      {
+        "kind": "conn",
+        "card": "dermed",
+        "src": "2020s 2A",
+        "prev": "Hun er lige kommet tilbage til København efter et halvt år på Cardiff University i Wales.",
+        "s": "Hun er dermed én af de stadig flere danske unge, der tager en del af deres uddannelse i udlandet.",
+        "at": 7,
+        "w": "dermed"
+      },
+      {
+        "kind": "conn",
+        "card": "dermed",
+        "src": "2019s 2A",
+        "prev": "Men selvom fradraget har eksisteret i flere år, er det stadig ikke alle, der er klar over det.",
+        "s": "Dermed har organisationerne stadig en vigtig opgave med at informere borgerne om, at ordningen findes.",
+        "at": 0,
+        "w": "Dermed"
+      },
+      {
+        "kind": "conn",
+        "card": "dermed",
+        "src": "2018s 2A",
+        "prev": "Men virksomhederne skal også være bedre til at fortælle, at man i mange toplederjob selv kan styre arbejdstiden og nogle gange arbejde hjemmefra.",
+        "s": "Dermed kan et job som topleder også være med til at gøre det lettere at kombinere job og familieliv.",
+        "at": 0,
+        "w": "Dermed"
+      },
+      {
+        "kind": "conn",
+        "card": "dermed",
+        "src": "2018v 2A",
+        "prev": "Arbejdspladserne kan også sørge for, at nye medarbejdere bliver introduceret grundigt til deres nye arbejdsopgaver.",
+        "s": "Dermed kan nogle af forsinkelserne i behandlingen af de administrative sager undgås.",
+        "at": 0,
+        "w": "Dermed"
+      },
+      {
+        "kind": "conn",
+        "card": "dermed",
+        "src": "2018v 2A",
+        "prev": "De valgte dog Hjørring for at undgå at skulle bruge tid på at pendle frem og tilbage mellem job og hjem hver dag.",
+        "s": "Dermed ville de få mere tid til at engagere sig i lokalmiljøet og få nye venner.",
+        "at": 0,
+        "w": "Dermed"
+      }
+    ],
+    "for_det_første": [
+      {
+        "kind": "conn",
+        "card": "for_det_første",
+        "src": "2020s 2A",
+        "prev": "Det er svært for de unge at overskue processen fra start til slut.",
+        "s": "De skal for det første undersøge og sætte sig ind i, hvilke fag forskellige universiteter i udlandet tilbyder.",
+        "at": 8,
+        "w": "for det første"
+      },
+      {
+        "kind": "conn",
+        "card": "for_det_første",
+        "src": "2018v L1",
+        "prev": "Statsborgere fra lande uden for EU/EØS, for hvem der gælder krav om ansøgning om opholdstilladelse, skal kunne dokumentere en række forhold, hvis de ønsker at gå på højskole i Danmark.",
+        "s": "For det første at man er optaget på en godkendt folkehøjskole og har betalt deltagergebyret.",
+        "at": 0,
+        "w": "For det første"
+      },
+      {
+        "kind": "conn",
+        "card": "for_det_første",
+        "src": "2018v L1",
+        "prev": "Unge arbejdsløse kan søge om arbejdsløshedsdagpenge eller om uddannelsesgodtgørelse i forbindelse med et højskoleophold.",
+        "s": "Ledige under 25 år på dagpenge har mulighed for at komme på højskole med halve dagpenge inden for det første halve år af ledighedsperioden.",
+        "at": 94,
+        "w": "for det første"
+      }
+    ],
+    "dernæst": [
+      {
+        "kind": "conn",
+        "card": "dernæst",
+        "src": "2020s 2A",
+        "prev": "De skal for det første undersøge og sætte sig ind i, hvilke fag forskellige universiteter i udlandet tilbyder.",
+        "s": "Dernæst skal de finde ud af at søge ind på det valgte universitet.",
+        "at": 0,
+        "w": "Dernæst"
+      },
+      {
+        "kind": "conn",
+        "card": "dernæst",
+        "src": "2016s L1",
+        "prev": "Jo længere du bliver på hvert projekt, desto større personligt udbytte vil du få.",
+        "s": "Du betaler ikke dobbelt pris for at deltage på to projekter – derimod betaler du prisen for det dyreste projekt, og dernæst lægges prisen for de ekstra uger oveni.",
+        "at": 116,
+        "w": "dernæst"
+      }
+    ],
+    "trods_på_trods_af": [
+      {
+        "kind": "conn",
+        "card": "trods_på_trods_af",
+        "src": "2019v L1",
+        "prev": "Nick Nolte og Ewan McGregor blev dog ikke nogen stor succes.",
+        "s": "På trods af et større budget og stjerneskuespillere fra Hollywood, så formåede filmen ikke at begejstre publikum og anmeldere på samme måde, som det danske forlæg havde gjort det.",
+        "at": 0,
+        "w": "På trods af"
+      }
+    ],
+    "eksempelvis": [
+      {
+        "kind": "conn",
+        "card": "eksempelvis",
+        "src": "2016s L1",
+        "prev": "Mange af projekterne er åbne for alle med engagement og interesse for menneskerettigheder, mens andre kræver relevante kvalifikationer.",
+        "s": "Vi tilbyder en bred vifte af muligheder, som eksempelvis at arbejde for lokale advokatfirmaer.",
+        "at": 45,
+        "w": "eksempelvis"
+      },
+      {
+        "kind": "conn",
+        "card": "eksempelvis",
+        "src": "2019v L1",
+        "prev": "Det giver en række fordele at være medlem af Biffens Venner.",
+        "s": "Eksempelvis præsenterer Biffen Nordkraft hvert år en eller to udvalgte film gratis for foreningen.",
+        "at": 0,
+        "w": "Eksempelvis"
+      },
+      {
+        "kind": "conn",
+        "card": "eksempelvis",
+        "src": "2016s L1",
+        "prev": "Humanitært arbejde Man er ofte ikke klar over, hvor meget man kan påvirke en anden persons liv ved at involvere sig.",
+        "s": "Som frivillig på et af Projects Abroads humanitære projekter kan du eksempelvis arbejde på børnehjem, handicapinstitutioner eller plejecentre for gadebørn.",
+        "at": 68,
+        "w": "eksempelvis"
+      },
+      {
+        "kind": "conn",
+        "card": "eksempelvis",
+        "src": "2016s L1",
+        "prev": "Du har i de to østeuropæiske destinationer mulighed for at arbejde frivilligt på vidt forskellige projekter, der alle garanterer store oplevelser og muligheden for virkelig at gøre en forskel.",
+        "s": "Arbejd eksempelvis på et børnehjem eller skole, hjælp til ved arkæologiske udgravninger, eller pas bjørne i et reservat!",
+        "at": 7,
+        "w": "eksempelvis"
+      },
+      {
+        "kind": "conn",
+        "card": "eksempelvis",
+        "src": "2016s L1",
+        "prev": "Latinamerika har fantastiske naturområder, men er også en region plaget af stor fattigdom, og din indsats vil betyde meget.",
+        "s": "Mulighederne er mange; du kan eksempelvis arbejde på et hospital i Mexico, på et abe-rehabiliteringscenter i Argentina, eller på et center for handicappede børn i Bolivia, og meget mere.",
+        "at": 30,
+        "w": "eksempelvis"
+      },
+      {
+        "kind": "conn",
+        "card": "eksempelvis",
+        "src": "2016s L1",
+        "prev": "Du kan vælge et projekt indenfor skrevne medier, såsom aviser eller magasiner, eller du kan vælge at arbejde med radio eller TV.",
+        "s": "Du kan eksempelvis researche, skrive artikler og følgelig publicere dit arbejde, eller broadcaste interviews.",
+        "at": 7,
+        "w": "eksempelvis"
+      },
+      {
+        "kind": "conn",
+        "card": "eksempelvis",
+        "src": "2017s L1",
+        "prev": "Læs historiske opskrifter eller venligst mere på menukortet.",
+        "s": "Der er desuden rig mulighed for at kombinere arrangementet med eksempelvis en rundvisning, ølsmagning i det historiske bryggeri, musik under middagen, skattejagter og meget mere.",
+        "at": 63,
+        "w": "eksempelvis"
+      }
+    ],
+    "ydermere": [
+      {
+        "kind": "conn",
+        "card": "ydermere",
+        "src": "2019v 2A",
+        "prev": "Det sparer det offentlige for udgifter til ældrepleje.",
+        "s": "Man kan ydermere regne med den sidegevinst, at de i deres nye land er med til at sprede budskabet om, at Danmark er et godt land at arbejde i.",
+        "at": 8,
+        "w": "ydermere"
+      }
+    ],
+    "at_uddele": [
+      {
+        "kind": "verb",
+        "card": "at_uddele",
+        "src": "2019s L1",
+        "prev": "På de store festivaler er budgettet til at betale de optrædende musikere på mange millioner kroner.",
+        "s": "Mange musikfestivaler skaber alligevel et overskud, som de efterfølgende uddeler til forskellige former for velgørende formål.",
+        "at": 73,
+        "w": "uddeler"
+      }
+    ],
+    "herudover": [
+      {
+        "kind": "conn",
+        "card": "herudover",
+        "src": "2019s L1",
+        "prev": "Festivalen har et bredt program med danske og internationale musiknavne, madkunst og livesamtaler, hvor kendte mennesker diskuterer forskellige emner.",
+        "s": "Herudover kan man også opleve installationer og anden samtidskunst, som står i kontrast til de historiske omgivelser på Egeskov Slot.",
+        "at": 0,
+        "w": "Herudover"
+      }
+    ],
+    "en_forudsætning": [
+      {
+        "kind": "noun",
+        "card": "en_forudsætning",
+        "src": "2018v L1",
+        "prev": "",
+        "s": "Det er en forudsætning for opholdstilladelsen, at man er studieaktiv.",
+        "at": 7,
+        "w": "en forudsætning"
+      }
+    ],
+    "at_bevise": [
+      {
+        "kind": "verb",
+        "card": "at_bevise",
+        "src": "2018v L1",
+        "prev": "",
+        "s": "En EU/EØS-borger skal kunne identificere sig og kunne bevise sit statsborgerskab.",
+        "at": 54,
+        "w": "bevise"
+      }
+    ],
+    "at_forlænge": [
+      {
+        "kind": "verb",
+        "card": "at_forlænge",
+        "src": "2018v L1",
+        "prev": "",
+        "s": "Rekruttering og Integration inddrage eller nægte at forlænge ens opholdstilladelse.",
+        "at": 52,
+        "w": "forlænge"
+      }
+    ],
+    "på_den_ene_side_på_den_anden_side": [
+      {
+        "kind": "conn",
+        "card": "på_den_ene_side_på_den_anden_side",
+        "src": "2016s 2A",
+        "prev": "Alle laver deres lektier, også selvom de ikke vil have en boglig uddannelse.",
+        "s": "Men på den anden side havde vi et godt fællesskab i min gamle klasse.",
+        "at": 4,
+        "w": "på den anden side"
+      },
+      {
+        "kind": "conn",
+        "card": "på_den_ene_side_på_den_anden_side",
+        "src": "2018v 2A",
+        "prev": "Vi har også fået plads til at have hund.",
+        "s": "De daglige ture med Kvik i skoven på den anden side af vejen er næsten det hele værd,” siger Lars og fortsætter: ”Vi har også mødt mange nye mennesker.",
+        "at": 34,
+        "w": "på den anden side"
+      },
+      {
+        "kind": "conn",
+        "card": "på_den_ene_side_på_den_anden_side",
+        "src": "2018v 2A",
+        "prev": "Det kan give et ekstra arbejdspres i en periode, og det kan skræmme nogle fra at flytte med.",
+        "s": "På den anden side kan der også være en karrieremæssig fordel ved at flytte med.",
+        "at": 0,
+        "w": "På den anden side"
+      }
+    ],
+    "herefter": [
+      {
+        "kind": "conn",
+        "card": "herefter",
+        "src": "2015v L1",
+        "prev": "Når kutteren kommer i havn, skal fangsten landes.",
+        "s": "Herefter skal fangstredskaber og kutter rengøres, efterses og gøres klar til næste tur på havet.",
+        "at": 0,
+        "w": "Herefter"
+      },
+      {
+        "kind": "conn",
+        "card": "herefter",
+        "src": "2016v L1",
+        "prev": "Jeg startede en bar i London, styrede den i 2 år og vandt “årets bar” to år i træk.",
+        "s": "Herefter flyttede jeg hjem og startede på VUF.",
+        "at": 0,
+        "w": "Herefter"
+      },
+      {
+        "kind": "conn",
+        "card": "herefter",
+        "src": "2015v L1",
+        "prev": "Har du allerede indgået en uddannelsesaftale, foretages der ingen vurdering til en erhvervsuddannelse.",
+        "s": "Hvis dine forældre ikke er enige i UU´s vurdering (ikke-uddannelsesparat), sendes din ansøgning til den uddannelsesinstitution, du har søgt, som herefter vurderer, om du er uddannelsesparat.",
+        "at": 145,
+        "w": "herefter"
+      },
+      {
+        "kind": "conn",
+        "card": "herefter",
+        "src": "2018s L1",
+        "prev": "Vær opmærksom på, at I godt kan være flere ansøgere sammen til denne del.",
+        "s": "Herefter følger en personlig samtale, hvor vi vil lære hinanden lidt bedre at kende, og hvor vi vil høre lidt mere om, hvorfor du gerne vil arbejde i Legoland.",
+        "at": 0,
+        "w": "Herefter"
+      },
+      {
+        "kind": "conn",
+        "card": "herefter",
+        "src": "2015s L1",
+        "prev": "Hvis du og dine forældre er uenige i vurderingen, kan I forlange, at vurderingen bliver afprøvet af en uddannelsesin stitution, som udbyder den uddannelse, der er søgt.",
+        "s": "Vurderes du herefter uddannelsesparat, rettes din uddannelsesplan, og den sendes til det ansøgte uddannelsessted.",
+        "at": 12,
+        "w": "herefter"
+      },
+      {
+        "kind": "conn",
+        "card": "herefter",
+        "src": "2016v L1",
+        "prev": "Jeg startede en bar i London, styrede den i 2 år og vandt “årets bar” to år i træk.",
+        "s": "Herefter flyttede jeg hjem og startede på VUF.",
+        "at": 0,
+        "w": "Herefter"
+      }
+    ],
+    "med_andre_ord": [
+      {
+        "kind": "conn",
+        "card": "med_andre_ord",
+        "src": "2016s L1",
+        "prev": "Fokus på fleksibilitet Som frivillig hos Projects Abroad bestemmer du selv, hvornår du ønsker af tage af sted ligesom at du selv bestemmer længden på dit ophold.",
+        "s": "Med andre ord kan du ”hoppe af og på” vores projekter når det bedst passer dig.",
+        "at": 0,
+        "w": "Med andre ord"
+      },
+      {
+        "kind": "conn",
+        "card": "med_andre_ord",
+        "src": "2016s L1",
+        "prev": "Hvad enten du læser medicin, til fysioterapeut, sygeplejerske, journalist eller noget helt femte, kan et praktikhold på et af vores projekter give dig en masse erfaring inden for dit fagområde.",
+        "s": "Med andre ord, du kan prøve din teori af i praksis samtidig med at du oplever forholdene i et udviklingsland.",
+        "at": 0,
+        "w": "Med andre ord"
+      },
+      {
+        "kind": "conn",
+        "card": "med_andre_ord",
+        "src": "2018s 2A",
+        "prev": "Så kan Peters mor heldigvis passe Sofie.",
+        "s": "De ser med andre ord ingen problemer, de ikke kan løse i fællesskab, hverken på kort eller langt sigt.",
+        "at": 7,
+        "w": "med andre ord"
+      }
+    ],
+    "at_vurdere": [
+      {
+        "kind": "verb",
+        "card": "at_vurdere",
+        "src": "2015v L1",
+        "prev": "Har du allerede indgået en uddannelsesaftale, foretages der ingen vurdering til en erhvervsuddannelse.",
+        "s": "Hvis dine forældre ikke er enige i UU´s vurdering (ikke-uddannelsesparat), sendes din ansøgning til den uddannelsesinstitution, du har søgt, som herefter vurderer, om du er uddannelsesparat.",
+        "at": 154,
+        "w": "vurderer"
+      },
+      {
+        "kind": "verb",
+        "card": "at_vurdere",
+        "src": "2015s L1",
+        "prev": "",
+        "s": "Det er studenterkursets leder, der vurderer dine kvalifikationer og afgør, om du kan optages.",
+        "at": 35,
+        "w": "vurderer"
+      },
+      {
+        "kind": "verb",
+        "card": "at_vurdere",
+        "src": "2015s L1",
+        "prev": "Optagelse efter konkret vurdering Det er lederen af det gymnasium, du har søgt optagelse på, der afgør, om du har krav på optagelse.",
+        "s": "Hvis du ikke opfylder alle kravene, kan lederen vurdere ud fra dine standpunktskarakterer og tidligere prøver, om du kan optages alligevel.",
+        "at": 48,
+        "w": "vurdere"
+      },
+      {
+        "kind": "verb",
+        "card": "at_vurdere",
+        "src": "2015s L1",
+        "prev": "",
+        "s": "Uddannelsesparathed UU vurderer din uddannelsesparathed i samarbejde med din skole.",
+        "at": 23,
+        "w": "vurderer"
+      },
+      {
+        "kind": "verb",
+        "card": "at_vurdere",
+        "src": "2017v L1",
+        "prev": "",
+        "s": "Tagbokse af hård plast er som udgangspunkt velkomne, medmindre personalet på dagen vurderer det anderledes.",
+        "at": 83,
+        "w": "vurderer"
+      },
+      {
+        "kind": "verb",
+        "card": "at_vurdere",
+        "src": "2015s L1",
+        "prev": "",
+        "s": "Mentor Såfremt UU vurderer, at du har behov for støtte for at starte og gennemføre en ungdomsuddannelse eller 10. klasse,, kan du få hjælp af en mentor.",
+        "at": 18,
+        "w": "vurderer"
+      },
+      {
+        "kind": "verb",
+        "card": "at_vurdere",
+        "src": "2015s L1",
+        "prev": "Ved enkeltfagsundervisningen gælder, at du tidligst kan blive optaget et år efter, at du har afsluttet folkeskolens 9. eller 10. klasse eller modtaget tilsvarende undervisning.",
+        "s": "Undervisningsinstitutionen vurderer dine kvalifikationer og indkalder eventuelt til en optagelsessamtale.",
+        "at": 27,
+        "w": "vurderer"
+      },
+      {
+        "kind": "verb",
+        "card": "at_vurdere",
+        "src": "2015v 2A",
+        "prev": "",
+        "s": "Når tilstrækkeligt mange har prøvet kræfter med sportsgrenen, begynder de at efterspørge en ny udfordring,” vurderer han6.",
+        "at": 108,
+        "w": "vurderer"
+      }
+    ],
+    "en_udfordring": [
+      {
+        "kind": "noun",
+        "card": "en_udfordring",
+        "src": "2017v 2A",
+        "prev": "",
+        "s": "Faste job vil forsvinde Deleøkonomien er en udfordring for de traditionelle virksomheder og deres ansatte i brancher som for eksempel taxakørsel og hotelvirksomhed.",
+        "at": 41,
+        "w": "en udfordring"
+      },
+      {
+        "kind": "noun",
+        "card": "en_udfordring",
+        "src": "2017s L1",
+        "prev": "",
+        "s": "Kørestolsbrugere, gangbesværede og barnevogne Den Gamle Bys gader er belagt med brosten, og det kan være en udfordring for gangbesværede, kørestolsbrugere og barnevogne.",
+        "at": 105,
+        "w": "en udfordring"
+      }
+    ],
+    "at_beklage": [
+      {
+        "kind": "verb",
+        "card": "at_beklage",
+        "src": "2017s L1",
+        "prev": "Der er parkeringspladser, selvom de ikke altid er lette at få øje på Den Gamle By har i flere år arbejdet for at skaffe bedre parkeringsforhold for museets gæster.",
+        "s": "Vi beklager meget det besvær, det må give for vores gæster og kan oplyse, at museets ledelse løbende er i dialog med Aarhus Kommune om forbedring af forholdene.",
+        "at": 3,
+        "w": "beklager"
+      }
+    ],
+    "modsat": [
+      {
+        "kind": "conn",
+        "card": "modsat",
+        "src": "2017s 2A",
+        "prev": "I dag er Gert ikke længere projektleder.",
+        "s": "Han skal dermed ikke træffe de overordnede beslutninger i store projekter, og det er i dag helt afgørende for Gert, selvom det tidligere var modsat.",
+        "at": 141,
+        "w": "modsat"
+      }
+    ],
+    "at_overholde": [
+      {
+        "kind": "verb",
+        "card": "at_overholde",
+        "src": "2016v L1",
+        "prev": "Dit fremmøde registreres i hver time, og dit fravær opgøres løbende.",
+        "s": "Hvis du ikke overholder reglerne om studieaktivitet, kan du miste retten til SU og i sidste ende blive udelukket fra undervisningen.",
+        "at": 13,
+        "w": "overholder"
+      },
+      {
+        "kind": "verb",
+        "card": "at_overholde",
+        "src": "2016v L1",
+        "prev": "Dit fremmøde registreres i hver time, og dit fravær opgøres løbende.",
+        "s": "Hvis du ikke overholder reglerne om studieaktivitet, kan du miste retten til SU og i sidste ende blive udelukket fra undervisningen.",
+        "at": 13,
+        "w": "overholder"
+      }
+    ],
+    "en_undtagelse": [
+      {
+        "kind": "noun",
+        "card": "en_undtagelse",
+        "src": "2016v 2A",
+        "prev": "",
+        "s": "Men de synes godt, man kan gøre en undtagelse, når det gælder tablets, for det må være nok, at der er tablets derhjemme.",
+        "at": 32,
+        "w": "en undtagelse"
+      }
+    ],
+    "at_fremkalde": [
+      {
+        "kind": "verb",
+        "card": "at_fremkalde",
+        "src": "2016v 2A",
+        "prev": "Albert Gjedde ser en anden fare ved overdreven brug af tablets.",
+        "s": "Det kan nemlig fremkalde mekanismer, der ligner dem, man ser hos folk, der er afhængige af spil.",
+        "at": 15,
+        "w": "fremkalde"
+      }
+    ],
+    "imod": [
+      {
+        "kind": "conn",
+        "card": "imod",
+        "src": "2016s L1",
+        "prev": "Enestående støtte før og under opholdet I alle vores destinationer har vi et lokalt kontor med fuldtidsansatte, som du vil være i kontakt med fra ansøgningstidspunktet til du rejser hjem igen.",
+        "s": "Vi tager imod dig i lufthavnen, introducerer dig for din værtsfamilie og den pågældende partnerorganisation, og hjælper dig med at falde godt til.",
+        "at": 9,
+        "w": "imod"
+      },
+      {
+        "kind": "conn",
+        "card": "imod",
+        "src": "2015v L1",
+        "prev": "Du skal være villig til at søge praktikplads over hele landet og tage imod en plads, selv om den ligger i den anden ende af landet.",
+        "s": "Du skal også søge praktikplads og tage imod en plads inden for alle de uddannelsesområder, som dit grundforløb giver dig mulighed for at gå videre med.",
+        "at": 39,
+        "w": "imod"
+      },
+      {
+        "kind": "conn",
+        "card": "imod",
+        "src": "2016s L1",
+        "prev": "Værdifulde projekter Som frivillig hos Projects Abroad bliver du en del af et sammenhold mellem frivillige og lokale, som alle arbejder for at forbedre levevilkårene og miljøet i udviklingslande.",
+        "s": "Vi stræber imod, at vores projekter yder værdifulde bidrag til de lokalsamfund, som vi arbejder i, samtidigt med at både frivillige og lokale oplever og udveksler kulturelle forskelligheder.",
+        "at": 11,
+        "w": "imod"
+      }
+    ],
+    "at_glemme": [
+      {
+        "kind": "verb",
+        "card": "at_glemme",
+        "src": "2016s L1",
+        "prev": "",
+        "s": "Hvad jeg aldrig vil glemme, var den dag jeg var med til at sætte fire aber fri.",
+        "at": 20,
+        "w": "glemme"
+      }
+    ],
+    "at_droppe": [
+      {
+        "kind": "verb",
+        "card": "at_droppe",
+        "src": "2016s 2A",
+        "prev": "Han er psykolog og har skrevet en del bøger om læring.",
+        "s": "Han mener, at det var en fejl af lærerne at droppe udenadslære.",
+        "at": 44,
+        "w": "droppe"
+      }
+    ],
+    "hermed": [
+      {
+        "kind": "conn",
+        "card": "hermed",
+        "src": "2014v 2A",
+        "prev": "Kolesterol tallet falder også, og han får stabiliseret sit blod sukker.",
+        "s": "Hermed får han også halveret risikoen for at få diabetes og en række kræftsygdomme.",
+        "at": 0,
+        "w": "Hermed"
+      },
+      {
+        "kind": "conn",
+        "card": "hermed",
+        "src": "2014v 2A",
+        "prev": "To dage om ugen spiser hun kun et blødkogt æg til morgenmad og lidt salat til aftensmad.",
+        "s": "Hermed opnår Anne Johansen ifølge tilhængerne af fastemetoden et sundere og bedre liv, samtidig med at hun forsinker aldringsproces sen.",
+        "at": 0,
+        "w": "Hermed"
+      },
+      {
+        "kind": "conn",
+        "card": "hermed",
+        "src": "2014v 2A",
+        "prev": "Kolesteroltallet falder også, og han får stabiliseret sit blodsukker.",
+        "s": "Hermed får han også halveret risikoen for at få diabetes og en række kræftsygdomme.",
+        "at": 0,
+        "w": "Hermed"
+      },
+      {
+        "kind": "conn",
+        "card": "hermed",
+        "src": "2014v 2A",
+        "prev": "To dage om ugen spiser hun kun et blødkogt æg til morgenmad og lidt salat til aftensmad.",
+        "s": "Hermed opnår Anne Johansen ifølge tilhængerne af fastemetoden et sundere og bedre liv, samtidig med at hun forsinker aldringsprocessen.",
+        "at": 0,
+        "w": "Hermed"
+      },
+      {
+        "kind": "conn",
+        "card": "hermed",
+        "src": "2016s 2A",
+        "prev": "Eleverne og deres læring kom i centrum, og de skulle lære at give udtryk for deres meninger og holdninger.",
+        "s": "Hermed blev læreren og eleverne samtidig mere ligeværdige parter.",
+        "at": 0,
+        "w": "Hermed"
+      }
+    ],
+    "at_forstyrre": [
+      {
+        "kind": "verb",
+        "card": "at_forstyrre",
+        "src": "2016s 2A",
+        "prev": "Man praktiserer således i dag på de fleste skoler en antiautoritær pædagogik med fokus på dialog med eleverne og deres forældre.",
+        "s": "Lærerne straffer derfor sjældent eleverne, hvis de laver for meget larm og forstyrrer undervisning en.",
+        "at": 75,
+        "w": "forstyrrer"
+      },
+      {
+        "kind": "verb",
+        "card": "at_forstyrre",
+        "src": "2016s 2A",
+        "prev": "Dialog frem for sanktioner Problemerne i folkeskolen understreges også af en undersøgelse lavet af Dansk Center for Undervisningsmiljø.",
+        "s": "I undersøgelsen siger næsten 60 % af eleverne i folkeskolen, at de føler sig generet af uro i timerne, og at det forstyrrer og ødelægger undervisningen.",
+        "at": 113,
+        "w": "forstyrrer"
+      }
+    ],
+    "at_ødelægge": [
+      {
+        "kind": "verb",
+        "card": "at_ødelægge",
+        "src": "2016s 2A",
+        "prev": "Dialog frem for sanktioner Problemerne i folkeskolen understreges også af en undersøgelse lavet af Dansk Center for Undervisningsmiljø.",
+        "s": "I undersøgelsen siger næsten 60 % af eleverne i folkeskolen, at de føler sig generet af uro i timerne, og at det forstyrrer og ødelægger undervisningen.",
+        "at": 127,
+        "w": "ødelægger"
+      }
+    ],
+    "et_ansvar": [
+      {
+        "kind": "noun",
+        "card": "et_ansvar",
+        "src": "2015v L1",
+        "prev": "",
+        "s": "Du har også et ansvar for en god undervisning, så vi forventer, at du møder frisk og forberedt op til undervisningen.",
+        "at": 12,
+        "w": "et ansvar"
+      },
+      {
+        "kind": "noun",
+        "card": "et_ansvar",
+        "src": "2016s 2A",
+        "prev": "",
+        "s": "Men forældrene har også et ansvar for, at deres børn opfører sig ordentligt i skolen.",
+        "at": 24,
+        "w": "et ansvar"
+      }
+    ]
+  }
+}
