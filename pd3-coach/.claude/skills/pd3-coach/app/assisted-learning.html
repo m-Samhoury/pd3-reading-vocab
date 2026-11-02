@@ -412,6 +412,7 @@ footer.foot { padding-top: 40px; padding-bottom: 48px; color: var(--faint); font
 .badge.t1 { background: var(--accent-soft); color: var(--accent-text); }
 .badge.t2 { background: var(--blue-soft); color: var(--blue-text); }
 .badge.t3 { background: var(--violet-soft); color: var(--violet-text); }
+.badge.t4 { border: 1px solid var(--rule-strong); color: var(--soft); }
 .tag { display: inline-flex; align-items: center; min-height: 22px; padding: 0 7px; border-radius: 6px; border: 1px solid var(--rule-strong);
   font-size: .72rem; font-weight: 600; color: var(--soft); letter-spacing: .02em; }
 .sheet { background: var(--sheet); border: 1px solid var(--rule); border-radius: var(--r); box-shadow: var(--shadow); }
@@ -820,6 +821,8 @@ const I18N = {
   "h.groups": ["Fremskridt per gruppe", "Progress by group"],
   "st.new": ["ny", "new"], "st.learn": ["i gang", "learning"], "st.known": ["kendt (6+ dage)", "known (6+ days)"], "st.master": ["kan du (21+ dage)", "mastered (21+ days)"],
   "p.1": ["Forbinderord", "Connectors"], "p.2": ["Ord fra prøven", "Exam words"], "p.3": ["Andre nyttige ord", "Other useful words"],
+  "p.4": ["Hyppige ord", "Frequent words"], "p.4.s": ["Ord fra prøverne, sorteret efter hvor tit de er kommet siden 2020. De vigtigste står først.", "Words from the exams, ranked by how often they've come up since 2020. The most important come first."],
+  "p.4.n": ["Top {0}–{1} · {2} siden 2020", "Top {0}–{1} · {2} since 2020"], "p.4.old": ["Top {0}–{1} · kun før 2020", "Top {0}–{1} · only before 2020"],
   "g.due": ["{0} skal gentages", "{0} due"], "g.words": ["{0} ord", "{0} words"], "g.next": ["næste gang {0}", "next {0}"],
   "g.study": ["Øv denne gruppe", "Study this group"],
   "g.study.s": ["Ord, der skal gentages, først, så op til {0} nye; ellers ekstra øvelse.", "Due cards first, then up to {0} new ones; extra practice if nothing is due."],
@@ -1252,6 +1255,7 @@ function load() {
   DB = { today: iso(new Date()), profile: deck.profile || {}, sentences: deck.sentences || {}, senses: deck.senses || {}, tips: deck.tips || {}, info: deck.info || {}, grammar: deck.grammar || {}, cards: {} };
   const saved = readProgress();
   for (const [id, c] of Object.entries(deck.cards)) DB.cards[id] = { id, ...c, history: c.history || [], ...(saved[id] || {}) };
+  addFreqGroups();
   // ask the browser not to clear this page's storage when space runs low (Chrome/Firefox; Safari decides itself)
   if (navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(() => {});
   finder();
@@ -1294,9 +1298,15 @@ function stateOf(c) {
   if (!c.history || !c.history.length) return "new";
   return c.interval >= 21 ? "master" : c.interval >= 6 ? "known" : "learn";
 }
+// "en konsekvens (af)": a preposition in brackets belongs to the word and never stands alone (same as word_variants in pd3.py)
+const PREPS = ["af", "til", "for", "på", "om", "mod", "imod", "med", "ved", "i", "fra", "over for"];
 function variants(word) {
   const base = norm(word.replace(/\(.*?\)/g, ""));
-  const out = [norm(word), base, ...[...word.matchAll(/\((.*?)\)/g)].map(m => norm(m[1]))];
+  const out = [norm(word), base];
+  for (const m of word.matchAll(/\((.*?)\)/g)) {
+    const ps = norm(m[1]).split(/\s*\/\s*/);
+    if (ps.every(p => PREPS.includes(p))) ps.forEach(p => out.push(`${base} ${p}`)); else out.push(norm(m[1]));
+  }
   base.split(/\s*\/\s*/).forEach(p => out.push(p.trim()));
   out.slice().forEach(v => { for (const a of ["at ", "en ", "et "]) if (v.startsWith(a)) out.push(v.slice(a.length)); });
   return [...new Set(out.filter(Boolean))];
@@ -1319,7 +1329,7 @@ function nearMiss(c, input) {
 // Where the card word sits in a sentence (for highlighting and cloze gaps)
 function findSpan(c, s) {
   const w = norm(c.word);
-  const kind = w.startsWith("at ") ? "verb" : /^(en|et) /.test(w) ? "noun" : c.group === "adjektiv" ? "adj" : "fixed";
+  const kind = w.startsWith("at ") ? "verb" : /^(en|et) /.test(w) ? "noun" : c.group === "adjektiv" || (c.dict && /^adjektiv/.test(c.dict.pos)) ? "adj" : "fixed";
   const vs = variants(c.word).filter(v => !/^(at|en|et) /.test(v) && v.length > 1).sort((a, b) => b.length - a.length);
   for (const v of vs) {
     const toks = v.split(" ").map(t => t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
@@ -1348,8 +1358,26 @@ function exLabel(c, s) {
 function partnerPairs(id) { return CONFUSABLES.filter(p => (p[0] === id || p[1] === id) && DB.cards[p[0]] && DB.cards[p[1]]); }
 function gname(g) { return GROUPS[g] ? GROUPS[g][LANG === "en" ? 0 : 1] : g; }
 // both languages, the page language first (as the other pages name their groups)
-function glabel(g) { return GROUPS[g] ? (LANG === "en" ? `${GROUPS[g][0]} · ${GROUPS[g][1]}` : `${GROUPS[g][1]} · ${GROUPS[g][0]}`) : g; }
+// the name in the other language; "Hyppige ord" names (Top 1–15 · 4–7×) say the same in both, so they have none
+function gother(g) { return GROUPS[g] && prio(g) !== 4 ? GROUPS[g][LANG === "en" ? 1 : 0] : ""; }
+function glabel(g) { return gother(g) ? `${gname(g)} · ${gother(g)}` : gname(g); }
 const prio = g => (GROUPS[g] || [])[2] || 3;
+// a card is in its own group and, if it is in the frequency table, in a "Hyppige ord" group too (c.fg)
+const groupsOf = c => c.fg && c.fg !== c.group ? [c.group, c.fg] : [c.group];
+const inGroups = (c, gs) => groupsOf(c).some(g => gs.includes(g));
+function byGroup() { const by = {}; cards().forEach(c => groupsOf(c).forEach(g => (by[g] = by[g] || []).push(c))); return by; }
+// "Hyppige ord" groups (fg_01 …) come from the deck: 15 words each, ranked by how often they came up since 2020 (c.frank, c.freq)
+function addFreqGroups() {
+  const by = {};
+  cards().forEach(c => c.fg && (by[c.fg] = by[c.fg] || []).push(c));
+  for (const g of Object.keys(by).sort()) {
+    const r = by[g].map(c => c.frank), f = by[g].map(c => c.freq), lo = Math.min(...f), hi = Math.max(...f);
+    const args = [Math.min(...r), Math.max(...r), lo === hi ? `${lo}×` : `${lo}–${hi}×`];
+    const name = i => args.reduce((s, a, k) => s.replace(`{${k}}`, a), I18N[hi ? "p.4.n" : "p.4.old"][i]);
+    GROUPS[g] = [name(1), name(0), 4];
+    if (!GROUP_ORDER.includes(g)) GROUP_ORDER.push(g);
+  }
+}
 
 // ---------- home ----------
 function daysTo(d) { return d ? Math.round((new Date(d) - new Date(DB.today)) / 864e5) : null; }
@@ -1384,8 +1412,8 @@ function pickBar(groupsBy) {
   if (!picked.length) return "";
   const pool = picked.flatMap(g => groupsBy[g] || []);
   return `<div class="tvbar"><div class="tx"><b>${t("pk.some", picked.length, pool.length)}</b><small>${esc(picked.map(gname).slice(0, 3).join(", "))}${picked.length > 3 ? " …" : ""}</small></div>
-      <button type="button" class="btn k-learn" id="selLearn">${ICONS.spark}${t("tv.v.learn")}</button><button type="button" class="btn k-test" id="selTest">${ICONS.pencil}${t("tv.v.test")}</button>
-      <button type="button" class="btn k-review" id="selRev">${ICONS.repeat}${t("tv.v.review")}</button><button type="button" class="txtbtn" id="selClear">${t("pk.clear")}</button></div>`;
+      <button type="button" class="btn k-review" id="selRev">${ICONS.repeat}${t("tv.v.review")}</button><button type="button" class="btn k-learn" id="selLearn">${ICONS.spark}${t("tv.v.learn")}</button>
+      <button type="button" class="btn k-test" id="selTest">${ICONS.pencil}${t("tv.v.test")}</button><button type="button" class="txtbtn" id="selClear">${t("pk.clear")}</button></div>`;
 }
 function bindPickBar(redraw) {
   if (!$("#selLearn")) return;
@@ -1402,8 +1430,7 @@ function home() {
   S = null; FC = null; GS = null;
   const k = counts(), p = DB.profile || {};
   const dW = daysTo(p.exam_date);
-  const groupsBy = {};
-  cards().forEach(c => (groupsBy[c.group] = groupsBy[c.group] || []).push(c));
+  const groupsBy = byGroup();
   if (picked.some(g => !groupsBy[g])) setPicked(picked.filter(g => groupsBy[g]));
   const gs = GROUP_ORDER.filter(g => groupsBy[g]);
   const dueIn = cs => cs.filter(c => c.history.length && c.due <= DB.today).length;
@@ -1469,18 +1496,17 @@ function home() {
 // "Alle emner": every topic with one dot per word, and multi-select for Lær / Test / Gentag
 function topicsView() {
   S = null; FC = null; GS = null;
-  const groupsBy = {};
-  cards().forEach(c => (groupsBy[c.group] = groupsBy[c.group] || []).push(c));
+  const groupsBy = byGroup();
   const tier = pr => GROUP_ORDER.filter(g => prio(g) === pr && groupsBy[g]);
   const dueIn = cs => cs.filter(c => c.history.length && c.due <= DB.today).length;
   const key = [["wk", "st.known"], ["wl", "st.learn"], ["wd", "tv.key.due"], ["", "st.new"]].map(([c, l]) => `<span><span class="wdots"><i class="${c}"></i></span>${t(l)}</span>`).join("");
   $("#app").innerHTML = `
     <div class="top"><a href="#" class="tvback" id="thome">${t("gm.back")}</a><h1>${t("tv.topics")}</h1><p class="soft">${t("tv.topics.intro")}</p>
       <div class="tvkey">${key}</div></div>
-    ${[1, 2, 3].filter(pr => tier(pr).length).map(pr => `<section class="tvset"><header><h2>${t("p." + pr)}</h2><span class="soft">${t("tv.n.topics", tier(pr).length)}</span>
-      <button type="button" class="txtbtn" data-tier="${pr}">${t(tier(pr).every(g => picked.includes(g)) ? "pk.tnone" : "pk.tall")}</button></header>
+    ${[1, 2, 3, 4].filter(pr => tier(pr).length).map(pr => `<section class="tvset"><header><h2>${t("p." + pr)}</h2><span class="soft">${t("tv.n.topics", tier(pr).length)}</span>
+      <button type="button" class="txtbtn" data-tier="${pr}">${t(tier(pr).every(g => picked.includes(g)) ? "pk.tnone" : "pk.tall")}</button></header>${pr === 4 ? `<p class="soft small">${t("p.4.s")}</p>` : ""}
       <ul class="tvtbl">${tier(pr).map(g => { const cs = groupsBy[g], d = dueIn(cs), seen = cs.filter(c => c.history.length).length;
-        return `<li><label class="tvpick"><input type="checkbox" data-g="${esc(g)}"${picked.includes(g) ? " checked" : ""}><span><b>${esc(gname(g))}</b><small>${esc(GROUPS[g] ? GROUPS[g][LANG === "en" ? 1 : 0] : "")}</small></span>${wordDots(cs)}<span class="c">${seen}/${cs.length}</span>${d ? `<span class="due">${t("g.due", d)}</span>` : "<span></span>"}</label></li>`; }).join("")}</ul></section>`).join("")}
+        return `<li><label class="tvpick"><input type="checkbox" data-g="${esc(g)}"${picked.includes(g) ? " checked" : ""}><span><b>${esc(gname(g))}</b><small>${esc(gother(g))}</small></span>${wordDots(cs)}<span class="c">${seen}/${cs.length}</span>${d ? `<span class="due">${t("g.due", d)}</span>` : "<span></span>"}</label></li>`; }).join("")}</ul></section>`).join("")}
     ${pickBar(groupsBy)}`;
   const redraw = () => { const y = window.scrollY; topicsView(); window.scrollTo(0, y); };
   $("#thome").onclick = e => { e.preventDefault(); home(); window.scrollTo(0, 0); };
@@ -1511,10 +1537,10 @@ function groupTile(g, cs) {
   cs.forEach(c => n[stateOf(c)]++);
   const due = cs.filter(c => c.history.length && c.due <= DB.today).length;
   const seg = s => n[s] ? `<span style="width:${100 * n[s] / cs.length}%;background:var(--s-${s})"></span>` : "";
-  const other = GROUPS[g] ? GROUPS[g][LANG === "en" ? 1 : 0] : "";
+  const other = gother(g);
   return `<button class="sheet group${openGroup === g ? " open" : ""}" data-g="${esc(g)}">
     <div class="row"><span class="gn">${esc(gname(g))}</span><span class="spacer"></span>${due ? `<span class="due">${t("g.due", due)}</span>` : ""}</div>
-    <div class="ge">${esc(other)} · ${t("g.words", cs.length)}</div>
+    <div class="ge">${other ? esc(other) + " · " : ""}${t("g.words", cs.length)}</div>
     <div class="bar">${seg("master")}${seg("known")}${seg("learn")}</div></button>`;
 }
 function showGroupDetail(g, cs) {
@@ -1538,7 +1564,7 @@ function showGroupDetail(g, cs) {
 // ---------- session building ----------
 function startSession({ groups = null, reviews = REVIEW_LIMIT, fresh = BATCH }) {
   const k = counts();
-  const inGroup = c => !groups || groups.includes(c.group);
+  const inGroup = c => !groups || inGroups(c, groups);
   const rank = c => [c.priority || 3, -(c.lapses || 0), c.reps || 0];
   const cmp = (a, b) => { const x = rank(a), y = rank(b); return x[0] - y[0] || x[1] - y[1] || x[2] - y[2]; };
   const due = cards().filter(c => inGroup(c) && c.history.length && c.due <= DB.today).sort(cmp).slice(0, reviews);
@@ -1548,7 +1574,7 @@ function startSession({ groups = null, reviews = REVIEW_LIMIT, fresh = BATCH }) 
     // taught group by group: fill the batch from the first (selected) group that still has new words, then the next
     for (const g of GROUP_ORDER.filter(g => !groups || groups.includes(g))) {
       if (batch.length >= n) break;
-      batch.push(...cards().filter(c => c.group === g && stateOf(c) === "new").slice(0, n - batch.length));
+      batch.push(...cards().filter(c => groupsOf(c).includes(g) && stateOf(c) === "new" && !batch.includes(c)).sort((a, b) => prio(g) === 4 ? a.frank - b.frank : 0).slice(0, n - batch.length));
     }
   }
   let practice = [];
@@ -1569,7 +1595,7 @@ function startSession({ groups = null, reviews = REVIEW_LIMIT, fresh = BATCH }) 
 }
 // ---------- Øvelse: extra B2 practice on words already learnt ----------
 // words reviewed at least once, in the selected groups (all when none are selected)
-function learnedIn(groups) { return cards().filter(c => c.history.length && (!groups || groups.includes(c.group))); }
+function learnedIn(groups) { return cards().filter(c => c.history.length && (!groups || inGroups(c, groups))); }
 function startExercise(groups) {
   const pool = learnedIn(groups);
   if (!pool.length) { alert(t("h.ex.none")); return; }
@@ -1581,7 +1607,7 @@ function startExercise(groups) {
 }
 // pairs with at least one word in the selected groups (all pairs when none are selected)
 function confusablePairs(groups) {
-  return CONFUSABLES.filter(p => DB.cards[p[0]] && DB.cards[p[1]] && (!groups || [p[0], p[1]].some(id => groups.includes(DB.cards[id].group))));
+  return CONFUSABLES.filter(p => DB.cards[p[0]] && DB.cards[p[1]] && (!groups || [p[0], p[1]].some(id => inGroups(DB.cards[id], groups))));
 }
 function startConfusables(groups) {
   const pairs = shuffle(confusablePairs(groups)).slice(0, 4);
@@ -2225,7 +2251,7 @@ function renderPairSame(it) {
 const FC_DIR = "pd3-assisted-learning:fcdir";
 let FC = null;
 function startFlash(groups, ids) {
-  const pool = ids ? ids.map(id => DB.cards[id]) : cards().filter(c => !groups || groups.includes(c.group));
+  const pool = ids ? ids.map(id => DB.cards[id]) : cards().filter(c => !groups || inGroups(c, groups));
   let dir = "da";
   try { dir = localStorage.getItem(FC_DIR) === "en" ? "en" : "da"; } catch (e) { /* ignore */ }
   S = null;
@@ -2391,7 +2417,7 @@ function hitCard(x) {
     <div class="head"><span class="big" lang="da">${esc(e.word)}</span>${c && wtype(c) ? `<span class="tag">${esc(wtype(c))}</span>` : w ? `<span class="tag">${esc(w.word_class || "")}</span>` : ""}</div>
     ${e.meaning ? `<div class="meaning">${esc(e.meaning)}</div>` : ""}${c ? prepLine(c) : ""}${via ? `<div class="via">${esc(via)}</div>` : ""}
     <div class="cats">
-      <div class="cat"><span class="src">${t("f.al")}</span>${c ? `<span class="badge t${prio(c.group)}">${esc(t("p." + prio(c.group)))}</span><span class="gname">${esc(gname(c.group))} <small>· ${esc(GROUPS[c.group] ? GROUPS[c.group][LANG === "en" ? 1 : 0] : "")}</small></span>` : `<span class="soft">${t("f.notal")}</span>`}</div>
+      <div class="cat"><span class="src">${t("f.al")}</span>${c ? `<span class="badge t${prio(c.group)}">${esc(t("p." + prio(c.group)))}</span><span class="gname">${esc(gname(c.group))}${gother(c.group) ? ` <small>· ${esc(gother(c.group))}</small>` : ""}</span>` : `<span class="soft">${t("f.notal")}</span>`}</div>
       ${SITE_WORDS ? `<div class="cat"><span class="src">${t("f.site")}</span>${sg.length ? sg.map((g, i) => `<span class="gname">${esc(LANG === "en" ? g.name_en : g.name_da)} <small>· ${esc(LANG === "en" ? g.name_da : g.name_en)}</small></span>`).join(`<span class="soft">+</span>`) : `<span class="soft">${t("f.notsite")}</span>`}</div>` : ""}
     </div>
     ${c ? `<div class="row"><button class="btn" data-explain="${esc(c.id)}">${t("b.more")}</button><button class="btn quiet" data-practise="${esc(c.group)}">${t("f.pract")} →</button></div>` : ""}

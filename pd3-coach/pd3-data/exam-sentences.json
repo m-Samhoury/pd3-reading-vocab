@@ -1,5 +1,5 @@
 {
-  "built": "2026-10-27",
+  "built": "2026-11-02",
   "sentences": {
     "eller": [
       {
@@ -623,67 +623,51 @@
     ],
     "at_ansøge_om": [
       {
-        "s": "Det var en slags domstol, der traf afgørelser om krig og fred, og som kunne idømme folk straffe.",
-        "src": "2024s L1",
+        "s": "Alle danske øer uden fast broforbindelse kan ansøge og deltage i konkurrencen.",
+        "src": "2022s L1",
         "m": [
-          46,
-          48
+          45,
+          51
         ]
       },
       {
-        "s": "Her gemmer mange kilometer af minegange og underjordiske søer på historien om kalkindustrien, der har skabt fundamentet for Viborg, som byen ser ud i dag.",
-        "src": "2024s L1",
+        "s": "Her er der plads til 48 sovende, og man kan ansøge om en soveplads til området.",
+        "src": "2019s L1",
         "m": [
-          75,
-          77
+          44,
+          53
         ]
       },
       {
-        "s": "Her er der en verden af oplevelser, der fortæller om geologi, flagermus og imponerende arbejde udført med håndkraft.",
-        "src": "2024s L1",
+        "s": "Dette gælder f.eks. for en ansøger, der har lovligt ophold i Danmark på grundlag af en opholdstilladelse, et visum eller i medfør af EU-regler.",
+        "src": "2018v L1",
         "m": [
-          50,
-          52
+          27,
+          34
         ]
       },
       {
-        "s": "Showet vises hver halve time og fortæller om kalkens og grubernes historie.",
-        "src": "2024s L1",
+        "s": "Kan jeg deltage i et inspirationsmøde inden jeg ansøger?",
+        "src": "2016s L1",
         "m": [
-          42,
-          44
+          48,
+          55
         ]
       },
       {
-        "s": "Her kan man lære om kalkgrubernes historie, om livet som kalkminearbejder, og man kan udforske flagermusenes liv.",
-        "src": "2024s L1",
+        "s": "Vi anbefaler, at du ansøger tre måneder inden din afrejse.",
+        "src": "2016s L1",
         "m": [
-          17,
-          19
+          20,
+          27
         ]
       },
       {
-        "s": "Helt unikt for et historisk værksted findes de arkæologiske udgravninger side om side med den genskabte jernalderlandsby i bakkerne på Hvolris.",
-        "src": "2024s L1",
+        "s": "Vurderes du herefter uddannelsesparat, rettes din uddannelsesplan, og den sendes til det ansøgte uddannelsessted.",
+        "src": "2015s L1",
         "m": [
-          78,
-          80
-        ]
-      },
-      {
-        "s": "Da Hærvejsmarchen så første gang blev holdt, var jeg ikke i tvivl om, at jeg skulle være med, og det har jeg så været lige siden.",
-        "src": "2024s L1",
-        "m": [
-          66,
-          68
-        ]
-      },
-      {
-        "s": "Sporten er virkelig noget, vi er sammen om her i Viborg.",
-        "src": "2024s L1",
-        "m": [
-          40,
-          42
+          89,
+          96
         ]
       }
     ],
@@ -7141,6 +7125,14 @@
           7,
           21
         ]
+      },
+      {
+        "s": "Undervejs kommer man forbi Hærvejens karakteristiske gamle broer, der er bygget af store sten, bl.a.",
+        "src": "2023s L1",
+        "m": [
+          37,
+          52
+        ]
       }
     ],
     "sjældent": [
@@ -7206,6 +7198,4888 @@
         "m": [
           11,
           19
+        ]
+      }
+    ],
+    "en_konsekvens_af": [
+      {
+        "s": "Aften efter aften kunne de i fjernsynet se på og høre om konsekvenserne af den store CO2-udledning, som specielt vestlige lande har haft i de sidste hundrede år.",
+        "src": "2021s L2",
+        "m": [
+          57,
+          74
+        ]
+      },
+      {
+        "s": "I dag er gennemsnitstemperaturen cirka 15 grader, men hvis den bliver bare et par grader højere, får det alvorlige konsekvenser.",
+        "src": "2021s L2",
+        "m": [
+          115,
+          127
+        ]
+      },
+      {
+        "s": "Det fik konsekvenser for kursusdeltagerne, da forbundene forøgede betalingen for at deltage på et kursus.",
+        "src": "2020v L1",
+        "m": [
+          8,
+          20
+        ]
+      },
+      {
+        "s": "Konsekvensen er, at det ikke blot er arbejdsgiverne, der vælger efter behov.",
+        "src": "2020v L2",
+        "m": [
+          0,
+          12
+        ]
+      },
+      {
+        "s": "Som konsekvens af at skolerne flyttede sommerferien, afholdes festivalen nu i den første weekend i juli.",
+        "src": "2019s L1",
+        "m": [
+          4,
+          17
+        ]
+      },
+      {
+        "s": "Det har haft store konsekvenser for medarbejderne, arbejdspladserne og økonomien.",
+        "src": "2018v L2",
+        "m": [
+          19,
+          31
+        ]
+      },
+      {
+        "s": "At flytte med vil nemlig have store konsekvenser for hele familien.",
+        "src": "2018v L2",
+        "m": [
+          36,
+          48
+        ]
+      },
+      {
+        "s": "Fra regeringens side har man hele tiden været bevidst om, at det har konsekvenser at flytte ud.",
+        "src": "2018v L2",
+        "m": [
+          69,
+          81
+        ]
+      }
+    ],
+    "som_nævnt": [
+      {
+        "s": "Især unge skifter job Der er som nævnt flere brancher, hvor virksomhederne har svært ved at få de medarbejdere, de har brug for.",
+        "src": "2020v L2",
+        "m": [
+          29,
+          38
+        ]
+      }
+    ],
+    "en_grund_til": [
+      {
+        "s": "Der kan være mange grunde til, at man vælger at skifte branche, selvom man er midt i livet, fortæller Ask Nielsen, der har været karriererådgiver igennem 15 år.",
+        "src": "2024s L2",
+        "m": [
+          19,
+          29
+        ]
+      },
+      {
+        "s": "Og det er der måske god grund til.",
+        "src": "2024s L2",
+        "m": [
+          24,
+          33
+        ]
+      },
+      {
+        "s": "Målet er at skabe bymidter, hvor folk kommer af andre grunde end blot for at handle.",
+        "src": "2024s L2",
+        "m": [
+          54,
+          60
+        ]
+      },
+      {
+        "s": "I gamle dage valfartede folk til området på grund af Helligdomskilden, som blev tillagt en helbredende kraft.",
+        "src": "2023v L1",
+        "m": [
+          44,
+          49
+        ]
+      },
+      {
+        "s": "Madkultur Du vil opdage, at det ikke er uden grund, at Bornholm har markeret sig så stærkt inden for gourmet gennem snart en længere årrække.",
+        "src": "2023v L1",
+        "m": [
+          45,
+          50
+        ]
+      },
+      {
+        "s": "Ikke blot på grund af jobmulighederne, men også fordi nyuddannede med en teknisk uddannelse ofte får en højere løn end nyuddannede med en humanistisk uddannelse.",
+        "src": "2023v L2",
+        "m": [
+          13,
+          18
+        ]
+      },
+      {
+        "s": "Der kan være gode grunde til, at jobmuligheder og løn ikke er mere afgørende for danske unges valg af uddannelse.",
+        "src": "2023v L2",
+        "m": [
+          18,
+          28
+        ]
+      },
+      {
+        "s": "Af den grund har landsdelen på flere områder en historie, som afviger fra resten af Danmarks.",
+        "src": "2023s L1",
+        "m": [
+          7,
+          12
+        ]
+      }
+    ],
+    "en_fordel_ved": [
+      {
+        "s": "En fire-dages arbejdsuge kan altså være en fordel i konkurrencen om medarbejdere.",
+        "src": "2024s L2",
+        "m": [
+          43,
+          49
+        ]
+      },
+      {
+        "s": "Der er både fordele for ambassadøren, der sælger billetter, og for dem, der køber en billet gennem en ambassadør.",
+        "src": "2021v L1",
+        "m": [
+          12,
+          19
+        ]
+      },
+      {
+        "s": "På andet år er der ekstra mange skriftlige opgaver, som lærerne ikke altid får samarbejdet godt nok om at fordele jævnt over skoleåret.",
+        "src": "2021v L2",
+        "m": [
+          106,
+          113
+        ]
+      },
+      {
+        "s": "Det er der både fordele og ulemper ved.",
+        "src": "2020v L2",
+        "m": [
+          16,
+          23
+        ]
+      },
+      {
+        "s": "Fordele og ulemper ved en høj jobomsætning Inden for de fleste brancher er det en fordel for arbejdsgiverne, at man hurtigt kan tilpasse sig efterspørgslen og udskifte arbejdskraften efter behov.",
+        "src": "2020v L2",
+        "m": [
+          0,
+          7
+        ]
+      },
+      {
+        "s": "Med en kort midlertidig ansættelse er man ikke sikret alle disse fordele.",
+        "src": "2020v L2",
+        "m": [
+          65,
+          72
+        ]
+      },
+      {
+        "s": "Det er nok en god ide at vælge et par af udstillingerne ud og gå i dybden med disse og så se museet lidt efter lidt, fordelt på flere besøg.",
+        "src": "2020s L1",
+        "m": [
+          117,
+          124
+        ]
+      },
+      {
+        "s": "Men der skal også være et klart fagligt udbytte, hvis et studieophold i udlandet skal være en fordel i forhold til fremtidig karriere.",
+        "src": "2020s L2",
+        "m": [
+          94,
+          100
+        ]
+      }
+    ],
+    "en_holdning_til": [
+      {
+        "s": "Besat er den ideelle forestilling for et egnsteater: Et lokalt emne poleres og løftes op til underholdning med indhold og holdninger.",
+        "src": "2021s L1",
+        "m": [
+          122,
+          132
+        ]
+      },
+      {
+        "s": "Det vil blandt andet sige, at man til møder skal være parat til at tage ordet og give udtryk for markante holdninger.",
+        "src": "2018s L2",
+        "m": [
+          106,
+          116
+        ]
+      },
+      {
+        "s": "Ledergrupper med medlemmer af samme køn og holdninger kan nemlig nogle gange nå frem til en beslutning ved blot at kigge på hinanden.",
+        "src": "2018s L2",
+        "m": [
+          43,
+          53
+        ]
+      },
+      {
+        "s": "Og hvor Anette og Morten før syntes, at det var en god idé, at pædagogerne bruger tablets, så er de nu af en anden holdning.",
+        "src": "2016v L2",
+        "m": [
+          115,
+          123
+        ]
+      },
+      {
+        "s": "Eleverne og deres læring kom i centrum, og de skulle lære at give udtryk for deres meninger og holdninger.",
+        "src": "2016s L2",
+        "m": [
+          95,
+          105
+        ]
+      }
+    ],
+    "modsat": [
+      {
+        "s": "Han skal dermed ikke træffe de overordnede beslutninger i store projekter, og det er i dag helt afgørende for Gert, selvom det tidligere var modsat.",
+        "src": "2017s L2",
+        "m": [
+          141,
+          147
+        ]
+      }
+    ],
+    "en_betingelse_for": [
+      {
+        "s": "Det var dog en betingelse, at han var villig til at flytte til Danmark inden for et par måneder.",
+        "src": "2019v L2",
+        "m": [
+          15,
+          25
+        ]
+      },
+      {
+        "s": "Det er ikke en betingelse, at du bor på skolen, men ofte er det et ekstra plus for din uddannelse.",
+        "src": "2015v L1",
+        "m": [
+          15,
+          25
+        ]
+      }
+    ],
+    "hermed": [
+      {
+        "s": "Jeg vil hermed give min varmeste anbefaling af Scala Biograferne!",
+        "src": "2019v L1",
+        "m": [
+          8,
+          14
+        ]
+      },
+      {
+        "s": "Hermed blev læreren og eleverne samtidig mere ligeværdige parter.",
+        "src": "2016s L2",
+        "m": [
+          0,
+          6
+        ]
+      },
+      {
+        "s": "Hermed får han også halveret risikoen for at få diabetes og en række kræftsygdomme.",
+        "src": "2014v L2",
+        "m": [
+          0,
+          6
+        ]
+      },
+      {
+        "s": "Hermed opnår Anne Johansen ifølge tilhængerne af fastemetoden et sundere og bedre liv, samtidig med at hun forsinker aldringsprocessen.",
+        "src": "2014v L2",
+        "m": [
+          0,
+          6
+        ]
+      },
+      {
+        "s": "Hermed opnår Anne Johansen ifølge tilhængerne af fastemetoden et sundere og bedre liv, samtidig med at hun forsinker aldringsproces sen.",
+        "src": "2014v L2",
+        "m": [
+          0,
+          6
+        ]
+      },
+      {
+        "s": "Parallelt hermed optager vi elever, der er optaget på Gymnastik- eller Fodboldcollege.",
+        "src": "2013s L1",
+        "m": [
+          10,
+          16
+        ]
+      }
+    ],
+    "et_argument_for_imod": [
+      {
+        "s": "Et vigtigt argument er, at man ikke skal se på ansøgeres køn, men udelukkende på deres kvalifikationer.",
+        "src": "2018s L2",
+        "m": [
+          11,
+          19
+        ]
+      },
+      {
+        "s": "Det er et argument, der i høj grad støttes af kvinder, som ikke vil vælges til et job på grund af deres køn.",
+        "src": "2018s L2",
+        "m": [
+          10,
+          18
+        ]
+      },
+      {
+        "s": "”Der er ikke noget sundhedsfagligt argument for, at faste skulle være sundt.",
+        "src": "2014v L2",
+        "m": [
+          35,
+          47
+        ]
+      },
+      {
+        "s": "\"Der er ikke noget sundhedsfagligt argument for, at faste skulle være sundt.",
+        "src": "2014v L2",
+        "m": [
+          35,
+          47
+        ]
+      }
+    ],
+    "at_behandle": [
+      {
+        "s": "Det er også kommunerne, der skal behandle klager fra borgerne.",
+        "src": "2023s L2",
+        "m": [
+          33,
+          41
+        ]
+      },
+      {
+        "s": "Det er derfor vigtigt for en virksomhed at tage hensyn til miljøet og behandle de ansatte godt, så virksomheden kan få en god omtale.",
+        "src": "2020v L2",
+        "m": [
+          70,
+          78
+        ]
+      },
+      {
+        "s": "De behandler eleverne som voksne mennesker og er også gode at tale med om studieretninger, eller om hvordan man kan bruge det, man er god til.",
+        "src": "2018v L1",
+        "m": [
+          3,
+          12
+        ]
+      },
+      {
+        "s": "Der skal normalt betales et gebyr, for at man kan få sin sag behandlet i Styrelsen for International Rekruttering og Integration.",
+        "src": "2018v L1",
+        "m": [
+          61,
+          70
+        ]
+      },
+      {
+        "s": "Bønder fra omegnen kom med vadmel og uldgarn, som farveren behandlede.",
+        "src": "2017s L1",
+        "m": [
+          59,
+          69
+        ]
+      },
+      {
+        "s": "Det danske sundhedsvæsen kan i dag tilbyde flere patienter at blive behandlet i deres eget hjem, og antallet af hjemmebehandlinger stiger.",
+        "src": "2016s L2",
+        "m": [
+          68,
+          77
+        ]
+      }
+    ],
+    "herudover": [
+      {
+        "s": "Herudover kan man også opleve installationer og anden samtidskunst, som står i kontrast til de historiske omgivelser på Egeskov Slot.",
+        "src": "2019s L1",
+        "m": [
+          0,
+          9
+        ]
+      },
+      {
+        "s": "Nogle mener således ikke, at vi herudover også skal give støtte som individuelle borgere.",
+        "src": "2019s L2",
+        "m": [
+          32,
+          41
+        ]
+      }
+    ],
+    "en_interesse_for": [
+      {
+        "s": "Nu er jeg pensionist og arbejder ikke længere, men interessen for fodbold har jeg stadig.",
+        "src": "2024s L1",
+        "m": [
+          51,
+          65
+        ]
+      },
+      {
+        "s": "Interessen for den fire-dages arbejdsuge tyder på, at flere virksomheder kommer til at tilbyde deres medarbejdere denne løsning.",
+        "src": "2024s L2",
+        "m": [
+          0,
+          14
+        ]
+      },
+      {
+        "s": "Det har øget interessen blandt private firmaer for at investere i store vindmølleprojekter.",
+        "src": "2023s L2",
+        "m": [
+          13,
+          23
+        ]
+      },
+      {
+        "s": "Organisationen bag blomsterfestivalen samarbejder med mange forskellige erhverv, og gennem inddragelse af de besøgende skaber festivalen interesse for blomster og planter som en del af det gode liv udendørs og indendørs.",
+        "src": "2021v L1",
+        "m": [
+          137,
+          150
+        ]
+      },
+      {
+        "s": "Samtidig ved vi, at der er en stor interesse for at besøge og høre historien om det gamle teater, hvorfor teatret tilbyder guidede rundvisninger, når det er muligt.",
+        "src": "2021s L1",
+        "m": [
+          35,
+          48
+        ]
+      },
+      {
+        "s": "Der er derfor stor politisk og folkelig interesse for at nedbringe udledningen af CO2 i atmosfæren.",
+        "src": "2021s L2",
+        "m": [
+          40,
+          53
+        ]
+      },
+      {
+        "s": "masse nye sportsgrene, som fx golf og surfing, samtidig med at jeg kunne dyrke min store interesse for håndbold.",
+        "src": "2018v L1",
+        "m": [
+          89,
+          102
+        ]
+      },
+      {
+        "s": "”Det er en god start, for det vidner om, at der er interesse for ideen.",
+        "src": "2017v L2",
+        "m": [
+          51,
+          64
+        ]
+      }
+    ],
+    "et_mål": [
+      {
+        "s": "Læsning af skønlitteratur er jo på mange måder det modsatte af fysisk træning og mål, der skal nås.",
+        "src": "2023s L2",
+        "m": [
+          81,
+          84
+        ]
+      },
+      {
+        "s": "ledere og har sat sig som mål at gennemføre en ironman.",
+        "src": "2023s L2",
+        "m": [
+          26,
+          29
+        ]
+      },
+      {
+        "s": "”Selvom der er ambitiøse, politiske mål for en løsning af klimaproblemerne, mener både min mand og jeg, at vi også må tage et personligt ansvar.",
+        "src": "2021s L2",
+        "m": [
+          36,
+          39
+        ]
+      },
+      {
+        "s": "Disse mål arbejder AOF for gennem folkeoplysning, kulturelle aktiviteter, grund-, efter- og videreuddannelse.",
+        "src": "2020v L1",
+        "m": [
+          6,
+          9
+        ]
+      },
+      {
+        "s": "Alle LOF’s aktiviteter har det mål at give deltagerne ny viden og nye kundskaber, så de bliver bedre til at tage ansvar for deres egen tilværelse og deltage aktivt i samfundet.",
+        "src": "2020v L1",
+        "m": [
+          31,
+          34
+        ]
+      },
+      {
+        "s": "I Danmark er jobomsætningen, der er et mål for, hvor mange der starter i et nyt job, en af de største i Europa.",
+        "src": "2020v L2",
+        "m": [
+          39,
+          42
+        ]
+      },
+      {
+        "s": "Et af deres mål er at fjerne engangsplastik som fx sugerør og cocktailpinde fra hotellerne.",
+        "src": "2020v L2",
+        "m": [
+          12,
+          15
+        ]
+      },
+      {
+        "s": "Eleverne modtager på baggrund af højskoleopholdet et gennemførelsesbevis, der beskriver mål og indhold for højskoleopholdet.",
+        "src": "2018v L1",
+        "m": [
+          88,
+          91
+        ]
+      }
+    ],
+    "en_plan_for": [
+      {
+        "s": "De ti udvalgte byer har for eksempel tænkt velfærdsfunktioner som biblioteker og borgerservice ind i deres planer for nyt liv i bymidterne.",
+        "src": "2024s L2",
+        "m": [
+          107,
+          117
+        ]
+      },
+      {
+        "s": " Du vil gerne have hjælp til ”Joblog” og ”Min Plan”.  Du er aktivt deltagende og jobsøgende under hele kursusforløbet.  Du opdaterer din ”Joblog” og arbejder videre på ”Min Plan”.",
+        "src": "2020v L1",
+        "m": [
+          47,
+          51
+        ]
+      },
+      {
+        "s": "Hvis de unge kun prioriterer at tage et eksotisk sted hen, så kan det sagtens være en god oplevelse på det personlige plan.",
+        "src": "2020s L2",
+        "m": [
+          118,
+          122
+        ]
+      },
+      {
+        "s": "Udflytningen er et led i regeringens plan om at skabe aktivitet og vækst i hele landet og ikke kun i København.",
+        "src": "2018v L2",
+        "m": [
+          37,
+          41
+        ]
+      },
+      {
+        "s": "Planen skal være realistisk, under skrevet af dig og dine forældre – og du har pligt til at følge din plan.",
+        "src": "2015v L1",
+        "m": [
+          102,
+          106
+        ]
+      },
+      {
+        "s": "Her klarlægger vi dit nuværende faglige niveau og laver i fællesskab en plan for din uddannelse med de rette fag og niveauer for dig.",
+        "src": "2015v L1",
+        "m": [
+          72,
+          80
+        ]
+      },
+      {
+        "s": "I dag har han allerede lagt planer for fremtiden.",
+        "src": "2013v L2",
+        "m": [
+          28,
+          38
+        ]
+      },
+      {
+        "s": "Er du 15-17 år og ikke i uddannelse eller i et job med uddannelsesperspektiv, skal du i samarbejde med din UU-vejleder udarbejde en plan for, hvorledes du bliver uddannelsesparat til en ungdomsuddannelse.",
+        "src": "2013s L1",
+        "m": [
+          132,
+          140
+        ]
+      }
+    ],
+    "vanskelig": [
+      {
+        "s": "veterinærvidenSkab & dyrepaSning Hvis du elsker dyr og arbejdet med dem, kan du få prøvet din viden af i praksis og samtidig få relevant erhvervserfaring, der er vanskelig at få herhjemme.",
+        "src": "2016s L1",
+        "m": [
+          162,
+          171
+        ]
+      }
+    ],
+    "en_fleksibilitet": [
+      {
+        "s": "Se kontrasten fra Store Scene til Takkelloftet, hvor scenens fleksibilitet er i centrum, og hvor Tal Rs moderne abstraktion pryder foyeren.",
+        "src": "2021s L1",
+        "m": [
+          61,
+          74
+        ]
+      },
+      {
+        "s": "Det er en model, der er kendetegnet ved to nøgleord: fleksibilitet og sikkerhed.",
+        "src": "2020v L2",
+        "m": [
+          53,
+          66
+        ]
+      },
+      {
+        "s": "På det danske arbejdsmarked er der en relativt høj grad af fleksibilitet for arbejdsgiverne.",
+        "src": "2020v L2",
+        "m": [
+          59,
+          72
+        ]
+      },
+      {
+        "s": "Fleksibiliteten betyder, at arbejdsgiverne godt tør ansætte nye medarbejdere, hvis der kommer en stigning i efterspørgslen.",
+        "src": "2020v L2",
+        "m": [
+          0,
+          15
+        ]
+      },
+      {
+        "s": "Fokus på fleksibilitet Som frivillig hos Projects Abroad bestemmer du selv, hvornår du ønsker af tage af sted ligesom at du selv bestemmer længden på dit ophold.",
+        "src": "2016s L1",
+        "m": [
+          9,
+          22
+        ]
+      },
+      {
+        "s": "Her får du styrket dine sproglige færdigheder og udfordret din selvstændighed, samarbejdsevne og fleksibilitet.",
+        "src": "2013s L1",
+        "m": [
+          97,
+          110
+        ]
+      }
+    ],
+    "at_overholde": [
+      {
+        "s": "Gæsterne lægger mærke til dig, når du er i uniform, og det er et krav, at uniformsreglerne overholdes.",
+        "src": "2018s L1",
+        "m": [
+          91,
+          101
+        ]
+      },
+      {
+        "s": "Hvis du ikke overholder reglerne om studieaktivitet, kan du miste retten til SU og i sidste ende blive udelukket fra undervisningen.",
+        "src": "2016v L1",
+        "m": [
+          13,
+          23
+        ]
+      }
+    ],
+    "afhængig_af": [
+      {
+        "s": "I bronzealderens landbrugssamfund var man afhængig af, at årstiderne skiftede, og at solen gik op og ned.",
+        "src": "2020s L1",
+        "m": [
+          42,
+          53
+        ]
+      },
+      {
+        "s": "Attraktivt at bo og arbejde i Danmark COWI er derfor afhængig af at kunne tiltrække udenlandske specialister.",
+        "src": "2019v L2",
+        "m": [
+          53,
+          64
+        ]
+      },
+      {
+        "s": "Satsen er afhængig af din alder.",
+        "src": "2016v L1",
+        "m": [
+          10,
+          21
+        ]
+      },
+      {
+        "s": "Adgangskravene er forskellige afhængig af uddannelsesretning.",
+        "src": "2015v L1",
+        "m": [
+          30,
+          41
+        ]
+      },
+      {
+        "s": "Skolen og undervisningen Undervisningen begynder kl. 8.00 og slutter klokken 13.30, 14.25 eller 15.15 afhængig af, om undervisningen går til 6., 7. eller 8. lektion.",
+        "src": "2013s L1",
+        "m": [
+          102,
+          113
+        ]
+      }
+    ],
+    "en_følge_af": [
+      {
+        "s": "I landsbyen kan man følge jernalderfolkets daglige gøremål, hvor især madlavningen tager tid.",
+        "src": "2024s L1",
+        "m": [
+          20,
+          25
+        ]
+      },
+      {
+        "s": "I Bornholms Kulturuge har vi ni forskellige kulturspor, du som gæst kan vælge at følge.",
+        "src": "2023v L1",
+        "m": [
+          81,
+          86
+        ]
+      },
+      {
+        "s": "I Sønderjylland løber vejen fra grænsen ved Padborg til Vojens, og man kan følge afmærkede ruter på cykel eller til fods.",
+        "src": "2023s L1",
+        "m": [
+          75,
+          80
+        ]
+      },
+      {
+        "s": "I Histotoriet er det bedst, hvis børn og voksne følges ad, for udstillingen lægger op til, at børn og voksne taler sammen.",
+        "src": "2021v L1",
+        "m": [
+          48,
+          54
+        ]
+      },
+      {
+        "s": "Om sommeren kan man sidde ud til Vestergade, hvor man kan følge livet og høre musikken fra Odenses gågade.",
+        "src": "2021v L1",
+        "m": [
+          58,
+          63
+        ]
+      },
+      {
+        "s": "I et stort studie fra to amerikanske byer (Portland og Houston) tilkendegav folk, at de ikke havde ændret adfærd som følge af klimaproblemerne.",
+        "src": "2021s L2",
+        "m": [
+          117,
+          125
+        ]
+      },
+      {
+        "s": "Den enkelte forbruger har kun en meget lille andel i de katastrofer, man kan følge i nyhederne.",
+        "src": "2021s L2",
+        "m": [
+          77,
+          82
+        ]
+      },
+      {
+        "s": "Som følge af denne krise, var oplysningsforbundene i midten af 00’erne nødt til at tænke nyt for at sikre, at økonomien hang sammen.",
+        "src": "2020v L1",
+        "m": [
+          4,
+          12
+        ]
+      }
+    ],
+    "en_husleje": [
+      {
+        "s": "Mia synes, det er utroligt billigt – og hendes venner i Aarhus er ved at falde ned fra stolen, når de hører, hvad hun betaler i husleje.",
+        "src": "2023s L1",
+        "m": [
+          128,
+          135
+        ]
+      },
+      {
+        "s": "At huslejen er så billig gør, at hun kan klare sig uden at tage et studiejob, og det er hun rigtig glad for, for så kan hun koncentrere sig om studiet.",
+        "src": "2023s L1",
+        "m": [
+          3,
+          11
+        ]
+      },
+      {
+        "s": "Det er nemlig dyrt at have bygninger og kontorer i København, så man kan spare mange penge på husleje uden for København.",
+        "src": "2018v L2",
+        "m": [
+          94,
+          101
+        ]
+      },
+      {
+        "s": "Hvis staten skal spare mange penge på husleje, skal det være hele arbejdspladsen, der flytter ud af hovedstaden.",
+        "src": "2018v L2",
+        "m": [
+          38,
+          45
+        ]
+      },
+      {
+        "s": "Du skal være opmærksom på, at du skal bo på 3D College, og at det koster penge – udgifterne dækker husleje, studieture og 3D-aktiviteter.",
+        "src": "2013s L1",
+        "m": [
+          99,
+          106
+        ]
+      },
+      {
+        "s": "Du får økonomisk støtte til opholdet i udlandet, bl.a. til rejser hjem på skoleophold og som tilskud til husleje hver måned.",
+        "src": "2013s L1",
+        "m": [
+          105,
+          112
+        ]
+      }
+    ],
+    "en_løsning_på": [
+      {
+        "s": "Interessen for den fire-dages arbejdsuge tyder på, at flere virksomheder kommer til at tilbyde deres medarbejdere denne løsning.",
+        "src": "2024s L2",
+        "m": [
+          120,
+          127
+        ]
+      },
+      {
+        "s": "Men mens mange måske venter på en politisk løsning på klimaproblemerne, så valgte Marianne og Torben at tage et personligt ansvar.",
+        "src": "2021s L2",
+        "m": [
+          43,
+          53
+        ]
+      },
+      {
+        "s": "”Selvom der er ambitiøse, politiske mål for en løsning af klimaproblemerne, mener både min mand og jeg, at vi også må tage et personligt ansvar.",
+        "src": "2021s L2",
+        "m": [
+          47,
+          54
+        ]
+      },
+      {
+        "s": "Er der en løsning, der ikke involverer, at staten skal regulere, hvad vi spiser, og som heller ikke lægger hele ansvaret over på forbrugeren?",
+        "src": "2021s L2",
+        "m": [
+          10,
+          17
+        ]
+      },
+      {
+        "s": "Jeg synes, folk skal gøre, som det passer dem bedst, og for nogle familier er det den rigtige løsning.",
+        "src": "2018s L2",
+        "m": [
+          94,
+          101
+        ]
+      },
+      {
+        "s": "Det er dog ikke en særlig god løsning for de studerende, så de flytter, hvis de kan få en bedre bolig.",
+        "src": "2018s L2",
+        "m": [
+          30,
+          37
+        ]
+      },
+      {
+        "s": "Traditionelle virksomheder skal tilpasse sig Søren Have mener ikke, at løsningen på de traditionelle virksomheders udfordring i forhold til deleøkonomien blot er at vente på lovændringer.",
+        "src": "2017v L2",
+        "m": [
+          71,
+          83
+        ]
+      },
+      {
+        "s": "Bent Greve peger også på, at udviklingen af digitale løsninger forstærker opsplitningen af arbejdsmarkedet.",
+        "src": "2017v L2",
+        "m": [
+          53,
+          62
+        ]
+      }
+    ],
+    "muligvis": [
+      {
+        "s": "Blandt mårdyrene findes kun den invasive mink på Bornholm, og efter et voldsomt udbrud af skab er ræven muligvis også helt forsvundet fra klippeøen.",
+        "src": "2023v L1",
+        "m": [
+          104,
+          112
+        ]
+      },
+      {
+        "s": "Man kan muligvis kickstarte en slankekur ved at faste, men det er ikke vedvarende, og meget af det, man taber, vil være væske.",
+        "src": "2014v L2",
+        "m": [
+          8,
+          16
+        ]
+      },
+      {
+        "s": "Man kan muligvis kickstarte en slankekur ved at faste, men det er ikke vedvarende, og meget af det,, man taber, vil være væske.",
+        "src": "2014v L2",
+        "m": [
+          8,
+          16
+        ]
+      }
+    ],
+    "et_resultat_af": [
+      {
+        "s": "Det er ikke en tilfældighed, men resultat af mange års samarbejde.",
+        "src": "2023v L1",
+        "m": [
+          33,
+          44
+        ]
+      },
+      {
+        "s": "Her var resultatet lige omvendt, idet 80 procent stemte for at forblive tysk.",
+        "src": "2023s L1",
+        "m": [
+          8,
+          18
+        ]
+      },
+      {
+        "s": "Resultaterne af folkeafstemningerne betød, at Nordslesvig/Sønderjylland vendte tilbage til Danmark.",
+        "src": "2023s L1",
+        "m": [
+          0,
+          15
+        ]
+      },
+      {
+        "s": "Det er selvfølgelig ikke et acceptabelt resultat.",
+        "src": "2023s L2",
+        "m": [
+          40,
+          48
+        ]
+      },
+      {
+        "s": "mængde stråling som før, og det kan således være svært at sammenligne resultaterne af forskning, der blev udført for ti år siden, med nyere forskning.",
+        "src": "2020s L2",
+        "m": [
+          70,
+          85
+        ]
+      },
+      {
+        "s": "Alle sprogkurser består af eneundervisning og er skræddersyede til dine evner og dit niveau, hvilket sikrer dig det bedste resultat.",
+        "src": "2016s L1",
+        "m": [
+          123,
+          131
+        ]
+      },
+      {
+        "s": "Denne hjælp har gjort det muligt for mange at gennemføre uddannelsen med et godt resultat.",
+        "src": "2015v L1",
+        "m": [
+          81,
+          89
+        ]
+      },
+      {
+        "s": "Madlavning ender således med at blive en hobby for mændene, hvor de lægger tid og energi i at nå et godt resultat.",
+        "src": "2015s L2",
+        "m": [
+          105,
+          113
+        ]
+      }
+    ],
+    "en_rettighed": [
+      {
+        "s": "Der er ingen tvivl om, at kvinder ikke havde så meget politisk magt dengang, men der er alligevel meget, der tyder på, at kvinder både var selvstændige og havde rettigheder.",
+        "src": "2022v L1",
+        "m": [
+          161,
+          172
+        ]
+      },
+      {
+        "s": "Du lærer forskellige fisketeknikker, om fiskeriregulering og fiskeredskaber, motorer og sikkerhed, og du kan få rettigheder til at føre visse fiskefartøjer.",
+        "src": "2015v L1",
+        "m": [
+          112,
+          123
+        ]
+      },
+      {
+        "s": "en lærerig oplevelse samtidig med at rettighederne, værdigheden og integriteten for de mennesker, man hjælper, respekteres.",
+        "src": "2015s L1",
+        "m": [
+          37,
+          50
+        ]
+      }
+    ],
+    "samtidig": [
+      {
+        "s": "Samtidig er de kommet tættere på Tyskland, hvor Jon har boet og studeret.",
+        "src": "2023s L1",
+        "m": [
+          0,
+          8
+        ]
+      },
+      {
+        "s": "Vikingemad til alle tider Ribe VikingeCenter sætter fokus på vikingernes råvarer og madtraditioner og gør samtidig op med forestillingen om, at vikingemad skulle være besværlig og kedelig.",
+        "src": "2022v L1",
+        "m": [
+          106,
+          114
+        ]
+      },
+      {
+        "s": "Det nye museum skal sikre de fem Skuldelev- skibe mod klimaforandringer, og samtidig skal museets udstillinger og faciliteter bringes op til nutidige standarder.",
+        "src": "2022v L1",
+        "m": [
+          76,
+          84
+        ]
+      },
+      {
+        "s": "Samtidig debatteres mad- og måltidskultur sammen med gæsterne.",
+        "src": "2021v L1",
+        "m": [
+          0,
+          8
+        ]
+      },
+      {
+        "s": "Samtidig voksede byen med tusindvis af små en- og tofamilieshuse, som ligger i en bred ring uden om den gamle by.",
+        "src": "2021v L1",
+        "m": [
+          0,
+          8
+        ]
+      },
+      {
+        "s": "Samtidig ved vi, at der er en stor interesse for at besøge og høre historien om det gamle teater, hvorfor teatret tilbyder guidede rundvisninger, når det er muligt.",
+        "src": "2021s L1",
+        "m": [
+          0,
+          8
+        ]
+      },
+      {
+        "s": "Samtidig belaster produktionen af kød jorden og vandressourcerne.",
+        "src": "2021s L2",
+        "m": [
+          0,
+          8
+        ]
+      },
+      {
+        "s": "Samtidig modtager mange voksne, både danskere og flygtninge/indvandrere, undervisning hos AOF, så de kan lære at læse det, som de har brug for i deres hverdag.",
+        "src": "2020v L1",
+        "m": [
+          0,
+          8
+        ]
+      }
+    ],
+    "at_undersøge": [
+      {
+        "s": "Måske er det ikke så overraskende, men det var alligevel interessant nok til, at VIA University College satte sig for at undersøge det nærmere.",
+        "src": "2023s L2",
+        "m": [
+          121,
+          130
+        ]
+      },
+      {
+        "s": "Desuden er det en god idé at undersøge grundigt, hvor det kan betale sig at skære ned på forbruget.",
+        "src": "2021s L2",
+        "m": [
+          29,
+          38
+        ]
+      },
+      {
+        "s": "I dette forløb undersøger vi, hvordan gradvist flere grupper i samfundet opnåede stemmeret, og de kampe, der udkæmpedes undervejs.",
+        "src": "2020s L1",
+        "m": [
+          15,
+          25
+        ]
+      },
+      {
+        "s": "Det blev dog ikke aktuelt for Eva at undersøge mulighederne nærmere.",
+        "src": "2020s L2",
+        "m": [
+          37,
+          46
+        ]
+      },
+      {
+        "s": "De skal for det første undersøge og sætte sig ind i, hvilke fag forskellige universiteter i udlandet tilbyder.",
+        "src": "2020s L2",
+        "m": [
+          23,
+          32
+        ]
+      },
+      {
+        "s": "Han havde allerede været i gang med at undersøge mulighederne.",
+        "src": "2019v L2",
+        "m": [
+          39,
+          48
+        ]
+      },
+      {
+        "s": "Hun har undersøgt, hvordan vi i dag forholder os til arbejdet.",
+        "src": "2017s L2",
+        "m": [
+          8,
+          17
+        ]
+      },
+      {
+        "s": "hvordan aberne pilede ud for at undersøge deres nye territorium.",
+        "src": "2016s L1",
+        "m": [
+          32,
+          41
+        ]
+      }
+    ],
+    "at_åbne_for": [
+      {
+        "s": "Der er cirka fire kilometer gange, der er åbne for gæster, og heraf er cirka to kilometer oplyst.",
+        "src": "2024s L1",
+        "m": [
+          42,
+          50
+        ]
+      },
+      {
+        "s": "Alle events skal være åbne for alle.",
+        "src": "2023v L1",
+        "m": [
+          22,
+          30
+        ]
+      },
+      {
+        "s": "Til gengæld lægger de unge også mere pres på sig selv for at præstere hver eneste dag i skolen, så de kan holde mulighederne åbne.",
+        "src": "2021v L2",
+        "m": [
+          125,
+          129
+        ]
+      },
+      {
+        "s": "Det presser de unge, der har meget fokus på at opnå topkarakterer, så valgmulighederne er åbne.",
+        "src": "2021v L2",
+        "m": [
+          90,
+          94
+        ]
+      },
+      {
+        "s": "I forhold til uddannelsesvalg er de unge med mindre stress åbne overfor, at der er mange veje til en god uddannelse.",
+        "src": "2021v L2",
+        "m": [
+          59,
+          63
+        ]
+      },
+      {
+        "s": "Heldigvis kan de fleste unge, både drenge og piger, lære at prioritere deres opgaver, give sig selv lov til at restituere og være åbne overfor, hvad fremtiden kan bringe.",
+        "src": "2021v L2",
+        "m": [
+          130,
+          134
+        ]
+      },
+      {
+        "s": "Når dørene åbner Når dørene åbner, er det de ydre døre ud til Teatergaden.",
+        "src": "2021s L1",
+        "m": [
+          11,
+          16
+        ]
+      },
+      {
+        "s": "For disse scener gælder det endvidere, at dørene ind til selve teatersalen først åbner 10 minutter inden forestillingen starter.",
+        "src": "2021s L1",
+        "m": [
+          81,
+          86
+        ]
+      }
+    ],
+    "alene": [
+      {
+        "s": "Når turistsæsonen er på sit højeste, er der travlhed på færgen ’Anholt’, der i juli måned alene transporterer 40 procent af årets totale antal passagerer.",
+        "src": "2022s L1",
+        "m": [
+          90,
+          95
+        ]
+      },
+      {
+        "s": "Han mener nemlig ikke, at den perfekte medarbejder findes: ”Den helt rigtige person til et job kan man ikke finde alene ved at udsætte ansøgere for en test.",
+        "src": "2022s L2",
+        "m": [
+          114,
+          119
+        ]
+      },
+      {
+        "s": "Det er selvfølgelig ikke den enkelte forbruger alene.",
+        "src": "2021s L2",
+        "m": [
+          47,
+          52
+        ]
+      },
+      {
+        "s": "Profilen er med til at give et fuldendt billede af dig som person og vil aldrig stå alene i en vurdering.",
+        "src": "2018s L1",
+        "m": [
+          84,
+          89
+        ]
+      },
+      {
+        "s": "I dag mener Gert, at han havde for høje forventninger til sit arbejdsliv, men han mener ikke, at det alene var hans egne forventninger, der var skyld i hans sammenbrud.",
+        "src": "2017s L2",
+        "m": [
+          101,
+          106
+        ]
+      },
+      {
+        "s": "Der er altså ikke tale om, at børn blot sidder alene derhjemme med en tablet.",
+        "src": "2016v L2",
+        "m": [
+          47,
+          52
+        ]
+      },
+      {
+        "s": "Hun erkender dog, at mange børn derhjemme mest sidder alene med deres tablet, og at de nogle gange foretrækker tabletten frem for at lege med kammerater.",
+        "src": "2016v L2",
+        "m": [
+          54,
+          59
+        ]
+      },
+      {
+        "s": "Kommer jeg til at være alene som frivillig?",
+        "src": "2016s L1",
+        "m": [
+          23,
+          28
+        ]
+      }
+    ],
+    "altså": [
+      {
+        "s": "En fire-dages arbejdsuge kan altså være en fordel i konkurrencen om medarbejdere.",
+        "src": "2024s L2",
+        "m": [
+          29,
+          34
+        ]
+      },
+      {
+        "s": "Formålet med bymidterne skal altså tænkes bredere end i den klassiske handelsby, hvor det primært var handlen, der fik folk ind til centrum.",
+        "src": "2024s L2",
+        "m": [
+          29,
+          34
+        ]
+      },
+      {
+        "s": "Som almindelig internetbruger er der altså meget, man selv kan gøre for at undgå at blive offer for it-kriminalitet.",
+        "src": "2023v L2",
+        "m": [
+          37,
+          42
+        ]
+      },
+      {
+        "s": "Men jeg vidste altså ikke særlig meget om den administrative del af det at have sin egen virksomhed.",
+        "src": "2022v L2",
+        "m": [
+          15,
+          20
+        ]
+      },
+      {
+        "s": "Men nu er jeg altså tilbage på min barndoms ø.",
+        "src": "2022s L1",
+        "m": [
+          14,
+          19
+        ]
+      },
+      {
+        "s": "Det er nemlig ikke en eksamen, og der er hverken rigtige eller forkerte svar,” siger hun. ”Det er altså et uheldigt ordvalg, fordi en personlighedstest egentlig ikke er en test.",
+        "src": "2022s L2",
+        "m": [
+          98,
+          103
+        ]
+      },
+      {
+        "s": "Kort sagt er det altså intet problem at få en hel dag til at gå her.",
+        "src": "2021v L1",
+        "m": [
+          17,
+          22
+        ]
+      },
+      {
+        "s": "Her kan I altså få oplevelsen af at træde direkte ind i den fynske historie, hvor museets aktiviteter og arrangementer er med til at gøre jeres besøg meget autentisk.",
+        "src": "2021v L1",
+        "m": [
+          10,
+          15
+        ]
+      }
+    ],
+    "en_anbefaling": [
+      {
+        "s": "Rapporten kommer selvfølgelig også med en række anbefalinger til, hvordan man kan gøre det lettere for mennesker med et handicap at komme i arbejde.",
+        "src": "2023s L2",
+        "m": [
+          48,
+          60
+        ]
+      },
+      {
+        "s": "Jeg vil hermed give min varmeste anbefaling af Scala Biograferne!",
+        "src": "2019v L1",
+        "m": [
+          33,
+          43
+        ]
+      },
+      {
+        "s": "Kontakt os derfor endelig og hør nærmere om anbefalingerne.",
+        "src": "2016s L1",
+        "m": [
+          44,
+          58
+        ]
+      }
+    ],
+    "en_ansøgning_om": [
+      {
+        "s": "For at blive kåret til Årets Ø skal man have fokus på dette tema i ansøgningen.",
+        "src": "2022s L1",
+        "m": [
+          67,
+          78
+        ]
+      },
+      {
+        "s": "Inden Kamilla fik jobbet, havde hun ligesom de fleste andre nyuddannede brugt meget tid på at lære at skrive ansøgninger og CV og syntes også selv, hendes ansøgninger var gode.",
+        "src": "2022s L2",
+        "m": [
+          109,
+          120
+        ]
+      },
+      {
+        "s": "Jeg tog blandt andet kurser i at skrive ansøgninger – og jeg blev til sidst rigtig god til at beskrive alt det, jeg kan,” siger han med et smil.",
+        "src": "2022s L2",
+        "m": [
+          40,
+          51
+        ]
+      },
+      {
+        "s": "Forberedende voksenundervisning i dansk med fokus på ansøgninger og CV, der får dig tilbage på arbejdsmarkedet.",
+        "src": "2020v L1",
+        "m": [
+          53,
+          64
+        ]
+      },
+      {
+        "s": "Ved kursets afslutning samler du din egen mappe med manual(er) til ansøgninger og CV samt en handleplan for din fortsatte jobsøgning.",
+        "src": "2020v L1",
+        "m": [
+          67,
+          78
+        ]
+      },
+      {
+        "s": "Der kræves ingen forudsætninger for at deltage på kurset, men vi forventer, at du møder stabilt og er interesseret i og motiveret for at arbejde med skriftligt dansk og lave ansøgninger.",
+        "src": "2020v L1",
+        "m": [
+          174,
+          185
+        ]
+      },
+      {
+        "s": "Civilingeniør Trine Sundsvald havde hverken skrevet en ansøgning eller været til en egentlig jobsamtale, da hun begyndte som projektleder i Niras’1 Jernbaneafdeling 1. december sidste år.",
+        "src": "2020v L2",
+        "m": [
+          55,
+          64
+        ]
+      },
+      {
+        "s": "Statsborgere fra lande uden for EU/EØS, for hvem der gælder krav om ansøgning om opholdstilladelse, skal kunne dokumentere en række forhold, hvis de ønsker at gå på højskole i Danmark.",
+        "src": "2018v L1",
+        "m": [
+          68,
+          80
+        ]
+      }
+    ],
+    "at_beskytte_mod": [
+      {
+        "s": "De bør være med til at sikre, at borgerne kender til risikoen ved at færdes på nettet og bliver bedre til at beskytte sig mod it-kriminalitet.",
+        "src": "2023v L2",
+        "m": [
+          109,
+          117
+        ]
+      },
+      {
+        "s": "Desuden bør man beskytte sig med et godt antivirusprogram, både på sin computer og på alle sine andre digitale enheder.",
+        "src": "2023v L2",
+        "m": [
+          16,
+          24
+        ]
+      },
+      {
+        "s": "Undersøgelser af, om beskyttede dyrearter er truet, eller om havstrømme forstyrres, kan være meget tidskrævende.",
+        "src": "2023s L2",
+        "m": [
+          21,
+          31
+        ]
+      },
+      {
+        "s": "Museet har været nødt til at beskytte stenene mod vind og vejr.",
+        "src": "2020s L1",
+        "m": [
+          29,
+          37
+        ]
+      },
+      {
+        "s": "Andre giver penge til at beskytte natur og miljø.",
+        "src": "2019s L2",
+        "m": [
+          25,
+          33
+        ]
+      },
+      {
+        "s": "Aalborg Zoo er også hovedsponsor på et projekt i Sydafrika, hvis primære formål er at beskytte elefanter og næsehorn mod krybskytteri.",
+        "src": "2017v L1",
+        "m": [
+          86,
+          94
+        ]
+      }
+    ],
+    "at_bevise": [
+      {
+        "s": "Det er faktisk tilfældet, men indtil videre kan man ikke se det som bevis for en forøget sundhedsrisiko.",
+        "src": "2020s L2",
+        "m": [
+          68,
+          73
+        ]
+      },
+      {
+        "s": "En EU/EØS-borger skal kunne identificere sig og kunne bevise sit statsborgerskab.",
+        "src": "2018v L1",
+        "m": [
+          54,
+          60
+        ]
+      },
+      {
+        "s": "Uddannelsen afsluttes med svendeprøve og eksamen i de gymnasiale fag og projekter, og du får udstedt et eux-bevis med karakterer.",
+        "src": "2015v L1",
+        "m": [
+          108,
+          113
+        ]
+      },
+      {
+        "s": "Når uddannelsen er afsluttet, får du Det Blå Bevis, der er fiskeriets svendebrev.",
+        "src": "2015v L1",
+        "m": [
+          45,
+          50
+        ]
+      },
+      {
+        "s": "Du bør derfor bede dit uddannelsessted om at lave et bevis til dig, for den undervisning du har gennemført.",
+        "src": "2013s L1",
+        "m": [
+          53,
+          58
+        ]
+      },
+      {
+        "s": "Uddannelsen afsluttes med svendeprøve og eksamen i de gymnasiale fag og projekter, og du får udstedt et EUX-bevis med karakterer.",
+        "src": "2013s L1",
+        "m": [
+          108,
+          113
+        ]
+      },
+      {
+        "s": "En erhvervsuddannelse med et EUX- bevis giver adgang til videregående uddannelse og gymnasiale suppleringskurser på lige vilkår med de gymnasiale uddannelser.",
+        "src": "2013s L1",
+        "m": [
+          34,
+          39
+        ]
+      },
+      {
+        "s": "Et EUX-bevis giver dig adgang til videregående uddannelse og gymnasiale suppleringskurser på lige vilkår med de gymnasiale uddannelser.",
+        "src": "2013s L1",
+        "m": [
+          7,
+          12
+        ]
+      }
+    ],
+    "dernæst": [
+      {
+        "s": "Dernæst skal de finde ud af at søge ind på det valgte universitet.",
+        "src": "2020s L2",
+        "m": [
+          0,
+          7
+        ]
+      },
+      {
+        "s": "Du betaler ikke dobbelt pris for at deltage på to projekter – derimod betaler du prisen for det dyreste projekt, og dernæst lægges prisen for de ekstra uger oveni.",
+        "src": "2016s L1",
+        "m": [
+          116,
+          123
+        ]
+      },
+      {
+        "s": "Efter grundforløbet kan du uddanne dig til pædagogisk assistent eller social- og sundhedshjælper og dernæst til social- og sundhedsassistent.",
+        "src": "2013s L1",
+        "m": [
+          100,
+          107
+        ]
+      }
+    ],
+    "at_erkende": [
+      {
+        "s": "”Jeg måtte relativt hurtigt erkende, at jeg ikke kunne klare at arbejde så meget, og at jeg måtte blive bedre til nogle gange at slippe kontrollen.",
+        "src": "2023v L2",
+        "m": [
+          28,
+          35
+        ]
+      },
+      {
+        "s": "De nuværende ledelser må erkende, at der er brug for kvindernes kompetencer.",
+        "src": "2018s L2",
+        "m": [
+          25,
+          32
+        ]
+      },
+      {
+        "s": "Hun erkender dog, at mange børn derhjemme mest sidder alene med deres tablet, og at de nogle gange foretrækker tabletten frem for at lege med kammerater.",
+        "src": "2016v L2",
+        "m": [
+          4,
+          12
+        ]
+      }
+    ],
+    "en_evne_til": [
+      {
+        "s": "Det mener i hvert fald Martin Holm: ”Hvis man vil teste kandidaternes evner, så er det bedre at lade dem løse konkrete opgaver.",
+        "src": "2022s L2",
+        "m": [
+          70,
+          75
+        ]
+      },
+      {
+        "s": "Så kan man se, hvordan de præsterer i praksis,” siger han og fortsætter: ”Den model vil også vise noget om kandidaternes evne til at samarbejde.",
+        "src": "2022s L2",
+        "m": [
+          121,
+          129
+        ]
+      },
+      {
+        "s": "Formidlingen adskiller sig ved, at indholdet ikke kræver, at modtagerne har særlige forudsætninger eller evner ud over det at være nysgerrige og interesserede mennesker.",
+        "src": "2020v L1",
+        "m": [
+          105,
+          110
+        ]
+      },
+      {
+        "s": "Undervisningen på Nationalmuseet skal også styrke elevernes evne til at argumentere og diskutere.",
+        "src": "2020s L1",
+        "m": [
+          60,
+          68
+        ]
+      },
+      {
+        "s": "Kører du dit barn i skole, så forringer du barnets evne til at lære mange timer frem.",
+        "src": "2018v L2",
+        "m": [
+          51,
+          59
+        ]
+      },
+      {
+        "s": "andet mad, motion og evnen til at koncentrere sig.",
+        "src": "2018v L2",
+        "m": [
+          21,
+          30
+        ]
+      },
+      {
+        "s": "motionen havde på børnenes evne til at koncentrere sig.",
+        "src": "2018v L2",
+        "m": [
+          27,
+          35
+        ]
+      },
+      {
+        "s": "Formålet med undersøgelsen, som faldt i to dele, var at se på sammenhængen mellem blandt andet mad, motion og evnen til at koncentrere sig.",
+        "src": "2018v L2",
+        "m": [
+          110,
+          119
+        ]
+      }
+    ],
+    "at_fastholde": [
+      {
+        "s": "Dels for lettere at kunne fastholde dem, der allerede er ansat, dels for lettere at kunne rekruttere nye, efterspurgte kræfter.",
+        "src": "2024s L2",
+        "m": [
+          26,
+          35
+        ]
+      },
+      {
+        "s": "De øer, der har sværest ved at fastholde en helårsbefolkning, er øer med en kombination af lang sejltid, fravær af skole og ringe adgang til basal offentlig service.",
+        "src": "2022s L1",
+        "m": [
+          31,
+          40
+        ]
+      },
+      {
+        "s": "Testrup højskoles elevforening sørger for, at alle tidligere elever kan fastholde kontakten til Testrup – uanset hvor i verden de befinder sig.",
+        "src": "2018v L1",
+        "m": [
+          72,
+          81
+        ]
+      }
+    ],
+    "et_forbud_mod": [
+      {
+        "s": "De mødtes derfor ofte i forsamlingshuse for at holde møder og synge danske sange, selv om sidstnævnte officielt var forbudt.",
+        "src": "2023s L1",
+        "m": [
+          116,
+          123
+        ]
+      },
+      {
+        "s": "Mange film fra Vesteuropa og USA var nemlig forbudt i de kommunistiske lande, fordi de blev opfattet som propaganda.",
+        "src": "2019v L1",
+        "m": [
+          44,
+          51
+        ]
+      },
+      {
+        "s": "Jeg har ikke evig dårlig samvittighed, når jeg spiser noget forbudt, for jeg må jo spise helt normalt på fem af ugens syv dage.",
+        "src": "2014v L2",
+        "m": [
+          60,
+          67
+        ]
+      }
+    ],
+    "en_forsikring": [
+      {
+        "s": "”Deleøkonomien sætter eksisterende spilleregler under pres, f.eks. vedrørende forsikring og forbrugerbeskyttelse.",
+        "src": "2017v L2",
+        "m": [
+          78,
+          88
+        ]
+      },
+      {
+        "s": "Forsikringen dækker fra vi har modtaget den fulde betaling.",
+        "src": "2016s L1",
+        "m": [
+          0,
+          12
+        ]
+      },
+      {
+        "s": "Forsikringen dækker så snart, at den fulde betaling har fundet sted.",
+        "src": "2016s L1",
+        "m": [
+          0,
+          12
+        ]
+      },
+      {
+        "s": "Forsikringen dækker ikke frivillige over 65 år, så befinder du dig i denne gruppe, beder vi dig kontakte os, således at vi kan tegne en speciel forsikring til dig.",
+        "src": "2016s L1",
+        "m": [
+          0,
+          12
+        ]
+      },
+      {
+        "s": "Hvis du er uddannet læge eller sygeplejersker og ønsker at arbejde på et af vore medicinske projekter skal du have en anderledes forsikring.",
+        "src": "2016s L1",
+        "m": [
+          129,
+          139
+        ]
+      }
+    ],
+    "forskellig_fra": [
+      {
+        "s": "Efter nederlaget måtte Danmark opgive hertugdømmerne, der indtil da på forskellig vis havde hørt under den danske konge.",
+        "src": "2023s L1",
+        "m": [
+          71,
+          81
+        ]
+      },
+      {
+        "s": "Befolkningssammensætningen Befolkningssammensætningen er forskellig fra ø til ø.",
+        "src": "2022s L1",
+        "m": [
+          57,
+          71
+        ]
+      },
+      {
+        "s": "Kontrollørerne på Tivolis forlystelser har forskellig alder og baggrund.",
+        "src": "2018s L1",
+        "m": [
+          43,
+          53
+        ]
+      },
+      {
+        "s": "Kompetencecenteret holder til i moderne og veludstyrede lokaler, som gør det særdeles attraktivt til afholdelse af arrangementer af forskellig art.",
+        "src": "2015v L1",
+        "m": [
+          132,
+          142
+        ]
+      },
+      {
+        "s": "Et EUX-forløb er tilpasset den enkelte erhvervsuddannelse, og kan være forskellig fx for elever i en elektrikeruddannelse og elever i tømreruddannelse.",
+        "src": "2013s L1",
+        "m": [
+          71,
+          81
+        ]
+      }
+    ],
+    "et_forslag_til_om": [
+      {
+        "s": "Hvis vi mod forventning ikke kan efterkomme dit ønske, kontakter vi dig med alternative forslag, eller med henblik på at refundere dit depositum.",
+        "src": "2016s L1",
+        "m": [
+          88,
+          95
+        ]
+      }
+    ],
+    "for_det_første": [
+      {
+        "s": "De skal for det første undersøge og sætte sig ind i, hvilke fag forskellige universiteter i udlandet tilbyder.",
+        "src": "2020s L2",
+        "m": [
+          8,
+          22
+        ]
+      },
+      {
+        "s": "Ledige under 25 år på dagpenge har mulighed for at komme på højskole med halve dagpenge inden for det første halve år af ledighedsperioden.",
+        "src": "2018v L1",
+        "m": [
+          94,
+          108
+        ]
+      },
+      {
+        "s": "For det første at man er optaget på en godkendt folkehøjskole og har betalt deltagergebyret.",
+        "src": "2018v L1",
+        "m": [
+          0,
+          14
+        ]
+      }
+    ],
+    "en_gevinst_ved": [
+      {
+        "s": "Økonomisk gevinst for Danmark Det er ikke kun de danske firmaer, men også den danske økonomi, der nyder godt af højtuddannede udlændinge.",
+        "src": "2019v L2",
+        "m": [
+          10,
+          17
+        ]
+      },
+      {
+        "s": "Analyser viser dog, at denne indvandring også er en økonomisk gevinst for Danmark.",
+        "src": "2019v L2",
+        "m": [
+          62,
+          69
+        ]
+      },
+      {
+        "s": "Samfundsøkonomisk gevinst Mændenes øgede deltagelse i husarbejdet gavner ikke blot ligestillingen.",
+        "src": "2015s L2",
+        "m": [
+          18,
+          25
+        ]
+      }
+    ],
+    "at_glemme": [
+      {
+        "s": "Hvad jeg aldrig vil glemme, var den dag jeg var med til at sætte fire aber fri.",
+        "src": "2016s L1",
+        "m": [
+          20,
+          26
+        ]
+      }
+    ],
+    "imens": [
+      {
+        "s": "Imens kunne man som gæst gå rundt med et polaroidkamera og blot samtale og være til stede.",
+        "src": "2019s L1",
+        "m": [
+          0,
+          5
+        ]
+      }
+    ],
+    "at_klage_over": [
+      {
+        "s": "Varer måtte fragtes over land til Hjarbæk ved Limfjorden, der benyttedes som byens havn.",
+        "src": "2024s L1",
+        "m": [
+          20,
+          24
+        ]
+      },
+      {
+        "s": "Over jorden kan man besøge det gamle kalkværk og museet i den gamle bestyrerbolig.",
+        "src": "2024s L1",
+        "m": [
+          0,
+          4
+        ]
+      },
+      {
+        "s": "Min mand og jeg har vandret sammen i over 25 år med undtagelse af nogle år, hvor det ikke var muligt, fordi vores børn var for små til at kunne gå med.",
+        "src": "2024s L1",
+        "m": [
+          37,
+          41
+        ]
+      },
+      {
+        "s": "Jeg tror, der er mange borgere i Viborg, der er stolte over, at byen er så succesfuld, og det er noget, der er med til at skabe sammenhold.",
+        "src": "2024s L1",
+        "m": [
+          55,
+          59
+        ]
+      },
+      {
+        "s": "Jeg er imponeret over den opbakning vores sportsfolk får.",
+        "src": "2024s L1",
+        "m": [
+          17,
+          21
+        ]
+      },
+      {
+        "s": "Der er konkurrence om de kvalificerede medarbejdere, og undersøgelser viser, at medarbejderne bliver mere loyale over for virksomheden, hvis de ikke skal arbejde så mange timer.",
+        "src": "2024s L2",
+        "m": [
+          113,
+          117
+        ]
+      },
+      {
+        "s": "Der falder således også mest nedbør over Almindingen i øens kuperede midte.",
+        "src": "2023v L1",
+        "m": [
+          36,
+          40
+        ]
+      },
+      {
+        "s": "Om vinteren kan kold luft fra øst danne snebyger over den relativt lune Østersø, hvilket visse år medfører et kraftigt snefald på øen.",
+        "src": "2023v L1",
+        "m": [
+          49,
+          53
+        ]
+      }
+    ],
+    "en_kontrast_til": [
+      {
+        "s": "Se kontrasten fra Store Scene til Takkelloftet, hvor scenens fleksibilitet er i centrum, og hvor Tal Rs moderne abstraktion pryder foyeren.",
+        "src": "2021s L1",
+        "m": [
+          3,
+          13
+        ]
+      },
+      {
+        "s": "Herudover kan man også opleve installationer og anden samtidskunst, som står i kontrast til de historiske omgivelser på Egeskov Slot.",
+        "src": "2019s L1",
+        "m": [
+          79,
+          91
+        ]
+      },
+      {
+        "s": "Kontrasterne er enorme, og selv inden for landegrænserne oplever man stor variation.",
+        "src": "2016s L1",
+        "m": [
+          0,
+          12
+        ]
+      }
+    ],
+    "langt_fra": [
+      {
+        "s": "For Martin Holm, ph.d. i psykologi, er det langt fra det eneste problem ved personlighedstest.",
+        "src": "2022s L2",
+        "m": [
+          43,
+          52
+        ]
+      },
+      {
+        "s": "Det er dog langt fra alle danskere, man kan få til at give penge på den måde.",
+        "src": "2019s L2",
+        "m": [
+          11,
+          20
+        ]
+      },
+      {
+        "s": "Vi arbejder i en række afrikanske lande, og selvom de måske kan virke relativt ens, så er det langt fra tilfældet.",
+        "src": "2016s L1",
+        "m": [
+          94,
+          103
+        ]
+      }
+    ],
+    "at_lette": [
+      {
+        "s": "Der er parkeringspladser, selvom de ikke altid er lette at få øje på Den Gamle By har i flere år arbejdet for at skaffe bedre parkeringsforhold for museets gæster.",
+        "src": "2017s L1",
+        "m": [
+          50,
+          55
+        ]
+      }
+    ],
+    "en_livskvalitet": [
+      {
+        "s": "Da Mimi fik job og flyttede til Tønder med sin mand, Jon, var udfordringen i begyndelsen, at de især var bekymrede for, om livskvaliteten i Sønderjylland kunne leve op til deres forventninger.",
+        "src": "2023s L1",
+        "m": [
+          123,
+          137
+        ]
+      }
+    ],
+    "at_lukke": [
+      {
+        "s": "Man kunne også helt lukke nogle uddannelser.",
+        "src": "2023v L2",
+        "m": [
+          20,
+          25
+        ]
+      },
+      {
+        "s": "Vores forestillinger starter præcist, og dørene lukker derfor også ved forestillingens start.",
+        "src": "2021s L1",
+        "m": [
+          48,
+          54
+        ]
+      },
+      {
+        "s": "Udstillingen var i øvrigt under ombygning, og derfor var en del af den lukket.",
+        "src": "2020s L1",
+        "m": [
+          71,
+          77
+        ]
+      },
+      {
+        "s": "Hvis ikke man har et sådant kort med, vil ens ledsager ikke blive lukket ind.",
+        "src": "2019s L1",
+        "m": [
+          66,
+          72
+        ]
+      },
+      {
+        "s": "Vi forventer, at du kan arbejde i sæsonerne, og at du er indstillet på at holde din ferie, når Tivoli er lukket.",
+        "src": "2018s L1",
+        "m": [
+          105,
+          111
+        ]
+      },
+      {
+        "s": "Forlystelserne skal åbne og lukke på det tidspunkt, gæsterne forventer det.",
+        "src": "2018s L1",
+        "m": [
+          28,
+          33
+        ]
+      },
+      {
+        "s": "Der er meget ujævnt i pingvinernes anlæg det er derfor vigtigt, at du ikke er dårligt gående, samt at du har praktiske lukkede sko på.",
+        "src": "2017v L1",
+        "m": [
+          119,
+          126
+        ]
+      },
+      {
+        "s": "Kom med rundt i staldene, før dyrene bliver lukket ud om morgenen, eller efter de er kommet ind om aftenen.",
+        "src": "2017v L1",
+        "m": [
+          44,
+          50
+        ]
+      }
+    ],
+    "at_omtale": [
+      {
+        "s": "Ørkenen har altid været meget omtalt, da en række interessante arter af fx fugle, insekter og planter har deres foretrukne levested i den særegne natur.",
+        "src": "2022s L1",
+        "m": [
+          30,
+          36
+        ]
+      },
+      {
+        "s": "Det er derfor vigtigt for en virksomhed at tage hensyn til miljøet og behandle de ansatte godt, så virksomheden kan få en god omtale.",
+        "src": "2020v L2",
+        "m": [
+          126,
+          132
+        ]
+      },
+      {
+        "s": "Egtvedpigen, der i dag ligger på Nationalmuseet, omtales som et af danmarkshistoriens bedst bevarede bronzealderfund.",
+        "src": "2020s L1",
+        "m": [
+          49,
+          56
+        ]
+      },
+      {
+        "s": "Det er også kvinderne, der påvirkes mest af de budskaber, der bliver omtalt og får stor opmærksomhed i medierne i forbindelse med nationale indsamlinger.",
+        "src": "2019s L2",
+        "m": [
+          69,
+          75
+        ]
+      }
+    ],
+    "et_ønske_om": [
+      {
+        "s": "Det fælles ønske for partnerne er, at alle ønsker at gøre en aktiv indsats for at styrke sammenhængskraften i hele Danmark – også på de danske øer.",
+        "src": "2022s L1",
+        "m": [
+          11,
+          16
+        ]
+      },
+      {
+        "s": "Usikkerhed i ansættelsen Når ansatte i korte midlertidige ansættelser generelt foretrækker en længerevarende fastansættelse, skyldes det ønsket om mere tryghed i deres arbejdsliv.",
+        "src": "2020v L2",
+        "m": [
+          137,
+          146
+        ]
+      },
+      {
+        "s": "Forhallen kan indrettes efter lejernes ønske og behov.",
+        "src": "2020s L1",
+        "m": [
+          39,
+          44
+        ]
+      },
+      {
+        "s": "Hvis vi mod forventning ikke kan efterkomme dit ønske, kontakter vi dig med alternative forslag, eller med henblik på at refundere dit depositum.",
+        "src": "2016s L1",
+        "m": [
+          48,
+          53
+        ]
+      },
+      {
+        "s": "Det er et politisk ønske og et fælles mål i Danmark, at alle unge gennemfører en uddannelse efter 9. klasse.",
+        "src": "2015v L1",
+        "m": [
+          19,
+          24
+        ]
+      },
+      {
+        "s": "På din skole vil UU-vejlederen give dig en grundig orientering om, hvordan du taster dit ønske ind, og hvordan dine forældre skal godkende tilmeldingen.",
+        "src": "2015v L1",
+        "m": [
+          89,
+          94
+        ]
+      },
+      {
+        "s": "Derfor hænger vurderin gen også tæt sammen med dine ønsker om uddannelse, og der sker en selvstændig vurdering for hvert ønske.",
+        "src": "2015s L1",
+        "m": [
+          121,
+          126
+        ]
+      },
+      {
+        "s": "I planen skal nævnes mindst et uddannelsesønske sammen med ønske om a) studieretning, b) 2. fremmedsprog ved valg af stx eller hh x og c) et kunstnerisk fag ved valg af stx.",
+        "src": "2015s L1",
+        "m": [
+          59,
+          67
+        ]
+      }
+    ],
+    "primært": [
+      {
+        "s": "Hvolris Jern- alderlandsby har primært fokus på jernalderen i tiden omkring år 0.",
+        "src": "2024s L1",
+        "m": [
+          31,
+          38
+        ]
+      },
+      {
+        "s": "Det er primært torsdag, fredag og lørdag, der er koncerter.",
+        "src": "2024s L1",
+        "m": [
+          7,
+          14
+        ]
+      },
+      {
+        "s": "På de øvrige hverdage udlejes Paletten til andre aktiviteter, primært kulturelle.",
+        "src": "2024s L1",
+        "m": [
+          62,
+          69
+        ]
+      },
+      {
+        "s": "Formålet med bymidterne skal altså tænkes bredere end i den klassiske handelsby, hvor det primært var handlen, der fik folk ind til centrum.",
+        "src": "2024s L2",
+        "m": [
+          90,
+          97
+        ]
+      },
+      {
+        "s": "Marskstien er en såkaldt trampesti, hvor man primært vandrer på græs.",
+        "src": "2023s L1",
+        "m": [
+          45,
+          52
+        ]
+      },
+      {
+        "s": "Det krævede mange samtaler, både med kolleger og venner, men selvfølgelig primært med hinanden.",
+        "src": "2018v L2",
+        "m": [
+          74,
+          81
+        ]
+      },
+      {
+        "s": "Kursusforløbet retter sig primært mod AMUmålgruppen – dvs. personer med en uddannelsesbaggrund til og med erhvervsuddannelsesniveauet og nogen erfaring med administrative opgaver.",
+        "src": "2018s L1",
+        "m": [
+          26,
+          33
+        ]
+      },
+      {
+        "s": "Givskud Zoo er primært en safaripark, hvor man i egen bil kører gennem parkens store anlæg, hvor flere forskellige dyr går sammen.",
+        "src": "2017v L1",
+        "m": [
+          15,
+          22
+        ]
+      }
+    ],
+    "en_problematik": [
+      {
+        "s": "Dog peger man på en central problematik, som man bliver nødt til at gøre noget ved.",
+        "src": "2017v L2",
+        "m": [
+          28,
+          39
+        ]
+      }
+    ],
+    "at_have_råd_til": [
+      {
+        "s": "Vi bliver simpelthen nødt til at arbejde mere, hvis vi vil have råd til at leve godt i hele vores tilværelse som pensionist.",
+        "src": "2017v L2",
+        "m": [
+          59,
+          71
+        ]
+      }
+    ],
+    "en_service": [
+      {
+        "s": "De øer, der har sværest ved at fastholde en helårsbefolkning, er øer med en kombination af lang sejltid, fravær af skole og ringe adgang til basal offentlig service.",
+        "src": "2022s L1",
+        "m": [
+          157,
+          164
+        ]
+      },
+      {
+        "s": "Vores servicemedarbejdere giver gæsterne en ekstraordinær og betagende oplevelse ved at yde en fantastisk service.",
+        "src": "2018s L1",
+        "m": [
+          106,
+          113
+        ]
+      },
+      {
+        "s": "Vi sælger, markedsfører og udvikler oplevelser og services i Tivoli.",
+        "src": "2018s L1",
+        "m": [
+          50,
+          58
+        ]
+      },
+      {
+        "s": "På forløbet lærer du effektive metoder til at udvikle oplevelsesprodukter, yde optimal og målrettet rådgivning og service til turister og kunder og sælge turistprodukter.",
+        "src": "2018s L1",
+        "m": [
+          114,
+          121
+        ]
+      },
+      {
+        "s": "Det er rigtig søde folk, der serverer, men jeg kunne godt tænke mig, at det var gennemført, så de serverede af service fra den tid også.",
+        "src": "2017s L1",
+        "m": [
+          111,
+          118
+        ]
+      },
+      {
+        "s": "Servicet minder for meget om nutidens, og det er lidt ærgerligt.",
+        "src": "2017s L1",
+        "m": [
+          0,
+          8
+        ]
+      },
+      {
+        "s": "De penge du betaler, gør os i stand til at yde en uforlignelig førsteklasses service.",
+        "src": "2016s L1",
+        "m": [
+          77,
+          84
+        ]
+      },
+      {
+        "s": "Du har desuden nye erhvervsrettede fag som salg & service, IT og erhvervsøkonomi.",
+        "src": "2015v L1",
+        "m": [
+          50,
+          57
+        ]
+      }
+    ],
+    "et_spørgsmål_om": [
+      {
+        "s": "Din lokale tilflytterguide vil hjælpe dig med spørgsmål og tilbyder dig en bred vifte af forskellige tilbud, både før og efter din ankomst.",
+        "src": "2023s L1",
+        "m": [
+          46,
+          55
+        ]
+      },
+      {
+        "s": "Tilflytterguides tilbyder deres assistance omkring spørgsmål vedrørende flytning og bosætning.",
+        "src": "2023s L1",
+        "m": [
+          51,
+          60
+        ]
+      },
+      {
+        "s": "Det kan være opklarende spørgsmål omkring boligmuligheder, skoler og andre offentlige muligheder samt sociale og kulturelle tilbud i området.",
+        "src": "2023s L1",
+        "m": [
+          24,
+          33
+        ]
+      },
+      {
+        "s": "De svarede på vores spørgsmål, og det var også dem, der bakkede os op, da vi fik problemer med at optage boliglån.",
+        "src": "2022s L1",
+        "m": [
+          20,
+          29
+        ]
+      },
+      {
+        "s": "I stedet skulle eleverne være nysgerrige og stille spørgsmål til lærerne, hvis rolle det var at svare på spørgsmålene og indgå i en dialog.",
+        "src": "2020v L1",
+        "m": [
+          51,
+          60
+        ]
+      },
+      {
+        "s": "I bibliotekets bemandede åbningstid hjælper de ansatte med at besvare spørgsmål og vejlede i informationssøgning i de filmdatabaser, biblioteket stiller til rådighed.",
+        "src": "2019v L1",
+        "m": [
+          70,
+          79
+        ]
+      },
+      {
+        "s": "De mange frivillige Børnepassere i Børneland er klar til at hjælpe med at passe børnene, og har man spørgsmål, kan man i Børne-info få svar på næsten alt.",
+        "src": "2019s L1",
+        "m": [
+          100,
+          109
+        ]
+      },
+      {
+        "s": "Der er både udgifter ved selve flytningen, og så er der spørgsmålet om de faste udgifter på længere sigt.",
+        "src": "2018v L2",
+        "m": [
+          56,
+          70
+        ]
+      }
+    ],
+    "et_udvalg_af": [
+      {
+        "s": "Hun er nemlig udvalgt til at spille en særlig rolle i den verden, som følger efter undergangen.",
+        "src": "2023v L1",
+        "m": [
+          14,
+          21
+        ]
+      },
+      {
+        "s": "Det er ikke alle, der er enige i, at man skal prøve at tilpasse udvalget af uddannelser efter det behov, der er i øjeblikket.",
+        "src": "2023v L2",
+        "m": [
+          64,
+          75
+        ]
+      },
+      {
+        "s": "I tilknytning til restauranten findes en mindre bar med et stort udvalg af specialøl, vin og drinks.",
+        "src": "2021v L1",
+        "m": [
+          65,
+          74
+        ]
+      },
+      {
+        "s": "Der er brug for mange forskellige undervisningskompetencer, da aftenskolerne udbyder kurser inden for et alsidigt udvalg af fag.",
+        "src": "2020v L1",
+        "m": [
+          114,
+          123
+        ]
+      },
+      {
+        "s": "restauranten har et bredt udvalg af frokost- og middagsretter.",
+        "src": "2019v L1",
+        "m": [
+          26,
+          35
+        ]
+      },
+      {
+        "s": "I Cinematekets butik kan man finde et stort udvalg af blu-rays, DVD’er med film fra hele filmhistorien, CD’er med filmmusik og nu også lp-plader med filmmusik, noget man ikke har solgt tidligere.",
+        "src": "2019v L1",
+        "m": [
+          44,
+          53
+        ]
+      },
+      {
+        "s": "Grand har i mange år været synonym med fransk film, men der vises generelt et bredt udvalg af film, også amerikanske.",
+        "src": "2019v L1",
+        "m": [
+          84,
+          93
+        ]
+      }
+    ],
+    "uproblematisk": [
+      {
+        "s": "Dette initiativ er taget for at gøre ankomsten for gæsten med et handicap så let og uproblematisk som muligt.",
+        "src": "2019s L1",
+        "m": [
+          84,
+          97
+        ]
+      }
+    ],
+    "en_kvalitet": [
+      {
+        "s": "Men også i dette kulturspor kan lokale kunstnere fint gøre sig gældende med koncerter rundt omkring på øen, hvor de viser kvaliteten af det bornholmske musikliv.",
+        "src": "2023v L1",
+        "m": [
+          122,
+          132
+        ]
+      },
+      {
+        "s": "Man kan dog tjekke kvaliteten hos uafhængige testvirksomheder, hvor man kan læse gratis analyser og anmeldelser af blandt andet de antivirusprogrammer, man kan finde på nettet.",
+        "src": "2023v L2",
+        "m": [
+          19,
+          29
+        ]
+      },
+      {
+        "s": "I Sønderjylland er der en lang tradition for at fremstille pølser af god kvalitet.",
+        "src": "2023s L1",
+        "m": [
+          73,
+          81
+        ]
+      },
+      {
+        "s": "Det er forbeholdt fødevarer af en særegen kvalitet og historik, udviklet og produceret af producenter på én af de 27 småøer spredt ud over Danmark.",
+        "src": "2022s L1",
+        "m": [
+          42,
+          50
+        ]
+      },
+      {
+        "s": "Over hundrede ildsjæle melder sig som frivillige til festivalugen, og endnu flere mennesker gæster festivalen for den høje kvalitet, der leveres.",
+        "src": "2021v L1",
+        "m": [
+          123,
+          131
+        ]
+      },
+      {
+        "s": "Odense Food Festival er en ny, ambitiøs odenseansk madfestival, der sætter kvalitet og smag på menuen.",
+        "src": "2021v L1",
+        "m": [
+          75,
+          83
+        ]
+      },
+      {
+        "s": "Restaurant Grand har traditionel stil og høj kvalitet.",
+        "src": "2021v L1",
+        "m": [
+          45,
+          53
+        ]
+      },
+      {
+        "s": "Samlingerne og udstillingerne har høj kvalitet.",
+        "src": "2020s L1",
+        "m": [
+          38,
+          46
+        ]
+      }
+    ],
+    "en_vejledning": [
+      {
+        "s": "Forløbene varer 3 timer, og undervejs får de kyndig vejledning af filmpædagogiske guider.",
+        "src": "2019v L1",
+        "m": [
+          52,
+          62
+        ]
+      },
+      {
+        "s": "Ved at tilbyde vejledning kan de hjælpe de studerende med deres problemer, før de bliver for store.",
+        "src": "2019s L2",
+        "m": [
+          15,
+          25
+        ]
+      },
+      {
+        "s": "Eleverne modtager desuden vejledning om uddannelses- og erhvervsmuligheder.",
+        "src": "2018v L1",
+        "m": [
+          26,
+          36
+        ]
+      },
+      {
+        "s": "Som kursist på VUF får du adgang til alle skolens faciliteter, fx kantine med kursistopholdsrum, studiecenter med mulighed for vejledning af faglærere og bibliotekar, lektiecafé og diverse it-faciliteter.",
+        "src": "2016v L1",
+        "m": [
+          127,
+          137
+        ]
+      },
+      {
+        "s": "Har du andre forudsætninger, fx en udenlandsk eksamen, kan du få råd og vejledning i studievejledningen.",
+        "src": "2016v L1",
+        "m": [
+          72,
+          82
+        ]
+      },
+      {
+        "s": "Specialpædagogisk støtte (SPS) Har du en funktionsnedsættelse eller tilsvarende svære vanskeligheder (ordblind, blind, svagtsynet, døv, hørehæmmet, bevægelseshæmmet eller psykiske vanskeligheder), kan du få rådgivning, vejledning og hjælp via SPS.",
+        "src": "2016v L1",
+        "m": [
+          219,
+          229
+        ]
+      },
+      {
+        "s": "Hvis du har brug for vejledning om valg af uddannelse og erhverv, kan UU- Ungdommens Uddannelsesvejledning-hjælpe dig.",
+        "src": "2015s L1",
+        "m": [
+          21,
+          31
+        ]
+      },
+      {
+        "s": "Formålet med vejledningen er, at du fuldfører den valgte uddannelse med størst muligt fagligt og personligt udbytte.",
+        "src": "2015s L1",
+        "m": [
+          13,
+          25
+        ]
+      }
+    ],
+    "en_velstand": [
+      {
+        "s": "Det har betydet højere velstand for mange mennesker.",
+        "src": "2021s L2",
+        "m": [
+          23,
+          31
+        ]
+      },
+      {
+        "s": "Og selv om de udeboende altså tjener deres egne penge, tjener de ikke særlig mange af dem, så deres materielle velstand er dårligere end de hjemmeboendes.",
+        "src": "2013s L2",
+        "m": [
+          111,
+          119
+        ]
+      }
+    ],
+    "at_vise": [
+      {
+        "s": "Der er konkurrence om de kvalificerede medarbejdere, og undersøgelser viser, at medarbejderne bliver mere loyale over for virksomheden, hvis de ikke skal arbejde så mange timer.",
+        "src": "2024s L2",
+        "m": [
+          70,
+          75
+        ]
+      },
+      {
+        "s": "Undersøgelser viser også, at det kan blive lettere at rekruttere nye medarbejdere.",
+        "src": "2024s L2",
+        "m": [
+          14,
+          19
+        ]
+      },
+      {
+        "s": "Men også i dette kulturspor kan lokale kunstnere fint gøre sig gældende med koncerter rundt omkring på øen, hvor de viser kvaliteten af det bornholmske musikliv.",
+        "src": "2023v L1",
+        "m": [
+          116,
+          121
+        ]
+      },
+      {
+        "s": "Nummeret viser hvilken rute, man befinder sig på.",
+        "src": "2023v L1",
+        "m": [
+          9,
+          14
+        ]
+      },
+      {
+        "s": "Cykelmærkeordningen Bed+Bike viser vej til cykelvenlige overnatningssteder i hele Danmark.",
+        "src": "2023v L1",
+        "m": [
+          29,
+          34
+        ]
+      },
+      {
+        "s": "På bogens første side er der trykt et kort over øen, hvilket skal vise sig at være til stor hjælp.",
+        "src": "2023v L1",
+        "m": [
+          66,
+          70
+        ]
+      },
+      {
+        "s": "Men ofte viser det sig, at frygten er ubegrundet. ”Det voldte faktisk ikke de store problemer, da det kom til stykket.",
+        "src": "2023v L2",
+        "m": [
+          9,
+          14
+        ]
+      },
+      {
+        "s": "I andre rum kan man se udstillinger, der viser den tyske overvågning af lejren.",
+        "src": "2023s L1",
+        "m": [
+          41,
+          46
+        ]
+      }
+    ],
+    "at_vurdere": [
+      {
+        "s": "Vi kan derfor ikke vurdere, hvilke behov der kommer til at opstå.",
+        "src": "2023v L2",
+        "m": [
+          19,
+          26
+        ]
+      },
+      {
+        "s": "Hvis deltagere skulle vurderes ved en eksamen, ville man netop risikere at miste den del af kompetenceudviklingen, der handler om andet end det faglige udbytte.",
+        "src": "2020v L1",
+        "m": [
+          22,
+          30
+        ]
+      },
+      {
+        "s": "Og da teknologien inden for mobiltelefoni udvikler sig hele tiden, er det meget svært at vurdere risikoen.",
+        "src": "2020s L2",
+        "m": [
+          89,
+          96
+        ]
+      },
+      {
+        "s": "Dagen vil også byde på små, sjove og involverende øvelser, hvor deltagerne vil blive vurderet af nogle observatører.",
+        "src": "2018s L1",
+        "m": [
+          85,
+          93
+        ]
+      },
+      {
+        "s": "Deltagerne på rekrutteringsworkshoppen vil blive vurderet på deres præstation, mindset og engagement.",
+        "src": "2018s L1",
+        "m": [
+          49,
+          57
+        ]
+      },
+      {
+        "s": "På U1 og U2 vil deltagerne ligeledes blive vurderet af nogle observatører, hvor præstation, mindset og engagement har en afgørende rolle for, om deltagerne går videre i ansættelsesforløbet.",
+        "src": "2018s L1",
+        "m": [
+          43,
+          51
+        ]
+      },
+      {
+        "s": "Tagbokse af hård plast er som udgangspunkt velkomne, medmindre personalet på dagen vurderer det anderledes.",
+        "src": "2017v L1",
+        "m": [
+          83,
+          91
+        ]
+      },
+      {
+        "s": "Hvis du søger ind på både en erhvervsuddannelse og en gymnasial uddannelse, skal din parathed vurderes i forhold til begge.",
+        "src": "2015v L1",
+        "m": [
+          94,
+          102
+        ]
+      }
+    ],
+    "at_acceptere": [
+      {
+        "s": "Tyskerne accepterede nemlig, at det danske fængselsvæsen stod for fangernes forplejning.",
+        "src": "2023s L1",
+        "m": [
+          9,
+          20
+        ]
+      }
+    ],
+    "at_ændre": [
+      {
+        "s": "Men det vigtigste for Martin Holm er dog, at man ændrer synet på rekruttering.",
+        "src": "2022s L2",
+        "m": [
+          49,
+          55
+        ]
+      },
+      {
+        "s": "I et stort studie fra to amerikanske byer (Portland og Houston) tilkendegav folk, at de ikke havde ændret adfærd som følge af klimaproblemerne.",
+        "src": "2021s L2",
+        "m": [
+          99,
+          105
+        ]
+      },
+      {
+        "s": "Rammerne ændrer sig løbende, og nye muligheder dukker op.",
+        "src": "2020v L1",
+        "m": [
+          9,
+          15
+        ]
+      },
+      {
+        "s": "Mange af museets fotos er tilgængelige under en særlig licens, der tillader, at man kan bearbejde, ændre og udbygge billedet, også til kommercielle formål, så længe museet og fotografen krediteres.",
+        "src": "2020s L1",
+        "m": [
+          99,
+          104
+        ]
+      },
+      {
+        "s": "Selvom højskolerne stadig ikke tilbyder eksaminer, og Grundtvig og Kolds idealer om den almene dannelse stadig fylder meget i højskoleverdenen, så har højskolerne bestemt også ændret sig i igennem årtierne.",
+        "src": "2018v L1",
+        "m": [
+          176,
+          182
+        ]
+      },
+      {
+        "s": "Langt de fleste statslige arbejdspladser har altid ligget i København, men dette er ved at ændre sig.",
+        "src": "2018v L2",
+        "m": [
+          91,
+          96
+        ]
+      },
+      {
+        "s": "”Andre ideer med deleøkonomi, for eksempel Airbnb, lægger op til, at folk skal ændre deres adfærd.",
+        "src": "2017v L2",
+        "m": [
+          79,
+          84
+        ]
+      },
+      {
+        "s": "Han begrunder det med, at mange typer job har ændret sig, så vi i dag ikke slides ned.",
+        "src": "2017v L2",
+        "m": [
+          46,
+          52
+        ]
+      }
+    ],
+    "attraktiv": [
+      {
+        "s": "Bornholm er en attraktiv ø at opleve fra en cykel.",
+        "src": "2023v L1",
+        "m": [
+          15,
+          24
+        ]
+      },
+      {
+        "s": "Der arbejdes tæt sammen med partnere på både lokalt, regionalt og nationalt niveau om at sætte Danmark på Europakortet som en attraktiv cykeldestination.",
+        "src": "2023v L1",
+        "m": [
+          126,
+          135
+        ]
+      },
+      {
+        "s": "Og det er kvaliteter, som er velsete i krævende karrierejob – også selvom kvaliteterne kan gøre en medarbejder attraktiv for andre virksomheder.",
+        "src": "2015v L2",
+        "m": [
+          111,
+          120
+        ]
+      }
+    ],
+    "at_dokumentere": [
+      {
+        "s": "Man skal blandt andet kunne fremvise regnskaber for flere år og dokumentere, at man kan tjene penge.",
+        "src": "2022v L2",
+        "m": [
+          64,
+          75
+        ]
+      },
+      {
+        "s": "I løbet af retssagen dokumenterede man nemlig, at løven blev aflivet af en professionel skytte.",
+        "src": "2019v L1",
+        "m": [
+          21,
+          34
+        ]
+      },
+      {
+        "s": "skal man kunne dokumentere, at man kan tale enten dansk, svensk, norsk, engelsk eller tysk på et rimeligt niveau samt tale det sprog, som undervisningen gennemføres på.",
+        "src": "2018v L1",
+        "m": [
+          15,
+          26
+        ]
+      },
+      {
+        "s": "Statsborgere fra lande uden for EU/EØS, for hvem der gælder krav om ansøgning om opholdstilladelse, skal kunne dokumentere en række forhold, hvis de ønsker at gå på højskole i Danmark.",
+        "src": "2018v L1",
+        "m": [
+          111,
+          122
+        ]
+      },
+      {
+        "s": "Under alle om stændigheder kan du senere få brug for at kunne dokumentere, hvilken undervisning du har fået.",
+        "src": "2013s L1",
+        "m": [
+          62,
+          73
+        ]
+      },
+      {
+        "s": "I den samles blandt andet skolepapirer med karakterer, skolevejledninger og andre relevante dokumenter for uddannelsesforløbet.",
+        "src": "2013s L1",
+        "m": [
+          92,
+          102
+        ]
+      }
+    ],
+    "at_fravælge": [
+      {
+        "s": "Ved at fravælge de varmeste måneder minimerer man risikoen for at østersene indeholder giftige alger.",
+        "src": "2022s L1",
+        "m": [
+          7,
+          15
+        ]
+      },
+      {
+        "s": "Det er nemlig sandsynligt, at den høje topskat får nogle udlændinge til at fravælge Danmark.",
+        "src": "2019v L2",
+        "m": [
+          75,
+          83
+        ]
+      }
+    ],
+    "en_hensigt_med": [
+      {
+        "s": "Og det ser ud til at have virket efter hensigten.",
+        "src": "2019s L2",
+        "m": [
+          39,
+          48
+        ]
+      }
+    ],
+    "indtil": [
+      {
+        "s": "Efter nederlaget måtte Danmark opgive hertugdømmerne, der indtil da på forskellig vis havde hørt under den danske konge.",
+        "src": "2023s L1",
+        "m": [
+          58,
+          64
+        ]
+      },
+      {
+        "s": "Indtil virksomheden kører så godt, at man kan ansætte nogle medarbejdere, må man selv stå for det hele.",
+        "src": "2022v L2",
+        "m": [
+          0,
+          6
+        ]
+      },
+      {
+        "s": "mener, at de ledige skal ud og finde sig et arbejde så hurtigt som muligt: ”Indtil man finder drømmejobbet, må man tage de job, der er.",
+        "src": "2021s L2",
+        "m": [
+          76,
+          82
+        ]
+      },
+      {
+        "s": "Det er faktisk tilfældet, men indtil videre kan man ikke se det som bevis for en forøget sundhedsrisiko.",
+        "src": "2020s L2",
+        "m": [
+          30,
+          36
+        ]
+      },
+      {
+        "s": "Det har indtil nu generelt være muligt for COWI at få nok dygtige medarbejdere til projekter uden at skulle rekruttere i udlandet.",
+        "src": "2019v L2",
+        "m": [
+          8,
+          14
+        ]
+      },
+      {
+        "s": "For EU/EØS-borgere gælder, at man frit kan indrejse og opholde sig i landet i indtil 3 måneder.",
+        "src": "2018v L1",
+        "m": [
+          78,
+          84
+        ]
+      },
+      {
+        "s": "Helle og Lars boede indtil for to år siden i København, men bor i dag i Hjørring, hvor Helles arbejdsplads, Statens Administration, nu ligger.",
+        "src": "2018v L2",
+        "m": [
+          20,
+          26
+        ]
+      },
+      {
+        "s": "For de fleste arbejdspladser vil dette tab kun dreje sig om en periode, indtil de nye medarbejdere har opbygget deres faglighed.",
+        "src": "2018v L2",
+        "m": [
+          72,
+          78
+        ]
+      }
+    ],
+    "at_være_nødt_til": [
+      {
+        "s": "Flere, der egentlig ønskede at studere en humanistisk uddannelse, ville så være nødt til at vælge et andet studium.",
+        "src": "2023v L2",
+        "m": [
+          75,
+          88
+        ]
+      },
+      {
+        "s": "Museet har været nødt til at beskytte stenene mod vind og vejr.",
+        "src": "2020s L1",
+        "m": [
+          11,
+          25
+        ]
+      }
+    ],
+    "at_overveje": [
+      {
+        "s": "Hjælp til medfølgende partnere i hele Syddanmark Flytter du – eller overvejer du at flytte – med din partner, som har fået job i Syddanmark?",
+        "src": "2023s L1",
+        "m": [
+          68,
+          77
+        ]
+      },
+      {
+        "s": "Eva overvejede blandt andet University of London, der har et godt ry.",
+        "src": "2020s L2",
+        "m": [
+          4,
+          14
+        ]
+      },
+      {
+        "s": "En svær beslutning Andrei havde som mange andre unge rumænere overvejet at søge job i udlandet.",
+        "src": "2019v L2",
+        "m": [
+          62,
+          71
+        ]
+      },
+      {
+        "s": "Har du en genstand, som du overvejer at forære til Den Gamle By, så send en mail med beskrivelse og foto af genstanden.",
+        "src": "2017s L1",
+        "m": [
+          27,
+          36
+        ]
+      },
+      {
+        "s": "journaliStik Hvis du overvejer en karriere indenfor journalistik, eller savner en pause fra igangværende studier eller arbejde, giver et journalistikprojekt dig helt unik erfaring indenfor faget.",
+        "src": "2016s L1",
+        "m": [
+          21,
+          30
+        ]
+      },
+      {
+        "s": "Vi afholder jævnligt inspirationsmøder rundt om i Danmark for alle som overvejer at rejse ud som ulandsfrivillige.",
+        "src": "2016s L1",
+        "m": [
+          71,
+          80
+        ]
+      }
+    ],
+    "at_planlægge": [
+      {
+        "s": "misbruger ’Træner-Thomas’, som hun i al hemmelighed planlægger at forlade.",
+        "src": "2023v L1",
+        "m": [
+          52,
+          62
+        ]
+      },
+      {
+        "s": "For eksempel er det som freelancer muligt selv at definere og planlægge sin arbejdsdag, både i forhold til indhold og arbejdstid.",
+        "src": "2019v L2",
+        "m": [
+          62,
+          71
+        ]
+      },
+      {
+        "s": "Vi planlægger dagen i Den Gamle By i fællesskab.",
+        "src": "2017s L1",
+        "m": [
+          3,
+          13
+        ]
+      },
+      {
+        "s": "Læreren skulle stadig planlægge undervisningen i de forskellige fag, men han skulle ikke længere være en autoritet, som eleverne var bange for.",
+        "src": "2016s L2",
+        "m": [
+          22,
+          31
+        ]
+      },
+      {
+        "s": "Du planlægger altså ikke HELE dit liv.",
+        "src": "2015v L1",
+        "m": [
+          3,
+          13
+        ]
+      },
+      {
+        "s": "Vi kan desuden planlægge og afholde kompetenceudvikling og arrangementer ude i landet, så du lokalt kan få præcis det kursus eller arrangement, du ønsker.",
+        "src": "2015v L1",
+        "m": [
+          15,
+          24
+        ]
+      },
+      {
+        "s": "Det viser nemlig, at man er god til at planlægge og strukturere, og at man har viljestyrke og kan klare udfordrende opgaver og hele tiden sætte sig nye og store mål.",
+        "src": "2015v L2",
+        "m": [
+          39,
+          48
+        ]
+      },
+      {
+        "s": "Danmark har et veludbygget vejledningssystem, som sik rer, at alle har mulighed for at planlægge uddannelses- og erhvervskarriere med en vejleder.",
+        "src": "2015s L1",
+        "m": [
+          87,
+          96
+        ]
+      }
+    ],
+    "en_aftale": [
+      {
+        "s": "Bussens afgangstider er afhængige af tidevandet (ved normalt højvande er der 1,75 meter vand over Ebbevejen), men i sommerhalvåret kører den 1-2 gange om dagen (om vinteren efter aftale).",
+        "src": "2022s L1",
+        "m": [
+          179,
+          185
+        ]
+      },
+      {
+        "s": "Der er dog også mange øboere, der pendler – nogle med en aftale om delvis hjemmearbejdsplads.",
+        "src": "2022s L1",
+        "m": [
+          57,
+          63
+        ]
+      },
+      {
+        "s": "En del af aftalen retter sig mod ”småøerne og fire ø-kommuner”.",
+        "src": "2022s L1",
+        "m": [
+          10,
+          17
+        ]
+      },
+      {
+        "s": "Det skal dog være noget, man skal aftale med sin leder.",
+        "src": "2021v L2",
+        "m": [
+          34,
+          40
+        ]
+      },
+      {
+        "s": "Større grupper kan træffe aftale om rundvisning på teatret på udvalgte dage.",
+        "src": "2021s L1",
+        "m": [
+          26,
+          32
+        ]
+      },
+      {
+        "s": "Der vil blive mulighed for både hverdags- og weekendvagter, antallet af timer aftales og indskrives i en ’ansættelseskontrakt’.",
+        "src": "2017s L1",
+        "m": [
+          78,
+          85
+        ]
+      },
+      {
+        "s": "Den Gamle By har begrænset plads, så vi aftale.",
+        "src": "2017s L1",
+        "m": [
+          40,
+          46
+        ]
+      },
+      {
+        "s": "Eksempelvis er det en god idé på forhånd at aftale, hvilken mad der skal serveres, og hvor mange retter der skal på bordet.",
+        "src": "2016v L2",
+        "m": [
+          44,
+          50
+        ]
+      }
+    ],
+    "almindelig": [
+      {
+        "s": "Sådanne fortællinger foregår i den umiddelbart genkendelige verden, men ofte sker der ting og sager, som måske ikke er virkelighedstro i almindelig forstand.",
+        "src": "2023v L1",
+        "m": [
+          137,
+          147
+        ]
+      },
+      {
+        "s": "Overgangen fra at være almindelig medarbejder til at være leder er svær for mange.",
+        "src": "2023v L2",
+        "m": [
+          23,
+          33
+        ]
+      },
+      {
+        "s": "Nogle gange er det en almindelig pc, der bliver brugt, men det kan lige så godt være en smartphone, en tablet eller et ur.",
+        "src": "2023v L2",
+        "m": [
+          22,
+          32
+        ]
+      },
+      {
+        "s": "Som almindelig internetbruger er der altså meget, man selv kan gøre for at undgå at blive offer for it-kriminalitet.",
+        "src": "2023v L2",
+        "m": [
+          4,
+          14
+        ]
+      },
+      {
+        "s": "Og hvor en almindelig lønmodtager har ret til mindst fem ugers ferie om året, der må en iværksætter selv spare op og sætte tid af.",
+        "src": "2022v L2",
+        "m": [
+          11,
+          21
+        ]
+      },
+      {
+        "s": "faglært Almindelig eller med gymnasial eksamen (eux).",
+        "src": "2015v L1",
+        "m": [
+          8,
+          18
+        ]
+      },
+      {
+        "s": "Det gør man også ved en almindelig slankekur.",
+        "src": "2014v L2",
+        "m": [
+          24,
+          34
+        ]
+      },
+      {
+        "s": "Det gør man også ved en almindelig s lan kekur.",
+        "src": "2014v L2",
+        "m": [
+          24,
+          34
+        ]
+      }
+    ],
+    "at_analysere": [
+      {
+        "s": "Man kan dog tjekke kvaliteten hos uafhængige testvirksomheder, hvor man kan læse gratis analyser og anmeldelser af blandt andet de antivirusprogrammer, man kan finde på nettet.",
+        "src": "2023v L2",
+        "m": [
+          88,
+          96
+        ]
+      },
+      {
+        "s": "Analyser viser dog, at denne indvandring også er en økonomisk gevinst for Danmark.",
+        "src": "2019v L2",
+        "m": [
+          0,
+          8
+        ]
+      }
+    ],
+    "en_baggrund_for": [
+      {
+        "s": "Jeg rejser rundt til vikingemarkeder og vikingefestivaler, hvor jeg viser mine varer frem og fortæller om baggrunden for og produktionen af dem – og så sælger jeg dem selvfølgelig.",
+        "src": "2022v L1",
+        "m": [
+          106,
+          120
+        ]
+      },
+      {
+        "s": "På den baggrund forventer man, at bedre muligheder for at påvirke, hvor og hvornår man arbejder på daglig basis, også vil øge tilfredsheden.",
+        "src": "2021v L2",
+        "m": [
+          7,
+          15
+        ]
+      },
+      {
+        "s": "Eleverne modtager på baggrund af højskoleopholdet et gennemførelsesbevis, der beskriver mål og indhold for højskoleopholdet.",
+        "src": "2018v L1",
+        "m": [
+          21,
+          29
+        ]
+      },
+      {
+        "s": "Oure Fodboldtræner Akademi optager kun 12 trænertalenter om året, og for at komme ind skal man sende en motiveret ansøgning, hvor man fortæller om sin baggrund, erfaringer og ambitioner.",
+        "src": "2018v L1",
+        "m": [
+          151,
+          159
+        ]
+      },
+      {
+        "s": "Kontrollørerne på Tivolis forlystelser har forskellig alder og baggrund.",
+        "src": "2018s L1",
+        "m": [
+          63,
+          71
+        ]
+      },
+      {
+        "s": "Det er en fordel, men ikke et krav, hvis du har baggrund som guide, har vejledt andre eller på anden måde har erfaring med at møde og servicere mange forskellige slags mennesker.",
+        "src": "2018s L1",
+        "m": [
+          48,
+          56
+        ]
+      },
+      {
+        "s": "Legoland er en mangfoldig arbejdsplads med medarbejdere og ledere med vidt forskellige baggrunde og kompetencer.",
+        "src": "2018s L1",
+        "m": [
+          87,
+          96
+        ]
+      },
+      {
+        "s": "På baggrund af den første samtalerunde, vil vi typisk udvælge 2-3 kandidater, der skal gå videre til 2. samtale.",
+        "src": "2018s L1",
+        "m": [
+          3,
+          11
+        ]
+      }
+    ],
+    "at_belaste": [
+      {
+        "s": "Samtidig belaster produktionen af kød jorden og vandressourcerne.",
+        "src": "2021s L2",
+        "m": [
+          9,
+          17
+        ]
+      }
+    ],
+    "en_beliggenhed": [
+      {
+        "s": "Den østlige beliggenhed rykker Bornholm ind i et geologisk område, som adskiller sig markant fra det øvrige Danmark.",
+        "src": "2023v L1",
+        "m": [
+          12,
+          23
+        ]
+      },
+      {
+        "s": "Det store skovareal, det kuperede terræn og beliggenheden i Østersøen har stor betydning for klimaet på Bornholm.",
+        "src": "2023v L1",
+        "m": [
+          44,
+          57
+        ]
+      },
+      {
+        "s": "Bornholms Kunstmuseum er med sin beliggenhed oven for Helligdomsklipperne på kysten mellem Gudhjem og Tejn og sin arkitektoniske udformning i sig selv en attraktion.",
+        "src": "2023v L1",
+        "m": [
+          33,
+          44
+        ]
+      },
+      {
+        "s": "Derfor har Bornholm haft tæt kontakt til resten af verden, og det er først i nyere tid, at den geografiske beliggenhed er blevet betragtet som isoleret og en ulempe.",
+        "src": "2023v L1",
+        "m": [
+          107,
+          118
+        ]
+      },
+      {
+        "s": "Sønderborg Slot er med sin storslåede beliggenhed ved indsejlingen til Sønderborg et nationalt dansk ikon.",
+        "src": "2023s L1",
+        "m": [
+          38,
+          49
+        ]
+      },
+      {
+        "s": "God beliggenhed, god mad og mulighed for at lytte til musik karakteriserer denne café.",
+        "src": "2021v L1",
+        "m": [
+          4,
+          15
+        ]
+      },
+      {
+        "s": "Skolens beliggenhed De tekniske erhvervsuddannelser er placeret på 4 adresser i byen.",
+        "src": "2013s L1",
+        "m": [
+          8,
+          19
+        ]
+      }
+    ],
+    "at_droppe": [
+      {
+        "s": "Han mener, at det var en fejl af lærerne at droppe udenadslære.",
+        "src": "2016s L2",
+        "m": [
+          44,
+          50
+        ]
+      },
+      {
+        "s": "Er du droppet ud af en ungdomsuddannelse?",
+        "src": "2013s L1",
+        "m": [
+          6,
+          13
+        ]
+      }
+    ],
+    "foreløbig": [
+      {
+        "s": "Og der er ikke noget, der tyder på, at forskellene vil forsvinde foreløbig.",
+        "src": "2015s L2",
+        "m": [
+          65,
+          74
+        ]
+      },
+      {
+        "s": "Og der er ikke noget, der tyder på, at forskellen e vil forsvinde foreløbig.",
+        "src": "2015s L2",
+        "m": [
+          66,
+          75
+        ]
+      },
+      {
+        "s": "Alle tilmeldte elever indbydes til informationsaften og individuel samtale før skolestarten, hvor vi hjælper med at lave en foreløbig plan for din uddannelse.",
+        "src": "2013s L1",
+        "m": [
+          124,
+          133
+        ]
+      }
+    ],
+    "at_foretrække": [
+      {
+        "s": "Der er lønmodtagere, der foretrækker et almindeligt arbejde fra ni til fem og med fast løn en gang om måneden.",
+        "src": "2022v L2",
+        "m": [
+          25,
+          36
+        ]
+      },
+      {
+        "s": "Usikkerhed i ansættelsen Når ansatte i korte midlertidige ansættelser generelt foretrækker en længerevarende fastansættelse, skyldes det ønsket om mere tryghed i deres arbejdsliv.",
+        "src": "2020v L2",
+        "m": [
+          79,
+          90
+        ]
+      },
+      {
+        "s": "Vi foretrækker ansøgere, der har lyst til at arbejde i alle sæsoner.",
+        "src": "2018s L1",
+        "m": [
+          3,
+          14
+        ]
+      },
+      {
+        "s": "Hun erkender dog, at mange børn derhjemme mest sidder alene med deres tablet, og at de nogle gange foretrækker tabletten frem for at lege med kammerater.",
+        "src": "2016v L2",
+        "m": [
+          99,
+          110
+        ]
+      }
+    ],
+    "at_forstyrre": [
+      {
+        "s": "Undersøgelser af, om beskyttede dyrearter er truet, eller om havstrømme forstyrres, kan være meget tidskrævende.",
+        "src": "2023s L2",
+        "m": [
+          72,
+          82
+        ]
+      },
+      {
+        "s": "Det gælder særligt for dem, der ofte oplever at blive forstyrret på kontoret.",
+        "src": "2022s L2",
+        "m": [
+          54,
+          64
+        ]
+      },
+      {
+        "s": "I undersøgelsen siger næsten 60 % af eleverne i folkeskolen, at de føler sig generet af uro i timerne, og at det forstyrrer og ødelægger undervisningen.",
+        "src": "2016s L2",
+        "m": [
+          113,
+          123
+        ]
+      },
+      {
+        "s": "Lærerne straffer derfor sjældent eleverne, hvis de laver for meget larm og forstyrrer undervisning en.",
+        "src": "2016s L2",
+        "m": [
+          75,
+          85
+        ]
+      }
+    ],
+    "frivillig": [
+      {
+        "s": "Jeg er frivillig på Paletten, som er et spillested i Viborg.",
+        "src": "2024s L1",
+        "m": [
+          7,
+          16
+        ]
+      },
+      {
+        "s": "Som frivillig møder jeg en masse mennesker, både koncertgæster og andre frivillige, og som et særligt plus har jeg også fået nye venner.",
+        "src": "2024s L1",
+        "m": [
+          4,
+          13
+        ]
+      },
+      {
+        "s": "Jeg har også gratis adgang til de fleste koncerter, så jeg kan kun anbefale at blive frivillig på Paletten.",
+        "src": "2024s L1",
+        "m": [
+          85,
+          94
+        ]
+      },
+      {
+        "s": "Som frivillig får man ikke løn – men for hver vagt får man en fribillet til Kinorevyen, som man selv kan bruge eller forære til familie eller venner.",
+        "src": "2019v L1",
+        "m": [
+          4,
+          13
+        ]
+      },
+      {
+        "s": "Værdifulde projekter Som frivillig hos Projects Abroad bliver du en del af et sammenhold mellem frivillige og lokale, som alle arbejder for at forbedre levevilkårene og miljøet i udviklingslande.",
+        "src": "2016s L1",
+        "m": [
+          25,
+          34
+        ]
+      },
+      {
+        "s": "Fokus på fleksibilitet Som frivillig hos Projects Abroad bestemmer du selv, hvornår du ønsker af tage af sted ligesom at du selv bestemmer længden på dit ophold.",
+        "src": "2016s L1",
+        "m": [
+          27,
+          36
+        ]
+      },
+      {
+        "s": "Hvorfor skal du betale for at være frivillig?",
+        "src": "2016s L1",
+        "m": [
+          35,
+          44
+        ]
+      },
+      {
+        "s": "Alle har noget at tilbyde de lokalsamfund, som vi arbejder i – der findes simpelthen ikke en ”typisk frivillig”!",
+        "src": "2016s L1",
+        "m": [
+          101,
+          110
+        ]
+      }
+    ],
+    "god_til_for": [
+      {
+        "s": "Desuden havde byen god indtjening på studeeksport, men byens placering inde i landet var et permanent problem.",
+        "src": "2024s L1",
+        "m": [
+          19,
+          22
+        ]
+      },
+      {
+        "s": "Der er mange muligheder for god forplejning under marchen.",
+        "src": "2024s L1",
+        "m": [
+          28,
+          31
+        ]
+      },
+      {
+        "s": "Jeg var ret god og kom også på Viborg FF’s andethold.",
+        "src": "2024s L1",
+        "m": [
+          12,
+          15
+        ]
+      },
+      {
+        "s": "Og det er der måske god grund til.",
+        "src": "2024s L2",
+        "m": [
+          20,
+          23
+        ]
+      },
+      {
+        "s": "Dels er det en god idé at bruge både tegn, tal og bogstaver, så de forskellige kombinationer er så uforudsigelige som muligt.",
+        "src": "2023v L2",
+        "m": [
+          15,
+          18
+        ]
+      },
+      {
+        "s": "Dels er det en god idé at bruge forskellige adgangskoder til forskellige tjenester, så hackere ikke pludselig får adgang til alle ens data og tjenester.",
+        "src": "2023v L2",
+        "m": [
+          15,
+          18
+        ]
+      },
+      {
+        "s": "Danske unge er nemlig ikke så afhængige af straks at få et arbejde med en høj løn efter endt uddannelse for at have en god levestandard.",
+        "src": "2023v L2",
+        "m": [
+          119,
+          122
+        ]
+      },
+      {
+        "s": "I Sønderjylland er der en lang tradition for at fremstille pølser af god kvalitet.",
+        "src": "2023s L1",
+        "m": [
+          69,
+          72
+        ]
+      }
+    ],
+    "at_håndtere": [
+      {
+        "s": "Unge håndterer pres forskelligt Ikke alle unge under pres får stresssymptomer.",
+        "src": "2021v L2",
+        "m": [
+          5,
+          14
+        ]
+      },
+      {
+        "s": "Studiet af de to 2.g-årgange på to gymnasier i Aalborg viser, at de unge, der ikke er stressede, er bedre til at håndtere kravene.",
+        "src": "2021v L2",
+        "m": [
+          113,
+          121
+        ]
+      },
+      {
+        "s": "Vi hjælper dig til at kunne tage ansvar, håndtere konflikter, samarbejde, være en god kollega og til i det hele taget at kunne glæde sig over at have et arbejde.",
+        "src": "2018s L1",
+        "m": [
+          41,
+          49
+        ]
+      }
+    ],
+    "imod": [
+      {
+        "s": "Samtidig peges der dog fra politisk side på, at det er en balancegang, hvor mange udenlandske studerende Danmark kan tage imod.",
+        "src": "2020s L2",
+        "m": [
+          122,
+          126
+        ]
+      },
+      {
+        "s": "”Jeg har ikke noget imod, at kvinder vælger at gå på deltid, overhovedet ikke.",
+        "src": "2018s L2",
+        "m": [
+          20,
+          24
+        ]
+      },
+      {
+        "s": "Han mener, det er den eneste vej frem for de traditionelle virksomheder, hvis de vil overleve, selvom mange traditionelle virksomheder umiddelbart vil være imod en sådan fornyelse.",
+        "src": "2017v L2",
+        "m": [
+          156,
+          160
+        ]
+      },
+      {
+        "s": "Vi stræber imod, at vores projekter yder værdifulde bidrag til de lokalsamfund, som vi arbejder i, samtidigt med at både frivillige og lokale oplever og udveksler kulturelle forskelligheder.",
+        "src": "2016s L1",
+        "m": [
+          11,
+          15
+        ]
+      },
+      {
+        "s": "Vi tager imod dig i lufthavnen, introducerer dig for din værtsfamilie og den pågældende partnerorganisation, og hjælper dig med at falde godt til.",
+        "src": "2016s L1",
+        "m": [
+          9,
+          13
+        ]
+      },
+      {
+        "s": "Du skal være villig til at søge praktikplads over hele landet og tage imod en plads, selv om den ligger i den anden ende af landet.",
+        "src": "2015v L1",
+        "m": [
+          70,
+          74
+        ]
+      },
+      {
+        "s": "Du skal også søge praktikplads og tage imod en plads inden for alle de uddannelsesområder, som dit grundforløb giver dig mulighed for at gå videre med.",
+        "src": "2015v L1",
+        "m": [
+          39,
+          43
+        ]
+      }
+    ],
+    "en_indretning": [
+      {
+        "s": "Det kan fx være særligt undervisningsmateriale, særligt værktøj eller en speciel indretning af kontoret.",
+        "src": "2023s L2",
+        "m": [
+          81,
+          91
+        ]
+      },
+      {
+        "s": "Der er altså et samspil mellem maden og indretningen, og på den måde opnår restauranten den traditionsrige atmosfære.",
+        "src": "2021v L1",
+        "m": [
+          40,
+          52
+        ]
+      },
+      {
+        "s": "Den Gamle By har haft et tæt samarbejde med Radiohistorisk Forening Ringsted om indretningen af butikken.",
+        "src": "2017s L1",
+        "m": [
+          80,
+          92
+        ]
+      },
+      {
+        "s": "Flemming er ikke i familie med Jens og Anne Grethe, men de to familiers baggrund og tilgang til indretning minder meget om hinanden.",
+        "src": "2017s L1",
+        "m": [
+          96,
+          106
+        ]
+      }
+    ],
+    "en_information": [
+      {
+        "s": "Derudover er der flere steder langs ruten opsat formidlingstavler med mere information.",
+        "src": "2023s L1",
+        "m": [
+          75,
+          86
+        ]
+      },
+      {
+        "s": "Særlige behov Nedenfor finder du information om adgangsforhold og handicapfaciliteter på Det Kongelige Teaters scener.",
+        "src": "2021s L1",
+        "m": [
+          33,
+          44
+        ]
+      },
+      {
+        "s": "Oplysningsforbundet samarbejder desuden med mange kommuner og foreninger om den nye platform GoJoin, hvor borgerne kan dele viden og informationer om aktiviteter med hinanden.",
+        "src": "2020v L1",
+        "m": [
+          133,
+          146
+        ]
+      },
+      {
+        "s": "DOF formidler derfor information om kurser – både information om dem, DOF selv afholder, og information om de støttemuligheder, DOF stiller til rådighed i forhold til andres kurser.",
+        "src": "2020v L1",
+        "m": [
+          21,
+          32
+        ]
+      },
+      {
+        "s": "Skoleelever anvender film og video i dagligdagen til at finde informationer og til at kommunikere med hele verden.",
+        "src": "2019v L1",
+        "m": [
+          62,
+          75
+        ]
+      },
+      {
+        "s": "Rekrutteringsworkshoppen afsluttes med information om, hvilke ansøgere der går videre til uddannelsesforløb 1 og 2 (U1 og U2).",
+        "src": "2018s L1",
+        "m": [
+          39,
+          50
+        ]
+      },
+      {
+        "s": "U1 og U2 afsluttes med information om, hvilke ansøgere der går videre til uddannelsesforløb 3 (U3).",
+        "src": "2018s L1",
+        "m": [
+          23,
+          34
+        ]
+      },
+      {
+        "s": "Hjælpemidler Ved henvendelse til Informationen i Limpopohuset er det muligt at låne kørestole, så længe der er ledige stole.",
+        "src": "2017v L1",
+        "m": [
+          33,
+          46
+        ]
+      }
+    ],
+    "at_klare": [
+      {
+        "s": "Men det er ikke kun i fodbold, Viborg klarer sig rigtigt godt som sportsby.",
+        "src": "2024s L1",
+        "m": [
+          38,
+          44
+        ]
+      },
+      {
+        "s": "Det er samfundet ikke klar til endnu.",
+        "src": "2024s L2",
+        "m": [
+          22,
+          26
+        ]
+      },
+      {
+        "s": "Men i dag er bymidterne truet, da butikkerne i bymidterne har svært ved at klare sig i konkurrencen med nethandlen og storcentrene, og kunderne svigter.",
+        "src": "2024s L2",
+        "m": [
+          75,
+          80
+        ]
+      },
+      {
+        "s": "Vandet er klart og rent – og med mange revler, så der både er lavt og dybt tæt på kysten.",
+        "src": "2023v L1",
+        "m": [
+          10,
+          15
+        ]
+      },
+      {
+        "s": "”Jeg måtte relativt hurtigt erkende, at jeg ikke kunne klare at arbejde så meget, og at jeg måtte blive bedre til nogle gange at slippe kontrollen.",
+        "src": "2023v L2",
+        "m": [
+          55,
+          60
+        ]
+      },
+      {
+        "s": "Og afdelingen gik jo ikke i stå, fordi jeg trak mig lidt og i stedet bad medarbejderne klare flere opgaver selv.",
+        "src": "2023v L2",
+        "m": [
+          87,
+          92
+        ]
+      },
+      {
+        "s": "Vores tilflytterguides er klar til at hjælpe I Sønderjylland står vi klar til at byde dig velkommen og hjælpe dig til bosætning i området.",
+        "src": "2023s L1",
+        "m": [
+          26,
+          30
+        ]
+      },
+      {
+        "s": "At huslejen er så billig gør, at hun kan klare sig uden at tage et studiejob, og det er hun rigtig glad for, for så kan hun koncentrere sig om studiet.",
+        "src": "2023s L1",
+        "m": [
+          41,
+          46
+        ]
+      }
+    ],
+    "lignende": [
+      {
+        "s": "Man kunne også informere mere om mistænkelige mails og lignende, der nogle gange er i omløb.",
+        "src": "2023v L2",
+        "m": [
+          55,
+          63
+        ]
+      },
+      {
+        "s": "Der opstod mange nye store virksomheder, fx Thrige, som lavede elmotorer og biler, Odense Staalskibsværft (skibe), Odense Eksportslagteri (kød) og en masse fødevare- og nydelsesmiddelindustrier (mad, marcipan, tobak og lignende).",
+        "src": "2021v L1",
+        "m": [
+          219,
+          227
+        ]
+      },
+      {
+        "s": "Før skiftet til projektleder arbejdede hun som geotekniker i et specialistteam, hvor opgaverne bestod i at lave jordbundsundersøgelser, fundamentberegninger og lignende.",
+        "src": "2020v L2",
+        "m": [
+          160,
+          168
+        ]
+      },
+      {
+        "s": "En forlystelsespark er betegnelsen for en tivolipark med forlystelser som for eksempel karruseller, rutsjebaner og lignende samt måske anden underholdning.",
+        "src": "2018s L1",
+        "m": [
+          115,
+          123
+        ]
+      },
+      {
+        "s": "Stedernes oprindelse kan spores tilbage til middelalderens markeder, som foruden handlende tiltrak gøglere, musikanter og lignende.",
+        "src": "2018s L1",
+        "m": [
+          122,
+          130
+        ]
+      },
+      {
+        "s": "Findes der lignende uddannelser, som også kan være spændende?",
+        "src": "2015v L1",
+        "m": [
+          11,
+          19
+        ]
+      },
+      {
+        "s": "På de fleste uddannelser skal du regne med udgifter til fotokopier og lignende.",
+        "src": "2015v L1",
+        "m": [
+          70,
+          78
+        ]
+      }
+    ],
+    "en_mening_med": [
+      {
+        "s": "Men det er heller ikke meningen.",
+        "src": "2023v L1",
+        "m": [
+          23,
+          31
+        ]
+      },
+      {
+        "s": "Meningen er, at man skal lade sig rive med af historien, af dens egen logik, og det kan man nærmest ikke undgå, når man læser Burgundia.",
+        "src": "2023v L1",
+        "m": [
+          0,
+          8
+        ]
+      },
+      {
+        "s": "Da deres første barn kom til verden, og Mette skulle i turnus som læge, gav det god mening at skifte bylivet på Nørrebro ud med mere plads og lavere huspriser i Sønderjylland.",
+        "src": "2023s L1",
+        "m": [
+          84,
+          90
+        ]
+      },
+      {
+        "s": "Det lader derfor til at give god mening at være aktiv i sin fritid, da det giver energi til andet end blot at flade ud på sofaen efter arbejde.",
+        "src": "2022v L2",
+        "m": [
+          33,
+          39
+        ]
+      },
+      {
+        "s": "Det vil altså give god mening at begrænse folks forbrug af kød.",
+        "src": "2021s L2",
+        "m": [
+          23,
+          29
+        ]
+      },
+      {
+        "s": "”Idéen om at arbejde bredt, så de støtter både ude og hjemme, betyder meget for mig, fordi hjælp til børn efter min mening ikke har nationale grænser.",
+        "src": "2019s L2",
+        "m": [
+          116,
+          122
+        ]
+      },
+      {
+        "s": "Alle kan dog intuitivt se, at det giver mening at udnytte ledig kapacitet.",
+        "src": "2017v L2",
+        "m": [
+          40,
+          46
+        ]
+      },
+      {
+        "s": "”Tidligere var det kærligheden, der afgjorde, om man følte sig lykkelig i livet, om man havde fundet meningen og kunne føle, at man levede livet fuldt ud.",
+        "src": "2017s L2",
+        "m": [
+          101,
+          109
+        ]
+      }
+    ],
+    "en_motivation": [
+      {
+        "s": "Det er et centralt princip for skolen, at det er den enkelte elevs egen motivation og begejstring, der skal være i fokus, da det er afgørende for et godt udbytte af undervisningen.",
+        "src": "2018v L1",
+        "m": [
+          72,
+          82
+        ]
+      },
+      {
+        "s": "Vi ønsker at skabe motivation og muligheder for alle medarbejdere, så arbejdsforholdet kan fortsætte længst muligt med indhold og udvikling til gavn for såvel os som for dig.",
+        "src": "2018s L1",
+        "m": [
+          19,
+          29
+        ]
+      },
+      {
+        "s": "Du behøver ingen kvalifikationer for at deltage i disse projekter; kun motivation og vilje til at gøre en indsats for andre mennesker.",
+        "src": "2016s L1",
+        "m": [
+          71,
+          81
+        ]
+      },
+      {
+        "s": "Vejlednin gen tager udgangspunkt i elevens motivation og forud sætninger, og den finder sted på basis af aktuel viden om ungdomsuddannelserne.",
+        "src": "2015s L1",
+        "m": [
+          43,
+          53
+        ]
+      },
+      {
+        "s": "Det er med til at skabe inspiration, motivation og glæde.",
+        "src": "2013s L1",
+        "m": [
+          37,
+          47
+        ]
+      }
+    ],
+    "at_ødelægge": [
+      {
+        "s": "I undersøgelsen siger næsten 60 % af eleverne i folkeskolen, at de føler sig generet af uro i timerne, og at det forstyrrer og ødelægger undervisningen.",
+        "src": "2016s L2",
+        "m": [
+          127,
+          136
+        ]
+      }
+    ],
+    "at_øge": [
+      {
+        "s": "Det primære formål med Folkemødet er at styrke det danske demokrati ved at mindske afstanden og øge tilliden mellem borgere og beslutningstagere.",
+        "src": "2023v L1",
+        "m": [
+          96,
+          99
+        ]
+      },
+      {
+        "s": "For at lykkes med omstillingen er det nødvendigt at øge produktionen af grøn energi markant.",
+        "src": "2023s L2",
+        "m": [
+          52,
+          55
+        ]
+      },
+      {
+        "s": "På den baggrund forventer man, at bedre muligheder for at påvirke, hvor og hvornår man arbejder på daglig basis, også vil øge tilfredsheden.",
+        "src": "2021v L2",
+        "m": [
+          122,
+          125
+        ]
+      },
+      {
+        "s": "På dette kursus kan kursusdeltagerne øge deres muligheder for at komme til netop de jobsamtaler, der kan føre til deres drømmejob.",
+        "src": "2020v L1",
+        "m": [
+          37,
+          40
+        ]
+      },
+      {
+        "s": "Biffens Venner er en støtteforening, hvis primære formål er at øge kendskabet til Biffen Nordkraft, Biffen Nordkrafts film og øvrige aktiviteter.",
+        "src": "2019v L1",
+        "m": [
+          63,
+          66
+        ]
+      },
+      {
+        "s": "Hvis man vil øge indvandringen af højtuddannede udlændinge, er der forskellige muligheder.",
+        "src": "2019v L2",
+        "m": [
+          13,
+          16
+        ]
+      },
+      {
+        "s": "Det kræver politiske beslutninger, om man vil forsøge at øge indvandringen af udenlandsk arbejdskraft i Danmark.",
+        "src": "2019v L2",
+        "m": [
+          57,
+          60
+        ]
+      },
+      {
+        "s": "Organisationerne vil gerne øge antallet af mandlige donorer, samtidig med at de holder fast i de kvindelige donorer.",
+        "src": "2019s L2",
+        "m": [
+          27,
+          30
+        ]
+      }
+    ],
+    "opmærksom_på": [
+      {
+        "s": "Derfor er det en god idé at være mere opmærksom på de unge iværksættere.",
+        "src": "2022v L2",
+        "m": [
+          38,
+          50
+        ]
+      },
+      {
+        "s": "Udskifter man ofte kontoret med en hjemmearbejdsplads, skal man dog være opmærksom på, at det kræver det rigtige udstyr i hjemmet.",
+        "src": "2022s L2",
+        "m": [
+          73,
+          85
+        ]
+      },
+      {
+        "s": "Han mener derfor, at hjemmearbejde kræver en ledelse, der er ekstra opmærksom.",
+        "src": "2022s L2",
+        "m": [
+          68,
+          77
+        ]
+      },
+      {
+        "s": "Vær opmærksom på, at turen derfor ikke egner sig for dårligt gående.",
+        "src": "2021v L1",
+        "m": [
+          4,
+          16
+        ]
+      },
+      {
+        "s": "Vi gør opmærksom på, at rundvisningen ikke er egnet til gangbesværede, da turen går ad trapper.",
+        "src": "2021s L1",
+        "m": [
+          7,
+          19
+        ]
+      },
+      {
+        "s": "Man skal være opmærksom på, at der er et gebyr på 5 kr. for transaktionen.",
+        "src": "2019s L1",
+        "m": [
+          14,
+          26
+        ]
+      },
+      {
+        "s": "Vær opmærksom på, at I godt kan være flere ansøgere sammen til denne del.",
+        "src": "2018s L1",
+        "m": [
+          4,
+          16
+        ]
+      },
+      {
+        "s": "Man skal dog være opmærksom på, at afstandene er store: Der er 23 km veje i safariparken!",
+        "src": "2017v L1",
+        "m": [
+          18,
+          30
+        ]
+      }
+    ],
+    "relevant": [
+      {
+        "s": "For ikke så mange årtier siden mente de fleste nok ikke, at det var relevant at læse kinesisk, mens de fleste er af den modsatte opfattelse i dag.",
+        "src": "2023v L2",
+        "m": [
+          68,
+          76
+        ]
+      },
+      {
+        "s": "DOF vil gerne sørge for at al relevant viden kommer ud til dem, der kan have glæde af det.",
+        "src": "2020v L1",
+        "m": [
+          30,
+          38
+        ]
+      },
+      {
+        "s": "Ud over en relevant uddannelse virkede Andrei innovativ, nytænkende og åben.",
+        "src": "2019v L2",
+        "m": [
+          11,
+          19
+        ]
+      },
+      {
+        "s": "Hvor det er relevant, fremgår den daglige arbejdstid samt fridage af vagtplaner, der kan ses online derhjemmefra og minimum 4 uger frem.",
+        "src": "2018s L1",
+        "m": [
+          12,
+          20
+        ]
+      },
+      {
+        "s": "Er du i gang med dit studie eller ønsker du at udføre fagligt relevant arbejde, hvor du har mulighed for at omsætte teori til praksis, er vores praktikophold oplagte muligheder.",
+        "src": "2016s L1",
+        "m": [
+          62,
+          70
+        ]
+      },
+      {
+        "s": "veterinærvidenSkab & dyrepaSning Hvis du elsker dyr og arbejdet med dem, kan du få prøvet din viden af i praksis og samtidig få relevant erhvervserfaring, der er vanskelig at få herhjemme.",
+        "src": "2016s L1",
+        "m": [
+          128,
+          136
+        ]
+      },
+      {
+        "s": "merit Hvis du fx har en anden uddannelse eller har haft relevant beskæftigelse, så du allerede opfylder en del af uddannelsens mål, kan du få afkortet landbrugsuddannelsen.",
+        "src": "2015v L1",
+        "m": [
+          56,
+          64
+        ]
+      },
+      {
+        "s": "Det kræver dog, at du har mindst to års relevant erhvervserfaring, engelsk på niveau C samt enten virksomhedsøkonomi eller matematik på niveau C.",
+        "src": "2013s L1",
+        "m": [
+          40,
+          48
+        ]
+      }
+    ],
+    "rigtig": [
+      {
+        "s": "At huslejen er så billig gør, at hun kan klare sig uden at tage et studiejob, og det er hun rigtig glad for, for så kan hun koncentrere sig om studiet.",
+        "src": "2023s L1",
+        "m": [
+          92,
+          98
+        ]
+      },
+      {
+        "s": "Og så lærte jeg rigtig meget om vikingerne, og hvad de har betydet for mange ting.",
+        "src": "2022v L1",
+        "m": [
+          16,
+          22
+        ]
+      },
+      {
+        "s": "Vi endte med at flytte til Maribo, men der faldt vi aldrig rigtig til.",
+        "src": "2022s L1",
+        "m": [
+          59,
+          65
+        ]
+      },
+      {
+        "s": "Jeg tog blandt andet kurser i at skrive ansøgninger – og jeg blev til sidst rigtig god til at beskrive alt det, jeg kan,” siger han med et smil.",
+        "src": "2022s L2",
+        "m": [
+          76,
+          82
+        ]
+      },
+      {
+        "s": "”Der er ingen tvivl om, at en personlighedstest er et rigtig godt udgangspunkt for en jobsamtale.",
+        "src": "2022s L2",
+        "m": [
+          54,
+          60
+        ]
+      },
+      {
+        "s": "Der var altså rigtig mange munke og nonner og andre kirkelige personer i Odense i middelalderen.",
+        "src": "2021v L1",
+        "m": [
+          14,
+          20
+        ]
+      },
+      {
+        "s": "Noget for alle Det er en rigtig familieforestilling.",
+        "src": "2021s L1",
+        "m": [
+          25,
+          31
+        ]
+      },
+      {
+        "s": "Jeg fik et spejlreflekskamera i julegave, og jeg ville rigtig gerne lære mere om at bruge kameraet på en god måde.",
+        "src": "2020v L1",
+        "m": [
+          55,
+          61
+        ]
+      }
+    ],
+    "en_sandsynlighed": [
+      {
+        "s": "Har medarbejderne nogle generelle kvalifikationer, er der mindre sandsynlighed for, at de flytter med arbejdspladsen, fordi de har større chancer for at finde et andet job.",
+        "src": "2018v L2",
+        "m": [
+          65,
+          78
+        ]
+      }
+    ],
+    "skeptisk_over_for": [
+      {
+        "s": "Og så er hun også skeptisk over for at bruge tabletten som en erstatning for sutten, når børn keder sig eller er trætte.",
+        "src": "2016v L2",
+        "m": [
+          18,
+          35
+        ]
+      },
+      {
+        "s": "“Men grundlæggende er jeg skeptisk over for, at man lukker så mange filialer.",
+        "src": "2014s L2",
+        "m": [
+          26,
+          43
+        ]
+      }
+    ],
+    "en_stabilitet": [
+      {
+        "s": "De har endnu ikke fået forpligtelser i forhold til familie og bolig og har derfor ikke samme behov for økonomisk stabilitet som ældre medarbejdere.",
+        "src": "2020v L2",
+        "m": [
+          113,
+          123
+        ]
+      }
+    ],
+    "at_stamme_fra": [
+      {
+        "s": "Der er fund, der stammer fra Danmarks oldtid, og der er udstillet genstande fra nyere tid.",
+        "src": "2020s L1",
+        "m": [
+          17,
+          28
+        ]
+      },
+      {
+        "s": "Bygningerne i København Zoo stammer fra mange perioder og afspejler skiftende tiders syn på dyrevelfærd samt ændringer i stil og smag.",
+        "src": "2017v L1",
+        "m": [
+          28,
+          39
+        ]
+      },
+      {
+        "s": "Alle fotos stammer fra de relevante hjemmesider eller er supplerende dyrebilleder fra wikipedia commons.",
+        "src": "2017v L1",
+        "m": [
+          11,
+          22
+        ]
+      },
+      {
+        "s": "Facadeskiltet – og dermed butikkens navn – stammer fra en butik, der lå på hjørnet af Istedgade og Jægergårdsgade i Aarhus.",
+        "src": "2017s L1",
+        "m": [
+          43,
+          54
+        ]
+      },
+      {
+        "s": "I lejligheden er indrettet et ungdomsværelse, der stammer fra Højbjerg ved Aarhus.",
+        "src": "2017s L1",
+        "m": [
+          50,
+          61
+        ]
+      },
+      {
+        "s": "Den nye fastemetode med to ugentlige fastedage stammer fra England, hvor den hurtigt er blevet meget populær.",
+        "src": "2014v L2",
+        "m": [
+          47,
+          58
+        ]
+      }
+    ],
+    "en_størrelse": [
+      {
+        "s": "Et frilandsmuseum er et museum med bygninger i naturlig størrelse.",
+        "src": "2017s L1",
+        "m": [
+          56,
+          65
+        ]
+      },
+      {
+        "s": "god størrelse til dig Agroskolen har en god størrelse, der balancerer høj faglighed med socialt samvær.",
+        "src": "2015v L1",
+        "m": [
+          4,
+          13
+        ]
+      }
+    ],
+    "at_støtte": [
+      {
+        "s": "Når Viborg spiller på hjemmebane, så er jeg altid på stadion for at støtte dem.",
+        "src": "2024s L1",
+        "m": [
+          68,
+          74
+        ]
+      },
+      {
+        "s": "De ti byer får statslig støtte til at nytænke bymidterne.",
+        "src": "2024s L2",
+        "m": [
+          24,
+          30
+        ]
+      },
+      {
+        "s": "Men heldigvis er der mange, der har fået et helt almindeligt arbejde og derfor ikke længere får støtte fra det offentlige.",
+        "src": "2023s L2",
+        "m": [
+          96,
+          102
+        ]
+      },
+      {
+        "s": "Det gør den blandt andet gennem projektet Film for alle, hvor OFF året rundt støtter den danske filmkultur og arbejder på at dyrke og udbrede mangfoldige filmtilbud til alle.",
+        "src": "2021v L1",
+        "m": [
+          77,
+          84
+        ]
+      },
+      {
+        "s": "Landsorganisationen støtter medlemsskolerne i deres daglige virke på en lang række områder.",
+        "src": "2020v L1",
+        "m": [
+          20,
+          27
+        ]
+      },
+      {
+        "s": "Man er nemlig sikret relativt god økonomisk støtte som arbejdsløs.",
+        "src": "2020v L2",
+        "m": [
+          44,
+          50
+        ]
+      },
+      {
+        "s": "DFI fik til opgave at administrere økonomisk støtte til nye filmmanuskripter, udvikling og produktion samt lancering, forevisning og distribution af danske film.",
+        "src": "2019v L1",
+        "m": [
+          45,
+          51
+        ]
+      },
+      {
+        "s": "Hvis vi ikke husker at støtte den, så forsvinder den bare, og så har vi pludselig ikke muligheden længere.",
+        "src": "2019v L1",
+        "m": [
+          23,
+          29
+        ]
+      }
+    ],
+    "at_styrke": [
+      {
+        "s": "Det primære formål med Folkemødet er at styrke det danske demokrati ved at mindske afstanden og øge tilliden mellem borgere og beslutningstagere.",
+        "src": "2023v L1",
+        "m": [
+          40,
+          46
+        ]
+      },
+      {
+        "s": "Den fælles ambition er at sikre unges repræsentation og styrke unges stemme på Folkemødet.",
+        "src": "2023v L1",
+        "m": [
+          56,
+          62
+        ]
+      },
+      {
+        "s": "Vikinger og vikingetidens genstande bliver ofte brugt som symboler på styrke.",
+        "src": "2022v L1",
+        "m": [
+          70,
+          76
+        ]
+      },
+      {
+        "s": "Styrke anses som en meget positiv egenskab, og nogle danskere vælger derfor at få tatoveret motiver af vikingegenstande fra vikingetiden.",
+        "src": "2022v L1",
+        "m": [
+          0,
+          6
+        ]
+      },
+      {
+        "s": "Her står vikingen rank og udstråler barskhed og styrke – egenskaber, der igen er blevet populære i den seneste tids historiebrug af vikinger.",
+        "src": "2022v L1",
+        "m": [
+          48,
+          54
+        ]
+      },
+      {
+        "s": "Det fælles ønske for partnerne er, at alle ønsker at gøre en aktiv indsats for at styrke sammenhængskraften i hele Danmark – også på de danske øer.",
+        "src": "2022s L1",
+        "m": [
+          82,
+          88
+        ]
+      },
+      {
+        "s": "Formålet for LOF er at styrke grundlaget for et demokratisk samfund og at bidrage til samfundets sammenhængskraft og til den enkeltes udvikling og dannelse.",
+        "src": "2020v L1",
+        "m": [
+          23,
+          29
+        ]
+      },
+      {
+        "s": "Gennem dialog og aktiv deltagelse skal undervisningen styrke elevernes samarbejdsevne.",
+        "src": "2020s L1",
+        "m": [
+          54,
+          60
+        ]
+      }
+    ],
+    "at_tilbyde": [
+      {
+        "s": "Der er stadig ikke så mange virksomheder, der tilbyder ordningen, men der bliver flere og flere.",
+        "src": "2024s L2",
+        "m": [
+          46,
+          54
+        ]
+      },
+      {
+        "s": "Der er også virksomheder, der blot tilbyder deres medarbejdere en fire-dages arbejdsuge på nedsat tid og løn.",
+        "src": "2024s L2",
+        "m": [
+          35,
+          43
+        ]
+      },
+      {
+        "s": "Interessen for den fire-dages arbejdsuge tyder på, at flere virksomheder kommer til at tilbyde deres medarbejdere denne løsning.",
+        "src": "2024s L2",
+        "m": [
+          87,
+          94
+        ]
+      },
+      {
+        "s": "Hvis de for eksempel ikke har mulighed for at have så mange varer på lager i butikken, kan de tilbyde at fremskaffe dem inden for 24 timer og levere dem til døren.",
+        "src": "2024s L2",
+        "m": [
+          94,
+          101
+        ]
+      },
+      {
+        "s": "De kan også tilbyde samme pris som en netbutik, hvis den fysiske butik ikke umiddelbart matcher den pris man kan få online.",
+        "src": "2024s L2",
+        "m": [
+          12,
+          19
+        ]
+      },
+      {
+        "s": "Overnatningssteder, som er Bed+Bike certificerede, tilbyder disse faciliteter og sørger for, at du får den bedst mulige cykelferie!",
+        "src": "2023v L1",
+        "m": [
+          51,
+          59
+        ]
+      },
+      {
+        "s": "Din lokale tilflytterguide vil hjælpe dig med spørgsmål og tilbyder dig en bred vifte af forskellige tilbud, både før og efter din ankomst.",
+        "src": "2023s L1",
+        "m": [
+          59,
+          67
+        ]
+      },
+      {
+        "s": "Tilflytterguides tilbyder deres assistance omkring spørgsmål vedrørende flytning og bosætning.",
+        "src": "2023s L1",
+        "m": [
+          17,
+          25
+        ]
+      }
+    ],
+    "tryg": [
+      {
+        "s": "”Vi lever i en tryg hverdag i Danmark, hvor vi ikke oplever alvorlige naturkatastrofer eller humanitære katastrofer som krig og hungersnød.",
+        "src": "2019s L2",
+        "m": [
+          15,
+          19
+        ]
+      }
+    ],
+    "at_undvære": [
+      {
+        "s": "Traditionen med at tage til Viborg og vandre sammen med tusinder af andre mennesker vil vi slet ikke undvære.",
+        "src": "2024s L1",
+        "m": [
+          101,
+          108
+        ]
+      },
+      {
+        "s": "Det kan jeg slet ikke undvære.",
+        "src": "2024s L1",
+        "m": [
+          22,
+          29
+        ]
+      },
+      {
+        "s": "Det har været sværere for mig at undvære kød på middagsbordet, men jeg er efterhånden ved at vænne mig til det.",
+        "src": "2021s L2",
+        "m": [
+          33,
+          40
+        ]
+      },
+      {
+        "s": "Hjemme i Danmark har de måske en kæreste, de må undvære.",
+        "src": "2020s L2",
+        "m": [
+          48,
+          55
+        ]
+      }
+    ],
+    "at_vælge": [
+      {
+        "s": "Der kan være mange grunde til, at man vælger at skifte branche, selvom man er midt i livet, fortæller Ask Nielsen, der har været karriererådgiver igennem 15 år.",
+        "src": "2024s L2",
+        "m": [
+          38,
+          44
+        ]
+      },
+      {
+        "s": "I Bornholms Kulturuge har vi ni forskellige kulturspor, du som gæst kan vælge at følge.",
+        "src": "2023v L1",
+        "m": [
+          72,
+          77
+        ]
+      },
+      {
+        "s": "Vælger du et overnatningssted med det blå Bed+Bike skilt, er du sikker på, at du kan stille din cykel i et aflåst skur og låne værktøj til eventuelle reparationer.",
+        "src": "2023v L1",
+        "m": [
+          0,
+          6
+        ]
+      },
+      {
+        "s": "Flere, der egentlig ønskede at studere en humanistisk uddannelse, ville så være nødt til at vælge et andet studium.",
+        "src": "2023v L2",
+        "m": [
+          92,
+          97
+        ]
+      },
+      {
+        "s": "Man vælger derfor ofte mellemløsningen og bygger havvindmøllerne relativt tæt på kysten.",
+        "src": "2023s L2",
+        "m": [
+          4,
+          10
+        ]
+      },
+      {
+        "s": "Styrke anses som en meget positiv egenskab, og nogle danskere vælger derfor at få tatoveret motiver af vikingegenstande fra vikingetiden.",
+        "src": "2022v L1",
+        "m": [
+          62,
+          68
+        ]
+      },
+      {
+        "s": "De har fx stor økonomisk frihed og stor frihed til at vælge uddannelse.",
+        "src": "2021v L2",
+        "m": [
+          54,
+          59
+        ]
+      },
+      {
+        "s": "Flere og flere familier vælger at tage mere hensyn til miljøet, end de har gjort før.",
+        "src": "2021s L2",
+        "m": [
+          24,
+          30
+        ]
+      }
+    ],
+    "væsentlig": [
+      {
+        "s": "Fradrag i skat for velgørenhed En anden væsentlig årsag til, at danskerne giver flere penge til velgørenhed kan være, at man kan få skattefradrag for bidragene.",
+        "src": "2019s L2",
+        "m": [
+          40,
+          49
+        ]
+      },
+      {
+        "s": "Mange mener, at det moderne arbejdsliv har en væsentlig del af skylden.",
+        "src": "2017s L2",
+        "m": [
+          46,
+          55
+        ]
+      },
+      {
+        "s": "Endvidere er forarbejdning, præsentation og tilberedning af specialiteter en væsentlig del af en fiskehandlers arbejde.",
+        "src": "2015v L1",
+        "m": [
+          77,
+          86
+        ]
+      },
+      {
+        "s": "Uddannelsestiden vil være væsentlig længere end den \"normale\" længde for den pågældende erhvervsuddannelse, for at du kan gennemføre de gymnasiale fag og projekter.",
+        "src": "2013s L1",
+        "m": [
+          26,
+          35
+        ]
+      },
+      {
+        "s": "Uddannelsestiden varierer fra eux-forløb til eux-forløb, men alt i alt vil uddannelsestiden være væsentlig længere end den \"normale\" længde for den pågældende erhvervsuddannelse.",
+        "src": "2013s L1",
+        "m": [
+          97,
+          106
+        ]
+      }
+    ],
+    "vant_til": [
+      {
+        "s": "”Ida virkede som om, hun trivedes med konkurrence og med at have travlt, og vi er vant til at have mange jern i ilden i vores familie.",
+        "src": "2021v L2",
+        "m": [
+          82,
+          90
+        ]
+      },
+      {
+        "s": "I England, hvor jeg kommer fra, er vi vant til store museer og udstillinger om imperiets historie.",
+        "src": "2020s L1",
+        "m": [
+          38,
+          46
+        ]
+      },
+      {
+        "s": "Vi er også vant til, at der er et velfærdssamfund, der tager sig af folk.",
+        "src": "2019s L2",
+        "m": [
+          11,
+          19
+        ]
+      },
+      {
+        "s": "Vi er vant til at komme i København Zoo, og forventningerne til Aalborg Zoo var ikke så høje.",
+        "src": "2017v L1",
+        "m": [
+          6,
+          14
         ]
       }
     ]
