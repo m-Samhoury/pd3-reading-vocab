@@ -1,12 +1,12 @@
 {
-  "_about": "Tankegang: the frequency-table connectors in Peter's four kinds of logic. Each row: [sub-heading, [[card id, word type], ...]]. Word types: ADV (V2 after it), SUB (subordinate clause), KOO (main clause), PRAEP (+ noun), NOUN, VERB. men and selvom are not in the table; they are Peter's anchor words.",
+  "_about": "Tankegang: the frequency-table connectors in Peter's four kinds of logic. Each row: [sub-heading, [[card id, word type], ...]]. Word types: ADV (adverb: after the verb in a main clause; first in the sentence, the verb comes right after; nemlig never stands first), SUB (subordinate clause), KOO (main clause), PRAEP (+ noun), NOUN, VERB. men and selvom are not in the table; they are Peter's anchor words.",
   "tilføjelse": [
     ["Mere af det samme", [["desuden", "ADV"], ["derudover", "ADV"], ["herudover", "ADV"], ["ydermere", "ADV"], ["blandt_andet", "ADV"], ["ligeledes", "ADV"], ["samtidig", "ADV"], ["som_nævnt", "ADV"]]],
     ["Rækkefølge", [["for_det_første", "ADV"], ["allerførst", "ADV"], ["dernæst", "ADV"], ["herefter", "ADV"], ["derefter", "ADV"], ["endelig", "ADV"]]],
     ["Eksempel / præcisering", [["eksempelvis", "ADV"], ["især", "ADV"], ["med_andre_ord", "ADV"]]]
   ],
   "modargument": [
-    ["Kontrast", [["men", "KOO"], ["imidlertid", "ADV"], ["dog", "ADV"], ["derimod", "ADV"], ["til_gengæld", "ADV"], ["omvendt", "ADV"], ["modsat", "ADV"], ["tværtimod", "ADV"], ["på_den_ene_side_på_den_anden_side", "ADV"]]],
+    ["Kontrast", [["men", "KOO"], ["imidlertid", "ADV"], ["dog", "ADV"], ["derimod", "ADV"], ["til_gengæld", "ADV"], ["omvendt", "ADV"], ["modsat", "PRAEP"], ["tværtimod", "ADV"], ["på_den_ene_side_på_den_anden_side", "ADV"]]],
     ["I stedet / undtagen", [["i_stedet_for", "PRAEP"], ["bortset_fra", "PRAEP"], ["imod", "PRAEP"]]]
   ],
   "følge": [
