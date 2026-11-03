@@ -164,7 +164,15 @@ ok("sort tap picks up", await ev(`[SO.picked, !!$("#soWord.picked"), SO.ans]`));
 ok("sort tap then bucket", await ev(`(()=>{ document.querySelector(".sob").click(); return [!!SO.ans, !!$(".feedback")]; })()`));
 ok("sort phone width", await ev(`(async()=>{ soStart("order"); return document.documentElement.scrollWidth <= document.documentElement.clientWidth; })()`));
 await send("Emulation.setDeviceMetricsOverride", { width: 375, height: 800, deviceScaleFactor: 1, mobile: true }); await sleep(300);
-ok("sort 375px no horizontal scroll", await ev(`(()=>{ soStart("logic"); return [document.documentElement.scrollWidth <= document.documentElement.clientWidth, document.documentElement.scrollWidth, document.documentElement.clientWidth]; })()`));
+// Mock Læsning 3: hand-written items, 4 options that never share kind of logic + word type, fixed order on re-render, review explains every option
+ok("mock options", await ev(`(()=>{ localStorage.clear(); picked = []; startMock(); const all=[MK.example, ...MK.items];
+  const sig = o => { const i=Object.keys(LG).find(i=>DB.cards[i] && (lowFirst(DB.cards[i].word)===o || variants(DB.cards[i].word).includes(norm(o)))); return i ? LG[i].join(".") : "?"+o; };
+  const bad = all.filter(x => x.opts.length!==4 || new Set(x.opts.map(sig)).size!==4 || x.opts[x.right]!==lowFirst(x.w));
+  const before = MK.items.map(x=>x.opts.join("/")).join("|"); document.querySelector('.mkcell[data-r="0"][data-o="1"]').click(); const same = MK.items.map(x=>x.opts.join("/")).join("|")===before;
+  return [MK.items.length, "bad sets", bad.map(x=>x.s), "same after click", same, document.querySelectorAll(".mkrow").length]; })()`));
+ok("mock review", await ev(`(()=>{ MK.items.forEach((x,i)=>MK.ans[i]=x.right); MK.ans[0]=(MK.items[0].right+1)%4; mockView(); $("#mkdone").click();
+  return [$(".mkresult .score").textContent, document.querySelectorAll(".mkrev").length, document.querySelectorAll(".mkrev .mkok").length, $(".mkrev").innerText.includes("Svarmulighederne")]; })()`));
+ok("sort 375px no horizontal scroll",await ev(`(()=>{ soStart("logic"); return [document.documentElement.scrollWidth <= document.documentElement.clientWidth, document.documentElement.scrollWidth, document.documentElement.clientWidth]; })()`));
 await send("Emulation.setDeviceMetricsOverride", { width: 1000, height: 1400, deviceScaleFactor: 1, mobile: false }); await sleep(200);
 await ev(`home()`);
 

@@ -29,8 +29,8 @@ Usage (run with python3 -I):
                                        #   (cards in senses.json use its hand-labelled sentences instead)
   pd3.py translate                     # English for every DDO definition (Google Translate) -> translations.json
   pd3.py l3gaps                        # real Læsning 3 gaps + linking-word sentences from those texts -> l3-gaps.json
-  pd3.py mockpool                      # real sentences from L1, 2A and 2B (never the L3 / old-2B text) for the
-                                       #   "Mock Læsning 3" -> mock-pool.json (needs logic.json)
+  pd3.py mockpool                      # real sentences from L1, 2A and 2B (never the L3 / old-2B text) -> mock-pool.json
+                                       #   (no longer on the page: "Mock Læsning 3" uses the hand-written mock-l3.json)
                                        #   (the "Hvilken slags?" drill; needs logic.json)
   pd3.py page                          # rebuild <project>/assisted-learning.html (also automatic when the deck
                                        #   changes); open it from disk, progress is kept in the browser
@@ -836,7 +836,7 @@ def build_page():
             c["dict"]["senses_en"] = [tr.get(s, "") for s in c["dict"]["senses"]]
     senses = {cid: {k: v for k, v in e.items() if k != "sentences"} for cid, e in load("senses.json", {}).items()}
     deck = {"cards": cards, "profile": load("profile.json", {}), "senses": senses, "tips": load("tips.json", {}), "info": load("wordinfo.json", {}), "grammar": load("grammar.json", {}),
-            "logic": load("logic.json", {}), "l3": load("l3-gaps.json", {}).get("items", []), "lgs": load("logic-drill.json", {}).get("items", []), "mock": load("mock-pool.json", {}).get("items", {}),
+            "logic": load("logic.json", {}), "l3": load("l3-gaps.json", {}).get("items", []), "lgs": load("logic-drill.json", {}).get("items", []), "mock": load("mock-l3.json", {}).get("items", []),
             "sentences": load("exam-sentences.json", {}).get("sentences", {}), "images": load("images.json", {}), "built": TODAY.isoformat()}
     js = "window.PD3_DECK = " + json.dumps(deck, ensure_ascii=False).replace("</", "<\\/") + ";"
     html = open(tpl, encoding="utf-8").read().replace("window.PD3_DECK = null; /*DECK*/", js)
