@@ -109,6 +109,24 @@ ok("logic give up + keys", await ev(`(async()=>{ const w=ms=>new Promise(r=>setT
   for (const n of ["1","2","3","4"]) { grLogic(GS.queue[0]); k(n); await w(5); picks.push([document.querySelector(".lgcat.sel")?.dataset.c, document.querySelectorAll(".lgopt").length]); }
   grLogic(GS.queue[0]); k("4"); await w(5); k("2"); await w(10); const k3=[$("#fb h3")?.textContent, !!$("#fb .feedback")];
   $("#gquit").click(); await w(10); const q=[$("#app").innerText.slice(0,40).replace(/\\n+/g," | ")]; home(); return [g, picks, k3, q]; })()`));
+// Hvilken slags? rounds: no word twice, a wrong sentence comes back until right (the score is the first try), one kind at a time, phone width
+const lgSolve = `const solve=async()=>{ const w=ms=>new Promise(r=>setTimeout(r,ms)); while (GS.i < GS.queue.length) { const y=GS.queue[GS.i]; $(".lgcat[data-c='"+y.cat+"']").click(); [...document.querySelectorAll(".lgopt")].find(b=>b.textContent.replace(/^\\d/,"").trim().toLowerCase()===y.w.toLowerCase()).click(); await w(5); $("#nx").click(); await w(5); } };`;
+ok("logic no repeats", await ev(`(()=>{ localStorage.clear(); startLogic(); const cards=GS.queue.map(x=>x.card), distinct=new Set(cards).size, pool=new Set(lgItems().map(x=>x.card)).size;
+  const twice=cards.some((c,i)=>i && c===cards[i-1]);
+  return [GS.queue.length, "distinct cards in round", distinct, "distinct cards in pool", pool, "same card as neighbour", twice, "kinds", new Set(GS.queue.map(x=>x.cat)).size]; })()`));
+ok("logic retry", await ev(`(async()=>{ const w=ms=>new Promise(r=>setTimeout(r,ms)); ${lgSolve} localStorage.clear(); startLogic(); const n0=GS.queue.length, x=GS.queue[0];
+  const wrongCat=LG_CATS.map(c=>c[0]).find(k=>k!==x.cat); $(".lgcat[data-c='"+wrongCat+"']").click(); document.querySelectorAll(".lgopt")[0].click(); await w(10);
+  const afterWrong=[GS.queue.length-n0, GS.queue[GS.queue.length-1].retry, GS.queue[GS.queue.length-1].id===x.id, GS.results.length, GS.results[0].ok];
+  $("#nx").click(); await w(10); await solve(); await w(10);
+  return afterWrong.concat(["results at the end", GS.results.length, "queue", GS.queue.length, "first try score", GS.results.filter(r=>r.ok).length, "summary", $("#app h2")?.textContent]); })()`));
+ok("logic one kind", await ev(`(async()=>{ const w=ms=>new Promise(r=>setTimeout(r,ms)); ${lgSolve} localStorage.clear(); startLogic(null, "ulogisk");
+  const q=GS.queue, first=[q.every(x=>x.cat==="ulogisk"), GS.title, GS.kind, q.length, new Set(q.map(x=>x.card)).size];
+  await solve(); await w(10); const again=$("#gagain"); again.click(); await w(20);
+  return first.concat(["after again", GS.kind, GS.queue.every(x=>x.cat==="ulogisk"), GS.title, GS.queue.length]); })()`));
+ok("tankegang one-kind buttons", await ev(`(()=>{ home(); tankegang(); return [document.querySelectorAll("[data-lgdrill]").length, [...document.querySelectorAll("[data-lgdrill]")].map(b=>b.dataset.lgdrill).join(","), document.querySelector("[data-lgdrill]")?.textContent.trim()]; })()`));
+await send("Emulation.setDeviceMetricsOverride", { width: 375, height: 800, deviceScaleFactor: 1, mobile: true }); await sleep(300);
+ok("tankegang 375px no horizontal scroll", await ev(`(()=>{ home(); tankegang(); return [document.documentElement.scrollWidth <= document.documentElement.clientWidth, document.documentElement.scrollWidth, document.documentElement.clientWidth]; })()`));
+await send("Emulation.setDeviceMetricsOverride", { width: 1000, height: 1400, deviceScaleFactor: 1, mobile: false }); await sleep(200);
 await ev(`home()`);
 // Sortér ordene (Tankegang): both sets, a right and a wrong answer by button, the wrong pile back, keys 1–4, a real mouse drag,
 // the tap fallback, the score screen, no SM-2 change, and no horizontal scroll at phone width
