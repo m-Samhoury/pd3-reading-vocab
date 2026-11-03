@@ -801,6 +801,89 @@ input.vgap.right { border-color: var(--ok); background: var(--ok-bg); } input.vg
   .mkrow { grid-template-columns: 1.8em repeat(2, minmax(0, 1fr)); } .mkrow .mkn { grid-row: span 2; } .mkrow.head { display: none; }
   .mkcell { padding: 6px 8px; font-size: .92rem; gap: 3px; } .mkcell .ab { display: inline; }
 }
+/* Læsning 2B */
+.l2bbanner { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 8px 16px; margin-top: 12px; padding: 18px 22px; border-radius: 28px; border: 2px solid var(--md-sys-color-secondary); background: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container); }
+.l2bbanner .btn { white-space: nowrap; } .l2bbanner b { font-family: 'Gabarito', sans-serif; font-size: 1.2rem; } .l2bbanner p { margin: 2px 0 0; font-size: .92rem; opacity: .9; }
+.lbwrap { margin-top: 18px; } .lbwrap > h1 { margin: 6px 0 4px; }
+.lbgrid { display: grid; gap: 12px; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 14px; }
+.lbcard { display: flex; flex-direction: column; gap: 8px; padding: 16px 18px; border-radius: 20px; background: var(--md-sys-color-surface-container-low); border: 1px solid var(--rule); }
+.lbcard h3 { margin: 0; font-size: 1.05rem; } .lbcard p { margin: 0; } .lbcard .btn { margin-top: auto; align-self: flex-start; }
+.lbmetod { margin-top: 14px; padding: 16px 20px; } .lbmetod h2 { margin: 0 0 8px; font-size: 1.1rem; }
+.lbsteps { margin: 0; padding-left: 1.4em; display: grid; gap: 8px; } .lbsteps small { display: block; }
+.lbtraps-box { margin-top: 14px; padding: 16px 20px; } .lbtraps-box h2 { margin: 0 0 4px; font-size: 1.1rem; }
+.lbtraps { margin-top: 10px; display: grid; gap: 6px; } .lbtrow { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.lbmiss { margin-top: 12px; }
+.lbwrap .btn svg, .l2bbanner .btn svg, .lbset .btn svg, .lbheldbox .btn svg { width: 18px; height: 18px; flex: none; }
+.lbheldbox { margin-top: 14px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; padding: 16px 20px; }
+.lbheldbox > div { flex: 1 1 260px; } .lbheldbox p { margin: 4px 0 0; }
+.lbheldbox .btn { white-space: nowrap; }
+.lbpill { display: inline-flex; align-items: center; padding: 2px 10px; border-radius: 999px; font: 700 .78rem system-ui, sans-serif; background: var(--md-sys-color-surface-container-high); color: inherit; border: 1px solid var(--rule-strong); white-space: nowrap; }
+.lb-samme { background: var(--md-sys-color-tertiary-container); color: var(--md-sys-color-on-tertiary-container); }
+.lb-nabo { background: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container); }
+.lb-logik { background: var(--md-sys-color-error-container); color: var(--md-sys-color-on-error-container); }
+.lb-peger { background: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container); }
+.lb-ekstra { border-style: dashed; }
+.lbcount { margin-top: 12px; } .lbcount > span:first-child { display: inline-flex; align-items: center; gap: 8px; }
+.lbround { margin-top: 6px; }
+.lbtext { margin-top: 14px; line-height: 1.7; text-align: left; } .lbctx { margin: 0 0 8px; }
+.lbslot { min-height: 58px; margin: 10px 0; padding: 10px 14px; border: 2px dashed var(--rule-strong); border-radius: 14px; display: flex; align-items: center; justify-content: center; text-align: center; color: var(--soft); }
+.lbslot.filled { border-style: solid; color: inherit; background: var(--md-sys-color-surface-container-high); }
+.lbq { margin: 0 0 4px; font-size: 1.1rem; }
+.lbopts { display: grid; gap: 8px; margin-top: 10px; }
+.lbopt { display: flex; gap: 10px; align-items: flex-start; text-align: left; min-height: 48px; padding: 10px 14px; border: 1px solid var(--rule-strong); border-radius: 14px; background: var(--sheet); color: inherit; font: inherit; cursor: pointer; }
+.lbopt .ab { font-weight: 800; color: var(--soft); min-width: 1.2em; }
+.lbopt:hover { background: var(--md-sys-color-surface-container-high); }
+.lbfb { margin-top: 14px; display: grid; gap: 10px; border-left: 6px solid var(--bad); } .lbfb.ok { border-left-color: var(--ok); }
+.lbfb p { margin: 0; } .lbfb small { display: block; }
+.lbfbt { display: grid; gap: 8px; }
+.lbtrap { border-left: 4px solid var(--rule-strong); padding: 6px 12px; border-radius: 10px; background: var(--md-sys-color-surface-container-low); }
+.lbtrap p { margin: 4px 0 0; }
+.lbmini { display: block; margin: 0 0 4px; font-size: .8rem; font-weight: 800; color: var(--soft); letter-spacing: .02em; }
+.lbwhy { margin: 6px 0 0; padding-left: 1.2em; display: grid; gap: 4px; }
+.lbfull { line-height: 1.7; }
+.lbins { display: inline; padding: 1px 6px; border-radius: 8px; border: 1px dashed var(--md-sys-color-primary); }
+.lbpiecebox { line-height: 2.1; font-size: 1.05rem; margin-top: 8px; text-align: left; }
+.lbw { display: inline; padding: 1px 4px; margin: 0 -1px; border: 1px solid transparent; border-radius: 8px; background: none; color: inherit; font: inherit; cursor: pointer; }
+.lbw:hover:not(:disabled) { background: var(--md-sys-color-surface-container-high); }
+.lbw.on { background: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container); }
+.lbw.ok { background: var(--ok-bg); } .lbw.bad { background: var(--bad-bg); } .lbw.miss { border: 2px dashed var(--ok); }
+.lbw:disabled { cursor: default; }
+.lbgapbox { display: inline-block; min-width: 3.4em; padding: 0 6px; border-radius: 8px; background: var(--md-sys-color-surface-container-high); font-weight: 700; text-align: center; white-space: nowrap; }
+.lbpieces { margin: 8px 0 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+.lbpieces li { display: flex; gap: 10px; line-height: 1.55; } .lbpieces b { min-width: 1.1em; }
+.lbtable { margin-top: 14px; } .lbtable h2 { margin: 0 0 8px; font-size: 1.1rem; }
+.lbrow { display: grid; grid-template-columns: 2.2em minmax(0, 1fr); gap: 8px; align-items: center; padding: 4px 0; }
+.lbn { font-weight: 800; text-align: center; }
+.lbcells { display: flex; flex-wrap: wrap; gap: 4px; }
+.lbcell { min-width: 40px; min-height: 40px; border-radius: 12px; border: 1px solid var(--rule-strong); background: var(--sheet); font: 800 1rem system-ui, sans-serif; color: inherit; cursor: pointer; }
+.lbcell:hover:not(:disabled) { background: var(--md-sys-color-surface-container-high); }
+.lbcell.sel { background: var(--md-sys-color-primary-container); border-color: var(--md-sys-color-primary); color: var(--md-sys-color-on-primary-container); }
+.lbcell.taken { opacity: .4; }
+.lbcell:disabled { cursor: default; }
+.lbclock { font-weight: 800; font-variant-numeric: tabular-nums; }
+.lbset3 .counter > span:first-child { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.lbresult { display: flex; align-items: baseline; gap: 12px; margin-top: 12px; }
+.lbreview { margin-top: 18px; display: grid; gap: 12px; } .lbreview h2 { margin: 0; font-size: 1.15rem; }
+.lbrev { padding: 14px 16px; border-radius: 20px; border-left: 6px solid var(--bad); background: var(--md-sys-color-surface-container-low); }
+.lbrev.ok { border-left-color: var(--ok); }
+.lbrev header { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.lbrev p { margin: 8px 0 0; }
+.lbrev .lbfull mark.hl { font-weight: 400; }
+.lbextra { margin-top: 14px; display: grid; gap: 10px; } .lbextra h2 { margin: 0; font-size: 1.1rem; }
+.lbx .lbxbody { margin-top: 8px; display: grid; gap: 6px; } .lbx .lbxbody p { margin: 0; }
+.lbhits { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 0; }
+.lbsets { list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 10px; }
+.lbset { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; padding: 14px 16px; }
+.lbset > div { flex: 1 1 220px; }
+.lbset .tag { margin-left: 4px; }
+@media (max-width: 860px) { .lbgrid { grid-template-columns: 1fr; } }
+@media (max-width: 600px) {
+  .l2bbanner { grid-template-columns: 1fr; } .l2bbanner .btn { justify-content: center; }
+  .lbrow { grid-template-columns: 1.8em minmax(0, 1fr); } .lbcell { min-width: 36px; min-height: 40px; }
+  .lbset { flex-direction: column; align-items: stretch; } .lbset .btn { justify-content: center; }
+  .lbtrow { justify-content: flex-start; }
+  .lbcells { gap: 3px; } .lbcell { min-width: 34px; min-height: 40px; }
+}
 </style>
 </head>
 <body>
@@ -1149,6 +1232,40 @@ const I18N = {
   "mk.opts": ["Svarmulighederne:", "The options:"],
   "mk.sel": ["Kun ord fra de {0} valgte emner", "Only words from the {0} selected topics"], "mk.fill": ["{0} af hullerne er fra andre emner, fordi de valgte emner ikke har sætninger nok.", "{0} of the gaps are from other topics because the selected topics don't have enough sentences."],
   "mk.review": ["Gennemgang", "Review"], "mk.few": ["Der er ikke sætninger nok til en mock endnu (kør pd3.py mockpool).", "Not enough sentences for a mock yet (run pd3.py mockpool)."],
+  "lb.pill": ["2B", "2B"], "lb.title": ["Læsning 2B · Indsæt tekststykket", "Reading 2B · Insert the text piece"],
+  "lb.s": ["Fem tekststykker ud af syv. Tjek sætningen før og efter hullet.", "Five pieces out of seven. Check the sentence before and after the gap."],
+  "lb.go": ["Åbn 2B", "Open 2B"], "lb.last": ["Sidst: {0}", "Last: {0}"], "lb.lastn": ["Sidst: {0}/{1}", "Last: {0}/{1}"], "lb.none": ["Ingen endnu", "None yet"],
+  "lb.intro": ["Her øver du sammenhængen: hvilket stykke passer præcis her, og hvorfor?", "Practise the cohesion: which piece fits exactly here, and why?"],
+  "lb.method": ["Metoden", "The method"],
+  "lb.lv1": ["Niveau 1 · Før og efter", "Level 1 · Before and after"], "lb.lv1.d": ["Vælg stykket til hullet, og begrund valget med en af tre grunde.", "Pick the piece for the gap, then the reason from three options."],
+  "lb.lv2": ["Niveau 2 · Krogene", "Level 2 · The hooks"], "lb.lv2.d": ["Tryk på de ord i stykket, der peger tilbage eller binder det sammen.", "Tap the words in the piece that point back or link it."],
+  "lb.lv3": ["Niveau 3 · Mini-2B og 2B", "Level 3 · Mini 2B and 2B"], "lb.lv3.d": ["Udfyld skemaet som til eksamen: hvert bogstav kun én gang.", "Fill in the table as in the exam: each letter only once."],
+  "lb.start": ["Start", "Start"],
+  "lb.traps": ["Dine fælder", "Your traps"], "lb.traps.s": ["Hvor tit du har valgt hver type forkert.", "How often you chose each wrong type."], "lb.trap.n": ["{0} gange", "{0} times"],
+  "lb.held": ["Sluttest: {0} (2022v)", "Final test: {0} (2022v)"], "lb.held.s": ["Holdes for sig selv. Den bruges ikke i de andre øvelser.", "Kept apart. It is not used in the other drills."],
+  "lb.missed": ["Stykker i kø igen: {0}", "Items due to come back: {0}"],
+  "lb.prog": ["{0} af {1}", "{0} of {1}"], "lb.slot": ["Stykket går her", "The piece goes here"], "lb.again": ["Den kommer igen til sidst i runden.", "It comes back at the end of this round."],
+  "lb.q1": ["Hvilket stykke passer i hullet?", "Which piece fits the gap?"], "lb.q1.s": ["Læs sætningen før og efter hullet, og tjek bindeordet i stykket.", "Read the sentences before and after, and check the linking word."],
+  "lb.why": ["Hvorfor passer det?", "Why does it fit?"], "lb.why.s": ["Du svarer altid på dette, også når stykket var forkert.", "You always answer this, even when the piece was wrong."],
+  "lb.piece": ["Stykket", "The piece"], "lb.reason": ["Grunden", "The reason"], "lb.ok": ["rigtigt", "right"], "lb.wrong": ["forkert", "wrong"], "lb.pick": ["du valgte {0}", "you picked {0}"],
+  "lb.right": ["Det rigtige stykke:", "The right piece:"], "lb.passage": ["Teksten med stykket sat ind", "The text with the piece in place"], "lb.traps.t": ["De to forkerte stykker", "The two wrong pieces"], "lb.next": ["Næste", "Next"],
+  "lb.tr.samme": ["Samme ord", "Same word"], "lb.tr.nabo": ["Nabo", "Neighbour"], "lb.tr.logik": ["Forkert logik", "Wrong logic"], "lb.tr.peger": ["Peger forkert", "Points wrong"],
+  "lb.tap": ["Tryk på de ord, der peger tilbage eller binder stykket sammen. Tryk igen for at fjerne.", "Tap the words that point back or link the piece. Tap again to remove."],
+  "lb.tapped": ["{0} valgt", "{0} selected"], "lb.check": ["Tjek", "Check"],
+  "lb.l2.r": ["Rigtigt: du fandt præcis krogene.", "Right: you found exactly the hooks."], "lb.l2.w": ["Forkert: det var ikke præcis krogene.", "Wrong: not exactly the hooks."], "lb.l2.miss": ["du mangler {0}", "you missed {0}"],
+  "lb.hits": ["Fælder denne runde", "Traps this round"], "lb.nohits": ["Ingen forkerte valg denne runde.", "No wrong choices this round."],
+  "lb.score": ["{0} af {1} rigtige", "{0} of {1} right"], "lb.new": ["Ny runde", "New round"], "lb.back": ["Til Læsning 2B", "Back to Reading 2B"],
+  "lb.sets": ["Vælg et sæt", "Choose a set"], "lb.sets.s": ["Mini-sættene først, derefter de fulde sæt. Sluttesten ligger for sig selv.", "Mini sets first, then the full sets. The final test is kept apart."],
+  "lb.sets.mini": ["Mini · 3 hul, 5 stykker", "Mini · 3 gaps, 5 pieces"], "lb.sets.full": ["Fuld · 5 hul, 7 stykker", "Full · 5 gaps, 7 pieces"],
+  "lb.sets.done": ["Sidst: {0}/{1} point", "Last: {0}/{1} points"], "lb.sets.none": ["Ikke spillet endnu", "Not done yet"], "lb.sets.back": ["Til listen over sæt", "Back to the list of sets"],
+  "lb.timer": ["Med tid", "With time"], "lb.timer.left": ["{0} tilbage", "{0} left"],
+  "lb.instr5": ["Der er fjernet fem tekstdele. Hvert bogstav må kun bruges én gang. To tekststykker passer ikke.", "Five pieces were removed. Each letter may be used only once. Two pieces do not fit."],
+  "lb.instr3": ["Der er fjernet tre tekstdele. Hvert bogstav må kun bruges én gang. To tekststykker passer ikke.", "Three pieces were removed. Each letter may be used only once. Two pieces do not fit."],
+  "lb.table": ["Skema", "Answer table"], "lb.pieces": ["Tekststykkerne", "The pieces"], "lb.cell": ["Hul {0}: stykke {1}", "Gap {0}: piece {1}"],
+  "lb.hand": ["Lever", "Hand in"], "lb.n": ["{0} af {1} hul udfyldt", "{0} of {1} gaps filled"], "lb.points": ["{0}/{1} point", "{0}/{1} points"], "lb.review": ["Gennemgang", "Review"],
+  "lb.gapn": ["Hul {0}", "Gap {0}"], "lb.yours": ["dit bogstav: {0}", "your letter: {0}"], "lb.rightl": ["rigtigt: {0}", "right: {0}"], "lb.noans": ["intet svar", "no answer"],
+  "lb.nabo.t": ["stykket hører til hul {0}", "the piece belongs to gap {0}"], "lb.ekstra": ["Ekstra stykke", "Extra piece"],
+  "lb.extra.q": ["Hvorfor passer de to sidste ikke?", "Why do the last two not fit?"], "lb.show": ["Vis", "Show"], "lb.retry": ["Prøv igen", "Try again"], "lb.sets.n": ["{0} sæt", "{0} sets"], "lb.held.go": ["Åbn sluttesten", "Open the final test"], "lb.again.n": ["Igen", "Again"],
 };
 function t(key, ...args) {
   const e = I18N[key];
@@ -1402,6 +1519,7 @@ function flipLang() {
   if ($("#go")) { const y = window.scrollY; home(); window.scrollTo(0, y); }
   else if ($("#lgboard")) { const y = window.scrollY; tankegang(); window.scrollTo(0, y); }
   else if ($("#soBox")) { const y = window.scrollY; soRender(); window.scrollTo(0, y); }
+  else if (LBV) { const y = window.scrollY; lbRedraw(); window.scrollTo(0, y); }
   else if (FC) fcRender();
   if ($("#findbar").classList.contains("open")) findDraw();
 }
@@ -1414,7 +1532,7 @@ function load() {
     $("#app").innerHTML = `<div class="err" style="margin-top:32px">${t("nodeck")}<br><br><code>python3 -I .claude/skills/pd3-coach/scripts/pd3.py page</code></div>`;
     return;
   }
-  DB = { today: iso(new Date()), profile: deck.profile || {}, sentences: deck.sentences || {}, senses: deck.senses || {}, tips: deck.tips || {}, info: deck.info || {}, grammar: deck.grammar || {}, logic: deck.logic || {}, l3: deck.l3 || [], lgs: deck.lgs || [], mock: deck.mock || {}, images: deck.images || {}, cards: {} };
+  DB = { today: iso(new Date()), profile: deck.profile || {}, sentences: deck.sentences || {}, senses: deck.senses || {}, tips: deck.tips || {}, info: deck.info || {}, grammar: deck.grammar || {}, logic: deck.logic || {}, l3: deck.l3 || [], lgs: deck.lgs || [], mock: deck.mock || {}, l2b: deck.l2b || {}, images: deck.images || {}, cards: {} };
   const saved = readProgress();
   for (const [id, c] of Object.entries(deck.cards)) DB.cards[id] = { id, ...c, history: c.history || [], ...(saved[id] || {}) };
   addFreqGroups();
@@ -1427,6 +1545,7 @@ function load() {
 }
 // the site's other pages link to "#find" (or "#find=ord"): open the find bar over the home screen
 function route() {
+  if (location.hash === "#l2b") { history.replaceState(null, "", location.pathname + location.search); return l2bHome(); }
   if (location.hash === "#tankegang") { history.replaceState(null, "", location.pathname + location.search); return tankegang(); }
   if (location.hash === "#grammatik") { history.replaceState(null, "", location.pathname + location.search); return grammarHome(); }
   if (location.hash === "#sorter") { history.replaceState(null, "", location.pathname + location.search); return soStart(); }
@@ -1592,7 +1711,7 @@ function tvCol(k, icon, title, big, unit, body, foot) {
   return `<section class="tvcol k-${k}"><header><h2>${ICONS[icon]}${title}</h2><span class="big">${big}<small>${unit}</small></span></header>${body}${foot ? `<div class="foot">${foot}</div>` : ""}</section>`;
 }
 function home() {
-  S = null; FC = null; GS = null;
+  S = null; FC = null; GS = null; LBV = null; LB = null; lbStop();
   const k = counts(), p = DB.profile || {};
   const dW = daysTo(p.exam_date);
   const groupsBy = byGroup();
@@ -1637,6 +1756,7 @@ function home() {
         `<button type="button" class="txtbtn" id="exer"${nLearned ? "" : " disabled"}>${ICONS.pencil}${t("tv.exall")}</button>`)}
     </div>`}
     ${gview || !mkReady() ? "" : `<section class="mkbanner"><span class="mkpill">${t("mk.pill")}</span><div><b>${t("mk.title")}</b><p>${t("mk.s")}${picked.length ? ` · ${t("mk.sel", picked.length)}` : ""}${mkLast() != null ? ` · ${t("mk.last", mkLast())}` : ""}</p></div><button type="button" class="btn solid" id="mockGo">${ICONS.pencil}${t("mk.go")}</button></section>`}
+    ${gview || !l2Ready() ? "" : l2bBanner()}
     ${gview ? "" : `<nav class="tvlinks" aria-label="${esc(t("tv.more"))}">
       <a href="#emner" id="allTopics">${t("tv.topics")} <span>${t("tv.topics.s", gs.length)}</span></a>
       ${lgItems().length ? `<a href="#tankegang" id="tkLink">${t("lg.title")} <span>${t("lg.link.s")}</span></a>` : ""}
@@ -1648,6 +1768,7 @@ function home() {
   if ($("#conf")) $("#conf").onclick = () => startConfusables(null);
   if ($("#logic")) $("#logic").onclick = () => startLogic();
   if ($("#mockGo")) $("#mockGo").onclick = startMock;
+  if ($("#l2bGo")) $("#l2bGo").onclick = l2bHome;
   if ($("#tkLink")) $("#tkLink").onclick = e => { e.preventDefault(); tankegang(); };
   document.querySelectorAll("[data-rev]").forEach(b => b.onclick = () => startSession({ groups: [b.dataset.rev], fresh: 0 }));
   document.querySelectorAll("[data-learn]").forEach(b => b.onclick = () => startSession({ groups: [b.dataset.learn], reviews: 0 }));
@@ -3614,6 +3735,318 @@ function mockView() {
   bindTr($("#app"));
 }
 
+// ---------- Læsning 2B · Indsæt tekststykket (pd3-data/l2b.json) ----------
+// Built like the real Delprøve 2B: five gaps, seven pieces (A–G, two do not fit). The cohesion check is made explicit:
+// the sentence before and after the gap, the linking and pointing words of the piece, then the next sentence.
+// Level 1 = one gap (the piece, then the reason). Level 2 = the hook words. Level 3 = a whole set (full or mini).
+// Practice only, no SM-2. Progress is kept per browser: misses come back, trap counts, scores.
+const L2_KEY = "pd3-assisted-learning:l2b:v1";
+let LBV = null, LB = null, LBT = null;   // the 2B screen on show; the round or set in progress; the set clock
+function l2Store() { try { return JSON.parse(localStorage.getItem(L2_KEY) || "{}"); } catch (e) { return {}; } }
+function l2Write(st) { try { localStorage.setItem(L2_KEY, JSON.stringify(st)); } catch (e) { /* ignore */ } }
+function l2Put(fn) { const st = l2Store(); fn(st); l2Write(st); return st; }
+const l2Ready = () => !!((DB.l2b && DB.l2b.gaps) || []).length;
+const l2Sets = () => (DB.l2b && DB.l2b.sets) || [];
+const lbNorm = s => String(s).toLowerCase().replace(/[^a-zæøå0-9]/g, "");
+const lbPill = k => `<span class="lbpill lb-${k}">${t("lb.tr." + k)}</span>`;
+const lbSents = s => String(s || "").split(/(?<=[.!?])\s+/).filter(Boolean);
+const lbBul = (s, en) => `<ul class="lbwhy${en ? " soft small" : ""}"${en ? ` lang="en"` : ` lang="da"`}>${String(s || "").split("\n").map(x => x.replace(/^•\s*/, "").trim()).filter(Boolean).map(x => `<li>${esc(x)}</li>`).join("")}</ul>`;
+// the words that point back or link (or the words they point to) get the page's highlight; the first match of each is marked
+function lbMark(text, words) {
+  let out = esc(text);
+  for (const w of (words || []).filter(Boolean)) {
+    const re = new RegExp("(^|[^\\wæøåÆØÅ])(" + esc(w).replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + ")(?![\\wæøåÆØÅ])", "i");
+    out = out.replace(re, (m, a, b) => `${a}<mark class="hl">${b}</mark>`);
+  }
+  return out;
+}
+// the passage with the piece put in place; hook words and their targets are highlighted in all three parts
+function lbPassage(g, piece) {
+  const H = g.hooks || [];
+  const bef = [...H.filter(h => h.where === "before").map(h => h.w), ...H.filter(h => h.toWhere === "before").map(h => h.to)];
+  const aft = [...H.filter(h => h.where === "after").map(h => h.w), ...H.filter(h => h.toWhere === "after").map(h => h.to)];
+  const rig = [...H.filter(h => h.where === "right").map(h => h.w), ...H.filter(h => h.toWhere === "right").map(h => h.to)];
+  return `<p class="lbfull" lang="da">${lbMark(g.before, bef)} <span class="lbins">${lbMark(piece, rig)}</span> ${lbMark(g.after, aft)}</p>`;
+}
+function lbRecord(fn) { l2Put(fn); }
+function lbStop() { clearInterval(LBT); LBT = null; }
+
+// level 1 and 2 rounds: 8 items; misses first, then unseen, then the rest; a wrong item comes back once at the end
+function lbPick(pool, n, st) {
+  const miss = new Set(st.miss || []), seen = new Set(st.seen || []);
+  return [...shuffle(pool.filter(x => miss.has(x.id))), ...shuffle(pool.filter(x => !miss.has(x.id) && !seen.has(x.id))), ...shuffle(pool.filter(x => !miss.has(x.id) && seen.has(x.id)))].slice(0, n);
+}
+// the options and reasons are shuffled once, here, so a re-render never reorders them
+function lbItem1(g) {
+  const opts = shuffle([{ p: g.right, ok: true, trap: null }, ...g.traps.map(x => ({ p: x.p, ok: false, trap: x.trap, da: x.da, en: x.en }))]);
+  const reasons = shuffle(g.reasons.map((r, i) => ({ da: r.da, en: r.en, ok: i === g.reason })));
+  return { id: g.id, g, opts, reasons };
+}
+function lbItem2(h) {
+  const tokens = h.piece.split(/(\s+)/), want = h.words.map(lbNorm);
+  return { id: h.id, h, tokens, hooks: tokens.map((x, i) => x.trim() && want.includes(lbNorm(x)) ? i : -1).filter(i => i >= 0) };
+}
+function lbStart(lvl) {
+  const st = l2Store(), pool = lvl === 1 ? DB.l2b.gaps : (DB.l2b.hooks || []);
+  if (!pool.length) return l2bHome();
+  const picked = lbPick(pool, 8, st);
+  LB = { lvl, queue: picked.map(lvl === 1 ? lbItem1 : lbItem2), base: picked.length, i: 0, phase: "piece", pick: null, rpick: null, taps: new Set(), checked: false, res: [], hits: [], again: false };
+  LBV = { view: "round" };
+  lbRecord(s => { s.seen = [...new Set([...(s.seen || []), ...picked.map(x => x.id)])].slice(-400); });
+  window.scrollTo(0, 0);
+  lbRender();
+}
+function lbRender() {
+  if (!LB) return l2bHome();
+  if (LB.i >= LB.queue.length) return lbSummary();
+  LBV = { view: "round" };
+  const it = LB.queue[LB.i], n = LB.queue.length;
+  const at = LB.i < LB.base ? t("lb.prog", LB.i + 1, LB.base) : t("lb.again.n");
+  const top = `<div class="counter lbcount"><span><span class="mkpill">${t("lb.pill")}</span> ${t("lb.lv" + LB.lvl)} <span class="tag">${esc((it.g || it.h).src)}</span>${(it.g || it.h).ai ? AI() : ""}</span><span class="soft small">${at}</span><button class="btn quiet" id="lbquit">✕ ${t("s.end")}</button></div>`;
+  const body = LB.lvl === 1 ? lbL1(it) : lbL2(it);
+  $("#app").innerHTML = `<div class="narrow lbround">${top}${body}</div>`;
+  $("#lbquit").onclick = () => { LB = null; l2bHome(); window.scrollTo(0, 0); };
+  bindLb();
+}
+function bindLb() {
+  document.querySelectorAll("[data-pk]").forEach(b => b.onclick = () => { LB.pick = +b.dataset.pk; LB.phase = "reason"; lbKeep(); });
+  document.querySelectorAll("[data-rs]").forEach(b => b.onclick = () => lbReason(+b.dataset.rs));
+  document.querySelectorAll("[data-nx]").forEach(b => b.onclick = () => { LB.i++; LB.phase = "piece"; LB.pick = LB.rpick = null; LB.taps = new Set(); LB.checked = false; lbKeep(); });
+  document.querySelectorAll("[data-tap]").forEach(b => b.onclick = () => { const k = +b.dataset.tap; LB.taps.has(k) ? LB.taps.delete(k) : LB.taps.add(k); lbKeep(); });
+  if ($("#lbcheck")) $("#lbcheck").onclick = lbCheck;
+  bindTr($("#app"));
+}
+function lbKeep() { const y = window.scrollY; lbRender(); window.scrollTo(0, y); }
+
+// level 1: the piece (step 1), then the reason (step 2, always asked), then feedback
+function lbL1(it) {
+  const g = it.g, ph = LB.phase;
+  const slot = ph === "piece" ? `<div class="lbslot">${t("lb.slot")}</div>` : `<div class="lbslot filled"><span lang="da">${esc(it.opts[LB.pick].p)}</span></div>`;
+  const head = `<section class="sheet q lbtext"><p class="lbctx" lang="da">${esc(g.before)}</p>${slot}<p class="lbctx" lang="da">${esc(g.after)}</p>${it.again ? `<p class="small soft">${t("lb.again")}</p>` : ""}</section>`;
+  if (ph === "piece") return `${head}<section class="sheet q"><h2 class="lbq">${t("lb.q1")}</h2><p class="small soft">${t("lb.q1.s")}</p><div class="lbopts">${it.opts.map((o, j) => `<button type="button" class="lbopt" data-pk="${j}"><span class="ab">${"ABC"[j]}</span><span lang="da">${esc(o.p)}</span></button>`).join("")}</div></section>`;
+  if (ph === "reason") return `${head}<section class="sheet q"><h2 class="lbq">${t("lb.why")}</h2><p class="small soft">${t("lb.why.s")}</p><div class="lbopts">${it.reasons.map((r, j) => `<button type="button" class="lbopt" data-rs="${j}"><span class="ab">${j + 1}</span><span><span lang="da">${esc(r.da)}</span><small class="soft" lang="en" style="display:block">${esc(r.en)}</small></span></button>`).join("")}</div></section>`;
+  // feedback
+  const pOk = it.opts[LB.pick].ok, rOk = it.reasons[LB.rpick].ok, ok = pOk && rOk;
+  const pick = it.opts[LB.pick];
+  const traps = it.opts.filter(o => !o.ok).map(o => `<div class="lbtrap">${lbPill(o.trap)} <span lang="da">${esc(o.p)}</span><p class="small" lang="da">${esc(o.da)}</p><small class="soft" lang="en" style="display:block">${esc(o.en)}</small></div>`).join("");
+  const right = it.opts.find(o => o.ok);
+  return `${head}<section class="sheet q lbfb ${ok ? "ok" : "bad"}">
+    <p>${pOk ? "✓" : "✗"} <b>${t("lb.piece")}</b>: ${pOk ? t("lb.ok") : `${t("lb.wrong")} · ${t("lb.pick", `<span lang="da">${esc(pick.p)}</span>`)}`}</p>
+    <p>${rOk ? "✓" : "✗"} <b>${t("lb.reason")}</b>: <span lang="da">${esc(it.reasons[LB.rpick].da)}</span> <small class="soft" lang="en">${esc(it.reasons[LB.rpick].en)}</small></p>
+    ${pOk ? "" : `<p class="small soft">${t("lb.right")} <span lang="da">${esc(right.p)}</span></p>`}
+    <div><span class="lbmini">${t("lb.passage")}</span>${lbPassage(g, right.p)}</div>
+    ${pOk ? "" : `<div class="lbfbt"><span class="lbmini">${t("lb.traps.t")}</span>${traps}</div>`}
+    ${lbBul(g.why.da)}${lbBul(g.why.en, true)}
+    <div class="row next"><button class="btn solid" data-nx="1">${t("lb.next")}</button></div></section>`;
+}
+function lbReason(j) {
+  const it = LB.queue[LB.i];
+  const pOk = it.opts[LB.pick].ok, rOk = it.reasons[j].ok, ok = pOk && rOk;
+  LB.rpick = j; LB.phase = "fb";
+  if (!it.again) {
+    LB.res.push({ id: it.id, ok });
+    if (!pOk) LB.hits.push(it.opts[LB.pick].trap);
+    lbRecord(s => {
+      if (!pOk) { s.traps = s.traps || {}; const k = it.opts[LB.pick].trap; s.traps[k] = (s.traps[k] || 0) + 1; }
+      s.miss = ok ? (s.miss || []).filter(x => x !== it.id) : [...new Set([...(s.miss || []), it.id])];
+    });
+    if (!ok) LB.queue.push({ ...it, again: true });   // comes back once, at the end of this round
+  }
+  lbKeep();
+}
+
+// level 2: tap the hook words, then check; the round counts an item right only when the taps are exactly the hook words
+function lbL2(it) {
+  const h = it.h, checked = LB.checked, hs = new Set(it.hooks);
+  const words = it.tokens.map((x, i) => {
+    if (!x.trim()) return x;
+    const cls = !checked ? (LB.taps.has(i) ? " on" : "") : (LB.taps.has(i) ? (hs.has(i) ? " ok" : " bad") : (hs.has(i) ? " miss" : ""));
+    return `<button type="button" class="lbw${cls}" data-tap="${i}" aria-pressed="${LB.taps.has(i)}"${checked ? " disabled" : ""}>${esc(x)}</button>`;
+  }).join("");
+  const top = `<section class="sheet q lbtext"><p class="lbctx soft" lang="da">${esc(h.before)}</p><p class="small soft">${t("lb.tap")}</p><div class="lbpiecebox" lang="da">${words}</div>${it.again ? `<p class="small soft">${t("lb.again")}</p>` : ""}</section>`;
+  if (!checked) return `${top}<div class="row next"><button class="btn solid" id="lbcheck"${LB.taps.size ? "" : " disabled"}>${t("lb.check")}</button><span class="soft small">${t("lb.tapped", LB.taps.size)}</span></div>`;
+  const ok = LB.taps.size === hs.size && [...LB.taps].every(i => hs.has(i));
+  const missed = it.tokens.filter((x, i) => hs.has(i) && !LB.taps.has(i)).map(x => x.replace(/[^\wæøåÆØÅ]/g, "")).join(", ");
+  return `${top}<section class="sheet q lbfb ${ok ? "ok" : "bad"}"><p>${ok ? "✓" : "✗"} <b>${ok ? t("lb.l2.r") : t("lb.l2.w")}</b>${missed && !ok ? ` · ${t("lb.l2.miss", `<span lang="da">${esc(missed)}</span>`)}` : ""}</p>${lbBul(h.why.da)}${lbBul(h.why.en, true)}<div class="row next"><button class="btn solid" data-nx="1">${t("lb.next")}</button></div></section>`;
+}
+function lbCheck() {
+  const it = LB.queue[LB.i], hs = new Set(it.hooks);
+  const ok = LB.taps.size === hs.size && [...LB.taps].every(i => hs.has(i));
+  LB.checked = true;
+  if (!it.again) {
+    LB.res.push({ id: it.id, ok });
+    lbRecord(s => { s.miss = ok ? (s.miss || []).filter(x => x !== it.id) : [...new Set([...(s.miss || []), it.id])]; });
+    if (!ok) LB.queue.push({ ...it, again: true });
+  }
+  lbKeep();
+}
+
+function lbSummary() {
+  const ok = LB.res.filter(x => x.ok).length, n = LB.res.length;
+  lbRecord(s => {
+    s.scores = s.scores || {}; const k = String(LB.lvl);
+    s.scores[k] = [...(s.scores[k] || []), [iso(new Date()), ok, n]].slice(-20);
+    s.last = [iso(new Date()), t("lb.lv" + LB.lvl), `${ok}/${n}`];
+  });
+  const hits = LB.hits.reduce((m, k) => (m[k] = (m[k] || 0) + 1, m), {});
+  LBV = { view: "round" };
+  $("#app").innerHTML = `<div class="narrow lbround"><div class="counter"><span><span class="mkpill">${t("lb.pill")}</span> ${t("lb.lv" + LB.lvl)}</span></div>
+    <section class="sheet q lbdone"><span class="score">${ok}/${n}</span><span class="soft">${t("lb.score", ok, n)}</span>
+      ${Object.keys(hits).length ? `<div class="lbmini">${t("lb.hits")}</div><p class="lbhits">${Object.entries(hits).map(([k, c]) => `${lbPill(k)} ×${c}`).join(" ")}</p>` : `<p class="small soft">${t("lb.nohits")}</p>`}
+      <div class="row next"><button class="btn solid" id="lbnew">${t("lb.new")}</button><button class="btn quiet" id="lbhome">${t("lb.back")}</button></div></section></div>`;
+  $("#lbnew").onclick = () => lbStart(LB.lvl);
+  $("#lbhome").onclick = () => { LB = null; l2bHome(); window.scrollTo(0, 0); };
+}
+
+// level 3: a whole set. Gaps 1..n, pieces A..(n+2); each letter once; a clock (optional); review and extras at the end
+function lbSetStart(id, held) {
+  const set = l2Sets().find(s => s.id === id);
+  if (!set) return l2bHome();
+  LB = { lvl: 3, set, n: set.parts.filter(p => typeof p === "number").length, ans: [], done: false, timed: false, left: 0, held: !!held };
+  LB.ans = Array(LB.n).fill(null);
+  LBV = { view: "set" };
+  window.scrollTo(0, 0);
+  lbSetRender();
+}
+function lbSetRender() {
+  if (!LB || LB.lvl !== 3) return;
+  LBV = { view: "set" };
+  const s = LB.set, letters = Object.keys(s.pieces).sort(), n = LB.n, full = s.kind === "full";
+  const clock = LB.timed && !LB.done ? `<span class="lbclock" id="lbclock">${t("lb.timer.left", lbMmss(LB.left))}</span>` : "";
+  const text = s.parts.map(p => typeof p === "number" ? `<span class="lbgapbox">${p}: <b>${LB.ans[p - 1] || "…"}</b></span>` : esc(p)).join("");
+  const pieces = `<ol class="lbpieces">${letters.map(L => `<li lang="da"><b>${L}</b><span>${esc(s.pieces[L])}</span></li>`).join("")}</ol>`;
+  const rows = Array.from({ length: n }, (_, k) => k + 1).map(g => `<div class="lbrow"><span class="lbn">${g}</span><div class="lbcells">${letters.map(L => {
+    const sel = LB.ans[g - 1] === L, taken = !sel && LB.ans.some((x, k) => k !== g - 1 && x === L);
+    return `<button type="button" class="lbcell${sel ? " sel" : ""}${taken ? " taken" : ""}" data-g="${g}" data-l="${L}" aria-pressed="${sel}" aria-label="${t("lb.cell", g, L)}"${LB.done ? " disabled" : ""}>${L}</button>`;
+  }).join("")}</div></div>`).join("");
+  const got = LB.ans.filter(Boolean).length;
+  const instr = `<div class="sheet q"><p class="small">${t(full ? "lb.instr5" : "lb.instr3")}</p></div>`;
+  let body;
+  if (!LB.done) {
+    body = `${instr}<section class="sheet q lbtext"><p lang="da">${text}</p></section>
+      <section class="sheet q"><h2 class="lbq">${t("lb.pieces")}</h2>${pieces}</section>
+      <section class="sheet q lbtable"><h2>${t("lb.table")}</h2>${rows}
+        <div class="row next"><button class="btn solid" id="lbhand"${got ? "" : " disabled"}>${t("lb.hand")}</button><span class="soft small">${t("lb.n", got, n)}</span></div></section>`;
+  } else {
+    const right = LB.ans.filter((x, i) => x === s.key[i + 1]).length, pts = 2 * right, max = 2 * n;
+    const owner = L => Object.keys(s.key).find(k => s.key[k] === L);
+    const rev = Array.from({ length: n }, (_, k) => k + 1).map(g => {
+      const k = s.key[g], yours = LB.ans[g - 1], ok = yours === k, ptxt = s.parts.indexOf(g);
+      const prev = lbSents(s.parts[ptxt - 1]).slice(-1)[0] || "", next = lbSents(s.parts[ptxt + 1]).slice(0, 1)[0] || "";
+      let tag = "";
+      if (!ok && yours && owner(yours)) tag = `${lbPill("nabo")} <span class="small">${t("lb.nabo.t", owner(yours))}</span>`;
+      else if (!ok && yours && s.extra[yours]) tag = `<span class="lbpill lb-ekstra">${t("lb.ekstra")}</span> ${lbPill(s.extra[yours].trap)}`;
+      const gw = s.gapwhy[String(g)] || {};
+      return `<article class="lbrev ${ok ? "ok" : "bad"}"><header><b>${t("lb.gapn", g)}</b>${tag ? ` ${tag}` : ""}</header>
+        <p class="lbfull" lang="da">${esc(prev)} <span class="lbins"><mark class="hl">${esc(s.pieces[k])}</mark></span> ${esc(next)}</p>
+        <p class="small">${ok ? "✓" : "✗"} ${t("lb.yours", yours || t("lb.noans"))} · ${t("lb.rightl", k)}</p>
+        ${lbBul(gw.da)}${lbBul(gw.en, true)}</article>`;
+    }).join("");
+    const extras = Object.keys(s.extra).sort().map(L => { const e = s.extra[L]; return `<div class="lbx"><button type="button" class="btn quiet" data-x="${L}" aria-expanded="false">${t("lb.show")} ${L}</button>
+      <div class="lbxbody" id="lbx-${L}" hidden><p class="lbpill-row">${e.trap ? lbPill(e.trap) : ""}</p><p lang="da">${esc(s.pieces[L])}</p>${lbBul(e.da)}${lbBul(e.en, true)}</div></div>`; }).join("");
+    body = `<div class="sheet q lbresult"><span class="score">${pts}/${max}</span><span class="soft">${t("lb.points", pts, max)}</span></div>
+      <section class="sheet q lbtable"><h2>${t("lb.table")}</h2>${rows}</section>
+      <section class="lbreview"><h2>${t("lb.review")}</h2>${rev}</section>
+      <section class="sheet q lbextra"><h2>${t("lb.extra.q")}</h2>${extras}</section>
+      <div class="row next"><button class="btn solid" id="lbretry">${t("lb.retry")}</button><button class="btn quiet" id="lbsets">${t("lb.sets.back")}</button></div>`;
+  }
+  $("#app").innerHTML = `<div class="narrow lbset3">
+    <div class="counter"><span><span class="mkpill">${t("lb.pill")}</span> ${esc(s.title)} <span class="tag">${esc(s.src.replace(" · ", " · "))}</span>${s.ai ? AI() : ""}</span>
+      <span class="row">${clock}${LB.done ? "" : `<button class="btn quiet" id="lbtimer" aria-pressed="${LB.timed}">${t("lb.timer")}</button>`}<button class="btn quiet" id="lbquit">✕ ${t("s.end")}</button></span></div>
+    ${body}</div>`;
+  document.querySelectorAll(".lbcell:not([disabled])").forEach(b => b.onclick = () => {
+    const i = +b.dataset.g - 1, L = b.dataset.l, y = window.scrollY;
+    if (LB.ans[i] === L) LB.ans[i] = null;                                   // the same letter again: clear the row
+    else { LB.ans = LB.ans.map((x, k) => x === L && k !== i ? null : x); LB.ans[i] = L; }   // a letter moves to the new row
+    lbSetRender(); window.scrollTo(0, y);
+  });
+  if ($("#lbhand")) $("#lbhand").onclick = lbHand;
+  if ($("#lbtimer")) $("#lbtimer").onclick = () => {
+    LB.timed = !LB.timed;
+    lbStop();
+    if (LB.timed) { LB.left = LB.left || (full ? 15 : 6) * 60; LBT = setInterval(lbTick, 1000); }
+    lbSetRender();
+  };
+  if ($("#lbretry")) $("#lbretry").onclick = () => lbSetStart(s.id, LB.held);
+  if ($("#lbsets")) $("#lbsets").onclick = () => { LB = null; l2bHome(); window.scrollTo(0, 0); };
+  document.querySelectorAll("[data-x]").forEach(b => b.onclick = () => { const bd = $("#lbx-" + b.dataset.x), open = bd.hasAttribute("hidden"); bd.toggleAttribute("hidden", !open); b.setAttribute("aria-expanded", open); });
+  $("#lbquit").onclick = () => { lbStop(); LB = null; l2bHome(); window.scrollTo(0, 0); };
+  bindTr($("#app"));
+}
+const lbMmss = s => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
+function lbTick() {
+  if (!LB || LB.lvl !== 3 || !LB.timed || LB.done) return lbStop();
+  LB.left--;
+  if (LB.left <= 0) { LB.left = 0; return lbHand(); }
+  const el = $("#lbclock"); if (el) el.textContent = t("lb.timer.left", lbMmss(LB.left));
+}
+function lbHand() {
+  lbStop();
+  const s = LB.set, n = LB.n, right = LB.ans.filter((x, i) => x === s.key[i + 1]).length;
+  LB.done = true;
+  lbRecord(st => {
+    st.sets = st.sets || {}; st.sets[s.id] = [right, n, iso(new Date())];
+    st.last = [iso(new Date()), s.title, `${2 * right}/${2 * n}`];
+  });
+  lbSetRender();
+  $(".lbresult")?.scrollIntoView({ block: "start" });
+}
+function lbSets() {
+  LBV = { view: "sets" }; LB = null; lbStop();
+  const st = l2Store().sets || {};
+  const list = l2Sets().filter(s => !s.hold).sort((a, b) => (a.kind === "mini" ? 0 : 1) - (b.kind === "mini" ? 0 : 1));
+  $("#app").innerHTML = `<div class="narrow lbwrap">
+    <div class="top"><a href="#" class="tvback" id="lbback">${t("lb.back")}</a></div>
+    <h1>${t("lb.sets")}</h1><p class="soft">${t("lb.sets.s")}</p>
+    <ul class="lbsets">${list.map(s => { const r = st[s.id]; return `<li class="sheet q lbset"><div><b lang="da">${esc(s.title)}</b> <span class="tag">${esc(s.src)}</span>${s.ai ? AI() : ""}<p class="small soft">${t(s.kind === "mini" ? "lb.sets.mini" : "lb.sets.full")}</p></div><span class="small soft">${r ? t("lb.sets.done", 2 * r[0], 2 * r[1]) : t("lb.sets.none")}</span><button class="btn solid" data-set="${esc(s.id)}">${ICONS.play}${t("lb.start")}</button></li>`; }).join("")}</ul></div>`;
+  document.querySelectorAll("[data-set]").forEach(b => b.onclick = () => lbSetStart(b.dataset.set, false));
+  $("#lbback").onclick = e => { e.preventDefault(); l2bHome(); };
+}
+// the 2B home: the method (Danish, English small), three levels, the trap counts, the held final test
+const LB_METHOD = [
+  ["Læs sætningen før og sætningen efter hullet.", "Read the sentence before and the sentence after the gap."],
+  ["Læs stykkets første ord. Et bindeord («derfor», «men», «til gengæld») skal passe til sammenhængen.", "Read the piece's first words. A linking word («derfor», «men», «til gengæld») must match the relation."],
+  ["Pege-ord («den», «det», «de», «dem», «sådan») skal pege tilbage på noget lige før hullet.", "Pointing words («den», «det», «de», «dem», «sådan») must point back to something just before the gap."],
+  ["Den næste sætning forklarer, fortsætter eller modsiger ofte stykket.", "The next sentence often explains, continues or contrasts the piece."],
+];
+function l2bHome() {
+  LBV = { view: "home" }; LB = null; lbStop();
+  const st = l2Store(), traps = st.traps || {}, held = l2Sets().find(s => s.hold);
+  const lv = lvl => { const s = ((st.scores || {})[lvl] || []).slice(-1)[0]; return s ? t("lb.lastn", s[1], s[2]) : t("lb.none"); };
+  const card = (lvl, title, desc, fn, last) => `<article class="lbcard"><h3>${t(title)}</h3><p class="soft small">${t(desc)}</p><span class="small soft">${last}</span><button type="button" class="btn solid" data-lv="${lvl}">${ICONS.play}${t("lb.start")}</button></article>`;
+  $("#app").innerHTML = `<div class="narrow lbwrap">
+    <div class="top"><a href="#" class="tvback" id="lbhome">${t("gm.back")}</a></div>
+    <div class="hometop"><h1>${t("lb.title")}</h1></div>
+    <p class="soft">${t("lb.intro")}</p>
+    <section class="sheet q lbmetod"><h2>${t("lb.method")}</h2><ol class="lbsteps">${LB_METHOD.map(([da, en]) => `<li><span lang="da">${esc(da)}</span><small class="soft" lang="en">${esc(en)}</small></li>`).join("")}</ol></section>
+    <div class="lbgrid">
+      ${card(1, "lb.lv1", "lb.lv1.d", null, lv(1))}
+      ${card(2, "lb.lv2", "lb.lv2.d", null, lv(2))}
+      ${card(3, "lb.lv3", "lb.lv3.d", null, t("lb.sets.n", l2Sets().filter(s => !s.hold).length))}
+    </div>
+    <section class="sheet q lbtraps-box"><h2>${t("lb.traps")}</h2><p class="small soft">${t("lb.traps.s")}</p>
+      <div class="lbtraps">${["samme", "nabo", "logik", "peger"].map(k => `<div class="lbtrow">${lbPill(k)}<span class="small">${t("lb.trap.n", traps[k] || 0)}</span></div>`).join("")}</div>
+    </section>
+    ${held ? `<section class="sheet q lbheldbox"><div><b>${t("lb.held", esc(held.title))}</b><p class="small soft">${t("lb.held.s")} · ${st.sets && st.sets[held.id] ? t("lb.sets.done", 2 * st.sets[held.id][0], 2 * st.sets[held.id][1]) : t("lb.sets.none")}</p></div><button type="button" class="btn quiet" id="lbheld">${ICONS.check}${t("lb.held.go")}</button></section>` : ""}
+    <p class="small soft lbmiss">${t("lb.missed", (st.miss || []).length)}</p>
+  </div>`;
+  document.querySelectorAll("[data-lv]").forEach(b => b.onclick = () => { const lvl = +b.dataset.lv; if (lvl === 3) lbSets(); else lbStart(lvl); });
+  $("#lbhome").onclick = e => { e.preventDefault(); home(); window.scrollTo(0, 0); };
+  if ($("#lbheld")) $("#lbheld").onclick = () => lbSetStart(held.id, true);
+  bindTr($("#app"));
+}
+// the banner on the home screen, as the mock banner
+function l2bBanner() {
+  const st = l2Store(), last = st.last ? ` · ${t("lb.last", st.last[2])}` : "";
+  return `<section class="l2bbanner"><span class="mkpill">${t("lb.pill")}</span><div><b>${t("lb.title")}</b><p>${t("lb.s")}${last}</p></div><button type="button" class="btn solid" id="l2bGo">${ICONS.pencil}${t("lb.go")}</button></section>`;
+}
+function lbRedraw() {
+  if (!LBV) return;
+  if (LBV.view === "home") l2bHome();
+  else if (LBV.view === "sets") lbSets();
+  else if (LB && LB.lvl === 3) lbSetRender();
+  else if (LB) lbRender();
+}
 // ---------- summary ----------
 function summary() {
   const ex = S.exercise;

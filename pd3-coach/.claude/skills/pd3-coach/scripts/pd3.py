@@ -32,6 +32,8 @@ Usage (run with python3 -I):
   pd3.py mockpool                      # real sentences from L1, 2A and 2B (never the L3 / old-2B text) -> mock-pool.json
                                        #   (no longer on the page: "Mock Læsning 3" uses the hand-written mock-l3.json)
                                        #   (the "Hvilken slags?" drill; needs logic.json)
+  pd3.py l2bcheck                      # check pd3-data/l2b.json (Læsning 2B trainer): counts, traps, hook words,
+                                       #   set keys, and every real text must be found in its sitting's extracted text
   pd3.py page                          # rebuild <project>/assisted-learning.html (also automatic when the deck
                                        #   changes); open it from disk, progress is kept in the browser
   pd3.py mistake add PATTERN --category C [--severity critical|moderate|minor] [--example E]
@@ -836,7 +838,7 @@ def build_page():
             c["dict"]["senses_en"] = [tr.get(s, "") for s in c["dict"]["senses"]]
     senses = {cid: {k: v for k, v in e.items() if k != "sentences"} for cid, e in load("senses.json", {}).items()}
     deck = {"cards": cards, "profile": load("profile.json", {}), "senses": senses, "tips": load("tips.json", {}), "info": load("wordinfo.json", {}), "grammar": load("grammar.json", {}),
-            "logic": load("logic.json", {}), "l3": load("l3-gaps.json", {}).get("items", []), "lgs": load("logic-drill.json", {}).get("items", []), "mock": load("mock-l3.json", {}).get("items", []),
+            "logic": load("logic.json", {}), "l3": load("l3-gaps.json", {}).get("items", []), "lgs": load("logic-drill.json", {}).get("items", []), "mock": load("mock-l3.json", {}).get("items", []), "l2b": load("l2b.json", {}),
             "sentences": load("exam-sentences.json", {}).get("sentences", {}), "images": load("images.json", {}), "built": TODAY.isoformat()}
     js = "window.PD3_DECK = " + json.dumps(deck, ensure_ascii=False).replace("</", "<\\/") + ";"
     html = open(tpl, encoding="utf-8").read().replace("window.PD3_DECK = null; /*DECK*/", js)
@@ -844,6 +846,159 @@ def build_page():
         f.write(html)
     os.replace(PAGE + ".tmp", PAGE)
     return PAGE
+
+
+# ---------- Læsning 2B trainer data ----------
+
+L2B_TRAPS = ("samme", "nabo", "logik", "peger")
+
+
+def l2b_norm(text):
+    """Text as compared by l2bcheck: page furniture (footers, 'fortsat' headers, lone gap or page numbers) removed."""
+    t = nfc(text).replace("\u00ad", "").replace("\x0c", "\n")
+    t = re.sub(r"\n\d+\n\d+\n", "\n", t)
+    t = re.sub(r"(MAJ-JUNI|NOVEMBER-DECEMBER) \d{4}", " ", t)
+    t = re.sub(r"Delprøve \d[A-Z]? – fortsat", " ", t)
+    t = re.sub(r"\n\d\n", "\n", t)
+    return re.sub(r"\s+", " ", t).strip()
+
+
+def l2b_cmd_hay(sitting, cache):
+    """Normalised text of every extracted file of one sitting (booklets, L1 and 2A/2B texts)."""
+    out = []
+    for fn in sorted(os.listdir(cache)) if os.path.isdir(cache) else []:
+        if fn.startswith(sitting + "_") and fn.endswith(".txt"):
+            with open(os.path.join(cache, fn), encoding="utf-8") as f:
+                out.append(f.read())
+    return l2b_norm(" ".join(out))
+
+
+def cmd_l2bcheck(a):
+    doc = load("l2b.json", None)
+    if doc is None:
+        sys.exit("No pd3-data/l2b.json")
+    problems, hays = [], {}
+
+    def real_text(sitting, text, where):
+        if sitting not in hays:
+            hays[sitting] = l2b_cmd_hay(sitting, CACHE)
+            if not hays[sitting]:
+                problems.append(f"no extracted text for sitting {sitting} in {CACHE} (run pd3.py get {sitting} L2_txt)")
+        if l2b_norm(text) not in hays[sitting]:
+            problems.append(f"not found in {sitting} text ({where}): {text[:90]}")
+
+    def has(text, field):
+        return l2b_norm(field).lower().find(l2b_norm(text).lower()) >= 0
+
+    def tokens(text):
+        return re.findall(r"[\wæøåÆØÅ]+", text.lower())
+
+    ids = {}
+    for kind in ("gaps", "hooks", "sets"):
+        for x in doc.get(kind, []):
+            if x["id"] in ids:
+                problems.append(f"duplicate id {x['id']}")
+            ids[x["id"]] = kind
+    sets_held = {x["id"] for x in doc.get("sets", []) if x.get("hold")}
+
+    for g in doc.get("gaps", []):
+        gid, real = g["id"], not g.get("ai")
+        if g.get("src", "").startswith("2022v") and gid not in sets_held:
+            problems.append(f"{gid}: 2022v content outside the held set")
+        if len(g.get("traps", [])) != 2:
+            problems.append(f"{gid}: needs exactly 2 traps")
+        types = [t.get("trap") for t in g.get("traps", [])]
+        if len(set(types)) != len(types) or any(t not in L2B_TRAPS for t in types):
+            problems.append(f"{gid}: traps must be two different keys of {L2B_TRAPS}, got {types}")
+        if len(g.get("reasons", [])) != 3 or not (0 <= g.get("reason", -1) < 3):
+            problems.append(f"{gid}: needs 3 reasons and a valid reason index")
+        for h in g.get("hooks", []):
+            field = {"right": g.get("right", ""), "before": g.get("before", ""), "after": g.get("after", "")}
+            if h.get("where") not in field or not has(h.get("w", ""), field[h["where"]]):
+                problems.append(f"{gid}: hook word {h.get('w')!r} not found in {h.get('where')}")
+            if h.get("toWhere") not in field or not has(h.get("to", ""), field[h["toWhere"]]):
+                problems.append(f"{gid}: hook target {h.get('to')!r} not found in {h.get('toWhere')}")
+        if real:
+            sit = g["src"].split()[0]
+            for fld in ("before", "after", "right"):
+                if g.get(fld):
+                    real_text(sit, g[fld], f"{gid} {fld}")
+            for t in g.get("traps", []):
+                real_text(sit, t["p"], f"{gid} trap {t['trap']}")
+
+    for h in doc.get("hooks", []):
+        hid, real = h["id"], not h.get("ai")
+        if h.get("src", "").startswith("2022v"):
+            problems.append(f"{hid}: 2022v content outside the held set")
+        counts = tokens(h["piece"])
+        for w in h.get("words", []):
+            n = sum(1 for t in counts if t == w.lower())
+            if n != 1:
+                problems.append(f"{hid}: hook word {w!r} occurs {n} times in the piece (needs exactly 1)")
+        if real:
+            sit = h["src"].split()[0]
+            real_text(sit, h["before"], f"{hid} before")
+            real_text(sit, h["piece"], f"{hid} piece")
+
+    for x in doc.get("sets", []):
+        sid, pieces = x["id"], x.get("pieces", {})
+        parts = x.get("parts", [])
+        gaps_in = [p for p in parts if isinstance(p, int)]
+        key = {int(k): v for k, v in x.get("key", {}).items()}
+        want_gaps, want_pieces = (5, 7) if x.get("kind") == "full" else (3, 5)
+        if x.get("kind") not in ("full", "mini"):
+            problems.append(f"{sid}: kind must be full or mini")
+        if sorted(gaps_in) != list(range(1, want_gaps + 1)) or sorted(key) != list(range(1, want_gaps + 1)):
+            problems.append(f"{sid}: needs gaps 1..{want_gaps} in parts and key (has {gaps_in})")
+        if len(pieces) != want_pieces:
+            problems.append(f"{sid}: needs {want_pieces} pieces, has {len(pieces)}")
+        letters = list(key.values())
+        if len(set(letters)) != len(letters):
+            problems.append(f"{sid}: key letters are not unique: {letters}")
+        if any(L not in pieces for L in letters):
+            problems.append(f"{sid}: key letter not in pieces")
+        extra = x.get("extra", {})
+        if set(extra) != set(pieces) - set(letters):
+            problems.append(f"{sid}: extras {sorted(extra)} must be the pieces not in the key {sorted(set(pieces) - set(letters))}")
+        ex_types = [e.get("trap") for e in extra.values()]
+        if x.get("kind") == "mini" and len(set(ex_types)) != len(ex_types):
+            problems.append(f"{sid}: mini extras need different trap types, got {ex_types}")
+        if any(e.get("trap") not in L2B_TRAPS for e in extra.values()):
+            problems.append(f"{sid}: extra trap key not in {L2B_TRAPS}")
+        if set(x.get("gapwhy", {})) != {str(n) for n in range(1, want_gaps + 1)}:
+            problems.append(f"{sid}: gapwhy must cover gaps 1..{want_gaps}")
+        if x.get("hold") and not x.get("src", "").startswith("2022v"):
+            problems.append(f"{sid}: only the 2022v set may be held")
+        if x.get("src", "").startswith("2022v") and not x.get("hold"):
+            problems.append(f"{sid}: 2022v content must be held")
+        if not x.get("ai"):
+            sit = x["src"].split()[0]
+            for p in parts:
+                if isinstance(p, str) and p.strip():
+                    real_text(sit, p, f"{sid} part")
+            for L, t in pieces.items():
+                real_text(sit, t, f"{sid} piece {L}")
+
+    gaps, hooks, sets = doc.get("gaps", []), doc.get("hooks", []), doc.get("sets", [])
+    g_real = sum(1 for g in gaps if not g.get("ai"))
+    h_real = sum(1 for h in hooks if not h.get("ai"))
+    full_real = sum(1 for x in sets if x.get("kind") == "full" and not x.get("ai") and not x.get("hold"))
+    held = sum(1 for x in sets if x.get("hold"))
+    minis = sum(1 for x in sets if x.get("kind") == "mini" and x.get("ai"))
+    for label, got, need in (("gaps", len(gaps), 40), ("real gaps", g_real, 25), ("hooks", len(hooks), 25),
+                             ("real hooks", h_real, 15), ("real full sets", full_real, 3), ("held set", held, 1),
+                             ("AI mini sets", minis, 6)):
+        if got < need:
+            problems.append(f"{label}: {got}, needs at least {need}")
+    print(f"gaps (level 1): {len(gaps)}  real {g_real}  AI {len(gaps) - g_real}")
+    print(f"hooks (level 2): {len(hooks)}  real {h_real}  AI {len(hooks) - h_real}")
+    print(f"sets (level 3): real full {full_real}  held {held}  AI mini {minis}")
+    if problems:
+        print(f"{len(problems)} problem(s):")
+        for p in problems:
+            print("  - " + p)
+        sys.exit(1)
+    print("l2bcheck: ok")
 
 
 # ---------- mistakes ----------
@@ -901,7 +1056,7 @@ def main():
     vs.add_parser("groups")
     q = vs.add_parser("enrich"); q.add_argument("files", nargs="+")
     sp.add_parser("sentences"); sp.add_parser("translate"); sp.add_parser("l3gaps"); sp.add_parser("mockpool")
-    sp.add_parser("page")
+    sp.add_parser("page"); sp.add_parser("l2bcheck")
     p = sp.add_parser("mistake"); ms = p.add_subparsers(dest="mcmd", required=True)
     q = ms.add_parser("add"); q.add_argument("pattern"); q.add_argument("--category", required=True)
     q.add_argument("--severity", default="moderate", choices=["critical", "moderate", "minor"]); q.add_argument("--example")
@@ -910,7 +1065,7 @@ def main():
     a = ap.parse_args()
     {"init": cmd_init, "status": cmd_status, "index": lambda a: print(f"{len(build_index())} sittings indexed"),
      "sittings": cmd_sittings, "pick": cmd_pick, "get": cmd_get, "log": cmd_log,
-     "vocab": cmd_vocab, "mistake": cmd_mistake, "sentences": cmd_sentences, "translate": cmd_translate, "l3gaps": cmd_l3gaps, "mockpool": cmd_mockpool,
+     "vocab": cmd_vocab, "mistake": cmd_mistake, "sentences": cmd_sentences, "translate": cmd_translate, "l3gaps": cmd_l3gaps, "mockpool": cmd_mockpool, "l2bcheck": cmd_l2bcheck,
      "page": lambda a: print(build_page() or "template missing")}[a.cmd](a)
 
 
