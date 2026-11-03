@@ -1,0 +1,3196 @@
+{
+ "_about": "Læsning 2B trainer. gaps = level 1, hooks = level 2, sets = level 3. ai:true = written by Claude (labelled AI). Trap keys: samme, nabo, logik, peger. Real texts are verbatim from the 2022v-2024s exam booklets; hold:true = held final test set (2022v). Trap labels, reasons and explanations are the coach's own reading, not official; for the real full sets the official key decides the answers.",
+ "gaps": [
+  {
+   "id": "g-2023s-01",
+   "src": "2023s · 2B",
+   "ai": false,
+   "before": "Det drejer sig blandt andet om de mennesker, der har et handicap.",
+   "after": "Hvis man har et handicap, kan det derfor blive svært at passe et arbejde – men det er bestemt ikke sikkert!",
+   "right": "Det kan være svært at definere præcist, hvad det vil sige. Men i ordbogen står der, at det er en permanent fysisk eller psykisk svaghed, der begrænser ens muligheder i hverdagen.",
+   "traps": [
+    {
+     "p": "Nogle er faktisk slet ikke en del af det – sådan vil det nok altid være. Andre har måske fået et job, men den virksomhed, de arbejder for, bliver til en vis grad kompenseret af kommunen.",
+     "trap": "nabo",
+     "da": "«Nogle … Andre …» deler en gruppe op. Her er der ingen gruppe at dele op. Det kommer først senere: «store forskelle i tilknytningen».",
+     "en": "«Nogle … Andre …» splits a group. There is no group here yet; it comes later: «store forskelle i tilknytningen»."
+    },
+    {
+     "p": "Fx er der flere og flere mennesker med et handicap, der simpelthen vælger, at de slet ikke vil have et arbejde. I hvert fald ikke samme slags arbejde som dem uden et synligt handicap.",
+     "trap": "samme",
+     "da": "Har ordet «handicap», men «Fx» skal give et eksempel på noget. Og «derfor» i næste sætning kan ikke bygge på, at nogle ikke vil arbejde.",
+     "en": "Has «handicap», but «Fx» needs something to give an example of, and «derfor» in the next sentence cannot build on people not wanting to work."
+    }
+   ],
+   "hooks": [
+    {
+     "w": "hvad det vil sige",
+     "where": "right",
+     "to": "et handicap",
+     "toWhere": "before"
+    },
+    {
+     "w": "derfor",
+     "where": "after",
+     "to": "begrænser ens muligheder",
+     "toWhere": "right"
+    }
+   ],
+   "reasons": [
+    {
+     "da": "«derfor» i næste sætning bygger på stykkets forklaring af, hvad et handicap er.",
+     "en": "«derfor» in the next sentence builds on the piece's explanation of what a disability is."
+    },
+    {
+     "da": "Stykket handler om mennesker med handicap, ligesom teksten.",
+     "en": "The piece is about people with disabilities, like the text."
+    },
+    {
+     "da": "Stykket har ordet «handicap», som også står i teksten.",
+     "en": "The piece has the word «handicap», which is also in the text."
+    }
+   ],
+   "reason": 0,
+   "why": {
+    "da": "• «hvad det vil sige» = hvad et handicap er. Stykket forklarer ordet fra sætningen før.\n• Næste sætning: «kan det derfor blive svært at passe et arbejde». «derfor» bygger på «en svaghed, der begrænser ens muligheder».",
+    "en": "• «hvad det vil sige» = what a disability is. The piece explains the word from the sentence before.\n• Next sentence: «kan det derfor blive svært at passe et arbejde». «derfor» builds on «a weakness that limits your options»."
+   }
+  },
+  {
+   "id": "g-2023s-02",
+   "src": "2023s · 2B",
+   "ai": false,
+   "before": "Ja, og der er store forskelle i tilknytningen til arbejdsmarkedet.",
+   "after": "Det er det, man kalder løntilskud. Men heldigvis er der mange, der har fået et helt almindeligt arbejde og derfor ikke længere får støtte fra det offentlige.",
+   "right": "Nogle er faktisk slet ikke en del af det – sådan vil det nok altid være. Andre har måske fået et job, men den virksomhed, de arbejder for, bliver til en vis grad kompenseret af kommunen.",
+   "traps": [
+    {
+     "p": "Det samme var desværre ikke tilfældet for dem med et handicap. Af dem var kun seks ud af ti kommet i en eller anden form for arbejde inden for den samme periode.",
+     "trap": "nabo",
+     "da": "«Det samme var … ikke tilfældet» skal sammenligne med et tal lige før. Den hører til efter «81 %» længere nede.",
+     "en": "«Det samme var … ikke tilfældet» must compare with a figure just before. It belongs after «81 %» further down."
+    },
+    {
+     "p": "Det lyder måske banalt, men mange af dem har ikke haft et studiejob. Derfor har de i praksis svært ved at give eksempler på deres kompetencer og at beskrive deres erfaringer.",
+     "trap": "peger",
+     "da": "«Det lyder måske banalt» peger på et forslag. Før hullet er der intet forslag, kun «store forskelle».",
+     "en": "«Det lyder måske banalt» points to a proposal. There is no proposal before the gap, only «store forskelle»."
+    }
+   ],
+   "hooks": [
+    {
+     "w": "Nogle",
+     "where": "right",
+     "to": "store forskelle",
+     "toWhere": "before"
+    },
+    {
+     "w": "Det er det, man kalder løntilskud",
+     "where": "after",
+     "to": "kompenseret af kommunen",
+     "toWhere": "right"
+    }
+   ],
+   "reasons": [
+    {
+     "da": "«Det er det, man kalder løntilskud» peger på, at kommunen betaler en del af lønnen.",
+     "en": "«Det er det, man kalder løntilskud» points to the municipality paying part of the wage."
+    },
+    {
+     "da": "Stykket handler om job og arbejdsmarkedet, ligesom teksten.",
+     "en": "The piece is about jobs and the labour market, like the text."
+    },
+    {
+     "da": "Stykket har ordet «job», som også står i teksten.",
+     "en": "The piece has the word «job», which is also in the text."
+    }
+   ],
+   "reason": 0,
+   "why": {
+    "da": "• «Nogle … Andre …» deler de «store forskelle» op i grupper.\n• Næste sætning: «Det er det, man kalder løntilskud». «Det» = at virksomheden bliver «kompenseret af kommunen».",
+    "en": "• «Nogle … Andre …» splits the «store forskelle» into groups.\n• Next sentence: «Det er det, man kalder løntilskud». «Det» = the company being «kompenseret af kommunen»."
+   }
+  },
+  {
+   "id": "g-2023s-03",
+   "src": "2023s · 2B",
+   "ai": false,
+   "before": "Hele 81 % af de nyuddannede uden et handicap var efter tolv måneder kommet ind på arbejdsmarkedet.",
+   "after": "Det er selvfølgelig ikke et acceptabelt resultat. Slet ikke når man tænker på, at mange af dem sagtens kan udføre arbejdet lige så godt som alle andre.",
+   "right": "Det samme var desværre ikke tilfældet for dem med et handicap. Af dem var kun seks ud af ti kommet i en eller anden form for arbejde inden for den samme periode.",
+   "traps": [
+    {
+     "p": "Der er bare ikke noget, der peger på, at de har ret. I undersøgelsen fra 2020 har man lavet en række grundige interviews med en lille gruppe mennesker med et handicap, der passer et almindeligt arbejde.",
+     "trap": "nabo",
+     "da": "«de har ret» peger på nogen, der mener noget. Den hører til efter «halvdelen mente …» længere nede.",
+     "en": "«de har ret» points to people who believe something. It belongs after «halvdelen mente …» further down."
+    },
+    {
+     "p": "Fx er der flere og flere mennesker med et handicap, der simpelthen vælger, at de slet ikke vil have et arbejde. I hvert fald ikke samme slags arbejde som dem uden et synligt handicap.",
+     "trap": "samme",
+     "da": "Har ordet «handicap», men det er et eksempel. Næste sætning kalder det før hullet et «resultat», og B er intet resultat.",
+     "en": "Has «handicap», but it is an example. The next sentence calls what comes before a «resultat», and B is not a result."
+    }
+   ],
+   "hooks": [
+    {
+     "w": "Det samme",
+     "where": "right",
+     "to": "81 %",
+     "toWhere": "before"
+    },
+    {
+     "w": "resultat",
+     "where": "after",
+     "to": "seks ud af ti",
+     "toWhere": "right"
+    }
+   ],
+   "reasons": [
+    {
+     "da": "«Det samme … ikke tilfældet» sammenligner med 81 % lige før hullet.",
+     "en": "«Det samme … ikke tilfældet» compares with the 81 % just before the gap."
+    },
+    {
+     "da": "Stykket handler om nyuddannede med handicap, ligesom teksten.",
+     "en": "The piece is about graduates with disabilities, like the text."
+    },
+    {
+     "da": "Stykket har ordet «handicap», som også står i teksten.",
+     "en": "The piece has the word «handicap», which is also in the text."
+    }
+   ],
+   "reason": 0,
+   "why": {
+    "da": "• «Det samme var desværre ikke tilfældet» sammenligner: 81 % uden handicap ↔ seks ud af ti med handicap.\n• Næste sætning: «Det er … ikke et acceptabelt resultat». Resultatet = seks ud af ti.",
+    "en": "• «Det samme var desværre ikke tilfældet» compares: 81 % without a disability ↔ six in ten with one.\n• Next sentence: «Det er … ikke et acceptabelt resultat». The result = six in ten."
+   }
+  },
+  {
+   "id": "g-2023s-04",
+   "src": "2023s · 2B",
+   "ai": false,
+   "before": "Og halvdelen mente, at deres handicap ville få stor betydning for, hvordan de ville klare deres job, hvis de endelig fik et.",
+   "after": "Overraskende nok kunne 15 ud af 18 fortælle, at deres handicap enten har lille eller slet ingen betydning for deres arbejdsliv.",
+   "right": "Der er bare ikke noget, der peger på, at de har ret. I undersøgelsen fra 2020 har man lavet en række grundige interviews med en lille gruppe mennesker med et handicap, der passer et almindeligt arbejde.",
+   "traps": [
+    {
+     "p": "Det lyder måske banalt, men mange af dem har ikke haft et studiejob. Derfor har de i praksis svært ved at give eksempler på deres kompetencer og at beskrive deres erfaringer.",
+     "trap": "nabo",
+     "da": "«Det lyder måske banalt» peger på et forslag. Den hører til efter «et kursus i jobsøgning» sidst i teksten.",
+     "en": "«Det lyder måske banalt» points to a proposal. It belongs after «et kursus i jobsøgning» at the end."
+    },
+    {
+     "p": "Alle undersøgelser har indtil nu peget på, at mennesker med et handicap har lige så let ved at klare et almindeligt lønarbejde som mennesker uden et handicap. Og det har arbejdsgiverne endelig fået øjnene op for.",
+     "trap": "logik",
+     "da": "Hvis «alle undersøgelser» allerede viste det, er det ikke «overraskende» i næste sætning. Og «15 ud af 18» kræver en lille gruppe, som E ikke nævner.",
+     "en": "If «alle undersøgelser» already showed it, it is not «overraskende» in the next sentence. And «15 ud af 18» needs a small group, which E does not mention."
+    }
+   ],
+   "hooks": [
+    {
+     "w": "de har ret",
+     "where": "right",
+     "to": "halvdelen mente",
+     "toWhere": "before"
+    },
+    {
+     "w": "15 ud af 18",
+     "where": "after",
+     "to": "en lille gruppe",
+     "toWhere": "right"
+    }
+   ],
+   "reasons": [
+    {
+     "da": "«15 ud af 18» i næste sætning er den lille gruppe, som stykket nævner.",
+     "en": "«15 ud af 18» in the next sentence is the small group the piece mentions."
+    },
+    {
+     "da": "Stykket handler om undersøgelser om handicap, ligesom teksten.",
+     "en": "The piece is about studies on disability, like the text."
+    },
+    {
+     "da": "Stykket har ordet «undersøgelser», som også står i teksten.",
+     "en": "The piece has the word «undersøgelser», which is also in the text."
+    }
+   ],
+   "reason": 0,
+   "why": {
+    "da": "• «de har ret» peger på dem, der «mente», at deres handicap ville få stor betydning.\n• «en lille gruppe» → næste sætning: «15 ud af 18». Det er gruppen fra interviewene.",
+    "en": "• «de har ret» points to those who «mente» their disability would matter a lot.\n• «en lille gruppe» → next sentence: «15 ud af 18». That is the group from the interviews."
+   }
+  },
+  {
+   "id": "g-2023s-05",
+   "src": "2023s · 2B",
+   "ai": false,
+   "before": "Et af forslagene er at tilbyde dem et kursus i jobsøgning.",
+   "after": "Desuden ville de måske have glæde af frivillige mentorer, der har samme uddannelse, som de selv har.",
+   "right": "Det lyder måske banalt, men mange af dem har ikke haft et studiejob. Derfor har de i praksis svært ved at give eksempler på deres kompetencer og at beskrive deres erfaringer.",
+   "traps": [
+    {
+     "p": "Der er bare ikke noget, der peger på, at de har ret. I undersøgelsen fra 2020 har man lavet en række grundige interviews med en lille gruppe mennesker med et handicap, der passer et almindeligt arbejde.",
+     "trap": "peger",
+     "da": "«de har ret» peger på nogen, der mener noget. Lige før hullet står der et forslag, ikke en mening.",
+     "en": "«de har ret» points to people who believe something. Just before the gap there is a proposal, not an opinion."
+    },
+    {
+     "p": "Det samme var desværre ikke tilfældet for dem med et handicap. Af dem var kun seks ud af ti kommet i en eller anden form for arbejde inden for den samme periode.",
+     "trap": "nabo",
+     "da": "«Det samme var … ikke tilfældet» sammenligner med et tal. Den hører til efter «81 %» tidligere i teksten.",
+     "en": "«Det samme var … ikke tilfældet» compares with a figure. It belongs after «81 %» earlier in the text."
+    }
+   ],
+   "hooks": [
+    {
+     "w": "Det lyder måske banalt",
+     "where": "right",
+     "to": "et kursus i jobsøgning",
+     "toWhere": "before"
+    },
+    {
+     "w": "Desuden",
+     "where": "after",
+     "to": "Et af forslagene",
+     "toWhere": "before"
+    }
+   ],
+   "reasons": [
+    {
+     "da": "«Det lyder måske banalt» peger på forslaget om et kursus i jobsøgning.",
+     "en": "«Det lyder måske banalt» points to the proposal of a job-seeking course."
+    },
+    {
+     "da": "Stykket handler om nyuddannede og job, ligesom teksten.",
+     "en": "The piece is about graduates and jobs, like the text."
+    },
+    {
+     "da": "Stykket har ordet «job», som også står i teksten.",
+     "en": "The piece has the word «job», which is also in the text."
+    }
+   ],
+   "reason": 0,
+   "why": {
+    "da": "• «Det lyder måske banalt» = kurset i jobsøgning lyder banalt. Stykket forklarer, hvorfor det alligevel er nødvendigt.\n• Næste sætning: «Desuden ville de …» tilføjer forslag nummer to: mentorer.",
+    "en": "• «Det lyder måske banalt» = the job-seeking course sounds trivial. The piece explains why it is still needed.\n• Next sentence: «Desuden ville de …» adds proposal number two: mentors."
+   }
+  },
+  {
+   "id": "g-2023v-01",
+   "src": "2023v · 2B",
+   "ai": false,
+   "before": "Nogle gange er det en almindelig pc, der bliver brugt, men det kan lige så godt være en smartphone, en tablet eller et ur.",
+   "after": "For mange unge mennesker er en verden uden internet faktisk helt utænkelig.",
+   "right": "Man tjekker mail, køber ind, bestiller en ferie eller leder efter et nyt job – efterhånden bruger man internettet til alting.",
+   "traps": [
+    {
+     "p": "Konsekvensen vil nemlig være, at alle borgere og virksomheder får overvåget deres adfærd på nettet af en privat virksomhed. Det er noget, de færreste ønsker sig.",
+     "trap": "peger",
+     "da": "«Konsekvensen» peger på en løsning. Teksten har ikke nævnt nogen løsning endnu.",
+     "en": "«Konsekvensen» points to a solution. The text has not mentioned one yet."
+    },
+    {
+     "p": "De fleste er efterhånden opmærksomme på, at de er nødt til at beskytte sig med adgangskoder, der er svære at gætte sig til.",
+     "trap": "nabo",
+     "da": "Handler om adgangskoder. Den hører til senere, efter «meget, man selv kan gøre».",
+     "en": "It is about passwords. It belongs later, after «meget, man selv kan gøre»."
+    }
+   ],
+   "hooks": [
+    {
+     "w": "bruger man internettet",
+     "where": "right",
+     "to": "bliver brugt",
+     "toWhere": "before"
+    },
+    {
+     "w": "uden internet",
+     "where": "after",
+     "to": "til alting",
+     "toWhere": "right"
+    }
+   ],
+   "reasons": [
+    {
+     "da": "«en verden uden internet» i næste sætning bygger på «internettet til alting».",
+     "en": "«en verden uden internet» in the next sentence builds on «internettet til alting»."
+    },
+    {
+     "da": "Stykket handler om internettet, ligesom teksten.",
+     "en": "The piece is about the internet, like the text."
+    },
+    {
+     "da": "Stykket har ordet «efterhånden», som også står i teksten.",
+     "en": "The piece has the word «efterhånden», which is also in the text."
+    }
+   ],
+   "reason": 0,
+   "why": {
+    "da": "• Før hullet: hvilke apparater vi bruger. Stykket: hvad vi bruger dem til: mail, indkøb, ferie, job.\n• «til alting» → næste sætning: en verden «uden internet» er «utænkelig».",
+    "en": "• Before the gap: which devices we use. The piece: what we use them for: mail, shopping, holidays, jobs.\n• «til alting» → next sentence: a world «uden internet» is «utænkelig»."
+   }
+  },
+  {
+   "id": "g-2023v-02",
+   "src": "2023v · 2B",
+   "ai": false,
+   "before": "Nogle mener, det er internetudbyderne, fordi det er dem, der tjener penge på at levere adgang til nettet. Men den løsning er problematisk.",
+   "after": "Desuden er det ikke alle, der har brug for den samme sikkerhedsstandard.",
+   "right": "Konsekvensen vil nemlig være, at alle borgere og virksomheder får overvåget deres adfærd på nettet af en privat virksomhed. Det er noget, de færreste ønsker sig.",
+   "traps": [
+    {
+     "p": "Men mange vil få en mere avanceret løsning, end de reelt har brug for. Prisen på internetproduktet vil på den måde blive meget højere, end den behøver at være, og det er der ingen, der er interesserede i.",
+     "trap": "nabo",
+     "da": "«Men mange» skal modsige «nogle», som først kommer senere: «nogle brugere … en beskyttelse, der er bedre».",
+     "en": "«Men mange» must contrast with «nogle», which only comes later: «nogle brugere … en beskyttelse, der er bedre»."
+    },
+    {
+     "p": "En opdatering kan vise sig at indeholde skadelige filer, så derfor er det vigtigt at være forsigtig. Man skal ikke godkende hvad som helst.",
+     "trap": "logik",
+     "da": "«så derfor» om opdateringer giver ingen grund til, at løsningen med internetudbyderne er «problematisk».",
+     "en": "«så derfor» about updates gives no reason why the provider solution is «problematisk»."
+    }
+   ],
+   "hooks": [
+    {
+     "w": "Konsekvensen",
+     "where": "right",
+     "to": "den løsning",
+     "toWhere": "before"
+    },
+    {
+     "w": "Desuden",
+     "where": "after",
+     "to": "Konsekvensen",
+     "toWhere": "right"
+    }
+   ],
+   "reasons": [
+    {
+     "da": "«Konsekvensen … nemlig» forklarer, hvorfor løsningen er problematisk.",
+     "en": "«Konsekvensen … nemlig» explains why the solution is problematic."
+    },
+    {
+     "da": "Stykket handler om nettet og sikkerhed, ligesom teksten.",
+     "en": "The piece is about the internet and security, like the text."
+    },
+    {
+     "da": "Stykket har ordet «virksomhed», som også står i teksten.",
+     "en": "The piece has the word «virksomhed», which is also in the text."
+    }
+   ],
+   "reason": 0,
+   "why": {
+    "da": "• «Men den løsning er problematisk» → stykket forklarer hvorfor med «nemlig»: alle bliver overvåget.\n• Næste sætning: «Desuden …» giver problem nummer to.",
+    "en": "• «Men den løsning er problematisk» → the piece explains why with «nemlig»: everyone is watched.\n• Next sentence: «Desuden …» gives problem number two."
+   }
+  },
+  {
+   "id": "g-2023v-03",
+   "src": "2023v · 2B",
+   "ai": false,
+   "before": "Hvis ikke borgere og virksomheder selv får lov til at vælge de sikkerhedsløsninger, der passer dem eller deres virksomhed bedst, men i stedet tvinges til at bruge en fælles standardløsning, så vil nogle brugere selvfølgelig få en beskyttelse, der er bedre end den, de har i dag.",
+   "after": "Uklarheden om ansvaret betyder imidlertid ikke, at udbyderne kan fralægge sig ethvert ansvar.",
+   "right": "Men mange vil få en mere avanceret løsning, end de reelt har brug for. Prisen på internetproduktet vil på den måde blive meget højere, end den behøver at være, og det er der ingen, der er interesserede i.",
+   "traps": [
+    {
+     "p": "Konsekvensen vil nemlig være, at alle borgere og virksomheder får overvåget deres adfærd på nettet af en privat virksomhed. Det er noget, de færreste ønsker sig.",
+     "trap": "nabo",
+     "da": "«Konsekvensen» forklarer, hvorfor løsningen er «problematisk». Den hører til længere oppe i teksten.",
+     "en": "«Konsekvensen» explains why the solution is «problematisk». It belongs further up."
+    },
+    {
+     "p": "De fleste er efterhånden opmærksomme på, at de er nødt til at beskytte sig med adgangskoder, der er svære at gætte sig til.",
+     "trap": "samme",
+     "da": "Har «beskytte sig» ligesom «beskyttelse», men handler om adgangskoder, ikke om prisen på en fælles løsning.",
+     "en": "Has «beskytte sig» like «beskyttelse», but it is about passwords, not the price of a shared solution."
+    }
+   ],
+   "hooks": [
+    {
+     "w": "Men mange",
+     "where": "right",
+     "to": "nogle brugere",
+     "toWhere": "before"
+    }
+   ],
+   "reasons": [
+    {
+     "da": "«Men mange» vender «nogle brugere» før hullet: nogle får det bedre, mange betaler for meget.",
+     "en": "«Men mange» turns «nogle brugere» around: some gain, many pay too much."
+    },
+    {
+     "da": "Stykket handler om sikkerhed på nettet, ligesom teksten.",
+     "en": "The piece is about online security, like the text."
+    },
+    {
+     "da": "Stykket har ordet «beskyttelse», som også står i teksten.",
+     "en": "The piece has the word «beskyttelse», which is also in the text."
+    }
+   ],
+   "reason": 0,
+   "why": {
+    "da": "• «nogle brugere» får en bedre beskyttelse ↔ «Men mange» får en dyrere løsning, end de har brug for.\n• Nogle ↔ mange og plus ↔ minus: sådan bygger teksten modsætningen op.",
+    "en": "• «nogle brugere» get better protection ↔ «Men mange» get a more expensive solution than they need.\n• Some ↔ many, plus ↔ minus: that is how the text builds the contrast."
+   }
+  },
+  {
+   "id": "g-2023v-04",
+   "src": "2023v · 2B",
+   "ai": false,
+   "before": "Som almindelig internetbruger er der altså meget, man selv kan gøre for at undgå at blive offer for it-kriminalitet.",
+   "after": "Dels er det en god idé at bruge både tegn, tal og bogstaver, så de forskellige kombinationer er så uforudsigelige som muligt.",
+   "right": "De fleste er efterhånden opmærksomme på, at de er nødt til at beskytte sig med adgangskoder, der er svære at gætte sig til.",
+   "traps": [
+    {
+     "p": "Hackere og skadelige programmer udnytter nemlig fejl i kodningen i både programmer, apps og styresystemer.",
+     "trap": "nabo",
+     "da": "«nemlig» forklarer noget lige før. Den hører til efter «holde sine enheder opdaterede» længere nede.",
+     "en": "«nemlig» explains something just before. It belongs after «holde sine enheder opdaterede» further down."
+    },
+    {
+     "p": "Man tjekker mail, køber ind, bestiller en ferie eller leder efter et nyt job – efterhånden bruger man internettet til alting.",
+     "trap": "samme",
+     "da": "Har «efterhånden» og handler om internettet, men giver intet råd. Næste sætning fortsætter et råd om adgangskoder.",
+     "en": "Has «efterhånden» and is about the internet, but gives no advice. The next sentence continues advice on passwords."
+    }
+   ],
+   "hooks": [
+    {
+     "w": "tegn, tal og bogstaver",
+     "where": "after",
+     "to": "adgangskoder",
+     "toWhere": "right"
+    }
+   ],
+   "reasons": [
+    {
+     "da": "«tegn, tal og bogstaver» i næste sætning er råd om de adgangskoder, stykket nævner.",
+     "en": "«tegn, tal og bogstaver» in the next sentence is advice on the passwords the piece mentions."
+    },
+    {
+     "da": "Stykket handler om internettet, ligesom teksten.",
+     "en": "The piece is about the internet, like the text."
+    },
+    {
+     "da": "Stykket har ordet «efterhånden», som også står i teksten.",
+     "en": "The piece has the word «efterhånden», which is also in the text."
+    }
+   ],
+   "reason": 0,
+   "why": {
+    "da": "• Før hullet: der er «meget, man selv kan gøre». Stykket nævner det første: adgangskoder.\n• Næste sætning: «Dels … tegn, tal og bogstaver» forklarer, hvordan en kode bliver «svær at gætte».",
+    "en": "• Before the gap: there is «meget, man selv kan gøre». The piece names the first thing: passwords.\n• Next sentence: «Dels … tegn, tal og bogstaver» explains how a code becomes «svær at gætte»."
+   }
+  },
+  {
+   "id": "g-2023v-05",
+   "src": "2023v · 2B",
+   "ai": false,
+   "before": "Endelig er det også vigtigt altid at holde sine enheder opdaterede, gerne automatisk.",
+   "after": "De fejl kan softwarefirmaet løbende rette gennem opdateringer.",
+   "right": "Hackere og skadelige programmer udnytter nemlig fejl i kodningen i både programmer, apps og styresystemer.",
+   "traps": [
+    {
+     "p": "En opdatering kan vise sig at indeholde skadelige filer, så derfor er det vigtigt at være forsigtig. Man skal ikke godkende hvad som helst.",
+     "trap": "logik",
+     "da": "Advarer mod opdateringer, men teksten siger lige før, at man skal opdatere. Og næste sætning siger «De fejl», som D ikke nævner.",
+     "en": "It warns against updates, but the text just said to update. And the next sentence says «De fejl», which D does not mention."
+    },
+    {
+     "p": "Konsekvensen vil nemlig være, at alle borgere og virksomheder får overvåget deres adfærd på nettet af en privat virksomhed. Det er noget, de færreste ønsker sig.",
+     "trap": "peger",
+     "da": "«Konsekvensen» peger på en løsning, men lige før hullet står der et råd om opdateringer.",
+     "en": "«Konsekvensen» points to a solution, but just before the gap there is advice on updates."
+    }
+   ],
+   "hooks": [
+    {
+     "w": "nemlig",
+     "where": "right",
+     "to": "opdaterede",
+     "toWhere": "before"
+    },
+    {
+     "w": "De fejl",
+     "where": "after",
+     "to": "fejl i kodningen",
+     "toWhere": "right"
+    }
+   ],
+   "reasons": [
+    {
+     "da": "«De fejl» i næste sætning peger på «fejl i kodningen» i stykket.",
+     "en": "«De fejl» in the next sentence points to «fejl i kodningen» in the piece."
+    },
+    {
+     "da": "Stykket handler om opdateringer og sikkerhed, ligesom teksten.",
+     "en": "The piece is about updates and security, like the text."
+    },
+    {
+     "da": "Stykket har ordet «programmer», som også står i teksten.",
+     "en": "The piece has the word «programmer», which is also in the text."
+    }
+   ],
+   "reason": 0,
+   "why": {
+    "da": "• «nemlig» forklarer, hvorfor man skal opdatere: hackere udnytter fejl.\n• Næste sætning: «De fejl» = «fejl i kodningen».",
+    "en": "• «nemlig» explains why you should update: hackers exploit errors.\n• Next sentence: «De fejl» = «fejl i kodningen»."
+   }
+  },
+  {
+   "id": "g-2024s-01",
+   "src": "2024s · 2B",
+   "ai": false,
+   "before": "Dels for lettere at kunne fastholde dem, der allerede er ansat, dels for lettere at kunne rekruttere nye, efterspurgte kræfter.",
+   "after": "Det er derfor en stor opgave for en virksomhed at organisere arbejdslivet mere fleksibelt, så der bliver taget hensyn til alle.",
+   "right": "Der er dog udfordringer ved individuelt tilpassede arbejdsforhold, da medarbejdere har forskellige behov. Nogle trives for eksempel bedst med at arbejde på kontoret, andre hjemme. Nogle foretrækker at arbejde tidligt, andre sent.",
+   "traps": [
+    {
+     "p": "I Danmark er der nemlig hver dag 35.000 sygemeldinger som følge af stress. Dertil kommer selvfølgelig andre sygemeldinger og andet fravær på grund af almindelig nedslidning.",
+     "trap": "nabo",
+     "da": "«nemlig» giver en grund. Den hører til efter «Og det er der måske god grund til» længere nede.",
+     "en": "«nemlig» gives a reason. It belongs after «Og det er der måske god grund til» further down."
+    },
+    {
+     "p": "Den daglige drift er derfor ledernes ansvar, men det er stadig medarbejderne, der udfører opgaverne. Og tilfredse medarbejdere genererer mere værdi i virksomheden.",
+     "trap": "logik",
+     "da": "«derfor» kræver en årsag, men intet før hullet handler om ledere eller drift.",
+     "en": "«derfor» needs a cause, but nothing before the gap is about managers or operations."
+    }
+   ],
+   "hooks": [
+    {
+     "w": "dog",
+     "where": "right",
+     "to": "fastholde",
+     "toWhere": "before"
+    },
+    {
+     "w": "hensyn til alle",
+     "where": "after",
+     "to": "forskellige behov",
+     "toWhere": "right"
+    }
+   ],
+   "reasons": [
+    {
+     "da": "«dog» vender: fleksibilitet er godt, men folk har forskellige behov.",
+     "en": "«dog» turns it around: flexibility is good, but people have different needs."
+    },
+    {
+     "da": "Stykket handler om medarbejdere og arbejde, ligesom teksten.",
+     "en": "The piece is about employees and work, like the text."
+    },
+    {
+     "da": "Stykket har ordet «medarbejdere», som også står i teksten.",
+     "en": "The piece has the word «medarbejdere», which is also in the text."
+    }
+   ],
+   "reason": 0,
+   "why": {
+    "da": "• Før hullet: fleksibilitet hjælper med at fastholde og rekruttere. «dog» vender: det er svært, fordi folk har forskellige behov.\n• Næste sætning: «derfor en stor opgave … hensyn til alle» bygger på de forskellige behov.",
+    "en": "• Before the gap: flexibility helps keep and recruit staff. «dog» turns it: it is hard, because people have different needs.\n• Next sentence: «derfor en stor opgave … hensyn til alle» builds on those different needs."
+   }
+  },
+  {
+   "id": "g-2024s-02",
+   "src": "2024s · 2B",
+   "ai": false,
+   "before": "Der er stadig ikke så mange virksomheder, der tilbyder ordningen, men der bliver flere og flere. Og det er der måske god grund til.",
+   "after": "Ifølge fagforeningen HK kan netop en fire-dages arbejdsuge være et godt værktøj til at løse nogle af disse problemer.",
+   "right": "I Danmark er der nemlig hver dag 35.000 sygemeldinger som følge af stress. Dertil kommer selvfølgelig andre sygemeldinger og andet fravær på grund af almindelig nedslidning.",
+   "traps": [
+    {
+     "p": "Der er dog udfordringer ved individuelt tilpassede arbejdsforhold, da medarbejdere har forskellige behov. Nogle trives for eksempel bedst med at arbejde på kontoret, andre hjemme. Nogle foretrækker at arbejde tidligt, andre sent.",
+     "trap": "nabo",
+     "da": "«dog» vender noget positivt om fleksibilitet. Den hører til i starten af teksten.",
+     "en": "«dog» turns something positive about flexibility. It belongs at the start of the text."
+    },
+    {
+     "p": "Det forventes nemlig som nævnt, at nye medarbejdere ikke arbejder hjemme, men altid møder ind på arbejdspladsen.",
+     "trap": "peger",
+     "da": "«som nævnt» peger på noget, teksten allerede har sagt. Teksten har intet sagt om nye medarbejdere og hjemmearbejde.",
+     "en": "«som nævnt» points to something already said. The text has said nothing about new staff working from home."
+    }
+   ],
+   "hooks": [
+    {
+     "w": "nemlig",
+     "where": "right",
+     "to": "god grund",
+     "toWhere": "before"
+    },
+    {
+     "w": "disse problemer",
+     "where": "after",
+     "to": "sygemeldinger",
+     "toWhere": "right"
+    }
+   ],
+   "reasons": [
+    {
+     "da": "«disse problemer» i næste sætning peger på stress og sygemeldinger i stykket.",
+     "en": "«disse problemer» in the next sentence points to the stress and sick leave in the piece."
+    },
+    {
+     "da": "Stykket handler om arbejdslivet, ligesom teksten.",
+     "en": "The piece is about working life, like the text."
+    },
+    {
+     "da": "Stykket har ordet «arbejde», som også står i teksten.",
+     "en": "The piece has the word «arbejde», which is also in the text."
+    }
+   ],
+   "reason": 0,
+   "why": {
+    "da": "• «Og det er der måske god grund til» → «nemlig» giver grunden: 35.000 sygemeldinger hver dag.\n• Næste sætning: «disse problemer» = stress, sygemeldinger og fravær.",
+    "en": "• «Og det er der måske god grund til» → «nemlig» gives the reason: 35,000 sick days every day.\n• Next sentence: «disse problemer» = stress, sick leave and absence."
+   }
+  },
+  {
+   "id": "g-2024s-03",
+   "src": "2024s · 2B",
+   "ai": false,
+   "before": "I nogle virksomheder betyder det, at man arbejder 37 timer på fire dage. I andre betyder det, at man også arbejder færre timer om ugen.",
+   "after": "Der er også virksomheder, der blot tilbyder deres medarbejdere en fire-dages arbejdsuge på nedsat tid og løn.",
+   "right": "I nogle virksomheder er man lykkedes med at lære nye og mere effektive arbejdsrutiner. Man udfører det samme arbejde på kortere tid, og lønnen er forblevet den samme.",
+   "traps": [
+    {
+     "p": "Måske fordi det umiddelbart kan virke ulogisk at nedsætte arbejdstiden i en tid, hvor der er mangel på arbejdskraft. Men det er det ikke nødvendigvis.",
+     "trap": "nabo",
+     "da": "«Måske fordi» forklarer en modstand. Den hører til efter «en vis modstand blandt visse arbejdsgivere».",
+     "en": "«Måske fordi» explains resistance. It belongs after «en vis modstand blandt visse arbejdsgivere»."
+    },
+    {
+     "p": "Når flere virksomheder indfører en fire-dages arbejdsuge, skal kunder og borgere også vænne sig til, at man ikke kan komme i kontakt med en medarbejder fem dage om ugen.",
+     "trap": "samme",
+     "da": "Har «virksomheder» og «fire-dages arbejdsuge», men handler om kunder. Næste sætning handler om tid og løn.",
+     "en": "Has «virksomheder» and «fire-dages arbejdsuge», but is about customers. The next sentence is about hours and pay."
+    }
+   ],
+   "hooks": [
+    {
+     "w": "på kortere tid",
+     "where": "right",
+     "to": "færre timer",
+     "toWhere": "before"
+    },
+    {
+     "w": "nedsat tid og løn",
+     "where": "after",
+     "to": "lønnen er forblevet den samme",
+     "toWhere": "right"
+    }
+   ],
+   "reasons": [
+    {
+     "da": "«nedsat tid og løn» i næste sætning er modsat «lønnen er forblevet den samme».",
+     "en": "«nedsat tid og løn» in the next sentence contrasts with «lønnen er forblevet den samme»."
+    },
+    {
+     "da": "Stykket handler om fire-dages arbejdsuge, ligesom teksten.",
+     "en": "The piece is about the four-day week, like the text."
+    },
+    {
+     "da": "Stykket har ordet «virksomheder», som også står i teksten.",
+     "en": "The piece has the word «virksomheder», which is also in the text."
+    }
+   ],
+   "reason": 0,
+   "why": {
+    "da": "• Før hullet: nogle arbejder «færre timer». Stykket forklarer hvordan: de arbejder mere effektivt, og lønnen er den samme.\n• Næste sætning: «Der er også virksomheder … nedsat tid og løn». Det er typen, hvor lønnen falder.",
+    "en": "• Before the gap: some work «færre timer». The piece explains how: they work more efficiently, and pay stays the same.\n• Next sentence: «Der er også virksomheder … nedsat tid og løn». That is the type where pay drops."
+   }
+  },
+  {
+   "id": "g-2024s-04",
+   "src": "2024s · 2B",
+   "ai": false,
+   "before": "Der er dog stadig en vis modstand blandt visse arbejdsgivere mod en fire-dages arbejdsuge.",
+   "after": "Der er konkurrence om de kvalificerede medarbejdere, og undersøgelser viser, at medarbejderne bliver mere loyale over for virksomheden, hvis de ikke skal arbejde så mange timer.",
+   "right": "Måske fordi det umiddelbart kan virke ulogisk at nedsætte arbejdstiden i en tid, hvor der er mangel på arbejdskraft. Men det er det ikke nødvendigvis.",
+   "traps": [
+    {
+     "p": "I nogle virksomheder er man lykkedes med at lære nye og mere effektive arbejdsrutiner. Man udfører det samme arbejde på kortere tid, og lønnen er forblevet den samme.",
+     "trap": "nabo",
+     "da": "Forklarer, hvordan man arbejder færre timer. Den hører til efter «færre timer om ugen» længere oppe.",
+     "en": "It explains how people work fewer hours. It belongs after «færre timer om ugen» further up."
+    },
+    {
+     "p": "Der er dog udfordringer ved individuelt tilpassede arbejdsforhold, da medarbejdere har forskellige behov. Nogle trives for eksempel bedst med at arbejde på kontoret, andre hjemme. Nogle foretrækker at arbejde tidligt, andre sent.",
+     "trap": "samme",
+     "da": "Starter også med «Der er dog», men handler om forskellige behov. Næste sætning svarer på, om det er ulogisk.",
+     "en": "Also starts with «Der er dog», but is about different needs. The next sentence answers whether it is illogical."
+    }
+   ],
+   "hooks": [
+    {
+     "w": "Måske fordi",
+     "where": "right",
+     "to": "modstand",
+     "toWhere": "before"
+    },
+    {
+     "w": "konkurrence",
+     "where": "after",
+     "to": "mangel på arbejdskraft",
+     "toWhere": "right"
+    }
+   ],
+   "reasons": [
+    {
+     "da": "«Måske fordi» forklarer modstanden hos arbejdsgiverne lige før hullet.",
+     "en": "«Måske fordi» explains the employers' resistance just before the gap."
+    },
+    {
+     "da": "Stykket handler om arbejdsgivere og arbejdstid, ligesom teksten.",
+     "en": "The piece is about employers and working hours, like the text."
+    },
+    {
+     "da": "Stykket har ordet «arbejde», som også står i teksten.",
+     "en": "The piece has the word «arbejde», which is also in the text."
+    }
+   ],
+   "reason": 0,
+   "why": {
+    "da": "• «Måske fordi» forklarer modstanden: det virker ulogisk med kortere tid, når der mangler folk.\n• «Men det er det ikke nødvendigvis» → næste sætning viser hvorfor: konkurrence om medarbejdere.",
+    "en": "• «Måske fordi» explains the resistance: shorter hours seem illogical when staff are scarce.\n• «Men det er det ikke nødvendigvis» → the next sentence shows why: competition for staff."
+   }
+  },
+  {
+   "id": "g-2024s-05",
+   "src": "2024s · 2B",
+   "ai": false,
+   "before": "Men det er måske ikke kun virksomhedernes organisering af arbejdsugen, der kommer til at forandre sig.",
+   "after": "Det er samfundet ikke klar til endnu. På mange af de virksomheder, der har fire-dages arbejdsuge, er det derfor ikke alle medarbejderne, der kan have fri om fredagen.",
+   "right": "Når flere virksomheder indfører en fire-dages arbejdsuge, skal kunder og borgere også vænne sig til, at man ikke kan komme i kontakt med en medarbejder fem dage om ugen.",
+   "traps": [
+    {
+     "p": "Måske fordi det umiddelbart kan virke ulogisk at nedsætte arbejdstiden i en tid, hvor der er mangel på arbejdskraft. Men det er det ikke nødvendigvis.",
+     "trap": "nabo",
+     "da": "«Måske fordi» forklarer modstanden hos arbejdsgivere. Den hører til længere oppe.",
+     "en": "«Måske fordi» explains employers' resistance. It belongs further up."
+    },
+    {
+     "p": "Det forventes nemlig som nævnt, at nye medarbejdere ikke arbejder hjemme, men altid møder ind på arbejdspladsen.",
+     "trap": "peger",
+     "da": "«som nævnt» peger på noget, teksten har sagt. Teksten har intet sagt om nye medarbejdere og hjemmearbejde.",
+     "en": "«som nævnt» points to something already said. The text has said nothing about new staff working from home."
+    }
+   ],
+   "hooks": [
+    {
+     "w": "også",
+     "where": "right",
+     "to": "ikke kun",
+     "toWhere": "before"
+    },
+    {
+     "w": "Det er samfundet ikke klar til",
+     "where": "after",
+     "to": "ikke kan komme i kontakt",
+     "toWhere": "right"
+    }
+   ],
+   "reasons": [
+    {
+     "da": "«ikke kun» virksomhederne før hullet → «også» kunder og borgere i stykket.",
+     "en": "«ikke kun» the companies before the gap → «også» customers and citizens in the piece."
+    },
+    {
+     "da": "Stykket handler om fire-dages arbejdsuge, ligesom teksten.",
+     "en": "The piece is about the four-day week, like the text."
+    },
+    {
+     "da": "Stykket har ordet «medarbejder», som også står i teksten.",
+     "en": "The piece has the word «medarbejder», which is also in the text."
+    }
+   ],
+   "reason": 0,
+   "why": {
+    "da": "• «ikke kun virksomhedernes organisering» → stykket: «også» kunder og borgere skal vænne sig til det.\n• Næste sætning: «Det er samfundet ikke klar til». «Det» = at man ikke kan få kontakt fem dage om ugen.",
+    "en": "• «ikke kun virksomhedernes organisering» → the piece: customers and citizens «også» have to adapt.\n• Next sentence: «Det er samfundet ikke klar til». «Det» = not being able to reach someone five days a week."
+   }
+  },
+  {
+   "id": "g-l1-01",
+   "src": "2023v · L1",
+   "ai": false,
+   "before": "Om foråret er Østersøen stadig kold, og i april og maj er Bornholm en af landets koldeste egne.",
+   "after": "Samlet set giver det en årsmiddeltemperatur, som ligger tæt på landsgennemsnittet.",
+   "right": "Til gengæld holder havet længe på sommervarmen, og fra august til december ligger Bornholm oppe blandt landets ti varmeste kommuner.",
+   "traps": [
+    {
+     "p": "Nedbøren påvirkes af havet samt det kuperede terræn, der bidrager til bygedannelsen.",
+     "trap": "samme",
+     "da": "Har ordet «havet», men handler om regn. Næste sætning lægger temperaturer sammen.",
+     "en": "Has «havet», but is about rain. The next sentence adds up temperatures."
+    },
+    {
+     "p": "Derfor igangsatte museet en stor udvidelse på 1.000 m2, der skulle omfatte to nye udstillingsbygninger, en større administrationsbygning samt ombygning af indgangspartiet.",
+     "trap": "logik",
+     "da": "«Derfor» kræver en årsag. Kolde måneder er ingen grund til, at et museum bygger til.",
+     "en": "«Derfor» needs a cause. Cold months are no reason for a museum to expand."
+    }
+   ],
+   "hooks": [
+    {
+     "w": "Til gengæld",
+     "where": "right",
+     "to": "koldeste",
+     "toWhere": "before"
+    },
+    {
+     "w": "Samlet set",
+     "where": "after",
+     "to": "varmeste",
+     "toWhere": "right"
+    }
+   ],
+   "reasons": [
+    {
+     "da": "«Til gengæld» vender: koldt om foråret, varmt om efteråret.",
+     "en": "«Til gengæld» turns it: cold in spring, warm in autumn."
+    },
+    {
+     "da": "Stykket handler om Bornholm, ligesom teksten.",
+     "en": "The piece is about Bornholm, like the text."
+    },
+    {
+     "da": "Stykket har ordet «havet», som også står i teksten.",
+     "en": "The piece has the word «havet», which is also in the text."
+    }
+   ],
+   "reason": 0,
+   "why": {
+    "da": "• «Til gengæld» vender: en af de «koldeste» egne om foråret ↔ blandt de «varmeste» om efteråret.\n• Næste sætning: «Samlet set» lægger koldt og varmt sammen: tæt på landsgennemsnittet.",
+    "en": "• «Til gengæld» turns it: one of the «koldeste» areas in spring ↔ among the «varmeste» in autumn.\n• Next sentence: «Samlet set» adds cold and warm together: close to the national average."
+   }
+  },
+  {
+   "id": "g-l1-02",
+   "src": "2024s · L1",
+   "ai": false,
+   "before": "Vi har stadig et rigtigt godt sammenhold.",
+   "after": "Det gør byen i høj grad også i håndbold, især kvinderne har succes.",
+   "right": "Men det er ikke kun i fodbold, Viborg klarer sig rigtigt godt som sportsby.",
+   "traps": [
+    {
+     "p": "Jeg ser nogle gange deres kampe, dog kun på tv, så det er ikke kun fodbold, jeg følger.",
+     "trap": "peger",
+     "da": "«deres kampe» peger på et hold, som ikke er nævnt lige før.",
+     "en": "«deres kampe» points to a team not mentioned just before."
+    },
+    {
+     "p": "Men så blev jeg tømrer, og da jeg fik mit eget firma, stoppede jeg.",
+     "trap": "logik",
+     "da": "«Men så … stoppede jeg» fortæller om at holde op. Næste sætning siger, at byen «også» klarer sig godt i håndbold.",
+     "en": "«Men så … stoppede jeg» is about quitting. The next sentence says the town «også» does well in handball."
+    }
+   ],
+   "hooks": [
+    {
+     "w": "også i håndbold",
+     "where": "after",
+     "to": "ikke kun i fodbold",
+     "toWhere": "right"
+    }
+   ],
+   "reasons": [
+    {
+     "da": "«ikke kun i fodbold» i stykket → «også i håndbold» i næste sætning.",
+     "en": "«ikke kun i fodbold» in the piece → «også i håndbold» in the next sentence."
+    },
+    {
+     "da": "Stykket handler om sport i Viborg, ligesom teksten.",
+     "en": "The piece is about sport in Viborg, like the text."
+    },
+    {
+     "da": "Stykket har ordet «fodbold», som også står i teksten.",
+     "en": "The piece has the word «fodbold», which is also in the text."
+    }
+   ],
+   "reason": 0,
+   "why": {
+    "da": "• «Men det er ikke kun i fodbold» lukker emnet fodbold og åbner noget nyt.\n• Næste sætning: «Det gør byen … også i håndbold». «ikke kun … også» hører sammen.",
+    "en": "• «Men det er ikke kun i fodbold» closes the football topic and opens a new one.\n• Next sentence: «Det gør byen … også i håndbold». «ikke kun … også» belong together."
+   }
+  },
+  {
+   "id": "g-l1-03",
+   "src": "2024s · L1",
+   "ai": false,
+   "before": "Sven har kun misset et enkelt år, hvor han ikke kunne vandre.",
+   "after": "Men det er også den eneste gang, Sven ikke har været med, og vi regner med at være med i mange år endnu.",
+   "right": "Det var fordi, han havde spillet en fodboldkamp en uge før marchen, og der var han så uheldig at brække anklen i en tackling.",
+   "traps": [
+    {
+     "p": "Da de blev større, gik jeg med igen, og børnene har også været med flere gange.",
+     "trap": "nabo",
+     "da": "Handler om fortælleren og hendes børn. Det hører til hendes egen historie, ikke Svens ene år.",
+     "en": "It is about the narrator and her children. It belongs to her own story, not Sven's one year."
+    },
+    {
+     "p": "Det kan jeg slet ikke undvære.",
+     "trap": "peger",
+     "da": "«Det» skal pege på noget godt, man ikke kan undvære. Lige før står der, at Sven missede et år.",
+     "en": "«Det» must point to something good you can't do without. Just before, Sven missed a year."
+    }
+   ],
+   "hooks": [
+    {
+     "w": "Det var fordi",
+     "where": "right",
+     "to": "misset et enkelt år",
+     "toWhere": "before"
+    },
+    {
+     "w": "den eneste gang",
+     "where": "after",
+     "to": "brække anklen",
+     "toWhere": "right"
+    }
+   ],
+   "reasons": [
+    {
+     "da": "«Det var fordi» forklarer, hvorfor Sven missede det ene år.",
+     "en": "«Det var fordi» explains why Sven missed that one year."
+    },
+    {
+     "da": "Stykket handler om at gå med i marchen, ligesom teksten.",
+     "en": "The piece is about taking part in the march, like the text."
+    },
+    {
+     "da": "Stykket har ordet «med», som også står i teksten.",
+     "en": "The piece has the word «med», which is also in the text."
+    }
+   ],
+   "reason": 0,
+   "why": {
+    "da": "• «Det var fordi» forklarer, hvorfor Sven «misset et enkelt år»: en brækket ankel.\n• Næste sætning: «den eneste gang, Sven ikke har været med» = året med anklen.",
+    "en": "• «Det var fordi» explains why Sven «misset et enkelt år»: a broken ankle.\n• Next sentence: «den eneste gang, Sven ikke har været med» = the year of the ankle."
+   }
+  },
+  {
+   "id": "g-l1-04",
+   "src": "2023s · L1",
+   "ai": false,
+   "before": "Tyskerne accepterede nemlig, at det danske fængselsvæsen stod for fangernes forplejning.",
+   "after": "Efter krigen skiftede lejren navn til Fårhuslejren.",
+   "right": "Derfor forekom sult og sygdom stort set ikke i Frøslevlejren – i modsætning til i andre tyske lejre.",
+   "traps": [
+    {
+     "p": "Frøslevlejren er helt speciel i europæisk sammenhæng.",
+     "trap": "nabo",
+     "da": "Står lige før «Tyskerne accepterede nemlig»: «nemlig» forklarer, hvorfor lejren var speciel. Den hører til før, ikke efter.",
+     "en": "It stands just before «Tyskerne accepterede nemlig»: «nemlig» explains why the camp was special. It belongs before, not after."
+    },
+    {
+     "p": "I de fire et halvt år sad mere end 5.000 indespærret i Fårhuslejren i kortere eller længere tid, fordi de havde samarbejdet med tyskerne under besættelsen.",
+     "trap": "peger",
+     "da": "«de fire et halvt år» og «Fårhuslejren» peger på noget, der ikke er nævnt endnu. Navnet kommer først i næste sætning.",
+     "en": "«de fire et halvt år» and «Fårhuslejren» point to something not yet mentioned. The name only comes in the next sentence."
+    }
+   ],
+   "hooks": [
+    {
+     "w": "Derfor",
+     "where": "right",
+     "to": "forplejning",
+     "toWhere": "before"
+    }
+   ],
+   "reasons": [
+    {
+     "da": "«Derfor» giver følgen af, at danskerne stod for fangernes mad.",
+     "en": "«Derfor» gives the result of the Danes providing the prisoners' food."
+    },
+    {
+     "da": "Stykket handler om Frøslevlejren, ligesom teksten.",
+     "en": "The piece is about the Frøslev camp, like the text."
+    },
+    {
+     "da": "Stykket har ordet «lejr», som også står i teksten.",
+     "en": "The piece has the word «lejr», which is also in the text."
+    }
+   ],
+   "reason": 0,
+   "why": {
+    "da": "• Før hullet giver «nemlig» en årsag: det danske fængselsvæsen stod for maden.\n• «Derfor» giver følgen: næsten ingen sult og sygdom.",
+    "en": "• Before the gap «nemlig» gives a cause: the Danish prison service provided the food.\n• «Derfor» gives the result: hardly any hunger or illness."
+   }
+  },
+  {
+   "id": "g-l1-05",
+   "src": "2023v · L1",
+   "ai": false,
+   "before": "Bornholms Kunstmuseum er opført i 1993, men voksede allerede i 2002 ud af rammerne.",
+   "after": "Bornholms Kunstmuseum genåbnede i 2003 efter den større tilbygning og regnes i dag for noget af det bedste inden for moderne dansk arkitektur.",
+   "right": "Derfor igangsatte museet en stor udvidelse på 1.000 m2, der skulle omfatte to nye udstillingsbygninger, en større administrationsbygning samt ombygning af indgangspartiet.",
+   "traps": [
+    {
+     "p": "Kunstmuseet ligger ca. 6 km nord for Gudhjem i et af Danmarks flotteste og mest spektakulære landskaber.",
+     "trap": "nabo",
+     "da": "Rigtigt emne, men den præsenterer museet. Den hører til i starten, ikke efter at museet er blevet for lille.",
+     "en": "Right topic, but it introduces the museum. It belongs at the start, not after the museum has grown too small."
+    },
+    {
+     "p": "Til gengæld holder havet længe på sommervarmen, og fra august til december ligger Bornholm oppe blandt landets ti varmeste kommuner.",
+     "trap": "logik",
+     "da": "«Til gengæld» vender noget negativt om. Her handler det om et museum, ikke om vejret.",
+     "en": "«Til gengæld» turns something negative around. This is about a museum, not the weather."
+    }
+   ],
+   "hooks": [
+    {
+     "w": "Derfor",
+     "where": "right",
+     "to": "ud af rammerne",
+     "toWhere": "before"
+    },
+    {
+     "w": "tilbygning",
+     "where": "after",
+     "to": "udvidelse",
+     "toWhere": "right"
+    }
+   ],
+   "reasons": [
+    {
+     "da": "«Derfor» giver følgen af, at museet voksede ud af rammerne.",
+     "en": "«Derfor» gives the result of the museum outgrowing its building."
+    },
+    {
+     "da": "Stykket handler om Bornholm, ligesom teksten.",
+     "en": "The piece is about Bornholm, like the text."
+    },
+    {
+     "da": "Stykket har ordet «museum», som også står i teksten.",
+     "en": "The piece has the word «museum», which is also in the text."
+    }
+   ],
+   "reason": 0,
+   "why": {
+    "da": "• «voksede … ud af rammerne» = der var ikke plads nok. «Derfor» → en udvidelse.\n• Næste sætning: «efter den større tilbygning» = udvidelsen.",
+    "en": "• «voksede … ud af rammerne» = there was not enough room. «Derfor» → an extension.\n• Next sentence: «efter den større tilbygning» = the extension."
+   }
+  },
+  {
+   "id": "g-l1-06",
+   "src": "2023v · L1",
+   "ai": false,
+   "before": "Det primære formål med Folkemødet er at styrke det danske demokrati ved at mindske afstanden og øge tilliden mellem borgere og beslutningstagere.",
+   "after": "Og ved at give borgerne mulighed for at møde beslutningstagerne ansigt til ansigt.",
+   "right": "Det sker ved at skabe en ny ramme om møder mellem beslutningstagere i erhvervslivet, interesseorganisationer og politikere fra Folketinget, EU, kommuner og regioner.",
+   "traps": [
+    {
+     "p": "Alle lovlige danske organisationer, foreninger, virksomheder m.fl. samt private, der lever op til Folkemødets principper for events, har mulighed for at blive optaget i Folkemødets program.",
+     "trap": "nabo",
+     "da": "Rigtigt emne, men handler om, hvem der må være med. Næste sætning («Og ved at …») skal fortsætte en måde at nå formålet på.",
+     "en": "Right topic, but about who may take part. The next sentence («Og ved at …») must continue a way of reaching the goal."
+    },
+    {
+     "p": "Den fælles ambition er at sikre unges repræsentation og styrke unges stemme på Folkemødet.",
+     "trap": "peger",
+     "da": "«Den fælles ambition» peger på en gruppe, der deler noget. Der er ingen gruppe lige før.",
+     "en": "«Den fælles ambition» points to a group sharing something. There is no group just before."
+    }
+   ],
+   "hooks": [
+    {
+     "w": "Det sker ved at",
+     "where": "right",
+     "to": "formål",
+     "toWhere": "before"
+    },
+    {
+     "w": "Og ved at",
+     "where": "after",
+     "to": "ved at skabe",
+     "toWhere": "right"
+    }
+   ],
+   "reasons": [
+    {
+     "da": "«Og ved at» i næste sætning fortsætter «ved at skabe» i stykket.",
+     "en": "«Og ved at» in the next sentence continues «ved at skabe» in the piece."
+    },
+    {
+     "da": "Stykket handler om Folkemødet, ligesom teksten.",
+     "en": "The piece is about the People's Meeting, like the text."
+    },
+    {
+     "da": "Stykket har ordet «beslutningstagere», som også står i teksten.",
+     "en": "The piece has the word «beslutningstagere», which is also in the text."
+    }
+   ],
+   "reason": 0,
+   "why": {
+    "da": "• «Det sker ved at» = sådan når man formålet fra sætningen før.\n• Næste sætning: «Og ved at …» giver måde nummer to.",
+    "en": "• «Det sker ved at» = this is how the goal from the sentence before is reached.\n• Next sentence: «Og ved at …» gives way number two."
+   }
+  },
+  {
+   "id": "g-l1-07",
+   "src": "2023v · L1",
+   "ai": false,
+   "before": "Du vil opdage, at det ikke er uden grund, at Bornholm har markeret sig så stærkt inden for gourmet gennem snart en længere årrække.",
+   "after": "Kokke og fødevareproducenter samarbejder om forædling af produkterne.",
+   "right": "Det er ikke en tilfældighed, men resultat af mange års samarbejde.",
+   "traps": [
+    {
+     "p": "Kunstmuseet ligger ca. 6 km nord for Gudhjem i et af Danmarks flotteste og mest spektakulære landskaber.",
+     "trap": "nabo",
+     "da": "Samme ø, men handler om kunstmuseet. Næste sætning handler om kokke, der samarbejder.",
+     "en": "Same island, but about the art museum. The next sentence is about chefs working together."
+    },
+    {
+     "p": "Samlet set giver det en årsmiddeltemperatur, som ligger tæt på landsgennemsnittet.",
+     "trap": "peger",
+     "da": "«Samlet set … det» lægger tal sammen. Der er ingen tal lige før hullet.",
+     "en": "«Samlet set … det» adds up figures. There are no figures just before the gap."
+    }
+   ],
+   "hooks": [
+    {
+     "w": "ikke en tilfældighed",
+     "where": "right",
+     "to": "ikke er uden grund",
+     "toWhere": "before"
+    },
+    {
+     "w": "samarbejder",
+     "where": "after",
+     "to": "samarbejde",
+     "toWhere": "right"
+    }
+   ],
+   "reasons": [
+    {
+     "da": "«ikke en tilfældighed» svarer til «ikke uden grund» lige før hullet.",
+     "en": "«ikke en tilfældighed» echoes «ikke uden grund» just before the gap."
+    },
+    {
+     "da": "Stykket handler om Bornholm, ligesom teksten.",
+     "en": "The piece is about Bornholm, like the text."
+    },
+    {
+     "da": "Stykket har ordet «Bornholm», som også står i teksten.",
+     "en": "The piece has the word «Bornholm», which is also in the text."
+    }
+   ],
+   "reason": 0,
+   "why": {
+    "da": "• «Det er ikke en tilfældighed» gentager «det ikke er uden grund» med andre ord.\n• «samarbejde» → næste sætning: kokke og producenter «samarbejder».",
+    "en": "• «Det er ikke en tilfældighed» repeats «det ikke er uden grund» in other words.\n• «samarbejde» → next sentence: chefs and producers «samarbejder»."
+   }
+  },
+  {
+   "id": "g-l1-08",
+   "src": "2024s · L1",
+   "ai": false,
+   "before": "Jeg er vild med, at Viborg har så mange offentlige parker og grønne områder.",
+   "after": "Jeg er især vild med Borgvold.",
+   "right": "Det er skønt, når man bor i lejlighed, at der er større udearealer, hvor børnene kan brænde noget energi af.",
+   "traps": [
+    {
+     "p": "Det er et smukt gammelt parkanlæg i romantisk stil med både kanaler, broer og små stier.",
+     "trap": "nabo",
+     "da": "Beskriver én bestemt park. Den hører til efter «Borgvold», som først kommer i næste sætning.",
+     "en": "It describes one particular park. It belongs after «Borgvold», which only comes in the next sentence."
+    },
+    {
+     "p": "Sporten er virkelig noget, vi er sammen om her i Viborg.",
+     "trap": "samme",
+     "da": "Har «Viborg», men handler om sport. Næste sætning handler om en park.",
+     "en": "Has «Viborg», but is about sport. The next sentence is about a park."
+    }
+   ],
+   "hooks": [
+    {
+     "w": "udearealer",
+     "where": "right",
+     "to": "grønne områder",
+     "toWhere": "before"
+    },
+    {
+     "w": "Borgvold",
+     "where": "after",
+     "to": "udearealer",
+     "toWhere": "right"
+    }
+   ],
+   "reasons": [
+    {
+     "da": "«større udearealer» i stykket svarer til «parker og grønne områder» før hullet.",
+     "en": "«større udearealer» in the piece matches «parker og grønne områder» before the gap."
+    },
+    {
+     "da": "Stykket handler om byen Viborg, ligesom teksten.",
+     "en": "The piece is about the town of Viborg, like the text."
+    },
+    {
+     "da": "Stykket har ordet «Viborg», som også står i teksten.",
+     "en": "The piece has the word «Viborg», which is also in the text."
+    }
+   ],
+   "reason": 0,
+   "why": {
+    "da": "• «Det er skønt» fortsætter «Jeg er vild med»: parkerne er gode for børnene.\n• Næste sætning: «Jeg er især vild med Borgvold» vælger én af parkerne ud.",
+    "en": "• «Det er skønt» continues «Jeg er vild med»: the parks are good for the children.\n• Next sentence: «Jeg er især vild med Borgvold» picks out one of the parks."
+   }
+  },
+  {
+   "id": "g-l1-09",
+   "src": "2023s · L1",
+   "ai": false,
+   "before": "Det kan man ikke ligefrem sige.",
+   "after": "Det var blandt andet sådan vi fik det sønderjyske kaffebord!",
+   "right": "Det fik faktisk den stik modsatte effekt - for i trods fandt de dansksindede nye måder at omgå de strenge anti-danske love.",
+   "traps": [
+    {
+     "p": "Det blev nemlig en meget brugt måde at mødes, for de dansksindede måtte for eksempel ikke mødes i det offentlige rum.",
+     "trap": "nabo",
+     "da": "«Det … en måde at mødes» peger på kaffebordet. Den hører til efter «det sønderjyske kaffebord».",
+     "en": "«Det … en måde at mødes» points to the coffee table. It belongs after «det sønderjyske kaffebord»."
+    },
+    {
+     "p": "Derfor måtte de mødes i private hjem eller i nybyggede forsamlingshuse, som blev bygget efter dansk forbillede.",
+     "trap": "logik",
+     "da": "«Derfor» kræver en årsag: at de ikke måtte mødes offentligt. Den årsag står ikke lige før hullet.",
+     "en": "«Derfor» needs a cause: that they could not meet in public. That cause is not just before the gap."
+    }
+   ],
+   "hooks": [
+    {
+     "w": "den stik modsatte effekt",
+     "where": "right",
+     "to": "ikke ligefrem",
+     "toWhere": "before"
+    },
+    {
+     "w": "sådan",
+     "where": "after",
+     "to": "nye måder",
+     "toWhere": "right"
+    }
+   ],
+   "reasons": [
+    {
+     "da": "«den stik modsatte effekt» forklarer svaret: nej, taktikken virkede ikke.",
+     "en": "«den stik modsatte effekt» explains the answer: no, the tactic did not work."
+    },
+    {
+     "da": "Stykket handler om de dansksindede, ligesom teksten.",
+     "en": "The piece is about the Danish-minded, like the text."
+    },
+    {
+     "da": "Stykket har ordet «dansk», som også står i teksten.",
+     "en": "The piece has the word «dansk», which is also in the text."
+    }
+   ],
+   "reason": 0,
+   "why": {
+    "da": "• «Det kan man ikke ligefrem sige» = nej, ikke rigtigt. Stykket forklarer: det fik «den stik modsatte effekt».\n• Næste sætning: «sådan vi fik det sønderjyske kaffebord». «sådan» = en af de «nye måder».",
+    "en": "• «Det kan man ikke ligefrem sige» = no, not really. The piece explains: it had «den stik modsatte effekt».\n• Next sentence: «sådan vi fik det sønderjyske kaffebord». «sådan» = one of the «nye måder»."
+   }
+  },
+  {
+   "id": "g-l1-10",
+   "src": "2023s · L1",
+   "ai": false,
+   "before": "Det blev nemlig en meget brugt måde at mødes, for de dansksindede måtte for eksempel ikke mødes i det offentlige rum.",
+   "after": "Men forsamlingshusene fik ikke alkoholbevilling, så der kom kaffe på bordet.",
+   "right": "Derfor måtte de mødes i private hjem eller i nybyggede forsamlingshuse, som blev bygget efter dansk forbillede.",
+   "traps": [
+    {
+     "p": "Kaffe - og massevis af kage.",
+     "trap": "nabo",
+     "da": "Rigtigt emne, men den fortsætter «kaffe på bordet», som først kommer i næste sætning.",
+     "en": "Right topic, but it continues «kaffe på bordet», which only comes in the next sentence."
+    },
+    {
+     "p": "Det fik faktisk den stik modsatte effekt - for i trods fandt de dansksindede nye måder at omgå de strenge anti-danske love.",
+     "trap": "peger",
+     "da": "«Det fik … den modsatte effekt» peger på en tysk taktik. Lige før står der, at de dansksindede ikke måtte mødes offentligt.",
+     "en": "«Det fik … den modsatte effekt» points to a German tactic. Just before, the Danish-minded could not meet in public."
+    }
+   ],
+   "hooks": [
+    {
+     "w": "Derfor",
+     "where": "right",
+     "to": "ikke mødes i det offentlige rum",
+     "toWhere": "before"
+    },
+    {
+     "w": "forsamlingshusene",
+     "where": "after",
+     "to": "forsamlingshuse",
+     "toWhere": "right"
+    }
+   ],
+   "reasons": [
+    {
+     "da": "«Derfor» giver følgen af, at de ikke måtte mødes offentligt.",
+     "en": "«Derfor» gives the result of not being allowed to meet in public."
+    },
+    {
+     "da": "Stykket handler om de dansksindede, ligesom teksten.",
+     "en": "The piece is about the Danish-minded, like the text."
+    },
+    {
+     "da": "Stykket har ordet «mødes», som også står i teksten.",
+     "en": "The piece has the word «mødes», which is also in the text."
+    }
+   ],
+   "reason": 0,
+   "why": {
+    "da": "• Før hullet: de måtte ikke mødes offentligt. «Derfor» → de mødtes i hjem og forsamlingshuse.\n• Næste sætning: «forsamlingshusene» = husene fra stykket.",
+    "en": "• Before the gap: they could not meet in public. «Derfor» → they met in homes and village halls.\n• Next sentence: «forsamlingshusene» = the halls from the piece."
+   }
+  },
+  {
+   "id": "g-ai-01",
+   "src": "AI",
+   "ai": true,
+   "before": "Mange danskere arbejder i dag hjemme en eller to dage om ugen.",
+   "after": "Til gengæld savner mange deres kolleger og den hurtige snak ved kaffemaskinen.",
+   "right": "Det giver dem mere tid, fordi de ikke skal sidde en time i bilen hver morgen.",
+   "traps": [
+    {
+     "p": "Derfor har mange virksomheder købt flere kaffemaskiner til kontoret.",
+     "trap": "samme",
+     "da": "Har ordet «kaffemaskine» fra teksten, men hjemmearbejde er ingen grund til flere kaffemaskiner. «Derfor» er forkert logik.",
+     "en": "Has «kaffemaskine» from the text, but working from home is no reason for more coffee machines. «Derfor» is the wrong logic."
+    },
+    {
+     "p": "Det er især svært for nye medarbejdere, som ikke kender nogen endnu.",
+     "trap": "nabo",
+     "da": "Rigtigt emne, men hører til efter «savner deres kolleger». «Det» peger på savnet, som ikke er nævnt endnu.",
+     "en": "Right topic, but belongs after «savner deres kolleger». «Det» points to missing colleagues, which hasn't been said yet."
+    }
+   ],
+   "hooks": [
+    {
+     "w": "dem",
+     "where": "right",
+     "to": "Mange danskere",
+     "toWhere": "before"
+    },
+    {
+     "w": "Til gengæld",
+     "where": "after",
+     "to": "mere tid",
+     "toWhere": "right"
+    }
+   ],
+   "reasons": [
+    {
+     "da": "«Til gengæld» i næste sætning kræver noget positivt lige før.",
+     "en": "«Til gengæld» in the next sentence needs something positive just before."
+    },
+    {
+     "da": "Stykket handler om at arbejde hjemme, ligesom teksten.",
+     "en": "The piece is about working from home, like the text."
+    },
+    {
+     "da": "Stykket har ordet «kaffemaskine», som også står i teksten.",
+     "en": "The piece has the word «kaffemaskine», which is also in the text."
+    }
+   ],
+   "reason": 0,
+   "why": {
+    "da": "• «Til gengæld» vender fra godt til skidt. Hullet skal have noget godt: «mere tid».\n• «dem» = de danskere, der arbejder hjemme.",
+    "en": "• «Til gengæld» turns from good to bad. The gap needs something good: «mere tid».\n• «dem» = the Danes who work from home."
+   }
+  },
+  {
+   "id": "g-ai-02",
+   "src": "AI",
+   "ai": true,
+   "before": "Mange danskere cykler til arbejde, også når vejret er dårligt.",
+   "after": "Cykelstierne er blevet så gode, at endnu flere nu tager cyklen.",
+   "right": "Derfor har flere kommuner bygget nye cykelstier langs de store veje.",
+   "traps": [
+    {
+     "p": "Mange skoleelever cykler i dag selv hen til skolen, fordi bussen er dyr.",
+     "trap": "samme",
+     "da": "Har ordet «cykler», men næste sætning siger «Cykelstierne». Stykket nævner ingen cykelstier.",
+     "en": "Has «cykler», but the next sentence says «Cykelstierne». The piece mentions no cycle paths."
+    },
+    {
+     "p": "Men mange kommuner har ikke råd til at bygge nye veje.",
+     "trap": "logik",
+     "da": "«Men» vender, men næste sætning siger, at cykelstierne er blevet gode. Der er intet at vende.",
+     "en": "«Men» turns it, but the next sentence says the cycle paths are good. There is nothing to turn."
+    }
+   ],
+   "hooks": [
+    {
+     "w": "Derfor",
+     "where": "right",
+     "to": "cykler til arbejde",
+     "toWhere": "before"
+    },
+    {
+     "w": "Cykelstierne",
+     "where": "after",
+     "to": "cykelstier",
+     "toWhere": "right"
+    }
+   ],
+   "reasons": [
+    {
+     "da": "«Cykelstierne» i næste sætning peger på de cykelstier, stykket nævner.",
+     "en": "«Cykelstierne» in the next sentence points to the cycle paths the piece mentions."
+    },
+    {
+     "da": "Stykket handler om at cykle, ligesom teksten.",
+     "en": "The piece is about cycling, like the text."
+    },
+    {
+     "da": "Stykket har ordet «cykler», som også står i teksten.",
+     "en": "The piece has the word «cykler», which is also in the text."
+    }
+   ],
+   "reason": 0,
+   "why": {
+    "da": "• Mange cykler → «Derfor» bygger kommunerne cykelstier.\n• «Cykelstierne» (bestemt form) peger tilbage på «cykelstier» i stykket.",
+    "en": "• Many people cycle → «Derfor» the councils build cycle paths.\n• «Cykelstierne» (definite form) points back to «cykelstier» in the piece."
+   }
+  },
+  {
+   "id": "g-ai-03",
+   "src": "AI",
+   "ai": true,
+   "before": "Mange danskere smider mad ud, selv om den stadig er god at spise.",
+   "after": "Derfor kan man spare mange penge ved at skrive en indkøbsliste, før man handler.",
+   "right": "Det skyldes ofte, at man køber mere, end man kan nå at spise.",
+   "traps": [
+    {
+     "p": "Men mange danskere køber også mad på nettet, fordi det er bekvemt.",
+     "trap": "logik",
+     "da": "«Men» vender, men der er intet at vende. Og en indkøbsliste løser ikke, at man handler på nettet.",
+     "en": "«Men» turns it, but there is nothing to turn. And a shopping list does not solve shopping online."
+    },
+    {
+     "p": "Derfor smider de fleste butikker aldrig mad ud.",
+     "trap": "samme",
+     "da": "Har ordene «smider» og «mad», men «Derfor» passer ikke: at folk smider mad ud, er ingen grund til, at butikker ikke gør det.",
+     "en": "Has «smider» and «mad», but «Derfor» does not fit: people throwing food away is no reason shops don't."
+    }
+   ],
+   "hooks": [
+    {
+     "w": "Det skyldes",
+     "where": "right",
+     "to": "smider mad ud",
+     "toWhere": "before"
+    },
+    {
+     "w": "indkøbsliste",
+     "where": "after",
+     "to": "køber mere",
+     "toWhere": "right"
+    }
+   ],
+   "reasons": [
+    {
+     "da": "«Det skyldes» giver årsagen, og en indkøbsliste i næste sætning løser den.",
+     "en": "«Det skyldes» gives the cause, and the shopping list in the next sentence fixes it."
+    },
+    {
+     "da": "Stykket handler om mad, ligesom teksten.",
+     "en": "The piece is about food, like the text."
+    },
+    {
+     "da": "Stykket har ordet «mad», som også står i teksten.",
+     "en": "The piece has the word «mad», which is also in the text."
+    }
+   ],
+   "reason": 0,
+   "why": {
+    "da": "• «Det skyldes» = årsagen til, at mad bliver smidt ud: man køber for meget.\n• Næste sætning: «Derfor … en indkøbsliste» er løsningen på at købe for meget.",
+    "en": "• «Det skyldes» = why food is thrown away: people buy too much.\n• Next sentence: «Derfor … en indkøbsliste» is the fix for buying too much."
+   }
+  },
+  {
+   "id": "g-ai-04",
+   "src": "AI",
+   "ai": true,
+   "before": "Mange unge vil gerne lære et nyt sprog, men de har ikke tid til at gå på en sprogskole.",
+   "after": "Man kan også øve sig med en app på bussen eller i frokostpausen.",
+   "right": "Derfor er kurser på nettet blevet populære, fordi man selv kan vælge tidspunktet.",
+   "traps": [
+    {
+     "p": "Det gør det nemmere at øve sig hver dag, selv om man er træt.",
+     "trap": "nabo",
+     "da": "«Det» peger på en metode, men der er ingen metode lige før. Den kunne komme efter «en app».",
+     "en": "«Det» points to a method, but there is none just before. It could come after «en app»."
+    },
+    {
+     "p": "Men de fleste sprogskoler holder åbent om aftenen.",
+     "trap": "logik",
+     "da": "«Men» vender «ikke tid», men så passer «Man kan også øve sig» ikke: der er ingen første måde at øve sig på.",
+     "en": "«Men» turns «ikke tid», but then «Man kan også øve sig» doesn't fit: there is no first way to practise."
+    }
+   ],
+   "hooks": [
+    {
+     "w": "Derfor",
+     "where": "right",
+     "to": "ikke tid",
+     "toWhere": "before"
+    },
+    {
+     "w": "også",
+     "where": "after",
+     "to": "kurser på nettet",
+     "toWhere": "right"
+    }
+   ],
+   "reasons": [
+    {
+     "da": "«også» i næste sætning kræver en første måde at lære på lige før.",
+     "en": "«også» in the next sentence needs a first way of learning just before."
+    },
+    {
+     "da": "Stykket handler om at lære sprog, ligesom teksten.",
+     "en": "The piece is about learning languages, like the text."
+    },
+    {
+     "da": "Stykket har ordet «sprog», som også står i teksten.",
+     "en": "The piece has the word «sprog», which is also in the text."
+    }
+   ],
+   "reason": 0,
+   "why": {
+    "da": "• Ingen tid til sprogskole → «Derfor» kurser på nettet.\n• Næste sætning: «Man kan også …» giver måde nummer to: en app.",
+    "en": "• No time for language school → «Derfor» online courses.\n• Next sentence: «Man kan også …» gives way number two: an app."
+   }
+  },
+  {
+   "id": "g-ai-05",
+   "src": "AI",
+   "ai": true,
+   "before": "Mange byer har fået flere cykelparkeringspladser i de senere år.",
+   "after": "Bilerne har til gengæld fået færre pladser i centrum.",
+   "right": "Det er fordi, flere og flere vælger cyklen i stedet for bilen.",
+   "traps": [
+    {
+     "p": "Mange byer har fået flere parkeringshuse, fordi der er for mange biler.",
+     "trap": "samme",
+     "da": "Har ordene «Mange byer» og «parkering», men næste sætning siger, at bilerne får færre pladser. Det modsiger stykket.",
+     "en": "Has «Mange byer» and «parkering», but the next sentence says cars get fewer spaces. That contradicts the piece."
+    },
+    {
+     "p": "Den er dog ofte fyldt om morgenen.",
+     "trap": "peger",
+     "da": "«Den» skal pege på én ting. Før hullet står der «cykelparkeringspladser» i flertal.",
+     "en": "«Den» must point to one thing. Before the gap it says «cykelparkeringspladser», plural."
+    }
+   ],
+   "hooks": [
+    {
+     "w": "Det er fordi",
+     "where": "right",
+     "to": "flere cykelparkeringspladser",
+     "toWhere": "before"
+    },
+    {
+     "w": "Bilerne",
+     "where": "after",
+     "to": "bilen",
+     "toWhere": "right"
+    }
+   ],
+   "reasons": [
+    {
+     "da": "«Bilerne … til gengæld» i næste sætning er modsat «cyklen i stedet for bilen».",
+     "en": "«Bilerne … til gengæld» in the next sentence is the opposite of «cyklen i stedet for bilen»."
+    },
+    {
+     "da": "Stykket handler om byer og parkering, ligesom teksten.",
+     "en": "The piece is about towns and parking, like the text."
+    },
+    {
+     "da": "Stykket har ordet «byer», som også står i teksten.",
+     "en": "The piece has the word «byer», which is also in the text."
+    }
+   ],
+   "reason": 0,
+   "why": {
+    "da": "• «Det er fordi» forklarer, hvorfor der er flere pladser til cykler.\n• Næste sætning: «Bilerne har til gengæld …» = det modsatte for bilerne.",
+    "en": "• «Det er fordi» explains why there are more bike spaces.\n• Next sentence: «Bilerne har til gengæld …» = the opposite for cars."
+   }
+  },
+  {
+   "id": "g-ai-06",
+   "src": "AI",
+   "ai": true,
+   "before": "Mange danskere går en tur i skoven om søndagen.",
+   "after": "Og mange tager børnene med, fordi de også har brug for luft.",
+   "right": "Det er en god måde at slappe af på efter en travl uge.",
+   "traps": [
+    {
+     "p": "De kan lege og klatre i træerne, mens de voksne går.",
+     "trap": "nabo",
+     "da": "«De» er børnene, som først kommer i næste sætning. Stykket hører til efter «Og mange tager børnene med».",
+     "en": "«De» are the children, who only come in the next sentence. The piece belongs after «Og mange tager børnene med»."
+    },
+    {
+     "p": "Men mange danskere synes, at skoven er for stille og kedelig.",
+     "trap": "logik",
+     "da": "«Men» vender fra noget positivt. Næste sætning fortsætter med noget positivt («Og mange …»), så der er ingen vending.",
+     "en": "«Men» turns from something positive. The next sentence carries on positively («Og mange …»), so there is no turn."
+    }
+   ],
+   "hooks": [
+    {
+     "w": "Det",
+     "where": "right",
+     "to": "går en tur i skoven",
+     "toWhere": "before"
+    },
+    {
+     "w": "også",
+     "where": "after",
+     "to": "slappe af",
+     "toWhere": "right"
+    }
+   ],
+   "reasons": [
+    {
+     "da": "«Det» peger på skovturen, og «også» i næste sætning: børnene har også brug for det.",
+     "en": "«Det» points to the walk, and «også» in the next sentence: the children need it too."
+    },
+    {
+     "da": "Stykket handler om skoven, ligesom teksten.",
+     "en": "The piece is about the forest, like the text."
+    },
+    {
+     "da": "Stykket har ordet «skoven», som også står i teksten.",
+     "en": "The piece has the word «skoven», which is also in the text."
+    }
+   ],
+   "reason": 0,
+   "why": {
+    "da": "• «Det» = at gå en tur i skoven: en god måde at slappe af på.\n• Næste sætning: «Og … de også har brug for luft» tilføjer børnene.",
+    "en": "• «Det» = walking in the forest: a good way to relax.\n• Next sentence: «Og … de også har brug for luft» adds the children."
+   }
+  },
+  {
+   "id": "g-ai-07",
+   "src": "AI",
+   "ai": true,
+   "before": "Mange unge har i dag en smartphone med mange apps.",
+   "after": "Derfor kan de hurtigt finde ud af, hvornår den næste bus kører.",
+   "right": "Den bruges ikke kun til at ringe, men også til at betale og tjekke trafikken.",
+   "traps": [
+    {
+     "p": "Forældre er ofte bekymrede for, hvor lang tid børnene bruger på skærmen.",
+     "trap": "nabo",
+     "da": "Rigtigt emne, men «Derfor» i næste sætning kan ikke bygge på bekymrede forældre.",
+     "en": "Right topic, but «Derfor» in the next sentence cannot build on worried parents."
+    },
+    {
+     "p": "Men mange unge kan ikke finde ud af at bruge en app.",
+     "trap": "logik",
+     "da": "«Men» vender, men næste sætning siger, at de «hurtigt» finder bussen. Det modsiger stykket.",
+     "en": "«Men» turns it, but the next sentence says they find the bus «hurtigt». That contradicts the piece."
+    }
+   ],
+   "hooks": [
+    {
+     "w": "Den",
+     "where": "right",
+     "to": "en smartphone",
+     "toWhere": "before"
+    },
+    {
+     "w": "bus",
+     "where": "after",
+     "to": "trafikken",
+     "toWhere": "right"
+    }
+   ],
+   "reasons": [
+    {
+     "da": "«Derfor … bussen» i næste sætning bygger på, at telefonen kan tjekke trafikken.",
+     "en": "«Derfor … bussen» in the next sentence builds on the phone checking the traffic."
+    },
+    {
+     "da": "Stykket handler om unge og telefoner, ligesom teksten.",
+     "en": "The piece is about young people and phones, like the text."
+    },
+    {
+     "da": "Stykket har ordet «apps», som også står i teksten.",
+     "en": "The piece has the word «apps», which is also in the text."
+    }
+   ],
+   "reason": 0,
+   "why": {
+    "da": "• «Den» = en smartphone (en-ord).\n• «tjekke trafikken» → «Derfor» kan de finde den næste bus.",
+    "en": "• «Den» = a smartphone (en-word).\n• «tjekke trafikken» → «Derfor» they can find the next bus."
+   }
+  },
+  {
+   "id": "g-ai-08",
+   "src": "AI",
+   "ai": true,
+   "before": "Vinteren i Danmark kan være mørk og kold.",
+   "after": "Allerede i marts er det lyst, når man cykler hjem fra arbejde.",
+   "right": "Til gengæld bliver dagene hurtigt længere, når foråret kommer.",
+   "traps": [
+    {
+     "p": "Derfor bor mange danskere i sommerhuset om vinteren.",
+     "trap": "logik",
+     "da": "«Derfor» kræver en årsag. Mørke og kulde er ingen grund til at bo i sommerhus.",
+     "en": "«Derfor» needs a cause. Dark and cold are no reason to live in a summer house."
+    },
+    {
+     "p": "Det er især de ældre, der har svært ved at komme ud i kulden.",
+     "trap": "nabo",
+     "da": "Passer efter «kold», men næste sætning handler om lyset i marts. Den fortsætter ikke kulden.",
+     "en": "It fits after «kold», but the next sentence is about light in March. It does not continue the cold."
+    }
+   ],
+   "hooks": [
+    {
+     "w": "Til gengæld",
+     "where": "right",
+     "to": "mørk og kold",
+     "toWhere": "before"
+    },
+    {
+     "w": "lyst",
+     "where": "after",
+     "to": "dagene hurtigt længere",
+     "toWhere": "right"
+    }
+   ],
+   "reasons": [
+    {
+     "da": "«Til gengæld» vender den mørke vinter, og næste sætning viser lyset i marts.",
+     "en": "«Til gengæld» turns the dark winter, and the next sentence shows the light in March."
+    },
+    {
+     "da": "Stykket handler om vejret i Danmark, ligesom teksten.",
+     "en": "The piece is about Danish weather, like the text."
+    },
+    {
+     "da": "Stykket har ordet «kulden», som også står i teksten.",
+     "en": "The piece has the word «kulden», which is also in the text."
+    }
+   ],
+   "reason": 0,
+   "why": {
+    "da": "• «Til gengæld» vender: mørk og kold ↔ længere dage.\n• Næste sætning: «Allerede i marts er det lyst» er et eksempel på de længere dage.",
+    "en": "• «Til gengæld» turns it: dark and cold ↔ longer days.\n• Next sentence: «Allerede i marts er det lyst» is an example of the longer days."
+   }
+  },
+  {
+   "id": "g-ai-09",
+   "src": "AI",
+   "ai": true,
+   "before": "Mange børn spiser for lidt frugt og grønt i hverdagen.",
+   "after": "Men skolen kan ikke klare det alene.",
+   "right": "Derfor laver flere skoler nu en frugtpause for alle klasser.",
+   "traps": [
+    {
+     "p": "Mange skoler har lukket kantinen, fordi der ikke er nok elever.",
+     "trap": "samme",
+     "da": "Har «Mange skoler», men handler om kantinen. «det» i næste sætning skal være en opgave, skolen har taget.",
+     "en": "Has «Mange skoler», but is about the canteen. «det» in the next sentence must be a task the school has taken on."
+    },
+    {
+     "p": "Det kan også hjælpe, at børnene selv er med til at lave mad.",
+     "trap": "nabo",
+     "da": "«også» kræver en første hjælp. Den hører til efter «Men skolen kan ikke klare det alene».",
+     "en": "«også» needs a first kind of help. It belongs after «Men skolen kan ikke klare det alene»."
+    }
+   ],
+   "hooks": [
+    {
+     "w": "Derfor",
+     "where": "right",
+     "to": "for lidt frugt",
+     "toWhere": "before"
+    },
+    {
+     "w": "skolen",
+     "where": "after",
+     "to": "skoler",
+     "toWhere": "right"
+    }
+   ],
+   "reasons": [
+    {
+     "da": "«Men skolen kan ikke klare det alene» kræver, at skolen gør noget lige før.",
+     "en": "«Men skolen kan ikke klare det alene» needs the school to do something just before."
+    },
+    {
+     "da": "Stykket handler om børn og mad, ligesom teksten.",
+     "en": "The piece is about children and food, like the text."
+    },
+    {
+     "da": "Stykket har ordet «frugt», som også står i teksten.",
+     "en": "The piece has the word «frugt», which is also in the text."
+    }
+   ],
+   "reason": 0,
+   "why": {
+    "da": "• For lidt frugt → «Derfor» en frugtpause i skolen.\n• Næste sætning: «Men skolen kan ikke klare det alene». «det» = at få børnene til at spise frugt.",
+    "en": "• Too little fruit → «Derfor» a fruit break at school.\n• Next sentence: «Men skolen kan ikke klare det alene». «det» = getting children to eat fruit."
+   }
+  },
+  {
+   "id": "g-ai-10",
+   "src": "AI",
+   "ai": true,
+   "before": "Mange familier holder sommerferie i et sommerhus.",
+   "after": "Til gengæld kan det være dyrt at leje et hus i juli.",
+   "right": "Her kan man slappe af og være sammen uden at se på skærme hele dagen.",
+   "traps": [
+    {
+     "p": "Mange familier køber i dag et hus i byen.",
+     "trap": "samme",
+     "da": "Har ordene «familier» og «hus», men handler om at købe et hjem, ikke om ferien.",
+     "en": "Has «familier» and «hus», but is about buying a home, not the holiday."
+    },
+    {
+     "p": "Derfor bliver mange familier hjemme hele sommeren.",
+     "trap": "logik",
+     "da": "«Derfor» passer ikke: at holde ferie i sommerhus er ingen grund til at blive hjemme.",
+     "en": "«Derfor» doesn't fit: a summer-house holiday is no reason to stay at home."
+    }
+   ],
+   "hooks": [
+    {
+     "w": "Her",
+     "where": "right",
+     "to": "et sommerhus",
+     "toWhere": "before"
+    },
+    {
+     "w": "Til gengæld",
+     "where": "after",
+     "to": "slappe af",
+     "toWhere": "right"
+    }
+   ],
+   "reasons": [
+    {
+     "da": "«Her» peger på sommerhuset, og «Til gengæld» i næste sætning vender det gode.",
+     "en": "«Her» points to the summer house, and «Til gengæld» in the next sentence turns the good part."
+    },
+    {
+     "da": "Stykket handler om familier, ligesom teksten.",
+     "en": "The piece is about families, like the text."
+    },
+    {
+     "da": "Stykket har ordet «familier», som også står i teksten.",
+     "en": "The piece has the word «familier», which is also in the text."
+    }
+   ],
+   "reason": 0,
+   "why": {
+    "da": "• «Her» = i sommerhuset.\n• Stykket siger noget godt. «Til gengæld» i næste sætning giver det dårlige: prisen.",
+    "en": "• «Her» = in the summer house.\n• The piece says something good. «Til gengæld» in the next sentence gives the bad part: the price."
+   }
+  },
+  {
+   "id": "g-ai-11",
+   "src": "AI",
+   "ai": true,
+   "before": "Mange danskere drømmer om at få en hund.",
+   "after": "En hund kræver nemlig tid hver dag, både til gåture og til leg.",
+   "right": "Men inden man køber en, skal man tænke sig godt om.",
+   "traps": [
+    {
+     "p": "Mange hunde bliver meget gamle, hvis de får god mad.",
+     "trap": "samme",
+     "da": "Har ordet «hund», men «nemlig» i næste sætning skal forklare noget. Der er intet at forklare i stykket.",
+     "en": "Has «hund», but «nemlig» in the next sentence must explain something. There is nothing to explain in the piece."
+    },
+    {
+     "p": "Den kan også blive dyr, hvis den bliver syg.",
+     "trap": "nabo",
+     "da": "«også» giver grund nummer to. Den hører til efter «En hund kræver nemlig tid».",
+     "en": "«også» gives reason number two. It belongs after «En hund kræver nemlig tid»."
+    }
+   ],
+   "hooks": [
+    {
+     "w": "Men",
+     "where": "right",
+     "to": "drømmer",
+     "toWhere": "before"
+    },
+    {
+     "w": "nemlig",
+     "where": "after",
+     "to": "tænke sig godt om",
+     "toWhere": "right"
+    }
+   ],
+   "reasons": [
+    {
+     "da": "«nemlig» i næste sætning forklarer, hvorfor man skal tænke sig om.",
+     "en": "«nemlig» in the next sentence explains why you should think it over."
+    },
+    {
+     "da": "Stykket handler om hunde, ligesom teksten.",
+     "en": "The piece is about dogs, like the text."
+    },
+    {
+     "da": "Stykket har ordet «hund», som også står i teksten.",
+     "en": "The piece has the word «hund», which is also in the text."
+    }
+   ],
+   "reason": 0,
+   "why": {
+    "da": "• «Men» vender drømmen: tænk dig om først.\n• Næste sætning: «nemlig» forklarer hvorfor: en hund kræver tid hver dag.",
+    "en": "• «Men» turns the dream around: think first.\n• Next sentence: «nemlig» explains why: a dog needs time every day."
+   }
+  },
+  {
+   "id": "g-ai-12",
+   "src": "AI",
+   "ai": true,
+   "before": "Mange unge vil gerne have et job ved siden af studiet.",
+   "after": "Men det er ikke altid nemt at få det til at passe med lektierne.",
+   "right": "Derfor søger mange job i caféer og butikker, hvor man kan vælge sine vagter.",
+   "traps": [
+    {
+     "p": "Derfor har mange studerende ikke tid til at se deres venner.",
+     "trap": "logik",
+     "da": "«Derfor» passer ikke: at ville have et job er ikke det samme som at have et. Og «det» i næste sætning skal være et job.",
+     "en": "«Derfor» doesn't fit: wanting a job is not having one. And «det» in the next sentence must be a job."
+    },
+    {
+     "p": "Det er især svært, fordi man skal bruge tid på at finde en god bolig.",
+     "trap": "peger",
+     "da": "«Det er især svært» peger på noget svært, men der står intet svært lige før.",
+     "en": "«Det er især svært» points to something hard, but nothing hard is said just before."
+    }
+   ],
+   "hooks": [
+    {
+     "w": "Derfor",
+     "where": "right",
+     "to": "et job ved siden af studiet",
+     "toWhere": "before"
+    },
+    {
+     "w": "Men",
+     "where": "after",
+     "to": "vælge sine vagter",
+     "toWhere": "right"
+    }
+   ],
+   "reasons": [
+    {
+     "da": "«Men» i næste sætning vender det gode ved at vælge sine vagter.",
+     "en": "«Men» in the next sentence turns the good part about choosing your shifts."
+    },
+    {
+     "da": "Stykket handler om unge og job, ligesom teksten.",
+     "en": "The piece is about young people and jobs, like the text."
+    },
+    {
+     "da": "Stykket har ordet «studerende», som også står i teksten.",
+     "en": "The piece has the word «studerende», which is also in the text."
+    }
+   ],
+   "reason": 0,
+   "why": {
+    "da": "• De vil have et job → «Derfor» søger de job, hvor man kan vælge vagter.\n• Næste sætning: «Men det er ikke altid nemt …» vender det gode.",
+    "en": "• They want a job → «Derfor» they look for jobs where you choose shifts.\n• Next sentence: «Men det er ikke altid nemt …» turns the good part."
+   }
+  },
+  {
+   "id": "g-ai-13",
+   "src": "AI",
+   "ai": true,
+   "before": "Mange danskere køber i dag brugt tøj i stedet for nyt.",
+   "after": "Man skal dog være tålmodig, for det kan tage lang tid at finde det rigtige.",
+   "right": "Det er ofte både billigere og bedre for miljøet.",
+   "traps": [
+    {
+     "p": "Nyt tøj er ofte lavet af materialer, som ikke kan genbruges.",
+     "trap": "samme",
+     "da": "Har «nyt tøj», men «dog» i næste sætning kræver noget godt om brugt tøj lige før.",
+     "en": "Has «nyt tøj», but «dog» in the next sentence needs something good about second-hand clothes just before."
+    },
+    {
+     "p": "Derfor bliver brugt tøj ofte solgt igen efter kort tid.",
+     "trap": "logik",
+     "da": "«Derfor» passer ikke: at mange køber brugt, er ingen grund til at sælge det igen.",
+     "en": "«Derfor» doesn't fit: many buying second-hand is no reason to resell it."
+    }
+   ],
+   "hooks": [
+    {
+     "w": "Det",
+     "where": "right",
+     "to": "brugt tøj",
+     "toWhere": "before"
+    },
+    {
+     "w": "dog",
+     "where": "after",
+     "to": "billigere",
+     "toWhere": "right"
+    }
+   ],
+   "reasons": [
+    {
+     "da": "«dog» i næste sætning kræver noget godt lige før.",
+     "en": "«dog» in the next sentence needs something good just before."
+    },
+    {
+     "da": "Stykket handler om tøj, ligesom teksten.",
+     "en": "The piece is about clothes, like the text."
+    },
+    {
+     "da": "Stykket har ordet «tøj», som også står i teksten.",
+     "en": "The piece has the word «tøj», which is also in the text."
+    }
+   ],
+   "reason": 0,
+   "why": {
+    "da": "• «Det» = at købe brugt tøj. Det er billigt og godt for miljøet.\n• Næste sætning: «Man skal dog …» giver ulempen.",
+    "en": "• «Det» = buying second-hand. It is cheap and good for the environment.\n• Next sentence: «Man skal dog …» gives the downside."
+   }
+  },
+  {
+   "id": "g-ai-14",
+   "src": "AI",
+   "ai": true,
+   "before": "Mange ældre vil gerne blive boende i deres eget hjem, så længe de kan.",
+   "after": "Derfor hjælper mange kommuner med at sætte gelændere og håndtag op.",
+   "right": "Det kræver dog, at man tænker på trapper og badeværelser i tide.",
+   "traps": [
+    {
+     "p": "Mange ældre flytter i dag til byen, fordi der er flere caféer.",
+     "trap": "samme",
+     "da": "Har «Mange ældre», men handler om at flytte. Teksten handler om at blive boende.",
+     "en": "Has «Mange ældre», but is about moving. The text is about staying."
+    },
+    {
+     "p": "Men mange kommuner har ikke tid til at besøge dem hjemme.",
+     "trap": "logik",
+     "da": "Næste sætning siger, at kommunerne hjælper. Det modsiger «ikke tid».",
+     "en": "The next sentence says the councils help. That contradicts «ikke tid»."
+    }
+   ],
+   "hooks": [
+    {
+     "w": "Det kræver dog",
+     "where": "right",
+     "to": "blive boende",
+     "toWhere": "before"
+    },
+    {
+     "w": "gelændere og håndtag",
+     "where": "after",
+     "to": "trapper og badeværelser",
+     "toWhere": "right"
+    }
+   ],
+   "reasons": [
+    {
+     "da": "«gelændere og håndtag» i næste sætning løser problemet med trapper og badeværelser.",
+     "en": "«gelændere og håndtag» in the next sentence fixes the stairs and bathrooms."
+    },
+    {
+     "da": "Stykket handler om ældre, ligesom teksten.",
+     "en": "The piece is about older people, like the text."
+    },
+    {
+     "da": "Stykket har ordet «ældre», som også står i teksten.",
+     "en": "The piece has the word «ældre», which is also in the text."
+    }
+   ],
+   "reason": 0,
+   "why": {
+    "da": "• «Det kræver dog» = at blive boende er godt, men kræver noget.\n• Næste sætning: «Derfor … gelændere og håndtag» = hjælp til trapper og bad.",
+    "en": "• «Det kræver dog» = staying is good, but needs something.\n• Next sentence: «Derfor … gelændere og håndtag» = help with stairs and bathrooms."
+   }
+  },
+  {
+   "id": "g-ai-15",
+   "src": "AI",
+   "ai": true,
+   "before": "Mange elever har svært ved at sidde stille i timerne en hel dag.",
+   "after": "Det hjælper dem med at holde fokus, når de skal arbejde videre.",
+   "right": "Derfor laver nogle skoler nu korte pauser, hvor eleverne kan bevæge sig.",
+   "traps": [
+    {
+     "p": "Mange forældre hjælper gerne deres børn med lektierne om aftenen.",
+     "trap": "samme",
+     "da": "Har ordet «børn» og handler om skole, men «Det hjælper dem» i næste sætning skal pege på noget i skoletiden.",
+     "en": "Has «børn» and is about school, but «Det hjælper dem» in the next sentence must point to something during school."
+    },
+    {
+     "p": "Men mange elever har en god computer hjemme.",
+     "trap": "logik",
+     "da": "«Men» vender, men en computer har intet med at sidde stille at gøre.",
+     "en": "«Men» turns it, but a computer has nothing to do with sitting still."
+    }
+   ],
+   "hooks": [
+    {
+     "w": "Derfor",
+     "where": "right",
+     "to": "sidde stille",
+     "toWhere": "before"
+    },
+    {
+     "w": "Det hjælper dem",
+     "where": "after",
+     "to": "bevæge sig",
+     "toWhere": "right"
+    }
+   ],
+   "reasons": [
+    {
+     "da": "«Det hjælper dem» i næste sætning peger på pauserne, hvor eleverne bevæger sig.",
+     "en": "«Det hjælper dem» in the next sentence points to the breaks where pupils move."
+    },
+    {
+     "da": "Stykket handler om skole og elever, ligesom teksten.",
+     "en": "The piece is about school and pupils, like the text."
+    },
+    {
+     "da": "Stykket har ordet «elever», som også står i teksten.",
+     "en": "The piece has the word «elever», which is also in the text."
+    }
+   ],
+   "reason": 0,
+   "why": {
+    "da": "• Svært at sidde stille → «Derfor» pauser med bevægelse.\n• Næste sætning: «Det hjælper dem» = pauserne hjælper eleverne.",
+    "en": "• Hard to sit still → «Derfor» breaks with movement.\n• Next sentence: «Det hjælper dem» = the breaks help the pupils."
+   }
+  }
+ ],
+ "hooks": [
+  {
+   "id": "h-l1-06",
+   "src": "2024s · L1",
+   "ai": false,
+   "before": "Sven har kun misset et enkelt år, hvor han ikke kunne vandre.",
+   "piece": "Det var fordi, han havde spillet en fodboldkamp en uge før marchen, og der var han så uheldig at brække anklen i en tackling.",
+   "words": [
+    "Det",
+    "fordi"
+   ],
+   "why": {
+    "da": "• «Det» = at Sven missede et år.\n• «fordi» giver grunden: en brækket ankel.",
+    "en": "• «Det» = Sven missing a year.\n• «fordi» gives the reason: a broken ankle."
+   }
+  },
+  {
+   "id": "h-2023s-02",
+   "src": "2023s · 2B",
+   "ai": false,
+   "before": "Ja, og der er store forskelle i tilknytningen til arbejdsmarkedet.",
+   "piece": "Nogle er faktisk slet ikke en del af det – sådan vil det nok altid være. Andre har måske fået et job, men den virksomhed, de arbejder for, bliver til en vis grad kompenseret af kommunen.",
+   "words": [
+    "Nogle",
+    "Andre"
+   ],
+   "why": {
+    "da": "• «Nogle … Andre …» deler de «store forskelle» op i to grupper.\n• «det» i «en del af det» = arbejdsmarkedet.",
+    "en": "• «Nogle … Andre …» splits the «store forskelle» into two groups.\n• «det» in «en del af det» = the labour market."
+   }
+  },
+  {
+   "id": "h-2023s-03",
+   "src": "2023s · 2B",
+   "ai": false,
+   "before": "Et af forslagene er at tilbyde dem et kursus i jobsøgning.",
+   "piece": "Det lyder måske banalt, men mange af dem har ikke haft et studiejob. Derfor har de i praksis svært ved at give eksempler på deres kompetencer og at beskrive deres erfaringer.",
+   "words": [
+    "Det",
+    "dem"
+   ],
+   "why": {
+    "da": "• «Det lyder måske banalt» = kurset i jobsøgning.\n• «mange af dem» = de nyuddannede med handicap.\n• «Derfor» binder kun stykkets egne to sætninger sammen. Det peger ikke tilbage.",
+    "en": "• «Det lyder måske banalt» = the job-seeking course.\n• «mange af dem» = the graduates with disabilities.\n• «Derfor» only links the piece's own two sentences. It does not point back."
+   }
+  },
+  {
+   "id": "h-2023s-04",
+   "src": "2023s · 2B",
+   "ai": false,
+   "before": "Hele 81 % af de nyuddannede uden et handicap var efter tolv måneder kommet ind på arbejdsmarkedet.",
+   "piece": "Det samme var desværre ikke tilfældet for dem med et handicap. Af dem var kun seks ud af ti kommet i en eller anden form for arbejde inden for den samme periode.",
+   "words": [
+    "Det"
+   ],
+   "why": {
+    "da": "• «Det samme» = det, der lige er sagt: 81 % kom i arbejde.\n• «ikke tilfældet» vender det: for dem med handicap var tallet lavere.",
+    "en": "• «Det samme» = what was just said: 81 % got jobs.\n• «ikke tilfældet» turns it: for those with a disability the figure was lower."
+   }
+  },
+  {
+   "id": "h-2023s-05",
+   "src": "2023s · 2B",
+   "ai": false,
+   "before": "Og halvdelen mente, at deres handicap ville få stor betydning for, hvordan de ville klare deres job, hvis de endelig fik et.",
+   "piece": "Der er bare ikke noget, der peger på, at de har ret. I undersøgelsen fra 2020 har man lavet en række grundige interviews med en lille gruppe mennesker med et handicap, der passer et almindeligt arbejde.",
+   "words": [
+    "de"
+   ],
+   "why": {
+    "da": "• «de har ret» = halvdelen, som «mente» noget.\n• Stykket svarer: der er intet, der viser, at de har ret.",
+    "en": "• «de har ret» = the half who «mente» something.\n• The piece answers: nothing shows they are right."
+   }
+  },
+  {
+   "id": "h-2023v-01",
+   "src": "2023v · 2B",
+   "ai": false,
+   "before": "Hver dag bruger de fleste mennesker internettet på en eller anden måde, både på arbejdet og hjemme i privaten.",
+   "piece": "Man tjekker mail, køber ind, bestiller en ferie eller leder efter et nyt job – efterhånden bruger man internettet til alting.",
+   "words": [
+    "internettet"
+   ],
+   "why": {
+    "da": "• Et ord, der går igen, er også en krog: «internettet» står i sætningen før.\n• Stykket giver eksempler på, hvad vi bruger det til.",
+    "en": "• A repeated word is a hook too: «internettet» is in the sentence before.\n• The piece gives examples of what we use it for."
+   }
+  },
+  {
+   "id": "h-2023v-02",
+   "src": "2023v · 2B",
+   "ai": false,
+   "before": "Nogle mener, det er internetudbyderne, fordi det er dem, der tjener penge på at levere adgang til nettet. Men den løsning er problematisk.",
+   "piece": "Konsekvensen vil nemlig være, at alle borgere og virksomheder får overvåget deres adfærd på nettet af en privat virksomhed. Det er noget, de færreste ønsker sig.",
+   "words": [
+    "Konsekvensen",
+    "nemlig"
+   ],
+   "why": {
+    "da": "• «Konsekvensen» = følgen af «den løsning» før hullet.\n• «nemlig» forklarer, hvorfor løsningen er «problematisk».",
+    "en": "• «Konsekvensen» = the result of «den løsning» before the gap.\n• «nemlig» explains why the solution is «problematisk»."
+   }
+  },
+  {
+   "id": "h-2023v-03",
+   "src": "2023v · 2B",
+   "ai": false,
+   "before": "Hvis ikke borgere og virksomheder selv får lov til at vælge de sikkerhedsløsninger, der passer dem eller deres virksomhed bedst, men i stedet tvinges til at bruge en fælles standardløsning, så vil nogle brugere selvfølgelig få en beskyttelse, der er bedre end den, de har i dag.",
+   "piece": "Men mange vil få en mere avanceret løsning, end de reelt har brug for. Prisen på internetproduktet vil på den måde blive meget højere, end den behøver at være, og det er der ingen, der er interesserede i.",
+   "words": [
+    "Men",
+    "mange"
+   ],
+   "why": {
+    "da": "• «Men» vender: «nogle brugere» får det bedre …\n• … men «mange» betaler for meget. Nogle ↔ mange.",
+    "en": "• «Men» turns it: «nogle brugere» are better off …\n• … but «mange» pay too much. Some ↔ many."
+   }
+  },
+  {
+   "id": "h-2023v-04",
+   "src": "2023v · 2B",
+   "ai": false,
+   "before": "Endelig er det også vigtigt altid at holde sine enheder opdaterede, gerne automatisk.",
+   "piece": "Hackere og skadelige programmer udnytter nemlig fejl i kodningen i både programmer, apps og styresystemer.",
+   "words": [
+    "nemlig"
+   ],
+   "why": {
+    "da": "• «nemlig» forklarer sætningen før: derfor skal man opdatere.\n• Hackere bruger fejl, og opdateringer retter dem.",
+    "en": "• «nemlig» explains the sentence before: that is why you update.\n• Hackers use errors, and updates fix them."
+   }
+  },
+  {
+   "id": "h-2024s-01",
+   "src": "2024s · 2B",
+   "ai": false,
+   "before": "Dels for lettere at kunne fastholde dem, der allerede er ansat, dels for lettere at kunne rekruttere nye, efterspurgte kræfter.",
+   "piece": "Der er dog udfordringer ved individuelt tilpassede arbejdsforhold, da medarbejdere har forskellige behov. Nogle trives for eksempel bedst med at arbejde på kontoret, andre hjemme. Nogle foretrækker at arbejde tidligt, andre sent.",
+   "words": [
+    "dog"
+   ],
+   "why": {
+    "da": "• «dog» vender: fleksibilitet er godt for virksomheden …\n• … men svært, fordi folk har forskellige behov.",
+    "en": "• «dog» turns it: flexibility is good for the company …\n• … but hard, because people have different needs."
+   }
+  },
+  {
+   "id": "h-2024s-02",
+   "src": "2024s · 2B",
+   "ai": false,
+   "before": "Der er stadig ikke så mange virksomheder, der tilbyder ordningen, men der bliver flere og flere. Og det er der måske god grund til.",
+   "piece": "I Danmark er der nemlig hver dag 35.000 sygemeldinger som følge af stress. Dertil kommer selvfølgelig andre sygemeldinger og andet fravær på grund af almindelig nedslidning.",
+   "words": [
+    "nemlig"
+   ],
+   "why": {
+    "da": "• «nemlig» giver den «gode grund» fra sætningen før: stress.\n• «Dertil» binder kun stykkets egne sætninger sammen.",
+    "en": "• «nemlig» gives the «god grund» from the sentence before: stress.\n• «Dertil» only links the piece's own sentences."
+   }
+  },
+  {
+   "id": "h-2024s-03",
+   "src": "2024s · 2B",
+   "ai": false,
+   "before": "I andre betyder det, at man også arbejder færre timer om ugen.",
+   "piece": "I nogle virksomheder er man lykkedes med at lære nye og mere effektive arbejdsrutiner. Man udfører det samme arbejde på kortere tid, og lønnen er forblevet den samme.",
+   "words": [
+    "nogle"
+   ],
+   "why": {
+    "da": "• «I nogle virksomheder» svarer til «I andre» lige før.\n• Nogle ↔ andre: teksten deler virksomhederne op.",
+    "en": "• «I nogle virksomheder» answers «I andre» just before.\n• Some ↔ others: the text splits the companies into groups."
+   }
+  },
+  {
+   "id": "h-2024s-04",
+   "src": "2024s · 2B",
+   "ai": false,
+   "before": "Der er dog stadig en vis modstand blandt visse arbejdsgivere mod en fire-dages arbejdsuge.",
+   "piece": "Måske fordi det umiddelbart kan virke ulogisk at nedsætte arbejdstiden i en tid, hvor der er mangel på arbejdskraft. Men det er det ikke nødvendigvis.",
+   "words": [
+    "Måske",
+    "fordi"
+   ],
+   "why": {
+    "da": "• «Måske fordi» forklarer «modstand» fra sætningen før.\n• «Men det er det ikke nødvendigvis» peger frem i teksten.",
+    "en": "• «Måske fordi» explains the «modstand» from the sentence before.\n• «Men det er det ikke nødvendigvis» points forward in the text."
+   }
+  },
+  {
+   "id": "h-2024s-05",
+   "src": "2024s · 2B",
+   "ai": false,
+   "before": "Men det er måske ikke kun virksomhedernes organisering af arbejdsugen, der kommer til at forandre sig.",
+   "piece": "Når flere virksomheder indfører en fire-dages arbejdsuge, skal kunder og borgere også vænne sig til, at man ikke kan komme i kontakt med en medarbejder fem dage om ugen.",
+   "words": [
+    "også"
+   ],
+   "why": {
+    "da": "• «ikke kun» virksomhederne før hullet → «også» kunder og borgere.\n• «ikke kun … også» hører sammen.",
+    "en": "• «ikke kun» the companies before the gap → customers and citizens «også».\n• «ikke kun … også» belong together."
+   }
+  },
+  {
+   "id": "h-l1-01",
+   "src": "2024s · L1",
+   "ai": false,
+   "before": "Vi har stadig et rigtigt godt sammenhold.",
+   "piece": "Men det er ikke kun i fodbold, Viborg klarer sig rigtigt godt som sportsby.",
+   "words": [
+    "Men"
+   ],
+   "why": {
+    "da": "• «Men» vender: fra fodboldholdets sammenhold til byen som sportsby.\n• «ikke kun i fodbold» lover, at der kommer mere.",
+    "en": "• «Men» turns it: from the football team's spirit to the town as a sports town.\n• «ikke kun i fodbold» promises that more is coming."
+   }
+  },
+  {
+   "id": "h-l1-02",
+   "src": "2023v · L1",
+   "ai": false,
+   "before": "Bornholms Kunstmuseum er opført i 1993, men voksede allerede i 2002 ud af rammerne.",
+   "piece": "Derfor igangsatte museet en stor udvidelse på 1.000 m2, der skulle omfatte to nye udstillingsbygninger, en større administrationsbygning samt ombygning af indgangspartiet.",
+   "words": [
+    "Derfor"
+   ],
+   "why": {
+    "da": "• Museet «voksede … ud af rammerne» (årsag).\n• «Derfor» → en udvidelse (følge).",
+    "en": "• The museum «voksede … ud af rammerne» (cause).\n• «Derfor» → an extension (result)."
+   }
+  },
+  {
+   "id": "h-l1-03",
+   "src": "2023v · L1",
+   "ai": false,
+   "before": "Du vil opdage, at det ikke er uden grund, at Bornholm har markeret sig så stærkt inden for gourmet gennem snart en længere årrække.",
+   "piece": "Det er ikke en tilfældighed, men resultat af mange års samarbejde.",
+   "words": [
+    "Det"
+   ],
+   "why": {
+    "da": "• «Det» = at Bornholm har markeret sig stærkt inden for gourmet.\n• «ikke en tilfældighed» gentager «ikke uden grund».",
+    "en": "• «Det» = Bornholm making its mark in gourmet food.\n• «ikke en tilfældighed» repeats «ikke uden grund»."
+   }
+  },
+  {
+   "id": "h-l1-04",
+   "src": "2023s · L1",
+   "ai": false,
+   "before": "Tyskerne accepterede nemlig, at det danske fængselsvæsen stod for fangernes forplejning.",
+   "piece": "Derfor forekom sult og sygdom stort set ikke i Frøslevlejren – i modsætning til i andre tyske lejre.",
+   "words": [
+    "Derfor"
+   ],
+   "why": {
+    "da": "• Danskerne stod for maden (årsag, med «nemlig»).\n• «Derfor» → næsten ingen sult og sygdom (følge).",
+    "en": "• The Danes provided the food (cause, with «nemlig»).\n• «Derfor» → hardly any hunger or illness (result)."
+   }
+  },
+  {
+   "id": "h-l1-05",
+   "src": "2023s · L1",
+   "ai": false,
+   "before": "Det blev nemlig en meget brugt måde at mødes, for de dansksindede måtte for eksempel ikke mødes i det offentlige rum.",
+   "piece": "Derfor måtte de mødes i private hjem eller i nybyggede forsamlingshuse, som blev bygget efter dansk forbillede.",
+   "words": [
+    "Derfor"
+   ],
+   "why": {
+    "da": "• De måtte ikke mødes offentligt (årsag).\n• «Derfor» → de mødtes i hjem og forsamlingshuse (følge).",
+    "en": "• They could not meet in public (cause).\n• «Derfor» → they met in homes and village halls (result)."
+   }
+  },
+  {
+   "id": "h-ai-01",
+   "src": "AI",
+   "ai": true,
+   "before": "Mange unge har i dag en smartphone med mange apps.",
+   "piece": "Den bruges ikke kun til at ringe, men også til at betale i butikken.",
+   "words": [
+    "Den"
+   ],
+   "why": {
+    "da": "• «Den» = en smartphone. Det er et en-ord, så det hedder «den».",
+    "en": "• «Den» = en smartphone. It is an en-word, so it is «den»."
+   }
+  },
+  {
+   "id": "h-ai-02",
+   "src": "AI",
+   "ai": true,
+   "before": "Vi tager ofte bussen til arbejde, når det regner.",
+   "piece": "Det kan dog være dyrt, hvis man skal købe en billet hver dag.",
+   "words": [
+    "Det",
+    "dog"
+   ],
+   "why": {
+    "da": "• «Det» = at tage bussen.\n• «dog» vender: bussen er god, når det regner, men dyr.",
+    "en": "• «Det» = taking the bus.\n• «dog» turns it: the bus is good when it rains, but expensive."
+   }
+  },
+  {
+   "id": "h-ai-03",
+   "src": "AI",
+   "ai": true,
+   "before": "Mange familier vil gerne spise sundere i hverdagen.",
+   "piece": "Derfor laver de flere retter med grøntsager og mindre kød.",
+   "words": [
+    "Derfor",
+    "de"
+   ],
+   "why": {
+    "da": "• «Derfor» = fordi de vil spise sundere.\n• «de» = familierne.",
+    "en": "• «Derfor» = because they want to eat healthier.\n• «de» = the families."
+   }
+  },
+  {
+   "id": "h-ai-04",
+   "src": "AI",
+   "ai": true,
+   "before": "Biblioteker tilbyder i dag mange ting ud over bøger.",
+   "piece": "Det kan være kurser i computer, koncerter eller legeområder til børn.",
+   "words": [
+    "Det"
+   ],
+   "why": {
+    "da": "• «Det» = de «mange ting» ud over bøger.\n• Stykket giver eksempler.",
+    "en": "• «Det» = the «mange ting» besides books.\n• The piece gives examples."
+   }
+  },
+  {
+   "id": "h-ai-05",
+   "src": "AI",
+   "ai": true,
+   "before": "Mange unge arbejder ved siden af studiet for at tjene penge.",
+   "piece": "Men det kan være svært at nå både lektier og arbejde på samme dag.",
+   "words": [
+    "Men"
+   ],
+   "why": {
+    "da": "• «Men» vender: pengene er gode, tiden er svær.\n• «det» i «det kan være svært» peger ikke tilbage. Det er bare et formelt subjekt.",
+    "en": "• «Men» turns it: the money is good, the time is hard.\n• «det» in «det kan være svært» does not point back. It is just a formal subject."
+   }
+  },
+  {
+   "id": "h-ai-06",
+   "src": "AI",
+   "ai": true,
+   "before": "Vinteren i Danmark kan være mørk og kold.",
+   "piece": "Til gengæld bliver dagene hurtigt længere, når foråret kommer.",
+   "words": [
+    "Til",
+    "gengæld"
+   ],
+   "why": {
+    "da": "• «Til gengæld» vender: mørk vinter ↔ lyse forårsdage.",
+    "en": "• «Til gengæld» turns it: dark winter ↔ bright spring days."
+   }
+  }
+ ],
+ "sets": [
+  {
+   "id": "s-2023s",
+   "kind": "full",
+   "title": "Job og handicap",
+   "src": "2023s · 2B",
+   "ai": false,
+   "hold": false,
+   "parts": [
+    "Der mangler arbejdskraft i Danmark, og der er brug for alle hænder og hoveder. Sådan lyder det ofte fra politikere og økonomer. Men det er ikke lige let for alle at få et arbejde. Heller ikke selvom de både har en god uddannelse og har lyst til at gå i gang med en karriere. Det drejer sig blandt andet om de mennesker, der har et handicap.",
+    1,
+    "Hvis man har et handicap, kan det derfor blive svært at passe et arbejde – men det er bestemt ikke sikkert! Sikkert er det dog, at der er færre nyuddannede med et handicap, der kommer i arbejde, end nyuddannede uden et handicap. Måske er det ikke så overraskende, men det var alligevel interessant nok til, at VIA University College satte sig for at undersøge det nærmere. Resultatet var rapporten Fra uddannelse til første job – med handicap, som udkom i 2020. Formålet med undersøgelsen var at finde ud af, hvor mange nyuddannede med et handicap, der er tilknyttet arbejdsmarkedet, og på hvilken måde de er det. Ja, og der er store forskelle i tilknytningen til arbejdsmarkedet.",
+    2,
+    "Det er det, man kalder løntilskud. Men heldigvis er der mange, der har fået et helt almindeligt arbejde og derfor ikke længere får støtte fra det offentlige. Konkret sammenlignede man nyuddannede med og uden et handicap i det første år, efter de havde afsluttet deres uddannelse. I perioden 2012-2016 var der 266.515 personer, der afsluttede en videregående uddannelse, og af dem havde 4.793 personer et handicap. Det svarer til cirka 1,8 % af alle nyuddannede i perioden. Tendensen var klar. Hele 81 % af de nyuddannede uden et handicap var efter tolv måneder kommet ind på arbejdsmarkedet.",
+    3,
+    "Det er selvfølgelig ikke et acceptabelt resultat. Slet ikke når man tænker på, at mange af dem sagtens kan udføre arbejdet lige så godt som alle andre. Måske handler de nedslående tal også om selvværdet hos de nyuddannede med et handicap. En tredjedel af dem mente, allerede mens de var studerende, at deres handicap ville få en betydning for, om de overhovedet kunne få et job. Og halvdelen mente, at deres handicap ville få stor betydning for, hvordan de ville klare deres job, hvis de endelig fik et.",
+    4,
+    "Overraskende nok kunne 15 ud af 18 fortælle, at deres handicap enten har lille eller slet ingen betydning for deres arbejdsliv. På en måde er det gode nyheder. Men det er selvfølgelig ærgerligt, at der er så mange studerende med et handicap, der tror noget andet, mens de læser. Endelig viste undersøgelsen også, at mange mennesker med et handicap ikke kender særlig meget til de mange forskellige støttemuligheder, der er på arbejdsmarkedet. Disse muligheder kaldes også for kompenserende ordninger, og de er til en vis grad finansieret af staten. Fx kan en person med et handicap få personlig assistance. Den personlige assistent kan fx hjælpe med bestemte løft, med at køre bil, med at skrive eller læse korrektur. Man kan også få betalt visse hjælpemidler. Det kan fx være særligt undervisningsmateriale, særligt værktøj eller en speciel indretning af kontoret. Endelig kan nyuddannede med et handicap også få løntilskud i deres første job. Det vil hjælpe dem til at få den første erfaring med det fag, de har uddannet sig indenfor, og til at skabe sig et netværk. De fleste mennesker – både dem med og uden et handicap – har oplevet, hvor vigtigt det er at have et bredt professionelt netværk. Rapporten kommer selvfølgelig også med en række anbefalinger til, hvordan man kan gøre det lettere for mennesker med et handicap at komme i arbejde. Et af forslagene er at tilbyde dem et kursus i jobsøgning.",
+    5,
+    "Desuden ville de måske have glæde af frivillige mentorer, der har samme uddannelse, som de selv har. Mentorerne ville kunne bidrage med viden om alt fra ansættelsesproces til arbejdspladskultur. Og hvem ved? Måske kan det hjælpe den enkelte med et handicap til hurtigt at komme ind på arbejdsmarkedet – og blive der."
+   ],
+   "pieces": {
+    "A": "Nogle er faktisk slet ikke en del af det – sådan vil det nok altid være. Andre har måske fået et job, men den virksomhed, de arbejder for, bliver til en vis grad kompenseret af kommunen.",
+    "B": "Fx er der flere og flere mennesker med et handicap, der simpelthen vælger, at de slet ikke vil have et arbejde. I hvert fald ikke samme slags arbejde som dem uden et synligt handicap.",
+    "C": "Det kan være svært at definere præcist, hvad det vil sige. Men i ordbogen står der, at det er en permanent fysisk eller psykisk svaghed, der begrænser ens muligheder i hverdagen.",
+    "D": "Det lyder måske banalt, men mange af dem har ikke haft et studiejob. Derfor har de i praksis svært ved at give eksempler på deres kompetencer og at beskrive deres erfaringer.",
+    "E": "Alle undersøgelser har indtil nu peget på, at mennesker med et handicap har lige så let ved at klare et almindeligt lønarbejde som mennesker uden et handicap. Og det har arbejdsgiverne endelig fået øjnene op for.",
+    "F": "Det samme var desværre ikke tilfældet for dem med et handicap. Af dem var kun seks ud af ti kommet i en eller anden form for arbejde inden for den samme periode.",
+    "G": "Der er bare ikke noget, der peger på, at de har ret. I undersøgelsen fra 2020 har man lavet en række grundige interviews med en lille gruppe mennesker med et handicap, der passer et almindeligt arbejde."
+   },
+   "key": {
+    "1": "C",
+    "2": "A",
+    "3": "F",
+    "4": "G",
+    "5": "D"
+   },
+   "gapwhy": {
+    "1": {
+     "trap": null,
+     "da": "• «hvad det vil sige» = hvad et handicap er.\n• Næste sætning: «kan det derfor blive svært». «derfor» bygger på «svaghed, der begrænser».",
+     "en": "• «hvad det vil sige» = what a disability is.\n• Next sentence: «kan det derfor blive svært». «derfor» builds on «svaghed, der begrænser»."
+    },
+    "2": {
+     "trap": null,
+     "da": "• «Nogle … Andre …» deler de «store forskelle» op.\n• Næste sætning: «Det er det, man kalder løntilskud» = kommunen betaler.",
+     "en": "• «Nogle … Andre …» split the «store forskelle».\n• Next sentence: «Det er det, man kalder løntilskud» = the council pays."
+    },
+    "3": {
+     "trap": null,
+     "da": "• «Det samme … ikke tilfældet» sammenligner med 81 %.\n• Næste sætning: «ikke et acceptabelt resultat» = seks ud af ti.",
+     "en": "• «Det samme … ikke tilfældet» compares with 81 %.\n• Next sentence: «ikke et acceptabelt resultat» = six in ten."
+    },
+    "4": {
+     "trap": null,
+     "da": "• «de har ret» = halvdelen, der «mente» noget.\n• «en lille gruppe» → næste sætning: «15 ud af 18».",
+     "en": "• «de har ret» = the half who «mente» something.\n• «en lille gruppe» → next sentence: «15 ud af 18»."
+    },
+    "5": {
+     "trap": null,
+     "da": "• «Det lyder måske banalt» = kurset i jobsøgning.\n• Næste sætning: «Desuden …» giver forslag nummer to.",
+     "en": "• «Det lyder måske banalt» = the job-seeking course.\n• Next sentence: «Desuden …» gives proposal number two."
+    }
+   },
+   "extra": {
+    "B": {
+     "trap": "samme",
+     "da": "• Har ordet «handicap», men «Fx» skal give et eksempel på noget, der står lige før. Det gør intet sted i teksten.\n• Og teksten siger, at de gerne vil arbejde.",
+     "en": "• Has «handicap», but «Fx» needs something just before to give an example of. Nowhere in the text does that happen.\n• And the text says they do want to work."
+    },
+    "E": {
+     "trap": "logik",
+     "da": "• Siger, at alle undersøgelser viser, at det er lige så let. Men teksten handler om, at det er sværere.\n• Efter hul 4 ville «Overraskende nok» så ikke give mening.",
+     "en": "• Says all studies show it is just as easy. But the text is about it being harder.\n• After gap 4, «Overraskende nok» would then make no sense."
+    }
+   }
+  },
+  {
+   "id": "s-2023v",
+   "kind": "full",
+   "title": "Datasikkerhed",
+   "src": "2023v · 2B",
+   "ai": false,
+   "hold": false,
+   "parts": [
+    "Hver dag bruger de fleste mennesker internettet på en eller anden måde, både på arbejdet og hjemme i privaten. Nogle gange er det en almindelig pc, der bliver brugt, men det kan lige så godt være en smartphone, en tablet eller et ur.",
+    1,
+    "For mange unge mennesker er en verden uden internet faktisk helt utænkelig. Det har derfor aldrig været vigtigere at bekymre sig om datasikkerhed, end det er nu, og det gælder både for privatpersoner og virksomheder. På nettet er der hackere fra hele verden, der er parate til at misbruge alle tænkelige slags oplysninger, hvis de kan: cpr-numre, MitID, oplysninger om konti og betalingskort, firmahemmeligheder m.m. For mange af disse it-kriminelle er svindel blevet en levevej. De laver ikke andet, og de er gode til det, de gør. Men hvem har egentlig det primære ansvar for at opretholde en høj datasikkerhed? Er det forbrugerne, staten eller internetudbyderne? Nogle mener, det er internetudbyderne, fordi det er dem, der tjener penge på at levere adgang til nettet. Men den løsning er problematisk.",
+    2,
+    "Desuden er det ikke alle, der har brug for den samme sikkerhedsstandard. Forskellige aktører på nettet har forskellige behov. Store multinationale virksomheder har nogle helt andre behov for beskyttelse end den almindelige borger. Hvis ikke borgere og virksomheder selv får lov til at vælge de sikkerhedsløsninger, der passer dem eller deres virksomhed bedst, men i stedet tvinges til at bruge en fælles standardløsning, så vil nogle brugere selvfølgelig få en beskyttelse, der er bedre end den, de har i dag.",
+    3,
+    "Uklarheden om ansvaret betyder imidlertid ikke, at udbyderne kan fralægge sig ethvert ansvar. De bør være med til at sikre, at borgerne kender til risikoen ved at færdes på nettet og bliver bedre til at beskytte sig mod it-kriminalitet. Man kunne få brugerne til at fokusere endnu mere på at passe på deres data, end man gør nu. Man kunne også informere mere om mistænkelige mails og lignende, der nogle gange er i omløb. Som almindelig internetbruger er der altså meget, man selv kan gøre for at undgå at blive offer for it-kriminalitet.",
+    4,
+    "Dels er det en god idé at bruge både tegn, tal og bogstaver, så de forskellige kombinationer er så uforudsigelige som muligt. Dels er det en god idé at bruge forskellige adgangskoder til forskellige tjenester, så hackere ikke pludselig får adgang til alle ens data og tjenester. Desuden bør man beskytte sig med et godt antivirusprogram, både på sin computer og på alle sine andre digitale enheder. Det er dog lettere sagt end gjort. Der er nemlig mange useriøse leverandører af antivirusprogrammer på markedet, som er mere optaget af profit end af datasikkerhed. Et godt antivirusprogram skal ikke bare indeholde antivirussoftware. Det skal fx også indeholde et spamfilter, der kan sortere uønskede mails fra. Det skal også indeholde en firewall, der kan kontrollere adgangen til computeren udefra. Det kan alt sammen være svært at overskue, hvis man ikke er særlig it-interesseret. Man kan dog tjekke kvaliteten hos uafhængige testvirksomheder, hvor man kan læse gratis analyser og anmeldelser af blandt andet de antivirusprogrammer, man kan finde på nettet. Endelig er det også vigtigt altid at holde sine enheder opdaterede, gerne automatisk.",
+    5,
+    "De fejl kan softwarefirmaet løbende rette gennem opdateringer. Der er således professionelle udviklere, der hele tiden arbejder på at forhindre uønsket adgang til brugernes enheder. Hvis man tillader automatiske opdateringer, så har man i det mindste gjort det sværere for it-kriminelle at gøre skade."
+   ],
+   "pieces": {
+    "A": "Hackere og skadelige programmer udnytter nemlig fejl i kodningen i både programmer, apps og styresystemer.",
+    "B": "Forskellige enheder skal have forskellige passwords. Til gengæld behøver de ikke være så komplekse, som mange tror.",
+    "C": "Konsekvensen vil nemlig være, at alle borgere og virksomheder får overvåget deres adfærd på nettet af en privat virksomhed. Det er noget, de færreste ønsker sig.",
+    "D": "En opdatering kan vise sig at indeholde skadelige filer, så derfor er det vigtigt at være forsigtig. Man skal ikke godkende hvad som helst.",
+    "E": "Man tjekker mail, køber ind, bestiller en ferie eller leder efter et nyt job – efterhånden bruger man internettet til alting.",
+    "F": "Men mange vil få en mere avanceret løsning, end de reelt har brug for. Prisen på internetproduktet vil på den måde blive meget højere, end den behøver at være, og det er der ingen, der er interesserede i.",
+    "G": "De fleste er efterhånden opmærksomme på, at de er nødt til at beskytte sig med adgangskoder, der er svære at gætte sig til."
+   },
+   "key": {
+    "1": "E",
+    "2": "C",
+    "3": "F",
+    "4": "G",
+    "5": "A"
+   },
+   "gapwhy": {
+    "1": {
+     "trap": null,
+     "da": "• Før: hvilke apparater vi bruger. E: hvad vi bruger dem til.\n• «til alting» → næste sætning: en verden «uden internet».",
+     "en": "• Before: which devices we use. E: what we use them for.\n• «til alting» → next sentence: a world «uden internet»."
+    },
+    "2": {
+     "trap": null,
+     "da": "• «Konsekvensen … nemlig» forklarer, hvorfor løsningen er «problematisk».\n• Næste sætning: «Desuden» = problem nummer to.",
+     "en": "• «Konsekvensen … nemlig» explains why the solution is «problematisk».\n• Next sentence: «Desuden» = problem number two."
+    },
+    "3": {
+     "trap": null,
+     "da": "• «nogle brugere» får det bedre ↔ «Men mange» betaler for meget.",
+     "en": "• «nogle brugere» are better off ↔ «Men mange» pay too much."
+    },
+    "4": {
+     "trap": null,
+     "da": "• «meget, man selv kan gøre» → det første: adgangskoder.\n• Næste sætning: «Dels … tegn, tal og bogstaver» = gode adgangskoder.",
+     "en": "• «meget, man selv kan gøre» → the first thing: passwords.\n• Next sentence: «Dels … tegn, tal og bogstaver» = good passwords."
+    },
+    "5": {
+     "trap": null,
+     "da": "• «nemlig» forklarer, hvorfor man skal opdatere.\n• Næste sætning: «De fejl» = «fejl i kodningen».",
+     "en": "• «nemlig» explains why you should update.\n• Next sentence: «De fejl» = «fejl i kodningen»."
+    }
+   },
+   "extra": {
+    "B": {
+     "trap": "samme",
+     "da": "• Handler om passwords ligesom hul 4, men «Til gengæld behøver de ikke være så komplekse» modsiger næste sætning, som siger, at koder skal være svære.",
+     "en": "• About passwords like gap 4, but «Til gengæld behøver de ikke være så komplekse» contradicts the next sentence, which says codes must be hard."
+    },
+    "D": {
+     "trap": "logik",
+     "da": "• Advarer mod opdateringer. Teksten siger lige det modsatte: hold dine enheder opdaterede, gerne automatisk.\n• «De fejl» efter hul 5 har heller intet at pege på i D.",
+     "en": "• It warns against updates. The text says the opposite: keep devices updated, ideally automatically.\n• «De fejl» after gap 5 also has nothing to point to in D."
+    }
+   }
+  },
+  {
+   "id": "s-2024s",
+   "kind": "full",
+   "title": "En fire-dages arbejdsuge?",
+   "src": "2024s · 2B",
+   "ai": false,
+   "hold": false,
+   "parts": [
+    "Siden fagforeningernes opkomst i slutningen af det 19. århundrede har man diskuteret lønmodtagernes arbejdstid. Men siden 1990 er arbejdstiden i Danmark faktisk ikke blevet reguleret. I mere end 30 år har arbejdstiden for de fleste fuldtidsansatte været 37 timer, og de fleste har arbejdet fem dage om ugen. Men måske kan man organisere arbejdslivet anderledes. Efterhånden er der en del virksomheder, der finder på andre måder at tilrettelægge en arbejdsuge på. Fælles for dem alle er, at de gerne vil gøre arbejdsugen mere fleksibel for de ansatte. Dels for lettere at kunne fastholde dem, der allerede er ansat, dels for lettere at kunne rekruttere nye, efterspurgte kræfter.",
+    1,
+    "Det er derfor en stor opgave for en virksomhed at organisere arbejdslivet mere fleksibelt, så der bliver taget hensyn til alle. Af nye måder at organisere arbejdslivet på er det særligt den fire-dages arbejdsuge, der har tiltrukket sig opmærksomhed i de senere år. Med den fire-dages arbejdsuge er der tale om en nytænkning af, hvordan hverdags- og arbejdslivet kan hænge sammen. Det er et brud med idéen om, at arbejdsugen går fra mandag til fredag. Der er stadig ikke så mange virksomheder, der tilbyder ordningen, men der bliver flere og flere. Og det er der måske god grund til.",
+    2,
+    "Ifølge fagforeningen HK kan netop en fire-dages arbejdsuge være et godt værktøj til at løse nogle af disse problemer. Når arbejdsugen og weekenden er næsten lige lange, kan man nå at komme ned i gear og få tankerne et helt andet sted hen, når man har fri. Og man har også typisk mere overskud til at arbejde koncentreret, når man er på arbejde. Det er bare ikke helt entydigt, hvad en fire-dages arbejdsuge egentlig er. I nogle virksomheder betyder det, at man arbejder 37 timer på fire dage. I andre betyder det, at man også arbejder færre timer om ugen.",
+    3,
+    "Der er også virksomheder, der blot tilbyder deres medarbejdere en fire-dages arbejdsuge på nedsat tid og løn. Det er der nemlig også flere og flere, der ønsker. De ønsker, at arbejdet fylder mindre i tilværelsen. Det giver dem en bedre balance mellem arbejde og fritid, hvor der er mere tid til familien og hobbyer. Der er dog stadig en vis modstand blandt visse arbejdsgivere mod en fire-dages arbejdsuge.",
+    4,
+    "Der er konkurrence om de kvalificerede medarbejdere, og undersøgelser viser, at medarbejderne bliver mere loyale over for virksomheden, hvis de ikke skal arbejde så mange timer. Undersøgelser viser også, at det kan blive lettere at rekruttere nye medarbejdere. En fire-dages arbejdsuge kan altså være en fordel i konkurrencen om medarbejdere. Det gælder ikke mindst inden for de områder, hvor der er mangel på arbejdskraft. Interessen for den fire-dages arbejdsuge tyder på, at flere virksomheder kommer til at tilbyde deres medarbejdere denne løsning. Men det er måske ikke kun virksomhedernes organisering af arbejdsugen, der kommer til at forandre sig.",
+    5,
+    "Det er samfundet ikke klar til endnu. På mange af de virksomheder, der har fire-dages arbejdsuge, er det derfor ikke alle medarbejderne, der kan have fri om fredagen."
+   ],
+   "pieces": {
+    "A": "I Danmark er der nemlig hver dag 35.000 sygemeldinger som følge af stress. Dertil kommer selvfølgelig andre sygemeldinger og andet fravær på grund af almindelig nedslidning.",
+    "B": "Det forventes nemlig som nævnt, at nye medarbejdere ikke arbejder hjemme, men altid møder ind på arbejdspladsen.",
+    "C": "Der er dog udfordringer ved individuelt tilpassede arbejdsforhold, da medarbejdere har forskellige behov. Nogle trives for eksempel bedst med at arbejde på kontoret, andre hjemme. Nogle foretrækker at arbejde tidligt, andre sent.",
+    "D": "Måske fordi det umiddelbart kan virke ulogisk at nedsætte arbejdstiden i en tid, hvor der er mangel på arbejdskraft. Men det er det ikke nødvendigvis.",
+    "E": "Den daglige drift er derfor ledernes ansvar, men det er stadig medarbejderne, der udfører opgaverne. Og tilfredse medarbejdere genererer mere værdi i virksomheden.",
+    "F": "I nogle virksomheder er man lykkedes med at lære nye og mere effektive arbejdsrutiner. Man udfører det samme arbejde på kortere tid, og lønnen er forblevet den samme.",
+    "G": "Når flere virksomheder indfører en fire-dages arbejdsuge, skal kunder og borgere også vænne sig til, at man ikke kan komme i kontakt med en medarbejder fem dage om ugen."
+   },
+   "key": {
+    "1": "C",
+    "2": "A",
+    "3": "F",
+    "4": "D",
+    "5": "G"
+   },
+   "gapwhy": {
+    "1": {
+     "trap": null,
+     "da": "• «dog» vender: fleksibilitet er godt, men folk har forskellige behov.\n• Næste sætning: «derfor en stor opgave … hensyn til alle».",
+     "en": "• «dog» turns it: flexibility is good, but people have different needs.\n• Next sentence: «derfor en stor opgave … hensyn til alle»."
+    },
+    "2": {
+     "trap": null,
+     "da": "• «god grund til» → «nemlig» giver grunden: stress.\n• Næste sætning: «disse problemer» = sygemeldingerne.",
+     "en": "• «god grund til» → «nemlig» gives the reason: stress.\n• Next sentence: «disse problemer» = the sick leave."
+    },
+    "3": {
+     "trap": null,
+     "da": "• «I nogle … I andre» → F forklarer, hvordan man arbejder færre timer med samme løn.\n• Næste sætning: «også … nedsat tid og løn» = den anden type.",
+     "en": "• «I nogle … I andre» → F explains how people work fewer hours for the same pay.\n• Next sentence: «også … nedsat tid og løn» = the other type."
+    },
+    "4": {
+     "trap": null,
+     "da": "• «Måske fordi» forklarer arbejdsgivernes «modstand».\n• «Men det er det ikke nødvendigvis» → næste sætning: konkurrence om medarbejdere.",
+     "en": "• «Måske fordi» explains the employers' «modstand».\n• «Men det er det ikke nødvendigvis» → next sentence: competition for staff."
+    },
+    "5": {
+     "trap": null,
+     "da": "• «ikke kun virksomhederne» → «også» kunder og borgere.\n• Næste sætning: «Det er samfundet ikke klar til».",
+     "en": "• «ikke kun virksomhederne» → customers and citizens «også».\n• Next sentence: «Det er samfundet ikke klar til»."
+    }
+   },
+   "extra": {
+    "B": {
+     "trap": "peger",
+     "da": "• «som nævnt» peger på noget, teksten allerede har sagt. Teksten siger intet om nye medarbejdere og hjemmearbejde.",
+     "en": "• «som nævnt» points to something the text already said. It says nothing about new staff and working from home."
+    },
+    "E": {
+     "trap": "logik",
+     "da": "• «derfor» kræver en årsag om ledere og drift. Teksten nævner ingen ledere nogen steder.",
+     "en": "• «derfor» needs a cause about managers and operations. The text mentions no managers anywhere."
+    }
+   }
+  },
+  {
+   "id": "s-2022v",
+   "kind": "full",
+   "title": "Iværksætteri",
+   "src": "2022v · 2B",
+   "ai": false,
+   "hold": true,
+   "parts": [
+    "Der er lønmodtagere, der foretrækker et almindeligt arbejde fra ni til fem og med fast løn en gang om måneden. Og så er der dem, der gerne vil starte deres egen virksomhed. Frem for at arbejde 37 timer om ugen for en arbejdsgiver et sted, hvor man måske ikke har særlig meget indflydelse eller selvbestemmelse, vil de gerne være iværksættere.",
+    1,
+    "Indtil virksomheden kører så godt, at man kan ansætte nogle medarbejdere, må man selv stå for det hele. Der er produkter, der skal udvikles, og produkterne skal præsenteres for et marked. Der skal laves regnskab, så man har helt styr på indtægter og udgifter. Og der er kun en selv til at besvare telefonopkald og e-mails. Derfor er det nok de færreste iværksættere, der kan nøjes med at arbejde 37 timer om ugen. Og hvor en almindelig lønmodtager har ret til mindst fem ugers ferie om året, der må en iværksætter selv spare op og sætte tid af. Hvis det overhovedet er muligt.",
+    2,
+    "Der er ikke nogen, der definerer ens arbejdsopgaver, og der er ikke nogen, der bestemmer, hvor og hvornår man arbejder. Desuden får man rig mulighed for at være kreativ. Det produkt, man sælger, kan man udforme fuldstændig, som man vil. Man behøver ikke at gå på kompromis med noget. Endelig får man mulighed for at beskæftige sig med lige præcis det, man har lyst til. For mange iværksættere er det svært at skelne mellem arbejde og fritid, fordi de arbejder med netop det, de interesserer sig for. Det er et privilegium, som ikke alle lønmodtagere har. Og iværksætterne er vigtigere, end man lige skulle tro. Nogle mennesker tror, at det er firmaer som fx Mærsk og Novo Nordisk, der er de absolut vigtigste i dansk erhvervsliv, dels fordi de beskæftiger mange mennesker, dels fordi de bidrager med mange penge til statskassen.",
+    3,
+    "Der er ikke nogen tvivl om, at de udgør en meget vigtig del af dansk økonomi. De er med til at skabe vækst, og de hjælper med at finansiere det dyre danske velfærdssamfund, som langt de fleste danskere gerne vil beholde. Derfor er det en god idé at være mere opmærksom på de unge iværksættere. Det mener i hvert fald Dansk Erhverv. Dansk Erhverv er en magtfuld interesseorganisation, der på forskellige måder arbejder for at gøre det lettere at drive virksomhed i Danmark.",
+    4,
+    "I rapporten Verdens Bedste Iværksætterland fra 2021 giver de en lang række gode råd om, hvad der skal til for at gøre det lettere at drive virksomhed i Danmark. Fælles for alle disse råd er, at de er meget konkrete. Fx anbefaler de, at børn og unge undervises i iværksætteri i skolen. De fleste har en idé om, hvordan det er at være lønmodtager, når de forlader skolen. Desværre er der ikke lige så mange, der ved, hvordan man bliver selvstændig og får sin egen forretning op at køre. Det er på mange måder noget helt andet. Der har bare ikke været samme tradition for at undervise i det. Et andet råd handler om, hvordan en ny iværksætter kan rejse penge til at starte sin egen virksomhed. I dag er det sådan, at bankerne er tvunget til at stille en masse krav til en iværksætter, før de vil låne vedkommende penge. Man skal blandt andet kunne fremvise regnskaber for flere år og dokumentere, at man kan tjene penge. Desuden skal man stille økonomisk sikkerhed, fx med en ejerbolig. De krav er der mange iværksættere, der ikke kan leve op til. Og kan de ikke det, så kan de ikke låne penge. Dansk Erhverv mener, at bankerne skal have lov til at løbe en større risiko, hvis de har stor tillid til en ny iværksætter. Men det er desværre ikke tilladt, sådan som lovgivningen ser ud i dag. Et tredje råd handler om, hvordan man kan skaffe flere kunder til nye virksomheder. Uden kunder, ingen virksomhed. Dansk Erhverv foreslår, at den offentlige sektor skal handle mere hos de små og mellemstore virksomheder. Og det vil helt sikkert skaffe flere kunder til de unge, håbefulde iværksættere.",
+    5,
+    ""
+   ],
+   "pieces": {
+    "A": "Det er ganske enkelt svært at finde kvalificeret arbejdskraft. 25 % af de adspurgte har svaret, at det er den primære årsag til, at virksomheden ikke er vokset mere, end den er.",
+    "B": "Men det, der kunne lyde som en masse ulemper, er der imidlertid andre, der ser positivt på. For det, at man er alene om sin virksomhed, betyder også, at man er sin egen chef.",
+    "C": "Faktisk mener de, at både staten, regionerne og kommunerne i 2025 skal lægge 60 % af alle deres indkøb i små og mellemstore virksomheder. Det er væsentlig mere end i dag.",
+    "D": "Enkelte har nok urealistiske drømme om hurtig succes og hurtige penge, men de fleste ved godt, at det at starte sit eget først og fremmest er hårdt arbejde.",
+    "E": "Er der penge nok på kontoen? Er der en, der kan tage over, hvis den enkelte iværksætter er på ferie eller er sygemeldt? Der er nok at overveje, før man går i gang.",
+    "F": "Det betyder blandt andet, at de forsøger at påvirke politikerne, så den lovgivning, der bliver vedtaget, er en fordel for det private erhvervsliv.",
+    "G": "Man må dog ikke overse de små og mellemstore virksomheder. De har samlet set over 800.000 fuld- tidsansatte, hvilket svarer til næsten 40 % af alle fuldtidsansatte i Danmark."
+   },
+   "key": {
+    "1": "D",
+    "2": "B",
+    "3": "G",
+    "4": "F",
+    "5": "C"
+   },
+   "gapwhy": {
+    "1": {
+     "trap": null,
+     "da": "• Før: de vil være iværksættere. D: de fleste ved, det er «hårdt arbejde».\n• Næste sætning forklarer det hårde arbejde: man må «selv stå for det hele».",
+     "en": "• Before: they want to be entrepreneurs. D: most know it is «hårdt arbejde».\n• The next sentence explains the hard work: you must «selv stå for det hele»."
+    },
+    "2": {
+     "trap": null,
+     "da": "• Før: lange dage, ingen ferie. B: «Men … andre … ser positivt på» det, og man er «sin egen chef».\n• Næste sætning: «ikke nogen, der definerer ens arbejdsopgaver» = at være sin egen chef.",
+     "en": "• Before: long days, no holidays. B: «Men … andre … ser positivt på» it, and you are «sin egen chef».\n• Next sentence: «ikke nogen, der definerer ens arbejdsopgaver» = being your own boss."
+    },
+    "3": {
+     "trap": null,
+     "da": "• Før: nogle tror, at store firmaer er vigtigst. G: «Man må dog ikke overse» de små: næsten 40 %.\n• Næste sætning: «de udgør en meget vigtig del» = de små virksomheder.",
+     "en": "• Before: some think big firms matter most. G: «Man må dog ikke overse» the small ones: almost 40 %.\n• Next sentence: «de udgør en meget vigtig del» = the small companies."
+    },
+    "4": {
+     "trap": null,
+     "da": "• Før: Dansk Erhverv er en interesseorganisation. F: «Det betyder blandt andet», at de påvirker politikerne.\n• Næste sætning: «I rapporten … giver de» = Dansk Erhverv.",
+     "en": "• Before: Dansk Erhverv is a lobby group. F: «Det betyder blandt andet» they influence politicians.\n• Next sentence: «I rapporten … giver de» = Dansk Erhverv."
+    },
+    "5": {
+     "trap": null,
+     "da": "• Før: den offentlige sektor skal handle mere hos små virksomheder. C: «Faktisk» 60 % af statens, regionernes og kommunernes indkøb.\n• Staten, regionerne og kommunerne = den offentlige sektor.",
+     "en": "• Before: the public sector should buy more from small firms. C: «Faktisk» 60 % of state, regional and municipal purchases.\n• State, regions and municipalities = the public sector."
+    }
+   },
+   "extra": {
+    "A": {
+     "trap": "samme",
+     "da": "• Har tal og virksomheder ligesom G og C, men handler om at mangle arbejdskraft. Det taler teksten ikke om.",
+     "en": "• Has figures and companies like G and C, but it is about a lack of staff. The text does not discuss that."
+    },
+    "E": {
+     "trap": "nabo",
+     "da": "• Handler om ferie og at være syg ligesom hul 1–2. Men næste sætning efter hul 1 («selv stå for det hele») og efter hul 2 («ikke nogen, der definerer») passer ikke til spørgsmål om penge.",
+     "en": "• About holidays and illness like gaps 1–2. But the sentences after gap 1 («selv stå for det hele») and gap 2 («ikke nogen, der definerer») do not follow questions about money."
+    }
+   }
+  },
+  {
+   "id": "s-m01",
+   "kind": "mini",
+   "title": "Gå en tur i frokostpausen",
+   "src": "AI",
+   "ai": true,
+   "hold": false,
+   "parts": [
+    "Mange danskere vil gerne motionere mere, men de har svært ved at finde tiden.",
+    1,
+    "Turen tager kun et kvarter, og man behøver ikke at skifte tøj.",
+    2,
+    "Men turen er ikke kun god for kroppen.",
+    3,
+    "Derfor giver flere arbejdspladser nu de ansatte en lidt længere frokostpause."
+   ],
+   "pieces": {
+    "A": "En løsning kan være en kort gåtur i frokostpausen.",
+    "B": "Mange spiser derfor deres frokost foran computeren.",
+    "C": "Mange fortæller også, at de bliver mere koncentrerede om eftermiddagen.",
+    "D": "Alligevel gør den en stor forskel for kroppen.",
+    "E": "Til gengæld kan man ikke nå særlig langt på et kvarter."
+   },
+   "key": {
+    "1": "A",
+    "2": "D",
+    "3": "C"
+   },
+   "gapwhy": {
+    "1": {
+     "trap": null,
+     "da": "• Før: svært at finde tid. A giver en løsning.\n• Næste sætning: «Turen» (bestemt form) peger på «en kort gåtur» i A.",
+     "en": "• Before: hard to find time. A gives a solution.\n• Next sentence: «Turen» (definite) points to «en kort gåtur» in A."
+    },
+    "2": {
+     "trap": null,
+     "da": "• Før: kun et kvarter. «Alligevel» = selv om den er kort.\n• Næste sætning: «ikke kun god for kroppen» bygger på «forskel for kroppen».",
+     "en": "• Before: only fifteen minutes. «Alligevel» = even though it is short.\n• Next sentence: «ikke kun god for kroppen» builds on «forskel for kroppen»."
+    },
+    "3": {
+     "trap": null,
+     "da": "• «ikke kun god for kroppen» → C: «også» mere koncentrerede.\n• Næste sætning: «Derfor» længere pause, fordi de ansatte arbejder bedre.",
+     "en": "• «ikke kun god for kroppen» → C: «også» better focus.\n• Next sentence: «Derfor» a longer break, because staff work better."
+    }
+   },
+   "extra": {
+    "B": {
+     "trap": "samme",
+     "da": "• Har ordet «frokost», men handler om at spise ved computeren. Ingen sætning i teksten bygger på det.",
+     "en": "• Has «frokost», but is about eating at the computer. No sentence in the text builds on it."
+    },
+    "E": {
+     "trap": "logik",
+     "da": "• «Til gengæld» giver en ulempe. Men næste sætning efter hul 2 («ikke kun god for kroppen») kræver noget godt for kroppen lige før.",
+     "en": "• «Til gengæld» gives a downside. But the sentence after gap 2 («ikke kun god for kroppen») needs something good for the body just before."
+    }
+   }
+  },
+  {
+   "id": "s-m02",
+   "kind": "mini",
+   "title": "Biblioteket",
+   "src": "AI",
+   "ai": true,
+   "hold": false,
+   "parts": [
+    "Mange tror, at biblioteket kun er et sted, hvor man låner bøger.",
+    1,
+    "Det hele er gratis, når man har et lånerkort.",
+    2,
+    "Mange biblioteker holder desuden åbent om aftenen, også når der ikke er personale.",
+    3,
+    "Biblioteket er altså meget mere end bøger."
+   ],
+   "pieces": {
+    "A": "Så kan man komme og læse i ro, selv om man har travlt om dagen.",
+    "B": "Den skal man huske at aflevere til tiden.",
+    "C": "Men i dag kan man også låne film, spil og e-bøger.",
+    "D": "Derfor betaler man i dag for at låne bøger.",
+    "E": "Kortet får man ved skranken, hvis man viser sit sundhedskort."
+   },
+   "key": {
+    "1": "C",
+    "2": "E",
+    "3": "A"
+   },
+   "gapwhy": {
+    "1": {
+     "trap": null,
+     "da": "• «Mange tror … kun bøger» → «Men i dag … også» film og spil.\n• Næste sætning: «Det hele» = bøger, film, spil og e-bøger.",
+     "en": "• «Mange tror … kun bøger» → «Men i dag … også» films and games.\n• Next sentence: «Det hele» = books, films, games and e-books."
+    },
+    "2": {
+     "trap": null,
+     "da": "• «Kortet» (bestemt form) = lånerkortet fra sætningen før.",
+     "en": "• «Kortet» (definite) = the library card from the sentence before."
+    },
+    "3": {
+     "trap": null,
+     "da": "• Før: åbent om aftenen. A: «Så» kan man komme, selv om man har travlt om dagen.\n• Næste sætning: «altså» opsummerer: mere end bøger.",
+     "en": "• Before: open in the evening. A: «Så» you can come even if busy in the day.\n• Next sentence: «altså» sums up: more than books."
+    }
+   },
+   "extra": {
+    "B": {
+     "trap": "peger",
+     "da": "• «Den» skal pege på et en-ord lige før. Før hullerne står «bøger» (flertal), «et lånerkort» og «personale». Ingen af dem passer.",
+     "en": "• «Den» must point to an en-word just before. Before the gaps there are «bøger» (plural), «et lånerkort» and «personale». None fits."
+    },
+    "D": {
+     "trap": "logik",
+     "da": "• «Derfor betaler man» modsiger «Det hele er gratis». Og der er ingen årsag til at betale.",
+     "en": "• «Derfor betaler man» contradicts «Det hele er gratis». And there is no cause for paying."
+    }
+   }
+  },
+  {
+   "id": "s-m03",
+   "kind": "mini",
+   "title": "Brugt tøj",
+   "src": "AI",
+   "ai": true,
+   "hold": false,
+   "parts": [
+    "Flere og flere danskere køber brugt tøj.",
+    1,
+    "Men prisen er ikke den eneste grund.",
+    2,
+    "Brugt tøj kan man købe i genbrugsbutikker eller på nettet.",
+    3,
+    "Så får man lidt penge tilbage, og tøjet får et nyt liv."
+   ],
+   "pieces": {
+    "A": "Så får man også mere plads i skabet.",
+    "B": "På nettet kan man desuden selv sælge det tøj, man ikke bruger mere.",
+    "C": "Mange smider derfor deres gamle tøj ud.",
+    "D": "Det er ofte meget billigere end nyt tøj.",
+    "E": "Mange vil også gerne passe på miljøet, fordi det bruger meget vand at lave nyt tøj."
+   },
+   "key": {
+    "1": "D",
+    "2": "E",
+    "3": "B"
+   },
+   "gapwhy": {
+    "1": {
+     "trap": null,
+     "da": "• «Det» = at købe brugt tøj: billigere.\n• Næste sætning: «prisen er ikke den eneste grund» peger på «billigere».",
+     "en": "• «Det» = buying second-hand: cheaper.\n• Next sentence: «prisen er ikke den eneste grund» points to «billigere»."
+    },
+    "2": {
+     "trap": null,
+     "da": "• «ikke den eneste grund» → E: grund nummer to, «også» miljøet.",
+     "en": "• «ikke den eneste grund» → E: reason number two, «også» the environment."
+    },
+    "3": {
+     "trap": null,
+     "da": "• «på nettet» → B: «På nettet» kan man også sælge.\n• Næste sætning: «Så får man lidt penge tilbage» = når man sælger.",
+     "en": "• «på nettet» → B: «På nettet» you can also sell.\n• Next sentence: «Så får man lidt penge tilbage» = when you sell."
+    }
+   },
+   "extra": {
+    "A": {
+     "trap": "nabo",
+     "da": "• «Så får man også mere plads i skabet» kræver, at man har solgt sit tøj lige før.\n• I teksten kommer salget først i hul 3, og efter det står der allerede en «Så»-sætning.",
+     "en": "• «Så får man også mere plads i skabet» needs you to have sold your clothes just before.\n• In the text the selling only comes in gap 3, and a «Så» sentence already follows it."
+    },
+    "C": {
+     "trap": "logik",
+     "da": "• «derfor smider de tøjet ud» er det modsatte af genbrug. Intet i teksten er en grund til det.",
+     "en": "• «derfor smider de tøjet ud» is the opposite of reuse. Nothing in the text is a reason for it."
+    }
+   }
+  },
+  {
+   "id": "s-m04",
+   "kind": "mini",
+   "title": "Søvn",
+   "src": "AI",
+   "ai": true,
+   "hold": false,
+   "parts": [
+    "Mange voksne sover for lidt om natten.",
+    1,
+    "En af årsagerne er mobilen.",
+    2,
+    "Derfor råder eksperter til at lægge mobilen væk en time før sengetid.",
+    3,
+    "Så vænner kroppen sig til en fast rytme."
+   ],
+   "pieces": {
+    "A": "Lyset fra skærmen holder nemlig hjernen vågen.",
+    "B": "Men mobilen er god til at vække én om morgenen.",
+    "C": "Det hjælper også at gå i seng på samme tid hver aften.",
+    "D": "Mange voksne køber derfor en ny og dyr seng.",
+    "E": "Det gør dem trætte og dårlige til at koncentrere sig."
+   },
+   "key": {
+    "1": "E",
+    "2": "A",
+    "3": "C"
+   },
+   "gapwhy": {
+    "1": {
+     "trap": null,
+     "da": "• «Det» = at sove for lidt. «dem» = de voksne.\n• Næste sætning: «En af årsagerne» peger tilbage på problemet.",
+     "en": "• «Det» = sleeping too little. «dem» = the adults.\n• Next sentence: «En af årsagerne» points back to the problem."
+    },
+    "2": {
+     "trap": null,
+     "da": "• «nemlig» forklarer, hvorfor mobilen er en årsag.\n• Næste sætning: «Derfor» lægger man den væk.",
+     "en": "• «nemlig» explains why the phone is a cause.\n• Next sentence: «Derfor» you put it away."
+    },
+    "3": {
+     "trap": null,
+     "da": "• «også» = råd nummer to efter mobilen.\n• Næste sætning: «fast rytme» = samme tid hver aften.",
+     "en": "• «også» = tip number two after the phone.\n• Next sentence: «fast rytme» = the same time every evening."
+    }
+   },
+   "extra": {
+    "B": {
+     "trap": "logik",
+     "da": "• «Men» siger noget godt om mobilen. Så passer «Derfor … lægge mobilen væk» i næste sætning ikke.",
+     "en": "• «Men» says something good about the phone. Then «Derfor … lægge mobilen væk» in the next sentence doesn't fit."
+    },
+    "D": {
+     "trap": "samme",
+     "da": "• Har «Mange voksne» ligesom teksten, men en ny seng er ingen løsning, som teksten bygger videre på.",
+     "en": "• Has «Mange voksne» like the text, but a new bed is not a solution the text builds on."
+    }
+   }
+  },
+  {
+   "id": "s-m05",
+   "kind": "mini",
+   "title": "Haven",
+   "src": "AI",
+   "ai": true,
+   "hold": false,
+   "parts": [
+    "Mange danskere har en lille have, som de passer om sommeren.",
+    1,
+    "Nogle planter også grøntsager, fordi de vil vide, hvor maden kommer fra.",
+    2,
+    "Tit får de faktisk flere grøntsager, end de selv kan spise.",
+    3,
+    "Så bliver haven en del af fællesskabet i kvarteret."
+   ],
+   "pieces": {
+    "A": "De deler derfor overskuddet med naboerne, som ikke selv har en have.",
+    "B": "Det kræver tid, men mange synes, at det er et godt afbræk fra hverdagen.",
+    "C": "Mange danskere køber i dag planter i butikken, fordi de er billige.",
+    "D": "Det giver mere smag, og det er billigere end at købe i butikken.",
+    "E": "Men haven kan også blive for stor, så man må stoppe med at dyrke den."
+   },
+   "key": {
+    "1": "B",
+    "2": "D",
+    "3": "A"
+   },
+   "gapwhy": {
+    "1": {
+     "trap": null,
+     "da": "• «Det kræver tid» = at passe haven.\n• Næste sætning: «Nogle planter også» tilføjer noget nyt.",
+     "en": "• «Det kræver tid» = looking after the garden.\n• Next sentence: «Nogle planter også» adds something new."
+    },
+    "2": {
+     "trap": null,
+     "da": "• «Det giver mere smag» = egne grøntsager.\n• Næste sætning fortsætter med grøntsagerne: man får for mange.",
+     "en": "• «Det giver mere smag» = home-grown vegetables.\n• Next sentence continues with the vegetables: you get too many."
+    },
+    "3": {
+     "trap": null,
+     "da": "• «overskuddet» = de grøntsager, de ikke selv kan spise.\n• Næste sætning: «Så bliver haven en del af fællesskabet» = fordi de deler.",
+     "en": "• «overskuddet» = the vegetables they can't eat themselves.\n• Next sentence: «Så bliver haven en del af fællesskabet» = because they share."
+    }
+   },
+   "extra": {
+    "C": {
+     "trap": "samme",
+     "da": "• Har «Mange danskere» og «planter», men handler om at købe i butikken, ikke om haven.",
+     "en": "• Has «Mange danskere» and «planter», but is about buying in shops, not the garden."
+    },
+    "E": {
+     "trap": "logik",
+     "da": "• «Men … for stor» modsiger «en lille have». Og ingen sætning efter et hul bygger på at stoppe.",
+     "en": "• «Men … for stor» contradicts «en lille have». And no sentence after a gap builds on stopping."
+    }
+   }
+  },
+  {
+   "id": "s-m06",
+   "kind": "mini",
+   "title": "Ferie i Danmark",
+   "src": "AI",
+   "ai": true,
+   "hold": false,
+   "parts": [
+    "Mange danskere holder ferie i Danmark i stedet for at rejse til udlandet.",
+    1,
+    "Desuden er Danmark et lille land.",
+    2,
+    "Mange vælger at bo på hotel.",
+    3,
+    "Så er det godt at vide, at campingpladser ofte er billigere."
+   ],
+   "pieces": {
+    "A": "Til gengæld kan det være dyrt i sommerferien.",
+    "B": "Den har mange flotte strande og hyggelige små byer.",
+    "C": "Man kan derfor nå at se meget af landet på bare en uge.",
+    "D": "Derfor rejser flere og flere til Sydeuropa om sommeren.",
+    "E": "Det skyldes blandt andet, at man ikke skal bruge penge på flybilletter."
+   },
+   "key": {
+    "1": "E",
+    "2": "C",
+    "3": "A"
+   },
+   "gapwhy": {
+    "1": {
+     "trap": null,
+     "da": "• «Det skyldes» = grunden til at holde ferie i Danmark.\n• Næste sætning: «Desuden» giver grund nummer to.",
+     "en": "• «Det skyldes» = the reason for holidaying in Denmark.\n• Next sentence: «Desuden» gives reason number two."
+    },
+    "2": {
+     "trap": null,
+     "da": "• «et lille land» → «derfor» kan man se meget på en uge.",
+     "en": "• «et lille land» → «derfor» you can see a lot in a week."
+    },
+    "3": {
+     "trap": null,
+     "da": "• «Til gengæld» vender: hotellet er rart, men dyrt.\n• Næste sætning: campingpladser er «billigere» end det dyre hotel.",
+     "en": "• «Til gengæld» turns it: the hotel is nice, but expensive.\n• Next sentence: campsites are «billigere» than the expensive hotel."
+    }
+   },
+   "extra": {
+    "B": {
+     "trap": "peger",
+     "da": "• «Den» skal pege på et en-ord. «Danmark» og «et lille land» er et-ord, så det skulle hedde «Det».",
+     "en": "• «Den» must point to an en-word. «Danmark» and «et lille land» are et-words, so it would have to be «Det»."
+    },
+    "D": {
+     "trap": "logik",
+     "da": "• «Derfor rejser … til Sydeuropa» modsiger den første sætning: de holder ferie i Danmark.",
+     "en": "• «Derfor rejser … til Sydeuropa» contradicts the first sentence: they holiday in Denmark."
+    }
+   }
+  }
+ ]
+}

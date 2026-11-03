@@ -177,6 +177,53 @@ ok("sort 375px no horizontal scroll",await ev(`(()=>{ soStart("logic"); return [
 await send("Emulation.setDeviceMetricsOverride", { width: 1000, height: 1400, deviceScaleFactor: 1, mobile: false }); await sleep(200);
 await ev(`home()`);
 
+// Læsning 2B · Indsæt tekststykket: home, data, level 1 (piece, reason, feedback, misses), level 2 (hooks),
+// level 3 (letters, the review and the extras), the phone width, and screenshots of the states the plan asks for
+const shot = async name => writeFileSync(`${out}/${name}`, Buffer.from((await send("Page.captureScreenshot")).result.data, "base64"));
+ok("l2b home", await ev(`(()=>{ localStorage.clear(); l2bHome(); return [document.querySelectorAll(".lbcard").length, document.querySelectorAll(".lbtrow").length, !!$("#lbheld"), document.querySelectorAll("[data-lv]").length]; })()`));
+await shot("l2b-home.png");
+ok("l2b data", await ev(`(()=>{ const D=DB.l2b, bad=[];
+  for (const g of D.gaps) { if (g.traps.length!==2 || g.traps[0].trap===g.traps[1].trap) bad.push("traps "+g.id); if (g.reasons.length!==3) bad.push("reasons "+g.id); if (g.src.startsWith("2022v")) bad.push("2022v gap "+g.id); }
+  for (const h of D.hooks) if (h.src.startsWith("2022v")) bad.push("2022v hook "+h.id);
+  for (const s of D.sets) { const letters=Object.values(s.key), uniq=new Set(letters).size===letters.length; const extras=Object.keys(s.pieces).filter(l=>!letters.includes(l)).sort().join(""); if(!uniq||extras!==Object.keys(s.extra).sort().join("")) bad.push("set "+s.id); if (s.src.startsWith("2022v")!==!!s.hold) bad.push("hold "+s.id); }
+  return [D.gaps.length, D.gaps.filter(g=>!g.ai).length, D.hooks.length, D.hooks.filter(h=>!h.ai).length, D.sets.length, D.sets.filter(s=>s.hold).map(s=>s.id), "bad", bad]; })()`));
+ok("l2b level 1", await ev(`(()=>{ localStorage.clear(); lbStart(1); const it=LB.queue[0];
+  const b0=[...document.querySelectorAll(".lbopt")].map(b=>b.textContent).join("|"); lbRender(); const orderKept=b0===[...document.querySelectorAll(".lbopt")].map(b=>b.textContent).join("|");
+  const w=it.opts.findIndex(o=>!o.ok); document.querySelector('[data-pk="'+w+'"]').click(); document.querySelector('[data-rs="0"]').click();
+  const fb=!!document.querySelector(".lbfb"), pills=[...document.querySelectorAll(".lbfbt .lbpill")].map(x=>x.textContent), hl=document.querySelectorAll(".lbfull mark.hl").length;
+  const miss=(JSON.parse(localStorage.getItem("pd3-assisted-learning:l2b:v1")||"{}").miss||[]).includes(it.id);
+  return [orderKept, fb, pills.length>=1, hl>=1, miss, LB.phase]; })()`));
+await shot("l2b-level1-feedback.png");
+ok("l2b level 2", await ev(`(()=>{ localStorage.clear(); lbStart(2); const it=LB.queue[0];
+  it.hooks.forEach(i=>document.querySelector('[data-tap="'+i+'"]').click()); document.querySelector("#lbcheck").click();
+  const right=LB.res.at(-1).ok, shownRight=!!document.querySelector(".lbfb.ok");
+  lbStart(2); const it2=LB.queue[0], wrong=it2.tokens.findIndex((x,i)=>x.trim() && !it2.hooks.includes(i));
+  document.querySelector('[data-tap="'+wrong+'"]').click(); document.querySelector("#lbcheck").click();
+  return [right, shownRight, LB.res.at(-1).ok, document.querySelectorAll(".lbw.bad").length]; })()`));
+await shot("l2b-level2-check.png");
+ok("l2b level 3", await ev(`(()=>{ localStorage.clear(); lbSetStart("s-2023s", false); const s=LB.set;
+  document.querySelector('.lbcell[data-g="1"][data-l="A"]').click(); document.querySelector('.lbcell[data-g="2"][data-l="A"]').click();
+  const oneRow=document.querySelectorAll('.lbcell.sel[data-l="A"]').length;
+  lbSetStart("s-2023s", false);
+  for (let g=1; g<=5; g++) document.querySelector('.lbcell[data-g="'+g+'"][data-l="'+s.key[g]+'"]').click();
+  document.querySelector("#lbhand").click();
+  return [oneRow, document.querySelector(".lbresult .score")?.textContent, document.querySelectorAll(".lbrev").length, document.querySelectorAll("[data-x]").length]; })()`));
+await shot("l2b-level3-review.png");
+await send("Emulation.setDeviceMetricsOverride", { width: 375, height: 800, deviceScaleFactor: 1, mobile: true }); await sleep(300);
+ok("l2b 375px", await ev(`(()=>{ localStorage.clear(); lbSetStart("s-2023s", false); const a=[document.documentElement.scrollWidth <= document.documentElement.clientWidth, document.documentElement.scrollWidth];
+  document.querySelector('.lbcell[data-g="1"][data-l="A"]').click(); lbHand(); return a.concat([document.documentElement.scrollWidth <= document.documentElement.clientWidth, document.documentElement.scrollWidth, document.documentElement.clientWidth]); })()`));
+await shot("l2b-level3-375.png");
+ok("l2b home 375px", await ev(`(()=>{ l2bHome(); return [document.documentElement.scrollWidth <= document.documentElement.clientWidth, document.documentElement.scrollWidth, document.documentElement.clientWidth]; })()`));
+await shot("l2b-home-375.png");
+await send("Emulation.setDeviceMetricsOverride", { width: 1000, height: 1400, deviceScaleFactor: 1, mobile: false }); await sleep(200);
+ok("l2b home banner", await ev(`(()=>{ home(); return [!!$("#l2bGo"), document.querySelectorAll(".l2bbanner").length]; })()`));
+await ev(`$("#l2bGo").scrollIntoView({ block: "center" })`); await sleep(200); await shot("l2b-home-banner.png");
+await send("Emulation.setDeviceMetricsOverride", { width: 375, height: 800, deviceScaleFactor: 1, mobile: true }); await sleep(300);
+ok("l2b home banner 375px", await ev(`(()=>{ home(); return [!!$("#l2bGo"), document.documentElement.scrollWidth <= document.documentElement.clientWidth]; })()`));
+await ev(`$("#l2bGo").scrollIntoView({ block: "center" })`); await sleep(200); await shot("l2b-home-banner-375.png");
+await send("Emulation.setDeviceMetricsOverride", { width: 1000, height: 1400, deviceScaleFactor: 1, mobile: false }); await sleep(200);
+await ev(`home()`);
+
 // language button: swaps texts in place, keeps the screen; "left" = interface texts still in the old language
 const leftover = `(()=>{ const old=new Set(Object.values(I18N).filter(v=>v[0]!==v[1]&&!/[{<]/.test(v[0])).map(v=>(LANG==="en"?v[0]:v[1]).trim())); const out=[];
   const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT); for(let n;(n=w.nextNode());){ const e=n.parentElement; if(!e||e.closest("script,style")) continue; const l=e.closest("[lang]"); if(l&&l!==document.documentElement) continue; if(e.closest("[inert]")) continue; const k=n.nodeValue.trim(); if(old.has(k)) out.push(k); } return out; })()`;
@@ -194,6 +241,9 @@ for (const [name, setup, probe] of [
   ["tankegang", `home(); tankegang()`, `[document.querySelectorAll(".lgchip").length, !!$("#lgboard")]`],
   ["logic drill", `startLogic(); $(".lgcat").click()`, `[GS.i, document.querySelectorAll(".lgopt").length]`],
   ["sort", `soStart("order")`, `[SO.i, SO.set, SO.queue.length, !!$("#soWord"), document.querySelectorAll(".sob").length]`],
+  ["l2b home", `l2bHome()`, `[document.querySelectorAll(".lbcard").length, !!$("#lbheld")]`],
+  ["l2b level 1", `localStorage.clear(); lbStart(1)`, `[LB.i, document.querySelectorAll(".lbopt").length]`],
+  ["l2b level 3", `lbSetStart("s-2023s", false)`, `[LB.n, document.querySelectorAll(".lbcell").length]`],
 ]) {
   await ev(setup); await sleep(150);
   const before = await ev(probe);
