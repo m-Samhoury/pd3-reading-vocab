@@ -1949,7 +1949,7 @@
    "Som nævnt + verbum på plads 2: Som nævnt er prisen steget.",
    "As mentioned + verb in 2nd place: Som nævnt er prisen steget."
   ],
-  "prep": "som nævnt + V2: Som nævnt er …"
+  "prep": "som nævnt + verbum på plads 2: Som nævnt er …"
  },
  "en_grund_til": {
   "construction": [
@@ -1991,7 +1991,7 @@
    "Hermed + verbum på plads 2: Hermed er sagen afgjort.",
    "Hermed + verb in 2nd place: Hermed er sagen afgjort."
   ],
-  "prep": "hermed + V2: Hermed er …"
+  "prep": "hermed + verbum på plads 2: Hermed er …"
  },
  "et_argument_for_imod": {
   "construction": [
@@ -2012,7 +2012,7 @@
    "Herudover + verbum på plads 2: Herudover har vi en have.",
    "Herudover + verb in 2nd place: Herudover har vi en have."
   ],
-  "prep": "herudover + V2: Herudover har …"
+  "prep": "herudover + verbum på plads 2: Herudover har …"
  },
  "en_interesse_for": {
   "construction": [
@@ -2170,7 +2170,7 @@
  },
  "altså": {
   "construction": [
-   "Det er altså vigtigt …; Altså + V2",
+   "Det er altså vigtigt …; Altså + verbum på plads 2",
    "Det er altså vigtigt … (so it is important …); Altså + verb in 2nd place"
   ],
   "prep": "altså efter verbet / først i sætningen"
@@ -2194,7 +2194,7 @@
    "arbejdsmæssigt set + verbum på plads 2",
    "arbejdsmæssigt set + verb in 2nd place"
   ],
-  "prep": "X-mæssigt set + V2"
+  "prep": "X-mæssigt set + verbum på plads 2"
  },
  "bekymrende": {
   "construction": [
@@ -2222,7 +2222,7 @@
    "Først …, dernæst …; Dernæst + verbum på plads 2",
    "Først …, dernæst … (first …, then …); Dernæst + verb in 2nd place"
   ],
-  "prep": "dernæst + V2"
+  "prep": "dernæst + verbum på plads 2"
  },
  "en_eksponent_for": {
   "construction": [
@@ -2313,14 +2313,14 @@
    "For det første …, for det andet … (+ verbum på plads 2)",
    "For det første …, for det andet … (+ verb in 2nd place)"
   ],
-  "prep": "for det første + V2"
+  "prep": "for det første + verbum på plads 2"
  },
  "fysisk_set": {
   "construction": [
    "fysisk set + verbum på plads 2",
    "fysisk set + verb in 2nd place"
   ],
-  "prep": "X set + V2"
+  "prep": "X set + verbum på plads 2"
  },
  "en_gevinst_ved": {
   "construction": [
@@ -2355,7 +2355,7 @@
    "Imens + verbum på plads 2; imens han sover (SUB)",
    "Imens + verb in 2nd place; imens han sover (while he sleeps)"
   ],
-  "prep": "imens + V2 / imens (= mens) + ledsætning"
+  "prep": "imens + verbum på plads 2 / imens (= mens) + ledsætning"
  },
  "at_klage_over": {
   "construction": [
@@ -2376,7 +2376,7 @@
    "kulturelt set + verbum på plads 2",
    "kulturelt set + verb in 2nd place"
   ],
-  "prep": "X set + V2"
+  "prep": "X set + verbum på plads 2"
  },
  "langt_fra": {
   "construction": [
@@ -2411,7 +2411,7 @@
    "mentalt set + verbum på plads 2",
    "mentalt set + verb in 2nd place"
   ],
-  "prep": "X set + V2"
+  "prep": "X set + verbum på plads 2"
  },
  "at_misforstå": {
   "construction": [
@@ -2684,7 +2684,7 @@
    "Allerførst + verbum på plads 2",
    "Allerførst + verb in 2nd place"
   ],
-  "prep": "allerførst + V2"
+  "prep": "allerførst + verbum på plads 2"
  },
  "almindelig": {
   "construction": [
