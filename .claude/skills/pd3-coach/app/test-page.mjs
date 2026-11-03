@@ -169,7 +169,8 @@ ok("mock options", await ev(`(()=>{ localStorage.clear(); picked = []; startMock
   const sig = o => { const i=Object.keys(LG).find(i=>DB.cards[i] && (lowFirst(DB.cards[i].word)===o || variants(DB.cards[i].word).includes(norm(o)))); return i ? LG[i].join(".") : "?"+o; };
   const bad = all.filter(x => x.opts.length!==4 || new Set(x.opts.map(sig)).size!==4 || x.opts[x.right]!==lowFirst(x.w));
   const before = MK.items.map(x=>x.opts.join("/")).join("|"); document.querySelector('.mkcell[data-r="0"][data-o="1"]').click(); const same = MK.items.map(x=>x.opts.join("/")).join("|")===before;
-  return [MK.items.length, "bad sets", bad.map(x=>x.s), "same after click", same, document.querySelectorAll(".mkrow").length]; })()`));
+  const lis = [...document.querySelectorAll(".mksents li")], shown = MK.items.filter((x,i) => { const tx = lis[i].textContent; return tx.includes(x.s) || !tx.includes(x.s.slice(0, x.at) + "(" + (i+1) + ")\\u00a0…" + x.s.slice(x.at + x.w.length)); });
+  return [MK.items.length, "bad sets", bad.map(x=>x.s), "same after click", same, document.querySelectorAll(".mkrow").length, "answer shown or gap misplaced", shown.map(x=>x.s)]; })()`));
 ok("mock review", await ev(`(()=>{ MK.items.forEach((x,i)=>MK.ans[i]=x.right); MK.ans[0]=(MK.items[0].right+1)%4; mockView(); $("#mkdone").click();
   return [$(".mkresult .score").textContent, document.querySelectorAll(".mkrev").length, document.querySelectorAll(".mkrev .mkok").length, $(".mkrev").innerText.includes("Svarmulighederne")]; })()`));
 ok("sort 375px no horizontal scroll",await ev(`(()=>{ soStart("logic"); return [document.documentElement.scrollWidth <= document.documentElement.clientWidth, document.documentElement.scrollWidth, document.documentElement.clientWidth]; })()`));

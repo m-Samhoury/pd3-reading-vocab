@@ -3504,7 +3504,7 @@ const MK_KEY = "pd3-assisted-learning:mock:v1";
 let MK = null;
 function mkStore() { try { return JSON.parse(localStorage.getItem(MK_KEY) || "{}"); } catch (e) { return {}; } }
 function mkWrite(st) { try { localStorage.setItem(MK_KEY, JSON.stringify(st)); } catch (e) { /* ignore */ } }
-const mkPool = () => [].concat(...Object.values(DB.mock || {})).filter(x => DB.cards[x.card] && (x.kind === "conn" || x.s.split(" ").length >= 10)).map(x => ({ ...x, key: x.src + "|" + x.s.slice(0, 30) }));
+const mkPool = () => [].concat(...Object.values(DB.mock || {})).filter(x => DB.cards[x.card] && (x.kind === "conn" || x.s.split(" ").length >= 10)).map(x => ({ ...x, at: x.at ?? x.s.indexOf(x.w), key: x.src + "|" + x.s.slice(0, 30) })).filter(x => x.at >= 0);   // hand-written items have no at
 const mkReady = () => mkPool().length >= 40;
 const mkLast = () => { const s = (mkStore().scores || []).slice(-1)[0]; return s ? s[1] : null; };
 const mkPlain = w => /^[a-zæøå]+( [a-zæøå]+){0,2}$/.test(w);
