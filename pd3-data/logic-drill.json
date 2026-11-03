@@ -1,0 +1,38 @@
+{
+  "_about": "Hvilken slags? (Tankegang): short, hand-written sentences. Only one kind of logic fits each gap. w = the answer as it stands in s (its first occurrence), card = its logic card, alt = the one other word of the same kind that is shown with it; alt never fits (wrong word order or a clearly different meaning).",
+  "items": [
+    {"prev": "Der er to gode grunde til at cykle.", "s": "For det første er det sundt, og for det andet er det billigt.", "w": "For det første", "card": "for_det_første", "alt": "endelig"},
+    {"prev": "Først vasker jeg op.", "s": "Derefter støvsuger jeg stuen.", "w": "Derefter", "card": "derefter", "alt": "eksempelvis"},
+    {"prev": "Først skal du skrive dit navn.", "s": "Dernæst skal du skrive din adresse.", "w": "Dernæst", "card": "dernæst", "alt": "eksempelvis"},
+    {"prev": "Først gik vi i biografen, og derefter spiste vi på en restaurant.", "s": "Endelig tog vi bussen hjem.", "w": "Endelig", "card": "endelig", "alt": "eksempelvis"},
+    {"prev": "", "s": "Der er mange sunde ting at spise, eksempelvis gulerødder, æbler og fisk.", "w": "eksempelvis", "card": "eksempelvis", "alt": "dernæst"},
+    {"prev": "Det er godt at gå til sport.", "s": "Man kommer i bedre form, og desuden møder man nye mennesker.", "w": "desuden", "card": "desuden", "alt": "for det første"},
+    {"prev": "Jeg dyrker meget sport. Jeg løber tre gange om ugen.", "s": "Derudover spiller jeg fodbold om lørdagen.", "w": "Derudover", "card": "derudover", "alt": "for det første"},
+    {"prev": "", "s": "Jeg kan lide alle årstider, men jeg kan især godt lide sommeren.", "w": "især", "card": "især", "alt": "dernæst"},
+
+    {"prev": "", "s": "Min bror er høj, men min søster er lav.", "w": "men", "card": "men", "alt": "i stedet for"},
+    {"prev": "Jeg ville gerne til stranden i går.", "s": "Men det regnede hele dagen.", "w": "Men", "card": "men", "alt": "derimod"},
+    {"prev": "Min mand drikker meget kaffe.", "s": "Jeg drikker derimod kun te.", "w": "derimod", "card": "derimod", "alt": "men"},
+    {"prev": "Det er koldt i Danmark om vinteren.", "s": "I Spanien er det derimod varmt.", "w": "derimod", "card": "derimod", "alt": "i stedet for"},
+    {"prev": "Kaffe giver mig hovedpine.", "s": "Derfor drikker jeg te i stedet for kaffe.", "w": "i stedet for", "card": "i_stedet_for", "alt": "derimod"},
+    {"prev": "", "s": "Alle i min familie kan lide fisk, bortset fra min lillebror.", "w": "bortset fra", "card": "bortset_fra", "alt": "derimod"},
+    {"prev": "Vejret var dårligt i juli.", "s": "I august var det til gengæld varmt og solrigt.", "w": "til gengæld", "card": "til_gengæld", "alt": "men"},
+
+    {"prev": "Jeg er syg i dag.", "s": "Derfor bliver jeg hjemme fra arbejde.", "w": "Derfor", "card": "derfor", "alt": "fordi"},
+    {"prev": "", "s": "Jeg bliver hjemme fra arbejde i dag, fordi jeg er syg.", "w": "fordi", "card": "fordi", "alt": "nemlig"},
+    {"prev": "Jeg kan ikke komme til festen i aften.", "s": "Jeg er nemlig syg.", "w": "nemlig", "card": "nemlig", "alt": "fordi"},
+    {"prev": "Bussen var 30 minutter forsinket.", "s": "Derfor kom jeg for sent på arbejde.", "w": "Derfor", "card": "derfor", "alt": "hvis"},
+    {"prev": "", "s": "Jeg kom for sent på arbejde, fordi bussen var forsinket.", "w": "fordi", "card": "fordi", "alt": "derfor"},
+    {"prev": "", "s": "Hvis det regner i morgen, bliver vi hjemme.", "w": "Hvis", "card": "hvis", "alt": "ellers"},
+    {"prev": "Husk at købe mælk.", "s": "Ellers har vi ikke noget mælk til morgenmaden.", "w": "Ellers", "card": "ellers", "alt": "hvis"},
+    {"prev": "Butikken lukker klokken 18. Nu er klokken 19.", "s": "Butikken er altså lukket nu.", "w": "altså", "card": "altså", "alt": "fordi"},
+
+    {"prev": "Det regnede hele dagen.", "s": "Alligevel gik vi en lang tur.", "w": "Alligevel", "card": "alligevel", "alt": "selvom"},
+    {"prev": "Jeg har sovet ti timer i nat.", "s": "Alligevel er jeg meget træt.", "w": "Alligevel", "card": "alligevel", "alt": "selvom"},
+    {"prev": "Maden var kold og kedelig.", "s": "Alligevel spiste han det hele.", "w": "Alligevel", "card": "alligevel", "alt": "på trods af"},
+    {"prev": "", "s": "Han gik på arbejde, selvom han havde feber.", "w": "selvom", "card": "selvom", "alt": "alligevel"},
+    {"prev": "", "s": "Hun købte kjolen, selvom den var meget dyr.", "w": "selvom", "card": "selvom", "alt": "på trods af"},
+    {"prev": "", "s": "Selvom jeg har sovet ti timer, er jeg meget træt.", "w": "Selvom", "card": "selvom", "alt": "alligevel"},
+    {"prev": "", "s": "Vi gik en lang tur på trods af regnen.", "w": "på trods af", "card": "trods_på_trods_af", "alt": "selvom"}
+  ]
+}

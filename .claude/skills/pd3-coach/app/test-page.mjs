@@ -90,21 +90,25 @@ ok("tankegang", await ev(`(()=>{ localStorage.clear(); home(); const link=!!$("#
   derfor.click(); const ex=[$("#explain").open, $("#explain .big").textContent]; $("#exClose").click();
   document.querySelector("[data-lgfc=ulogisk]").click(); const fc=FC.total; home();
   return [link, row, cols, men.textContent.replace(/\\s+/g," "), derfor.textContent.replace(/\\s+/g," "), ids, cov, noscroll, ex, fc]; })()`));
-ok("logic items", await ev(`(()=>{ const it=lgItems(), by={}; it.forEach(x=>{ const k=x.cat+(x.n?" real":" text"); by[k]=(by[k]||0)+1; });
-  const bad=it.filter(x=>x.opts&&(x.opts.length!==4||lowFirst(x.opts[x.ans])!==lowFirst(x.w)&&!lowFirst(x.w).startsWith(lowFirst(x.opts[x.ans])))).length;
-  const noGap=it.filter(x=>x.s.toLowerCase().slice(x.at,x.at+x.w.length)!==x.w.toLowerCase()).length; const opt4=it.filter(x=>!x.opts).slice(0,40).map(x=>lgOptions(x)).filter(o=>o.length!==4||new Set(o).size!==4).length;
-  return [it.length, by, bad, noGap, opt4]; })()`));
-ok("logic drill", await ev(`(async()=>{ localStorage.clear(); const w=ms=>new Promise(r=>setTimeout(r,ms)); const due0=JSON.stringify(Object.values(DB.cards).map(c=>[c.due,c.history.length])); startLogic(); const q=GS.queue.map(x=>[x.cat,!!x.n]); const real0=q.findIndex(x=>!x[1]); const cats=new Set(q.map(x=>x[0])).size;
-  const first=[$(".lgprev")!==null||GS.queue[0].prev==="", $(".lgcat")!==null, document.querySelectorAll(".lgcat").length, $("#lgopts").children.length]; let n=0, fbs=[], steps=[];
-  for (let k=0;k<12 && GS && GS.i<GS.queue.length;k++){ const x=GS.queue[GS.i]; $(".lgcat[data-c='"+x.cat+"']").click(); await w(5); steps.push(document.querySelectorAll(".lgopt").length); const right=x.opts?x.ans:lgOptions(x).indexOf(lowFirst(x.w)); const opts=[...document.querySelectorAll(".lgopt")];
-    if (k===1) { opts[(+opts[0].dataset.i===-1)?0:0].click(); } else { document.querySelectorAll(".lgopt")[0].click(); }
-    await w(10); fbs.push($("#fb h3")?.textContent); if (k===0) fbs.push([$("#fb .gdiff mark.hl")?.textContent, !!$("#fb [data-more]"), !!$("#fb .trrow button.tr"), $("#fb .gwhy").innerText.replace(/\\n+/g," | ").slice(0,300)]); $("#nx").click(); await w(10); n++; }
-  const sum=$("#app").innerText.slice(0,70).replace(/\\n+/g," | "); const redo=!!$("#gmiss"); const st=Object.keys(lgStats()).length; const same=due0===JSON.stringify(Object.values(DB.cards).map(c=>[c.due,c.history.length]));
-  if (redo) { $("#gmiss").click(); await w(10); } const redoLen=GS?.queue.length; home();
-  return [q.length, cats, real0, first, steps.slice(0,3), n, fbs.slice(0,3), sum, st, same, redoLen]; })()`));
+ok("logic items", await ev(`(()=>{ const it=lgItems(), by={}; it.forEach(x=>{ by[x.cat]=(by[x.cat]||0)+1; });
+  const noGap=it.filter(x=>x.s.slice(x.at,x.at+x.w.length)!==x.w).length;
+  return [it.length, by, "gaps not at their place:", noGap]; })()`));
+ok("logic drill", await ev(`(async()=>{ localStorage.clear(); const w=ms=>new Promise(r=>setTimeout(r,ms)); const due0=JSON.stringify(Object.values(DB.cards).map(c=>[c.due,c.history.length]));
+  startLogic(); const q=GS.queue, x=q[0], kinds=[...new Set(q.map(y=>y.cat))].length, texts=()=>[...document.querySelectorAll(".lgopt")].map(b=>b.textContent.replace(/^\\d/,"").trim());
+  const other=LG_CATS.map(c=>c[0]).find(k=>k!==x.cat), pick=k=>$(".lgcat[data-c='"+k+"']").click();
+  pick(x.cat); const right1=texts(), rightN=document.querySelectorAll(".lgopt").length;
+  pick(x.cat); const right2=texts();
+  pick(other); const wrong1=texts(), wrongN=document.querySelectorAll(".lgopt").length;
+  pick(other); const wrong2=texts();
+  pick(x.cat); const again=texts();
+  [...document.querySelectorAll(".lgopt")].find(b=>b.textContent.replace(/^\\d/,"").trim().toLowerCase()===x.w.toLowerCase()).click(); await w(10);
+  const h3=$("#fb h3")?.textContent, same=JSON.stringify(Object.values(DB.cards).map(c=>[c.due,c.history.length]))===due0;
+  return [["queue", q.length, "kinds", kinds], ["right kind", rightN, right1, "same on re-click", JSON.stringify(right1)===JSON.stringify(right2), JSON.stringify(again)===JSON.stringify(right1)], ["wrong kind", wrongN, wrong1, "same on re-click", JSON.stringify(wrong1)===JSON.stringify(wrong2)], ["answer", x.w, h3===t("gm.right"), h3], ["SM-2 unchanged", same]]; })()`));
 ok("logic give up + keys", await ev(`(async()=>{ const w=ms=>new Promise(r=>setTimeout(r,ms)); startLogic(); $("#idk").click(); await w(10); const g=[$("#fb h3").textContent, document.querySelectorAll(".lgcat.right").length];
-  $("#nx").click(); await w(10); document.dispatchEvent(new KeyboardEvent("keydown",{key:"2",bubbles:true})); await w(5); const k1=document.querySelectorAll(".lgcat.sel").length, k2=document.querySelectorAll(".lgopt").length; document.dispatchEvent(new KeyboardEvent("keydown",{key:"1",bubbles:true})); await w(5);
-  const k3=!!$("#fb .feedback"); $("#gquit").click(); await w(10); const q=[$("#app").innerText.slice(0,40).replace(/\\n+/g," | ")]; home(); return [g,k1,k2,k3,q]; })()`));
+  $("#nx").click(); await w(10); const k=key=>document.dispatchEvent(new KeyboardEvent("keydown",{key,bubbles:true})); const picks=[];
+  for (const n of ["1","2","3","4"]) { grLogic(GS.queue[0]); k(n); await w(5); picks.push([document.querySelector(".lgcat.sel")?.dataset.c, document.querySelectorAll(".lgopt").length]); }
+  grLogic(GS.queue[0]); k("4"); await w(5); k("2"); await w(10); const k3=[$("#fb h3")?.textContent, !!$("#fb .feedback")];
+  $("#gquit").click(); await w(10); const q=[$("#app").innerText.slice(0,40).replace(/\\n+/g," | ")]; home(); return [g, picks, k3, q]; })()`));
 await ev(`home()`);
 // Sortér ordene (Tankegang): both sets, a right and a wrong answer by button, the wrong pile back, keys 1–4, a real mouse drag,
 // the tap fallback, the score screen, no SM-2 change, and no horizontal scroll at phone width
