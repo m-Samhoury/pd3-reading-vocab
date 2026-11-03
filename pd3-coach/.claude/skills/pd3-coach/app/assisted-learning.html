@@ -795,7 +795,7 @@ input.vgap.right { border-color: var(--ok); background: var(--ok-bg); } input.vg
 .mkresult { display: flex; align-items: baseline; gap: 12px; margin-top: 12px; }
 .mkreview { margin-top: 18px; display: grid; gap: 12px; } .mkreview h2 { margin: 0; font-size: 1.15rem; }
 .mkrev { padding: 14px 16px; border-radius: 20px; border-left: 6px solid var(--bad); background: var(--md-sys-color-surface-container-low); } .mkrev.ok { border-left-color: var(--ok); }
-.mkrev header { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; } .mkrev p { margin: 8px 0 0; } .mkfull { line-height: 1.65; }
+.mkok { color: var(--ok); } .mkrev header { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; } .mkrev p { margin: 8px 0 0; } .mkfull { line-height: 1.65; }
 @media (max-width: 600px) {
   .mkbanner { grid-template-columns: 1fr; } .mkbanner .btn { justify-content: center; }
   .mkrow { grid-template-columns: 1.8em repeat(2, minmax(0, 1fr)); } .mkrow .mkn { grid-row: span 2; } .mkrow.head { display: none; }
@@ -1140,13 +1140,13 @@ const I18N = {
   "so.none": ["Alle ordene var rigtige første gang.", "All the words were right the first time."],
   "so.again": ["Ny runde", "New round"], "so.back": ["Tilbage til Tankegang", "Back to Logic"], "lg.means": ["{0} = {1}", "{0} = {1}"],
   "mk.pill": ["MOCK", "MOCK"], "mk.title": ["Læsning 3 · mock", "Reading 3 · mock"], "mk.go": ["Start mock", "Start mock"],
-  "mk.s": ["8 huller i rigtige sætninger fra Læsning 1, 2A og 2B, med svartabel som i prøven", "8 gaps in real sentences from Reading 1, 2A and 2B, with an answer table like the exam"],
+  "mk.s": ["8 huller i enkle sætninger, med svartabel som i prøven", "8 gaps in simple sentences, with an answer table like the exam"],
   "mk.last": ["Seneste: {0}/8", "Last: {0}/8"],
   "mk.instr": ["Der er fjernet otte ord eller udtryk, og de otte huller er angivet med tallene 1–8. Vælg i svararket nedenfor det ord eller udtryk (A, B, C eller D), der passer til hvert hul. Der er et eksempel angivet som 0. Der gives 1 point for hvert korrekt svar.", "Eight words or phrases have been removed and the gaps are numbered 1–8. In the answer sheet below, choose the word or phrase (A, B, C or D) that fits each gap. Row 0 is an example. 1 point for each correct answer."],
-  "mk.note": ["Det her er en mock: rigtige sætninger fra tidligere Læsning 1, 2A og 2B, sat sammen som en Læsning 3. Sætningerne er fra forskellige tekster, så de hænger ikke sammen som en tekst.", "This is a mock: real sentences from past Reading 1, 2A and 2B, put together like a Reading 3. They come from different texts, so they don't form one text."],
+  "mk.note": ["Det her er en mock: enkle sætninger, sat sammen som en Læsning 3. Sætningerne hænger ikke sammen som en tekst. Svarmulighederne ligner hinanden: kun ét ord passer både i betydning og ordstilling.", "This is a mock: simple sentences, put together like a Reading 3. The sentences don't form one text. The options look alike: only one word fits both the meaning and the word order."],
   "mk.sheet": ["Svarark", "Answer sheet"], "mk.n": ["{0} af {1} besvaret", "{0} of {1} answered"], "mk.submit": ["Aflever", "Hand in"], "mk.score": ["{0} af {1} point", "{0} of {1} points"],
   "mk.new": ["Ny mock", "New mock"], "mk.gap": ["Hul {0}", "Gap {0}"], "mk.your": ["Dit svar: {0}", "Your answer: {0}"], "mk.right": ["Rigtigt: {0}", "Correct: {0}"], "mk.none": ["Ikke besvaret", "Not answered"],
-  "mk.alt": ["I en mock kan et andet bindeord af og til også passe. Teksten har brugt det rigtige, og hvilken slags det er, kan du se ovenfor.", "In a mock another linking word can occasionally fit too. The text used the right one; the kind is shown above."],
+  "mk.opts": ["Svarmulighederne:", "The options:"],
   "mk.sel": ["Kun ord fra de {0} valgte emner", "Only words from the {0} selected topics"], "mk.fill": ["{0} af hullerne er fra andre emner, fordi de valgte emner ikke har sætninger nok.", "{0} of the gaps are from other topics because the selected topics don't have enough sentences."],
   "mk.review": ["Gennemgang", "Review"], "mk.few": ["Der er ikke sætninger nok til en mock endnu (kør pd3.py mockpool).", "Not enough sentences for a mock yet (run pd3.py mockpool)."],
 };
@@ -3504,12 +3504,14 @@ const MK_KEY = "pd3-assisted-learning:mock:v1";
 let MK = null;
 function mkStore() { try { return JSON.parse(localStorage.getItem(MK_KEY) || "{}"); } catch (e) { return {}; } }
 function mkWrite(st) { try { localStorage.setItem(MK_KEY, JSON.stringify(st)); } catch (e) { /* ignore */ } }
-const mkPool = () => Object.values(DB.mock || {}).flat().filter(x => DB.cards[x.card] && (x.kind === "conn" || x.s.split(" ").length >= 10)).map(x => ({ ...x, key: x.src + "|" + x.s.slice(0, 30) }));
+const mkPool = () => [].concat(...Object.values(DB.mock || {})).filter(x => DB.cards[x.card] && (x.kind === "conn" || x.s.split(" ").length >= 10)).map(x => ({ ...x, key: x.src + "|" + x.s.slice(0, 30) }));
 const mkReady = () => mkPool().length >= 40;
 const mkLast = () => { const s = (mkStore().scores || []).slice(-1)[0]; return s ? s[1] : null; };
 const mkPlain = w => /^[a-zæøå]+( [a-zæøå]+){0,2}$/.test(w);
-// the answer as the sentence has it, plus three words of the same kind and form
+// the answer as the sentence has it, plus three words of the same kind and form. Hand-written items carry their 3 wrong options
+// (pd3-data/mock-l3.json: no two options share kind of logic and word type); they are shuffled once, when the mock is built
 function mkOptions(x) {
+  if (x.opts) { const all = shuffle([lowFirst(x.w), ...x.opts]); return { opts: all, right: all.indexOf(lowFirst(x.w)) }; }
   const c = DB.cards[x.card], low = x.s.toLowerCase(), cardsAll = cards();
   let wrong = [];
   if (x.kind === "conn") {
@@ -3554,6 +3556,13 @@ function mkBuild() {
   const example = items.splice(ex, 1)[0];
   return { example, items, ans: Array(items.length).fill(null), done: false, outside: picked.length ? Math.min(9, chosen.length) - Math.min(9, inside) : 0, topics: picked.length };
 }
+// every option with its kind of logic and word type: only one of them fits both the meaning and the word order
+function mkWhy(x) {
+  if (!x.opts || !x.opts.length) return "";
+  const id = o => Object.keys(LG).find(i => DB.cards[i] && (lowFirst(DB.cards[i].word) === o || variants(DB.cards[i].word).includes(norm(o))));
+  return `<p class="small"><span class="soft">${t("mk.opts")}</span> ${x.opts.map((o, j) => { const i = id(o), k = i && lgCat(LG[i][0]);
+    return `<span lang="da"${j === x.right ? ` class="mkok"` : ""}>${j === x.right ? "✓ " : ""}<b>${esc(o)}</b></span> ${k ? `${k[2]} ${t("lg.tag." + LG[i][1])}` : ""}`; }).join(" · ")}</p>`;
+}
 function startMock() {
   if (!mkReady()) { alert(t("mk.few")); return; }
   S = null; FC = null; GS = null;
@@ -3577,7 +3586,7 @@ function mockView() {
     return `<article class="mkrev ${ok ? "ok" : "bad"}"><header><b>${t("mk.gap", i + 1)}</b><span class="tag">${esc(x.src.replace(" ", " · "))}</span>${k ? `<span class="lgpill lg-${k[1]}">${k[2]} ${t("lg.c." + k[0])}</span>` : ""}</header>
       <p class="mkfull" lang="da">${sent(x, `<mark class="hl">${esc(x.w)}</mark>`)}</p>
       <p class="small">${ok ? "✓ " : "✗ "}${m.ans[i] == null ? t("mk.none") : t("mk.your", `<b lang="da">${esc(mkShow(x, x.opts[m.ans[i]]))}</b>`)}${ok ? "" : ` · ${t("mk.right", `<b lang="da">${esc(mkShow(x, x.opts[x.right]))}</b>`)}`}</p>
-      <p class="small soft"><b lang="da">${esc(c.word)}</b> = ${esc(c.meaning)}${AI()}</p>${ok || x.kind !== "conn" ? "" : `<p class="small soft">${t("mk.alt")}</p>`}
+      <p class="small soft"><b lang="da">${esc(c.word)}</b> = ${esc(c.meaning)}${AI()}</p>${mkWhy(x)}
       <div class="trrow">${trLink(x.s).replace(t("m.tr"), t("tr.sent"))}<button type="button" class="linkbtn" data-more="${esc(x.card)}">${t("b.more")}</button></div></article>`; }).join("")}</section>` : "";
   $("#app").innerHTML = `<div class="narrow mock">
     <div class="counter"><span><span class="mkpill">${t("mk.pill")}</span> ${t("mk.title")}</span><button class="btn quiet" id="mkquit">✕ ${t("s.end")}</button></div>

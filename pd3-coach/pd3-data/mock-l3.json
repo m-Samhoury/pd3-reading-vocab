@@ -1,0 +1,1019 @@
+{
+ "_about": "Mock Læsning 3: short hand-written sentences, one gap each. opts = the 3 wrong options. Rule: the 4 options never share both kind of logic and word type (ADV = V2, SUB = bisætning, KOO = hovedsætning, PRAEP = + navneord), so only one fits the gap's grammar and meaning.",
+ "items": [
+  {
+   "prev": "Vejrudsigten lovede sol hele dagen.",
+   "s": "Alligevel regnede det om eftermiddagen.",
+   "w": "Alligevel",
+   "card": "alligevel",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "selvom",
+    "på trods af",
+    "derfor"
+   ]
+  },
+  {
+   "prev": "Min søn havde ikke lyst til at tage med på museum.",
+   "s": "Alligevel syntes han, at det var spændende.",
+   "w": "Alligevel",
+   "card": "alligevel",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "selvom",
+    "på trods af",
+    "derfor"
+   ]
+  },
+  {
+   "prev": "Jeg havde spist en stor frokost.",
+   "s": "Alligevel var jeg sulten igen klokken tre.",
+   "w": "Alligevel",
+   "card": "alligevel",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "selvom",
+    "på trods af",
+    "derfor"
+   ]
+  },
+  {
+   "prev": "Lejligheden var dyr og lå langt fra byen.",
+   "s": "Vi købte den alligevel, fordi vi elskede haven.",
+   "w": "alligevel",
+   "card": "alligevel",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "selvom",
+    "på trods af",
+    "derfor"
+   ]
+  },
+  {
+   "prev": "Jeg havde sat tre vækkeure.",
+   "s": "Alligevel kom jeg for sent på arbejde.",
+   "w": "Alligevel",
+   "card": "alligevel",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "selvom",
+    "på trods af",
+    "derfor"
+   ]
+  },
+  {
+   "prev": "",
+   "s": "Han tog ikke en jakke på, selvom det var meget koldt.",
+   "w": "selvom",
+   "card": "selvom",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "alligevel",
+    "på trods af",
+    "fordi"
+   ]
+  },
+  {
+   "prev": "",
+   "s": "Selvom hun ikke har meget tid, hjælper hun altid sine naboer.",
+   "w": "Selvom",
+   "card": "selvom",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "alligevel",
+    "på trods af",
+    "fordi"
+   ]
+  },
+  {
+   "prev": "",
+   "s": "Vi gik en lang tur, selvom vi egentlig var meget trætte.",
+   "w": "selvom",
+   "card": "selvom",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "alligevel",
+    "på trods af",
+    "fordi"
+   ]
+  },
+  {
+   "prev": "",
+   "s": "Selvom bussen var forsinket, nåede jeg toget.",
+   "w": "Selvom",
+   "card": "selvom",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "alligevel",
+    "på trods af",
+    "fordi"
+   ]
+  },
+  {
+   "prev": "",
+   "s": "Hun købte bilen, selvom den var meget dyr.",
+   "w": "selvom",
+   "card": "selvom",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "alligevel",
+    "på trods af",
+    "fordi"
+   ]
+  },
+  {
+   "prev": "",
+   "s": "Hun gik i skole på trods af sin hovedpine.",
+   "w": "på trods af",
+   "card": "trods_på_trods_af",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "selvom",
+    "alligevel",
+    "i stedet for"
+   ]
+  },
+  {
+   "prev": "",
+   "s": "På trods af den høje pris var koncerten udsolgt.",
+   "w": "På trods af",
+   "card": "trods_på_trods_af",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "selvom",
+    "alligevel",
+    "i stedet for"
+   ]
+  },
+  {
+   "prev": "",
+   "s": "Festen blev en succes på trods af regnvejret.",
+   "w": "på trods af",
+   "card": "trods_på_trods_af",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "selvom",
+    "alligevel",
+    "i stedet for"
+   ]
+  },
+  {
+   "prev": "",
+   "s": "Han arbejder stadig på trods af sin høje alder.",
+   "w": "på trods af",
+   "card": "trods_på_trods_af",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "selvom",
+    "alligevel",
+    "i stedet for"
+   ]
+  },
+  {
+   "prev": "Min computer gik i stykker i går.",
+   "s": "Derfor kunne jeg ikke sende mailen.",
+   "w": "Derfor",
+   "card": "derfor",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "fordi",
+    "på trods af",
+    "alligevel"
+   ]
+  },
+  {
+   "prev": "Der var ikke mere mælk i køleskabet.",
+   "s": "Derfor gik jeg ned i supermarkedet.",
+   "w": "Derfor",
+   "card": "derfor",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "fordi",
+    "på trods af",
+    "alligevel"
+   ]
+  },
+  {
+   "prev": "Det er dyrt at bo i København.",
+   "s": "Mange unge flytter derfor til forstæderne.",
+   "w": "derfor",
+   "card": "derfor",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "fordi",
+    "på trods af",
+    "alligevel"
+   ]
+  },
+  {
+   "prev": "Der er mange biler i byen om morgenen.",
+   "s": "Jeg tager derfor altid cyklen.",
+   "w": "derfor",
+   "card": "derfor",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "fordi",
+    "på trods af",
+    "men"
+   ]
+  },
+  {
+   "prev": "",
+   "s": "Jeg kom ikke til mødet, fordi jeg var syg.",
+   "w": "fordi",
+   "card": "fordi",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "derfor",
+    "alligevel",
+    "i stedet for"
+   ]
+  },
+  {
+   "prev": "",
+   "s": "Mange vælger at cykle, fordi det er billigt.",
+   "w": "fordi",
+   "card": "fordi",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "derfor",
+    "selvom",
+    "i stedet for"
+   ]
+  },
+  {
+   "prev": "",
+   "s": "Fordi det ikke regnede, spiste vi ude i haven.",
+   "w": "Fordi",
+   "card": "fordi",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "derfor",
+    "selvom",
+    "i stedet for"
+   ]
+  },
+  {
+   "prev": "",
+   "s": "Butikken er lukket i dag, fordi det er helligdag.",
+   "w": "fordi",
+   "card": "fordi",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "derfor",
+    "selvom",
+    "i stedet for"
+   ]
+  },
+  {
+   "prev": "Jeg skal købe en stor kage i dag.",
+   "s": "Min datter har nemlig fødselsdag i morgen.",
+   "w": "nemlig",
+   "card": "nemlig",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "fordi",
+    "på trods af",
+    "alligevel"
+   ]
+  },
+  {
+   "prev": "Peter tager altid toget til arbejde.",
+   "s": "Han har nemlig ikke nogen bil.",
+   "w": "nemlig",
+   "card": "nemlig",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "fordi",
+    "på trods af",
+    "men"
+   ]
+  },
+  {
+   "prev": "Vi skal ikke have mad med til festen.",
+   "s": "Værten laver nemlig mad til alle.",
+   "w": "nemlig",
+   "card": "nemlig",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "fordi",
+    "på trods af",
+    "men"
+   ]
+  },
+  {
+   "prev": "Holdet vandt den sidste kamp.",
+   "s": "Dermed blev de danske mestre.",
+   "w": "Dermed",
+   "card": "dermed",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "fordi",
+    "på trods af",
+    "alligevel"
+   ]
+  },
+  {
+   "prev": "Biografen åbner klokken 19, og nu er klokken 18.",
+   "s": "Vi skal altså vente en time.",
+   "w": "altså",
+   "card": "altså",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "fordi",
+    "på trods af",
+    "men"
+   ]
+  },
+  {
+   "prev": "Kommunen har bygget mange nye cykelstier.",
+   "s": "Det er således blevet nemmere at cykle til arbejde.",
+   "w": "således",
+   "card": "således",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "fordi",
+    "på trods af",
+    "alligevel"
+   ]
+  },
+  {
+   "prev": "",
+   "s": "Hvis du ikke kan komme, skal du ringe til mig.",
+   "w": "Hvis",
+   "card": "hvis",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "ellers",
+    "alligevel",
+    "på trods af"
+   ]
+  },
+  {
+   "prev": "",
+   "s": "Du får en bøde, hvis du kører for stærkt.",
+   "w": "hvis",
+   "card": "hvis",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "ellers",
+    "selvom",
+    "på trods af"
+   ]
+  },
+  {
+   "prev": "",
+   "s": "Vi tager til stranden i morgen, hvis vejret er godt.",
+   "w": "hvis",
+   "card": "hvis",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "ellers",
+    "selvom",
+    "på trods af"
+   ]
+  },
+  {
+   "prev": "Husk at vande blomsterne hver dag.",
+   "s": "Ellers dør de.",
+   "w": "Ellers",
+   "card": "ellers",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "hvis",
+    "derimod",
+    "men"
+   ]
+  },
+  {
+   "prev": "Du skal betale regningen i dag.",
+   "s": "Ellers skal du betale et gebyr.",
+   "w": "Ellers",
+   "card": "ellers",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "hvis",
+    "derimod",
+    "men"
+   ]
+  },
+  {
+   "prev": "",
+   "s": "Den nye lov medfører, at butikkerne skal lukke tidligere.",
+   "w": "medfører",
+   "card": "at_medføre",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "fordi",
+    "derfor",
+    "på trods af"
+   ]
+  },
+  {
+   "prev": "",
+   "s": "Forsinkelsen skyldes et teknisk problem.",
+   "w": "skyldes",
+   "card": "at_skyldes",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "fordi",
+    "derfor",
+    "på trods af"
+   ]
+  },
+  {
+   "prev": "",
+   "s": "Hans gode humør skyldes, at han har fået nyt job.",
+   "w": "skyldes",
+   "card": "at_skyldes",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "fordi",
+    "derfor",
+    "på trods af"
+   ]
+  },
+  {
+   "prev": "",
+   "s": "Mange ulykker er en følge af for lidt søvn.",
+   "w": "en følge af",
+   "card": "en_følge_af",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "fordi",
+    "derfor",
+    "selvom"
+   ]
+  },
+  {
+   "prev": "",
+   "s": "Den lave løn er en grund til, at mange sygeplejersker skifter job.",
+   "w": "en grund til",
+   "card": "en_grund_til",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "fordi",
+    "derfor",
+    "selvom"
+   ]
+  },
+  {
+   "prev": "",
+   "s": "Stress er en årsag til mange sygdomme.",
+   "w": "en årsag",
+   "card": "en_årsag",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "fordi",
+    "derfor",
+    "selvom"
+   ]
+  },
+  {
+   "prev": "",
+   "s": "Jeg vil gerne med i biografen, men jeg har ikke tid i aften.",
+   "w": "men",
+   "card": "men",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "selvom",
+    "dog",
+    "derfor"
+   ]
+  },
+  {
+   "prev": "",
+   "s": "Min mor taler godt dansk, men min far taler kun lidt.",
+   "w": "men",
+   "card": "men",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "selvom",
+    "dog",
+    "derfor"
+   ]
+  },
+  {
+   "prev": "",
+   "s": "Vi ville gerne købe et hus, men vi har ikke råd.",
+   "w": "men",
+   "card": "men",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "selvom",
+    "dog",
+    "derfor"
+   ]
+  },
+  {
+   "prev": "Lejligheden er stor og billig.",
+   "s": "Men den ligger desværre langt fra mit arbejde.",
+   "w": "Men",
+   "card": "men",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "selvom",
+    "dog",
+    "derfor"
+   ]
+  },
+  {
+   "prev": "",
+   "s": "Huset er gammelt, men køkkenet er helt nyt.",
+   "w": "men",
+   "card": "men",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "hvis",
+    "dog",
+    "derfor"
+   ]
+  },
+  {
+   "prev": "Min bror spiser alt.",
+   "s": "Min søster spiser dog ikke kød.",
+   "w": "dog",
+   "card": "dog",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "men",
+    "derfor",
+    "i stedet for"
+   ]
+  },
+  {
+   "prev": "Om sommeren er der mange turister i byen.",
+   "s": "Om vinteren er der dog næsten ingen.",
+   "w": "dog",
+   "card": "dog",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "men",
+    "derfor",
+    "i stedet for"
+   ]
+  },
+  {
+   "prev": "De fleste af mine venner bor i København.",
+   "s": "Min bedste ven bor dog i Odense.",
+   "w": "dog",
+   "card": "dog",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "men",
+    "derfor",
+    "i stedet for"
+   ]
+  },
+  {
+   "prev": "Før i tiden arbejdede de fleste kvinder hjemme.",
+   "s": "I dag har de fleste kvinder imidlertid et job.",
+   "w": "imidlertid",
+   "card": "imidlertid",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "men",
+    "derfor",
+    "i stedet for"
+   ]
+  },
+  {
+   "prev": "Min kæreste elsker at rejse.",
+   "s": "Jeg er derimod helst hjemme.",
+   "w": "derimod",
+   "card": "derimod",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "men",
+    "derfor",
+    "i stedet for"
+   ]
+  },
+  {
+   "prev": "I Danmark er det koldt i januar.",
+   "s": "I Australien er det derimod sommer.",
+   "w": "derimod",
+   "card": "derimod",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "men",
+    "derfor",
+    "i stedet for"
+   ]
+  },
+  {
+   "prev": "Mine forældre ser meget fjernsyn.",
+   "s": "Jeg ser derimod næsten aldrig fjernsyn.",
+   "w": "derimod",
+   "card": "derimod",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "men",
+    "derfor",
+    "i stedet for"
+   ]
+  },
+  {
+   "prev": "Lønnen i mit nye job er ikke høj.",
+   "s": "Til gengæld har jeg meget fri.",
+   "w": "Til gengæld",
+   "card": "til_gengæld",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "men",
+    "derfor",
+    "i stedet for"
+   ]
+  },
+  {
+   "prev": "Jeg kan ikke lave mad.",
+   "s": "Til gengæld er jeg god til at bage kager.",
+   "w": "Til gengæld",
+   "card": "til_gengæld",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "men",
+    "derfor",
+    "i stedet for"
+   ]
+  },
+  {
+   "prev": "Min chef blev ikke sur, da jeg kom for sent.",
+   "s": "Tværtimod smilede han og sagde godmorgen.",
+   "w": "Tværtimod",
+   "card": "tværtimod",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "men",
+    "alligevel",
+    "i stedet for"
+   ]
+  },
+  {
+   "prev": "",
+   "s": "Vi tog toget i stedet for at køre i bil.",
+   "w": "i stedet for",
+   "card": "i_stedet_for",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "derimod",
+    "men",
+    "på trods af"
+   ]
+  },
+  {
+   "prev": "",
+   "s": "Jeg drikker vand i stedet for sodavand.",
+   "w": "i stedet for",
+   "card": "i_stedet_for",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "derimod",
+    "men",
+    "på trods af"
+   ]
+  },
+  {
+   "prev": "",
+   "s": "I stedet for at se fjernsyn læser jeg en bog.",
+   "w": "I stedet for",
+   "card": "i_stedet_for",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "derimod",
+    "men",
+    "på trods af"
+   ]
+  },
+  {
+   "prev": "",
+   "s": "Mange arbejder hjemme i stedet for på kontoret.",
+   "w": "i stedet for",
+   "card": "i_stedet_for",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "derimod",
+    "men",
+    "på trods af"
+   ]
+  },
+  {
+   "prev": "",
+   "s": "Alle kom til festen, bortset fra Peter.",
+   "w": "bortset fra",
+   "card": "bortset_fra",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "derimod",
+    "men",
+    "på trods af"
+   ]
+  },
+  {
+   "prev": "",
+   "s": "Bortset fra mandag har jeg fri hele ugen.",
+   "w": "Bortset fra",
+   "card": "bortset_fra",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "derimod",
+    "men",
+    "på trods af"
+   ]
+  },
+  {
+   "prev": "Det er sundt at gå til fods.",
+   "s": "Desuden er det gratis.",
+   "w": "Desuden",
+   "card": "desuden",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "derfor",
+    "fordi",
+    "i stedet for"
+   ]
+  },
+  {
+   "prev": "Jeg arbejder i en børnehave.",
+   "s": "Desuden underviser jeg i svømning om aftenen.",
+   "w": "Desuden",
+   "card": "desuden",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "derfor",
+    "fordi",
+    "i stedet for"
+   ]
+  },
+  {
+   "prev": "Jeg kan godt lide mit job, fordi kollegerne er søde.",
+   "s": "Desuden er lønnen god.",
+   "w": "Desuden",
+   "card": "desuden",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "derfor",
+    "fordi",
+    "i stedet for"
+   ]
+  },
+  {
+   "prev": "Hotellet ligger tæt på stranden.",
+   "s": "Derudover har det en god restaurant.",
+   "w": "Derudover",
+   "card": "derudover",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "derfor",
+    "fordi",
+    "i stedet for"
+   ]
+  },
+  {
+   "prev": "Fastfood er usundt.",
+   "s": "Ydermere er det ofte dyrt.",
+   "w": "Ydermere",
+   "card": "ydermere",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "derfor",
+    "fordi",
+    "i stedet for"
+   ]
+  },
+  {
+   "prev": "",
+   "s": "Kommunen tilbyder blandt andet gratis danskundervisning.",
+   "w": "blandt andet",
+   "card": "blandt_andet",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "derfor",
+    "fordi",
+    "i stedet for"
+   ]
+  },
+  {
+   "prev": "",
+   "s": "Vi besøgte mange byer i Italien, blandt andet Rom og Firenze.",
+   "w": "blandt andet",
+   "card": "blandt_andet",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "derfor",
+    "fordi",
+    "i stedet for"
+   ]
+  },
+  {
+   "prev": "",
+   "s": "Man kan spare penge, eksempelvis ved at lave mad selv.",
+   "w": "eksempelvis",
+   "card": "eksempelvis",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "derfor",
+    "fordi",
+    "i stedet for"
+   ]
+  },
+  {
+   "prev": "",
+   "s": "Mange danskere dyrker sport, eksempelvis fodbold og svømning.",
+   "w": "eksempelvis",
+   "card": "eksempelvis",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "derfor",
+    "fordi",
+    "i stedet for"
+   ]
+  },
+  {
+   "prev": "",
+   "s": "Jeg elsker sommeren, især de lange, lyse aftener.",
+   "w": "især",
+   "card": "især",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "derfor",
+    "fordi",
+    "i stedet for"
+   ]
+  },
+  {
+   "prev": "Jeg vil gerne have en hund af to grunde.",
+   "s": "For det første elsker jeg dyr, og for det andet bor jeg tæt på en skov.",
+   "w": "For det første",
+   "card": "for_det_første",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "derfor",
+    "fordi",
+    "selvom"
+   ]
+  },
+  {
+   "prev": "Først skal du vaske hænder.",
+   "s": "Dernæst skal du skære løget i små stykker.",
+   "w": "Dernæst",
+   "card": "dernæst",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "derfor",
+    "fordi",
+    "selvom"
+   ]
+  },
+  {
+   "prev": "Han boede i Polen, indtil han var 20 år.",
+   "s": "Derefter flyttede han til Danmark.",
+   "w": "Derefter",
+   "card": "derefter",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "derfor",
+    "fordi",
+    "selvom"
+   ]
+  },
+  {
+   "prev": "Vi spiste morgenmad klokken otte.",
+   "s": "Derefter gik vi ned til stranden.",
+   "w": "Derefter",
+   "card": "derefter",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "derfor",
+    "fordi",
+    "selvom"
+   ]
+  },
+  {
+   "prev": "Først gik vi en tur, og derefter drak vi kaffe.",
+   "s": "Endelig tog vi hjem.",
+   "w": "Endelig",
+   "card": "endelig",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "derfor",
+    "fordi",
+    "selvom"
+   ]
+  },
+  {
+   "prev": "Du skal først sende din ansøgning.",
+   "s": "Herefter bliver du måske kaldt til en samtale.",
+   "w": "Herefter",
+   "card": "herefter",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "alligevel",
+    "fordi",
+    "selvom"
+   ]
+  },
+  {
+   "prev": "Hun arbejder fuld tid.",
+   "s": "Samtidig tager hun en uddannelse om aftenen.",
+   "w": "Samtidig",
+   "card": "samtidig",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "derfor",
+    "fordi",
+    "i stedet for"
+   ]
+  },
+  {
+   "prev": "Min far er født i Aarhus.",
+   "s": "Min mor er ligeledes født i Aarhus.",
+   "w": "ligeledes",
+   "card": "ligeledes",
+   "kind": "conn",
+   "src": "Mock",
+   "opts": [
+    "derfor",
+    "fordi",
+    "i stedet for"
+   ]
+  }
+ ]
+}
