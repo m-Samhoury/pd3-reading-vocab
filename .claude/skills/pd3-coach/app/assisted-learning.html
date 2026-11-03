@@ -735,7 +735,7 @@ input.vgap.right { border-color: var(--ok); background: var(--ok-bg); } input.vg
 .lgchip .w { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; } .lgchip b { font-weight: 600; overflow-wrap: anywhere; }
 .lgchip .m { display: flex; align-items: center; gap: 8px; } .lgchip .wdots { margin-top: 0; }
 .fq { font: 700 .72rem system-ui, sans-serif; color: var(--md-sys-color-on-surface-variant); } .fq.no { font-weight: 500; font-style: italic; }
-.lgcol .foot { padding: 4px 10px 10px; border-top: 1px solid var(--md-sys-color-surface-container-highest); } .lgcol .foot .txtbtn { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; } .lgcol .foot svg { width: 20px; height: 20px; }
+.lgcol .foot { padding: 4px 10px 10px; border-top: 1px solid var(--md-sys-color-surface-container-highest); display: flex; flex-wrap: wrap; gap: 8px; } .lgcol .foot .txtbtn { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; } .lgcol .foot svg { width: 20px; height: 20px; }
 .lgprev { margin: 0 0 6px; color: var(--soft); font-size: .95rem; line-height: 1.6; }
 .lgstep { margin: 14px 0 0; font-weight: 600; }
 .opts.lgcats { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 8px; }
@@ -1122,7 +1122,7 @@ const I18N = {
   "lg.wo.NOUN": ["Bruges som et almindeligt navneord, ofte med af/til: «{1} …».", "Used as an ordinary noun, often with af/til: “{1} …”."],
   "lg.wo.VERB": ["Bruges som et almindeligt verbum i en hovedsætning: «det {1} …».", "Used as an ordinary verb: “det {1} …”."],
   "lg.notab": ["ikke i tabellen", "not in the table"], "lg.fq.t": ["{0} gange i prøverne siden 2020", "{0} times in the exams since 2020"],
-  "lg.drill": ["Hvilken slags?", "Which kind?"], "lg.drill.s": ["enkle sætninger · vælg slaget, så ordet", "simple sentences · pick the kind, then the word"], "lg.drill.l": ["Øv: hvilken slags logik?", "Practise: which kind of logic?"],
+  "lg.drill": ["Hvilken slags?", "Which kind?"], "lg.drill.s": ["enkle sætninger · vælg slaget, så ordet", "simple sentences · pick the kind, then the word"], "lg.drill.l": ["Øv: hvilken slags logik?", "Practise: which kind of logic?"], "lg.drill.k": ["Øv kun denne", "Practise just this one"], "lg.retry": ["Prøv igen", "Try again"],
   "gm.logic": ["Hvilken slags?", "Which kind?"], "gm.q.logic": ["Hvilken slags logik mangler her? Vælg først slaget, så ordet.", "Which kind of logic is missing here? Choose the kind first, then the word."],
   "lg.step1": ["1. Hvilken slags logik?", "1. Which kind of logic?"], "lg.step2": ["2. Hvilket ord passer?", "2. Which word fits?"],
   "lg.nofit.t": ["Hvorfor ikke «{0}»? «{0}» = {1}. Ordet har en anden ordstilling end det, hullet kræver. ", "Why not “{0}”? “{0}” = {1}. It has a different word order from what this gap needs. "],
@@ -3012,7 +3012,7 @@ function grFrame(x, inner) {
   $("#app").innerHTML = `<div class="narrow">
     <div class="counter"><span>${esc(GS.title)} · ${t("s.count", GS.i + 1, GS.queue.length)}</span><button class="btn quiet" id="gquit">✕ ${t("s.end")}</button></div>
     <div class="bar sessionbar" aria-hidden="true"><span style="width:${100 * GS.i / GS.queue.length}%"></span></div>
-    <div class="sheet q"><div class="kind">${t("gm." + x.type)} · <span lang="da">${esc(x.src)}</span></div>
+    <div class="sheet q"><div class="kind">${t("gm." + x.type)} · <span lang="da">${esc(x.src)}</span>${x.type === "logic" && x.retry ? ` · ${t("lg.retry")}` : ""}</div>
       <p class="prompt">${t("gm.q." + x.type)}</p>${inner}
       <div class="trrow">${trLink(x.s).replace(t("m.tr"), t("tr.sent"))}</div>
       <div class="row next" id="gbtns"></div><div id="fb"></div></div></div>`;
@@ -3164,7 +3164,8 @@ function grWhy(x, extra = {}) {
 }
 function grFeedback(x, ok, give, extra = {}) {
   if (!give) (x.type === "logic" ? lgSave : grSave)(x.id, ok);
-  GS.results.push({ id: x.id, ok });
+  if (!(x.type === "logic" && x.retry)) GS.results.push({ id: x.id, ok });   // the score is the first try
+  if (x.type === "logic" && !ok) GS.queue.push({ ...x, retry: true, flip: Math.random() < .5 });   // comes back at the end of the round until right
   const marks = x.type === "verbs" ? x.gaps.map(g => [g.at, g.w.length]) : x.type === "v2" || x.type === "clause" ? null : [[x.at, x.w.length]];
   let exam = esc(x.s);
   if (marks) { exam = ""; let at = 0; for (const [a, n] of marks) { exam += esc(x.s.slice(at, a)) + `<mark class="hl">${esc(x.s.slice(a, a + n))}</mark>`; at = a + n; } exam += esc(x.s.slice(at)); }
@@ -3196,8 +3197,8 @@ function grSummary() {
     <div class="row next"><button class="btn solid" id="gagain">${t("gm.again")}</button>
       ${miss.length ? `<button class="btn" id="gmiss">${t("gm.redo", miss.length)}</button>` : ""}
       <button class="btn quiet" id="gmenu">${t("gm.menu")}</button><button class="btn quiet" id="ghome">${t("gm.back")}</button></div></div></div>`;
-  const again = GS.type;
-  const restart = only => again === "logic" ? startLogic(only) : startGrammar(again, only);
+  const again = GS.type, kind = GS.kind;   // read before anything replaces GS
+  const restart = only => again === "logic" ? startLogic(only, kind) : startGrammar(again, only);
   $("#gagain").onclick = () => restart();
   if ($("#gmiss")) $("#gmiss").onclick = () => restart(miss);
   $("#gmenu").onclick = again === "logic" ? tankegang : grammarHome;
@@ -3250,7 +3251,7 @@ function tankegang() {
   const col = ([k, cl, sym]) => { const rows = lgRows(k), n = rows.reduce((a, r) => a + r[1].length, 0);
     return `<section class="lgcol lg-${cl}"><header><h2><span aria-hidden="true">${sym}</span>${t("lg.c." + k)}</h2><p>${t("lg.d." + k)}</p></header>
       <div class="lgbody">${rows.map(([h, cs]) => `<h3 class="lgsub" lang="da">${esc(h)}</h3><div class="lgchips">${cs.map(chip).join("")}</div>`).join("")}</div>
-      <div class="foot"><button type="button" class="txtbtn" data-lgfc="${k}">${ICONS.cards}${t("h.fc")} · ${n}</button></div></section>`; };
+      <div class="foot">${lgItems().some(x => x.cat === k) ? `<button type="button" class="txtbtn" data-lgdrill="${k}">${ICONS.pencil}${t("lg.drill.k")}</button>` : ""}<button type="button" class="txtbtn" data-lgfc="${k}">${ICONS.cards}${t("h.fc")} · ${n}</button></div></section>`; };
   const leg = ["ADV", "SUB", "KOO", "PRAEP", "NOUN", "VERB"], ex = { ADV: "jeg <b>går</b> derfor hjem · Derfor <b>går jeg</b> hjem", SUB: "selvom jeg <b>ikke har</b> tid", KOO: "men jeg <b>har</b> ikke tid", PRAEP: "på trods af <b>regnen</b>", NOUN: "en følge af <b>regnen</b>", VERB: "det <b>skyldes</b> regnen" };
   $("#app").innerHTML = `
     <div class="top"><a href="#" class="tvback" id="thome">${t("gm.back")}</a>
@@ -3265,21 +3266,36 @@ function tankegang() {
   if ($("#soGo")) $("#soGo").onclick = () => soStart();
   document.querySelectorAll(".lgchip").forEach(b => b.onclick = () => explain(DB.cards[b.dataset.id]));
   document.querySelectorAll("[data-lgfc]").forEach(b => b.onclick = () => startFlash(null, lgRows(b.dataset.lgfc).flatMap(r => r[1].map(x => x[0]))));
+  document.querySelectorAll("[data-lgdrill]").forEach(b => b.onclick = () => startLogic(null, b.dataset.lgdrill));
   window.scrollTo(0, 0);
 }
 
-// a round: 10 sentences, not yet solved first, every kind of logic at least once
-function startLogic(only) {
+// a round: 10 sentences, not yet solved first, every kind of logic at least once (or only one kind), no word twice in a round
+function startLogic(only, kind) {
   const st = lgStats(), solved = x => (st[x.id] || [0])[0] > 0;
   let q = only;
   if (!q) {
-    const pool = [...shuffle(lgItems().filter(x => !solved(x))), ...shuffle(lgItems().filter(solved))];
-    const first = LG_CATS.map(([k]) => pool.find(x => x.cat === k)).filter(Boolean);
-    q = shuffle([...first, ...pool.filter(x => !first.includes(x))].slice(0, 10));
+    let pool = [...shuffle(lgItems().filter(x => !solved(x))), ...shuffle(lgItems().filter(solved))];
+    if (kind) pool = pool.filter(x => x.cat === kind);
+    else { const first = LG_CATS.map(([k]) => pool.find(x => x.cat === k)).filter(Boolean); pool = [...first, ...pool.filter(x => !first.includes(x))]; }
+    // one sentence per word first; a small pool (ulogisk has few words) fills up with other sentences, never the same one twice
+    const cards = new Set(), ids = new Set();
+    q = [];
+    for (const x of pool) if (q.length < 10 && !cards.has(x.card)) { cards.add(x.card); ids.add(x.id); q.push(x); }
+    for (const x of pool) if (q.length < 10 && !ids.has(x.id)) { ids.add(x.id); q.push(x); }
+    q = shuffle(q);
+    for (let pass = 0; pass < 10; pass++) {   // a word never comes twice in a row
+      let moved = false;
+      for (let i = 1; i < q.length; i++) if (q[i].card === q[i - 1].card) {
+        const j = q.findIndex((y, k) => k > i && y.card !== q[i - 1].card);
+        if (j > 0) { [q[i], q[j]] = [q[j], q[i]]; moved = true; }
+      }
+      if (!moved) break;
+    }
   }
   q = q.map(x => ({ ...x, flip: Math.random() < .5 }));   // flip decides once per round whether the answer is shown first or second
   if (!q.length) return;
-  GS = { type: "logic", queue: q, i: 0, results: [], title: t("lg.drill") };
+  GS = { type: "logic", queue: q, i: 0, results: [], title: kind ? t("lg.drill") + " · " + t("lg.c." + kind) : t("lg.drill"), kind: kind || null };
   grStep();
 }
 // the words shown for the kind you picked. Right kind: the answer and the item's one alt (same kind, never fits), in an order fixed for the round.
