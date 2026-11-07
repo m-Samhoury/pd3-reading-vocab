@@ -270,7 +270,8 @@ ok("mine year select", await ev(`(()=>{ mineView("mine_mock"); const s=document.
 ok("mine level select", await ev(`(()=>{ mineView("mine_mock"); const s=document.querySelector('[data-mn-level="mine_mock"]'); s.value="medium"; s.dispatchEvent(new Event("change")); return [${mkG}.level, document.querySelector('[data-mn-level="mine_mock"]').value]; })()`));
 ok("mine medium build", await ev(`(()=>{ const b=mnMockBuild(${mkG}); if(!b) return "null"; const all=[b.example,...b.items], lim=b.relaxed?140:110, cl=b.relaxed?2:1;
   return { level: b.level, relaxed: b.relaxed, items: b.items.length, shortEnough: all.every(x=>x.s.length<=lim), commas: all.every(x=>(x.s.match(/,/g)||[]).length<=cl), noBadMarks: all.every(x=>!/[;:–]/.test(x.s)) }; })()`));
-ok("mine medium hand in", await ev(`(()=>{ startMineMock("mine_mock"); MK.items.forEach((x,i)=>document.querySelector('.mkcell[data-r="'+i+'"][data-o="'+x.right+'"]').click()); $("#mkdone").click(); const s=mkStore().mine["mine_mock"].slice(-1)[0]; return [s[3], s[1], s[2]]; })()`));
+ok("mine medium clean", await ev(`(()=>{ const m=${mkG}, b=mnMockBuild(m); if(!b) return "null"; const caps=mnCaps(m.ids.map(id=>DB.cards[id]).filter(Boolean)); const bad=[b.example,...b.items].filter(x=>!mnClean(x.s,caps)).map(x=>x.s); return { relaxed: b.relaxed, bad }; })()`));
+ok("mine medium hand in",await ev(`(()=>{ startMineMock("mine_mock"); MK.items.forEach((x,i)=>document.querySelector('.mkcell[data-r="'+i+'"][data-o="'+x.right+'"]').click()); $("#mkdone").click(); const s=mkStore().mine["mine_mock"].slice(-1)[0]; return [s[3], s[1], s[2]]; })()`));
 ok("mine mock clean-up",await ev(`(()=>{ MINE=MINE.filter(g=>g.id!=="mine_mock"); mineSave(); mineView(null); return [MINE.length, GROUP_ORDER.some(g=>g==="mine_mock")]; })()`));
 console.log("errors:", errs);
 await send("Browser.close").catch(() => {}); chrome.kill(); process.exit(0);

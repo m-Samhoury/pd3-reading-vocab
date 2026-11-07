@@ -3928,14 +3928,35 @@ function mnItem(x, m) {
 // the sentence filter by difficulty. Hard: the exam's own length. Medium: short, plain sentences (one comma at most, no ; : – - or quotes,
 // fewer than two subordinate-clause words outside the gap). Soft medium: longer and two commas, the clause rule dropped
 const MN_BAD = /[;:–\-“”"]/, MN_CLAUSE = /(?<![\wæøåÆØÅ])(som|der|hvis|fordi|når|selvom|mens|at|hvor)(?![\wæøåÆØÅ])/gi;
-function mnFits(x, level, soft) {
+function mnFits(x, level, soft, caps) {
   if (!(Array.isArray(x.m) && x.m[0] >= 0 && x.m[1] > x.m[0] && x.m[1] <= x.s.length)) return false;
   const n = x.s.length;
   if (level !== "medium") return n >= 40 && n <= 230;
   const commas = (x.s.match(/,/g) || []).length;
-  if (soft) return n >= 25 && n <= 140 && commas <= 2 && !MN_BAD.test(x.s);
+  if (soft) return n >= 25 && n <= 140 && commas <= 2 && !MN_BAD.test(x.s) && mnClean(x.s, caps);
   const outside = x.s.slice(0, x.m[0]) + " " + x.s.slice(x.m[1]);
-  return n >= 25 && n <= 110 && commas <= 1 && !MN_BAD.test(x.s) && (outside.match(MN_CLAUSE) || []).length < 2;
+  return n >= 25 && n <= 110 && commas <= 1 && !MN_BAD.test(x.s) && (outside.match(MN_CLAUSE) || []).length < 2 && mnClean(x.s, caps);
+}
+// a whole sentence: a capital (or digit) to start, a single . ! or ? to end, no " . " or "..", and no joined heading
+// ("…plan Uddannelse er…"): a lowercase word straight before a capitalised word after the first two. Names are allowed
+// when the word is capitalised in at least one other sentence of the group (caps), or is in the short list below
+const MN_NAMES = /^(Danmark|København|Aarhus|Bornholm|Tivoli|Jylland|Fyn|Sjælland|DR|EU)$/;
+function mnClean(s, caps, heads = true) {
+  if (!/^[A-ZÆØÅ0-9]/.test(s) || !/[\wæøåÆØÅ"”»][.!?]$/.test(s) || s.includes("..") || s.includes(" . ")) return false;
+  if (!heads) return true;
+  const w = s.split(/\s+/);
+  return !w.some((x, i) => i >= 2 && /^[a-zæøå]+$/.test(w[i - 1]) && /^[A-ZÆØÅ][\wæøåÆØÅ]*$/.test(x) && !MN_NAMES.test(x) && !((caps && caps.get(x)) >= 2));
+}
+// how many sentences of the group capitalise each word after the first two (names are the ones that repeat)
+function mnCaps(cs) {
+  const seen = new Set(), n = new Map();
+  cs.forEach(c => (DB.sentences[c.id] || []).forEach(x => {
+    const k = x.src + "|" + x.s;
+    if (seen.has(k)) return;
+    seen.add(k);
+    new Set(x.s.split(/\s+/).slice(2).map(w => w.replace(/[^\wæøåÆØÅ]/g, "")).filter(w => /^[A-ZÆØÅ]/.test(w))).forEach(w => n.set(w, (n.get(w) || 0) + 1));
+  }));
+  return n;
 }
 // medium falls back to the softer filter, then to hard; relaxed marks any fallback
 function mnMockBuild(m) {
@@ -3945,11 +3966,13 @@ function mnMockBuild(m) {
 }
 // 9 items at most: one example and 8 gaps, round-robin over the group's words, at most 2 sentences a word, unused sentences first
 function mnPick(m, level, soft) {
-  const avoid = mnAvoid(m), used = new Set(mkStore().mineUsed || []), mine = m.ids.map(id => DB.cards[id]).filter(Boolean), per = {};
+  const avoid = mnAvoid(m), used = new Set(mkStore().mineUsed || []), mine = m.ids.map(id => DB.cards[id]).filter(Boolean), per = {}, caps = mnCaps(mine);
   for (const c of mine) {
-    const list = (DB.sentences[c.id] || []).filter(x => x.src.slice(0, 4) !== avoid && mnFits(x, level, soft))
+    const list = (DB.sentences[c.id] || []).filter(x => x.src.slice(0, 4) !== avoid && mnFits(x, level, soft, caps))
       .map(x => ({ card: c.id, src: x.src, s: x.s, at: x.m[0], w: x.s.slice(x.m[0], x.m[1]), key: "mine|" + x.src + "|" + x.s.slice(0, 30) }));
-    per[c.id] = [...shuffle(list.filter(x => !used.has(x.key))), ...shuffle(list.filter(x => used.has(x.key)))];
+    // unused first, and within each, whole clean sentences before the rest (for Svær this is a preference: the list is not filtered)
+    const cl = x => mnClean(x.s, caps) ? 0 : 1;
+    per[c.id] = [...shuffle(list.filter(x => !used.has(x.key))).sort((a, b) => cl(a) - cl(b)), ...shuffle(list.filter(x => used.has(x.key))).sort((a, b) => cl(a) - cl(b))];
   }
   const order = shuffle(mine.filter(c => per[c.id].length)), cnt = {}, seen = new Set(), got = [];
   let more = true;
