@@ -1377,6 +1377,7 @@ const CONFUSABLES = [
   ["dermed", "derved", "both = thereby / thus", "begge = på den måde / som følge heraf"],
   ["følgelig", "derfor", "both = therefore; følgelig is formal", "begge = derfor; følgelig er formelt"],
   ["at_sikre", "at_garantere", "both = make sure; garantere is stronger (promise)", "begge = sørge for; garantere er stærkere (et løfte)"],
+  ["at_erkende", "at_indrømme", "both = admit + noun or at-clause. erkende = accept that something is true, often after thinking (formal: Ministeren erkender, at …) · indrømme = own up to a mistake or something you would rather hide (everyday: Han indrømmede fejlen). In L3 they cancel out.", "begge = sige, at noget er sandt + navneord eller at-sætning. erkende = acceptere, at noget er sandt, tit efter overvejelse (formelt: Ministeren erkender, at …) · indrømme = tilstå en fejl eller noget, man helst ville skjule (hverdag: Han indrømmede fejlen). I L3 udelukker de hinanden."],
   ["næppe", "næsten_ikke", "same meaning: næppe is the formal one", "samme betydning: næppe er det formelle"],
 ];
 const tip = p => p[LANG === "en" ? 2 : 3];
@@ -2591,7 +2592,7 @@ function flushPending() {
 
 // ---------- confusables drill ----------
 // pairs that mean the same thing can't be tested with a gap (either word fits): they get an L3-style check instead
-const SAME_MEANING = new Set(["derfor|således", "næppe|næsten_ikke", "imidlertid|dog", "at_medføre|at_forårsage", "at_forhindre|at_forebygge", "at_begrænse|at_reducere", "undtagen|bortset_fra", "hvis|såfremt", "skønt|selvom", "ikke_desto_mindre|alligevel", "desuden|derudover", "endvidere|ydermere", "især|navnlig", "for_eksempel_fx|eksempelvis", "i_stedet_for|frem_for", "derefter|herefter", "alt_i_alt|samlet_set", "dermed|derved", "følgelig|derfor", "at_sikre|at_garantere"]);
+const SAME_MEANING = new Set(["derfor|således", "næppe|næsten_ikke", "imidlertid|dog", "at_medføre|at_forårsage", "at_forhindre|at_forebygge", "at_begrænse|at_reducere", "undtagen|bortset_fra", "hvis|såfremt", "skønt|selvom", "ikke_desto_mindre|alligevel", "desuden|derudover", "endvidere|ydermere", "især|navnlig", "for_eksempel_fx|eksempelvis", "i_stedet_for|frem_for", "derefter|herefter", "alt_i_alt|samlet_set", "dermed|derved", "følgelig|derfor", "at_sikre|at_garantere", "at_erkende|at_indrømme"]);
 // per pair: which of a word's labelled senses to use, and senses where the partner also fits (counted right, with a note)
 const PAIR_SENSES = { "mens|hvorimod": { mens: { both: ["contrast"] }, hvorimod: { skip: true } } };
 const RELATED = { "konsekvens": ["årsag", "formål", "konklusion"], "årsag": ["konsekvens", "formål"], "kontrast": ["indrømmelse"], "indrømmelse": ["kontrast"] };
