@@ -1037,6 +1037,11 @@ const I18N = {
   "mn.add": ["Tilføj", "Add"], "mn.added": ["Tilføjet", "Added"], "mn.rm": ["Fjern {0}", "Remove {0}"],
   "mn.in": ["Ordene i gruppen", "Words in the group"], "mn.empty": ["Ingen ord endnu. Søg ovenfor og tryk Tilføj.", "No words yet. Search above and press Add."],
   "mn.link.s": ["{0} grupper · lav din egen", "{0} groups · make your own"], "mn.open": ["Rediger mine ord", "Edit my words"],
+  "mn.avoid": ["Ikke sætninger fra", "No sentences from"], "mn.avoid.none": ["intet år", "no year"], "mn.avoid.guess": [" (gæt)", " (guess)"],
+  "mn.mock": ["Mock Læsning 3", "Mock Reading 3"], "mn.mk.last": ["Mock Læsning 3 · sidst: {0}/{1}", "Mock Reading 3 · last: {0}/{1}"],
+  "mn.mk.note": ["Rigtige sætninger fra prøverne – ikke fra {0} – med ordene fra din gruppe \"{1}\". Sætningerne hænger ikke sammen som én tekst. Svarmulighederne er helst andre ord fra gruppen.", "Real exam sentences – not from {0} – with the words from your group \"{1}\". The sentences don't form one text. The options are other words from the group where possible."],
+  "mn.mk.instr": ["Der er fjernet {0} ord eller udtryk, og hullerne er angivet med tallene 1–{0}. Vælg i svararket nedenfor det ord eller udtryk (A, B, C eller D), der passer til hvert hul. Der er et eksempel angivet som 0. Der gives 1 point for hvert korrekt svar.", "{0} words or phrases were removed, and the gaps are numbered 1–{0}. In the answer table below, choose the word or phrase (A, B, C or D) that fits each gap. There is an example, marked 0. Each correct answer gives 1 point."],
+  "mn.mk.few": ["Der er ikke sætninger nok fra de andre år til en mock af denne gruppe endnu.", "Not enough sentences from the other years for a mock of this group yet."],
   "p.4": ["Hyppige ord", "Frequent words"], "p.4.s": ["Ord fra prøverne, sorteret efter hvor tit de er kommet siden 2020. De vigtigste står først.", "Words from the exams, ranked by how often they've come up since 2020. The most important come first."],
   "p.4.n": ["Top {0}–{1} · {2} siden 2020", "Top {0}–{1} · {2} since 2020"], "p.4.old": ["Top {0}–{1} · kun før 2020", "Top {0}–{1} · only before 2020"],
   "g.due": ["{0} skal gentages", "{0} due"], "g.words": ["{0} ord", "{0} words"], "g.next": ["næste gang {0}", "next {0}"],
@@ -1875,9 +1880,11 @@ function mineView(gid = mineEdit) {
   const cur = MINE.find(g => g.id === gid) || null;
   mineEdit = cur ? cur.id : null;
   const cardsOf = m => m.ids.map(id => DB.cards[id]).filter(Boolean);
+  const yrs = mnYearsAll();
   const rows = MINE.map(m => {
-    const cs = cardsOf(m), isOpen = m.id === mineEdit;
+    const cs = cardsOf(m), isOpen = m.id === mineEdit, av = mnAvoid(m), guess = mnGuessYear(m);
     const b = (act, txt, icon, dis) => `<button type="button" class="btn quiet" data-mn-${act}="${esc(m.id)}"${dis ? " disabled" : ""}>${icon}${esc(txt)}</button>`;
+    const yearSel = `<label class="mnyear small">${t("mn.avoid")} <select data-mn-year="${esc(m.id)}"><option value=""${av === "" ? " selected" : ""}>${t("mn.avoid.none")}</option>${yrs.map(y => `<option value="${y}"${av === y ? " selected" : ""}>${y}${y === guess ? t("mn.avoid.guess") : ""}</option>`).join("")}</select></label>`;
     const editor = `<div class="mnedit">
         <form id="mnRen" class="mnnew"><label class="lbl" for="mnRenName">${t("mn.rename")}</label><input id="mnRenName" type="text" maxlength="40" value="${esc(m.name)}" aria-label="${esc(t("mn.rename"))}"><button type="submit" class="btn">${t("mn.save")}</button></form>
         <div class="row"><button type="button" class="btn quiet" id="mnDel">${t("mn.del")}</button></div>
@@ -1886,8 +1893,9 @@ function mineView(gid = mineEdit) {
         <span class="lbl" id="mnCount">${t("mn.in")} · ${cs.length}</span>
         <div id="mnwords" class="mnwords"></div>
       </div>`;
-    return `<li class="sheet mngroup${isOpen ? " open" : ""}"><b>${esc(m.name)}</b><small${isOpen ? ' id="mnN"' : ""}>${t("mn.words", cs.length)}</small>${wordDots(cs)}
-      <div class="row">${b("edit", isOpen ? t("mn.done") : t("mn.edit"), "")}${b("learn", t("tv.v.learn"), ICONS.spark, !cs.some(c => stateOf(c) === "new"))}${b("review", t("tv.v.review"), ICONS.repeat, !cs.some(c => c.history.length))}${b("test", t("tv.v.test"), ICONS.pencil, !cs.some(c => c.history.length))}${b("flash", t("h.fc"), ICONS.cards, !cs.length)}</div>
+    return `<li class="sheet mngroup${isOpen ? " open" : ""}"><b>${esc(m.name)}</b>${mnLast(m)}<small${isOpen ? ' id="mnN"' : ""}>${t("mn.words", cs.length)}</small>${wordDots(cs)}
+      <div class="row">${b("edit", isOpen ? t("mn.done") : t("mn.edit"), "")}${b("learn", t("tv.v.learn"), ICONS.spark, !cs.some(c => stateOf(c) === "new"))}${b("review", t("tv.v.review"), ICONS.repeat, !cs.some(c => c.history.length))}${b("test", t("tv.v.test"), ICONS.pencil, !cs.some(c => c.history.length))}${b("flash", t("h.fc"), ICONS.cards, !cs.length)}${b("mock", t("mn.mock"), ICONS.pencil, cs.length < 2)}</div>
+      ${yearSel}
       ${isOpen ? editor : ""}</li>`;
   }).join("");
   $("#app").innerHTML = `<div class="top" id="mnbox">
@@ -1906,6 +1914,8 @@ function mineView(gid = mineEdit) {
   document.querySelectorAll("[data-mn-review]").forEach(b => b.onclick = () => startSession({ groups: [b.dataset.mnReview], fresh: 0 }));
   document.querySelectorAll("[data-mn-test]").forEach(b => b.onclick = () => startExercise([b.dataset.mnTest]));
   document.querySelectorAll("[data-mn-flash]").forEach(b => b.onclick = () => startFlash([b.dataset.mnFlash]));
+  document.querySelectorAll("[data-mn-mock]").forEach(b => b.onclick = () => startMineMock(b.dataset.mnMock));
+  document.querySelectorAll("[data-mn-year]").forEach(s => s.onchange = () => { MINE.find(g => g.id === s.dataset.mnYear).avoid = s.value; mineSave(); mineView(); });
   if (cur) {
     $("#mnRen").onsubmit = e => { e.preventDefault(); const n = $("#mnRenName").value.trim(); if (n) cur.name = n; mineSave(); mineView(); };
     $("#mnDel").onclick = () => { if (!confirm(t("mn.del.q", cur.name))) return; MINE = MINE.filter(g => g !== cur); mineSave(); mineView(null); };
@@ -1938,9 +1948,15 @@ function mnWords() {
   if ($("#mnCount")) $("#mnCount").textContent = `${t("mn.in")} · ${m.ids.length}`;
   if ($("#mnN")) $("#mnN").textContent = t("mn.words", m.ids.length);
   // the group's buttons follow its words, so a group just filled can be learnt straight away
-  const on = { learn: cs.some(c => stateOf(c) === "new"), review: cs.some(c => c.history.length), test: cs.some(c => c.history.length), flash: cs.length > 0 };
+  const on = { learn: cs.some(c => stateOf(c) === "new"), review: cs.some(c => c.history.length), test: cs.some(c => c.history.length), flash: cs.length > 0, mock: cs.length > 1 };
   for (const [act, ok] of Object.entries(on)) { const b = $(`[data-mn-${act}="${CSS.escape(m.id)}"]`); if (b) b.disabled = !ok; }
 }
+// the year whose exam sentences a group's mock leaves out: the group's own choice (m.avoid), else the year that holds most of its words
+const mnYears = m => { const by = {}; for (const id of m.ids) [...new Set((DB.sentences[id] || []).map(x => x.src.slice(0, 4)))].forEach(y => by[y] = (by[y] || 0) + 1); return by; };
+const mnGuessYear = m => { const by = mnYears(m); return Object.keys(by).sort((a, b) => by[b] - by[a] || b.localeCompare(a))[0] || ""; };
+const mnAvoid = m => m.avoid === undefined ? mnGuessYear(m) : m.avoid;
+const mnYearsAll = () => [...new Set(Object.values(DB.sentences).flat().map(x => x.src.slice(0, 4)))].filter(y => /^\d{4}$/.test(y)).sort().reverse();
+const mnLast = m => { const s = ((mkStore().mine || {})[m.id] || []).slice(-1)[0]; return s ? `<small class="mnlast">${t("mn.mk.last", s[1], s[2])}</small>` : ""; };
 
 const ICONS = Object.fromEntries(Object.entries({
   play: '<path d="M8 5.5v13l10.5-6.5z" fill="currentColor" stroke="none"/>',
@@ -3844,28 +3860,97 @@ function mockView() {
       <div class="trrow">${trLink(x.s).replace(t("m.tr"), t("tr.sent"))}<button type="button" class="linkbtn" data-more="${esc(x.card)}">${t("b.more")}</button></div></article>`; }).join("")}</section>` : "";
   $("#app").innerHTML = `<div class="narrow mock">
     <div class="counter"><span><span class="mkpill">${t("mk.pill")}</span> ${t("mk.title")}</span><button class="btn quiet" id="mkquit">✕ ${t("s.end")}</button></div>
-    <p class="mknote">${t("mk.note")}${m.topics ? ` ${t("mk.sel", m.topics)}.` : ""}${m.outside ? ` ${t("mk.fill", m.outside)}` : ""}</p>
-    ${m.done ? `<div class="sheet q mkresult"><span class="score">${score}/${n}</span><span class="soft">${t("mk.score", score, n)}</span></div>` : `<div class="sheet q"><p class="small">${t("mk.instr")}</p></div>`}
+    <p class="mknote">${m.mine ? t("mn.mk.note", esc(m.avoid || t("mn.avoid.none")), esc(MINE.find(g => g.id === m.mine)?.name || "")) : t("mk.note")}${m.topics ? ` ${t("mk.sel", m.topics)}.` : ""}${m.outside ? ` ${t("mk.fill", m.outside)}` : ""}</p>
+    ${m.done ? `<div class="sheet q mkresult"><span class="score">${score}/${n}</span><span class="soft">${t("mk.score", score, n)}</span></div>` : `<div class="sheet q"><p class="small">${t(m.mine ? "mn.mk.instr" : "mk.instr", n)}</p></div>`}
     <div class="sheet q mktext"><ol class="mksents">${m.items.map((x, i) => `<li value="${i + 1}" lang="da">${sent(x, gap(i + 1))}</li>`).join("")}</ol></div>
     <section class="sheet q mktable"><h2>${t("mk.sheet")}</h2><div class="mkgrid"><div class="mkrow head"><span class="mkn"></span>${MK_L.map(l => `<span>${l}</span>`).join("")}</div>${rows}</div>
       ${m.done ? `<div class="row next"><button class="btn solid" id="mknew">${t("mk.new")}</button><button class="btn quiet" id="mkhome">${t("gm.back")}</button></div>`
         : `<div class="row next"><button class="btn solid" id="mkdone"${got ? "" : " disabled"}>${t("mk.submit")}</button><span class="soft small">${t("mk.n", got, n)}</span></div>`}</section>
     ${review}</div>`;
-  $("#mkquit").onclick = () => { MK = null; home(); window.scrollTo(0, 0); };
+  // a mock from a Mine ord group goes back to that group; the others go home
+  const back = () => { const g = m.mine; MK = null; if (g) mineView(g); else home(); window.scrollTo(0, 0); };
+  $("#mkquit").onclick = back;
   document.querySelectorAll(".mkcell:not([disabled])").forEach(b => b.onclick = () => {
     const i = +b.dataset.r, y = window.scrollY; m.ans[i] = +b.dataset.o; mockView(); window.scrollTo(0, y);
     document.querySelector(`.mkcell[data-r="${i}"][data-o="${b.dataset.o}"]`)?.focus({ preventScroll: true });
   });
   if ($("#mkdone")) $("#mkdone").onclick = () => {
-    const st = mkStore(); m.done = true;
-    st.scores = [...(st.scores || []), [iso(new Date()), m.items.filter((x, i) => m.ans[i] === x.right).length]].slice(-20);
-    st.used = [...new Set([...(st.used || []), ...m.items.map(x => x.key), m.example.key])].slice(-300);
+    const st = mkStore(), sc = m.items.filter((x, i) => m.ans[i] === x.right).length; m.done = true;
+    if (m.mine) {   // a group's mock keeps its own scores and never uses up the main mock's sentences
+      st.mine = { ...(st.mine || {}), [m.mine]: [...((st.mine || {})[m.mine] || []), [iso(new Date()), sc, m.items.length]].slice(-20) };
+      st.mineUsed = [...new Set([...(st.mineUsed || []), ...m.items.map(x => x.key), m.example.key])].slice(-300);
+    } else {
+      st.scores = [...(st.scores || []), [iso(new Date()), sc]].slice(-20);
+      st.used = [...new Set([...(st.used || []), ...m.items.map(x => x.key), m.example.key])].slice(-300);
+    }
     mkWrite(st); mockView(); $(".mkresult")?.scrollIntoView({ block: "start" });
   };
-  if ($("#mknew")) $("#mknew").onclick = () => { startMock(); window.scrollTo(0, 0); };
-  if ($("#mkhome")) $("#mkhome").onclick = () => { MK = null; home(); window.scrollTo(0, 0); };
+  if ($("#mknew")) $("#mknew").onclick = () => { if (m.mine) startMineMock(m.mine); else startMock(); window.scrollTo(0, 0); };
+  if ($("#mkhome")) $("#mkhome").onclick = back;
   document.querySelectorAll("[data-more]").forEach(b => b.onclick = () => explain(DB.cards[b.dataset.more]));
   bindTr($("#app"));
+}
+// Mine ord mock: real exam sentences from the other years, with the words of one of the learner's groups in the gaps.
+// Options: other words of the group where possible, then other deck words of the same kind. Never a same-meaning partner.
+const mnKind = c => LG[c.id] ? "conn" : c.word.startsWith("at ") ? "verb" : "noun";
+const mnMates = id => new Set([...CONFUSABLES.map(p => p.slice(0, 2)), ...[...SAME_MEANING].map(k => k.split("|"))].filter(p => p.includes(id)).flat());
+const mnCommon = y => { const n = {}; (DB.sentences[y.id] || []).forEach(x => { if (Array.isArray(x.m)) { const f = x.s.slice(x.m[0], x.m[1]).toLowerCase(); n[f] = (n[f] || 0) + 1; } }); return Object.keys(n).sort((a, b) => n[b] - n[a])[0] || null; };
+// another verb in the same form, inflected on its first word only (the particle is not inflected): the answer's stem is swapped
+// for the other verb's; a final e is dropped the same way on both. Only for a one-word gap, the stem being the answer's first word
+const mnVerb = (y, w, stem) => { const drop = !w.startsWith(stem), base = drop ? stem.replace(/e$/, "") : stem, o = y.word.replace(/^at /, "").split(" ")[0]; return w.startsWith(base) ? (drop ? o.replace(/e$/, "") : o) + w.slice(base.length) : null; };
+const mnGlued = /\s(mod|på|for|om|af|til|med|over|efter|fra|ved|under|imod)[a-zæøå]+$/;   // a preposition with an inflection ending stuck on: "spare påde"
+// one item: the sentence's word and three wrong forms of the same kind; null when three cannot be found
+function mnItem(x, m) {
+  const c = DB.cards[x.card], kind = mnKind(c), low = x.s.toLowerCase(), w = x.w.toLowerCase(), stem = c.word.replace(/^at /, "").split(" ")[0], mates = mnMates(c.id), single = !w.includes(" ");
+  const ok = y => y.id !== c.id && !mates.has(y.id) && mnKind(y) === kind;
+  // linking words: the same word type (an adverb's options are adverbs, not the verb "medføre"); the group's own words first, then the deck
+  const same = y => kind !== "conn" || LG[y.id][1] === LG[c.id][1];
+  const near = shuffle(m.ids.map(id => DB.cards[id]).filter(y => y && ok(y) && same(y))), far = shuffle(cards().filter(y => ok(y) && !m.ids.includes(y.id))).sort((a, b) => same(b) - same(a));
+  const opts = [], ids = [];
+  for (const y of [...near, ...far]) {
+    if (opts.length >= 3) break;
+    if (ids.some(id => mnMates(id).has(y.id))) continue;   // two options that mean the same would both fit
+    const raw = kind === "verb" ? (single ? mnVerb(y, w, stem) : null) || mnCommon(y) : mnCommon(y) || y.word.replace(/^(en|et|at) /, "").replace(/\s*\((.*?)\)/g, " $1");   // "tilstrømning (af)" → "tilstrømning af"
+    const f = raw?.toLowerCase().trim();
+    if (!f || f === w || low.includes(f) || opts.includes(f) || (kind === "verb" && mnGlued.test(f))) continue;
+    opts.push(f); ids.push(y.id);
+  }
+  if (opts.length < 3) return null;
+  const right = lowFirst(x.w), all = shuffle([right, ...opts]);
+  return { kind, card: c.id, src: x.src, prev: "", s: x.s, at: x.at, w: x.w, key: x.key, opts: all, right: all.indexOf(right) };
+}
+// 9 items at most: one example and 8 gaps, round-robin over the group's words, at most 2 sentences a word, unused sentences first
+function mnMockBuild(m) {
+  const avoid = mnAvoid(m), used = new Set(mkStore().mineUsed || []), mine = m.ids.map(id => DB.cards[id]).filter(Boolean), per = {};
+  for (const c of mine) {
+    const list = (DB.sentences[c.id] || []).filter(x => x.src.slice(0, 4) !== avoid && x.s.length >= 40 && x.s.length <= 230 && Array.isArray(x.m) && x.m[0] >= 0 && x.m[1] > x.m[0] && x.m[1] <= x.s.length)
+      .map(x => ({ card: c.id, src: x.src, s: x.s, at: x.m[0], w: x.s.slice(x.m[0], x.m[1]), key: "mine|" + x.src + "|" + x.s.slice(0, 30) }));
+    per[c.id] = [...shuffle(list.filter(x => !used.has(x.key))), ...shuffle(list.filter(x => used.has(x.key)))];
+  }
+  const order = shuffle(mine.filter(c => per[c.id].length)), cnt = {}, seen = new Set(), got = [];
+  let more = true;
+  while (more && got.length < 9) {
+    more = false;
+    for (const c of order) {
+      if (got.length >= 9) break;
+      const x = per[c.id].find(y => !seen.has(y.key));
+      if (!x || (cnt[c.id] || 0) >= 2) continue;
+      seen.add(x.key); more = true;
+      const it = mnItem(x, m);
+      if (it) { cnt[c.id] = (cnt[c.id] || 0) + 1; got.push(it); }
+    }
+  }
+  if (got.length < 4) return null;
+  const ex = Math.max(0, got.findIndex(x => x.kind === "verb")), example = got.splice(ex, 1)[0];
+  return { example, items: shuffle(got), ans: Array(got.length).fill(null), done: false, outside: 0, topics: 0, mine: m.id, avoid };
+}
+function startMineMock(gid) {
+  const g = MINE.find(x => x.id === gid);
+  if (!g) return;
+  S = null; FC = null; GS = null;
+  MK = mnMockBuild(g);
+  if (!MK) { alert(t("mn.mk.few")); return; }
+  mockView();
 }
 
 // ---------- Læsning 2B · Indsæt tekststykket (pd3-data/l2b.json) ----------
