@@ -6021,5 +6021,377 @@
   "construction": [],
   "brug": [],
   "brug_src": "DDO"
+ },
+ "at_afskaffe": {
+  "word": "at afskaffe",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "afskaffe",
+    "afskaffer",
+    "afskaffede",
+    "afskaffet"
+   ]
+  ],
+  "grammar": [
+   "NOGEN/NOGET afskaffer NOGET"
+  ],
+  "construction": [
+   "afskaffe + navneord (ingen præposition)"
+  ],
+  "brug": [
+   "afskaffe ventelisterne",
+   "afskaffe arbejdsløsheden"
+  ],
+  "brug_src": "DDO"
+ },
+ "at_advare_mod": {
+  "word": "at advare (mod)",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "advare",
+    "advarer",
+    "advarede",
+    "advaret"
+   ]
+  ],
+  "grammar": [
+   "NOGEN/NOGET advarer NOGEN (om at+SÆTNING/NOGET/NOGEN)",
+   "NOGEN advarer NOGEN (om at+SÆTNING/NOGET/NOGEN)",
+   "NOGEN/NOGET advarer (NOGEN) (mod at+INFINITIV)",
+   "NOGEN advarer (NOGEN) (mod NOGEN/NOGET)",
+   "NOGEN advarer (NOGEN) om NOGET/at+SÆTNING"
+  ],
+  "construction": [
+   "advare nogen mod noget / mod at + infinitiv"
+  ],
+  "brug": [
+   "råbe advarende",
+   "advare på det kraftigste"
+  ],
+  "brug_src": "DDO"
+ },
+ "et_miljoemaerke": {
+  "word": "et miljømærke",
+  "pos": "substantiv, intetkøn",
+  "gender": "et",
+  "inflection": "-t, -r, -rne",
+  "forms": [
+   [
+    "miljømærke",
+    "miljømærket",
+    "miljømærker",
+    "miljømærkerne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [
+   "varer med (et) miljømærke"
+  ],
+  "brug": [
+   "miljømærkede varer",
+   "købe varer med miljømærke"
+  ],
+  "brug_src": "note"
+ },
+ "at_spare_paa": {
+  "word": "at spare (på)",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "spare",
+    "sparer",
+    "sparede",
+    "sparet"
+   ]
+  ],
+  "grammar": [
+   "NOGEN sparer (NOGET)",
+   "NOGEN sparer på NOGET",
+   "NOGEN sparer (i/på NOGET)",
+   "NOGEN sparer NOGET+RETNING",
+   "NOGEN/NOGET sparer NOGET",
+   "NOGEN sparer NOGEN/sig+ADVERBIAL",
+   "NOGEN sparer NOGET",
+   "NOGEN/NOGET sparer NOGEN/NOGET (for) NOGET",
+   "NOGEN/NOGET sparer NOGEN for at+INFINITIV",
+   "NOGEN sparer NOGEN",
+   "NOGEN sparer (NOGET) op (til NOGET) i tilknytning hertil adjektivet opsparet",
+   "NOGEN sparer (NOGET) op i tilknytning hertil adjektivet opsparet",
+   "NOGEN sparer (NOGET) sammen (til NOGET) i tilknytning hertil adjektivet sammensparet",
+   "NOGEN sparer (NOGET) sammen i tilknytning hertil adjektivet sammensparet",
+   "NOGEN sparer sig (NOGET/at+INFINITIV)"
+  ],
+  "construction": [
+   "spare på noget"
+  ],
+  "brug": [
+   "spare penge",
+   "spare portoen",
+   "spar mig for..",
+   "opsparede midler",
+   "opsparet kapital"
+  ],
+  "brug_src": "DDO"
+ },
+ "en_pligt_til": {
+  "word": "en pligt (til)",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "pligt",
+    "pligten",
+    "pligter",
+    "pligterne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [
+   "have pligt til at + infinitiv"
+  ],
+  "brug": [
+   "moralsk pligt"
+  ],
+  "brug_src": "DDO"
+ },
+ "et_problem_for": {
+  "word": "et problem (for)",
+  "pos": "substantiv, intetkøn",
+  "gender": "et",
+  "inflection": "-et, -er, -erne",
+  "forms": [
+   [
+    "problem",
+    "problemet",
+    "problemer",
+    "problemerne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [
+   "et problem for nogen"
+  ],
+  "brug": [
+   "uløste problemer",
+   "etiske problemer"
+  ],
+  "brug_src": "DDO"
+ },
+ "et_eksempel_paa": {
+  "word": "et eksempel (på)",
+  "pos": "substantiv, intetkøn",
+  "gender": "et",
+  "inflection": "eller uofficiel form: Se bøjning i skema",
+  "forms": [
+   [
+    "eksempel",
+    "eksemplet(elleruofficielform:eksempelet)",
+    "eksempler",
+    "eksemplerne"
+   ]
+  ],
+  "grammar": [
+   "eksempel på NOGET/at+SÆTNING/hv+SÆTNING",
+   "være et eksempel (for NOGEN)"
+  ],
+  "construction": [
+   "et eksempel på noget"
+  ],
+  "brug": [
+   "grelt eksempel",
+   "afskrækkende eksempel",
+   "slående eksempel",
+   "skræmmende eksempel",
+   "godt/dårligt eksempel"
+  ],
+  "brug_src": "DDO"
+ },
+ "et_overskud_af": {
+  "word": "et overskud (af)",
+  "pos": "substantiv, intetkøn",
+  "gender": "et",
+  "inflection": "eller uofficiel form: Se bøjning i skema",
+  "forms": [
+   [
+    "overskud",
+    "overskuddet(elleruofficielform:overskudet)",
+    "overskud",
+    "overskuddene"
+   ]
+  ],
+  "grammar": [
+   "overskud af NOGET",
+   "overskud til at+INFINITIV/NOGET/NOGEN",
+   "overskud på NOGET/BELØB"
+  ],
+  "construction": [
+   "et overskud af noget"
+  ],
+  "brug": [
+   "i overskud",
+   "beskedent overskud",
+   "pænt overskud"
+  ],
+  "brug_src": "DDO"
+ },
+ "en_mangel_paa": {
+  "word": "en mangel (på)",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "eller uofficiel form: Se bøjning i skema",
+  "forms": [
+   [
+    "mangel",
+    "manglen(elleruofficielform:mangelen)",
+    "mangler",
+    "manglerne"
+   ]
+  ],
+  "grammar": [
+   "mangel på NOGET",
+   "i mangel af NOGET",
+   "mangel ved NOGET"
+  ],
+  "construction": [
+   "mangel på noget"
+  ],
+  "brug": [
+   "mangel på fødevarer",
+   "mangel på arbejdskraft",
+   "i mangel af bedre",
+   "åbenlyse mangler",
+   "alvorlige mangler"
+  ],
+  "brug_src": "DDO"
+ },
+ "en_tilstroemning_af": {
+  "word": "en tilstrømning (af)",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "tilstrømning",
+    "tilstrømningen",
+    "tilstrømninger",
+    "tilstrømningerne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [
+   "en tilstrømning af nogen / noget"
+  ],
+  "brug": [
+   "tilstrømningen af flygtninge"
+  ],
+  "brug_src": "DDO"
+ },
+ "masser_af": {
+  "word": "masser af",
+  "pos": "fast udtryk",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [
+   "en masse NOGET/NOGLE",
+   "masser af NOGET/NOGLE"
+  ],
+  "construction": [
+   "masser af + navneord"
+  ],
+  "brug": [
+   "en masse mennesker",
+   "en masse penge",
+   "masser af tid",
+   "masser af plads"
+  ],
+  "brug_src": "DDO",
+  "under": "masse"
+ },
+ "forventninger_til": {
+  "word": "forventninger (til)",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "forventning",
+    "forventningen",
+    "forventninger",
+    "forventningerne"
+   ]
+  ],
+  "grammar": [
+   "i forventning om NOGET/at.."
+  ],
+  "construction": [
+   "forventninger til nogen / noget"
+  ],
+  "brug": [
+   "mod forventning",
+   "forventningens glæde"
+  ],
+  "brug_src": "DDO"
+ },
+ "tillid_til": {
+  "word": "tillid",
+  "pos": "substantiv",
+  "gender": "en",
+  "inflection": "-en",
+  "forms": [
+   [
+    "tillid",
+    "tilliden"
+   ]
+  ],
+  "grammar": [],
+  "construction": [
+   "tillid til + nogen/noget: have stor tillid til en ny …",
+   "øge tilliden mellem + nogen"
+  ],
+  "brug": [
+   "have tillid til",
+   "vise tillid",
+   "miste tilliden"
+  ],
+  "brug_src": "study"
+ },
+ "uenighed_om": {
+  "word": "uenighed (om)",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "uenighed",
+    "uenigheden",
+    "uenigheder",
+    "uenighederne"
+   ]
+  ],
+  "grammar": [
+   "uenighed om NOGET/hv+SÆTNING/at..",
+   "uenighed med NOGEN",
+   "uenighed mellem NOGLE"
+  ],
+  "construction": [
+   "uenighed om noget / om, hvem …"
+  ],
+  "brug": [
+   "intern uenighed",
+   "indbyrdes uenighed",
+   "dyb uenighed",
+   "vild uenighed"
+  ],
+  "brug_src": "DDO"
  }
 }
