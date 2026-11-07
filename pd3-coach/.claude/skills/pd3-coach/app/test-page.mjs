@@ -254,5 +254,11 @@ for (const [name, setup, probe] of [
   ok("lang " + name, [JSON.stringify(before) === JSON.stringify(after) ? "kept" : ["CHANGED", before, after], lang, "left:", left, "back:", back]);
   await ev(`document.querySelector("dialog[open]")?.close(); if ($("#findbar").classList.contains("open")) findClose()`); await sleep(450);
 }
+ok("mine create", await ev(`(()=>{ localStorage.clear(); MINE=[]; mineIndex(); mineView(null); $("#mnName").value="Test ord"; $("#mnNew").requestSubmit(); return [MINE.length, !!$("#mnq"), GROUPS[MINE[0].id][2]]; })()`));
+ok("mine search+add", await ev(`(()=>{ $("#mnq").value="medføre"; mnHits(); document.querySelector("[data-mn-tog]").click(); $("#mnq").value="fordi"; mnHits(); document.querySelector('[data-mn-tog="fordi"]').click(); return [MINE[0].ids, document.querySelectorAll("#mnwords .pchip").length, groupsOf(DB.cards.fordi).includes(MINE[0].id), $("#mnhits .mnprep") ? $("#mnhits .mnprep").textContent : null]; })()`));
+ok("mine as topic", await ev(`(()=>{ home(); const r=[!!$("#mineLink"), byGroup()[MINE[0].id].length]; startSession({groups:[MINE[0].id], reviews:0}); r.push(S.title, S.queue.length>0); home(); return r; })()`));
+ok("mine reload", await ev(`(()=>{ MINE=mineRead(); mineIndex(); return [MINE.length, MINE[0].ids.length]; })()`));
+ok("mine topics tier", await ev(`(()=>{ topicsView(); return [...document.querySelectorAll(".tvset h2")].map(h=>h.textContent); })()`));
+ok("mine remove+delete", await ev(`(()=>{ mineView(MINE[0].id); $("[data-mn-rm]").click(); const n=MINE[0].ids.length; window.confirm=()=>true; $("#mnDel").click(); return [n, MINE.length, GROUP_ORDER.some(g=>g.startsWith("mine_")), !!$("#mnbox")]; })()`));
 console.log("errors:", errs);
 await send("Browser.close").catch(() => {}); chrome.kill(); process.exit(0);

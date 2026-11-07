@@ -705,6 +705,23 @@ input.vgap.right { border-color: var(--ok); background: var(--ok-bg); } input.vg
 .tvtbl .wdots { margin: 0; } .tvtbl .wdots i { width: 10px; height: 10px; }
 .tvtbl .c { font-family: 'Gabarito', sans-serif; font-weight: 700; text-align: right; }
 .tvtbl .due { justify-self: end; padding: 2px 10px; border-radius: 999px; font-size: .78rem; font-weight: 700; background: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container); }
+.mnnew { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.mnnew input, #mnq { flex: 1 1 220px; min-height: 44px; padding: 0 14px; border-radius: 12px; border: 1px solid var(--rule-strong); background: var(--sheet); color: var(--ink); font: inherit; box-sizing: border-box; }
+#mnq { width: 100%; margin-top: 12px; flex: none; }
+.mnlist { list-style: none; padding: 0; margin: 24px 0 0; display: grid; gap: 12px; }
+.mngroup { padding: 16px 20px; border-radius: 24px; background: var(--md-sys-color-surface-container-low); }
+.mngroup > b { font-weight: 600; } .mngroup > small { margin-left: 8px; color: var(--soft); }
+.mngroup .row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.mngroup.open { box-shadow: inset 0 0 0 2px var(--md-sys-color-primary); }
+.mnedit { margin-top: 14px; padding-top: 4px; }
+.mnhits { list-style: none; padding: 0; margin: 8px 0 16px; }
+.mnhits li { display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 52px; border-top: 1px solid var(--md-sys-color-outline-variant); }
+.mnhits li > span { min-width: 0; }
+.mnhits small { display: block; color: var(--soft); font-size: .82rem; }
+.mnprep { color: var(--md-sys-color-primary); font-weight: 600; font-size: .88rem; }
+.mnwords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.mnwords .pchip { text-align: left; } .mnwords .pchip > span:first-child { white-space: nowrap; }
+.mngroup .row .btn { min-height: 40px; padding: 6px 12px; } .mngroup .row .btn svg { width: 18px; height: 18px; }
 .tvbar { position: sticky; bottom: 16px; z-index: 5; display: flex; align-items: center; gap: 8px 12px; flex-wrap: wrap; margin-top: 24px; padding: 12px 12px 12px 24px; border-radius: 28px; background: var(--md-sys-color-inverse-surface); color: var(--md-sys-color-inverse-on-surface); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
 .tvbar .tx { flex: 1; min-width: 180px; } .tvbar small { display: block; opacity: .8; }
 .tvbar .btn { display: inline-flex; align-items: center; gap: 8px; } .tvbar .btn svg { width: 18px; height: 18px; }
@@ -1007,6 +1024,19 @@ const I18N = {
   "h.groups": ["Fremskridt per gruppe", "Progress by group"],
   "st.new": ["ny", "new"], "st.learn": ["i gang", "learning"], "st.known": ["kendt (6+ dage)", "known (6+ days)"], "st.master": ["kan du (21+ dage)", "mastered (21+ days)"],
   "p.1": ["Forbinderord", "Connectors"], "p.2": ["Ord fra prøven", "Exam words"], "p.3": ["Andre nyttige ord", "Other useful words"],
+  "p.5": ["Mine ord", "My words"], "p.5.s": ["Dine egne grupper. Søg ordene frem, og saml dem du vil lære.", "Your own groups. Search for the words and collect the ones you want to learn."],
+  "mn.intro": ["Lav en gruppe, søg de ord frem du vil lære, og tilføj dem. Gruppen virker som de andre emner: Lær, Gentag, Test og flashcards.", "Make a group, search for the words you want to learn and add them. The group works like the other topics: Learn, Review, Test and flashcards."],
+  "mn.name.ph": ["Navn på gruppen, fx Svære verber", "Group name, e.g. Hard verbs"], "mn.new": ["Ny gruppe", "New group"],
+  "mn.none": ["Du har ingen grupper endnu. Giv den første et navn ovenfor.", "You have no groups yet. Give the first one a name above."],
+  "mn.words": ["{0} ord", "{0} words"], "mn.edit": ["Rediger", "Edit"], "mn.done": ["Færdig", "Done"],
+  "mn.rename": ["Navn", "Name"], "mn.save": ["Gem navn", "Save name"], "mn.del": ["Slet gruppe", "Delete group"],
+  "mn.del.q": ["Slette gruppen \"{0}\"? Ordene og dit fremskridt bliver i de andre emner.", "Delete the group \"{0}\"? The words and your progress stay in the other topics."],
+  "mn.q.ph": ["Søg et ord, fx medføre eller på grund af", "Search a word, e.g. medføre or på grund af"],
+  "mn.q.hint": ["Skriv et ord på dansk eller engelsk for at finde det.", "Type a word in Danish or English to find it."],
+  "mn.q.none": ["Intet ord i ordbanken passer til \"{0}\".", "No word in the word bank matches \"{0}\"."],
+  "mn.add": ["Tilføj", "Add"], "mn.added": ["Tilføjet", "Added"], "mn.rm": ["Fjern {0}", "Remove {0}"],
+  "mn.in": ["Ordene i gruppen", "Words in the group"], "mn.empty": ["Ingen ord endnu. Søg ovenfor og tryk Tilføj.", "No words yet. Search above and press Add."],
+  "mn.link.s": ["{0} grupper · lav din egen", "{0} groups · make your own"], "mn.open": ["Rediger mine ord", "Edit my words"],
   "p.4": ["Hyppige ord", "Frequent words"], "p.4.s": ["Ord fra prøverne, sorteret efter hvor tit de er kommet siden 2020. De vigtigste står først.", "Words from the exams, ranked by how often they've come up since 2020. The most important come first."],
   "p.4.n": ["Top {0}–{1} · {2} siden 2020", "Top {0}–{1} · {2} since 2020"], "p.4.old": ["Top {0}–{1} · kun før 2020", "Top {0}–{1} · only before 2020"],
   "g.due": ["{0} skal gentages", "{0} due"], "g.words": ["{0} ord", "{0} words"], "g.next": ["næste gang {0}", "next {0}"],
@@ -1518,6 +1548,7 @@ function flipLang() {
   // screens that redraw without losing anything are drawn again, so nothing is left in the old language
   if ($("#go")) { const y = window.scrollY; home(); window.scrollTo(0, y); }
   else if ($("#lgboard")) { const y = window.scrollY; tankegang(); window.scrollTo(0, y); }
+  else if ($("#mnbox")) { const y = window.scrollY, q = $("#mnq")?.value; mineView(); if (q) { $("#mnq").value = q; mnHits(); } window.scrollTo(0, y); }
   else if ($("#soBox")) { const y = window.scrollY; soRender(); window.scrollTo(0, y); }
   else if (LBV) { const y = window.scrollY; lbRedraw(); window.scrollTo(0, y); }
   else if (FC) fcRender();
@@ -1536,6 +1567,7 @@ function load() {
   const saved = readProgress();
   for (const [id, c] of Object.entries(deck.cards)) DB.cards[id] = { id, ...c, history: c.history || [], ...(saved[id] || {}) };
   addFreqGroups();
+  MINE = mineRead(); mineIndex();
   lgIndex();
   // ask the browser not to clear this page's storage when space runs low (Chrome/Firefox; Safari decides itself)
   if (navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(() => {});
@@ -1548,6 +1580,7 @@ function route() {
   if (location.hash === "#l2b") { history.replaceState(null, "", location.pathname + location.search); return l2bHome(); }
   if (location.hash === "#tankegang") { history.replaceState(null, "", location.pathname + location.search); return tankegang(); }
   if (location.hash === "#grammatik") { history.replaceState(null, "", location.pathname + location.search); return grammarHome(); }
+  if (location.hash === "#mine") { history.replaceState(null, "", location.pathname + location.search); return mineView(null); }
   if (location.hash === "#sorter") { history.replaceState(null, "", location.pathname + location.search); return soStart(); }
   if (!location.hash.startsWith("#find")) return;
   const q = decodeURIComponent(location.hash.slice(6));
@@ -1643,11 +1676,11 @@ function partnerPairs(id) { return CONFUSABLES.filter(p => (p[0] === id || p[1] 
 function gname(g) { return GROUPS[g] ? GROUPS[g][LANG === "en" ? 0 : 1] : g; }
 // both languages, the page language first (as the other pages name their groups)
 // the name in the other language; "Hyppige ord" names (Top 1–15 · 4–7×) say the same in both, so they have none
-function gother(g) { return GROUPS[g] && prio(g) !== 4 ? GROUPS[g][LANG === "en" ? 1 : 0] : ""; }
+function gother(g) { return GROUPS[g] && prio(g) < 4 ? GROUPS[g][LANG === "en" ? 1 : 0] : ""; }
 function glabel(g) { return gother(g) ? `${gname(g)} · ${gother(g)}` : gname(g); }
 const prio = g => (GROUPS[g] || [])[2] || 3;
-// a card is in its own group and, if it is in the frequency table, in a "Hyppige ord" group too (c.fg)
-const groupsOf = c => c.fg && c.fg !== c.group ? [c.group, c.fg] : [c.group];
+// a card is in its own group, in a "Hyppige ord" group too if it is in the frequency table (c.fg), and in any "Mine ord" group holding it
+const groupsOf = c => [c.group, ...(c.fg && c.fg !== c.group ? [c.fg] : []), ...(MINE_OF[c.id] || [])];
 const inGroups = (c, gs) => groupsOf(c).some(g => gs.includes(g));
 function byGroup() { const by = {}; cards().forEach(c => groupsOf(c).forEach(g => (by[g] = by[g] || []).push(c))); return by; }
 // "Hyppige ord" groups (fg_01 …) come from the deck: 15 words each, ranked by how often they came up since 2020 (c.frank, c.freq)
@@ -1759,6 +1792,7 @@ function home() {
     ${gview || !l2Ready() ? "" : l2bBanner()}
     ${gview ? "" : `<nav class="tvlinks" aria-label="${esc(t("tv.more"))}">
       <a href="#emner" id="allTopics">${t("tv.topics")} <span>${t("tv.topics.s", gs.length)}</span></a>
+      <a href="#mine" id="mineLink">${t("p.5")} <span>${t("mn.link.s", MINE.length)}</span></a>
       ${lgItems().length ? `<a href="#tankegang" id="tkLink">${t("lg.title")} <span>${t("lg.link.s")}</span></a>` : ""}
     </nav>${pickBar(groupsBy)}`}`;
   if ($("#go")) $("#go").onclick = () => startSession({});
@@ -1782,6 +1816,7 @@ function home() {
   });
   bindPickBar(rehome);
   if ($("#allTopics")) $("#allTopics").onclick = e => { e.preventDefault(); topicsView(); };
+  if ($("#mineLink")) $("#mineLink").onclick = e => { e.preventDefault(); mineView(null); };
   document.querySelectorAll("[data-hv]").forEach(b => b.onclick = () => { setHomeView(b.dataset.hv); home(); $(`[data-hv="${b.dataset.hv}"]`)?.focus(); });
   document.querySelectorAll("[data-gt]").forEach(b => b.onclick = () => startGrammar(b.dataset.gt));
 }
@@ -1796,19 +1831,116 @@ function topicsView() {
     <div class="top"><a href="#" class="tvback" id="thome">${t("gm.back")}</a><h1>${t("tv.topics")}</h1><p class="soft">${t("tv.topics.intro")}</p>
       <div class="tvkey">${key}</div>
       <div class="row"><button type="button" class="btn quiet" id="tvFlash">${ICONS.cards}${t("h.fc")} · ${t("fc.n", fcCount(groupsBy))}</button></div></div>
-    ${[1, 2, 3, 4].filter(pr => tier(pr).length).map(pr => `<section class="tvset"><header><h2>${t("p." + pr)}</h2><span class="soft">${t("tv.n.topics", tier(pr).length)}</span>
-      <button type="button" class="txtbtn" data-tier="${pr}">${t(tier(pr).every(g => picked.includes(g)) ? "pk.tnone" : "pk.tall")}</button></header>${pr === 4 ? `<p class="soft small">${t("p.4.s")}</p>` : ""}
-      <ul class="tvtbl">${tier(pr).map(g => { const cs = groupsBy[g], d = dueIn(cs), seen = cs.filter(c => c.history.length).length;
-        return `<li><label class="tvpick"><input type="checkbox" data-g="${esc(g)}"${picked.includes(g) ? " checked" : ""}><span><b>${esc(gname(g))}</b><small>${esc(gother(g))}</small></span>${wordDots(cs)}<span class="c">${seen}/${cs.length}</span>${d ? `<span class="due">${t("g.due", d)}</span>` : "<span></span>"}</label></li>`; }).join("")}</ul></section>`).join("")}
+    ${[1, 2, 3, 4, 5].filter(pr => tier(pr).length || pr === 5).map(pr => `<section class="tvset"><header><h2>${t("p." + pr)}</h2><span class="soft">${t("tv.n.topics", tier(pr).length)}</span>
+      ${pr === 5 ? `<button type="button" class="txtbtn" id="tvMine">${t("mn.open")}</button>` : ""}
+      ${tier(pr).length ? `<button type="button" class="txtbtn" data-tier="${pr}">${t(tier(pr).every(g => picked.includes(g)) ? "pk.tnone" : "pk.tall")}</button>` : ""}</header>${pr >= 4 ? `<p class="soft small">${t("p." + pr + ".s")}</p>` : ""}
+      ${tier(pr).length ? `<ul class="tvtbl">${tier(pr).map(g => { const cs = groupsBy[g], d = dueIn(cs), seen = cs.filter(c => c.history.length).length;
+        return `<li><label class="tvpick"><input type="checkbox" data-g="${esc(g)}"${picked.includes(g) ? " checked" : ""}><span><b>${esc(gname(g))}</b><small>${esc(gother(g))}</small></span>${wordDots(cs)}<span class="c">${seen}/${cs.length}</span>${d ? `<span class="due">${t("g.due", d)}</span>` : "<span></span>"}</label></li>`; }).join("")}</ul>` : `<p class="tvempty">${t("mn.none")}</p>`}</section>`).join("")}
     ${pickBar(groupsBy)}`;
   const redraw = () => { const y = window.scrollY; topicsView(); window.scrollTo(0, y); };
   $("#thome").onclick = e => { e.preventDefault(); home(); window.scrollTo(0, 0); };
   $("#tvFlash").onclick = () => startFlash(picked.length ? picked : null);
+  $("#tvMine").onclick = () => mineView(null);
   document.querySelectorAll(".tvtbl input").forEach(i => i.onchange = () => { const g = i.dataset.g; setPicked(i.checked ? [...picked, g] : picked.filter(x => x !== g)); redraw(); $(`.tvtbl input[data-g="${CSS.escape(g)}"]`)?.focus(); });
   document.querySelectorAll("[data-tier]").forEach(b => b.onclick = () => { const gs = tier(+b.dataset.tier), all = gs.every(g => picked.includes(g)); setPicked(all ? picked.filter(g => !gs.includes(g)) : [...new Set([...picked, ...gs])]); redraw(); });
   bindPickBar(redraw);
   window.scrollTo(0, 0);
 }
+// ---------- Mine ord: the learner's own word groups (a fifth tier), kept in this browser ----------
+const MINE_KEY = "pd3-assisted-learning:mine:v1";
+let MINE = [], MINE_OF = {}, mineEdit = null;
+function mineRead() {
+  try { const g = JSON.parse(localStorage.getItem(MINE_KEY) || "{}").groups; return Array.isArray(g) ? g.filter(m => m && typeof m.id === "string" && Array.isArray(m.ids)) : []; }
+  catch (e) { storageOK = false; return []; }
+}
+function mineSave() {
+  try { localStorage.setItem(MINE_KEY, JSON.stringify({ groups: MINE, saved: new Date().toISOString() })); }
+  catch (e) { storageOK = false; }
+  mineIndex();
+}
+// the groups become ordinary groups of tier 5: groupsOf, byGroup, Lær, Gentag, Test and flashcards all read them
+function mineIndex() {
+  Object.keys(GROUPS).filter(g => prio(g) === 5).forEach(g => { delete GROUPS[g]; const i = GROUP_ORDER.indexOf(g); if (i >= 0) GROUP_ORDER.splice(i, 1); });
+  MINE_OF = {};
+  for (const m of MINE) {
+    m.ids = m.ids.filter(id => DB.cards[id]);
+    GROUPS[m.id] = [m.name, m.name, 5]; GROUP_ORDER.push(m.id);
+    m.ids.forEach(id => (MINE_OF[id] = MINE_OF[id] || []).push(m.id));
+  }
+  setPicked(picked);
+}
+function mineView(gid = mineEdit) {
+  S = null; FC = null; GS = null;
+  const cur = MINE.find(g => g.id === gid) || null;
+  mineEdit = cur ? cur.id : null;
+  const cardsOf = m => m.ids.map(id => DB.cards[id]).filter(Boolean);
+  const rows = MINE.map(m => {
+    const cs = cardsOf(m), isOpen = m.id === mineEdit;
+    const b = (act, txt, icon, dis) => `<button type="button" class="btn quiet" data-mn-${act}="${esc(m.id)}"${dis ? " disabled" : ""}>${icon}${esc(txt)}</button>`;
+    const editor = `<div class="mnedit">
+        <form id="mnRen" class="mnnew"><label class="lbl" for="mnRenName">${t("mn.rename")}</label><input id="mnRenName" type="text" maxlength="40" value="${esc(m.name)}" aria-label="${esc(t("mn.rename"))}"><button type="submit" class="btn">${t("mn.save")}</button></form>
+        <div class="row"><button type="button" class="btn quiet" id="mnDel">${t("mn.del")}</button></div>
+        <input id="mnq" type="search" lang="da" autocomplete="off" spellcheck="false" placeholder="${esc(t("mn.q.ph"))}" aria-label="${esc(t("mn.q.ph"))}">
+        <div id="mnhits"></div>
+        <span class="lbl" id="mnCount">${t("mn.in")} · ${cs.length}</span>
+        <div id="mnwords" class="mnwords"></div>
+      </div>`;
+    return `<li class="sheet mngroup${isOpen ? " open" : ""}"><b>${esc(m.name)}</b><small${isOpen ? ' id="mnN"' : ""}>${t("mn.words", cs.length)}</small>${wordDots(cs)}
+      <div class="row">${b("edit", isOpen ? t("mn.done") : t("mn.edit"), "")}${b("learn", t("tv.v.learn"), ICONS.spark, !cs.some(c => stateOf(c) === "new"))}${b("review", t("tv.v.review"), ICONS.repeat, !cs.some(c => c.history.length))}${b("test", t("tv.v.test"), ICONS.pencil, !cs.some(c => c.history.length))}${b("flash", t("h.fc"), ICONS.cards, !cs.length)}</div>
+      ${isOpen ? editor : ""}</li>`;
+  }).join("");
+  $("#app").innerHTML = `<div class="top" id="mnbox">
+    <a href="#" class="tvback" id="mnHome">${t("gm.back")}</a>
+    <h1>${t("p.5")}</h1>
+    <p class="soft">${t("mn.intro")}</p>
+    <form id="mnNew" class="mnnew"><input id="mnName" type="text" maxlength="40" placeholder="${esc(t("mn.name.ph"))}" aria-label="${esc(t("mn.name.ph"))}"><button type="submit" class="btn solid">${t("mn.new")}</button></form>
+    ${storageOK ? "" : `<div class="err small">${t("h.storage")}</div>`}
+    ${MINE.length ? "" : `<p class="tvempty">${t("mn.none")}</p>`}
+    <ul class="mnlist">${rows}</ul>
+  </div>`;
+  $("#mnNew").onsubmit = e => { e.preventDefault(); const name = $("#mnName").value.trim(); if (!name) return; const id = "mine_" + Date.now().toString(36); MINE.push({ id, name, ids: [] }); mineSave(); mineView(id); $("#mnq")?.focus(); };
+  $("#mnHome").onclick = e => { e.preventDefault(); mineEdit = null; home(); window.scrollTo(0, 0); };
+  document.querySelectorAll("[data-mn-edit]").forEach(b => b.onclick = () => mineView(b.dataset.mnEdit === mineEdit ? null : b.dataset.mnEdit));
+  document.querySelectorAll("[data-mn-learn]").forEach(b => b.onclick = () => startSession({ groups: [b.dataset.mnLearn], reviews: 0 }));
+  document.querySelectorAll("[data-mn-review]").forEach(b => b.onclick = () => startSession({ groups: [b.dataset.mnReview], fresh: 0 }));
+  document.querySelectorAll("[data-mn-test]").forEach(b => b.onclick = () => startExercise([b.dataset.mnTest]));
+  document.querySelectorAll("[data-mn-flash]").forEach(b => b.onclick = () => startFlash([b.dataset.mnFlash]));
+  if (cur) {
+    $("#mnRen").onsubmit = e => { e.preventDefault(); const n = $("#mnRenName").value.trim(); if (n) cur.name = n; mineSave(); mineView(); };
+    $("#mnDel").onclick = () => { if (!confirm(t("mn.del.q", cur.name))) return; MINE = MINE.filter(g => g !== cur); mineSave(); mineView(null); };
+    $("#mnq").oninput = mnHits;
+    mnHits(); mnWords();
+  }
+}
+function mnHits() {
+  const m = MINE.find(g => g.id === mineEdit), box = $("#mnhits"), q = ($("#mnq")?.value || "").trim();
+  if (!m || !box) return;
+  if (!q) { box.innerHTML = `<p class="soft small">${t("mn.q.hint")}</p>`; return; }
+  const hits = [...new Map(searchWords(q).map(x => x.e.card).filter(Boolean).map(c => [c.id, c])).values()];
+  box.innerHTML = !hits.length ? `<p class="soft small">${esc(t("mn.q.none", q))}</p>` : `<ul class="mnhits">${hits.map(c => {
+    const on = m.ids.includes(c.id), prep = DB.tips[c.id]?.prep;
+    return `<li><span><b lang="da">${esc(c.word)}</b>${prep ? ` <span class="mnprep" lang="da">${esc(prep)}</span>` : ""}<small>${esc(c.meaning)} · ${esc(gname(c.group))}</small></span><button type="button" class="pchip" data-mn-tog="${esc(c.id)}" aria-pressed="${on}">${on ? "✓ " + esc(t("mn.added")) : "+ " + esc(t("mn.add"))}</button></li>`;
+  }).join("")}</ul>`;
+  box.querySelectorAll("[data-mn-tog]").forEach(b => b.onclick = () => {
+    const id = b.dataset.mnTog;
+    m.ids = m.ids.includes(id) ? m.ids.filter(x => x !== id) : [...m.ids, id];
+    mineSave(); mnHits(); mnWords();
+    $(`[data-mn-tog="${CSS.escape(id)}"]`)?.focus();
+  });
+}
+function mnWords() {
+  const m = MINE.find(g => g.id === mineEdit), box = $("#mnwords");
+  if (!m || !box) return;
+  const cs = m.ids.map(id => DB.cards[id]).filter(Boolean);
+  box.innerHTML = cs.length ? cs.map(c => { const prep = DB.tips[c.id]?.prep; return `<button type="button" class="pchip" data-mn-rm="${esc(c.id)}" aria-label="${esc(t("mn.rm", c.word))}"><span lang="da">${esc(c.word)}</span>${prep ? `<span class="n" lang="da">${esc(prep)}</span>` : ""} ✕</button>`; }).join("") : `<p class="soft small">${t("mn.empty")}</p>`;
+  box.querySelectorAll("[data-mn-rm]").forEach(b => b.onclick = () => { m.ids = m.ids.filter(x => x !== b.dataset.mnRm); mineSave(); mnHits(); mnWords(); });
+  if ($("#mnCount")) $("#mnCount").textContent = `${t("mn.in")} · ${m.ids.length}`;
+  if ($("#mnN")) $("#mnN").textContent = t("mn.words", m.ids.length);
+  // the group's buttons follow its words, so a group just filled can be learnt straight away
+  const on = { learn: cs.some(c => stateOf(c) === "new"), review: cs.some(c => c.history.length), test: cs.some(c => c.history.length), flash: cs.length > 0 };
+  for (const [act, ok] of Object.entries(on)) { const b = $(`[data-mn-${act}="${CSS.escape(m.id)}"]`); if (b) b.disabled = !ok; }
+}
+
 const ICONS = Object.fromEntries(Object.entries({
   play: '<path d="M8 5.5v13l10.5-6.5z" fill="currentColor" stroke="none"/>',
   spark: '<path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M6 18l2.5-2.5M15.5 8.5L18 6"/>',
