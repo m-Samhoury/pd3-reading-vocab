@@ -3102,5 +3102,131 @@
    "uenighed om noget; uenighed mellem nogen; være uenig i / om",
    "disagreement about sth; disagreement between people; være uenig (disagree)"
   ]
+ },
+ "en_vaernepligt": {
+  "prep": "værnepligt i forsvaret",
+  "construction": [
+   "aftjene sin værnepligt; værnepligt i hæren",
+   "to serve one's conscription; conscription in the army"
+  ]
+ },
+ "vaernepligtig": {
+  "prep": "værnepligtig til at gøre tjeneste i forsvaret",
+  "construction": [
+   "en værnepligtig; værnepligtig til at + infinitiv",
+   "a conscript; liable to + infinitive"
+  ]
+ },
+ "at_aftjene": {
+  "prep": "aftjene noget (ingen præposition)",
+  "construction": [
+   "aftjene sin værnepligt (ingen præposition)",
+   "to serve one's conscription (no preposition)"
+  ]
+ },
+ "at_indkalde": {
+  "prep": "indkalde nogen til noget",
+  "construction": [
+   "indkalde nogen til noget; en indkaldelse",
+   "to call someone up for something; a call-up"
+  ]
+ },
+ "en_lodtraekning": {
+  "prep": "lodtrækning blandt nogen om noget",
+  "construction": [
+   "vælge nogen ved lodtrækning; en lodtrækning om noget",
+   "to choose someone by lottery; a draw about something"
+  ]
+ },
+ "et_forsvar": {
+  "prep": "til forsvar for noget",
+  "construction": [
+   "et forsvar mod noget; til forsvar for noget",
+   "a defence against something; in defence of something"
+  ]
+ },
+ "at_forsvare": {
+  "prep": "forsvare noget mod noget",
+  "construction": [
+   "forsvare noget mod noget",
+   "to defend something against something"
+  ]
+ },
+ "en_soldat": {
+  "prep": "soldat i hæren / forsvaret",
+  "construction": [
+   "være soldat i + sted",
+   "to be a soldier in + place"
+  ]
+ },
+ "en_ligestilling": {
+  "prep": "ligestilling mellem nogen",
+  "construction": [
+   "ligestilling mellem kønnene; ligestilling af noget",
+   "equality between the genders; equalisation of something"
+  ]
+ },
+ "en_trussel": {
+  "prep": "trussel mod noget / trussel om at + infinitiv",
+  "construction": [
+   "en trussel mod noget; en trussel om noget",
+   "a threat to something; a threat of something"
+  ]
+ },
+ "et_forsvarsforlig": {
+  "prep": "forlig mellem partierne om noget",
+  "construction": [
+   "et forsvarsforlig om forsvarets budget",
+   "a defence agreement on the defence budget"
+  ]
+ },
+ "et_beredskab": {
+  "prep": "have noget i beredskab",
+  "construction": [
+   "have noget i beredskab",
+   "to have something on standby"
+  ]
+ },
+ "at_afskraekke": {
+  "prep": "afskrække nogen fra noget / fra at + infinitiv",
+  "construction": [
+   "afskrække nogen fra noget",
+   "to deter someone from something"
+  ]
+ },
+ "at_bidrage": {
+  "prep": "bidrage til noget / bidrage med noget",
+  "construction": [
+   "bidrage med noget til noget",
+   "to contribute something to something"
+  ]
+ },
+ "et_faellesskab": {
+  "prep": "fællesskab mellem nogen / fællesskab om noget",
+  "construction": [
+   "et fællesskab om noget",
+   "a community around something"
+  ]
+ },
+ "egnet": {
+  "prep": "egnet til noget / egnet til at + infinitiv",
+  "construction": [
+   "egnet til noget",
+   "suitable for something"
+  ]
+ },
+ "en_krig": {
+  "prep": "krig mod noget",
+  "construction": [
+   "en krig mod noget",
+   "a war against something"
+  ]
+ },
+ "en_alliance": {
+  "prep": "i alliance med noget",
+  "construction": [
+   "alliance med noget",
+   "alliance with something"
+  ]
  }
 }
