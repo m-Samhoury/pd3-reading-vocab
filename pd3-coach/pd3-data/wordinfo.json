@@ -6393,5 +6393,593 @@
    "vild uenighed"
   ],
   "brug_src": "DDO"
+ },
+ "en_vaernepligt": {
+  "word": "en værnepligt",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en",
+  "forms": [
+   [
+    "værnepligt",
+    "værnepligten"
+   ]
+  ],
+  "grammar": [],
+  "construction": [
+   "aftjene (sin) værnepligt · værnepligt for kvinder"
+  ],
+  "brug": [
+   "aftjene (sin) værnepligt"
+  ],
+  "brug_src": "DDO"
+ },
+ "vaernepligtig": {
+  "word": "værnepligtig",
+  "pos": "adjektiv",
+  "gender": null,
+  "inflection": "-t, -e",
+  "forms": [
+   [
+    "værnepligtig",
+    "værnepligtigt",
+    "værnepligtige"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "at_aftjene": {
+  "word": "at aftjene",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, aftjente, aftjent",
+  "forms": [
+   [
+    "aftjene",
+    "aftjener",
+    "aftjente",
+    "aftjent"
+   ]
+  ],
+  "grammar": [
+   "NOGEN aftjener NOGET"
+  ],
+  "construction": [
+   "aftjene sin værnepligt (ingen præposition)"
+  ],
+  "brug": [
+   "aftjene sin værnepligt"
+  ],
+  "brug_src": "DDO"
+ },
+ "at_indkalde": {
+  "word": "at indkalde (til)",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, indkaldte, indkaldt",
+  "forms": [
+   [
+    "indkalde",
+    "indkalder",
+    "indkaldte",
+    "indkaldt"
+   ]
+  ],
+  "grammar": [
+   "NOGEN indkalder (NOGEN) til NOGET",
+   "NOGEN indkalder NOGET"
+  ],
+  "construction": [
+   "indkalde nogen til noget"
+  ],
+  "brug": [
+   "indkalde til møde",
+   "indkalde til samtale",
+   "indkalde til afhøring"
+  ],
+  "brug_src": "DDO"
+ },
+ "en_forsvarsdag": {
+  "word": "Forsvarsdagen",
+  "pos": "",
+  "gender": null,
+  "inflection": "",
+  "forms": [],
+  "grammar": [],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_lodtraekning": {
+  "word": "en lodtrækning",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "lodtrækning",
+    "lodtrækningen",
+    "lodtrækninger",
+    "lodtrækningerne"
+   ]
+  ],
+  "grammar": [
+   "lodtrækning (blandt/mellem NOGLE/NOGET) (om NOGET)"
+  ],
+  "construction": [
+   "lodtrækning blandt nogen om noget"
+  ],
+  "brug": [
+   "deltage i lodtrækningen",
+   "foretage lodtrækning",
+   "ved/via lodtrækning"
+  ],
+  "brug_src": "DDO"
+ },
+ "et_forsvar": {
+  "word": "forsvaret",
+  "pos": "substantiv, intetkøn",
+  "gender": "et",
+  "inflection": "-et, -, -ene",
+  "forms": [
+   [
+    "forsvar",
+    "forsvaret",
+    "forsvar",
+    "forsvarene"
+   ]
+  ],
+  "grammar": [
+   "til NOGEN s forsvar",
+   "til forsvar for NOGEN/NOGET"
+  ],
+  "construction": [
+   "til forsvar for noget"
+  ],
+  "brug": [
+   "det danske forsvar",
+   "troværdigt forsvar",
+   "stærkt forsvar",
+   "solidt forsvar",
+   "det bageste forsvar"
+  ],
+  "brug_src": "DDO"
+ },
+ "at_forsvare": {
+  "word": "at forsvare",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "forsvare",
+    "forsvarer",
+    "forsvarede",
+    "forsvaret"
+   ]
+  ],
+  "grammar": [
+   "NOGEN/NOGET forsvarer NOGEN/sig/NOGET (mod NOGEN/NOGET)",
+   "NOGEN forsvarer NOGET",
+   "NOGEN forsvarer NOGEN/NOGET/at+SÆTNING",
+   "NOGEN forsvarer NOGET over for NOGEN",
+   "NOGEN forsvarer NOGET/at..",
+   "NOGEN forsvarer NOGEN"
+  ],
+  "construction": [
+   "forsvare noget mod noget"
+  ],
+  "brug": [
+   "forsvarende mester/verdensmester"
+  ],
+  "brug_src": "DDO"
+ },
+ "en_soldat": {
+  "word": "en soldat",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "soldat",
+    "soldaten",
+    "soldater",
+    "soldaterne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [
+   "soldat i hæren / forsvaret"
+  ],
+  "brug": [
+   "sårede soldater",
+   "menige soldater",
+   "professionelle soldater",
+   "lege røvere og soldater"
+  ],
+  "brug_src": "DDO"
+ },
+ "en_militaernaegter": {
+  "word": "en militærnægter",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -e, -ne",
+  "forms": [
+   [
+    "militærnægter",
+    "militærnægteren",
+    "militærnægtere",
+    "militærnægterne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "koensneutral": {
+  "word": "kønsneutral",
+  "pos": "adjektiv",
+  "gender": null,
+  "inflection": "-t, -e",
+  "forms": [
+   [
+    "kønsneutral",
+    "kønsneutralt",
+    "kønsneutrale"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [],
+  "brug_src": "DDO"
+ },
+ "en_ligestilling": {
+  "word": "en ligestilling (mellem)",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en",
+  "forms": [
+   [
+    "ligestilling",
+    "ligestillingen"
+   ]
+  ],
+  "grammar": [
+   "ligestilling mellem NOGEN/NOGET (og NOGEN/NOGET)",
+   "ligestilling af NOGLE/NOGET"
+  ],
+  "construction": [
+   "ligestilling mellem nogen"
+  ],
+  "brug": [
+   "ligestilling mellem kønnene"
+  ],
+  "brug_src": "DDO"
+ },
+ "en_trussel": {
+  "word": "en trussel (mod)",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "eller uofficiel form: Se bøjning i skema",
+  "forms": [
+   [
+    "trussel",
+    "truslen(elleruofficielform:trusselen)",
+    "trusler",
+    "truslerne"
+   ]
+  ],
+  "grammar": [
+   "trussel mod NOGEN/NOGET",
+   "trussel om NOGET/at.."
+  ],
+  "construction": [
+   "trussel mod noget / trussel om at + infinitiv"
+  ],
+  "brug": [
+   "tomme trusler",
+   "alvorlig trussel",
+   "militær trussel",
+   "stor trussel"
+  ],
+  "brug_src": "DDO"
+ },
+ "en_sikkerhed": {
+  "word": "en sikkerhed",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "sikkerhed",
+    "sikkerheden",
+    "sikkerheder",
+    "sikkerhederne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [
+   "i sikkerhed",
+   "usvigelig sikkerhed",
+   "100 procent(s) sikkerhed",
+   "stille sikkerhed"
+  ],
+  "brug_src": "DDO"
+ },
+ "en_oprustning": {
+  "word": "en oprustning",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "oprustning",
+    "oprustningen",
+    "oprustninger",
+    "oprustningerne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [
+   "moralsk oprustning"
+  ],
+  "brug_src": "DDO"
+ },
+ "et_forsvarsforlig": {
+  "word": "et forsvarsforlig",
+  "pos": "substantiv, intetkøn",
+  "gender": "et",
+  "inflection": "-et, -, -ene",
+  "forms": [
+   [
+    "forsvarsforlig",
+    "forsvarsforliget",
+    "forsvarsforlig",
+    "forsvarsforligene"
+   ]
+  ],
+  "grammar": [],
+  "construction": [
+   "forlig mellem partierne om noget"
+  ],
+  "brug": [
+   "nyt forsvarsforlig"
+  ],
+  "brug_src": "DDO"
+ },
+ "et_beredskab": {
+  "word": "et beredskab",
+  "pos": "substantiv, intetkøn",
+  "gender": "et",
+  "inflection": "-et, -er, -erne",
+  "forms": [
+   [
+    "beredskab",
+    "beredskabet",
+    "beredskaber",
+    "beredskaberne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [
+   "have noget i beredskab"
+  ],
+  "brug": [
+   "civilt beredskab",
+   "militært beredskab",
+   "holde/have i beredskab"
+  ],
+  "brug_src": "DDO"
+ },
+ "at_afskraekke": {
+  "word": "at afskrække",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "afskrække",
+    "afskrækker",
+    "afskrækkede",
+    "afskrækket"
+   ]
+  ],
+  "grammar": [
+   "NOGET afskrækker NOGEN (fra NOGET/at+INFINITIV)"
+  ],
+  "construction": [
+   "afskrække nogen fra noget / fra at + infinitiv"
+  ],
+  "brug": [
+   "afskrækkende eksempel"
+  ],
+  "brug_src": "DDO"
+ },
+ "en_tvang": {
+  "word": "en tvang",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en",
+  "forms": [
+   [
+    "tvang",
+    "tvangen"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [
+   "ulovlig tvang"
+  ],
+  "brug_src": "DDO"
+ },
+ "at_bidrage": {
+  "word": "at bidrage (til)",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "eller -r, bidrog ( eller -de), -t",
+  "forms": [
+   [
+    "bidrage",
+    "bidrager",
+    "bidrogellerbidragede",
+    "bidraget"
+   ]
+  ],
+  "grammar": [
+   "NOGEN bidrager (med NOGET) (til NOGET/at..)",
+   "NOGET bidrager (med NOGET) til at../NOGET"
+  ],
+  "construction": [
+   "bidrage til noget / bidrage med noget"
+  ],
+  "brug": [
+   "bidrage konstruktivt/positivt til",
+   "bidrage til udgifterne"
+  ],
+  "brug_src": "DDO"
+ },
+ "et_faellesskab": {
+  "word": "fællesskab",
+  "pos": "substantiv",
+  "gender": "et",
+  "inflection": "-et, -er, -erne",
+  "forms": [
+   [
+    "fællesskab",
+    "fællesskabet",
+    "fællesskaber",
+    "fællesskaberne"
+   ]
+  ],
+  "grammar": [
+   "fællesskab (i)mellem NOGLE",
+   "fællesskab om/omkring NOGET"
+  ],
+  "construction": [],
+  "brug": [
+   "et stærkt fællesskab",
+   "i fællesskab",
+   "føle fællesskab med"
+  ],
+  "brug_src": "study"
+ },
+ "egnet": {
+  "word": "egnet (til)",
+  "pos": "adjektiv",
+  "gender": null,
+  "inflection": "-, egnede",
+  "forms": [
+   [
+    "egnet",
+    "egnet",
+    "egnede"
+   ]
+  ],
+  "grammar": [
+   "egnet til NOGET/at+INFINITIV/NOGEN",
+   "egnet som NOGEN/NOGET",
+   "egnet for NOGEN/NOGET"
+  ],
+  "construction": [
+   "egnet til noget / egnet til at + infinitiv"
+  ],
+  "brug": [
+   "egnet bolig",
+   "egnede lokaler",
+   "egnet sted"
+  ],
+  "brug_src": "DDO"
+ },
+ "en_krig": {
+  "word": "en krig (mod)",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -e, -ene",
+  "forms": [
+   [
+    "krig",
+    "krigen",
+    "krige",
+    "krigene"
+   ]
+  ],
+  "grammar": [
+   "krig mod/med NOGEN",
+   "krig mellem NOGLE i bestemt form singularis",
+   "det tager en krig (at INFINITIV)",
+   "NOGET tager en krig at INFINITIV",
+   "NOGEN går i krig (med NOGET/NOGEN/at+INFINITIV)",
+   "NOGET følger i kølvandet på/af NOGET",
+   "NOGET følger i NOGET s kølvand"
+  ],
+  "construction": [
+   "krig mod noget"
+  ],
+  "brug": [
+   "blodig krig",
+   "de puniske krige",
+   "den fransk-tyske krig",
+   "den kolde krig"
+  ],
+  "brug_src": "DDO"
+ },
+ "en_alliance": {
+  "word": "en alliance",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-n, -r, -rne",
+  "forms": [
+   [
+    "alliance",
+    "alliancen",
+    "alliancer",
+    "alliancerne"
+   ]
+  ],
+  "grammar": [
+   "(i) alliance med NOGET/NOGEN",
+   "alliance mellem NOGLE",
+   "alliance mod NOGET/NOGEN"
+  ],
+  "construction": [
+   "i alliance med noget"
+  ],
+  "brug": [
+   "militær alliance",
+   "strategisk alliance",
+   "international alliance",
+   "politisk alliance"
+  ],
+  "brug_src": "DDO"
+ },
+ "at_rekruttere": {
+  "word": "rekruttere",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "rekruttere",
+    "rekrutterer",
+    "rekrutterede",
+    "rekrutteret"
+   ]
+  ],
+  "grammar": [
+   "NOGEN rekrutterer NOGEN"
+  ],
+  "construction": [],
+  "brug": [
+   "rekruttere medarbejdere",
+   "rekruttere fra"
+  ],
+  "brug_src": "study"
  }
 }
