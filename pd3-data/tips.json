@@ -3104,21 +3104,20 @@
   ]
  },
  "en_vaernepligt": {
-  "prep": "værnepligt i forsvaret",
+  "prep": "aftjene (sin) værnepligt · værnepligt for kvinder",
   "construction": [
    "aftjene sin værnepligt; værnepligt i hæren",
    "to serve one's conscription; conscription in the army"
   ]
  },
  "vaernepligtig": {
-  "prep": "værnepligtig til at gøre tjeneste i forsvaret",
   "construction": [
    "en værnepligtig; værnepligtig til at + infinitiv",
    "a conscript; liable to + infinitive"
   ]
  },
  "at_aftjene": {
-  "prep": "aftjene noget (ingen præposition)",
+  "prep": "aftjene sin værnepligt (ingen præposition)",
   "construction": [
    "aftjene sin værnepligt (ingen præposition)",
    "to serve one's conscription (no preposition)"
@@ -3211,8 +3210,8 @@
  "egnet": {
   "prep": "egnet til noget / egnet til at + infinitiv",
   "construction": [
-   "egnet til noget",
-   "suitable for something"
+   "egnet til noget · flertal: egnede",
+   "suitable for something · plural: egnede"
   ]
  },
  "en_krig": {
