@@ -3895,19 +3895,25 @@ function mockView() {
 const mnKind = c => LG[c.id] ? "conn" : c.word.startsWith("at ") ? "verb" : "noun";
 const mnMates = id => new Set([...CONFUSABLES.map(p => p.slice(0, 2)), ...[...SAME_MEANING].map(k => k.split("|"))].filter(p => p.includes(id)).flat());
 const mnCommon = y => { const n = {}; (DB.sentences[y.id] || []).forEach(x => { if (Array.isArray(x.m)) { const f = x.s.slice(x.m[0], x.m[1]).toLowerCase(); n[f] = (n[f] || 0) + 1; } }); return Object.keys(n).sort((a, b) => n[b] - n[a])[0] || null; };
-// another verb in the same form: the answer's stem is swapped for the other verb's; a final e is dropped the same way on both
-const mnVerb = (y, w, stem) => { const drop = !w.startsWith(stem), base = drop ? stem.replace(/e$/, "") : stem, o = y.word.replace(/^at /, ""); return w.startsWith(base) ? (drop ? o.replace(/e$/, "") : o) + w.slice(base.length) : null; };
+// another verb in the same form, inflected on its first word only (the particle is not inflected): the answer's stem is swapped
+// for the other verb's; a final e is dropped the same way on both. Only for a one-word gap, the stem being the answer's first word
+const mnVerb = (y, w, stem) => { const drop = !w.startsWith(stem), base = drop ? stem.replace(/e$/, "") : stem, o = y.word.replace(/^at /, "").split(" ")[0]; return w.startsWith(base) ? (drop ? o.replace(/e$/, "") : o) + w.slice(base.length) : null; };
+const mnGlued = /\s(mod|på|for|om|af|til|med|over|efter|fra|ved|under|imod)[a-zæøå]+$/;   // a preposition with an inflection ending stuck on: "spare påde"
 // one item: the sentence's word and three wrong forms of the same kind; null when three cannot be found
 function mnItem(x, m) {
-  const c = DB.cards[x.card], kind = mnKind(c), low = x.s.toLowerCase(), w = x.w.toLowerCase(), stem = c.word.replace(/^at /, ""), mates = mnMates(c.id);
+  const c = DB.cards[x.card], kind = mnKind(c), low = x.s.toLowerCase(), w = x.w.toLowerCase(), stem = c.word.replace(/^at /, "").split(" ")[0], mates = mnMates(c.id), single = !w.includes(" ");
   const ok = y => y.id !== c.id && !mates.has(y.id) && mnKind(y) === kind;
-  const near = shuffle(m.ids.map(id => DB.cards[id]).filter(y => y && ok(y))), far = shuffle(cards().filter(y => ok(y) && !m.ids.includes(y.id)));
-  const opts = [];
+  // linking words: the same word type (an adverb's options are adverbs, not the verb "medføre"); the group's own words first, then the deck
+  const same = y => kind !== "conn" || LG[y.id][1] === LG[c.id][1];
+  const near = shuffle(m.ids.map(id => DB.cards[id]).filter(y => y && ok(y) && same(y))), far = shuffle(cards().filter(y => ok(y) && !m.ids.includes(y.id))).sort((a, b) => same(b) - same(a));
+  const opts = [], ids = [];
   for (const y of [...near, ...far]) {
     if (opts.length >= 3) break;
-    const f = (kind === "verb" ? mnVerb(y, w, stem) || mnCommon(y) : mnCommon(y) || y.word.replace(/^(en|et|at) /, ""))?.toLowerCase().trim();
-    if (!f || f === w || low.includes(f) || opts.includes(f)) continue;
-    opts.push(f);
+    if (ids.some(id => mnMates(id).has(y.id))) continue;   // two options that mean the same would both fit
+    const raw = kind === "verb" ? (single ? mnVerb(y, w, stem) : null) || mnCommon(y) : mnCommon(y) || y.word.replace(/^(en|et|at) /, "").replace(/\s*\((.*?)\)/g, " $1");   // "tilstrømning (af)" → "tilstrømning af"
+    const f = raw?.toLowerCase().trim();
+    if (!f || f === w || low.includes(f) || opts.includes(f) || (kind === "verb" && mnGlued.test(f))) continue;
+    opts.push(f); ids.push(y.id);
   }
   if (opts.length < 3) return null;
   const right = lowFirst(x.w), all = shuffle([right, ...opts]);
