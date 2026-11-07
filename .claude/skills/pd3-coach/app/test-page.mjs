@@ -260,5 +260,13 @@ ok("mine as topic", await ev(`(()=>{ home(); const r=[!!$("#mineLink"), byGroup(
 ok("mine reload", await ev(`(()=>{ MINE=mineRead(); mineIndex(); return [MINE.length, MINE[0].ids.length]; })()`));
 ok("mine topics tier", await ev(`(()=>{ topicsView(); return [...document.querySelectorAll(".tvset h2")].map(h=>h.textContent); })()`));
 ok("mine remove+delete", await ev(`(()=>{ mineView(MINE[0].id); $("[data-mn-rm]").click(); const n=MINE[0].ids.length; window.confirm=()=>true; $("#mnDel").click(); return [n, MINE.length, GROUP_ORDER.some(g=>g.startsWith("mine_")), !!$("#mnbox")]; })()`));
+const mkG = `MINE.find(g=>g.id==="mine_mock")`;
+ok("mine mock setup", await ev(`(()=>{ window.alert=()=>{}; MINE=MINE.filter(g=>g.id!=="mine_mock"); MINE.push({id:"mine_mock", name:"Mock test", ids:["at_medføre","fordi","desuden","at_betyde","at_opleve","derfor","at_forhindre"]}); mineSave(); ${mkG}.avoid = mnGuessYear(${mkG}); mineSave(); return [${mkG}.avoid, mnYears(${mkG})]; })()`));
+ok("mine mock build", await ev(`(()=>{ const m=${mkG}, b=mnMockBuild(m); if(!b) return "null"; const all=[b.example,...b.items]; const cnt={}; all.forEach(x=>cnt[x.card]=(cnt[x.card]||0)+1);
+  return { items: b.items.length, avoid: b.avoid, noAvoidYear: all.every(x=>x.src.slice(0,4)!==b.avoid), fourOpts: all.every(x=>new Set(x.opts).size===4), rightIsW: all.every(x=>x.opts[x.right]===lowFirst(x.w)), inGroup: all.every(x=>m.ids.includes(x.card)), maxTwo: Object.values(cnt).every(n=>n<=2) }; })()`));
+ok("mine mock screen", await ev(`(()=>{ startMineMock(${mkG}.id); return [document.querySelectorAll(".mkrow").length, MK.items.length + 2]; })()`));
+ok("mine mock hand in", await ev(`(()=>{ const sc0=JSON.stringify(mkStore().scores||null); startMineMock(${mkG}.id); MK.items.forEach((x,i)=>document.querySelector('.mkcell[data-r="'+i+'"][data-o="'+x.right+'"]').click()); $("#mkdone").click(); const st=mkStore(); return [st.mine["mine_mock"].length, st.mine["mine_mock"][0][1], JSON.stringify(st.scores||null)===sc0, (st.mineUsed||[]).length>0]; })()`));
+ok("mine year select", await ev(`(()=>{ mineView("mine_mock"); const s=document.querySelector('[data-mn-year="mine_mock"]'); s.value=""; s.dispatchEvent(new Event("change")); return [${mkG}.avoid, document.querySelector('[data-mn-year="mine_mock"]').value]; })()`));
+ok("mine mock clean-up", await ev(`(()=>{ MINE=MINE.filter(g=>g.id!=="mine_mock"); mineSave(); mineView(null); return [MINE.length, GROUP_ORDER.some(g=>g==="mine_mock")]; })()`));
 console.log("errors:", errs);
 await send("Browser.close").catch(() => {}); chrome.kill(); process.exit(0);
