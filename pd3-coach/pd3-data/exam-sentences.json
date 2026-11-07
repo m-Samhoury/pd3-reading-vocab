@@ -1,5 +1,5 @@
 {
-  "built": "2026-11-02",
+  "built": "2026-11-07",
   "sentences": {
     "eller": [
       {
@@ -12080,6 +12080,472 @@
         "m": [
           6,
           14
+        ]
+      }
+    ],
+    "at_spare_paa": [
+      {
+        "s": "De flyttede til Tønder for at spare tid på transport og på grund af de lavere boligpriser.",
+        "src": "2023s L1",
+        "m": [
+          30,
+          35
+        ]
+      },
+      {
+        "s": "Og hvor en almindelig lønmodtager har ret til mindst fem ugers ferie om året, der må en iværksætter selv spare op og sætte tid af.",
+        "src": "2022v L2",
+        "m": [
+          105,
+          110
+        ]
+      },
+      {
+        "s": "Hvis man lykkes med at ansætte den rigtige medarbejder første gang, så er mange penge sparet.",
+        "src": "2022s L2",
+        "m": [
+          86,
+          92
+        ]
+      },
+      {
+        "s": "”Hvis vi udnytter mulighederne, kan hjemmearbejde give større autonomi, spare transporttid, og det kan i visse situationer give en bedre balance mellem arbejdsliv og familielivet,”2 siger han.",
+        "src": "2022s L2",
+        "m": [
+          72,
+          77
+        ]
+      },
+      {
+        "s": "Der var flere praktiske ting ved det, bl.a. sparede jeg tid på transporten, da jeg jo var der i forvejen.",
+        "src": "2020v L1",
+        "m": [
+          44,
+          51
+        ]
+      },
+      {
+        "s": "Det sparer det offentlige for udgifter til ældrepleje.",
+        "src": "2019v L2",
+        "m": [
+          4,
+          10
+        ]
+      },
+      {
+        "s": "Det er nemlig dyrt at have bygninger og kontorer i København, så man kan spare mange penge på husleje uden for København.",
+        "src": "2018v L2",
+        "m": [
+          73,
+          78
+        ]
+      },
+      {
+        "s": "Hvis staten skal spare mange penge på husleje, skal det være hele arbejdspladsen, der flytter ud af hovedstaden.",
+        "src": "2018v L2",
+        "m": [
+          17,
+          22
+        ]
+      }
+    ],
+    "en_pligt_til": [
+      {
+        "s": "indstilling var, at 'den der gør sin pligt, kan også kræve sin ret'.",
+        "src": "2023s L1",
+        "m": [
+          37,
+          42
+        ]
+      },
+      {
+        "s": "Jeg synes, vi har pligt til at bakke op om vores lille lokale biograf.",
+        "src": "2019v L1",
+        "m": [
+          18,
+          27
+        ]
+      },
+      {
+        "s": "Alle kommuner har pligt til at tilbyde egu.",
+        "src": "2018v L1",
+        "m": [
+          18,
+          27
+        ]
+      },
+      {
+        "s": "Højskolen har pligt til at underrette Styrelsen for International Rekruttering og Integration, hvis en af deres udenlandske kursister ikke længere er studieaktiv.",
+        "src": "2018v L1",
+        "m": [
+          14,
+          23
+        ]
+      },
+      {
+        "s": "Planen skal være realistisk, under skrevet af dig og dine forældre – og du har pligt til at følge din plan.",
+        "src": "2015v L1",
+        "m": [
+          79,
+          88
+        ]
+      },
+      {
+        "s": "Pligt til at følge en uddannelsesplan Uddannelse er vigtig!",
+        "src": "2015v L1",
+        "m": [
+          0,
+          9
+        ]
+      },
+      {
+        "s": "Alle mellem 15-17 år har pligt til at være i uddannelse, beskæftigelse eller deltage i aktiviteter, der sigter mod at blive parat til en ungdomsuddannelse.",
+        "src": "2015v L1",
+        "m": [
+          25,
+          34
+        ]
+      },
+      {
+        "s": "Du har ret til at få de nødvendige tilbud til at blive uddannelsesparat – og du har pligt til at følge din uddannelsesplan!",
+        "src": "2015v L1",
+        "m": [
+          84,
+          93
+        ]
+      }
+    ],
+    "et_problem_for": [
+      {
+        "s": "Desuden havde byen god indtjening på studeeksport, men byens placering inde i landet var et permanent problem.",
+        "src": "2024s L1",
+        "m": [
+          102,
+          109
+        ]
+      },
+      {
+        "s": "Ifølge fagforeningen HK kan netop en fire-dages arbejdsuge være et godt værktøj til at løse nogle af disse problemer.",
+        "src": "2024s L2",
+        "m": [
+          107,
+          116
+        ]
+      },
+      {
+        "s": "Men ofte viser det sig, at frygten er ubegrundet. ”Det voldte faktisk ikke de store problemer, da det kom til stykket.",
+        "src": "2023v L2",
+        "m": [
+          84,
+          93
+        ]
+      },
+      {
+        "s": "Den forholdsvis lave søgning til de tekniske bacheloruddannelser er et problem, for der er faktisk mangel på unge med den type uddannelse.",
+        "src": "2023v L2",
+        "m": [
+          71,
+          78
+        ]
+      },
+      {
+        "s": "De svarede på vores spørgsmål, og det var også dem, der bakkede os op, da vi fik problemer med at optage boliglån.",
+        "src": "2022s L1",
+        "m": [
+          81,
+          90
+        ]
+      },
+      {
+        "s": "For Martin Holm, ph.d. i psykologi, er det langt fra det eneste problem ved personlighedstest.",
+        "src": "2022s L2",
+        "m": [
+          64,
+          71
+        ]
+      },
+      {
+        "s": "Kort sagt er det altså intet problem at få en hel dag til at gå her.",
+        "src": "2021v L1",
+        "m": [
+          29,
+          36
+        ]
+      },
+      {
+        "s": "På anden årgang i gymnasiet, 2.g, er problemet tilsyneladende endnu større.",
+        "src": "2021v L2",
+        "m": [
+          37,
+          46
+        ]
+      }
+    ],
+    "et_eksempel_paa": [
+      {
+        "s": "Og det er Pia Lehmann også et godt eksempel på.",
+        "src": "2024s L2",
+        "m": [
+          35,
+          46
+        ]
+      },
+      {
+        "s": "VIKING er et eksempel på et firma, der har brugt vikinger både i firmaets navn og i det kunstneriske udtryk, som virksomheden benytter sig af.",
+        "src": "2022v L1",
+        "m": [
+          13,
+          24
+        ]
+      }
+    ],
+    "et_overskud_af": [
+      {
+        "s": "Og man har også typisk mere overskud til at arbejde koncentreret, når man er på arbejde.",
+        "src": "2024s L2",
+        "m": [
+          28,
+          36
+        ]
+      },
+      {
+        "s": "Det bliver dog aldrig Ditte Simonsens kop te at træne hårdt hver dag. ”Det overskud mine kolleger får af deres hårde fysiske træning, det får jeg gennem læsning.",
+        "src": "2023s L2",
+        "m": [
+          75,
+          83
+        ]
+      },
+      {
+        "s": "Mange musikfestivaler skaber alligevel et overskud, som de efterfølgende uddeler til forskellige former for velgørende formål.",
+        "src": "2019s L1",
+        "m": [
+          42,
+          50
+        ]
+      },
+      {
+        "s": "det ikke overskud til familien og vennerne.",
+        "src": "2017s L2",
+        "m": [
+          9,
+          17
+        ]
+      },
+      {
+        "s": "Folk har både lange arbejdsdage og mange fritidsaktiviteter, og så er der ikke tid og overskud til at lave store fine middage.",
+        "src": "2016v L2",
+        "m": [
+          86,
+          94
+        ]
+      },
+      {
+        "s": "Han synes heller ikke, at det giver ham mindre overskud til at være sammen med børnene og passe hverdagen med arbejde og venner.",
+        "src": "2015v L2",
+        "m": [
+          47,
+          55
+        ]
+      },
+      {
+        "s": "Det forventes også, at du er aktiv og engageret i undervisningen, og at du har lyst og overskud til at være sammen med andre mennesker.",
+        "src": "2013s L1",
+        "m": [
+          87,
+          95
+        ]
+      }
+    ],
+    "en_mangel_paa": [
+      {
+        "s": "Det gælder ikke mindst inden for de områder, hvor der er mangel på arbejdskraft.",
+        "src": "2024s L2",
+        "m": [
+          57,
+          66
+        ]
+      },
+      {
+        "s": "Den forholdsvis lave søgning til de tekniske bacheloruddannelser er et problem, for der er faktisk mangel på unge med den type uddannelse.",
+        "src": "2023v L2",
+        "m": [
+          99,
+          108
+        ]
+      },
+      {
+        "s": "Det er især i brancher med mangel på højt specialiseret arbejdskraft, at den høje jobomsætning kan være et problem.",
+        "src": "2020v L2",
+        "m": [
+          27,
+          36
+        ]
+      }
+    ],
+    "masser_af": [
+      {
+        "s": "I det område, hvor alle ruter starter og slutter, er der derudover hele weekenden masser af muligheder for at købe mad og drikke for dem, der ikke har forudbestilt mad hjemmefra.",
+        "src": "2024s L1",
+        "m": [
+          82,
+          91
+        ]
+      },
+      {
+        "s": "På den bredeste strækning er der masser af klitter og gryder, hvor man kan finde læ – og være helt uforstyrret.",
+        "src": "2023v L1",
+        "m": [
+          33,
+          42
+        ]
+      },
+      {
+        "s": "Udover de mange turistattraktioner er der også gode shoppingmuligheder, cafeer og masser af grønne områder.",
+        "src": "2021v L1",
+        "m": [
+          82,
+          91
+        ]
+      },
+      {
+        "s": "Man byggede masser af boliger til arbejderne, og byen blev udvidet med for eksempel Kongensgade, Albani-kvarteret og Vesterbro-området.",
+        "src": "2021v L1",
+        "m": [
+          12,
+          21
+        ]
+      },
+      {
+        "s": "Der findes masser af gratis CO2-beregnere på nettet, som kan hjælpe en til at finde ud af, hvor man får mest ud af at begrænse sin CO2-udledning.",
+        "src": "2021s L2",
+        "m": [
+          11,
+          20
+        ]
+      },
+      {
+        "s": "I festivalens første fire dage kan børnene lege på legepladsen, som er den del af Børneland, der har hoppepuder, cykelbaner og masser af familiesjov.",
+        "src": "2019s L1",
+        "m": [
+          127,
+          136
+        ]
+      },
+      {
+        "s": "Hver dag i sæsonen kan man følge vores spændende fodringer af dyrene og få masser af viden.",
+        "src": "2017v L1",
+        "m": [
+          75,
+          84
+        ]
+      },
+      {
+        "s": "Gratis parkering og masser af plads Der er mange gode oplevelser udenfor bilen, så parkér på en af de tre store P-pladser ved hhv.",
+        "src": "2017v L1",
+        "m": [
+          20,
+          29
+        ]
+      }
+    ],
+    "forventninger_til": [
+      {
+        "s": "Da Mimi fik job og flyttede til Tønder med sin mand, Jon, var udfordringen i begyndelsen, at de især var bekymrede for, om livskvaliteten i Sønderjylland kunne leve op til deres forventninger.",
+        "src": "2023s L1",
+        "m": [
+          178,
+          191
+        ]
+      },
+      {
+        "s": "Selvom hun måtte revidere sine forventninger undervejs, tænker hun ikke længere så meget på, at året med jobsøgning var frustrerende.",
+        "src": "2022s L2",
+        "m": [
+          31,
+          44
+        ]
+      },
+      {
+        "s": "Forskere mener, at det blandt andet skyldes egne og andres forventninger til dem.",
+        "src": "2021v L2",
+        "m": [
+          59,
+          76
+        ]
+      },
+      {
+        "s": "Opholdet har fuldt ud levet op til Evas forventninger, og hun synes, hun har fået et stort fagligt udbytte af opholdet.",
+        "src": "2020s L2",
+        "m": [
+          40,
+          53
+        ]
+      },
+      {
+        "s": "Der er hver dag nye gæster, nye forventninger og nye udfordringer, som vi sammen skal prøve at løse og leve op til.",
+        "src": "2018s L1",
+        "m": [
+          32,
+          45
+        ]
+      },
+      {
+        "s": "På rekrutteringsworkshoppen vil deltagerne blive klogere på Universe og hvilke forventninger, vi har til vores sæsonmedarbejdere.",
+        "src": "2018s L1",
+        "m": [
+          79,
+          92
+        ]
+      },
+      {
+        "s": "Hvis man derimod deles mere lige i familien, viser man, at der er opbakning hjemmefra, og det påvirker de positive forventninger til kvinden.",
+        "src": "2018s L2",
+        "m": [
+          115,
+          132
+        ]
+      },
+      {
+        "s": "I dag mener Gert, at han havde for høje forventninger til sit arbejdsliv, men han mener ikke, at det alene var hans egne forventninger, der var skyld i hans sammenbrud.",
+        "src": "2017s L2",
+        "m": [
+          40,
+          57
+        ]
+      }
+    ],
+    "tillid_til": [
+      {
+        "s": "Vikingetiden og det danske samfund i dag Vikingernes handelsrelationer og militære samarbejde var præget af stor indbyrdes tillid.",
+        "src": "2022v L1",
+        "m": [
+          123,
+          129
+        ]
+      },
+      {
+        "s": "Dansk Erhverv mener, at bankerne skal have lov til at løbe en større risiko, hvis de har stor tillid til en ny iværksætter.",
+        "src": "2022v L2",
+        "m": [
+          94,
+          104
+        ]
+      },
+      {
+        "s": "”Jeg følte nok, at ledelsen havde vist mig stor tillid ved at give mig et stort ansvar, og den tillid ville jeg ikke svigte.",
+        "src": "2017s L2",
+        "m": [
+          48,
+          54
+        ]
+      },
+      {
+        "s": "Undervisningen bygger på gensidig tillid, respekt og nærvær.",
+        "src": "2013s L1",
+        "m": [
+          34,
+          40
         ]
       }
     ]

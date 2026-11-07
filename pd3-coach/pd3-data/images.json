@@ -2054,5 +2054,89 @@
   "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 90\"><g fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g transform=\"translate(30 45) scale(1.1)\" stroke-width=\"4.5\"><circle cx=\"0\" cy=\"-11\" r=\"6\" stroke=\"currentColor\" fill=\"var(--pic-b)\"/><path d=\"M-12 18v-6a12 10 0 0 1 24 0v6z\" stroke=\"currentColor\" fill=\"var(--pic-b)\"/></g><g transform=\"translate(90 45) scale(1.1)\" stroke-width=\"4.5\"><circle cx=\"0\" cy=\"0\" r=\"16\" stroke=\"currentColor\" fill=\"var(--pic-b)\"/><path d=\"M0-8V0l7 4\" stroke=\"var(--pic-a)\"/></g></g></svg>",
   "alt_da": "En person, et ur.",
   "alt_en": "A person, a clock."
+ },
+ "at_afskaffe": {
+  "kind": "svg",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 90\"><g fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g transform=\"translate(60 45) scale(1.3)\" stroke-width=\"3.6\"><path d=\"M-13-18h18l8 8v28h-26z\" stroke=\"currentColor\" fill=\"var(--pic-b)\"/><path d=\"M-9-8l18 18M9-8l-18 18\" stroke=\"var(--pic-a)\" stroke-width=\"4\"/></g></g></svg>",
+  "alt_da": "Et dokument med et stort kryds.",
+  "alt_en": "A document with a big cross."
+ },
+ "at_advare_mod": {
+  "kind": "svg",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 90\"><g fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g transform=\"translate(30 45) scale(1.1)\" stroke-width=\"4.5\"><path d=\"M0-18l18 32h-36z\" stroke=\"currentColor\" fill=\"var(--pic-b)\"/><path d=\"M0-6v12\" stroke=\"var(--pic-a)\"/><path d=\"M0 10v.1\" stroke=\"var(--pic-a)\"/></g><g transform=\"translate(90 45) scale(1.1)\" stroke-width=\"4.5\"><circle cx=\"0\" cy=\"-11\" r=\"6\" stroke=\"currentColor\" fill=\"var(--pic-b)\"/><path d=\"M-12 18v-6a12 10 0 0 1 24 0v6z\" stroke=\"currentColor\" fill=\"var(--pic-b)\"/></g></g></svg>",
+  "alt_da": "En advarselstrekant, en person.",
+  "alt_en": "A warning triangle, a person."
+ },
+ "et_miljoemaerke": {
+  "kind": "svg",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 90\"><g fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g transform=\"translate(60 45) scale(1.2)\" stroke-width=\"3.8\"><circle cx=\"0\" cy=\"0\" r=\"18\" stroke=\"currentColor\" fill=\"var(--pic-b)\"/><path d=\"M-8 8C-8-4 0-12 12-12C12 0 4 8-8 8z\" stroke=\"var(--pic-a)\"/><path d=\"M-8 8L6-6\" stroke=\"var(--pic-a)\" stroke-width=\"3\"/></g></g></svg>",
+  "alt_da": "Et blad i en cirkel.",
+  "alt_en": "A leaf in a circle."
+ },
+ "at_spare_paa": {
+  "kind": "svg",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 90\"><g fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g transform=\"translate(30 45) scale(1.1)\" stroke-width=\"4.5\"><circle cx=\"0\" cy=\"-4\" r=\"12\" stroke=\"currentColor\" fill=\"var(--pic-b)\"/><path d=\"M-6 11h12M-5 17h10\" stroke=\"currentColor\"/></g><g transform=\"translate(90 45) scale(1.1)\" stroke-width=\"4.5\"><path d=\"M0-18v32\" stroke=\"var(--pic-a)\"/><path d=\"M-10 6l10 10 10-10\" stroke=\"var(--pic-a)\"/></g></g></svg>",
+  "alt_da": "En pære, en pil nedad.",
+  "alt_en": "A light bulb, a downward arrow."
+ },
+ "en_pligt_til": {
+  "kind": "svg",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 90\"><g fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g transform=\"translate(60 45) scale(1.3)\" stroke-width=\"3.6\"><path d=\"M-13-14h26v32h-26z\" stroke=\"currentColor\" fill=\"var(--pic-b)\"/><path d=\"M-5-18h10v6h-10z\" stroke=\"currentColor\" fill=\"var(--pic-b)\"/><path d=\"M-7-4l3 3 5-6\" stroke=\"var(--pic-a)\"/><path d=\"M-2-4h8\" stroke=\"currentColor\"/><path d=\"M-7 8l3 3 5-6\" stroke=\"var(--pic-a)\"/><path d=\"M-2 8h8\" stroke=\"currentColor\"/></g></g></svg>",
+  "alt_da": "En tjekliste med flueben.",
+  "alt_en": "A checklist with ticks."
+ },
+ "et_problem_for": {
+  "kind": "svg",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 90\"><g fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g transform=\"translate(40 48) scale(1.2)\" stroke-width=\"4.5\"><circle cx=\"0\" cy=\"-11\" r=\"6\" stroke=\"currentColor\" fill=\"var(--pic-b)\"/><path d=\"M-12 18v-6a12 10 0 0 1 24 0v6z\" stroke=\"currentColor\" fill=\"var(--pic-b)\"/></g><g transform=\"translate(88 36) scale(1.5)\" stroke-width=\"3.4\"><path d=\"M-5-6a5 5 0 1 1 7 4.6c-1.4.7-2 1.6-2 3.4\" stroke=\"var(--pic-a)\"/><path d=\"M0 8v.1\" stroke=\"var(--pic-a)\"/></g></g></svg>",
+  "alt_da": "En person, et spørgsmålstegn.",
+  "alt_en": "A person, a question mark."
+ },
+ "et_eksempel_paa": {
+  "kind": "svg",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 90\"><g fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g transform=\"translate(30 45) scale(1.1)\" stroke-width=\"4.5\"><circle cx=\"-12\" cy=\"0\" r=\"4\" stroke=\"currentColor\" fill=\"var(--pic-b)\"/><circle cx=\"0\" cy=\"0\" r=\"4\" stroke=\"var(--pic-a)\" fill=\"var(--pic-b)\"/><circle cx=\"12\" cy=\"0\" r=\"4\" stroke=\"currentColor\" fill=\"var(--pic-b)\"/></g><g transform=\"translate(90 45) scale(1.1)\" stroke-width=\"4.5\"><circle cx=\"-3\" cy=\"-3\" r=\"11\" stroke=\"currentColor\" fill=\"var(--pic-b)\"/><path d=\"M5 5l12 12\" stroke=\"var(--pic-a)\"/></g></g></svg>",
+  "alt_da": "Tre prikker, et forstørrelsesglas.",
+  "alt_en": "Three dots, a magnifying glass."
+ },
+ "et_overskud_af": {
+  "kind": "svg",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 90\"><g fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g transform=\"translate(60 48) scale(1.3)\" stroke-width=\"3.6\"><path d=\"M-14-4h28l-4 24h-20z\" stroke=\"currentColor\" fill=\"var(--pic-b)\"/><path d=\"M-14-4C-12-10-6-12-2-9C2-14 10-12 14-4\" stroke=\"var(--pic-a)\"/><path d=\"M-18 0v8M18 0v8\" stroke=\"var(--pic-a)\"/></g></g></svg>",
+  "alt_da": "En kop, der flyder over.",
+  "alt_en": "A cup overflowing."
+ },
+ "en_mangel_paa": {
+  "kind": "svg",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 90\"><g fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g transform=\"translate(60 45) scale(1.3)\" stroke-width=\"3.6\"><path d=\"M-10-14h20v6c6 3 9 7 9 13v12c0 3-2 5-5 5h-28c-3 0-5-2-5-5v-12c0-6 3-10 9-13z\" stroke=\"currentColor\" fill=\"var(--pic-b)\"/><path d=\"M-12-18h24v4h-24z\" stroke=\"currentColor\" fill=\"var(--pic-b)\"/><path d=\"M-14 13h28\" stroke=\"var(--pic-a)\"/></g></g></svg>",
+  "alt_da": "En næsten tom krukke.",
+  "alt_en": "An almost empty jar."
+ },
+ "en_tilstroemning_af": {
+  "kind": "svg",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 90\"><g fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g transform=\"translate(60 45) scale(1.3)\" stroke-width=\"3.6\"><path d=\"M-9-2l9-9 9 9v12h-18z\" stroke=\"currentColor\" fill=\"var(--pic-b)\"/><path d=\"M-20 0h10M-14-4l5 4-5 4\" stroke=\"var(--pic-a)\"/><path d=\"M20 0h-10M14-4l-5 4 5 4\" stroke=\"var(--pic-a)\"/><path d=\"M0-22v10M-4-17l4 5 4-5\" stroke=\"var(--pic-a)\"/></g></g></svg>",
+  "alt_da": "Pile, der peger ind mod et hus.",
+  "alt_en": "Arrows pointing toward a house."
+ },
+ "masser_af": {
+  "kind": "svg",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 90\"><g fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g transform=\"translate(60 45) scale(1.2)\" stroke-width=\"3.4\"><circle cx=\"-5\" cy=\"-12\" r=\"4.5\" stroke=\"currentColor\" fill=\"var(--pic-b)\"/><circle cx=\"5\" cy=\"-12\" r=\"4.5\" stroke=\"currentColor\" fill=\"var(--pic-b)\"/><circle cx=\"-10\" cy=\"0\" r=\"4.5\" stroke=\"currentColor\" fill=\"var(--pic-b)\"/><circle cx=\"0\" cy=\"0\" r=\"4.5\" stroke=\"currentColor\" fill=\"var(--pic-b)\"/><circle cx=\"10\" cy=\"0\" r=\"4.5\" stroke=\"currentColor\" fill=\"var(--pic-b)\"/><circle cx=\"-15\" cy=\"12\" r=\"4.5\" stroke=\"currentColor\" fill=\"var(--pic-b)\"/><circle cx=\"-5\" cy=\"12\" r=\"4.5\" stroke=\"currentColor\" fill=\"var(--pic-b)\"/><circle cx=\"5\" cy=\"12\" r=\"4.5\" stroke=\"currentColor\" fill=\"var(--pic-b)\"/><circle cx=\"15\" cy=\"12\" r=\"4.5\" stroke=\"currentColor\" fill=\"var(--pic-b)\"/></g></g></svg>",
+  "alt_da": "Mange prikker i en bunke.",
+  "alt_en": "Many dots in a pile."
+ },
+ "forventninger_til": {
+  "kind": "svg",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 90\"><g fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g transform=\"translate(30 45) scale(1.1)\" stroke-width=\"4.5\"><circle cx=\"0\" cy=\"-11\" r=\"6\" stroke=\"currentColor\" fill=\"var(--pic-b)\"/><path d=\"M-12 18v-6a12 10 0 0 1 24 0v6z\" stroke=\"currentColor\" fill=\"var(--pic-b)\"/></g><g transform=\"translate(90 45) scale(1.1)\" stroke-width=\"3.6\"><path d=\"M0-16l4.7 9.5 10.5 1.5-7.6 7.4 1.8 10.5-9.4-5-9.4 5 1.8-10.5-7.6-7.4 10.5-1.5z\" stroke=\"var(--pic-a)\" fill=\"var(--pic-b)\"/></g></g></svg>",
+  "alt_da": "En person, en stjerne.",
+  "alt_en": "A person, a star."
+ },
+ "tillid_til": {
+  "kind": "svg",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 90\"><g fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g transform=\"translate(60 45) scale(1.4)\" stroke-width=\"3.6\"><path d=\"M0 14C-16 3-18-4-12-10c4-4 9-3 12 1c3-4 8-5 12-1c6 6 4 13-12 24z\" stroke=\"currentColor\" fill=\"var(--pic-b)\"/><path d=\"M-10-4q0-4 4-5\" stroke=\"var(--pic-a)\"/></g></g></svg>",
+  "alt_da": "Et hjerte.",
+  "alt_en": "A heart."
+ },
+ "uenighed_om": {
+  "kind": "svg",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 90\"><g fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><g transform=\"translate(30 42) scale(-1.1 1.1)\" stroke-width=\"4.5\"><path d=\"M-16-12h32v20h-18l-8 8v-8h-6z\" stroke=\"currentColor\" fill=\"var(--pic-b)\"/></g><g transform=\"translate(90 42) scale(1.1)\" stroke-width=\"4.5\"><path d=\"M-16-12h32v20h-18l-8 8v-8h-6z\" stroke=\"currentColor\" fill=\"var(--pic-b)\"/></g><path d=\"M50 39h20M64 33l6 6-6 6\" stroke=\"var(--pic-a)\"/><path d=\"M70 51H50M56 45l-6 6 6 6\" stroke=\"var(--pic-a)\"/></g></svg>",
+  "alt_da": "To talebobler med modsatrettede pile.",
+  "alt_en": "Two speech bubbles with opposing arrows."
  }
 }

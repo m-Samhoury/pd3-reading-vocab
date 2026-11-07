@@ -3000,5 +3000,107 @@
    "være vant til noget (be used to sth); være vant til at … (be used to doing …)"
   ],
   "prep": "vant til noget / vant til at + infinitiv"
+ },
+ "at_afskaffe": {
+  "prep": "afskaffe + navneord (ingen præposition)",
+  "construction": [
+   "afskaffe noget; noget bliver afskaffet",
+   "afskaffe noget (abolish sth); noget bliver afskaffet (sth is abolished)"
+  ]
+ },
+ "at_advare_mod": {
+  "prep": "advare nogen mod noget / mod at + infinitiv",
+  "construction": [
+   "advare mod noget / mod at + infinitiv; advare nogen om noget",
+   "advare mod (warn against doing sth); advare om (warn about a danger)"
+  ]
+ },
+ "et_miljoemaerke": {
+  "prep": "varer med (et) miljømærke",
+  "construction": [
+   "et miljømærke på en vare; miljømærkede varer",
+   "an eco-label on a product; eco-labelled products"
+  ]
+ },
+ "at_spare_paa": {
+  "prep": "spare på noget",
+  "construction": [
+   "spare på noget; spare penge (uden på); spare op til noget",
+   "spare på strøm (use less power); spare penge (save money, no på); spare op til (save up for)"
+  ]
+ },
+ "en_pligt_til": {
+  "prep": "have pligt til at + infinitiv",
+  "construction": [
+   "have pligt til at + infinitiv; det er ens pligt at …",
+   "have pligt til at (have a duty to); det er min pligt at (it is my duty to)"
+  ]
+ },
+ "et_problem_for": {
+  "prep": "et problem for nogen",
+  "construction": [
+   "et problem for nogen; problemer med noget; løse et problem",
+   "a problem for sb; problemer med (problems with sth); løse (solve) a problem"
+  ]
+ },
+ "et_eksempel_paa": {
+  "prep": "et eksempel på noget",
+  "construction": [
+   "et eksempel på noget / på at …; for eksempel (fx)",
+   "an example of sth; for eksempel (for example)"
+  ]
+ },
+ "et_overskud_af": {
+  "prep": "et overskud af noget",
+  "construction": [
+   "overskud af noget; overskud til at + infinitiv (energi); et overskud på 2 mio. kr.",
+   "overskud af (a surplus of); overskud til at (the energy to); et overskud på (a profit of)"
+  ]
+ },
+ "en_mangel_paa": {
+  "prep": "mangel på noget",
+  "construction": [
+   "mangel på noget; der er mangel på …; i mangel af bedre",
+   "a shortage of sth; there is a shortage of …; for want of anything better"
+  ]
+ },
+ "en_tilstroemning_af": {
+  "prep": "en tilstrømning af nogen / noget",
+  "construction": [
+   "en tilstrømning af nogen til et sted",
+   "an influx of people to a place"
+  ]
+ },
+ "masser_af": {
+  "prep": "masser af + navneord",
+  "construction": [
+   "masser af noget; en masse noget",
+   "masser af tid (plenty of time); en masse penge (a lot of money)"
+  ],
+  "register": [
+   "Hverdag. I et formelt essay: mange / en stor mængde.",
+   "Everyday. In a formal essay: mange / en stor mængde."
+  ]
+ },
+ "forventninger_til": {
+  "prep": "forventninger til nogen / noget",
+  "construction": [
+   "have forventninger til noget; leve op til forventningerne; i forventning om",
+   "have expectations of sth; live up to expectations; in expectation of"
+  ]
+ },
+ "tillid_til": {
+  "prep": "tillid til nogen / noget",
+  "construction": [
+   "have tillid til nogen; vise tillid; mangel på tillid",
+   "trust in sb; show trust; a lack of trust (no plural)"
+  ]
+ },
+ "uenighed_om": {
+  "prep": "uenighed om noget / om, hvem …",
+  "construction": [
+   "uenighed om noget; uenighed mellem nogen; være uenig i / om",
+   "disagreement about sth; disagreement between people; være uenig (disagree)"
+  ]
  }
 }
