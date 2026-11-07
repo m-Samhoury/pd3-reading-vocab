@@ -945,8 +945,8 @@ const I18N = {
   "info.how": ["Sådan virker det", "How it works"],
   "info.p1": ["Nye ord kommer fem ad gangen fra én gruppe. Først ser du ordet med ordstilling, eksempel, rigtige sætninger fra prøverne og ordbogsopslaget; bagefter bliver du testet.",
               "New words come five at a time from one group. First you see each word with its word order, example, real exam sentences and the dictionary entry; then you're tested."],
-  "info.p2": ["Gentagelse med mellemrum (SM-2): hvert svar giver en karakter 0–5, som bestemmer, hvornår ordet kommer igen. Højst 15 nye ord om dagen.",
-              "Spaced repetition (SM-2): every answer gets a grade 0–5 that decides when the word comes back. At most 15 new words a day."],
+  "info.p2": ["Gentagelse med mellemrum (SM-2): hvert svar giver en karakter 0–5, som bestemmer, hvornår ordet kommer igen.",
+              "Spaced repetition (SM-2): every answer gets a grade 0–5 that decides when the word comes back."],
   "info.p3": ["Fremskridt gemmes kun i denne browser på denne enhed.", "Progress is stored only in this browser on this device."],
   "info.keys": ["Taster", "Keys"],
   "key.num": ["Vælg svar", "Pick an answer"], "key.enter": ["Tjek / Næste", "Check / Next"],
@@ -1393,7 +1393,7 @@ const tip = p => p[LANG === "en" ? 2 : 3];
 // Connectors with a second relation: never offer that one as a wrong answer
 const ALSO = { da: ["tid"], mens: ["tid", "kontrast"], siden: ["årsag", "tid"], "så": ["formål"], "så_at": ["konsekvens"], "nemlig": ["præcisering"] };
 
-const NEW_PER_DAY = 15, BATCH = 5, REVIEW_LIMIT = 12;
+const BATCH = 5, REVIEW_LIMIT = 12;
 
 // ---------- state ----------
 let DB = null;           // {today, profile, cards: {id: card}, sentences}
@@ -1709,11 +1709,11 @@ function addFreqGroups() {
 function daysTo(d) { return d ? Math.round((new Date(d) - new Date(DB.today)) / 864e5) : null; }
 function counts() {
   const all = cards();
-  const introducedToday = all.filter(c => c.introduced === DB.today).length;
+  const fresh = all.filter(c => stateOf(c) === "new").length;
   return {
     due: all.filter(c => c.history && c.history.length && c.due <= DB.today).length,
-    newLeft: Math.max(0, NEW_PER_DAY - introducedToday),
-    fresh: all.filter(c => stateOf(c) === "new").length,
+    newLeft: fresh,   // no daily limit: every word not yet learnt is available
+    fresh,
     learning: all.filter(c => ["learn", "known"].includes(stateOf(c))).length,
     mastered: all.filter(c => stateOf(c) === "master").length,
     total: all.length,

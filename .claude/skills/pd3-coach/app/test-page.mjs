@@ -273,5 +273,6 @@ ok("mine medium build", await ev(`(()=>{ const b=mnMockBuild(${mkG}); if(!b) ret
 ok("mine medium clean", await ev(`(()=>{ const m=${mkG}, b=mnMockBuild(m); if(!b) return "null"; const caps=mnCaps(m.ids.map(id=>DB.cards[id]).filter(Boolean)); const bad=[b.example,...b.items].filter(x=>!mnClean(x.s,caps)).map(x=>x.s); return { relaxed: b.relaxed, bad }; })()`));
 ok("mine medium hand in",await ev(`(()=>{ startMineMock("mine_mock"); MK.items.forEach((x,i)=>document.querySelector('.mkcell[data-r="'+i+'"][data-o="'+x.right+'"]').click()); $("#mkdone").click(); const s=mkStore().mine["mine_mock"].slice(-1)[0]; return [s[3], s[1], s[2]]; })()`));
 ok("mine mock clean-up",await ev(`(()=>{ MINE=MINE.filter(g=>g.id!=="mine_mock"); mineSave(); mineView(null); return [MINE.length, GROUP_ORDER.some(g=>g==="mine_mock")]; })()`));
+ok("no daily limit", await ev(`(()=>{ const cs=cards().slice(0,20), old=cs.map(c=>c.introduced); cs.forEach(c=>c.introduced=DB.today); home(); const k=counts(), btns=[...document.querySelectorAll("[data-learn]")]; const r=[k.newLeft, k.fresh, k.newLeft===k.fresh, btns.length>0, btns.every(b=>!b.disabled)]; cs.forEach((c,i)=>c.introduced=old[i]); home(); return r; })()`));
 console.log("errors:", errs);
 await send("Browser.close").catch(() => {}); chrome.kill(); process.exit(0);
