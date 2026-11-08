@@ -661,6 +661,12 @@ input.vgap.right { border-color: var(--ok); background: var(--ok-bg); } input.vg
 .k-review > header, .btn.k-review { background: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container); }
 .k-learn > header, .btn.k-learn { background: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container); }
 .k-test > header, .btn.k-test { background: var(--md-sys-color-tertiary-container); color: var(--md-sys-color-on-tertiary-container); }
+.btn.k-flash { background: var(--md-sys-color-surface-container-highest); color: var(--md-sys-color-on-surface); }
+.gadots { margin: 10px 0 0; }
+.gacts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-top: 16px; }
+.gacts .btn { flex-direction: column; min-height: 68px; padding: 8px 6px; font-size: .88rem; }
+.gacts .btn svg { width: 20px; height: 20px; }
+@media (max-width: 480px) { .gacts { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .tvrows { list-style: none; margin: 0; padding: 6px; }
 .tvrows li + li { border-top: 1px solid var(--md-sys-color-surface-container-highest); }
 .tvrows button { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 12px; width: 100%; min-height: 56px; padding: 8px 8px 8px 14px; border: 0; border-radius: 16px; background: none; color: inherit; font: inherit; cursor: pointer; text-align: left; }
@@ -1207,7 +1213,8 @@ const I18N = {
   "tv.due.u": ["ord i dag", "words today"], "tv.new.u": ["nye ord tilbage", "new words left"], "tv.learnt.u": ["lærte ord", "words learnt"],
   "tv.learn": ["Lær nyt", "Learn new"], "tv.test": ["Test", "Test"],
   "tv.v.review": ["Gentag", "Review"], "tv.v.learn": ["Lær", "Learn"], "tv.v.test": ["Test", "Test"],
-  "tv.l.review": ["Gentag ordene i {0}", "Review the words in {0}"], "tv.l.learn": ["Lær nye ord i {0}", "Learn new words in {0}"], "tv.l.test": ["Test dig selv i {0}", "Test yourself on {0}"],
+  "ga.open": ["Åbn {0}", "Open {0}"], "ga.ask": ["Vælg, hvad du vil lave nu", "Choose what to do now"],
+  "ga.sum": ["{0} ord · {1} nye · {2} at gentage i dag · {3} lærte", "{0} words · {1} new · {2} due today · {3} learnt"],
   "tv.rev.first": ["Intet at gentage endnu. Ord, du lærer, kommer tilbage her lige før du glemmer dem.", "Nothing to review yet. Words you learn come back here just before you forget them."],
   "tv.rev.done": ["Alt er gentaget i dag.", "Everything is reviewed for today."],
   "tv.learn.done": ["Du har set alle ord.", "You have seen every word."],
@@ -1750,15 +1757,44 @@ function pickBar(groupsBy) {
   const pool = picked.flatMap(g => groupsBy[g] || []);
   return `<div class="tvbar"><div class="tx"><b>${t("pk.some", picked.length, pool.length)}</b><small>${esc(picked.map(gname).slice(0, 3).join(", "))}${picked.length > 3 ? " …" : ""}</small></div>
       <button type="button" class="btn k-review" id="selRev">${ICONS.repeat}${t("tv.v.review")}</button><button type="button" class="btn k-learn" id="selLearn">${ICONS.spark}${t("tv.v.learn")}</button>
-      <button type="button" class="btn k-test" id="selTest">${ICONS.pencil}${t("tv.v.test")}</button><button type="button" class="txtbtn" id="selClear">${t("pk.clear")}</button></div>`;
+      <button type="button" class="btn k-test" id="selTest">${ICONS.pencil}${t("tv.v.test")}</button><button type="button" class="btn k-flash" id="selFlash">${ICONS.cards}${t("h.fc")}</button><button type="button" class="txtbtn" id="selClear">${t("pk.clear")}</button></div>`;
 }
 function bindPickBar(redraw) {
   if (!$("#selLearn")) return;
   const sel = picked.slice();
   $("#selLearn").onclick = () => startSession({ groups: sel, reviews: 0 });
   $("#selTest").onclick = () => startExercise(sel);
+  $("#selFlash").onclick = () => startFlash(sel);
   $("#selRev").onclick = () => startSession({ groups: sel, fresh: 0 });
   $("#selClear").onclick = () => { setPicked([]); redraw(); };
+}
+// a topic row on the home board opens this chooser instead of starting a session at once
+function groupActions(g) {
+  const cs = byGroup()[g] || [];
+  const learnt = cs.filter(c => c.history.length).length, fresh = cs.filter(c => stateOf(c) === "new").length;
+  const due = cs.filter(c => c.history.length && c.due <= DB.today).length;
+  let dlg = $("#gact");
+  if (!dlg) {
+    dlg = document.createElement("dialog"); dlg.id = "gact"; dlg.className = "info"; dlg.setAttribute("aria-labelledby", "gactTitle");
+    dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
+    document.body.append(dlg);
+  }
+  const go = fn => { dlg.close(); fn(); };
+  dlg.innerHTML = `<div class="ib"><div class="ih"><h2 id="gactTitle">${esc(glabel(g))}</h2><button type="button" class="btn quiet" id="gactClose" aria-label="${esc(t("info.close"))}">✕</button></div>
+    <p>${t("ga.sum", cs.length, fresh, due, learnt)}</p><div class="gadots">${wordDots(cs)}</div>
+    <p>${t("ga.ask")}</p>
+    <div class="gacts">
+      <button type="button" class="btn k-review" id="gaRev"${learnt ? "" : " disabled"}>${ICONS.repeat}${t("tv.v.review")}</button>
+      <button type="button" class="btn k-learn" id="gaLearn"${fresh ? "" : " disabled"}>${ICONS.spark}${t("tv.v.learn")}</button>
+      <button type="button" class="btn k-test" id="gaTest"${learnt ? "" : " disabled"}>${ICONS.pencil}${t("tv.v.test")}</button>
+      <button type="button" class="btn k-flash" id="gaFlash">${ICONS.cards}${t("h.fc")}</button>
+    </div></div>`;
+  $("#gactClose").onclick = () => dlg.close();
+  $("#gaRev").onclick = () => go(() => startSession({ groups: [g], fresh: 0 }));
+  $("#gaLearn").onclick = () => go(() => startSession({ groups: [g], reviews: 0 }));
+  $("#gaTest").onclick = () => go(() => startExercise([g]));
+  $("#gaFlash").onclick = () => go(() => startFlash([g]));
+  dlg.showModal();
 }
 function tvCol(k, icon, title, big, unit, body, foot) {
   return `<section class="tvcol k-${k}"><header><h2>${ICONS[icon]}${title}</h2><span class="big">${big}<small>${unit}</small></span></header>${body}${foot ? `<div class="foot">${foot}</div>` : ""}</section>`;
@@ -1796,14 +1832,14 @@ function home() {
     ${storageOK ? "" : `<div class="err small">${t("h.storage")}</div>`}
     ${gview ? grBoard() : `<div class="tvboard">
       ${tvCol("review", "repeat", t("tv.v.review"), k.due, t("tv.due.u"),
-        due.length ? list(due.map(g => tvRow(`data-rev="${esc(g)}"`, esc(gname(g)), `<small>${esc(setName(g))}</small>`, dueIn(groupsBy[g]), t("tv.v.review"), t("tv.l.review", gname(g)), false, g))) :
+        due.length ? list(due.map(g => tvRow(`data-rev="${esc(g)}"`, esc(gname(g)), `<small>${esc(setName(g))}</small>`, dueIn(groupsBy[g]), t("tv.v.review"), t("ga.open", gname(g)), false, g))) :
         empty(nLearned ? "check" : "repeat", t(nLearned ? "tv.rev.done" : "tv.rev.first")),
         `<button type="button" class="txtbtn" id="flash">${ICONS.cards}${t("h.fc")} · ${t("fc.n", fcCount(groupsBy))}</button>`)}
       ${tvCol("learn", "spark", t("tv.learn"), k.fresh, t("tv.new.u"),
-        fresh.length ? list(freshShown.map(g => tvRow(`data-learn="${esc(g)}"`, esc(gname(g)), wordDots(groupsBy[g]), newIn(groupsBy[g]), t("tv.v.learn"), t("tv.l.learn", gname(g)), !k.newLeft, g))) : empty("check", t("tv.learn.done")),
+        fresh.length ? list(freshShown.map(g => tvRow(`data-learn="${esc(g)}"`, esc(gname(g)), wordDots(groupsBy[g]), newIn(groupsBy[g]), t("tv.v.learn"), t("ga.open", gname(g)), !k.newLeft, g))) : empty("check", t("tv.learn.done")),
         fresh.length > 5 ? `<button type="button" class="txtbtn" id="learnAll" aria-expanded="${learnAll}">${t(learnAll ? "tv.fewer" : "tv.all", fresh.length)}</button>` : "")}
       ${tvCol("test", "pencil", t("tv.test"), nLearned, t("tv.learnt.u"),
-        list([...learnt.map(g => tvRow(`data-ex="${esc(g)}"`, esc(gname(g)), `<small>${t("tv.ex.s", setName(g))}</small>`, seenIn(groupsBy[g]), t("tv.v.test"), t("tv.l.test", gname(g)), false, g)),
+        list([...learnt.map(g => tvRow(`data-ex="${esc(g)}"`, esc(gname(g)), `<small>${t("tv.ex.s", setName(g))}</small>`, seenIn(groupsBy[g]), t("tv.v.test"), t("ga.open", gname(g)), false, g)),
           tvRow(`id="conf"`, t("h.conf"), `<small>${t("tv.conf.s")}</small>`, nConf, t("tv.v.test"), t("h.conf"), !nConf),
           ...(lgItems().length ? [tvRow(`id="logic"`, t("lg.drill"), `<small>${t("lg.drill.s")}</small>`, `${lgDone()}<small>${t("tv.of", lgItems().length)}</small>`, t("tv.v.test"), t("lg.drill.l"))] : [])]) + (nLearned ? "" : empty("pencil", t("h.ex.none"))),
         `<button type="button" class="txtbtn" id="exer"${nLearned ? "" : " disabled"}>${ICONS.pencil}${t("tv.exall")}</button>`)}
@@ -1824,9 +1860,9 @@ function home() {
   if ($("#mockGo")) $("#mockGo").onclick = startMock;
   if ($("#l2bGo")) $("#l2bGo").onclick = l2bHome;
   if ($("#tkLink")) $("#tkLink").onclick = e => { e.preventDefault(); tankegang(); };
-  document.querySelectorAll("[data-rev]").forEach(b => b.onclick = () => startSession({ groups: [b.dataset.rev], fresh: 0 }));
-  document.querySelectorAll("[data-learn]").forEach(b => b.onclick = () => startSession({ groups: [b.dataset.learn], reviews: 0 }));
-  document.querySelectorAll("[data-ex]").forEach(b => b.onclick = () => startExercise([b.dataset.ex]));
+  document.querySelectorAll("[data-rev]").forEach(b => b.onclick = () => groupActions(b.dataset.rev));
+  document.querySelectorAll("[data-learn]").forEach(b => b.onclick = () => groupActions(b.dataset.learn));
+  document.querySelectorAll("[data-ex]").forEach(b => b.onclick = () => groupActions(b.dataset.ex));
   if ($("#learnAll")) $("#learnAll").onclick = () => { learnAll = !learnAll; const y = window.scrollY; home(); window.scrollTo(0, y); $("#learnAll")?.focus(); };
   const rehome = () => { const y = window.scrollY; home(); window.scrollTo(0, y); };
   document.querySelectorAll("[data-pick]").forEach(i => i.onchange = () => {
