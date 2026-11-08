@@ -661,6 +661,12 @@ input.vgap.right { border-color: var(--ok); background: var(--ok-bg); } input.vg
 .k-review > header, .btn.k-review { background: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container); }
 .k-learn > header, .btn.k-learn { background: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container); }
 .k-test > header, .btn.k-test { background: var(--md-sys-color-tertiary-container); color: var(--md-sys-color-on-tertiary-container); }
+.btn.k-flash { background: var(--md-sys-color-surface-container-highest); color: var(--md-sys-color-on-surface); }
+.gadots { margin: 10px 0 0; }
+.gacts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-top: 16px; }
+.gacts .btn { flex-direction: column; min-height: 68px; padding: 8px 6px; font-size: .88rem; }
+.gacts .btn svg { width: 20px; height: 20px; }
+@media (max-width: 480px) { .gacts { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .tvrows { list-style: none; margin: 0; padding: 6px; }
 .tvrows li + li { border-top: 1px solid var(--md-sys-color-surface-container-highest); }
 .tvrows button { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 12px; width: 100%; min-height: 56px; padding: 8px 8px 8px 14px; border: 0; border-radius: 16px; background: none; color: inherit; font: inherit; cursor: pointer; text-align: left; }
@@ -705,6 +711,23 @@ input.vgap.right { border-color: var(--ok); background: var(--ok-bg); } input.vg
 .tvtbl .wdots { margin: 0; } .tvtbl .wdots i { width: 10px; height: 10px; }
 .tvtbl .c { font-family: 'Gabarito', sans-serif; font-weight: 700; text-align: right; }
 .tvtbl .due { justify-self: end; padding: 2px 10px; border-radius: 999px; font-size: .78rem; font-weight: 700; background: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container); }
+.mnnew { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.mnnew input, #mnq { flex: 1 1 220px; min-height: 44px; padding: 0 14px; border-radius: 12px; border: 1px solid var(--rule-strong); background: var(--sheet); color: var(--ink); font: inherit; box-sizing: border-box; }
+#mnq { width: 100%; margin-top: 12px; flex: none; }
+.mnlist { list-style: none; padding: 0; margin: 24px 0 0; display: grid; gap: 12px; }
+.mngroup { padding: 16px 20px; border-radius: 24px; background: var(--md-sys-color-surface-container-low); }
+.mngroup > b { font-weight: 600; } .mngroup > small { margin-left: 8px; color: var(--soft); }
+.mngroup .row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.mngroup.open { box-shadow: inset 0 0 0 2px var(--md-sys-color-primary); }
+.mnedit { margin-top: 14px; padding-top: 4px; }
+.mnhits { list-style: none; padding: 0; margin: 8px 0 16px; }
+.mnhits li { display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 52px; border-top: 1px solid var(--md-sys-color-outline-variant); }
+.mnhits li > span { min-width: 0; }
+.mnhits small { display: block; color: var(--soft); font-size: .82rem; }
+.mnprep { color: var(--md-sys-color-primary); font-weight: 600; font-size: .88rem; }
+.mnwords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.mnwords .pchip { text-align: left; } .mnwords .pchip > span:first-child { white-space: nowrap; }
+.mngroup .row .btn { min-height: 40px; padding: 6px 12px; } .mngroup .row .btn svg { width: 18px; height: 18px; }
 .tvbar { position: sticky; bottom: 16px; z-index: 5; display: flex; align-items: center; gap: 8px 12px; flex-wrap: wrap; margin-top: 24px; padding: 12px 12px 12px 24px; border-radius: 28px; background: var(--md-sys-color-inverse-surface); color: var(--md-sys-color-inverse-on-surface); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
 .tvbar .tx { flex: 1; min-width: 180px; } .tvbar small { display: block; opacity: .8; }
 .tvbar .btn { display: inline-flex; align-items: center; gap: 8px; } .tvbar .btn svg { width: 18px; height: 18px; }
@@ -928,8 +951,8 @@ const I18N = {
   "info.how": ["Sådan virker det", "How it works"],
   "info.p1": ["Nye ord kommer fem ad gangen fra én gruppe. Først ser du ordet med ordstilling, eksempel, rigtige sætninger fra prøverne og ordbogsopslaget; bagefter bliver du testet.",
               "New words come five at a time from one group. First you see each word with its word order, example, real exam sentences and the dictionary entry; then you're tested."],
-  "info.p2": ["Gentagelse med mellemrum (SM-2): hvert svar giver en karakter 0–5, som bestemmer, hvornår ordet kommer igen. Højst 15 nye ord om dagen.",
-              "Spaced repetition (SM-2): every answer gets a grade 0–5 that decides when the word comes back. At most 15 new words a day."],
+  "info.p2": ["Gentagelse med mellemrum (SM-2): hvert svar giver en karakter 0–5, som bestemmer, hvornår ordet kommer igen.",
+              "Spaced repetition (SM-2): every answer gets a grade 0–5 that decides when the word comes back."],
   "info.p3": ["Fremskridt gemmes kun i denne browser på denne enhed.", "Progress is stored only in this browser on this device."],
   "info.keys": ["Taster", "Keys"],
   "key.num": ["Vælg svar", "Pick an answer"], "key.enter": ["Tjek / Næste", "Check / Next"],
@@ -1007,6 +1030,27 @@ const I18N = {
   "h.groups": ["Fremskridt per gruppe", "Progress by group"],
   "st.new": ["ny", "new"], "st.learn": ["i gang", "learning"], "st.known": ["kendt (6+ dage)", "known (6+ days)"], "st.master": ["kan du (21+ dage)", "mastered (21+ days)"],
   "p.1": ["Forbinderord", "Connectors"], "p.2": ["Ord fra prøven", "Exam words"], "p.3": ["Andre nyttige ord", "Other useful words"],
+  "p.5": ["Mine ord", "My words"], "p.5.s": ["Dine egne grupper. Søg ordene frem, og saml dem du vil lære.", "Your own groups. Search for the words and collect the ones you want to learn."],
+  "mn.intro": ["Lav en gruppe, søg de ord frem du vil lære, og tilføj dem. Gruppen virker som de andre emner: Lær, Gentag, Test og flashcards.", "Make a group, search for the words you want to learn and add them. The group works like the other topics: Learn, Review, Test and flashcards."],
+  "mn.name.ph": ["Navn på gruppen, fx Svære verber", "Group name, e.g. Hard verbs"], "mn.new": ["Ny gruppe", "New group"],
+  "mn.none": ["Du har ingen grupper endnu. Giv den første et navn ovenfor.", "You have no groups yet. Give the first one a name above."],
+  "mn.words": ["{0} ord", "{0} words"], "mn.edit": ["Rediger", "Edit"], "mn.done": ["Færdig", "Done"],
+  "mn.rename": ["Navn", "Name"], "mn.save": ["Gem navn", "Save name"], "mn.del": ["Slet gruppe", "Delete group"],
+  "mn.del.q": ["Slette gruppen \"{0}\"? Ordene og dit fremskridt bliver i de andre emner.", "Delete the group \"{0}\"? The words and your progress stay in the other topics."],
+  "mn.q.ph": ["Søg et ord, fx medføre eller på grund af", "Search a word, e.g. medføre or på grund af"],
+  "mn.q.hint": ["Skriv et ord på dansk eller engelsk for at finde det.", "Type a word in Danish or English to find it."],
+  "mn.q.none": ["Intet ord i ordbanken passer til \"{0}\".", "No word in the word bank matches \"{0}\"."],
+  "mn.add": ["Tilføj", "Add"], "mn.added": ["Tilføjet", "Added"], "mn.rm": ["Fjern {0}", "Remove {0}"],
+  "mn.in": ["Ordene i gruppen", "Words in the group"], "mn.empty": ["Ingen ord endnu. Søg ovenfor og tryk Tilføj.", "No words yet. Search above and press Add."],
+  "mn.link.s": ["{0} grupper · lav din egen", "{0} groups · make your own"], "mn.open": ["Rediger mine ord", "Edit my words"],
+  "mn.avoid": ["Ikke sætninger fra", "No sentences from"], "mn.avoid.none": ["intet år", "no year"], "mn.avoid.guess": [" (gæt)", " (guess)"],
+  "mn.mock": ["Mock Læsning 3", "Mock Reading 3"], "mn.mk.last": ["Mock Læsning 3 · sidst: {0}/{1}", "Mock Reading 3 · last: {0}/{1}"],
+  "mn.mk.note": ["Rigtige sætninger fra prøverne – ikke fra {0} – med ordene fra din gruppe \"{1}\". Sætningerne hænger ikke sammen som én tekst. Svarmulighederne er helst andre ord fra gruppen.", "Real exam sentences – not from {0} – with the words from your group \"{1}\". The sentences don't form one text. The options are other words from the group where possible."],
+  "mn.mk.instr": ["Der er fjernet {0} ord eller udtryk, og hullerne er angivet med tallene 1–{0}. Vælg i svararket nedenfor det ord eller udtryk (A, B, C eller D), der passer til hvert hul. Der er et eksempel angivet som 0. Der gives 1 point for hvert korrekt svar.", "{0} words or phrases were removed, and the gaps are numbered 1–{0}. In the answer table below, choose the word or phrase (A, B, C or D) that fits each gap. There is an example, marked 0. Each correct answer gives 1 point."],
+  "mn.mk.few": ["Der er ikke sætninger nok fra de andre år til en mock af denne gruppe endnu.", "Not enough sentences from the other years for a mock of this group yet."],
+  "mn.level": ["Sværhed", "Difficulty"], "mn.level.medium": ["Mellem · kortere, enklere sætninger", "Medium · shorter, simpler sentences"], "mn.level.hard": ["Svær · sætninger som i prøven", "Hard · sentences like the exam"],
+  "mn.lv.s.medium": ["Mellem", "Medium"], "mn.lv.s.hard": ["Svær", "Hard"], "mn.mk.lv": ["Sværhed: {0}.", "Difficulty: {0}."],
+  "mn.mk.relaxed": ["Der var ikke nok korte sætninger, så nogle er lidt længere.", "There weren't enough short sentences, so some are a bit longer."],
   "p.4": ["Hyppige ord", "Frequent words"], "p.4.s": ["Ord fra prøverne, sorteret efter hvor tit de er kommet siden 2020. De vigtigste står først.", "Words from the exams, ranked by how often they've come up since 2020. The most important come first."],
   "p.4.n": ["Top {0}–{1} · {2} siden 2020", "Top {0}–{1} · {2} since 2020"], "p.4.old": ["Top {0}–{1} · kun før 2020", "Top {0}–{1} · only before 2020"],
   "g.due": ["{0} skal gentages", "{0} due"], "g.words": ["{0} ord", "{0} words"], "g.next": ["næste gang {0}", "next {0}"],
@@ -1125,6 +1169,17 @@ const I18N = {
   "gm.e.miss": ["Det ord er rigtigt. Fejlen var «{0}».", "That word is right. The mistake was «{0}»."],
   "gm.sum": ["{0} af {1} rigtige", "{0} of {1} right"], "gm.again": ["En runde til", "Another round"], "gm.redo": ["Tag fejlene igen · {0}", "Redo the mistakes · {0}"], "gm.list": ["Øv disse igen:", "Practise these again:"], "gm.menu": ["Grammatik", "Grammar"],
   "gm.s.v": ["verbum", "verb"], "gm.s.s": ["subjekt", "subject"], "gm.s.a": ["adverbium", "adverb"], "gm.s.p": ["pronomen", "pronoun"], "gm.s.1": ["plads 1", "position 1"],
+  "gm.g.mine": ["Dine fejl", "Your mistakes"],
+  "gm.mine": ["Dine fejl: ikke + skal/vil", "Your mistakes: ikke + skal/vil"], "gm.mine.r": ["Modalverbum → navnemåde (skal have). Intet modalverbum → -r (hun flytter). Ledsætning: subjekt – ikke – verbum (at hun ikke skal).", "Modal verb → infinitive (skal have). No modal verb → -r (hun flytter). Subordinate clause: subject – ikke – verb (at hun ikke skal)."], "gm.mine.d": ["Skulle vi ikke ___ sammen? (ringe / ringer / at ringe)", "Skulle vi ikke ___ sammen? (ringe / ringer / at ringe)"],
+  "gm.mine.why": ["Netop de fejl, du laver i dine mails: verbet efter skal/vil, -r i nutid og hvor ikke står. Sætninger fra prøverne og fra dine egne mails.", "Exactly the mistakes in your mails: the verb after skal/vil, -r in the present and where ikke goes. Sentences from the exams and from your own mails."],
+  "gm.q.mine.pick": ["Vælg den rigtige form af verbet.", "Pick the right form of the verb."], "gm.q.mine.order": ["Sæt ordene i den rigtige rækkefølge.", "Put the words in the right order."],
+  "gm.m.modal": ["Foran står modalverbet «{0}». Efter skal, vil, kan, må, bør, skulle, ville og kunne kommer navnemåde – uden -r og uden at: «{0} … {1}».", "The modal verb «{0}» comes first. After skal, vil, kan, må, bør, skulle, ville and kunne the verb is in the infinitive – no -r and no at: «{0} … {1}»."],
+  "gm.m.pres": ["Intet modalverbum styrer verbet her. Subjektet «{0}» har sit eget verbum, så det står i nutid med -r: «{0} {1}».", "No modal verb controls the verb here. The subject «{0}» has its own verb, so it is in the present with -r: «{0} {1}»."],
+  "gm.m.sub0": ["Efter «{0}» kommer en ledsætning: først subjektet «{1}», så verbet «{2}». Verbet hopper ikke frem foran subjektet.", "After «{0}» comes a subordinate clause: first the subject «{1}», then the verb «{2}». The verb does not jump in front of the subject."],
+  "gm.m.q": ["Et ja/nej-spørgsmål starter med verbet «{0}», så kommer subjektet «{1}» og derefter ikke. Samme mønster: Skulle vi ikke ringe? – og efter skulle kommer navnemåden ringe.", "A yes/no question starts with the verb «{0}», then the subject «{1}», then ikke. Same pattern: Skulle vi ikke ringe? – and after skulle comes the infinitive ringe."],
+  "gm.m.refl": ["At føle sig er refleksivt: «{0}» står lige efter verbet «{1}» og før ikke: Jeg føler mig ikke …", "føle sig is reflexive: «{0}» comes right after the verb «{1}» and before ikke: Jeg føler mig ikke …"],
+  "gm.m.tip": ["Huskeregel: modalverbum → navnemåde (skal have) · intet modalverbum → -r (hun har) · ledsætning → subjekt, ikke, verbum (at hun ikke skal).", "Rule of thumb: modal verb → infinitive (skal have) · no modal verb → -r (hun har) · subordinate clause → subject, ikke, verb (at hun ikke skal)."],
+  "gm.m.answer": ["Den rigtige sætning ({0}):", "The correct sentence ({0}):"],
   "ai.title": ["Skrevet af AI (Claude) til dette værktøj – ikke fra Den Danske Ordbog eller prøverne. Tjek i ordbogen.", "Written by AI (Claude) for this tool – not from Den Danske Ordbog or the exams. Check in the dictionary."],
   "ai.ddo": ["fra Den Danske Ordbog", "from Den Danske Ordbog"], "ai.exam": ["fra prøverne", "from the exams"],
   "ai.gt": ["Engelsk: maskinoversat med Google Translate.", "English: machine-translated with Google Translate."],
@@ -1158,7 +1213,8 @@ const I18N = {
   "tv.due.u": ["ord i dag", "words today"], "tv.new.u": ["nye ord tilbage", "new words left"], "tv.learnt.u": ["lærte ord", "words learnt"],
   "tv.learn": ["Lær nyt", "Learn new"], "tv.test": ["Test", "Test"],
   "tv.v.review": ["Gentag", "Review"], "tv.v.learn": ["Lær", "Learn"], "tv.v.test": ["Test", "Test"],
-  "tv.l.review": ["Gentag ordene i {0}", "Review the words in {0}"], "tv.l.learn": ["Lær nye ord i {0}", "Learn new words in {0}"], "tv.l.test": ["Test dig selv i {0}", "Test yourself on {0}"],
+  "ga.open": ["Åbn {0}", "Open {0}"], "ga.ask": ["Vælg, hvad du vil lave nu", "Choose what to do now"],
+  "ga.sum": ["{0} ord · {1} nye · {2} at gentage i dag · {3} lærte", "{0} words · {1} new · {2} due today · {3} learnt"],
   "tv.rev.first": ["Intet at gentage endnu. Ord, du lærer, kommer tilbage her lige før du glemmer dem.", "Nothing to review yet. Words you learn come back here just before you forget them."],
   "tv.rev.done": ["Alt er gentaget i dag.", "Everything is reviewed for today."],
   "tv.learn.done": ["Du har set alle ord.", "You have seen every word."],
@@ -1285,7 +1341,7 @@ const GROUPS = {
   "l1_ord": ["L1 key words", "L1-nøgleord", 2], "l1_verb": ["L1 verbs", "L1-verber", 2], "l2_ord": ["L2 question words", "L2-spørgeord", 2],
   "modalverbum": ["Modal verbs", "Modalverber", 2], "l3_medfoere": ["L3: lead to / cause", "L3: føre til / forårsage", 2],
   "l3_forhindre": ["L3: prevent / limit", "L3: forhindre / begrænse", 2], "l3_forklare": ["L3: say / claim", "L3: sige / påstå", 2],
-  "l3_ord": ["L3 words", "L3-ord", 2], "praep": ["Fixed prepositions", "Faste præpositioner", 2], "adjektiv": ["Adjectives", "Adjektiver", 3],
+  "l3_ord": ["L3 words", "L3-ord", 2], "praep": ["Fixed prepositions", "Faste præpositioner", 2], "adjektiv": ["Adjectives", "Adjektiver", 3], "nye_ord": ["New words", "Nye ord", 3], "vaernepligt": ["Conscription", "Værnepligt", 3],
 };
 const GROUP_ORDER = Object.keys(GROUPS);
 
@@ -1347,6 +1403,7 @@ const CONFUSABLES = [
   ["dermed", "derved", "both = thereby / thus", "begge = på den måde / som følge heraf"],
   ["følgelig", "derfor", "both = therefore; følgelig is formal", "begge = derfor; følgelig er formelt"],
   ["at_sikre", "at_garantere", "both = make sure; garantere is stronger (promise)", "begge = sørge for; garantere er stærkere (et løfte)"],
+  ["at_erkende", "at_indrømme", "both = admit + noun or at-clause. erkende = accept that something is true, often after thinking (formal: Ministeren erkender, at …) · indrømme = own up to a mistake or something you would rather hide (everyday: Han indrømmede fejlen). In L3 they cancel out.", "begge = sige, at noget er sandt + navneord eller at-sætning. erkende = acceptere, at noget er sandt, tit efter overvejelse (formelt: Ministeren erkender, at …) · indrømme = tilstå en fejl eller noget, man helst ville skjule (hverdag: Han indrømmede fejlen). I L3 udelukker de hinanden."],
   ["næppe", "næsten_ikke", "same meaning: næppe is the formal one", "samme betydning: næppe er det formelle"],
 ];
 const tip = p => p[LANG === "en" ? 2 : 3];
@@ -1354,7 +1411,7 @@ const tip = p => p[LANG === "en" ? 2 : 3];
 // Connectors with a second relation: never offer that one as a wrong answer
 const ALSO = { da: ["tid"], mens: ["tid", "kontrast"], siden: ["årsag", "tid"], "så": ["formål"], "så_at": ["konsekvens"], "nemlig": ["præcisering"] };
 
-const NEW_PER_DAY = 15, BATCH = 5, REVIEW_LIMIT = 12;
+const BATCH = 5, REVIEW_LIMIT = 12;
 
 // ---------- state ----------
 let DB = null;           // {today, profile, cards: {id: card}, sentences}
@@ -1518,6 +1575,7 @@ function flipLang() {
   // screens that redraw without losing anything are drawn again, so nothing is left in the old language
   if ($("#go")) { const y = window.scrollY; home(); window.scrollTo(0, y); }
   else if ($("#lgboard")) { const y = window.scrollY; tankegang(); window.scrollTo(0, y); }
+  else if ($("#mnbox")) { const y = window.scrollY, q = $("#mnq")?.value; mineView(); if (q) { $("#mnq").value = q; mnHits(); } window.scrollTo(0, y); }
   else if ($("#soBox")) { const y = window.scrollY; soRender(); window.scrollTo(0, y); }
   else if (LBV) { const y = window.scrollY; lbRedraw(); window.scrollTo(0, y); }
   else if (FC) fcRender();
@@ -1536,6 +1594,7 @@ function load() {
   const saved = readProgress();
   for (const [id, c] of Object.entries(deck.cards)) DB.cards[id] = { id, ...c, history: c.history || [], ...(saved[id] || {}) };
   addFreqGroups();
+  MINE = mineRead(); mineIndex();
   lgIndex();
   // ask the browser not to clear this page's storage when space runs low (Chrome/Firefox; Safari decides itself)
   if (navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(() => {});
@@ -1548,6 +1607,7 @@ function route() {
   if (location.hash === "#l2b") { history.replaceState(null, "", location.pathname + location.search); return l2bHome(); }
   if (location.hash === "#tankegang") { history.replaceState(null, "", location.pathname + location.search); return tankegang(); }
   if (location.hash === "#grammatik") { history.replaceState(null, "", location.pathname + location.search); return grammarHome(); }
+  if (location.hash === "#mine") { history.replaceState(null, "", location.pathname + location.search); return mineView(null); }
   if (location.hash === "#sorter") { history.replaceState(null, "", location.pathname + location.search); return soStart(); }
   if (!location.hash.startsWith("#find")) return;
   const q = decodeURIComponent(location.hash.slice(6));
@@ -1643,11 +1703,11 @@ function partnerPairs(id) { return CONFUSABLES.filter(p => (p[0] === id || p[1] 
 function gname(g) { return GROUPS[g] ? GROUPS[g][LANG === "en" ? 0 : 1] : g; }
 // both languages, the page language first (as the other pages name their groups)
 // the name in the other language; "Hyppige ord" names (Top 1–15 · 4–7×) say the same in both, so they have none
-function gother(g) { return GROUPS[g] && prio(g) !== 4 ? GROUPS[g][LANG === "en" ? 1 : 0] : ""; }
+function gother(g) { return GROUPS[g] && prio(g) < 4 ? GROUPS[g][LANG === "en" ? 1 : 0] : ""; }
 function glabel(g) { return gother(g) ? `${gname(g)} · ${gother(g)}` : gname(g); }
 const prio = g => (GROUPS[g] || [])[2] || 3;
-// a card is in its own group and, if it is in the frequency table, in a "Hyppige ord" group too (c.fg)
-const groupsOf = c => c.fg && c.fg !== c.group ? [c.group, c.fg] : [c.group];
+// a card is in its own group, in a "Hyppige ord" group too if it is in the frequency table (c.fg), and in any "Mine ord" group holding it
+const groupsOf = c => [c.group, ...(c.fg && c.fg !== c.group ? [c.fg] : []), ...(MINE_OF[c.id] || [])];
 const inGroups = (c, gs) => groupsOf(c).some(g => gs.includes(g));
 function byGroup() { const by = {}; cards().forEach(c => groupsOf(c).forEach(g => (by[g] = by[g] || []).push(c))); return by; }
 // "Hyppige ord" groups (fg_01 …) come from the deck: 15 words each, ranked by how often they came up since 2020 (c.frank, c.freq)
@@ -1667,11 +1727,11 @@ function addFreqGroups() {
 function daysTo(d) { return d ? Math.round((new Date(d) - new Date(DB.today)) / 864e5) : null; }
 function counts() {
   const all = cards();
-  const introducedToday = all.filter(c => c.introduced === DB.today).length;
+  const fresh = all.filter(c => stateOf(c) === "new").length;
   return {
     due: all.filter(c => c.history && c.history.length && c.due <= DB.today).length,
-    newLeft: Math.max(0, NEW_PER_DAY - introducedToday),
-    fresh: all.filter(c => stateOf(c) === "new").length,
+    newLeft: fresh,   // no daily limit: every word not yet learnt is available
+    fresh,
     learning: all.filter(c => ["learn", "known"].includes(stateOf(c))).length,
     mastered: all.filter(c => stateOf(c) === "master").length,
     total: all.length,
@@ -1697,15 +1757,44 @@ function pickBar(groupsBy) {
   const pool = picked.flatMap(g => groupsBy[g] || []);
   return `<div class="tvbar"><div class="tx"><b>${t("pk.some", picked.length, pool.length)}</b><small>${esc(picked.map(gname).slice(0, 3).join(", "))}${picked.length > 3 ? " …" : ""}</small></div>
       <button type="button" class="btn k-review" id="selRev">${ICONS.repeat}${t("tv.v.review")}</button><button type="button" class="btn k-learn" id="selLearn">${ICONS.spark}${t("tv.v.learn")}</button>
-      <button type="button" class="btn k-test" id="selTest">${ICONS.pencil}${t("tv.v.test")}</button><button type="button" class="txtbtn" id="selClear">${t("pk.clear")}</button></div>`;
+      <button type="button" class="btn k-test" id="selTest">${ICONS.pencil}${t("tv.v.test")}</button><button type="button" class="btn k-flash" id="selFlash">${ICONS.cards}${t("h.fc")}</button><button type="button" class="txtbtn" id="selClear">${t("pk.clear")}</button></div>`;
 }
 function bindPickBar(redraw) {
   if (!$("#selLearn")) return;
   const sel = picked.slice();
   $("#selLearn").onclick = () => startSession({ groups: sel, reviews: 0 });
   $("#selTest").onclick = () => startExercise(sel);
+  $("#selFlash").onclick = () => startFlash(sel);
   $("#selRev").onclick = () => startSession({ groups: sel, fresh: 0 });
   $("#selClear").onclick = () => { setPicked([]); redraw(); };
+}
+// a topic row on the home board opens this chooser instead of starting a session at once
+function groupActions(g) {
+  const cs = byGroup()[g] || [];
+  const learnt = cs.filter(c => c.history.length).length, fresh = cs.filter(c => stateOf(c) === "new").length;
+  const due = cs.filter(c => c.history.length && c.due <= DB.today).length;
+  let dlg = $("#gact");
+  if (!dlg) {
+    dlg = document.createElement("dialog"); dlg.id = "gact"; dlg.className = "info"; dlg.setAttribute("aria-labelledby", "gactTitle");
+    dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
+    document.body.append(dlg);
+  }
+  const go = fn => { dlg.close(); fn(); };
+  dlg.innerHTML = `<div class="ib"><div class="ih"><h2 id="gactTitle">${esc(glabel(g))}</h2><button type="button" class="btn quiet" id="gactClose" aria-label="${esc(t("info.close"))}">✕</button></div>
+    <p>${t("ga.sum", cs.length, fresh, due, learnt)}</p><div class="gadots">${wordDots(cs)}</div>
+    <p>${t("ga.ask")}</p>
+    <div class="gacts">
+      <button type="button" class="btn k-review" id="gaRev"${learnt ? "" : " disabled"}>${ICONS.repeat}${t("tv.v.review")}</button>
+      <button type="button" class="btn k-learn" id="gaLearn"${fresh ? "" : " disabled"}>${ICONS.spark}${t("tv.v.learn")}</button>
+      <button type="button" class="btn k-test" id="gaTest"${learnt ? "" : " disabled"}>${ICONS.pencil}${t("tv.v.test")}</button>
+      <button type="button" class="btn k-flash" id="gaFlash">${ICONS.cards}${t("h.fc")}</button>
+    </div></div>`;
+  $("#gactClose").onclick = () => dlg.close();
+  $("#gaRev").onclick = () => go(() => startSession({ groups: [g], fresh: 0 }));
+  $("#gaLearn").onclick = () => go(() => startSession({ groups: [g], reviews: 0 }));
+  $("#gaTest").onclick = () => go(() => startExercise([g]));
+  $("#gaFlash").onclick = () => go(() => startFlash([g]));
+  dlg.showModal();
 }
 function tvCol(k, icon, title, big, unit, body, foot) {
   return `<section class="tvcol k-${k}"><header><h2>${ICONS[icon]}${title}</h2><span class="big">${big}<small>${unit}</small></span></header>${body}${foot ? `<div class="foot">${foot}</div>` : ""}</section>`;
@@ -1743,14 +1832,14 @@ function home() {
     ${storageOK ? "" : `<div class="err small">${t("h.storage")}</div>`}
     ${gview ? grBoard() : `<div class="tvboard">
       ${tvCol("review", "repeat", t("tv.v.review"), k.due, t("tv.due.u"),
-        due.length ? list(due.map(g => tvRow(`data-rev="${esc(g)}"`, esc(gname(g)), `<small>${esc(setName(g))}</small>`, dueIn(groupsBy[g]), t("tv.v.review"), t("tv.l.review", gname(g)), false, g))) :
+        due.length ? list(due.map(g => tvRow(`data-rev="${esc(g)}"`, esc(gname(g)), `<small>${esc(setName(g))}</small>`, dueIn(groupsBy[g]), t("tv.v.review"), t("ga.open", gname(g)), false, g))) :
         empty(nLearned ? "check" : "repeat", t(nLearned ? "tv.rev.done" : "tv.rev.first")),
         `<button type="button" class="txtbtn" id="flash">${ICONS.cards}${t("h.fc")} · ${t("fc.n", fcCount(groupsBy))}</button>`)}
       ${tvCol("learn", "spark", t("tv.learn"), k.fresh, t("tv.new.u"),
-        fresh.length ? list(freshShown.map(g => tvRow(`data-learn="${esc(g)}"`, esc(gname(g)), wordDots(groupsBy[g]), newIn(groupsBy[g]), t("tv.v.learn"), t("tv.l.learn", gname(g)), !k.newLeft, g))) : empty("check", t("tv.learn.done")),
+        fresh.length ? list(freshShown.map(g => tvRow(`data-learn="${esc(g)}"`, esc(gname(g)), wordDots(groupsBy[g]), newIn(groupsBy[g]), t("tv.v.learn"), t("ga.open", gname(g)), !k.newLeft, g))) : empty("check", t("tv.learn.done")),
         fresh.length > 5 ? `<button type="button" class="txtbtn" id="learnAll" aria-expanded="${learnAll}">${t(learnAll ? "tv.fewer" : "tv.all", fresh.length)}</button>` : "")}
       ${tvCol("test", "pencil", t("tv.test"), nLearned, t("tv.learnt.u"),
-        list([...learnt.map(g => tvRow(`data-ex="${esc(g)}"`, esc(gname(g)), `<small>${t("tv.ex.s", setName(g))}</small>`, seenIn(groupsBy[g]), t("tv.v.test"), t("tv.l.test", gname(g)), false, g)),
+        list([...learnt.map(g => tvRow(`data-ex="${esc(g)}"`, esc(gname(g)), `<small>${t("tv.ex.s", setName(g))}</small>`, seenIn(groupsBy[g]), t("tv.v.test"), t("ga.open", gname(g)), false, g)),
           tvRow(`id="conf"`, t("h.conf"), `<small>${t("tv.conf.s")}</small>`, nConf, t("tv.v.test"), t("h.conf"), !nConf),
           ...(lgItems().length ? [tvRow(`id="logic"`, t("lg.drill"), `<small>${t("lg.drill.s")}</small>`, `${lgDone()}<small>${t("tv.of", lgItems().length)}</small>`, t("tv.v.test"), t("lg.drill.l"))] : [])]) + (nLearned ? "" : empty("pencil", t("h.ex.none"))),
         `<button type="button" class="txtbtn" id="exer"${nLearned ? "" : " disabled"}>${ICONS.pencil}${t("tv.exall")}</button>`)}
@@ -1759,6 +1848,7 @@ function home() {
     ${gview || !l2Ready() ? "" : l2bBanner()}
     ${gview ? "" : `<nav class="tvlinks" aria-label="${esc(t("tv.more"))}">
       <a href="#emner" id="allTopics">${t("tv.topics")} <span>${t("tv.topics.s", gs.length)}</span></a>
+      <a href="#mine" id="mineLink">${t("p.5")} <span>${t("mn.link.s", MINE.length)}</span></a>
       ${lgItems().length ? `<a href="#tankegang" id="tkLink">${t("lg.title")} <span>${t("lg.link.s")}</span></a>` : ""}
     </nav>${pickBar(groupsBy)}`}`;
   if ($("#go")) $("#go").onclick = () => startSession({});
@@ -1770,9 +1860,9 @@ function home() {
   if ($("#mockGo")) $("#mockGo").onclick = startMock;
   if ($("#l2bGo")) $("#l2bGo").onclick = l2bHome;
   if ($("#tkLink")) $("#tkLink").onclick = e => { e.preventDefault(); tankegang(); };
-  document.querySelectorAll("[data-rev]").forEach(b => b.onclick = () => startSession({ groups: [b.dataset.rev], fresh: 0 }));
-  document.querySelectorAll("[data-learn]").forEach(b => b.onclick = () => startSession({ groups: [b.dataset.learn], reviews: 0 }));
-  document.querySelectorAll("[data-ex]").forEach(b => b.onclick = () => startExercise([b.dataset.ex]));
+  document.querySelectorAll("[data-rev]").forEach(b => b.onclick = () => groupActions(b.dataset.rev));
+  document.querySelectorAll("[data-learn]").forEach(b => b.onclick = () => groupActions(b.dataset.learn));
+  document.querySelectorAll("[data-ex]").forEach(b => b.onclick = () => groupActions(b.dataset.ex));
   if ($("#learnAll")) $("#learnAll").onclick = () => { learnAll = !learnAll; const y = window.scrollY; home(); window.scrollTo(0, y); $("#learnAll")?.focus(); };
   const rehome = () => { const y = window.scrollY; home(); window.scrollTo(0, y); };
   document.querySelectorAll("[data-pick]").forEach(i => i.onchange = () => {
@@ -1782,6 +1872,7 @@ function home() {
   });
   bindPickBar(rehome);
   if ($("#allTopics")) $("#allTopics").onclick = e => { e.preventDefault(); topicsView(); };
+  if ($("#mineLink")) $("#mineLink").onclick = e => { e.preventDefault(); mineView(null); };
   document.querySelectorAll("[data-hv]").forEach(b => b.onclick = () => { setHomeView(b.dataset.hv); home(); $(`[data-hv="${b.dataset.hv}"]`)?.focus(); });
   document.querySelectorAll("[data-gt]").forEach(b => b.onclick = () => startGrammar(b.dataset.gt));
 }
@@ -1796,19 +1887,130 @@ function topicsView() {
     <div class="top"><a href="#" class="tvback" id="thome">${t("gm.back")}</a><h1>${t("tv.topics")}</h1><p class="soft">${t("tv.topics.intro")}</p>
       <div class="tvkey">${key}</div>
       <div class="row"><button type="button" class="btn quiet" id="tvFlash">${ICONS.cards}${t("h.fc")} · ${t("fc.n", fcCount(groupsBy))}</button></div></div>
-    ${[1, 2, 3, 4].filter(pr => tier(pr).length).map(pr => `<section class="tvset"><header><h2>${t("p." + pr)}</h2><span class="soft">${t("tv.n.topics", tier(pr).length)}</span>
-      <button type="button" class="txtbtn" data-tier="${pr}">${t(tier(pr).every(g => picked.includes(g)) ? "pk.tnone" : "pk.tall")}</button></header>${pr === 4 ? `<p class="soft small">${t("p.4.s")}</p>` : ""}
-      <ul class="tvtbl">${tier(pr).map(g => { const cs = groupsBy[g], d = dueIn(cs), seen = cs.filter(c => c.history.length).length;
-        return `<li><label class="tvpick"><input type="checkbox" data-g="${esc(g)}"${picked.includes(g) ? " checked" : ""}><span><b>${esc(gname(g))}</b><small>${esc(gother(g))}</small></span>${wordDots(cs)}<span class="c">${seen}/${cs.length}</span>${d ? `<span class="due">${t("g.due", d)}</span>` : "<span></span>"}</label></li>`; }).join("")}</ul></section>`).join("")}
+    ${[1, 2, 3, 4, 5].filter(pr => tier(pr).length || pr === 5).map(pr => `<section class="tvset"><header><h2>${t("p." + pr)}</h2><span class="soft">${t("tv.n.topics", tier(pr).length)}</span>
+      ${pr === 5 ? `<button type="button" class="txtbtn" id="tvMine">${t("mn.open")}</button>` : ""}
+      ${tier(pr).length ? `<button type="button" class="txtbtn" data-tier="${pr}">${t(tier(pr).every(g => picked.includes(g)) ? "pk.tnone" : "pk.tall")}</button>` : ""}</header>${pr >= 4 ? `<p class="soft small">${t("p." + pr + ".s")}</p>` : ""}
+      ${tier(pr).length ? `<ul class="tvtbl">${tier(pr).map(g => { const cs = groupsBy[g], d = dueIn(cs), seen = cs.filter(c => c.history.length).length;
+        return `<li><label class="tvpick"><input type="checkbox" data-g="${esc(g)}"${picked.includes(g) ? " checked" : ""}><span><b>${esc(gname(g))}</b><small>${esc(gother(g))}</small></span>${wordDots(cs)}<span class="c">${seen}/${cs.length}</span>${d ? `<span class="due">${t("g.due", d)}</span>` : "<span></span>"}</label></li>`; }).join("")}</ul>` : `<p class="tvempty">${t("mn.none")}</p>`}</section>`).join("")}
     ${pickBar(groupsBy)}`;
   const redraw = () => { const y = window.scrollY; topicsView(); window.scrollTo(0, y); };
   $("#thome").onclick = e => { e.preventDefault(); home(); window.scrollTo(0, 0); };
   $("#tvFlash").onclick = () => startFlash(picked.length ? picked : null);
+  $("#tvMine").onclick = () => mineView(null);
   document.querySelectorAll(".tvtbl input").forEach(i => i.onchange = () => { const g = i.dataset.g; setPicked(i.checked ? [...picked, g] : picked.filter(x => x !== g)); redraw(); $(`.tvtbl input[data-g="${CSS.escape(g)}"]`)?.focus(); });
   document.querySelectorAll("[data-tier]").forEach(b => b.onclick = () => { const gs = tier(+b.dataset.tier), all = gs.every(g => picked.includes(g)); setPicked(all ? picked.filter(g => !gs.includes(g)) : [...new Set([...picked, ...gs])]); redraw(); });
   bindPickBar(redraw);
   window.scrollTo(0, 0);
 }
+// ---------- Mine ord: the learner's own word groups (a fifth tier), kept in this browser ----------
+const MINE_KEY = "pd3-assisted-learning:mine:v1";
+let MINE = [], MINE_OF = {}, mineEdit = null;
+function mineRead() {
+  try { const g = JSON.parse(localStorage.getItem(MINE_KEY) || "{}").groups; return Array.isArray(g) ? g.filter(m => m && typeof m.id === "string" && Array.isArray(m.ids)) : []; }
+  catch (e) { storageOK = false; return []; }
+}
+function mineSave() {
+  try { localStorage.setItem(MINE_KEY, JSON.stringify({ groups: MINE, saved: new Date().toISOString() })); }
+  catch (e) { storageOK = false; }
+  mineIndex();
+}
+// the groups become ordinary groups of tier 5: groupsOf, byGroup, Lær, Gentag, Test and flashcards all read them
+function mineIndex() {
+  Object.keys(GROUPS).filter(g => prio(g) === 5).forEach(g => { delete GROUPS[g]; const i = GROUP_ORDER.indexOf(g); if (i >= 0) GROUP_ORDER.splice(i, 1); });
+  MINE_OF = {};
+  for (const m of MINE) {
+    m.ids = m.ids.filter(id => DB.cards[id]);
+    GROUPS[m.id] = [m.name, m.name, 5]; GROUP_ORDER.push(m.id);
+    m.ids.forEach(id => (MINE_OF[id] = MINE_OF[id] || []).push(m.id));
+  }
+  setPicked(picked);
+}
+function mineView(gid = mineEdit) {
+  S = null; FC = null; GS = null;
+  const cur = MINE.find(g => g.id === gid) || null;
+  mineEdit = cur ? cur.id : null;
+  const cardsOf = m => m.ids.map(id => DB.cards[id]).filter(Boolean);
+  const yrs = mnYearsAll();
+  const rows = MINE.map(m => {
+    const cs = cardsOf(m), isOpen = m.id === mineEdit, av = mnAvoid(m), guess = mnGuessYear(m), lv = mnLevel(m);
+    const b = (act, txt, icon, dis) => `<button type="button" class="btn quiet" data-mn-${act}="${esc(m.id)}"${dis ? " disabled" : ""}>${icon}${esc(txt)}</button>`;
+    const yearSel = `<label class="mnyear small">${t("mn.avoid")} <select data-mn-year="${esc(m.id)}"><option value=""${av === "" ? " selected" : ""}>${t("mn.avoid.none")}</option>${yrs.map(y => `<option value="${y}"${av === y ? " selected" : ""}>${y}${y === guess ? t("mn.avoid.guess") : ""}</option>`).join("")}</select></label>`;
+    const levelSel = `<label class="mnyear small">${t("mn.level")} <select data-mn-level="${esc(m.id)}"><option value="medium"${lv === "medium" ? " selected" : ""}>${t("mn.level.medium")}</option><option value="hard"${lv === "hard" ? " selected" : ""}>${t("mn.level.hard")}</option></select></label>`;
+    const editor = `<div class="mnedit">
+        <form id="mnRen" class="mnnew"><label class="lbl" for="mnRenName">${t("mn.rename")}</label><input id="mnRenName" type="text" maxlength="40" value="${esc(m.name)}" aria-label="${esc(t("mn.rename"))}"><button type="submit" class="btn">${t("mn.save")}</button></form>
+        <div class="row"><button type="button" class="btn quiet" id="mnDel">${t("mn.del")}</button></div>
+        <input id="mnq" type="search" lang="da" autocomplete="off" spellcheck="false" placeholder="${esc(t("mn.q.ph"))}" aria-label="${esc(t("mn.q.ph"))}">
+        <div id="mnhits"></div>
+        <span class="lbl" id="mnCount">${t("mn.in")} · ${cs.length}</span>
+        <div id="mnwords" class="mnwords"></div>
+      </div>`;
+    return `<li class="sheet mngroup${isOpen ? " open" : ""}"><b>${esc(m.name)}</b>${mnLast(m)}<small${isOpen ? ' id="mnN"' : ""}>${t("mn.words", cs.length)}</small>${wordDots(cs)}
+      <div class="row">${b("edit", isOpen ? t("mn.done") : t("mn.edit"), "")}${b("learn", t("tv.v.learn"), ICONS.spark, !cs.some(c => stateOf(c) === "new"))}${b("review", t("tv.v.review"), ICONS.repeat, !cs.some(c => c.history.length))}${b("test", t("tv.v.test"), ICONS.pencil, !cs.some(c => c.history.length))}${b("flash", t("h.fc"), ICONS.cards, !cs.length)}${b("mock", t("mn.mock"), ICONS.pencil, cs.length < 2)}</div>
+      ${yearSel}${levelSel}
+      ${isOpen ? editor : ""}</li>`;
+  }).join("");
+  $("#app").innerHTML = `<div class="top" id="mnbox">
+    <a href="#" class="tvback" id="mnHome">${t("gm.back")}</a>
+    <h1>${t("p.5")}</h1>
+    <p class="soft">${t("mn.intro")}</p>
+    <form id="mnNew" class="mnnew"><input id="mnName" type="text" maxlength="40" placeholder="${esc(t("mn.name.ph"))}" aria-label="${esc(t("mn.name.ph"))}"><button type="submit" class="btn solid">${t("mn.new")}</button></form>
+    ${storageOK ? "" : `<div class="err small">${t("h.storage")}</div>`}
+    ${MINE.length ? "" : `<p class="tvempty">${t("mn.none")}</p>`}
+    <ul class="mnlist">${rows}</ul>
+  </div>`;
+  $("#mnNew").onsubmit = e => { e.preventDefault(); const name = $("#mnName").value.trim(); if (!name) return; const id = "mine_" + Date.now().toString(36); MINE.push({ id, name, ids: [] }); mineSave(); mineView(id); $("#mnq")?.focus(); };
+  $("#mnHome").onclick = e => { e.preventDefault(); mineEdit = null; home(); window.scrollTo(0, 0); };
+  document.querySelectorAll("[data-mn-edit]").forEach(b => b.onclick = () => mineView(b.dataset.mnEdit === mineEdit ? null : b.dataset.mnEdit));
+  document.querySelectorAll("[data-mn-learn]").forEach(b => b.onclick = () => startSession({ groups: [b.dataset.mnLearn], reviews: 0 }));
+  document.querySelectorAll("[data-mn-review]").forEach(b => b.onclick = () => startSession({ groups: [b.dataset.mnReview], fresh: 0 }));
+  document.querySelectorAll("[data-mn-test]").forEach(b => b.onclick = () => startExercise([b.dataset.mnTest]));
+  document.querySelectorAll("[data-mn-flash]").forEach(b => b.onclick = () => startFlash([b.dataset.mnFlash]));
+  document.querySelectorAll("[data-mn-mock]").forEach(b => b.onclick = () => startMineMock(b.dataset.mnMock));
+  document.querySelectorAll("[data-mn-year]").forEach(s => s.onchange = () => { MINE.find(g => g.id === s.dataset.mnYear).avoid = s.value; mineSave(); mineView(); });
+  document.querySelectorAll("[data-mn-level]").forEach(s => s.onchange = () => { MINE.find(g => g.id === s.dataset.mnLevel).level = s.value; mineSave(); mineView(); });
+  if (cur) {
+    $("#mnRen").onsubmit = e => { e.preventDefault(); const n = $("#mnRenName").value.trim(); if (n) cur.name = n; mineSave(); mineView(); };
+    $("#mnDel").onclick = () => { if (!confirm(t("mn.del.q", cur.name))) return; MINE = MINE.filter(g => g !== cur); mineSave(); mineView(null); };
+    $("#mnq").oninput = mnHits;
+    mnHits(); mnWords();
+  }
+}
+function mnHits() {
+  const m = MINE.find(g => g.id === mineEdit), box = $("#mnhits"), q = ($("#mnq")?.value || "").trim();
+  if (!m || !box) return;
+  if (!q) { box.innerHTML = `<p class="soft small">${t("mn.q.hint")}</p>`; return; }
+  const hits = [...new Map(searchWords(q).map(x => x.e.card).filter(Boolean).map(c => [c.id, c])).values()];
+  box.innerHTML = !hits.length ? `<p class="soft small">${esc(t("mn.q.none", q))}</p>` : `<ul class="mnhits">${hits.map(c => {
+    const on = m.ids.includes(c.id), prep = DB.tips[c.id]?.prep;
+    return `<li><span><b lang="da">${esc(c.word)}</b>${prep ? ` <span class="mnprep" lang="da">${esc(prep)}</span>` : ""}<small>${esc(c.meaning)} · ${esc(gname(c.group))}</small></span><button type="button" class="pchip" data-mn-tog="${esc(c.id)}" aria-pressed="${on}">${on ? "✓ " + esc(t("mn.added")) : "+ " + esc(t("mn.add"))}</button></li>`;
+  }).join("")}</ul>`;
+  box.querySelectorAll("[data-mn-tog]").forEach(b => b.onclick = () => {
+    const id = b.dataset.mnTog;
+    m.ids = m.ids.includes(id) ? m.ids.filter(x => x !== id) : [...m.ids, id];
+    mineSave(); mnHits(); mnWords();
+    $(`[data-mn-tog="${CSS.escape(id)}"]`)?.focus();
+  });
+}
+function mnWords() {
+  const m = MINE.find(g => g.id === mineEdit), box = $("#mnwords");
+  if (!m || !box) return;
+  const cs = m.ids.map(id => DB.cards[id]).filter(Boolean);
+  box.innerHTML = cs.length ? cs.map(c => { const prep = DB.tips[c.id]?.prep; return `<button type="button" class="pchip" data-mn-rm="${esc(c.id)}" aria-label="${esc(t("mn.rm", c.word))}"><span lang="da">${esc(c.word)}</span>${prep ? `<span class="n" lang="da">${esc(prep)}</span>` : ""} ✕</button>`; }).join("") : `<p class="soft small">${t("mn.empty")}</p>`;
+  box.querySelectorAll("[data-mn-rm]").forEach(b => b.onclick = () => { m.ids = m.ids.filter(x => x !== b.dataset.mnRm); mineSave(); mnHits(); mnWords(); });
+  if ($("#mnCount")) $("#mnCount").textContent = `${t("mn.in")} · ${m.ids.length}`;
+  if ($("#mnN")) $("#mnN").textContent = t("mn.words", m.ids.length);
+  // the group's buttons follow its words, so a group just filled can be learnt straight away
+  const on = { learn: cs.some(c => stateOf(c) === "new"), review: cs.some(c => c.history.length), test: cs.some(c => c.history.length), flash: cs.length > 0, mock: cs.length > 1 };
+  for (const [act, ok] of Object.entries(on)) { const b = $(`[data-mn-${act}="${CSS.escape(m.id)}"]`); if (b) b.disabled = !ok; }
+}
+// the year whose exam sentences a group's mock leaves out: the group's own choice (m.avoid), else the year that holds most of its words
+const mnYears = m => { const by = {}; for (const id of m.ids) [...new Set((DB.sentences[id] || []).map(x => x.src.slice(0, 4)))].forEach(y => by[y] = (by[y] || 0) + 1); return by; };
+const mnGuessYear = m => { const by = mnYears(m); return Object.keys(by).sort((a, b) => by[b] - by[a] || b.localeCompare(a))[0] || ""; };
+const mnAvoid = m => m.avoid === undefined ? mnGuessYear(m) : m.avoid;
+const mnYearsAll = () => [...new Set(Object.values(DB.sentences).flat().map(x => x.src.slice(0, 4)))].filter(y => /^\d{4}$/.test(y)).sort().reverse();
+const mnLast = m => { const s = ((mkStore().mine || {})[m.id] || []).slice(-1)[0]; return s ? `<small class="mnlast">${t("mn.mk.last", s[1], s[2])} (${t(s[3] === "medium" ? "mn.lv.s.medium" : "mn.lv.s.hard")})</small>` : ""; };   // scores before levels count as hard
+const mnLevel = m => m.level === "medium" ? "medium" : "hard";
+
 const ICONS = Object.fromEntries(Object.entries({
   play: '<path d="M8 5.5v13l10.5-6.5z" fill="currentColor" stroke="none"/>',
   spark: '<path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M6 18l2.5-2.5M15.5 8.5L18 6"/>',
@@ -2459,7 +2661,7 @@ function flushPending() {
 
 // ---------- confusables drill ----------
 // pairs that mean the same thing can't be tested with a gap (either word fits): they get an L3-style check instead
-const SAME_MEANING = new Set(["derfor|således", "næppe|næsten_ikke", "imidlertid|dog", "at_medføre|at_forårsage", "at_forhindre|at_forebygge", "at_begrænse|at_reducere", "undtagen|bortset_fra", "hvis|såfremt", "skønt|selvom", "ikke_desto_mindre|alligevel", "desuden|derudover", "endvidere|ydermere", "især|navnlig", "for_eksempel_fx|eksempelvis", "i_stedet_for|frem_for", "derefter|herefter", "alt_i_alt|samlet_set", "dermed|derved", "følgelig|derfor", "at_sikre|at_garantere"]);
+const SAME_MEANING = new Set(["derfor|således", "næppe|næsten_ikke", "imidlertid|dog", "at_medføre|at_forårsage", "at_forhindre|at_forebygge", "at_begrænse|at_reducere", "undtagen|bortset_fra", "hvis|såfremt", "skønt|selvom", "ikke_desto_mindre|alligevel", "desuden|derudover", "endvidere|ydermere", "især|navnlig", "for_eksempel_fx|eksempelvis", "i_stedet_for|frem_for", "derefter|herefter", "alt_i_alt|samlet_set", "dermed|derved", "følgelig|derfor", "at_sikre|at_garantere", "at_erkende|at_indrømme"]);
 // per pair: which of a word's labelled senses to use, and senses where the partner also fits (counted right, with a note)
 const PAIR_SENSES = { "mens|hvorimod": { mens: { both: ["contrast"] }, hvorimod: { skip: true } } };
 const RELATED = { "konsekvens": ["årsag", "formål", "konklusion"], "årsag": ["konsekvens", "formål"], "kontrast": ["indrømmelse"], "indrømmelse": ["kontrast"] };
@@ -3080,8 +3282,9 @@ document.addEventListener("keydown", e => {
 //   clause – subject, ikke/også/altid … and the finite verb as tiles: subordinate clause or main clause?
 //   adj, pron, prep, small – pick the form that fits the gap
 //   error  – one of those words swapped for a wrong option; tap the wrong word
+//   mine   – Dine fejl: ikke + skal/vil. mode pick (modal verb → infinitive, no modal → -r, subordinate clause) or order (tiles); some are from the learner's own mails (ai)
 const GR_KEY = "pd3-assisted-learning:grammar:v2";
-const GR_GROUPS = [["verb", ["verbs"]], ["order", ["v2", "clause"]], ["form", ["adj", "pron"]], ["small", ["prep", "small"]], ["mix", ["error"]]];
+const GR_GROUPS = [["mine", ["mine"]], ["verb", ["verbs"]], ["order", ["v2", "clause"]], ["form", ["adj", "pron"]], ["small", ["prep", "small"]], ["mix", ["error"]]];
 const GR_CHOICE = ["adj", "pron", "prep", "small"];
 const GR_TOPICS = GR_GROUPS.flatMap(g => g[1]);
 let GS = null;   // grammar session
@@ -3111,7 +3314,9 @@ function grBoard() {
   const go = types.filter(x => { const f = info(x); return f.ok && f.ok < f.n; }), fresh = types.filter(x => !info(x).ok), done = types.filter(x => { const f = info(x); return f.n && f.ok === f.n; });
   const col = (k, icon, title, list, unit, verb, emptyKey) => tvCol(k, icon, title, list.length, unit,
     list.length ? `<ul class="tvrows">${list.map(x => row(x, verb)).join("")}</ul>` : `<p class="tvempty">${ICONS.check}<span>${t(emptyKey)}</span></p>`);
-  return `<div class="tvboard">
+  return `<section class="tverr"><span class="i">${ICONS.pencil}</span><div><b>${t("gm.mine")}</b><p>${t("gm.mine.why")}</p></div>
+      <button type="button" class="btn" data-gt="mine">${t("tv.g.try")}</button></section>
+    <div class="tvboard">
       ${col("test", "pencil", t("tv.g.go"), go, t("tv.g.go.u"), t("tv.g.cont"), "tv.g.go.none")}
       ${col("learn", "spark", t("tv.g.new"), fresh, t("tv.g.new.u"), t("tv.g.start"), "tv.g.new.none")}
       ${col("review", "repeat", t("tv.g.done"), done, t("tv.g.done.u"), t("tv.g.again"), "tv.g.done.none")}
@@ -3133,8 +3338,8 @@ function grFrame(x, inner) {
   $("#app").innerHTML = `<div class="narrow">
     <div class="counter"><span>${esc(GS.title)} · ${t("s.count", GS.i + 1, GS.queue.length)}</span><button class="btn quiet" id="gquit">✕ ${t("s.end")}</button></div>
     <div class="bar sessionbar" aria-hidden="true"><span style="width:${100 * GS.i / GS.queue.length}%"></span></div>
-    <div class="sheet q"><div class="kind">${t("gm." + x.type)} · <span lang="da">${esc(x.src)}</span>${x.type === "logic" && x.retry ? ` · ${t("lg.retry")}` : ""}</div>
-      <p class="prompt">${t("gm.q." + x.type)}</p>${inner}
+    <div class="sheet q"><div class="kind">${t("gm." + x.type)} · <span lang="da">${esc(x.src)}</span>${x.ai ? " " + AI() : ""}${x.type === "logic" && x.retry ? ` · ${t("lg.retry")}` : ""}</div>
+      <p class="prompt">${t(x.type === "mine" ? "gm.q.mine." + x.mode : "gm.q." + x.type)}</p>${inner}
       <div class="trrow">${trLink(x.s).replace(t("m.tr"), t("tr.sent"))}</div>
       <div class="row next" id="gbtns"></div><div id="fb"></div></div></div>`;
   $("#gquit").onclick = () => GS.results.length ? grSummary() : GS.type === "logic" ? tankegang() : grammarHome();
@@ -3149,7 +3354,7 @@ function grButtons(check, extra = "") {
 function grStep() {
   if (GS.i >= GS.queue.length) return grSummary();
   const x = GS.queue[GS.i];
-  ({ verbs: grVerbs, v2: grTiles, clause: grTiles, error: grError, logic: grLogic }[x.type] || grChoice)(x);
+  ({ verbs: grVerbs, v2: grTiles, clause: grTiles, mine: x => (x.mode === "order" ? grTiles : grChoice)(x), error: grError, logic: grLogic }[x.type] || grChoice)(x);
 }
 
 // ----- verbs: type the forms -----
@@ -3256,6 +3461,17 @@ function grError(x) {
 function grWhy(x, extra = {}) {
   const b = s => esc(s);
   if (x.type === "logic") return lgWhy(x, extra);
+  if (x.type === "mine") {
+    const a = x.args, tip = `<p class="soft small">${t("gm.m.tip")}</p>`;
+    if (x.mode === "pick") return `<p>${x.rule === "modal" ? t("gm.m.modal", b(a[0]), b(x.w)) : t("gm.m.pres", b(a[0]), b(x.w))}</p>${tip}`;
+    if (x.rule === "sub") {
+      const body = x.tiles.includes("ikke") ? `<p>${t("gm.p.sub", b(a[0]), b("ikke"), b(a[2]))}</p><p class="soft small">${t("gm.p.biff")}</p>` : `<p>${t("gm.m.sub0", b(a[0]), b(a[1]), b(a[2]))}</p>`;
+      return body + tip;
+    }
+    if (x.rule === "main") return `<p>${t("gm.p.main", b(a[0]), b(a[1]))}</p>${tip}`;
+    if (x.rule === "q") return `<p>${t("gm.m.q", b(a[0]), b(a[1]))}</p>${tip}`;
+    return `<p>${t("gm.m.refl", b(a[0]), b(a[1]))}</p>${tip}`;
+  }
   if (x.type === "verbs") {
     const MODAL = new Set(["kunne", "skulle", "ville", "måtte", "burde", "turde"]);
     const kind = g => g.kind.includes(" ") ? t("gm.t.perf") : MODAL.has(g.inf) ? t("gm.t.modal")
@@ -3287,7 +3503,7 @@ function grFeedback(x, ok, give, extra = {}) {
   if (!give) (x.type === "logic" ? lgSave : grSave)(x.id, ok);
   if (!(x.type === "logic" && x.retry)) GS.results.push({ id: x.id, ok });   // the score is the first try
   if (x.type === "logic" && !ok) GS.queue.push({ ...x, retry: true, flip: Math.random() < .5 });   // comes back at the end of the round until right
-  const marks = x.type === "verbs" ? x.gaps.map(g => [g.at, g.w.length]) : x.type === "v2" || x.type === "clause" ? null : [[x.at, x.w.length]];
+  const marks = x.type === "verbs" ? x.gaps.map(g => [g.at, g.w.length]) : x.type === "v2" || x.type === "clause" || (x.type === "mine" && x.mode === "order") ? null : [[x.at, x.w.length]];
   let exam = esc(x.s);
   if (marks) { exam = ""; let at = 0; for (const [a, n] of marks) { exam += esc(x.s.slice(at, a)) + `<mark class="hl">${esc(x.s.slice(a, a + n))}</mark>`; at = a + n; } exam += esc(x.s.slice(at)); }
   else { const h = [x.pre, x.tiles.join(" ")].filter(Boolean).join(" "); exam = esc(x.pre ? x.pre + " " : "") + `<mark class="hl">${esc(x.tiles.join(" "))}</mark>` + esc(x.s.slice(h.length)); }
@@ -3296,7 +3512,7 @@ function grFeedback(x, ok, give, extra = {}) {
   $("#fb").innerHTML = `<div class="feedback ${ok ? "ok" : "bad"}">
       <h3>${ok ? t("gm.right") : give ? t("gm.shown") : t("gm.wrong")}</h3>
       ${yours ? `<div class="small"><b>${t("gm.yours")}</b></div><div class="gdiff" lang="da">${yours}</div>` : ""}
-      ${(ok && x.type !== "logic") || GR_CHOICE.includes(x.type) ? "" : `<div class="small" style="margin-top:8px"><b>${x.type === "logic" ? t("lg.answer") : t("gm.answer", esc(x.src))}</b></div><div class="gdiff sentence" lang="da">${exam}</div>`}
+      ${(ok && x.type !== "logic") || GR_CHOICE.includes(x.type) || (x.type === "mine" && x.mode === "pick") ? "" : `<div class="small" style="margin-top:8px"><b>${x.type === "logic" ? t("lg.answer") : x.ai ? t("gm.m.answer", esc(x.src)) : t("gm.answer", esc(x.src))}</b></div><div class="gdiff sentence" lang="da">${exam}</div>`}
       <div class="gwhy"><b>${t("gm.why")}</b>${AI()}${grWhy(x, extra)}</div>
     </div>`;
   $("#gbtns").innerHTML = `<button class="btn solid" id="nx">${t("b.next")}</button>`;
@@ -3711,28 +3927,138 @@ function mockView() {
       <div class="trrow">${trLink(x.s).replace(t("m.tr"), t("tr.sent"))}<button type="button" class="linkbtn" data-more="${esc(x.card)}">${t("b.more")}</button></div></article>`; }).join("")}</section>` : "";
   $("#app").innerHTML = `<div class="narrow mock">
     <div class="counter"><span><span class="mkpill">${t("mk.pill")}</span> ${t("mk.title")}</span><button class="btn quiet" id="mkquit">✕ ${t("s.end")}</button></div>
-    <p class="mknote">${t("mk.note")}${m.topics ? ` ${t("mk.sel", m.topics)}.` : ""}${m.outside ? ` ${t("mk.fill", m.outside)}` : ""}</p>
-    ${m.done ? `<div class="sheet q mkresult"><span class="score">${score}/${n}</span><span class="soft">${t("mk.score", score, n)}</span></div>` : `<div class="sheet q"><p class="small">${t("mk.instr")}</p></div>`}
+    <p class="mknote">${m.mine ? t("mn.mk.note", esc(m.avoid || t("mn.avoid.none")), esc(MINE.find(g => g.id === m.mine)?.name || "")) : t("mk.note")}${m.mine ? ` ${t("mn.mk.lv", t(m.level === "medium" ? "mn.lv.s.medium" : "mn.lv.s.hard"))}${m.relaxed ? ` ${t("mn.mk.relaxed")}` : ""}` : ""}${m.topics ? ` ${t("mk.sel", m.topics)}.` : ""}${m.outside ? ` ${t("mk.fill", m.outside)}` : ""}</p>
+    ${m.done ? `<div class="sheet q mkresult"><span class="score">${score}/${n}</span><span class="soft">${t("mk.score", score, n)}</span></div>` : `<div class="sheet q"><p class="small">${t(m.mine ? "mn.mk.instr" : "mk.instr", n)}</p></div>`}
     <div class="sheet q mktext"><ol class="mksents">${m.items.map((x, i) => `<li value="${i + 1}" lang="da">${sent(x, gap(i + 1))}</li>`).join("")}</ol></div>
     <section class="sheet q mktable"><h2>${t("mk.sheet")}</h2><div class="mkgrid"><div class="mkrow head"><span class="mkn"></span>${MK_L.map(l => `<span>${l}</span>`).join("")}</div>${rows}</div>
       ${m.done ? `<div class="row next"><button class="btn solid" id="mknew">${t("mk.new")}</button><button class="btn quiet" id="mkhome">${t("gm.back")}</button></div>`
         : `<div class="row next"><button class="btn solid" id="mkdone"${got ? "" : " disabled"}>${t("mk.submit")}</button><span class="soft small">${t("mk.n", got, n)}</span></div>`}</section>
     ${review}</div>`;
-  $("#mkquit").onclick = () => { MK = null; home(); window.scrollTo(0, 0); };
+  // a mock from a Mine ord group goes back to that group; the others go home
+  const back = () => { const g = m.mine; MK = null; if (g) mineView(g); else home(); window.scrollTo(0, 0); };
+  $("#mkquit").onclick = back;
   document.querySelectorAll(".mkcell:not([disabled])").forEach(b => b.onclick = () => {
     const i = +b.dataset.r, y = window.scrollY; m.ans[i] = +b.dataset.o; mockView(); window.scrollTo(0, y);
     document.querySelector(`.mkcell[data-r="${i}"][data-o="${b.dataset.o}"]`)?.focus({ preventScroll: true });
   });
   if ($("#mkdone")) $("#mkdone").onclick = () => {
-    const st = mkStore(); m.done = true;
-    st.scores = [...(st.scores || []), [iso(new Date()), m.items.filter((x, i) => m.ans[i] === x.right).length]].slice(-20);
-    st.used = [...new Set([...(st.used || []), ...m.items.map(x => x.key), m.example.key])].slice(-300);
+    const st = mkStore(), sc = m.items.filter((x, i) => m.ans[i] === x.right).length; m.done = true;
+    if (m.mine) {   // a group's mock keeps its own scores and never uses up the main mock's sentences
+      st.mine = { ...(st.mine || {}), [m.mine]: [...((st.mine || {})[m.mine] || []), [iso(new Date()), sc, m.items.length, m.level]].slice(-20) };
+      st.mineUsed = [...new Set([...(st.mineUsed || []), ...m.items.map(x => x.key), m.example.key])].slice(-300);
+    } else {
+      st.scores = [...(st.scores || []), [iso(new Date()), sc]].slice(-20);
+      st.used = [...new Set([...(st.used || []), ...m.items.map(x => x.key), m.example.key])].slice(-300);
+    }
     mkWrite(st); mockView(); $(".mkresult")?.scrollIntoView({ block: "start" });
   };
-  if ($("#mknew")) $("#mknew").onclick = () => { startMock(); window.scrollTo(0, 0); };
-  if ($("#mkhome")) $("#mkhome").onclick = () => { MK = null; home(); window.scrollTo(0, 0); };
+  if ($("#mknew")) $("#mknew").onclick = () => { if (m.mine) startMineMock(m.mine); else startMock(); window.scrollTo(0, 0); };
+  if ($("#mkhome")) $("#mkhome").onclick = back;
   document.querySelectorAll("[data-more]").forEach(b => b.onclick = () => explain(DB.cards[b.dataset.more]));
   bindTr($("#app"));
+}
+// Mine ord mock: real exam sentences from the other years, with the words of one of the learner's groups in the gaps.
+// Options: other words of the group where possible, then other deck words of the same kind. Never a same-meaning partner.
+const mnKind = c => LG[c.id] ? "conn" : c.word.startsWith("at ") ? "verb" : "noun";
+const mnMates = id => new Set([...CONFUSABLES.map(p => p.slice(0, 2)), ...[...SAME_MEANING].map(k => k.split("|"))].filter(p => p.includes(id)).flat());
+const mnCommon = y => { const n = {}; (DB.sentences[y.id] || []).forEach(x => { if (Array.isArray(x.m)) { const f = x.s.slice(x.m[0], x.m[1]).toLowerCase(); n[f] = (n[f] || 0) + 1; } }); return Object.keys(n).sort((a, b) => n[b] - n[a])[0] || null; };
+// another verb in the same form, inflected on its first word only (the particle is not inflected): the answer's stem is swapped
+// for the other verb's; a final e is dropped the same way on both. Only for a one-word gap, the stem being the answer's first word
+const mnVerb = (y, w, stem) => { const drop = !w.startsWith(stem), base = drop ? stem.replace(/e$/, "") : stem, o = y.word.replace(/^at /, "").split(" ")[0]; return w.startsWith(base) ? (drop ? o.replace(/e$/, "") : o) + w.slice(base.length) : null; };
+const mnGlued = /\s(mod|på|for|om|af|til|med|over|efter|fra|ved|under|imod)[a-zæøå]+$/;   // a preposition with an inflection ending stuck on: "spare påde"
+// one item: the sentence's word and three wrong forms of the same kind; null when three cannot be found
+function mnItem(x, m) {
+  const c = DB.cards[x.card], kind = mnKind(c), low = x.s.toLowerCase(), w = x.w.toLowerCase(), stem = c.word.replace(/^at /, "").split(" ")[0], mates = mnMates(c.id), single = !w.includes(" ");
+  const ok = y => y.id !== c.id && !mates.has(y.id) && mnKind(y) === kind;
+  // linking words: the same word type (an adverb's options are adverbs, not the verb "medføre"); the group's own words first, then the deck
+  const same = y => kind !== "conn" || LG[y.id][1] === LG[c.id][1];
+  const near = shuffle(m.ids.map(id => DB.cards[id]).filter(y => y && ok(y) && same(y))), far = shuffle(cards().filter(y => ok(y) && !m.ids.includes(y.id))).sort((a, b) => same(b) - same(a));
+  const opts = [], ids = [];
+  for (const y of [...near, ...far]) {
+    if (opts.length >= 3) break;
+    if (ids.some(id => mnMates(id).has(y.id))) continue;   // two options that mean the same would both fit
+    const raw = kind === "verb" ? (single ? mnVerb(y, w, stem) : null) || mnCommon(y) : mnCommon(y) || y.word.replace(/^(en|et|at) /, "").replace(/\s*\((.*?)\)/g, " $1");   // "tilstrømning (af)" → "tilstrømning af"
+    const f = raw?.toLowerCase().trim();
+    if (!f || f === w || low.includes(f) || opts.includes(f) || (kind === "verb" && mnGlued.test(f))) continue;
+    opts.push(f); ids.push(y.id);
+  }
+  if (opts.length < 3) return null;
+  const right = lowFirst(x.w), all = shuffle([right, ...opts]);
+  return { kind, card: c.id, src: x.src, prev: "", s: x.s, at: x.at, w: x.w, key: x.key, opts: all, right: all.indexOf(right) };
+}
+// the sentence filter by difficulty. Hard: the exam's own length. Medium: short, plain sentences (one comma at most, no ; : – - or quotes,
+// fewer than two subordinate-clause words outside the gap). Soft medium: longer and two commas, the clause rule dropped
+const MN_BAD = /[;:–\-“”"]/, MN_CLAUSE = /(?<![\wæøåÆØÅ])(som|der|hvis|fordi|når|selvom|mens|at|hvor)(?![\wæøåÆØÅ])/gi;
+function mnFits(x, level, soft, caps) {
+  if (!(Array.isArray(x.m) && x.m[0] >= 0 && x.m[1] > x.m[0] && x.m[1] <= x.s.length)) return false;
+  const n = x.s.length;
+  if (level !== "medium") return n >= 40 && n <= 230;
+  const commas = (x.s.match(/,/g) || []).length;
+  if (soft) return n >= 25 && n <= 140 && commas <= 2 && !MN_BAD.test(x.s) && mnClean(x.s, caps);
+  const outside = x.s.slice(0, x.m[0]) + " " + x.s.slice(x.m[1]);
+  return n >= 25 && n <= 110 && commas <= 1 && !MN_BAD.test(x.s) && (outside.match(MN_CLAUSE) || []).length < 2 && mnClean(x.s, caps);
+}
+// a whole sentence: a capital (or digit) to start, a single . ! or ? to end, no " . " or "..", and no joined heading
+// ("…plan Uddannelse er…"): a lowercase word straight before a capitalised word after the first two. Names are allowed
+// when the word is capitalised in at least one other sentence of the group (caps), or is in the short list below
+const MN_NAMES = /^(Danmark|København|Aarhus|Bornholm|Tivoli|Jylland|Fyn|Sjælland|DR|EU)$/;
+function mnClean(s, caps, heads = true) {
+  if (!/^[A-ZÆØÅ0-9]/.test(s) || !/[\wæøåÆØÅ"”»][.!?]$/.test(s) || s.includes("..") || s.includes(" . ")) return false;
+  if (!heads) return true;
+  const w = s.split(/\s+/);
+  return !w.some((x, i) => i >= 2 && /^[a-zæøå]+$/.test(w[i - 1]) && /^[A-ZÆØÅ][\wæøåÆØÅ]*$/.test(x) && !MN_NAMES.test(x) && !((caps && caps.get(x)) >= 2));
+}
+// how many sentences of the group capitalise each word after the first two (names are the ones that repeat)
+function mnCaps(cs) {
+  const seen = new Set(), n = new Map();
+  cs.forEach(c => (DB.sentences[c.id] || []).forEach(x => {
+    const k = x.src + "|" + x.s;
+    if (seen.has(k)) return;
+    seen.add(k);
+    new Set(x.s.split(/\s+/).slice(2).map(w => w.replace(/[^\wæøåÆØÅ]/g, "")).filter(w => /^[A-ZÆØÅ]/.test(w))).forEach(w => n.set(w, (n.get(w) || 0) + 1));
+  }));
+  return n;
+}
+// medium falls back to the softer filter, then to hard; relaxed marks any fallback
+function mnMockBuild(m) {
+  const lv = mnLevel(m), tries = lv === "medium" ? [["medium", false], ["medium", true], ["hard", false]] : [["hard", false]];
+  for (let i = 0; i < tries.length; i++) { const b = mnPick(m, tries[i][0], tries[i][1]); if (b) return { ...b, level: lv, relaxed: i > 0 }; }
+  return null;
+}
+// 9 items at most: one example and 8 gaps, round-robin over the group's words, at most 2 sentences a word, unused sentences first
+function mnPick(m, level, soft) {
+  const avoid = mnAvoid(m), used = new Set(mkStore().mineUsed || []), mine = m.ids.map(id => DB.cards[id]).filter(Boolean), per = {}, caps = mnCaps(mine);
+  for (const c of mine) {
+    const list = (DB.sentences[c.id] || []).filter(x => x.src.slice(0, 4) !== avoid && mnFits(x, level, soft, caps))
+      .map(x => ({ card: c.id, src: x.src, s: x.s, at: x.m[0], w: x.s.slice(x.m[0], x.m[1]), key: "mine|" + x.src + "|" + x.s.slice(0, 30) }));
+    // unused first, and within each, whole clean sentences before the rest (for Svær this is a preference: the list is not filtered)
+    const cl = x => mnClean(x.s, caps) ? 0 : 1;
+    per[c.id] = [...shuffle(list.filter(x => !used.has(x.key))).sort((a, b) => cl(a) - cl(b)), ...shuffle(list.filter(x => used.has(x.key))).sort((a, b) => cl(a) - cl(b))];
+  }
+  const order = shuffle(mine.filter(c => per[c.id].length)), cnt = {}, seen = new Set(), got = [];
+  let more = true;
+  while (more && got.length < 9) {
+    more = false;
+    for (const c of order) {
+      if (got.length >= 9) break;
+      const x = per[c.id].find(y => !seen.has(y.key));
+      if (!x || (cnt[c.id] || 0) >= 2) continue;
+      seen.add(x.key); more = true;
+      const it = mnItem(x, m);
+      if (it) { cnt[c.id] = (cnt[c.id] || 0) + 1; got.push(it); }
+    }
+  }
+  if (got.length < 4) return null;
+  const ex = Math.max(0, got.findIndex(x => x.kind === "verb")), example = got.splice(ex, 1)[0];
+  return { example, items: shuffle(got), ans: Array(got.length).fill(null), done: false, outside: 0, topics: 0, mine: m.id, avoid };
+}
+function startMineMock(gid) {
+  const g = MINE.find(x => x.id === gid);
+  if (!g) return;
+  S = null; FC = null; GS = null;
+  MK = mnMockBuild(g);
+  if (!MK) { alert(t("mn.mk.few")); return; }
+  mockView();
 }
 
 // ---------- Læsning 2B · Indsæt tekststykket (pd3-data/l2b.json) ----------

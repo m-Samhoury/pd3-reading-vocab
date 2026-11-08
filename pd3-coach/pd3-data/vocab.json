@@ -9931,6 +9931,1076 @@
       "frank": 226,
       "freq": 0,
       "freq_total": 1
+    },
+    "at_afskaffe": {
+      "word": "at afskaffe",
+      "meaning": "to abolish, to get rid of",
+      "group": "nye_ord",
+      "example": "Regeringen vil afskaffe afgiften på sodavand.",
+      "priority": 3,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-07",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "afskaffe",
+        "senses": [
+          "få til at ophøre med at eksistere; fjerne eller ophæve noget eksisterende"
+        ],
+        "cite": [
+          "Karaktergivning skal afskaffes, det fremmer kun konkurrenceræset mellem børn"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=afskaffe"
+      }
+    },
+    "at_advare_mod": {
+      "word": "at advare (mod)",
+      "meaning": "to warn (against)",
+      "group": "nye_ord",
+      "example": "Lægerne advarer mod at spise for meget sukker.",
+      "priority": 3,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-07",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "advare",
+        "senses": [
+          "gøre en person opmærksom på faren ved at gøre noget bestemt, i håb om at hindre handlingen",
+          "give besked om en farlig eller ubehagelig situation; give meddelelse om en forestående fare"
+        ],
+        "cite": [
+          "Da Gud havde skabt Adam, advarede han ham .. mod at spise æblerne på Kundskabens Træ",
+          "hendes mor havde advaret hende mod mænd og deres falskhed",
+          "de nye sirener .. skal advare folk i tilfælde af større katastrofer",
+          "Gerda måtte advare ham om at stolene havde det med at kollapse"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=advare"
+      }
+    },
+    "et_miljoemaerke": {
+      "word": "et miljømærke",
+      "meaning": "an eco-label",
+      "group": "nye_ord",
+      "example": "Køb helst varer med et miljømærke som Svanemærket.",
+      "priority": 3,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-07",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, intetkøn",
+        "head": "miljømærke",
+        "senses": [
+          "officielt godkendt symbol der garanterer at en vares belastning af miljøet ikke overstiger en vis grænse"
+        ],
+        "cite": [
+          "For at opnå et miljømærke skal et produkt igennem en hård test, der undersøger miljøbelastningen både under produktion, dagligt brug og efter kassering"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=miljømærke"
+      }
+    },
+    "at_spare_paa": {
+      "word": "at spare (på)",
+      "meaning": "to save on, to cut down on",
+      "group": "nye_ord",
+      "example": "Vi skal spare på strømmen om vinteren.",
+      "priority": 3,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-07",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "spare",
+        "senses": [
+          "undgå at få en bestemt udgift eller bruge penge eller andet værdifuldt på noget ved at være påpasselig med sit pengeforbrug eller benytte sig af særlige, gunstige omstændigheder; være sparsommelig"
+        ],
+        "cite": [
+          "Det er nu, hvor appelsiner og andre citrusfrugter er bedst og billigst, at De kan spare penge ved at sylte orangemarmelade",
+          "alle går i indesko eller på strømpesokker for at spare på udgifter til rengøring"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=spare"
+      }
+    },
+    "en_pligt_til": {
+      "word": "en pligt (til)",
+      "meaning": "a duty (to)",
+      "group": "nye_ord",
+      "example": "Alle børn har pligt til at gå i skole.",
+      "priority": 3,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-07",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "pligt",
+        "senses": [
+          "indre tilskyndelse til at handle på en bestemt måde fordi ens samvittighed eller nogle sociale normer påbyder det"
+        ],
+        "cite": [
+          "Hun gjorde det mere af pligt end af interesse",
+          "Rajiv [: Gandhi] følte det som sin pligt at gå ind i politik"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=pligt"
+      }
+    },
+    "et_problem_for": {
+      "word": "et problem (for)",
+      "meaning": "a problem (for)",
+      "group": "nye_ord",
+      "example": "Støjen er et stort problem for de ældre beboere.",
+      "priority": 3,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-07",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, intetkøn",
+        "head": "problem",
+        "senses": [
+          "væsentligt, uafklaret anliggende som man bør forholde sig til ved hjælp af analyse eller tankevirksomhed"
+        ],
+        "cite": [
+          "Politikerne er verdensmestre i at forflygtige problemerne",
+          "Indenrigsministeren har .. planer om at nedsætte et etisk råd til at beskæftige sig med de problemer, den genetiske og biotekniske forsknings resultater rejser"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=problem"
+      }
+    },
+    "et_eksempel_paa": {
+      "word": "et eksempel (på)",
+      "meaning": "an example (of)",
+      "group": "nye_ord",
+      "example": "Cykelstierne er et godt eksempel på grøn trafik.",
+      "priority": 3,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-07",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, intetkøn",
+        "head": "eksempel",
+        "senses": [
+          "typisk tilfælde der fremhæves for at forklare eller anskueliggøre"
+        ],
+        "cite": [
+          "i figurerne 1-6 er vist et eksempel på, hvordan systemet kan anvendes i praksis",
+          "Dustin Hoffman og James Woods og flere andre er glimrende eksempler på, at mandlige skuespillere ikke behøver at ligne fotomodeller"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=eksempel"
+      }
+    },
+    "et_overskud_af": {
+      "word": "et overskud (af)",
+      "meaning": "a surplus (of), extra energy",
+      "group": "nye_ord",
+      "example": "Om natten har Danmark et overskud af strøm fra vindmøller.",
+      "priority": 3,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-07",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, intetkøn",
+        "head": "overskud",
+        "senses": [
+          "en mere end tilstrækkelig eller nødvendig mængde af noget; noget der bliver tilovers",
+          "beløb (i et regnskab) der er tilovers når udgifterne er trukket fra indtægterne"
+        ],
+        "cite": [
+          "Danmark [har] overskud af naturgas og eksporterer til Tyskland og Sverige",
+          "[træet] er købt billigt hos en snedker, der havde fået det i overskud",
+          "Danmark har udsigt til endnu et år med stort overskud på betalingsbalancen"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=overskud"
+      }
+    },
+    "en_mangel_paa": {
+      "word": "en mangel (på)",
+      "meaning": "a shortage (of), a lack (of)",
+      "group": "nye_ord",
+      "example": "Der er stor mangel på sygeplejersker.",
+      "priority": 3,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-07",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "mangel",
+        "senses": [
+          "det at noget ønsket ikke er til rådighed i tilstrækkelig mængde",
+          "det at noget nødvendigt ikke er opfyldt; det at et behov ikke er blevet dækket"
+        ],
+        "cite": [
+          "han blev løsladt på grund af mangel på bevis",
+          "Krigen havde naturligvis skabt mangel på mange ting, men ikke på mad",
+          "En kost med for meget fedt og sukker, samt mangel på motion, kan udløse aldersdiabetes"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=mangel"
+      }
+    },
+    "en_tilstroemning_af": {
+      "word": "en tilstrømning (af)",
+      "meaning": "an influx (of)",
+      "group": "nye_ord",
+      "example": "Byen oplever en stor tilstrømning af unge.",
+      "priority": 3,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-07",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "tilstrømning",
+        "senses": [
+          "det at mange mennesker bevæger sig mod et bestemt sted eller område, typisk for at få eller opnå noget"
+        ],
+        "cite": [
+          "I januar 1848 blev der fundet guld i Californien, og dette medførte en stor tilstrømning af guldgravere",
+          "Nationalbanken oplyser ikke længere, om der er sket tilstrømning af valuta i forbindelse med renteændringer"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=tilstrømning"
+      }
+    },
+    "masser_af": {
+      "word": "masser af",
+      "meaning": "lots of, plenty of",
+      "group": "nye_ord",
+      "example": "Der er masser af ledige job i byggeriet.",
+      "priority": 3,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-07",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "masse",
+        "senses": [
+          "stor mængde eller stort antal; mængde ting"
+        ],
+        "cite": [
+          "jeg spiser sundt og får masser af vitaminer og mineraler",
+          "Mona sætter nu en masse energi ind på at få den uddannelse, hun forsømte som helt ung"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=masse"
+      }
+    },
+    "forventninger_til": {
+      "word": "forventninger (til)",
+      "meaning": "expectations (of)",
+      "group": "nye_ord",
+      "example": "Mange har store forventninger til den nye skole.",
+      "priority": 3,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-07",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "forventning",
+        "senses": [
+          "det at forvente eller vente noget; formodning om hvordan noget vil ske eller forløbe"
+        ],
+        "cite": [
+          "Juline strålede af forventning, men Melissa havde en betænkelig mine på",
+          "man har forventninger om 2-300 daglige besøgende i sommersæsonen"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=forventning"
+      }
+    },
+    "tillid_til": {
+      "word": "tillid (til)",
+      "meaning": "trust (in)",
+      "group": "nye_ord",
+      "example": "Danskerne har stor tillid til politiet.",
+      "priority": 3,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-07",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "tillid",
+        "senses": [
+          "stærk følelse af at kunne tro på, stole på eller regne med nogen eller noget"
+        ],
+        "cite": [
+          "fodgængere, som naivt og troskyldigt træder ud på kørebanen i tillid til det grønne lys .. bliver derefter omgående torpederet af cyklister"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=tillid"
+      }
+    },
+    "uenighed_om": {
+      "word": "uenighed (om)",
+      "meaning": "disagreement (about)",
+      "group": "nye_ord",
+      "example": "Der er uenighed om, hvem der skal betale.",
+      "priority": 3,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-07",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "uenighed",
+        "senses": [
+          "det at to eller flere parter er uenige om noget"
+        ],
+        "cite": [
+          "Trods stor uenighed mellem regeringen og Socialdemokratiet er der fortsat udsigt til et bredt politisk forlig"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=uenighed"
+      }
+    },
+    "en_vaernepligt": {
+      "word": "en værnepligt",
+      "meaning": "conscription, military service",
+      "group": "vaernepligt",
+      "example": "Fra 2026 skal kvinder også aftjene værnepligt.",
+      "priority": 3,
+      "note": "aftjene sin værnepligt",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-07",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "værnepligt",
+        "senses": [
+          "en borgers lovbestemte pligt til at tage del i landets militære forsvar"
+        ],
+        "cite": [
+          [
+            "Socialistisk Folkeparti vil ikke være med til at indføre værnepligt for kvinder"
+          ]
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=v%C3%A6rnepligt"
+      }
+    },
+    "vaernepligtig": {
+      "word": "værnepligtig",
+      "meaning": "liable to serve; a conscript",
+      "group": "vaernepligt",
+      "example": "Fra 2026 bliver både mænd og kvinder værnepligtige, når de fylder 18 år.",
+      "priority": 3,
+      "note": "en værnepligtig = a conscript",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-07",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "adjektiv",
+        "head": "værnepligtig",
+        "senses": [
+          "ved lov forpligtet til at gøre tjeneste i forsvaret"
+        ],
+        "cite": [
+          [
+            "bønderkarlene .. var de eneste unge mænd, der var værnepligtige"
+          ]
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=v%C3%A6rnepligtig"
+      }
+    },
+    "at_aftjene": {
+      "word": "at aftjene",
+      "meaning": "to serve (værnepligt)",
+      "group": "vaernepligt",
+      "example": "Min bror aftjente sin værnepligt i hæren for nogle år siden.",
+      "priority": 3,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-07",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "aftjene",
+        "senses": [
+          "gøre tjeneste i et længere tidsrum inden for en ordning man er underlagt"
+        ],
+        "cite": [
+          [
+            "Han aftjente sin værnepligt ved gardehusarerne"
+          ]
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=aftjene"
+      }
+    },
+    "at_indkalde": {
+      "word": "at indkalde (til)",
+      "meaning": "to call up (for)",
+      "group": "vaernepligt",
+      "example": "Forsvaret indkalder de unge til Forsvarsdagen.",
+      "priority": 3,
+      "note": "en indkaldelse",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-07",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "indkalde",
+        "senses": [
+          "bede nogen officielt om at møde op på et bestemt sted og tidspunkt"
+        ],
+        "cite": [
+          [
+            "Jeg ville blive indkaldt til operation i feb.-marts"
+          ]
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=indkalde"
+      }
+    },
+    "en_forsvarsdag": {
+      "word": "Forsvarsdagen",
+      "meaning": "the Defence Day, when young people are assessed",
+      "group": "vaernepligt",
+      "example": "Alle unge skal møde op til Forsvarsdagen, hvor de bliver vurderet.",
+      "priority": 3,
+      "note": "used to be called session",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-07",
+      "lapses": 0,
+      "history": []
+    },
+    "en_lodtraekning": {
+      "word": "en lodtrækning",
+      "meaning": "a draw / lottery",
+      "group": "vaernepligt",
+      "example": "Hvem der skal aftjene værnepligt, afgøres ved en lodtrækning.",
+      "priority": 3,
+      "note": "how conscripts are chosen in Denmark",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-07",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "lodtrækning",
+        "senses": [
+          "udvælgelse af fx vindere eller deltagere ved tilfældighed"
+        ],
+        "cite": [
+          [
+            "Ved indsendelsen af denne kupon er du automatisk med i lodtrækningen om SUPER-BONUS på 50.000 kroner"
+          ]
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=lodtr%C3%A6kning"
+      }
+    },
+    "et_forsvar": {
+      "word": "forsvaret",
+      "meaning": "the armed forces",
+      "group": "vaernepligt",
+      "example": "Forsvaret skal beskytte landet mod trusler udefra.",
+      "priority": 3,
+      "note": "et forsvar = a defence",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-07",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, intetkøn",
+        "head": "forsvar",
+        "senses": [
+          "landets væbnede styrker, fx hær, flåde og flyvevåben",
+          "modstand mod et militært angreb"
+        ],
+        "cite": [
+          [
+            "Det var nødvendigt for Sovjetunionen med et stærkt forsvar. Det levede i en fjendtlig kapitalistisk verden"
+          ]
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=forsvar"
+      }
+    },
+    "at_forsvare": {
+      "word": "at forsvare",
+      "meaning": "to defend",
+      "group": "vaernepligt",
+      "example": "Soldaterne er med til at forsvare landets grænser.",
+      "priority": 3,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-07",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "forsvare",
+        "senses": [
+          "afværge et angreb på nogen eller noget"
+        ],
+        "cite": [
+          [
+            "De danske soldater, der havde til opgave at forsvare landet, blev ladt skammeligt i stikken den 9. april!"
+          ]
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=forsvare"
+      }
+    },
+    "en_soldat": {
+      "word": "en soldat",
+      "meaning": "a soldier",
+      "group": "vaernepligt",
+      "example": "Efter uddannelsen blev hun soldat i hæren.",
+      "priority": 3,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-07",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "soldat",
+        "senses": [
+          "person der gør tjeneste i de væbnede styrker"
+        ],
+        "cite": [
+          [
+            "En afdeling tyske soldater kom marcherende med gevær og fuld oppakning"
+          ]
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=soldat"
+      }
+    },
+    "en_militaernaegter": {
+      "word": "en militærnægter",
+      "meaning": "a conscientious objector",
+      "group": "vaernepligt",
+      "example": "En militærnægter kan i stedet gøre civilt arbejde.",
+      "priority": 3,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-07",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "militærnægter",
+        "senses": [
+          "værnepligtig der af samvittighedsgrunde ikke vil gøre militærtjeneste"
+        ],
+        "cite": [
+          [
+            "[han] har været knyttet til museet, siden han som militærnægter startede i 1979"
+          ]
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=milit%C3%A6rn%C3%A6gter"
+      }
+    },
+    "koensneutral": {
+      "word": "kønsneutral",
+      "meaning": "gender-neutral",
+      "group": "vaernepligt",
+      "example": "Mange mener, at værnepligten skal være kønsneutral.",
+      "priority": 3,
+      "note": "kønsneutral værnepligt",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-07",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "adjektiv",
+        "head": "kønsneutral",
+        "senses": [
+          "som ikke tager hensyn til køn; gælder begge køn ens"
+        ],
+        "cite": [
+          [
+            "Tanken om kønsneutral ægteskabslovgivning er opstået ud fra voksne homoseksuelles behov for og krav om rettighed til at indgå ægteskab på linje med de heteroseksuelle og deres krav om ret til at få børn"
+          ]
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=k%C3%B8nsneutral"
+      }
+    },
+    "en_ligestilling": {
+      "word": "en ligestilling (mellem)",
+      "meaning": "equality (between)",
+      "group": "vaernepligt",
+      "example": "Forslaget handler om ligestilling mellem kønnene.",
+      "priority": 3,
+      "note": "ligestilling mellem kønnene",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-07",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "ligestilling",
+        "senses": [
+          "at mennesker af begge køn har samme rettigheder og muligheder"
+        ],
+        "cite": [
+          [
+            "forliget indebærer en skattemæssig ligestilling af forskellige virksomhedstyper"
+          ]
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=ligestilling"
+      }
+    },
+    "en_trussel": {
+      "word": "en trussel (mod)",
+      "meaning": "a threat (to)",
+      "group": "vaernepligt",
+      "example": "Krigen i Ukraine har skabt en ny trussel mod Europa.",
+      "priority": 3,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-07",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "trussel",
+        "senses": [
+          "tilkendegivelse om at man vil skade nogen, hvis ikke der bliver gjort som man kræver",
+          "noget der udgør en risiko for noget farligt eller ubehageligt"
+        ],
+        "cite": [
+          [
+            "I fire amter omkring hovedstaden er trusler om vold så omfattende, at lærerkredse har bedt lærerforeningen om hjælp"
+          ]
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=trussel"
+      }
+    },
+    "en_sikkerhed": {
+      "word": "en sikkerhed",
+      "meaning": "security, safety",
+      "group": "vaernepligt",
+      "example": "Værnepligten skal være med til at sikre den nationale sikkerhed.",
+      "priority": 3,
+      "note": "den nationale sikkerhed",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-07",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "sikkerhed",
+        "senses": [
+          "tilstand hvor man er uden for fare"
+        ],
+        "cite": [
+          [
+            "Hvis du ikke bringer dig i sikkerhed i nat, er du en død mand i morgen"
+          ]
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=sikkerhed"
+      }
+    },
+    "en_oprustning": {
+      "word": "en oprustning",
+      "meaning": "a rearmament, military build-up",
+      "group": "vaernepligt",
+      "example": "Mange lande har sat gang i en oprustning efter krigen i Ukraine.",
+      "priority": 3,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-07",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "oprustning",
+        "senses": [
+          "det at øge sin militære styrke, fx ved at skaffe flere soldater og våben"
+        ],
+        "cite": [
+          [
+            "I 1960 kom den første anti-atommarch som en protest mod atomvåben og oprustning"
+          ]
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=oprustning"
+      }
+    },
+    "et_forsvarsforlig": {
+      "word": "et forsvarsforlig",
+      "meaning": "a defence agreement",
+      "group": "vaernepligt",
+      "example": "Partierne er blevet enige om et nyt forsvarsforlig.",
+      "priority": 3,
+      "note": "the parties' agreement on defence spending",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-07",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, intetkøn",
+        "head": "forsvarsforlig",
+        "senses": [
+          "aftale mellem partierne i Folketinget om forsvarets budget og opgaver i en flerårig periode"
+        ],
+        "cite": [
+          [
+            "[partiet] står urokkeligt fast på, at det kommende forsvarsforlig skal være en økonomisk nul-løsning"
+          ]
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=forsvarsforlig"
+      }
+    },
+    "et_beredskab": {
+      "word": "et beredskab",
+      "meaning": "emergency preparedness",
+      "group": "vaernepligt",
+      "example": "Kommunen har et beredskab, hvis der sker en ulykke.",
+      "priority": 3,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-07",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, intetkøn",
+        "head": "beredskab",
+        "senses": [
+          "det at være forberedt og klar til at reagere, hvis en krise opstår",
+          "tilstand hvor et land er klar til at reagere i nødsituationer"
+        ],
+        "cite": [
+          [
+            "Han har ikke et naturligt psykisk beredskab mod angst"
+          ]
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=beredskab"
+      }
+    },
+    "at_afskraekke": {
+      "word": "at afskrække",
+      "meaning": "to deter",
+      "group": "vaernepligt",
+      "example": "Et stærkt forsvar kan afskrække andre lande fra at angribe.",
+      "priority": 3,
+      "note": "en afskrækkelse",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-07",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "afskrække",
+        "senses": [
+          "få nogen til at lade være med at gøre noget af frygt for konsekvenserne"
+        ],
+        "cite": [
+          [
+            "[NATO skulle] opretholde et tilstrækkeligt stærkt forsvar, som ville afskrække en modstander fra at indlede et angreb"
+          ]
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=afskr%C3%A6kke"
+      }
+    },
+    "en_tvang": {
+      "word": "en tvang",
+      "meaning": "compulsion, force",
+      "group": "vaernepligt",
+      "example": "Nogle opfatter værnepligten som en unødvendig tvang.",
+      "priority": 3,
+      "note": "tvungen = compulsory",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-07",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "tvang",
+        "senses": [
+          "det at tvinge nogen til at gøre noget"
+        ],
+        "cite": [
+          [
+            "folkeafstemninger er hemmelige. Det sikrer, at man stemmer efter overbevisning og ikke under tvang"
+          ]
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=tvang"
+      }
+    },
+    "at_bidrage": {
+      "word": "at bidrage (til)",
+      "meaning": "to contribute (to)",
+      "group": "vaernepligt",
+      "example": "Værnepligtige bidrager til landets forsvar.",
+      "priority": 3,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-07",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "bidrage",
+        "senses": [
+          "medvirke med fx indsats eller penge til et fælles formål"
+        ],
+        "cite": [
+          [
+            "Alle byens indbyggere bidrager med sang, musik og dans til en fælles fest"
+          ]
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=bidrage"
+      }
+    },
+    "et_faellesskab": {
+      "word": "et fællesskab",
+      "meaning": "a community, a sense of togetherness",
+      "group": "vaernepligt",
+      "example": "Værnepligten skaber et fællesskab på tværs af uddannelse og baggrund.",
+      "priority": 3,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-07",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, intetkøn",
+        "head": "fællesskab",
+        "senses": [
+          "det at en gruppe mennesker er sammen og føler et fælles tilhørsforhold"
+        ],
+        "cite": [
+          [
+            "der ligger store livsværdier i at være fælles om et stykke arbejde, og høsten er så afgjort med til at skabe sammenhold og fællesskab"
+          ]
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=f%C3%A6llesskab"
+      }
+    },
+    "egnet": {
+      "word": "egnet (til)",
+      "meaning": "fit, suitable (for)",
+      "group": "vaernepligt",
+      "example": "Ikke alle unge er egnede til militærtjeneste.",
+      "priority": 3,
+      "note": "uegnet = unfit",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-07",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "adjektiv",
+        "head": "egnet",
+        "senses": [
+          "som passer godt til noget bestemt"
+        ],
+        "cite": [
+          [
+            "skolen vurderer om man er egnet til at fortsætte uddannelsen"
+          ]
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=egnet"
+      }
+    },
+    "en_krig": {
+      "word": "en krig (mod)",
+      "meaning": "a war (against)",
+      "group": "vaernepligt",
+      "example": "En krig mod et andet land har gjort værnepligten mere aktuel.",
+      "priority": 3,
+      "note": "krigen i Ukraine",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-07",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "krig",
+        "senses": [
+          "stor væbnet konflikt mellem lande eller folkegrupper"
+        ],
+        "cite": [
+          [
+            "Midt i Europa er der krig, hundredtusindvis er drevet på flugt, og vi oplever igen koncentrationslejre på vores kontinent"
+          ]
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=krig"
+      }
+    },
+    "en_alliance": {
+      "word": "en alliance",
+      "meaning": "an alliance",
+      "group": "vaernepligt",
+      "example": "Danmark er medlem af NATO, en forsvarsalliance.",
+      "priority": 3,
+      "note": "NATO er en forsvarsalliance",
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-07",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "alliance",
+        "senses": [
+          "aftale om et organiseret samarbejde mellem to eller flere lande"
+        ],
+        "cite": [
+          [
+            "Ritt Bjerregaard og Svend Auken har indgået en alliance, der øjensynlig er ubrydelig"
+          ]
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=alliance"
+      }
+    },
+    "at_rekruttere": {
+      "word": "at rekruttere",
+      "meaning": "to recruit",
+      "group": "vaernepligt",
+      "example": "Forsvaret har svært ved at rekruttere nok soldater.",
+      "priority": 3,
+      "note": null,
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-07",
+      "lapses": 0,
+      "history": [],
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "rekruttere",
+        "senses": [
+          "hverve nye personer til at gøre tjeneste, fx i militæret"
+        ],
+        "cite": [
+          [
+            "Rekrutterer vi værnepligtige til Jugoslavien, vil de så vidt muligt modtage træning, inden de tager afsted"
+          ]
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=rekruttere"
+      }
     }
   }
 }

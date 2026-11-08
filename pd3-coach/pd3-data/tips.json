@@ -3000,5 +3000,232 @@
    "være vant til noget (be used to sth); være vant til at … (be used to doing …)"
   ],
   "prep": "vant til noget / vant til at + infinitiv"
+ },
+ "at_afskaffe": {
+  "prep": "afskaffe + navneord (ingen præposition)",
+  "construction": [
+   "afskaffe noget; noget bliver afskaffet",
+   "afskaffe noget (abolish sth); noget bliver afskaffet (sth is abolished)"
+  ]
+ },
+ "at_advare_mod": {
+  "prep": "advare nogen mod noget / mod at + infinitiv",
+  "construction": [
+   "advare mod noget / mod at + infinitiv; advare nogen om noget",
+   "advare mod (warn against doing sth); advare om (warn about a danger)"
+  ]
+ },
+ "et_miljoemaerke": {
+  "prep": "varer med (et) miljømærke",
+  "construction": [
+   "et miljømærke på en vare; miljømærkede varer",
+   "an eco-label on a product; eco-labelled products"
+  ]
+ },
+ "at_spare_paa": {
+  "prep": "spare på noget",
+  "construction": [
+   "spare på noget; spare penge (uden på); spare op til noget",
+   "spare på strøm (use less power); spare penge (save money, no på); spare op til (save up for)"
+  ]
+ },
+ "en_pligt_til": {
+  "prep": "have pligt til at + infinitiv",
+  "construction": [
+   "have pligt til at + infinitiv; det er ens pligt at …",
+   "have pligt til at (have a duty to); det er min pligt at (it is my duty to)"
+  ]
+ },
+ "et_problem_for": {
+  "prep": "et problem for nogen",
+  "construction": [
+   "et problem for nogen; problemer med noget; løse et problem",
+   "a problem for sb; problemer med (problems with sth); løse (solve) a problem"
+  ]
+ },
+ "et_eksempel_paa": {
+  "prep": "et eksempel på noget",
+  "construction": [
+   "et eksempel på noget / på at …; for eksempel (fx)",
+   "an example of sth; for eksempel (for example)"
+  ]
+ },
+ "et_overskud_af": {
+  "prep": "et overskud af noget",
+  "construction": [
+   "overskud af noget; overskud til at + infinitiv (energi); et overskud på 2 mio. kr.",
+   "overskud af (a surplus of); overskud til at (the energy to); et overskud på (a profit of)"
+  ]
+ },
+ "en_mangel_paa": {
+  "prep": "mangel på noget",
+  "construction": [
+   "mangel på noget; der er mangel på …; i mangel af bedre",
+   "a shortage of sth; there is a shortage of …; for want of anything better"
+  ]
+ },
+ "en_tilstroemning_af": {
+  "prep": "en tilstrømning af nogen / noget",
+  "construction": [
+   "en tilstrømning af nogen til et sted",
+   "an influx of people to a place"
+  ]
+ },
+ "masser_af": {
+  "prep": "masser af + navneord",
+  "construction": [
+   "masser af noget; en masse noget",
+   "masser af tid (plenty of time); en masse penge (a lot of money)"
+  ],
+  "register": [
+   "Hverdag. I et formelt essay: mange / en stor mængde.",
+   "Everyday. In a formal essay: mange / en stor mængde."
+  ]
+ },
+ "forventninger_til": {
+  "prep": "forventninger til nogen / noget",
+  "construction": [
+   "have forventninger til noget; leve op til forventningerne; i forventning om",
+   "have expectations of sth; live up to expectations; in expectation of"
+  ]
+ },
+ "tillid_til": {
+  "prep": "tillid til nogen / noget",
+  "construction": [
+   "have tillid til nogen; vise tillid; mangel på tillid",
+   "trust in sb; show trust; a lack of trust (no plural)"
+  ]
+ },
+ "uenighed_om": {
+  "prep": "uenighed om noget / om, hvem …",
+  "construction": [
+   "uenighed om noget; uenighed mellem nogen; være uenig i / om",
+   "disagreement about sth; disagreement between people; være uenig (disagree)"
+  ]
+ },
+ "en_vaernepligt": {
+  "prep": "aftjene (sin) værnepligt · værnepligt for kvinder",
+  "construction": [
+   "aftjene sin værnepligt; værnepligt i hæren",
+   "to serve one's conscription; conscription in the army"
+  ]
+ },
+ "vaernepligtig": {
+  "construction": [
+   "en værnepligtig; værnepligtig til at + infinitiv",
+   "a conscript; liable to + infinitive"
+  ]
+ },
+ "at_aftjene": {
+  "prep": "aftjene sin værnepligt (ingen præposition)",
+  "construction": [
+   "aftjene sin værnepligt (ingen præposition)",
+   "to serve one's conscription (no preposition)"
+  ]
+ },
+ "at_indkalde": {
+  "prep": "indkalde nogen til noget",
+  "construction": [
+   "indkalde nogen til noget; en indkaldelse",
+   "to call someone up for something; a call-up"
+  ]
+ },
+ "en_lodtraekning": {
+  "prep": "lodtrækning blandt nogen om noget",
+  "construction": [
+   "vælge nogen ved lodtrækning; en lodtrækning om noget",
+   "to choose someone by lottery; a draw about something"
+  ]
+ },
+ "et_forsvar": {
+  "prep": "til forsvar for noget",
+  "construction": [
+   "et forsvar mod noget; til forsvar for noget",
+   "a defence against something; in defence of something"
+  ]
+ },
+ "at_forsvare": {
+  "prep": "forsvare noget mod noget",
+  "construction": [
+   "forsvare noget mod noget",
+   "to defend something against something"
+  ]
+ },
+ "en_soldat": {
+  "prep": "soldat i hæren / forsvaret",
+  "construction": [
+   "være soldat i + sted",
+   "to be a soldier in + place"
+  ]
+ },
+ "en_ligestilling": {
+  "prep": "ligestilling mellem nogen",
+  "construction": [
+   "ligestilling mellem kønnene; ligestilling af noget",
+   "equality between the genders; equalisation of something"
+  ]
+ },
+ "en_trussel": {
+  "prep": "trussel mod noget / trussel om at + infinitiv",
+  "construction": [
+   "en trussel mod noget; en trussel om noget",
+   "a threat to something; a threat of something"
+  ]
+ },
+ "et_forsvarsforlig": {
+  "prep": "forlig mellem partierne om noget",
+  "construction": [
+   "et forsvarsforlig om forsvarets budget",
+   "a defence agreement on the defence budget"
+  ]
+ },
+ "et_beredskab": {
+  "prep": "have noget i beredskab",
+  "construction": [
+   "have noget i beredskab",
+   "to have something on standby"
+  ]
+ },
+ "at_afskraekke": {
+  "prep": "afskrække nogen fra noget / fra at + infinitiv",
+  "construction": [
+   "afskrække nogen fra noget",
+   "to deter someone from something"
+  ]
+ },
+ "at_bidrage": {
+  "prep": "bidrage til noget / bidrage med noget",
+  "construction": [
+   "bidrage med noget til noget",
+   "to contribute something to something"
+  ]
+ },
+ "et_faellesskab": {
+  "prep": "fællesskab mellem nogen / fællesskab om noget",
+  "construction": [
+   "et fællesskab om noget",
+   "a community around something"
+  ]
+ },
+ "egnet": {
+  "prep": "egnet til noget / egnet til at + infinitiv",
+  "construction": [
+   "egnet til noget · flertal: egnede",
+   "suitable for something · plural: egnede"
+  ]
+ },
+ "en_krig": {
+  "prep": "krig mod noget",
+  "construction": [
+   "en krig mod noget",
+   "a war against something"
+  ]
+ },
+ "en_alliance": {
+  "prep": "i alliance med noget",
+  "construction": [
+   "alliance med noget",
+   "alliance with something"
+  ]
  }
 }

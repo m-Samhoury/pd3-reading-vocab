@@ -3364,5 +3364,652 @@
    "rule": "naar_now",
    "args": []
   }
+ ],
+ "mine": [
+  {
+   "mode": "pick",
+   "src": "2021v W",
+   "s": "Spørgsmålet er, om jeg skal tage bilen eller toget.",
+   "rule": "modal",
+   "ai": false,
+   "at": 28,
+   "w": "tage",
+   "opts": [
+    "tage",
+    "tager",
+    "at tage"
+   ],
+   "args": [
+    "skal"
+   ]
+  },
+  {
+   "mode": "pick",
+   "src": "2014s W",
+   "s": "Jeg ved ikke, om jeg skal blande mig i det, for han er jo voksen.",
+   "rule": "modal",
+   "ai": false,
+   "at": 26,
+   "w": "blande",
+   "opts": [
+    "blande",
+    "blander",
+    "at blande"
+   ],
+   "args": [
+    "skal"
+   ]
+  },
+  {
+   "mode": "pick",
+   "src": "2013v W",
+   "s": "Jeg tænker på, om hun kan klare det.",
+   "rule": "modal",
+   "ai": false,
+   "at": 26,
+   "w": "klare",
+   "opts": [
+    "klare",
+    "klarer",
+    "at klare"
+   ],
+   "args": [
+    "kan"
+   ]
+  },
+  {
+   "mode": "pick",
+   "src": "2016v L1",
+   "s": "Du skal bruge NemID for at søge om Ungdomskort.",
+   "rule": "modal",
+   "ai": false,
+   "at": 8,
+   "w": "bruge",
+   "opts": [
+    "bruge",
+    "bruger",
+    "at bruge"
+   ],
+   "args": [
+    "skal"
+   ]
+  },
+  {
+   "mode": "pick",
+   "src": "2020s W",
+   "s": "Laszlo kender heller ikke så mange danskere endnu, han kan tale dansk med.",
+   "rule": "modal",
+   "ai": false,
+   "at": 59,
+   "w": "tale",
+   "opts": [
+    "tale",
+    "taler",
+    "at tale"
+   ],
+   "args": [
+    "kan"
+   ]
+  },
+  {
+   "mode": "pick",
+   "src": "2016s L2",
+   "s": "Alle laver deres lektier, også selvom de ikke vil have en boglig uddannelse.",
+   "rule": "modal",
+   "ai": false,
+   "at": 50,
+   "w": "have",
+   "opts": [
+    "have",
+    "har",
+    "at have"
+   ],
+   "args": [
+    "vil"
+   ]
+  },
+  {
+   "mode": "pick",
+   "src": "2013s L1",
+   "s": "Du kan ikke bare selv vælge uddannelsen.",
+   "rule": "modal",
+   "ai": false,
+   "at": 22,
+   "w": "vælge",
+   "opts": [
+    "vælge",
+    "vælger",
+    "at vælge"
+   ],
+   "args": [
+    "kan"
+   ]
+  },
+  {
+   "mode": "pick",
+   "src": "2018s L2",
+   "s": "Jeg mener, at det bør være op til den enkelte familie at kunne vælge frit.",
+   "rule": "modal",
+   "ai": false,
+   "at": 22,
+   "w": "være",
+   "opts": [
+    "være",
+    "er",
+    "at være"
+   ],
+   "args": [
+    "bør"
+   ]
+  },
+  {
+   "mode": "pick",
+   "src": "2023v L2",
+   "s": "Det kan alt sammen være svært at overskue, hvis man ikke er særlig it-interesseret.",
+   "rule": "modal",
+   "ai": false,
+   "at": 19,
+   "w": "være",
+   "opts": [
+    "være",
+    "er",
+    "at være"
+   ],
+   "args": [
+    "kan"
+   ]
+  },
+  {
+   "mode": "pick",
+   "src": "2017v L1",
+   "s": "Husk, at I ikke må spise eller drikke i dyrenes områder.",
+   "rule": "modal",
+   "ai": false,
+   "at": 19,
+   "w": "spise",
+   "opts": [
+    "spise",
+    "spiser",
+    "at spise"
+   ],
+   "args": [
+    "må"
+   ]
+  },
+  {
+   "mode": "pick",
+   "src": "2019v W",
+   "s": "Og hvis hun flytter, får vi travlt med at hjælpe hende.",
+   "rule": "pres",
+   "ai": false,
+   "at": 12,
+   "w": "flytter",
+   "opts": [
+    "flytter",
+    "flytte",
+    "at flytte"
+   ],
+   "args": [
+    "hun"
+   ]
+  },
+  {
+   "mode": "pick",
+   "src": "2022s L2",
+   "s": "Typisk lærer man ikke noget om at søge job, når man går på en uddannelse.",
+   "rule": "pres",
+   "ai": false,
+   "at": 52,
+   "w": "går",
+   "opts": [
+    "går",
+    "gå",
+    "at gå"
+   ],
+   "args": [
+    "man"
+   ]
+  },
+  {
+   "mode": "pick",
+   "src": "2014v L2",
+   "s": "Hun føler sig ikke blot sundere og mere energisk, hun har også tabt sig.",
+   "rule": "pres",
+   "ai": false,
+   "at": 4,
+   "w": "føler",
+   "opts": [
+    "føler",
+    "føle",
+    "at føle"
+   ],
+   "args": [
+    "Hun"
+   ]
+  },
+  {
+   "mode": "pick",
+   "src": "2014s L2",
+   "s": "De synes, at det er nemmere at planlægge arbejdsdagen, så familielivet også fungerer godt.",
+   "rule": "pres",
+   "ai": false,
+   "at": 17,
+   "w": "er",
+   "opts": [
+    "er",
+    "være",
+    "at være"
+   ],
+   "args": [
+    "det"
+   ]
+  },
+  {
+   "mode": "pick",
+   "src": "2013v L2",
+   "s": "Mange føler sig fremmede over for det sprog, som tales og de billeder, som bruges.",
+   "rule": "pres",
+   "ai": false,
+   "at": 6,
+   "w": "føler",
+   "opts": [
+    "føler",
+    "føle",
+    "at føle"
+   ],
+   "args": [
+    "Mange"
+   ]
+  },
+  {
+   "mode": "pick",
+   "src": "Din mail · 2020v",
+   "s": "Jeg synes, at I skal have en god ferie.",
+   "rule": "modal",
+   "ai": true,
+   "at": 21,
+   "w": "have",
+   "opts": [
+    "have",
+    "har",
+    "at have"
+   ],
+   "args": [
+    "skal"
+   ]
+  },
+  {
+   "mode": "pick",
+   "src": "Din mail · 2024s",
+   "s": "Skulle vi ikke ringe sammen og snakke videre om det?",
+   "rule": "modal",
+   "ai": true,
+   "at": 15,
+   "w": "ringe",
+   "opts": [
+    "ringe",
+    "ringer",
+    "at ringe"
+   ],
+   "args": [
+    "Skulle"
+   ]
+  },
+  {
+   "mode": "pick",
+   "src": "Din mail · 2020v",
+   "s": "Det er meget vigtigt, at Rikke har styr på sine fremtidsplaner, før hun flytter hjemmefra.",
+   "rule": "pres",
+   "ai": true,
+   "at": 72,
+   "w": "flytter",
+   "opts": [
+    "flytter",
+    "flytte",
+    "at flytte"
+   ],
+   "args": [
+    "hun"
+   ]
+  },
+  {
+   "mode": "pick",
+   "src": "Din mail · 2024s",
+   "s": "Jeg håber, at jeg snart føler mig mere sikker.",
+   "rule": "pres",
+   "ai": true,
+   "at": 24,
+   "w": "føler",
+   "opts": [
+    "føler",
+    "føle",
+    "at føle"
+   ],
+   "args": [
+    "jeg"
+   ]
+  },
+  {
+   "mode": "order",
+   "src": "2013s L1",
+   "s": "Princippet i det danske uddannelsessystem er nemlig, at man ikke skal gennemgå det samme to gange.",
+   "rule": "sub",
+   "ai": false,
+   "pre": "Princippet i det danske uddannelsessystem er nemlig, at",
+   "tiles": [
+    "man",
+    "ikke",
+    "skal"
+   ],
+   "post": "gennemgå det samme to gange.",
+   "args": [
+    "at",
+    "man",
+    "skal"
+   ]
+  },
+  {
+   "mode": "order",
+   "src": "2017v L1",
+   "s": "Husk, at I ikke må spise eller drikke i dyrenes områder.",
+   "rule": "sub",
+   "ai": false,
+   "pre": "Husk, at",
+   "tiles": [
+    "I",
+    "ikke",
+    "må"
+   ],
+   "post": "spise eller drikke i dyrenes områder.",
+   "args": [
+    "at",
+    "I",
+    "må"
+   ]
+  },
+  {
+   "mode": "order",
+   "src": "2016s L2",
+   "s": "Alle laver deres lektier, også selvom de ikke vil have en boglig uddannelse.",
+   "rule": "sub",
+   "ai": false,
+   "pre": "Alle laver deres lektier, også selvom",
+   "tiles": [
+    "de",
+    "ikke",
+    "vil"
+   ],
+   "post": "have en boglig uddannelse.",
+   "args": [
+    "selvom",
+    "de",
+    "vil"
+   ]
+  },
+  {
+   "mode": "order",
+   "src": "2019v L1",
+   "s": "Men det vigtigste er faktisk, at jeg ikke selv skal tage hensyn, hvis min søn græder eller larmer.",
+   "rule": "sub",
+   "ai": false,
+   "pre": "Men det vigtigste er faktisk, at",
+   "tiles": [
+    "jeg",
+    "ikke",
+    "selv",
+    "skal"
+   ],
+   "post": "tage hensyn, hvis min søn græder eller larmer.",
+   "args": [
+    "at",
+    "jeg",
+    "skal"
+   ]
+  },
+  {
+   "mode": "order",
+   "src": "2018s L2",
+   "s": "Et vigtigt argument er, at man ikke skal se på ansøgeres køn, men udelukkende på deres kvalifikationer.",
+   "rule": "sub",
+   "ai": false,
+   "pre": "Et vigtigt argument er, at",
+   "tiles": [
+    "man",
+    "ikke",
+    "skal"
+   ],
+   "post": "se på ansøgeres køn, men udelukkende på deres kvalifikationer.",
+   "args": [
+    "at",
+    "man",
+    "skal"
+   ]
+  },
+  {
+   "mode": "order",
+   "src": "2013s L1",
+   "s": "Hvis du siger nej tak til en praktikplads, fordi du ikke vil flytte, kan du ikke komme i skolepraktik.",
+   "rule": "sub",
+   "ai": false,
+   "pre": "Hvis du siger nej tak til en praktikplads, fordi",
+   "tiles": [
+    "du",
+    "ikke",
+    "vil"
+   ],
+   "post": "flytte, kan du ikke komme i skolepraktik.",
+   "args": [
+    "fordi",
+    "du",
+    "vil"
+   ]
+  },
+  {
+   "mode": "order",
+   "src": "2018s L2",
+   "s": "Jeg mener, at det bør være op til den enkelte familie at kunne vælge frit.",
+   "rule": "sub",
+   "ai": false,
+   "pre": "Jeg mener, at",
+   "tiles": [
+    "det",
+    "bør",
+    "være"
+   ],
+   "post": "op til den enkelte familie at kunne vælge frit.",
+   "args": [
+    "at",
+    "det",
+    "bør"
+   ]
+  },
+  {
+   "mode": "order",
+   "src": "2019v L1",
+   "s": "Jeg synes, vi har pligt til at bakke op om vores lille lokale biograf.",
+   "rule": "sub",
+   "ai": false,
+   "pre": "Jeg synes,",
+   "tiles": [
+    "vi",
+    "har",
+    "pligt"
+   ],
+   "post": "til at bakke op om vores lille lokale biograf.",
+   "args": [
+    "Jeg synes,",
+    "vi",
+    "har"
+   ]
+  },
+  {
+   "mode": "order",
+   "src": "2019s W",
+   "s": "Hvad synes du, jeg skal gøre?",
+   "rule": "sub",
+   "ai": false,
+   "pre": "Hvad synes du,",
+   "tiles": [
+    "jeg",
+    "skal",
+    "gøre"
+   ],
+   "post": "?",
+   "args": [
+    "Hvad synes du,",
+    "jeg",
+    "skal"
+   ]
+  },
+  {
+   "mode": "order",
+   "src": "2022v W",
+   "s": "Tror du, det er vigtigt, at jeg alligevel bliver?",
+   "rule": "sub",
+   "ai": false,
+   "pre": "Tror du, det er vigtigt, at",
+   "tiles": [
+    "jeg",
+    "alligevel",
+    "bliver"
+   ],
+   "post": "?",
+   "args": [
+    "at",
+    "jeg",
+    "bliver"
+   ]
+  },
+  {
+   "mode": "order",
+   "src": "2013s L1",
+   "s": "Du kan ikke bare selv vælge uddannelsen.",
+   "rule": "main",
+   "ai": false,
+   "pre": "",
+   "tiles": [
+    "Du",
+    "kan",
+    "ikke"
+   ],
+   "post": "bare selv vælge uddannelsen.",
+   "args": [
+    "ikke",
+    "kan"
+   ]
+  },
+  {
+   "mode": "order",
+   "src": "2013s W",
+   "s": "Jeg kan ikke rigtig finde ud af, hvad der sker med Marc.",
+   "rule": "main",
+   "ai": false,
+   "pre": "",
+   "tiles": [
+    "Jeg",
+    "kan",
+    "ikke"
+   ],
+   "post": "rigtig finde ud af, hvad der sker med Marc.",
+   "args": [
+    "ikke",
+    "kan"
+   ]
+  },
+  {
+   "mode": "order",
+   "src": "2013v W",
+   "s": "Tror du ikke, hun er for ung?",
+   "rule": "q",
+   "ai": false,
+   "pre": "",
+   "tiles": [
+    "Tror",
+    "du",
+    "ikke"
+   ],
+   "post": ", hun er for ung?",
+   "args": [
+    "Tror",
+    "du"
+   ]
+  },
+  {
+   "mode": "order",
+   "src": "Din mail · 2024s",
+   "s": "Jeg tror, at jeg vil snakke mere dansk med mine danske venner.",
+   "rule": "sub",
+   "ai": true,
+   "pre": "Jeg tror, at",
+   "tiles": [
+    "jeg",
+    "vil",
+    "snakke"
+   ],
+   "post": "mere dansk med mine danske venner.",
+   "args": [
+    "at",
+    "jeg",
+    "vil"
+   ]
+  },
+  {
+   "mode": "order",
+   "src": "Din mail · 2020v",
+   "s": "Skulle vi ikke mødes og snakke videre om Rikkes planer?",
+   "rule": "q",
+   "ai": true,
+   "pre": "",
+   "tiles": [
+    "Skulle",
+    "vi",
+    "ikke",
+    "mødes"
+   ],
+   "post": "og snakke videre om Rikkes planer?",
+   "args": [
+    "Skulle",
+    "vi"
+   ]
+  },
+  {
+   "mode": "order",
+   "src": "Din mail · 2024s",
+   "s": "Jeg føler mig ikke god nok til dansk.",
+   "rule": "refl",
+   "ai": true,
+   "pre": "",
+   "tiles": [
+    "Jeg",
+    "føler",
+    "mig",
+    "ikke"
+   ],
+   "post": "god nok til dansk.",
+   "args": [
+    "mig",
+    "føler"
+   ]
+  },
+  {
+   "mode": "order",
+   "src": "Din mail · 2020v",
+   "s": "Jeg synes, at hun ikke skal flytte hjemmefra endnu.",
+   "rule": "sub",
+   "ai": true,
+   "pre": "Jeg synes, at",
+   "tiles": [
+    "hun",
+    "ikke",
+    "skal",
+    "flytte"
+   ],
+   "post": "hjemmefra endnu.",
+   "args": [
+    "at",
+    "hun",
+    "skal"
+   ]
+  }
  ]
 }
