@@ -1163,6 +1163,17 @@ const I18N = {
   "gm.e.miss": ["Det ord er rigtigt. Fejlen var «{0}».", "That word is right. The mistake was «{0}»."],
   "gm.sum": ["{0} af {1} rigtige", "{0} of {1} right"], "gm.again": ["En runde til", "Another round"], "gm.redo": ["Tag fejlene igen · {0}", "Redo the mistakes · {0}"], "gm.list": ["Øv disse igen:", "Practise these again:"], "gm.menu": ["Grammatik", "Grammar"],
   "gm.s.v": ["verbum", "verb"], "gm.s.s": ["subjekt", "subject"], "gm.s.a": ["adverbium", "adverb"], "gm.s.p": ["pronomen", "pronoun"], "gm.s.1": ["plads 1", "position 1"],
+  "gm.g.mine": ["Dine fejl", "Your mistakes"],
+  "gm.mine": ["Dine fejl: ikke + skal/vil", "Your mistakes: ikke + skal/vil"], "gm.mine.r": ["Modalverbum → navnemåde (skal have). Intet modalverbum → -r (hun flytter). Ledsætning: subjekt – ikke – verbum (at hun ikke skal).", "Modal verb → infinitive (skal have). No modal verb → -r (hun flytter). Subordinate clause: subject – ikke – verb (at hun ikke skal)."], "gm.mine.d": ["Skulle vi ikke ___ sammen? (ringe / ringer / at ringe)", "Skulle vi ikke ___ sammen? (ringe / ringer / at ringe)"],
+  "gm.mine.why": ["Netop de fejl, du laver i dine mails: verbet efter skal/vil, -r i nutid og hvor ikke står. Sætninger fra prøverne og fra dine egne mails.", "Exactly the mistakes in your mails: the verb after skal/vil, -r in the present and where ikke goes. Sentences from the exams and from your own mails."],
+  "gm.q.mine.pick": ["Vælg den rigtige form af verbet.", "Pick the right form of the verb."], "gm.q.mine.order": ["Sæt ordene i den rigtige rækkefølge.", "Put the words in the right order."],
+  "gm.m.modal": ["Foran står modalverbet «{0}». Efter skal, vil, kan, må, bør, skulle, ville og kunne kommer navnemåde – uden -r og uden at: «{0} … {1}».", "The modal verb «{0}» comes first. After skal, vil, kan, må, bør, skulle, ville and kunne the verb is in the infinitive – no -r and no at: «{0} … {1}»."],
+  "gm.m.pres": ["Intet modalverbum styrer verbet her. Subjektet «{0}» har sit eget verbum, så det står i nutid med -r: «{0} {1}».", "No modal verb controls the verb here. The subject «{0}» has its own verb, so it is in the present with -r: «{0} {1}»."],
+  "gm.m.sub0": ["Efter «{0}» kommer en ledsætning: først subjektet «{1}», så verbet «{2}». Verbet hopper ikke frem foran subjektet.", "After «{0}» comes a subordinate clause: first the subject «{1}», then the verb «{2}». The verb does not jump in front of the subject."],
+  "gm.m.q": ["Et ja/nej-spørgsmål starter med verbet «{0}», så kommer subjektet «{1}» og derefter ikke. Samme mønster: Skulle vi ikke ringe? – og efter skulle kommer navnemåden ringe.", "A yes/no question starts with the verb «{0}», then the subject «{1}», then ikke. Same pattern: Skulle vi ikke ringe? – and after skulle comes the infinitive ringe."],
+  "gm.m.refl": ["At føle sig er refleksivt: «{0}» står lige efter verbet «{1}» og før ikke: Jeg føler mig ikke …", "føle sig is reflexive: «{0}» comes right after the verb «{1}» and before ikke: Jeg føler mig ikke …"],
+  "gm.m.tip": ["Huskeregel: modalverbum → navnemåde (skal have) · intet modalverbum → -r (hun har) · ledsætning → subjekt, ikke, verbum (at hun ikke skal).", "Rule of thumb: modal verb → infinitive (skal have) · no modal verb → -r (hun har) · subordinate clause → subject, ikke, verb (at hun ikke skal)."],
+  "gm.m.answer": ["Den rigtige sætning ({0}):", "The correct sentence ({0}):"],
   "ai.title": ["Skrevet af AI (Claude) til dette værktøj – ikke fra Den Danske Ordbog eller prøverne. Tjek i ordbogen.", "Written by AI (Claude) for this tool – not from Den Danske Ordbog or the exams. Check in the dictionary."],
   "ai.ddo": ["fra Den Danske Ordbog", "from Den Danske Ordbog"], "ai.exam": ["fra prøverne", "from the exams"],
   "ai.gt": ["Engelsk: maskinoversat med Google Translate.", "English: machine-translated with Google Translate."],
@@ -3235,8 +3246,9 @@ document.addEventListener("keydown", e => {
 //   clause – subject, ikke/også/altid … and the finite verb as tiles: subordinate clause or main clause?
 //   adj, pron, prep, small – pick the form that fits the gap
 //   error  – one of those words swapped for a wrong option; tap the wrong word
+//   mine   – Dine fejl: ikke + skal/vil. mode pick (modal verb → infinitive, no modal → -r, subordinate clause) or order (tiles); some are from the learner's own mails (ai)
 const GR_KEY = "pd3-assisted-learning:grammar:v2";
-const GR_GROUPS = [["verb", ["verbs"]], ["order", ["v2", "clause"]], ["form", ["adj", "pron"]], ["small", ["prep", "small"]], ["mix", ["error"]]];
+const GR_GROUPS = [["mine", ["mine"]], ["verb", ["verbs"]], ["order", ["v2", "clause"]], ["form", ["adj", "pron"]], ["small", ["prep", "small"]], ["mix", ["error"]]];
 const GR_CHOICE = ["adj", "pron", "prep", "small"];
 const GR_TOPICS = GR_GROUPS.flatMap(g => g[1]);
 let GS = null;   // grammar session
@@ -3266,7 +3278,9 @@ function grBoard() {
   const go = types.filter(x => { const f = info(x); return f.ok && f.ok < f.n; }), fresh = types.filter(x => !info(x).ok), done = types.filter(x => { const f = info(x); return f.n && f.ok === f.n; });
   const col = (k, icon, title, list, unit, verb, emptyKey) => tvCol(k, icon, title, list.length, unit,
     list.length ? `<ul class="tvrows">${list.map(x => row(x, verb)).join("")}</ul>` : `<p class="tvempty">${ICONS.check}<span>${t(emptyKey)}</span></p>`);
-  return `<div class="tvboard">
+  return `<section class="tverr"><span class="i">${ICONS.pencil}</span><div><b>${t("gm.mine")}</b><p>${t("gm.mine.why")}</p></div>
+      <button type="button" class="btn" data-gt="mine">${t("tv.g.try")}</button></section>
+    <div class="tvboard">
       ${col("test", "pencil", t("tv.g.go"), go, t("tv.g.go.u"), t("tv.g.cont"), "tv.g.go.none")}
       ${col("learn", "spark", t("tv.g.new"), fresh, t("tv.g.new.u"), t("tv.g.start"), "tv.g.new.none")}
       ${col("review", "repeat", t("tv.g.done"), done, t("tv.g.done.u"), t("tv.g.again"), "tv.g.done.none")}
@@ -3288,8 +3302,8 @@ function grFrame(x, inner) {
   $("#app").innerHTML = `<div class="narrow">
     <div class="counter"><span>${esc(GS.title)} · ${t("s.count", GS.i + 1, GS.queue.length)}</span><button class="btn quiet" id="gquit">✕ ${t("s.end")}</button></div>
     <div class="bar sessionbar" aria-hidden="true"><span style="width:${100 * GS.i / GS.queue.length}%"></span></div>
-    <div class="sheet q"><div class="kind">${t("gm." + x.type)} · <span lang="da">${esc(x.src)}</span>${x.type === "logic" && x.retry ? ` · ${t("lg.retry")}` : ""}</div>
-      <p class="prompt">${t("gm.q." + x.type)}</p>${inner}
+    <div class="sheet q"><div class="kind">${t("gm." + x.type)} · <span lang="da">${esc(x.src)}</span>${x.ai ? " " + AI() : ""}${x.type === "logic" && x.retry ? ` · ${t("lg.retry")}` : ""}</div>
+      <p class="prompt">${t(x.type === "mine" ? "gm.q.mine." + x.mode : "gm.q." + x.type)}</p>${inner}
       <div class="trrow">${trLink(x.s).replace(t("m.tr"), t("tr.sent"))}</div>
       <div class="row next" id="gbtns"></div><div id="fb"></div></div></div>`;
   $("#gquit").onclick = () => GS.results.length ? grSummary() : GS.type === "logic" ? tankegang() : grammarHome();
@@ -3304,7 +3318,7 @@ function grButtons(check, extra = "") {
 function grStep() {
   if (GS.i >= GS.queue.length) return grSummary();
   const x = GS.queue[GS.i];
-  ({ verbs: grVerbs, v2: grTiles, clause: grTiles, error: grError, logic: grLogic }[x.type] || grChoice)(x);
+  ({ verbs: grVerbs, v2: grTiles, clause: grTiles, mine: x => (x.mode === "order" ? grTiles : grChoice)(x), error: grError, logic: grLogic }[x.type] || grChoice)(x);
 }
 
 // ----- verbs: type the forms -----
@@ -3411,6 +3425,17 @@ function grError(x) {
 function grWhy(x, extra = {}) {
   const b = s => esc(s);
   if (x.type === "logic") return lgWhy(x, extra);
+  if (x.type === "mine") {
+    const a = x.args, tip = `<p class="soft small">${t("gm.m.tip")}</p>`;
+    if (x.mode === "pick") return `<p>${x.rule === "modal" ? t("gm.m.modal", b(a[0]), b(x.w)) : t("gm.m.pres", b(a[0]), b(x.w))}</p>${tip}`;
+    if (x.rule === "sub") {
+      const body = x.tiles.includes("ikke") ? `<p>${t("gm.p.sub", b(a[0]), b("ikke"), b(a[2]))}</p><p class="soft small">${t("gm.p.biff")}</p>` : `<p>${t("gm.m.sub0", b(a[0]), b(a[1]), b(a[2]))}</p>`;
+      return body + tip;
+    }
+    if (x.rule === "main") return `<p>${t("gm.p.main", b(a[0]), b(a[1]))}</p>${tip}`;
+    if (x.rule === "q") return `<p>${t("gm.m.q", b(a[0]), b(a[1]))}</p>${tip}`;
+    return `<p>${t("gm.m.refl", b(a[0]), b(a[1]))}</p>${tip}`;
+  }
   if (x.type === "verbs") {
     const MODAL = new Set(["kunne", "skulle", "ville", "måtte", "burde", "turde"]);
     const kind = g => g.kind.includes(" ") ? t("gm.t.perf") : MODAL.has(g.inf) ? t("gm.t.modal")
@@ -3442,7 +3467,7 @@ function grFeedback(x, ok, give, extra = {}) {
   if (!give) (x.type === "logic" ? lgSave : grSave)(x.id, ok);
   if (!(x.type === "logic" && x.retry)) GS.results.push({ id: x.id, ok });   // the score is the first try
   if (x.type === "logic" && !ok) GS.queue.push({ ...x, retry: true, flip: Math.random() < .5 });   // comes back at the end of the round until right
-  const marks = x.type === "verbs" ? x.gaps.map(g => [g.at, g.w.length]) : x.type === "v2" || x.type === "clause" ? null : [[x.at, x.w.length]];
+  const marks = x.type === "verbs" ? x.gaps.map(g => [g.at, g.w.length]) : x.type === "v2" || x.type === "clause" || (x.type === "mine" && x.mode === "order") ? null : [[x.at, x.w.length]];
   let exam = esc(x.s);
   if (marks) { exam = ""; let at = 0; for (const [a, n] of marks) { exam += esc(x.s.slice(at, a)) + `<mark class="hl">${esc(x.s.slice(a, a + n))}</mark>`; at = a + n; } exam += esc(x.s.slice(at)); }
   else { const h = [x.pre, x.tiles.join(" ")].filter(Boolean).join(" "); exam = esc(x.pre ? x.pre + " " : "") + `<mark class="hl">${esc(x.tiles.join(" "))}</mark>` + esc(x.s.slice(h.length)); }
@@ -3451,7 +3476,7 @@ function grFeedback(x, ok, give, extra = {}) {
   $("#fb").innerHTML = `<div class="feedback ${ok ? "ok" : "bad"}">
       <h3>${ok ? t("gm.right") : give ? t("gm.shown") : t("gm.wrong")}</h3>
       ${yours ? `<div class="small"><b>${t("gm.yours")}</b></div><div class="gdiff" lang="da">${yours}</div>` : ""}
-      ${(ok && x.type !== "logic") || GR_CHOICE.includes(x.type) ? "" : `<div class="small" style="margin-top:8px"><b>${x.type === "logic" ? t("lg.answer") : t("gm.answer", esc(x.src))}</b></div><div class="gdiff sentence" lang="da">${exam}</div>`}
+      ${(ok && x.type !== "logic") || GR_CHOICE.includes(x.type) || (x.type === "mine" && x.mode === "pick") ? "" : `<div class="small" style="margin-top:8px"><b>${x.type === "logic" ? t("lg.answer") : x.ai ? t("gm.m.answer", esc(x.src)) : t("gm.answer", esc(x.src))}</b></div><div class="gdiff sentence" lang="da">${exam}</div>`}
       <div class="gwhy"><b>${t("gm.why")}</b>${AI()}${grWhy(x, extra)}</div>
     </div>`;
   $("#gbtns").innerHTML = `<button class="btn solid" id="nx">${t("b.next")}</button>`;

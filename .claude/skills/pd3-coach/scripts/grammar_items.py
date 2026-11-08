@@ -328,5 +328,73 @@ for s, w, n, rule in W:
     opts = ["da", "når"] if rule.startswith(("da", "naar")) else ["hvis", "om"]
     x = choice(s, w, n, [o.capitalize() if w[0].isupper() else o for o in opts], rule, [])
     out["small"].append(x)
+# --- Dine fejl: ikke + skal/vil. pick = choose the form for the gap; order = tiles in the right order.
+# PICK: (sentence, the right form, options with the right form first, rule, arguments)
+MINE_PICK = [  # modal: the verb after a modal verb is the infinitive
+ ("Spørgsmålet er, om jeg skal tage bilen eller toget.", "tage", "tage, tager, at tage", "modal", ["skal"]),
+ ("Jeg ved ikke, om jeg skal blande mig i det, for han er jo voksen.", "blande", "blande, blander, at blande", "modal", ["skal"]),
+ ("Jeg tænker på, om hun kan klare det.", "klare", "klare, klarer, at klare", "modal", ["kan"]),
+ ("Du skal bruge NemID for at søge om Ungdomskort.", "bruge", "bruge, bruger, at bruge", "modal", ["skal"]),
+ ("Laszlo kender heller ikke så mange danskere endnu, han kan tale dansk med.", "tale", "tale, taler, at tale", "modal", ["kan"]),
+ ("Alle laver deres lektier, også selvom de ikke vil have en boglig uddannelse.", "have", "have, har, at have", "modal", ["vil"]),
+ ("Du kan ikke bare selv vælge uddannelsen.", "vælge", "vælge, vælger, at vælge", "modal", ["kan"]),
+ ("Jeg mener, at det bør være op til den enkelte familie at kunne vælge frit.", "være", "være, er, at være", "modal", ["bør"]),
+ ("Det kan alt sammen være svært at overskue, hvis man ikke er særlig it-interesseret.", "være", "være, er, at være", "modal", ["kan"]),
+ ("Husk, at I ikke må spise eller drikke i dyrenes områder.", "spise", "spise, spiser, at spise", "modal", ["må"]),
+ # pres: no modal verb, so the subject's own verb is in the present (-r)
+ ("Og hvis hun flytter, får vi travlt med at hjælpe hende.", "flytter", "flytter, flytte, at flytte", "pres", ["hun"]),
+ ("Typisk lærer man ikke noget om at søge job, når man går på en uddannelse.", "går", "går, gå, at gå", "pres", ["man"]),
+ ("Hun føler sig ikke blot sundere og mere energisk, hun har også tabt sig.", "føler", "føler, føle, at føle", "pres", ["Hun"]),
+ ("De synes, at det er nemmere at planlægge arbejdsdagen, så familielivet også fungerer godt.", "er", "er, være, at være", "pres", ["det"]),
+ ("Mange føler sig fremmede over for det sprog, som tales og de billeder, som bruges.", "føler", "føler, føle, at føle", "pres", ["Mange"]),
+]
+MINE_PICK_MAIL = [  # from the learner's own mails, corrected
+ ("Jeg synes, at I skal have en god ferie.", "have", "have, har, at have", "modal", ["skal"], "Din mail · 2020v"),
+ ("Skulle vi ikke ringe sammen og snakke videre om det?", "ringe", "ringe, ringer, at ringe", "modal", ["Skulle"], "Din mail · 2024s"),
+ ("Det er meget vigtigt, at Rikke har styr på sine fremtidsplaner, før hun flytter hjemmefra.", "flytter", "flytter, flytte, at flytte", "pres", ["hun"], "Din mail · 2020v"),
+ ("Jeg håber, at jeg snart føler mig mere sikker.", "føler", "føler, føle, at føle", "pres", ["jeg"], "Din mail · 2024s"),
+]
+# ORDER: (sentence, the words before the tiles, the tiles, the rest, rule, arguments)
+# sub = [clause opener, subject, finite verb]; main = ["ikke", finite verb]; q = [verb, subject]; refl = [pronoun, verb]
+MINE_ORDER = [
+ ("Princippet i det danske uddannelsessystem er nemlig, at man ikke skal gennemgå det samme to gange.", "Princippet i det danske uddannelsessystem er nemlig, at", ["man", "ikke", "skal"], "gennemgå det samme to gange.", "sub", ["at", "man", "skal"]),
+ ("Husk, at I ikke må spise eller drikke i dyrenes områder.", "Husk, at", ["I", "ikke", "må"], "spise eller drikke i dyrenes områder.", "sub", ["at", "I", "må"]),
+ ("Alle laver deres lektier, også selvom de ikke vil have en boglig uddannelse.", "Alle laver deres lektier, også selvom", ["de", "ikke", "vil"], "have en boglig uddannelse.", "sub", ["selvom", "de", "vil"]),
+ ("Men det vigtigste er faktisk, at jeg ikke selv skal tage hensyn, hvis min søn græder eller larmer.", "Men det vigtigste er faktisk, at", ["jeg", "ikke", "selv", "skal"], "tage hensyn, hvis min søn græder eller larmer.", "sub", ["at", "jeg", "skal"]),
+ ("Et vigtigt argument er, at man ikke skal se på ansøgeres køn, men udelukkende på deres kvalifikationer.", "Et vigtigt argument er, at", ["man", "ikke", "skal"], "se på ansøgeres køn, men udelukkende på deres kvalifikationer.", "sub", ["at", "man", "skal"]),
+ ("Hvis du siger nej tak til en praktikplads, fordi du ikke vil flytte, kan du ikke komme i skolepraktik.", "Hvis du siger nej tak til en praktikplads, fordi", ["du", "ikke", "vil"], "flytte, kan du ikke komme i skolepraktik.", "sub", ["fordi", "du", "vil"]),
+ ("Jeg mener, at det bør være op til den enkelte familie at kunne vælge frit.", "Jeg mener, at", ["det", "bør", "være"], "op til den enkelte familie at kunne vælge frit.", "sub", ["at", "det", "bør"]),
+ ("Jeg synes, vi har pligt til at bakke op om vores lille lokale biograf.", "Jeg synes,", ["vi", "har", "pligt"], "til at bakke op om vores lille lokale biograf.", "sub", ["Jeg synes,", "vi", "har"]),
+ ("Hvad synes du, jeg skal gøre?", "Hvad synes du,", ["jeg", "skal", "gøre"], "?", "sub", ["Hvad synes du,", "jeg", "skal"]),
+ ("Tror du, det er vigtigt, at jeg alligevel bliver?", "Tror du, det er vigtigt, at", ["jeg", "alligevel", "bliver"], "?", "sub", ["at", "jeg", "bliver"]),
+ ("Du kan ikke bare selv vælge uddannelsen.", "", ["Du", "kan", "ikke"], "bare selv vælge uddannelsen.", "main", ["ikke", "kan"]),
+ ("Jeg kan ikke rigtig finde ud af, hvad der sker med Marc.", "", ["Jeg", "kan", "ikke"], "rigtig finde ud af, hvad der sker med Marc.", "main", ["ikke", "kan"]),
+ ("Tror du ikke, hun er for ung?", "", ["Tror", "du", "ikke"], ", hun er for ung?", "q", ["Tror", "du"]),
+]
+MINE_ORDER_MAIL = [
+ ("Jeg tror, at jeg vil snakke mere dansk med mine danske venner.", "Jeg tror, at", ["jeg", "vil", "snakke"], "mere dansk med mine danske venner.", "sub", ["at", "jeg", "vil"], "Din mail · 2024s"),
+ ("Skulle vi ikke mødes og snakke videre om Rikkes planer?", "", ["Skulle", "vi", "ikke", "mødes"], "og snakke videre om Rikkes planer?", "q", ["Skulle", "vi"], "Din mail · 2020v"),
+ ("Jeg føler mig ikke god nok til dansk.", "", ["Jeg", "føler", "mig", "ikke"], "god nok til dansk.", "refl", ["mig", "føler"], "Din mail · 2024s"),
+ ("Jeg synes, at hun ikke skal flytte hjemmefra endnu.", "Jeg synes, at", ["hun", "ikke", "skal", "flytte"], "hjemmefra endnu.", "sub", ["at", "hun", "skal"], "Din mail · 2020v"),
+]
+mine = []
+for s, w, opts, rule, args in MINE_PICK:
+    assert s[nth(s, w, 1):nth(s, w, 1) + len(w)] == w, (s, w)
+    opts = opts.split(", ")
+    assert opts[0] == w and len(opts) == 3, (s, w, opts)
+    mine.append({"mode": "pick", "src": src_of[s], "s": s, "rule": rule, "ai": False, "at": nth(s, w, 1), "w": w, "opts": opts, "args": args})
+for s, w, opts, rule, args, src in MINE_PICK_MAIL:
+    assert w in s and nth(s, w, 1) >= 0, (s, w)
+    opts = opts.split(", ")
+    assert opts[0] == w and len(opts) == 3, (s, w, opts)
+    mine.append({"mode": "pick", "src": src, "s": s, "rule": rule, "ai": True, "at": nth(s, w, 1), "w": w, "opts": opts, "args": args})
+for s, pre, tiles, post, rule, args in MINE_ORDER:
+    assert s == (pre + " " if pre else "") + " ".join(tiles) + ("" if post[:1] in ",.!?" else " ") + post, s
+    mine.append({"mode": "order", "src": src_of[s], "s": s, "rule": rule, "ai": False, "pre": pre, "tiles": tiles, "post": post, "args": args})
+for s, pre, tiles, post, rule, args, src in MINE_ORDER_MAIL:
+    assert s == (pre + " " if pre else "") + " ".join(tiles) + ("" if post[:1] in ",.!?" else " ") + post, s
+    mine.append({"mode": "order", "src": src, "s": s, "rule": rule, "ai": True, "pre": pre, "tiles": tiles, "post": post, "args": args})
+out["mine"] = mine
+assert len(mine) == 36 and sum(x["mode"] == "pick" for x in mine) == 19, len(mine)
 json.dump(out, open(os.path.join(pd3.DATA, "grammar.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 print({k: len(v) for k, v in out.items()})
