@@ -663,10 +663,14 @@ input.vgap.right { border-color: var(--ok); background: var(--ok-bg); } input.vg
 .k-test > header, .btn.k-test { background: var(--md-sys-color-tertiary-container); color: var(--md-sys-color-on-tertiary-container); }
 .btn.k-flash { background: var(--md-sys-color-surface-container-highest); color: var(--md-sys-color-on-surface); }
 .gadots { margin: 10px 0 0; }
-.gacts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-top: 16px; }
+.gacts { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; margin-top: 16px; }
 .gacts .btn { flex-direction: column; min-height: 68px; padding: 8px 6px; font-size: .88rem; }
 .gacts .btn svg { width: 20px; height: 20px; }
-@media (max-width: 480px) { .gacts { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 480px) { .gacts { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+/* Match ord: two shuffled columns, a Danish word on the left and its meaning on the right */
+.mtgrid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px; margin-top: 16px; }
+.mtcol { display: grid; gap: 8px; align-content: start; min-width: 0; }
+.mtt { width: 100%; min-width: 0; min-height: 56px; padding: 10px 12px; font-size: .95rem; font-weight: 500; justify-content: center; text-align: center; white-space: normal; overflow-wrap: anywhere; }
 .tvrows { list-style: none; margin: 0; padding: 6px; }
 .tvrows li + li { border-top: 1px solid var(--md-sys-color-surface-container-highest); }
 .tvrows button { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 12px; width: 100%; min-height: 56px; padding: 8px 8px 8px 14px; border: 0; border-radius: 16px; background: none; color: inherit; font: inherit; cursor: pointer; text-align: left; }
@@ -970,6 +974,14 @@ const I18N = {
   "h.go": ["Start session", "Start session"], "h.learn": ["Lær {0} nye", "Learn {0} new"], "h.review": ["Kun gentagelser", "Reviews only"],
   "h.conf": ["Forvekslingsord", "Confusables drill"],
   "h.fc": ["Flashcards", "Flashcards"], "h.fc.t": ["Vend kortene i de valgte grupper, og sig selv, om du kunne ordet. Påvirker ikke din plan.", "Flip the cards in the selected groups and say whether you knew the word. Doesn't change your schedule."],
+  "mt.title": ["Match ord", "Match the words"], "mt.btn": ["Match ord · {0} ord", "Match the words · {0} words"],
+  "mt.q": ["Tryk på et dansk ord, og så på den betydning, der passer. Rigtige par bliver grønne.", "Tap a Danish word, then the meaning that fits. Right pairs turn green."],
+  "mt.da": ["Danske ord", "Danish words"], "mt.en": ["Betydninger", "Meanings"],
+  "mt.round": ["Runde {0} af {1} · {2} fejl", "Round {0} of {1} · {2} misses"],
+  "mt.next": ["Næste runde", "Next round"], "mt.home": ["← Hjem", "← Home"], "mt.again": ["Match igen", "Match again"],
+  "mt.done": ["Færdig", "Done"], "mt.sum": ["ord sat rigtigt første gang", "words matched right first time"],
+  "mt.wrongs": ["Ord, du bommede mindst én gang", "Words you missed at least once"],
+  "mt.none": ["Ingen fejl. Alle ord blev sat rigtigt sammen første gang.", "No misses. Every word was matched right first time."],
   "fc.da": ["Dansk → engelsk", "Danish → English"], "fc.en": ["Engelsk → dansk", "English → Danish"], "fc.home": ["← Hjem", "← Home"],
   "fc.flip": ["Vend kortet", "Flip the card"], "fc.show": ["Vis svaret", "Show the answer"], "fc.no": ["✗ Igen", "✗ Again"], "fc.yes": ["✓ Kunne den", "✓ Knew it"],
   "fc.q.en": ["Hvad hedder det på dansk?", "What is it in Danish?"], "fc.tap": ["Tryk på kortet (eller mellemrum) for at vende det", "Tap the card (or press Space) to flip it"],
@@ -1609,6 +1621,7 @@ function route() {
   if (location.hash === "#grammatik") { history.replaceState(null, "", location.pathname + location.search); return grammarHome(); }
   if (location.hash === "#mine") { history.replaceState(null, "", location.pathname + location.search); return mineView(null); }
   if (location.hash === "#sorter") { history.replaceState(null, "", location.pathname + location.search); return soStart(); }
+  if (location.hash === "#match") { history.replaceState(null, "", location.pathname + location.search); return startMatch(null); }
   if (!location.hash.startsWith("#find")) return;
   const q = decodeURIComponent(location.hash.slice(6));
   history.replaceState(null, "", location.pathname + location.search);
@@ -1757,7 +1770,7 @@ function pickBar(groupsBy) {
   const pool = picked.flatMap(g => groupsBy[g] || []);
   return `<div class="tvbar"><div class="tx"><b>${t("pk.some", picked.length, pool.length)}</b><small>${esc(picked.map(gname).slice(0, 3).join(", "))}${picked.length > 3 ? " …" : ""}</small></div>
       <button type="button" class="btn k-review" id="selRev">${ICONS.repeat}${t("tv.v.review")}</button><button type="button" class="btn k-learn" id="selLearn">${ICONS.spark}${t("tv.v.learn")}</button>
-      <button type="button" class="btn k-test" id="selTest">${ICONS.pencil}${t("tv.v.test")}</button><button type="button" class="btn k-flash" id="selFlash">${ICONS.cards}${t("h.fc")}</button><button type="button" class="txtbtn" id="selClear">${t("pk.clear")}</button></div>`;
+      <button type="button" class="btn k-test" id="selTest">${ICONS.pencil}${t("tv.v.test")}</button><button type="button" class="btn k-flash" id="selFlash">${ICONS.cards}${t("h.fc")}</button><button type="button" class="btn k-flash" id="selMatch">${ICONS.match}${t("mt.title")}</button><button type="button" class="txtbtn" id="selClear">${t("pk.clear")}</button></div>`;
 }
 function bindPickBar(redraw) {
   if (!$("#selLearn")) return;
@@ -1765,6 +1778,7 @@ function bindPickBar(redraw) {
   $("#selLearn").onclick = () => startSession({ groups: sel, reviews: 0 });
   $("#selTest").onclick = () => startExercise(sel);
   $("#selFlash").onclick = () => startFlash(sel);
+  $("#selMatch").onclick = () => startMatch(sel);
   $("#selRev").onclick = () => startSession({ groups: sel, fresh: 0 });
   $("#selClear").onclick = () => { setPicked([]); redraw(); };
 }
@@ -1788,19 +1802,21 @@ function groupActions(g) {
       <button type="button" class="btn k-learn" id="gaLearn"${fresh ? "" : " disabled"}>${ICONS.spark}${t("tv.v.learn")}</button>
       <button type="button" class="btn k-test" id="gaTest"${learnt ? "" : " disabled"}>${ICONS.pencil}${t("tv.v.test")}</button>
       <button type="button" class="btn k-flash" id="gaFlash">${ICONS.cards}${t("h.fc")}</button>
+      <button type="button" class="btn k-flash" id="gaMatch">${ICONS.match}${t("mt.title")}</button>
     </div></div>`;
   $("#gactClose").onclick = () => dlg.close();
   $("#gaRev").onclick = () => go(() => startSession({ groups: [g], fresh: 0 }));
   $("#gaLearn").onclick = () => go(() => startSession({ groups: [g], reviews: 0 }));
   $("#gaTest").onclick = () => go(() => startExercise([g]));
   $("#gaFlash").onclick = () => go(() => startFlash([g]));
+  $("#gaMatch").onclick = () => go(() => startMatch([g]));
   dlg.showModal();
 }
 function tvCol(k, icon, title, big, unit, body, foot) {
   return `<section class="tvcol k-${k}"><header><h2>${ICONS[icon]}${title}</h2><span class="big">${big}<small>${unit}</small></span></header>${body}${foot ? `<div class="foot">${foot}</div>` : ""}</section>`;
 }
 function home() {
-  S = null; FC = null; GS = null; LBV = null; LB = null; lbStop();
+  S = null; FC = null; GS = null; MT = null; LBV = null; LB = null; lbStop();
   const k = counts(), p = DB.profile || {};
   const dW = daysTo(p.exam_date);
   const groupsBy = byGroup();
@@ -1834,7 +1850,7 @@ function home() {
       ${tvCol("review", "repeat", t("tv.v.review"), k.due, t("tv.due.u"),
         due.length ? list(due.map(g => tvRow(`data-rev="${esc(g)}"`, esc(gname(g)), `<small>${esc(setName(g))}</small>`, dueIn(groupsBy[g]), t("tv.v.review"), t("ga.open", gname(g)), false, g))) :
         empty(nLearned ? "check" : "repeat", t(nLearned ? "tv.rev.done" : "tv.rev.first")),
-        `<button type="button" class="txtbtn" id="flash">${ICONS.cards}${t("h.fc")} · ${t("fc.n", fcCount(groupsBy))}</button>`)}
+        `<button type="button" class="txtbtn" id="flash">${ICONS.cards}${t("h.fc")} · ${t("fc.n", fcCount(groupsBy))}</button><button type="button" class="txtbtn" id="match">${ICONS.match}${t("mt.btn", mtCount(picked))}</button>`)}
       ${tvCol("learn", "spark", t("tv.learn"), k.fresh, t("tv.new.u"),
         fresh.length ? list(freshShown.map(g => tvRow(`data-learn="${esc(g)}"`, esc(gname(g)), wordDots(groupsBy[g]), newIn(groupsBy[g]), t("tv.v.learn"), t("ga.open", gname(g)), !k.newLeft, g))) : empty("check", t("tv.learn.done")),
         fresh.length > 5 ? `<button type="button" class="txtbtn" id="learnAll" aria-expanded="${learnAll}">${t(learnAll ? "tv.fewer" : "tv.all", fresh.length)}</button>` : "")}
@@ -1854,6 +1870,7 @@ function home() {
   if ($("#go")) $("#go").onclick = () => startSession({});
   // flashcards on the ticked topics (or all words when none are ticked)
   if ($("#flash")) $("#flash").onclick = () => startFlash(picked.length ? picked : null);
+  if ($("#match")) $("#match").onclick = () => startMatch(picked.length ? picked : null);
   if ($("#exer")) $("#exer").onclick = () => startExercise(null);
   if ($("#conf")) $("#conf").onclick = () => startConfusables(null);
   if ($("#logic")) $("#logic").onclick = () => startLogic();
@@ -1886,7 +1903,7 @@ function topicsView() {
   $("#app").innerHTML = `
     <div class="top"><a href="#" class="tvback" id="thome">${t("gm.back")}</a><h1>${t("tv.topics")}</h1><p class="soft">${t("tv.topics.intro")}</p>
       <div class="tvkey">${key}</div>
-      <div class="row"><button type="button" class="btn quiet" id="tvFlash">${ICONS.cards}${t("h.fc")} · ${t("fc.n", fcCount(groupsBy))}</button></div></div>
+      <div class="row"><button type="button" class="btn quiet" id="tvFlash">${ICONS.cards}${t("h.fc")} · ${t("fc.n", fcCount(groupsBy))}</button><button type="button" class="btn quiet" id="tvMatch">${ICONS.match}${t("mt.btn", mtCount(picked))}</button></div></div>
     ${[1, 2, 3, 4, 5].filter(pr => tier(pr).length || pr === 5).map(pr => `<section class="tvset"><header><h2>${t("p." + pr)}</h2><span class="soft">${t("tv.n.topics", tier(pr).length)}</span>
       ${pr === 5 ? `<button type="button" class="txtbtn" id="tvMine">${t("mn.open")}</button>` : ""}
       ${tier(pr).length ? `<button type="button" class="txtbtn" data-tier="${pr}">${t(tier(pr).every(g => picked.includes(g)) ? "pk.tnone" : "pk.tall")}</button>` : ""}</header>${pr >= 4 ? `<p class="soft small">${t("p." + pr + ".s")}</p>` : ""}
@@ -1896,6 +1913,7 @@ function topicsView() {
   const redraw = () => { const y = window.scrollY; topicsView(); window.scrollTo(0, y); };
   $("#thome").onclick = e => { e.preventDefault(); home(); window.scrollTo(0, 0); };
   $("#tvFlash").onclick = () => startFlash(picked.length ? picked : null);
+  $("#tvMatch").onclick = () => startMatch(picked.length ? picked : null);
   $("#tvMine").onclick = () => mineView(null);
   document.querySelectorAll(".tvtbl input").forEach(i => i.onchange = () => { const g = i.dataset.g; setPicked(i.checked ? [...picked, g] : picked.filter(x => x !== g)); redraw(); $(`.tvtbl input[data-g="${CSS.escape(g)}"]`)?.focus(); });
   document.querySelectorAll("[data-tier]").forEach(b => b.onclick = () => { const gs = tier(+b.dataset.tier), all = gs.every(g => picked.includes(g)); setPicked(all ? picked.filter(g => !gs.includes(g)) : [...new Set([...picked, ...gs])]); redraw(); });
@@ -2018,6 +2036,7 @@ const ICONS = Object.fromEntries(Object.entries({
   swap: '<path d="M7 4L3 8l4 4M3 8h14M17 12l4 4-4 4M21 16H7"/>',
   pencil: '<path d="M4 20h4L19 9l-4-4L4 16zM13.5 6.5l4 4"/>',
   cards: '<rect x="3" y="7" width="13" height="14" rx="2.5"/><path d="M8 3.5h10.5a2.5 2.5 0 0 1 2.5 2.5v11"/>',
+  match: '<path d="M4 6h6M4 18h6M14 6h6M14 18h6M10 6l4 12M10 18l4-12"/>',
   book: '<path d="M5 4.5A1.5 1.5 0 0 1 6.5 3H19v14H6.5A1.5 1.5 0 0 0 5 18.5zM5 18.5A1.5 1.5 0 0 0 6.5 20H19M9 7.5h6M9 11h4"/>',
   event: '<rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4M14 14h3v3h-3z"/>',
   check: '<path d="M5 12.5l4.5 4.5L19 7.5"/>',
@@ -3833,6 +3852,91 @@ function soEnd() {
   $("#soBack").onclick = () => { SO = null; tankegang(); window.scrollTo(0, 0); };
   window.scrollTo(0, 0);
 }
+
+// ---------- Match ord: a Danish word on the left, its meaning on the right, both columns shuffled ----------
+// Practice only, like Flashcards: nothing here calls grade(), so the SM-2 schedule never changes.
+// The pool is the ticked groups (or every word), cut into rounds of MT_SIZE. A right pair locks green; a wrong pair
+// flashes red for MT_FLASH ms and both tiles are let go. Pairs are right when the meaning text is equal.
+const MT_SIZE = 6, MT_FLASH = 600;
+let MT = null;   // { groups, pool, rounds, i, ids, left, right, doneL, doneR, sel, flash, busy, errs, wrong: Set, roundDone }
+const mtPool = groups => cards().filter(c => c.meaning && (!groups || inGroups(c, groups))).map(c => c.id);
+const mtCount = groups => mtPool(groups.length ? groups : null).length;
+function startMatch(groups) {
+  const pool = mtPool(groups);
+  if (!pool.length) { alert(t("g.empty")); return; }
+  S = null; FC = null; GS = null;
+  MT = { groups, pool: shuffle(pool), rounds: Math.ceil(pool.length / MT_SIZE), i: 0, wrong: new Set() };
+  mtRound(0);
+  window.scrollTo(0, 0);
+}
+function mtRound(i) {
+  Object.assign(MT, { i, ids: MT.pool.slice(i * MT_SIZE, i * MT_SIZE + MT_SIZE), doneL: new Set(), doneR: new Set(),
+    sel: null, flash: null, busy: false, errs: 0, roundDone: false });
+  MT.left = shuffle(MT.ids); MT.right = shuffle(MT.ids);
+  mtRender();
+  window.scrollTo(0, 0);
+}
+// first tap picks a tile; a tap in the other column checks the pair; a tap in the same column moves the pick
+function mtTap(col, id) {
+  if (!MT || MT.busy || MT.roundDone) return;
+  const key = col + "|" + id, prev = MT.sel;
+  if (!prev || prev.col === col) { MT.sel = { col, id }; return mtRender(key); }
+  MT.sel = null;
+  const L = col === "l" ? id : prev.id, R = col === "r" ? id : prev.id;
+  if (DB.cards[L].meaning === DB.cards[R].meaning) {
+    MT.doneL.add(L); MT.doneR.add(R);
+    MT.roundDone = MT.doneL.size === MT.ids.length;
+    return mtRender(key);
+  }
+  MT.errs++; MT.wrong.add(L); MT.flash = { l: L, r: R }; MT.busy = true;
+  mtRender(key);
+  const run = MT;
+  setTimeout(() => { if (MT !== run || !$("#mtroot")) return; MT.busy = false; MT.flash = null; mtRender(); }, MT_FLASH);
+}
+const mtTitle = () => `${t("mt.title")} · ${!MT.groups ? t("tv.topics") : MT.groups.length === 1 ? gname(MT.groups[0]) : MT.groups.length <= 3 ? MT.groups.map(gname).join(" · ") : t("s.groups", MT.groups.length)}`;
+function mtRender(focus) {
+  if (!MT) return;
+  const head = `<div class="fctop"><button type="button" class="btn quiet" id="mtHome">${t("mt.home")}</button><span class="kind">${esc(mtTitle())}</span></div>`;
+  if (MT.roundDone && MT.i + 1 >= MT.rounds) {
+    const wrong = MT.pool.filter(id => MT.wrong.has(id)).sort((a, b) => DB.cards[a].word.localeCompare(DB.cards[b].word, "da"));
+    $("#app").innerHTML = `<div class="narrow" id="mtroot">${head}<div class="sheet q" style="margin-top:28px">
+      <div class="kind">${t("mt.done")}</div>
+      <div class="row" style="align-items:baseline;margin-top:10px"><span class="score">${MT.pool.length - wrong.length}/${MT.pool.length}</span><span class="soft">${t("mt.sum")}</span></div>
+      ${wrong.length ? `<div class="block"><span class="lbl">${t("mt.wrongs")}</span><ul class="list">${wrong.map(id => `<li><b lang="da">${esc(DB.cards[id].word)}</b> = <span lang="en">${esc(DB.cards[id].meaning)}</span></li>`).join("")}</ul></div>` : `<p class="block">${t("mt.none")}</p>`}
+      <div class="row next"><button type="button" class="btn solid" id="mtAgain">${t("mt.again")}</button><button type="button" class="btn quiet" id="mtHomeBtn">${t("mt.home")}</button></div></div></div>`;
+    $("#mtAgain").onclick = () => startMatch(MT.groups);
+  } else {
+    const tile = (col, id) => {
+      const c = DB.cards[id], locked = col === "l" ? MT.doneL.has(id) : MT.doneR.has(id);
+      const sel = !!MT.sel && MT.sel.col === col && MT.sel.id === id;
+      const bad = !!MT.flash && (col === "l" ? MT.flash.l : MT.flash.r) === id;
+      const cls = locked ? " right" : bad ? " wrong" : sel ? " sel" : "";
+      return `<button type="button" class="btn opt mtt${cls}" data-col="${col}" data-id="${esc(id)}" aria-pressed="${sel}"${locked ? " disabled" : ""} lang="${col === "l" ? "da" : "en"}">${esc(col === "l" ? c.word : c.meaning)}</button>`;
+    };
+    const n = MT.doneL.size, total = MT.ids.length;
+    $("#app").innerHTML = `<div class="narrow" id="mtroot">${head}
+      <div class="counter"><span>${t("mt.round", MT.i + 1, MT.rounds, MT.errs)}</span></div>
+      <div class="bar sessionbar" aria-hidden="true"><span style="width:${100 * n / total}%"></span></div>
+      <div class="sheet q">
+        <p class="prompt">${t("mt.q")}</p>
+        <div class="mtgrid">
+          <div class="mtcol" role="group" aria-label="${esc(t("mt.da"))}">${MT.left.map(id => tile("l", id)).join("")}</div>
+          <div class="mtcol" role="group" aria-label="${esc(t("mt.en"))}">${MT.right.map(id => tile("r", id)).join("")}</div>
+        </div>
+        ${MT.roundDone ? `<div class="row next"><button type="button" class="btn solid" id="mtNext">${t("mt.next")}</button><button type="button" class="btn quiet" id="mtHomeBtn">${t("mt.home")}</button></div>` : ""}
+      </div></div>`;
+    document.querySelectorAll(".mtt").forEach(b => b.onclick = () => mtTap(b.dataset.col, b.dataset.id));
+    if ($("#mtNext")) $("#mtNext").onclick = () => mtRound(MT.i + 1);
+  }
+  ["#mtHome", "#mtHomeBtn"].forEach(s => { const b = $(s); if (b) b.onclick = () => home(); });
+  if (focus) [...document.querySelectorAll(".mtt")].find(b => b.dataset.col + "|" + b.dataset.id === focus)?.focus({ preventScroll: true });
+}
+// Escape clears a pending pick (the tile keeps focus)
+document.addEventListener("keydown", e => {
+  if (e.key !== "Escape" || !MT || !MT.sel || MT.busy || !$("#mtroot") || document.querySelector("dialog[open]")) return;
+  const key = MT.sel.col + "|" + MT.sel.id;
+  MT.sel = null; mtRender(key);
+});
 
 // ---------- Mock Læsning 3: 8 gaps in real sentences from Læsning 1, 2A and 2B (pd3-data/mock-pool.json) ----------
 // Built like the real Delprøve 3: a gap, four options A–D, an answer table with an example row 0. It is a mock, not a real

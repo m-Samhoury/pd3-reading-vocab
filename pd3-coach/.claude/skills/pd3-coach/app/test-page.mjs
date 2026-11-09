@@ -241,6 +241,7 @@ for (const [name, setup, probe] of [
   ["tankegang", `home(); tankegang()`, `[document.querySelectorAll(".lgchip").length, !!$("#lgboard")]`],
   ["logic drill", `startLogic(); $(".lgcat").click()`, `[GS.i, document.querySelectorAll(".lgopt").length]`],
   ["sort", `soStart("order")`, `[SO.i, SO.set, SO.queue.length, !!$("#soWord"), document.querySelectorAll(".sob").length]`],
+  ["match", `startMatch(["årsag"])`, `[MT.i, MT.ids.length, document.querySelectorAll(".mtt").length]`],
   ["l2b home", `l2bHome()`, `[document.querySelectorAll(".lbcard").length, !!$("#lbheld")]`],
   ["l2b level 1", `localStorage.clear(); lbStart(1)`, `[LB.i, document.querySelectorAll(".lbopt").length]`],
   ["l2b level 3", `lbSetStart("s-2023s", false)`, `[LB.n, document.querySelectorAll(".lbcell").length]`],
@@ -287,5 +288,41 @@ ok("chooser learn starts session", await ev(`(()=>{ home(); const g=$("[data-lea
 ok("chooser flashcards", await ev(`(()=>{ home(); const g=$("[data-learn]:not([disabled])").dataset.learn; $("[data-learn='"+g+"']").click(); $("#gaFlash").click(); return [$("#gact").open, FC?.groups?.[0]===g]; })()`));
 ok("chooser no learnt words", await ev(`(()=>{ home(); const by=byGroup(), g=GROUP_ORDER.find(x=>by[x]), cs=by[g], old=cs.map(c=>c.history); cs.forEach(c=>c.history=[]); groupActions(g); const r=[$("#gaRev").disabled, $("#gaTest").disabled, $("#gaLearn").disabled, $("#gaFlash").disabled]; cs.forEach((c,i)=>c.history=old[i]); $("#gact").close(); home(); return r; })()`));
 ok("pick bar flashcards", await ev(`(()=>{ home(); const g=GROUP_ORDER.find(x=>byGroup()[x]); setPicked([g]); home(); const has=!!$("#selFlash"); $("#selFlash").click(); const r=[has, FC?.groups?.[0]===g]; setPicked([]); home(); return r; })()`));
+// Match ord: the three entry points, the play rules, the summary and the 375px layout (practice only, no SM-2)
+ok("match pick bar", await ev(`(()=>{ localStorage.clear(); const g=GROUP_ORDER.find(x=>byGroup()[x]); setPicked([g]); home(); const has=!!$("#selMatch"); $("#selMatch").click();
+  const L=[...document.querySelectorAll('.mtt[data-col="l"]')], R=[...document.querySelectorAll('.mtt[data-col="r"]')];
+  const r=[has, MT?.groups?.[0]===g, L.length>0, L.length<=6, R.length<=6, L.every(b=>groupsOf(DB.cards[b.dataset.id]).includes(g))]; setPicked([]); home(); return r; })()`));
+ok("match chooser", await ev(`(()=>{ home(); const g=$("[data-learn]:not([disabled])").dataset.learn; $("[data-learn='"+g+"']").click(); $("#gaMatch").click(); return [$("#gact").open, MT?.groups?.[0]===g, !!$("#mtroot")]; })()`));
+ok("match home", await ev(`(()=>{ localStorage.clear(); setPicked([]); home(); const b=$("#match"); const label=b?.textContent; b.click(); return [label, MT.groups, MT.pool.length===cards().filter(c=>c.meaning).length, MT.ids.length, !!$("#mtroot")]; })()`));
+ok("match play", await ev(`(async()=>{ const w=ms=>new Promise(r=>setTimeout(r,ms)); const tile=(c,id)=>document.querySelector('.mtt[data-col="'+c+'"][data-id="'+id+'"]');
+  const pairOf=X=>MT.ids.find(y=>!MT.doneR.has(y)&&DB.cards[y].meaning===DB.cards[X].meaning);
+  setPicked([]); home(); startMatch(null);
+  const X=MT.ids[0]; tile("l",X).click(); tile("r",X).click();
+  const locked=[tile("l",X).disabled, tile("r",X).disabled, tile("l",X).classList.contains("right"), MT.doneL.has(X), MT.doneR.has(X)];
+  const A=MT.ids.find(x=>!MT.doneL.has(x)), B=MT.ids.find(y=>!MT.doneR.has(y)&&DB.cards[y].meaning!==DB.cards[A].meaning);
+  tile("l",A).click(); tile("r",B).click();
+  const flashing=[MT.busy, MT.doneL.size, MT.errs, tile("l",A).classList.contains("wrong"), tile("r",B).classList.contains("wrong")];
+  await w(700);
+  const after=[MT.busy, MT.doneL.size, MT.errs, MT.sel, !!document.querySelector(".mtt.wrong"), tile("l",A).getAttribute("aria-pressed")];
+  while (MT.doneL.size < MT.ids.length) { const L=MT.ids.find(x=>!MT.doneL.has(x)); tile("l",L).click(); tile("r",pairOf(L)).click(); }
+  return {locked, flashing, after, done:[MT.roundDone, !!$("#mtNext"), document.querySelector(".counter").textContent]}; })()`));
+ok("match finish", await ev(`(async()=>{ const w=ms=>new Promise(r=>setTimeout(r,ms)); const tile=(c,id)=>document.querySelector('.mtt[data-col="'+c+'"][data-id="'+id+'"]');
+  const pairOf=X=>MT.ids.find(y=>!MT.doneR.has(y)&&DB.cards[y].meaning===DB.cards[X].meaning);
+  const g=GROUP_ORDER.find(x=>byGroup()[x]); home(); startMatch([g]);
+  const A=MT.ids.find(x=>!MT.doneL.has(x)), B=MT.ids.find(y=>!MT.doneR.has(y)&&DB.cards[y].meaning!==DB.cards[A].meaning);
+  if (B) { tile("l",A).click(); tile("r",B).click(); await w(700); }
+  const rounds=MT.rounds, shown=[];
+  for (let k=0;k<rounds;k++) { while (MT.doneL.size < MT.ids.length) { const L=MT.ids.find(x=>!MT.doneL.has(x)); tile("l",L).click(); tile("r",pairOf(L)).click(); }
+    shown.push(MT.roundDone); if (k<rounds-1) $("#mtNext").click(); }
+  const li=[...document.querySelectorAll("#mtroot .list li")].map(x=>x.innerText.replace(/\\n/g," ")), wrong=MT.pool.filter(id=>MT.wrong.has(id));
+  return {rounds, shown: shown.every(Boolean), summary: !!$("#mtAgain"), items: li.length, expect: wrong.length, line: li[0]?.includes(" = ") ?? null, lang: [...document.querySelectorAll("#mtroot .list li b")].every(b=>b.closest("[lang]")?.getAttribute("lang")==="da")}; })()`));
+await send("Emulation.setDeviceMetricsOverride", { width: 375, height: 800, deviceScaleFactor: 1, mobile: true }); await sleep(300);
+ok("match 375px", await ev(`(()=>{ startMatch(null); return [document.documentElement.scrollWidth <= document.documentElement.clientWidth, document.documentElement.scrollWidth, document.documentElement.clientWidth, document.querySelectorAll(".mtgrid .mtt").length]; })()`));
+await shot("match-375-light.png");
+await send("Emulation.setEmulatedMedia", { features: [{ name: "prefers-color-scheme", value: "dark" }] }); await sleep(200);
+await shot("match-375-dark.png");
+await send("Emulation.setEmulatedMedia", { features: [{ name: "prefers-color-scheme", value: "light" }] });
+await send("Emulation.setDeviceMetricsOverride", { width: 1000, height: 1400, deviceScaleFactor: 1, mobile: false }); await sleep(200);
+await ev(`home()`);
 console.log("errors:", errs);
 await send("Browser.close").catch(() => {}); chrome.kill(); process.exit(0);

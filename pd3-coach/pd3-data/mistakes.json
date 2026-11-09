@@ -1,3 +1,187 @@
 {
-  "patterns": {}
+  "patterns": {
+    "ledsaetning_ordstilling": {
+      "category": "ordstilling",
+      "severity": "critical",
+      "count": 3,
+      "first_seen": "2026-11-08",
+      "examples": [
+        "Jeg synes, skal du har → Jeg synes, at du skal have",
+        "Jeg tror, vil jeg → Jeg tror, at jeg vil",
+        "Jeg synes skal det at vente → Jeg synes, at I skal vente"
+      ],
+      "streak_correct": 0,
+      "status": "active",
+      "last_seen": "2026-11-08"
+    },
+    "inversion": {
+      "category": "ordstilling",
+      "severity": "critical",
+      "count": 1,
+      "first_seen": "2026-11-08",
+      "examples": [
+        "derfor du deserve → derfor fortjener du"
+      ],
+      "streak_correct": 0,
+      "status": "active",
+      "last_seen": "2026-11-08"
+    },
+    "modalverbum": {
+      "category": "verbum",
+      "severity": "moderate",
+      "count": 1,
+      "first_seen": "2026-11-08",
+      "examples": [
+        "skal du har / Skulle vi ikke ringer → skal du have / ringe"
+      ],
+      "streak_correct": 0,
+      "status": "active",
+      "last_seen": "2026-11-08"
+    },
+    "verbum_tid": {
+      "category": "verbum",
+      "severity": "moderate",
+      "count": 1,
+      "first_seen": "2026-11-08",
+      "examples": [
+        "før hun flytte / jeg føle / Det gøre → flytter / føler / gør"
+      ],
+      "streak_correct": 0,
+      "status": "active",
+      "last_seen": "2026-11-08"
+    },
+    "engelske_ord": {
+      "category": "ordforraad",
+      "severity": "critical",
+      "count": 2,
+      "first_seen": "2026-11-08",
+      "examples": [
+        "spend, deserve, excited, du er rigtig, Det lytter → bruge, fortjene, glæde sig, du har ret, Det lyder",
+        "tage toget is stressende → det er stressende"
+      ],
+      "streak_correct": 0,
+      "status": "active",
+      "last_seen": "2026-11-09"
+    },
+    "Missing verb 'er' in 'Spørgsmålet er, hvorvidt'": {
+      "category": "manglende_verbum",
+      "severity": "critical",
+      "count": 1,
+      "first_seen": "2026-11-09",
+      "examples": [
+        "Sprøgsmålet hvorvidt … → Spørgsmålet er, hvorvidt … (2020v + 2020s openings)"
+      ],
+      "streak_correct": 0,
+      "status": "active",
+      "last_seen": "2026-11-09"
+    },
+    "'At' before a noun phrase (At only starts a clause)": {
+      "category": "at_saetning",
+      "severity": "critical",
+      "count": 1,
+      "first_seen": "2026-11-09",
+      "examples": [
+        "At først job som nyuddannet fylder … → Det første job som nyuddannet fylder …"
+      ],
+      "streak_correct": 0,
+      "status": "active",
+      "last_seen": "2026-11-09"
+    },
+    "Verb vs noun: argumentere (to argue) vs argumenter (arguments)": {
+      "category": "stavning",
+      "severity": "moderate",
+      "count": 1,
+      "first_seen": "2026-11-09",
+      "examples": [
+        "der er argumentere → der er argumenter"
+      ],
+      "streak_correct": 0,
+      "status": "active",
+      "last_seen": "2026-11-09"
+    },
+    "Comma after hvorvidt instead of before": {
+      "category": "komma",
+      "severity": "minor",
+      "count": 1,
+      "first_seen": "2026-11-09",
+      "examples": [
+        "Spørgsmålet hvorvidt, personlighed … → Spørgsmålet er, hvorvidt personlighed …"
+      ],
+      "streak_correct": 0,
+      "status": "active",
+      "last_seen": "2026-11-09"
+    },
+    "en_et": {
+      "category": "bøjning",
+      "severity": "moderate",
+      "count": 1,
+      "first_seen": "2026-11-09",
+      "examples": [
+        "et lang rejse → en lang rejse"
+      ],
+      "streak_correct": 0,
+      "status": "active",
+      "last_seen": "2026-11-09"
+    },
+    "Finite verb missing after 'men' (infinitive left alone)": {
+      "category": "verbum_tid",
+      "severity": "critical",
+      "count": 1,
+      "first_seen": "2026-11-09",
+      "examples": [
+        "men andre unge få ikke → men andre unge får ingen hjælp"
+      ],
+      "streak_correct": 0,
+      "status": "active",
+      "last_seen": "2026-11-09"
+    },
+    "løsning på (not for)": {
+      "category": "praepositioner",
+      "severity": "moderate",
+      "count": 1,
+      "first_seen": "2026-11-09",
+      "examples": [
+        "løsning for dit problem → løsning på problemet"
+      ],
+      "streak_correct": 0,
+      "status": "active",
+      "last_seen": "2026-11-09"
+    },
+    "Superlative needs den: den bedste": {
+      "category": "adjektiv_boejning",
+      "severity": "moderate",
+      "count": 1,
+      "first_seen": "2026-11-09",
+      "examples": [
+        "ikke bedste løsning → ikke den bedste løsning"
+      ],
+      "streak_correct": 0,
+      "status": "active",
+      "last_seen": "2026-11-09"
+    },
+    "Spelling of template words: Imidlertid, hensigtsmæssig, idé, vil": {
+      "category": "stavning",
+      "severity": "minor",
+      "count": 1,
+      "first_seen": "2026-11-09",
+      "examples": [
+        "Immedlertid, hensigtmæssig, idè, vill"
+      ],
+      "streak_correct": 0,
+      "status": "active",
+      "last_seen": "2026-11-09"
+    },
+    "Bullet 2: Omvendt step (other side) missing": {
+      "category": "opgave_proportion",
+      "severity": "moderate",
+      "count": 1,
+      "first_seen": "2026-11-09",
+      "examples": [
+        "2014v punkt 2 had no Omvendt … fordel for …"
+      ],
+      "streak_correct": 0,
+      "status": "active",
+      "last_seen": "2026-11-09"
+    }
+  }
 }
