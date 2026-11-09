@@ -122,6 +122,66 @@
       "streak_correct": 0,
       "status": "active",
       "last_seen": "2026-11-09"
+    },
+    "Finite verb missing after 'men' (infinitive left alone)": {
+      "category": "verbum_tid",
+      "severity": "critical",
+      "count": 1,
+      "first_seen": "2026-11-09",
+      "examples": [
+        "men andre unge få ikke → men andre unge får ingen hjælp"
+      ],
+      "streak_correct": 0,
+      "status": "active",
+      "last_seen": "2026-11-09"
+    },
+    "løsning på (not for)": {
+      "category": "praepositioner",
+      "severity": "moderate",
+      "count": 1,
+      "first_seen": "2026-11-09",
+      "examples": [
+        "løsning for dit problem → løsning på problemet"
+      ],
+      "streak_correct": 0,
+      "status": "active",
+      "last_seen": "2026-11-09"
+    },
+    "Superlative needs den: den bedste": {
+      "category": "adjektiv_boejning",
+      "severity": "moderate",
+      "count": 1,
+      "first_seen": "2026-11-09",
+      "examples": [
+        "ikke bedste løsning → ikke den bedste løsning"
+      ],
+      "streak_correct": 0,
+      "status": "active",
+      "last_seen": "2026-11-09"
+    },
+    "Spelling of template words: Imidlertid, hensigtsmæssig, idé, vil": {
+      "category": "stavning",
+      "severity": "minor",
+      "count": 1,
+      "first_seen": "2026-11-09",
+      "examples": [
+        "Immedlertid, hensigtmæssig, idè, vill"
+      ],
+      "streak_correct": 0,
+      "status": "active",
+      "last_seen": "2026-11-09"
+    },
+    "Bullet 2: Omvendt step (other side) missing": {
+      "category": "opgave_proportion",
+      "severity": "moderate",
+      "count": 1,
+      "first_seen": "2026-11-09",
+      "examples": [
+        "2014v punkt 2 had no Omvendt … fordel for …"
+      ],
+      "streak_correct": 0,
+      "status": "active",
+      "last_seen": "2026-11-09"
     }
   }
 }
