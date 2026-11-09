@@ -293,6 +293,10 @@ ok("match pick bar", await ev(`(()=>{ localStorage.clear(); const g=GROUP_ORDER.
   const L=[...document.querySelectorAll('.mtt[data-col="l"]')], R=[...document.querySelectorAll('.mtt[data-col="r"]')];
   const r=[has, MT?.groups?.[0]===g, L.length>0, L.length<=6, R.length<=6, L.every(b=>groupsOf(DB.cards[b.dataset.id]).includes(g))]; setPicked([]); home(); return r; })()`));
 ok("match chooser", await ev(`(()=>{ home(); const g=$("[data-learn]:not([disabled])").dataset.learn; $("[data-learn='"+g+"']").click(); $("#gaMatch").click(); return [$("#gact").open, MT?.groups?.[0]===g, !!$("#mtroot")]; })()`));
+ok("match untouched group", await ev(`(()=>{ localStorage.clear(); home(); const g=$("[data-learn]:not([disabled])").dataset.learn, cs=byGroup()[g], old=cs.map(c=>c.history); cs.forEach(c=>c.history=[]);
+  setPicked([g]); home(); const r=[!!$("#selMatch")]; $("#selMatch").click(); r.push(MT?.groups?.[0]===g, MT.pool.length===cs.length, !!$("#mtroot"));
+  learnAll = true; home(); $("[data-learn='"+g+"']").click(); $("#gaMatch").click(); r.push(MT?.groups?.[0]===g, !!$("#mtroot"));
+  learnAll = false; cs.forEach((c,i)=>c.history=old[i]); setPicked([]); home(); return r; })()`));
 ok("match home", await ev(`(()=>{ localStorage.clear(); setPicked([]); home(); const b=$("#match"); const label=b?.textContent; b.click(); return [label, MT.groups, MT.pool.length===cards().filter(c=>c.meaning).length, MT.ids.length, !!$("#mtroot")]; })()`));
 ok("match play", await ev(`(async()=>{ const w=ms=>new Promise(r=>setTimeout(r,ms)); const tile=(c,id)=>document.querySelector('.mtt[data-col="'+c+'"][data-id="'+id+'"]');
   const pairOf=X=>MT.ids.find(y=>!MT.doneR.has(y)&&DB.cards[y].meaning===DB.cards[X].meaning);
