@@ -142,6 +142,9 @@ textarea {
   font: 16px/1.55 var(--serif); overflow-wrap: anywhere; white-space: pre-wrap;
 }
 .label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); font-weight: 600; }
+.sheet { margin-top: 10px; }
+.sheet summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; gap: 6px; color: var(--muted); font-size: 14px; }
+.sheet img { display: block; max-width: 100%; max-height: 70vh; margin: 4px auto 8px; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
 .pres-details summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; color: var(--muted); font-size: 14px; }
 
 /* Feedback */
@@ -845,10 +848,26 @@ mark.chg { background: var(--mid-soft); color: var(--ink); border-radius: 3px; p
       el("p", { class: "note", role: "status" }, [t.note])
     ];
   }
+  // The exam's picture sheet for the topic: situation A on top, B below. Only inspiration, not to describe.
+  function pictureSheet(t) {
+    const parts = t.itemId.split("-");
+    const q = parts[2];
+    const caption = q === "1A" ? ["Spørgsmålet handler om situation A (øverste billede). ", "Question is about situation A (top picture)."]
+      : q === "1B" ? ["Spørgsmålet handler om situation B (nederste billede). ", "Question is about situation B (bottom picture)."]
+      : ["Overordnet spørgsmål. Billederne er kun inspiration. ", "A broader question. The pictures are only inspiration."];
+    const fig = el("details", { class: "sheet", open: !t.res && !t.selfcheck }, [
+      el("summary", null, ["Billedark ", el("span", { class: "en" }, ["picture sheet"])]),
+      el("img", { src: "oral-pics/" + parts[0] + "-" + parts[1] + ".jpg", alt: "Billedark til emnet " + t.topic,
+        loading: "lazy", onerror: () => { fig.hidden = true; } }),
+      el("p", { class: "line" }, [caption[0], el("span", { class: "en" }, [caption[1]])])
+    ]);
+    return fig;
+  }
   function turnCard(t, area) {
     const meta = [sittingLabel(t.sitting), t.label, t.fuType ? TYPE_TEXT[t.fuType] : null].filter(Boolean).join(" · ");
     const kids = [el("p", { class: "ex-sitting" }, [meta])];
     if (t.topic && t.step !== "followup") kids.push(el("p", { class: "topic" }, [t.topic]));
+    if (t.part === "d2" && t.step === "main") kids.push(pictureSheet(t));
     if (t.intro) kids.push(el("p", { class: "intro" }, [t.intro]));
     const spoken = (t.intro ? t.intro + " " : "") + t.question;
     kids.push(el("div", { class: "qrow" }, [
