@@ -527,8 +527,7 @@ mark.chg { background: var(--mid-soft); color: var(--ink); border-radius: 3px; p
     return S.d1.fus.every((t) => t.selfcheck || (t.res && (!t.res.corrected || t.retell.done)));
   }
   function startPres() {
-    if (!S.presText.trim()) return;
-    savePres();
+    if (S.presText.trim()) savePres();
     const t = newTurn({ part: "d1", step: "pres", itemId: "D1-presentation", sitting: "Delprøve 1", topic: "Oplæg",
       label: "Præsentation", question: "Præsentér din tekst for eksaminatoren.", context: S.presText });
     S.d1 = { pres: t, fus: [], running: Date.now() };
@@ -559,7 +558,7 @@ mark.chg { background: var(--mid-soft); color: var(--ink); border-radius: 3px; p
     ctx.push("Question: " + t.question);
     if (t.step === "main" && t.examples.length) ctx.push("Booklet follow-up examples (style only, do not copy): " + t.examples.join(" | "));
     if (t.step === "followup") ctx.push("Previous answer (context only): " + t.context);
-    if (t.step === "pres") ctx.push("Prepared text (context only; correct only the transcript): " + t.context);
+    if (t.step === "pres" && str(t.context).trim()) ctx.push("Prepared text (context only; correct only the transcript): " + t.context);
     return [
       RUBRIC, "", mode, "", "ITEM"
     ].concat(ctx, [
@@ -988,18 +987,17 @@ mark.chg { background: var(--mid-soft); color: var(--ink); border-radius: 3px; p
       const status = el("span", { class: "line", role: "status" });
       const ta = el("textarea", { "data-ta": "presText", "aria-label": "Din tekst", rows: "10" });
       ta.value = S.presText;
-      const start = el("button", { class: "btn primary", type: "button", disabled: !S.presText.trim(),
+      const start = el("button", { class: "btn primary", type: "button",
         onclick: () => startPres() }, ["Start præsentation · 2:00"]);
       ta.addEventListener("input", () => {
         S.presText = ta.value;
         status.textContent = "";
-        start.disabled = !ta.value.trim();
       });
       root.appendChild(el("article", { class: "card ex" }, [
         el("p", { class: "ex-sitting" }, ["Delprøve 1 · oplæg"]),
         el("p", { class: "question" }, ["Din tekst"]),
-        el("p", { class: "instr" }, ["Skriv den tekst, du vil præsentere. Teksten gemmes, så du kan øve den igen. ",
-          el("span", { class: "en" }, ["Write the text you want to present. It is saved so you can practise again."])]),
+        el("p", { class: "instr" }, ["Skriv den tekst, du vil præsentere (valgfrit). Teksten gemmes, så du kan øve den igen. Du kan også starte uden tekst. ",
+          el("span", { class: "en" }, ["Write the text you want to present (optional). It is saved so you can practise again. You can also start without one."])]),
         ta,
         el("div", { class: "row" }, [
           el("button", { class: "btn", type: "button", onclick: () => {
@@ -1036,10 +1034,10 @@ mark.chg { background: var(--mid-soft); color: var(--ink); border-radius: 3px; p
     const kids = [
       el("p", { class: "ex-sitting" }, ["Delprøve 1 · præsentation"]),
       el("p", { class: "question" }, [pres.question]),
-      el("details", { class: "pres-details", open: running || !pres.res }, [
+      S.presText.trim() ? el("details", { class: "pres-details", open: running || !pres.res }, [
         el("summary", null, ["Din tekst"]),
         el("p", { class: "given" }, [S.presText])
-      ])
+      ]) : null
     ];
     if (pres.res || pres.selfcheck) {
       kids.push(el("p", { class: "given" }, [pres.answer ? pres.answer : "(intet svar)"]));
