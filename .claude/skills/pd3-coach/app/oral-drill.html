@@ -724,7 +724,9 @@ mark.chg { background: var(--mid-soft); color: var(--ink); border-radius: 3px; p
     d.onState(({ state, reason }) => {
       if (state === "idle") {
         S.listen = null;
-        if (reason === "not_granted" || reason === "unavailable") S.micMode = null;
+        if (reason === "not_granted") S.micMode = null;
+        // Danish dictation not served: use the browser's own da-DK recognition rather than an English transcript.
+        if (reason === "unavailable") { S.micMode = SR ? "speech" : null; S.micDown = !SR; }
         renderAll();
         return;
       }
@@ -740,7 +742,9 @@ mark.chg { background: var(--mid-soft); color: var(--ink); border-radius: 3px; p
   }
   function micFail(L, code) {
     if (S.listen === L) S.listen = null;
-    if (["not_granted", "unavailable", "not-allowed", "service-not-allowed", "audio-capture"].indexOf(code) >= 0) {
+    if (L.dict && code === "unavailable" && SR) {
+      S.micMode = "speech";
+    } else if (["not_granted", "unavailable", "not-allowed", "service-not-allowed", "audio-capture"].indexOf(code) >= 0) {
       S.micMode = null;
       S.micDown = true;
     }
@@ -751,7 +755,8 @@ mark.chg { background: var(--mid-soft); color: var(--ink); border-radius: 3px; p
     S.listen = L;
     refreshMic();
     if (L.dict) {
-      S.dict.start().catch((e) => micFail(L, e && e.code));
+      // Always Danish: without a language the platform transcribes in the viewer's own (often English).
+      S.dict.start({ language: "da" }).catch((e) => micFail(L, e && e.code));
       return;
     }
     if (!SR) { micFail(L, "unavailable"); return; }
