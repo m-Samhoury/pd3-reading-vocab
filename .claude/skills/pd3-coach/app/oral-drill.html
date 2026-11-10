@@ -389,6 +389,8 @@ mark.chg { background: var(--mid-soft); color: var(--ink); border-radius: 3px; p
     listen: null,
     saveWarn: false,
     micDown: false,
+    tts: null,
+    ttsState: "idle",
     d2: { queue: [], pos: 0, main: null, fu: null },
     d1: { pres: null, fus: [], running: 0 }
   };
@@ -705,7 +707,21 @@ mark.chg { background: var(--mid-soft); color: var(--ink); border-radius: 3px; p
   }
 
   // ---------- speech ----------
+  function speakLabel() {
+    return S.tts && S.ttsState !== "idle" ? "■ Stop" : "🔊 Lyt";
+  }
+  function refreshSpeak() {
+    document.querySelectorAll("[data-speak]").forEach((b) => { b.textContent = speakLabel(); });
+  }
+  // Natural Claude voice (tts capability) in Danish; the browser voice only where tts is absent.
   function speak(text) {
+    if (S.tts) {
+      if (S.ttsState !== "idle") { S.tts.stop().catch(() => {}); return; }
+      S.tts.speak(text, { language: "da" }).catch((e) => {
+        if (e && (e.code === "not_granted" || e.code === "unavailable")) { S.tts = null; renderAll(); }
+      });
+      return;
+    }
     if (!TTS_OK) return;
     try {
       window.speechSynthesis.cancel();
@@ -877,8 +893,8 @@ mark.chg { background: var(--mid-soft); color: var(--ink); border-radius: 3px; p
     const spoken = (t.intro ? t.intro + " " : "") + t.question;
     kids.push(el("div", { class: "qrow" }, [
       el("p", { class: "question" }, [t.question]),
-      TTS_OK ? el("button", { class: "btn speak", type: "button", "aria-label": "Læs spørgsmålet højt",
-        onclick: () => speak(spoken) }, ["🔊 Lyt"]) : null
+      S.tts || TTS_OK ? el("button", { class: "btn speak", type: "button", "aria-label": "Læs spørgsmålet højt",
+        "data-speak": "1", onclick: () => speak(spoken) }, [speakLabel()]) : null
     ]));
     if (t.res || t.selfcheck) {
       kids.push(el("p", { class: "given" }, [t.answer ? t.answer : "(intet svar)"]));
@@ -1147,10 +1163,14 @@ mark.chg { background: var(--mid-soft); color: var(--ink); border-radius: 3px; p
     window.addEventListener("hashchange", () => showPart(partFromHash(), true));
     setInterval(tick, 250);
 
-    S.capsP = Promise.all([cap("sample"), cap("db"), cap("user"), cap("dictation")]).then((v) => {
+    S.capsP = Promise.all([cap("sample"), cap("db"), cap("user"), cap("dictation"), cap("tts")]).then((v) => {
       S.sample = v[0] || null;
       S.db = v[1] || null;
       S.user = v[2] || null;
+      if (v[4]) {
+        S.tts = v[4];
+        S.tts.onState(({ state }) => { S.ttsState = state; refreshSpeak(); });
+      }
       if (v[3]) {
         S.dict = v[3];
         wireDictation(v[3]);
