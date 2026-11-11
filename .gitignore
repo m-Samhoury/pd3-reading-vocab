@@ -4,6 +4,7 @@
 !/.claude/
 !/pd3-data/
 !/assisted-learning.html
+!/assisted-learning-*.js
 !/flash-img/
 /.claude/worktrees/
 /pd3-data/cache/
