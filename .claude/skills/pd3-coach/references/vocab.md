@@ -33,7 +33,10 @@ Adding words found in practice: `pd3.py vocab add "at fastholde" "to retain" --g
 ## Assisted Learning page (self-study between coach sessions)
 `<project>/assisted-learning.html` opens straight from disk (double-click; no server). It is built from the template
 `app/assisted-learning.html` with the deck, profile and exam sentences embedded: `pd3.py page`, and automatically whenever
-`pd3.py` saves `vocab.json`, `profile.json` or `exam-sentences.json`. The built file also works as-is on a static host.
+`pd3.py` saves `vocab.json`, `profile.json` or `exam-sentences.json`. The deck is written next to the page as two hashed
+scripts: `assisted-learning-core.<hash>.js` (loaded with the page) and `assisted-learning-extra.<hash>.js` (exam sentences,
+pictures, the L2B trainer and the Læsning 3 drills; loaded just after the first paint, and the page waits for it before
+it opens a screen that needs it). Keep both next to `assisted-learning.html`. The built file also works as-is on a static host.
 **Review progress is kept in the browser** (localStorage, per device; it survives closing the page), not in `vocab.json`:
 cards graded on the page don't show up in `vocab due` or `status`. Cards never reviewed on the page start from the deck's schedule.
 It follows this file: batches of 5 new words from one group (taught first: word-order rule, example, real exam sentences,

@@ -1594,6 +1594,31 @@ function flipLang() {
   if ($("#findbar").classList.contains("open")) findDraw();
 }
 
+// The deck comes in two scripts written by `pd3.py page`: window.PD3_DECK (the core, loaded with the page) and
+// window.PD3_DECK_EXTRA (exam sentences, pictures, the L2B trainer and the Læsning 3 drills), which loads just after
+// the first paint. Until it is in, clicks and route changes wait and are replayed once it is, so no screen is drawn
+// without its data. Nothing is shown while waiting.
+let EXTRA_READY = false, routeWaiting = false;
+const clicksWaiting = [];
+window.addEventListener("click", e => {
+  if (EXTRA_READY) return;
+  e.preventDefault(); e.stopImmediatePropagation();
+  clicksWaiting.push(e.target);
+}, true);
+function loadExtra(src) {
+  const done = () => {
+    if (EXTRA_READY) return;
+    EXTRA_READY = true;
+    if (window.PD3_DECK_EXTRA) Object.assign(DB, window.PD3_DECK_EXTRA);
+    if (routeWaiting) { routeWaiting = false; route(); }
+    clicksWaiting.splice(0).forEach(x => { if (x.isConnected) x.click(); });
+  };
+  if (!src) return done();
+  const s = document.createElement("script");
+  s.src = src; s.onload = done; s.onerror = done;
+  document.head.append(s);
+}
+
 function load() {
   chrome();
   // the deck is embedded by `pd3.py page` (window.PD3_DECK), so the built file opens straight from disk
@@ -1602,7 +1627,7 @@ function load() {
     $("#app").innerHTML = `<div class="err" style="margin-top:32px">${t("nodeck")}<br><br><code>python3 -I .claude/skills/pd3-coach/scripts/pd3.py page</code></div>`;
     return;
   }
-  DB = { today: iso(new Date()), profile: deck.profile || {}, sentences: deck.sentences || {}, senses: deck.senses || {}, tips: deck.tips || {}, info: deck.info || {}, grammar: deck.grammar || {}, logic: deck.logic || {}, l3: deck.l3 || [], lgs: deck.lgs || [], mock: deck.mock || {}, l2b: deck.l2b || {}, images: deck.images || {}, cards: {} };
+  DB = { today: iso(new Date()), profile: deck.profile || {}, sentences: {}, senses: deck.senses || {}, tips: deck.tips || {}, info: deck.info || {}, grammar: deck.grammar || {}, logic: deck.logic || {}, l3: [], lgs: deck.lgs || [], mock: deck.mock || {}, l2b: {}, l2ready: !!deck.l2ready, images: {}, cards: {} };
   const saved = readProgress();
   for (const [id, c] of Object.entries(deck.cards)) DB.cards[id] = { id, ...c, history: c.history || [], ...(saved[id] || {}) };
   addFreqGroups();
@@ -1612,10 +1637,12 @@ function load() {
   if (navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(() => {});
   finder();
   home(); route();
+  loadExtra(document.querySelector("script[data-extra]")?.dataset.extra);
   window.addEventListener("hashchange", route);
 }
 // the site's other pages link to "#find" (or "#find=ord"): open the find bar over the home screen
 function route() {
+  if (!EXTRA_READY) { routeWaiting = true; return; }
   if (location.hash === "#l2b") { history.replaceState(null, "", location.pathname + location.search); return l2bHome(); }
   if (location.hash === "#tankegang") { history.replaceState(null, "", location.pathname + location.search); return tankegang(); }
   if (location.hash === "#grammatik") { history.replaceState(null, "", location.pathname + location.search); return grammarHome(); }
@@ -4175,7 +4202,7 @@ let LBV = null, LB = null, LBT = null;   // the 2B screen on show; the round or 
 function l2Store() { try { return JSON.parse(localStorage.getItem(L2_KEY) || "{}"); } catch (e) { return {}; } }
 function l2Write(st) { try { localStorage.setItem(L2_KEY, JSON.stringify(st)); } catch (e) { /* ignore */ } }
 function l2Put(fn) { const st = l2Store(); fn(st); l2Write(st); return st; }
-const l2Ready = () => !!((DB.l2b && DB.l2b.gaps) || []).length;
+const l2Ready = () => !!DB.l2ready;   // set from the core deck: the banner on the home screen needs no trainer data
 const l2Sets = () => (DB.l2b && DB.l2b.sets) || [];
 const lbNorm = s => String(s).toLowerCase().replace(/[^a-zæøå0-9]/g, "");
 const lbPill = k => `<span class="lbpill lb-${k}">${t("lb.tr." + k)}</span>`;
