@@ -43,7 +43,7 @@ Usage (run with python3 -I):
 Vocab priority: 1 = connectors/conjunctions (drilled first), 2 = words from real exam questions and
 L3 option grids, 3 = other useful words. `due` serves priority 1 before 2 before 3.
 """
-import argparse, datetime as dt, json, os, re, sys, unicodedata
+import argparse, datetime as dt, glob, hashlib, json, os, re, sys, unicodedata
 
 SKILL_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ROOT = os.environ.get("PD3_ROOT") or os.path.dirname(os.path.dirname(os.path.dirname(SKILL_DIR)))
@@ -827,8 +827,18 @@ def cmd_translate(a):
     print(f"{len(todo)} new translations; {len(cache)} in {os.path.join(DATA, 'translations.json')}")
 
 
+# deck keys only some drills use: a second script that loads after the page's first paint (see load() in the page)
+DECK_EXTRA = ("sentences", "images", "l2b", "l3")
+
+
+def deck_js(name, obj):
+    return f"window.{name} = " + json.dumps(obj, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/") + ";\n"
+
+
 def build_page():
-    """Write <project>/assisted-learning.html: the page template with the deck embedded, so it opens from disk."""
+    """Write <project>/assisted-learning.html, with the deck in two content-hashed scripts next to it so the browser can
+    cache them: assisted-learning-core.<hash>.js (what the home screen and most drills need) and
+    assisted-learning-extra.<hash>.js (exam sentences, pictures, the L2B trainer, the Læsning 3 drills). Opens from disk."""
     tpl = os.path.join(SKILL_DIR, "app", "assisted-learning.html")
     if not os.path.exists(tpl):
         return None
@@ -840,8 +850,25 @@ def build_page():
     deck = {"cards": cards, "profile": load("profile.json", {}), "senses": senses, "tips": load("tips.json", {}), "info": load("wordinfo.json", {}), "grammar": load("grammar.json", {}),
             "logic": load("logic.json", {}), "l3": load("l3-gaps.json", {}).get("items", []), "lgs": load("logic-drill.json", {}).get("items", []), "mock": load("mock-l3.json", {}).get("items", []), "l2b": load("l2b.json", {}),
             "sentences": load("exam-sentences.json", {}).get("sentences", {}), "images": load("images.json", {}), "built": TODAY.isoformat()}
-    js = "window.PD3_DECK = " + json.dumps(deck, ensure_ascii=False).replace("</", "<\\/") + ";"
-    html = open(tpl, encoding="utf-8").read().replace("window.PD3_DECK = null; /*DECK*/", js)
+    deck["l2ready"] = bool((deck["l2b"] or {}).get("gaps"))         # the home screen's L2B banner, without the trainer data
+    extra = {k: deck.pop(k) for k in DECK_EXTRA}
+    parts = {"assisted-learning-core": deck_js("PD3_DECK", deck), "assisted-learning-extra": deck_js("PD3_DECK_EXTRA", extra)}
+    for pat in ("assisted-learning-core.*.js", "assisted-learning-extra.*.js"):   # the previous build's hashed files
+        for old in glob.glob(os.path.join(ROOT, pat)):
+            os.remove(old)
+    src = {}
+    for stem, js in parts.items():
+        h = hashlib.sha1(js.encode("utf-8")).hexdigest()[:10]
+        name = f"{stem}.{h}.js"
+        with open(os.path.join(ROOT, name), "w", encoding="utf-8") as f:
+            f.write(js)
+        src[stem] = name
+    tag = f'<script src="{src["assisted-learning-core"]}" data-extra="{src["assisted-learning-extra"]}"></script>'
+    html = open(tpl, encoding="utf-8").read()
+    marker = "<script>window.PD3_DECK = null; /*DECK*/</script>"
+    if html.count(marker) != 1:
+        sys.exit("assisted-learning.html template has no deck marker")
+    html = html.replace(marker, tag)
     with open(PAGE + ".tmp", "w", encoding="utf-8") as f:
         f.write(html)
     os.replace(PAGE + ".tmp", PAGE)
