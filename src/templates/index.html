@@ -11,8 +11,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500..900&family=Roboto+Flex:opsz,wght@8..144,400..700&display=swap">
 <script>try { const m = localStorage.getItem("pd3.theme"); if (m === "light" || m === "dark") document.documentElement.dataset.theme = m; } catch (e) { /* ignore */ }</script>
+<link rel="stylesheet" href="{{CSS_HREF}}">
 <style>
-{{CSS}}
 .top { padding-top: 44px; }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
 .go { display: grid; gap: 14px; grid-template-columns: 1fr; margin: 34px 0 8px; }
@@ -82,10 +82,8 @@
   <div class="section"><h2 data-i18n="idx.sources">Kilder</h2><p class="soft small" id="exams"></p></div>
 </main>
 <footer class="wrap foot" id="foot"></footer>
-<script type="application/json" id="pd3-data">{{DATA}}</script>
-<script>
-{{COMMON_JS}}
-</script>
+<script src="{{DATA_SRC}}"></script>
+<script src="{{JS_SRC}}"></script>
 <script>
 (() => {
   const { words, groups, el, gstyle, store, byId, displayLemma } = PD3;

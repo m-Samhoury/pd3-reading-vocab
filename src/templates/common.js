@@ -1,6 +1,6 @@
 /* Shared helpers – data access, DOM building, entry rendering and safe storage. */
 const PD3 = (() => {
-  const raw = JSON.parse(document.getElementById("pd3-data").textContent);
+  const raw = window.PD3_RAW || JSON.parse(document.getElementById("pd3-data").textContent);
   applyI18n();
   const words = raw.words;
   const groups = raw.groups;

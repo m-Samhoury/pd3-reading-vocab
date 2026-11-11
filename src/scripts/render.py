@@ -1,9 +1,11 @@
-"""Render the standalone HTML pages (CSS, JS and data inlined).
+"""Render the HTML pages. The shared data, CSS and JS go to content-hashed files in assets/ (cached by the browser
+across pages); each page only inlines its own styles and markup. The files are plain <script src> / <link> tags,
+so the pages still open from disk.
 
   render.py            → public site in the repo root (no DDO wording)
   render.py --private  → private/ (git-ignored): same pages plus DDO's own definitions, with a citation
 """
-import json, os, re, sys, urllib.parse
+import glob, hashlib, json, os, re, sys, urllib.parse
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
@@ -134,18 +136,34 @@ def main(private=False):
                   "(Claude) for this study tool, following Den Danske Ordbog (ordnet.dk) and the exams. Progress is stored only in this browser.",
         "private": private,
     }
-    data = json.dumps({"words": slim, "groups": [g for g in groups if g["words"]], "meta": meta, "coach": coach_index()}, ensure_ascii=False)
+    data = json.dumps({"words": slim, "groups": [g for g in groups if g["words"]], "meta": meta, "coach": coach_index()},
+                      ensure_ascii=False, separators=(",", ":"))
     data = data.replace("</", "<\\/")
     css = open(os.path.join(TPL, "common.css"), encoding="utf-8").read()
     js = open(os.path.join(TPL, "i18n.js"), encoding="utf-8").read() + "\n" + open(os.path.join(TPL, "common.js"), encoding="utf-8").read() \
         + "\n" + open(os.path.join(TPL, "find.js"), encoding="utf-8").read()
     out = os.path.join(ROOT, "private") if private else OUT
-    os.makedirs(out, exist_ok=True)
+    assets = os.path.join(out, "assets")
+    os.makedirs(assets, exist_ok=True)
+    for pat in ("pd3-data.*.js", "common.*.css", "common.*.js"):      # drop the previous build's hashed files
+        for old in glob.glob(os.path.join(assets, pat)):
+            os.remove(old)
+    files = {"pd3-data": f"window.PD3_RAW={data};\n", "common-css": css, "common-js": js}
+    names = {}
+    for key, text in files.items():
+        ext = "css" if key == "common-css" else "js"
+        stem = "common" if key != "pd3-data" else "pd3-data"
+        h = hashlib.sha1(text.encode("utf-8")).hexdigest()[:10]
+        names[key] = f"{stem}.{h}.{ext}"
+        with open(os.path.join(assets, names[key]), "w", encoding="utf-8") as f:
+            f.write(text)
     for src, dst in (("study.html", "study-sheet.html"), ("flash.html", "flashcards.html"), ("index.html", "index.html")):
         html = open(os.path.join(TPL, src), encoding="utf-8").read()
-        html = html.replace("{{CSS}}", css).replace("{{COMMON_JS}}", js).replace("{{DATA}}", data)
+        html = html.replace("{{CSS_HREF}}", "assets/" + names["common-css"]) \
+            .replace("{{DATA_SRC}}", "assets/" + names["pd3-data"]).replace("{{JS_SRC}}", "assets/" + names["common-js"])
         open(os.path.join(out, dst), "w", encoding="utf-8").write(html)
         print(f"{dst}: {len(html.encode('utf-8')) / 1024:.0f} KB")
+    print("assets: " + ", ".join(f"{n} {os.path.getsize(os.path.join(assets, n)) / 1024:.0f} KB" for n in names.values()))
     mapped = sum(1 for i in meta["l3_items"] if i["word_id"])
     print(f"L3 items: {len(meta['l3_items'])}, mapped to words: {mapped}")
 

@@ -11,8 +11,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500..900&family=Roboto+Flex:opsz,wght@8..144,400..700&display=swap">
 <script>try { const m = localStorage.getItem("pd3.theme"); if (m === "light" || m === "dark") document.documentElement.dataset.theme = m; } catch (e) { /* ignore */ }</script>
+<link rel="stylesheet" href="{{CSS_HREF}}">
 <style>
-{{CSS}}
 .tools { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--paper) 88%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--rule); margin-top: 14px; }
 .tools .row { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; padding-top: 10px; padding-bottom: 10px; }
 .tools .search { flex: 1 1 260px; }
@@ -115,10 +115,8 @@ section.group > .ghead button { margin-left: auto; }
 </div>
 <footer class="wrap foot" id="foot"></footer>
 
-<script type="application/json" id="pd3-data">{{DATA}}</script>
-<script>
-{{COMMON_JS}}
-</script>
+<script src="{{DATA_SRC}}"></script>
+<script src="{{JS_SRC}}"></script>
 <script>
 (() => {
   const { words, groups, byId, el, gstyle, groupName, displayLemma, entry, store, EXAMS } = PD3;
@@ -141,7 +139,10 @@ section.group > .ghead button { margin-left: auto; }
   const hay = Object.fromEntries(words.map(w => [w.id, [w.lemma, w.display, w.word_class, ...w.senses.flatMap(s =>
     [s.da_definition, s.en_definition, s.example_da, s.example_en, ...s.collocations, ...s.synonyms, ...s.antonyms])].join(" ").toLowerCase()]));
 
-  const sections = [];
+  // Sections are created first, with their headings and empty sheets. Entries are built when a section is shown
+  // (the hash target and the first two groups at once, the rest one group per idle callback, or earlier on demand),
+  // so the first paint does not wait for all 359 entries. Visibility and counts come from the data, not the DOM.
+  const sections = [], sectionOf = {};
   for (const tr of [1, 2, 3]) {
     const gs = groups.filter(g => g.tier === tr);
     if (!gs.length) continue;
@@ -149,21 +150,14 @@ section.group > .ghead button { margin-left: auto; }
       el("header", null, el("h2", null, TIER[tr][0]), el("p", null, TIER[tr][1])));
     for (const g of gs) {
       const sheet = el("div", { class: "sheet" });
-      for (const id of g.words) {
-        const w = byId[id];
-        if (w.primary_group === g.id) sheet.append(entry(w, { id: w.id }));
-        else sheet.append(el("div", { class: "xref", "data-id": w.id },
-          el("a", { href: "#" + w.id }, displayLemma(w)), " – ",
-          w.senses.filter(s => s.group === g.id).map(s => s.en_definition).join("; "),
-          el("span", { class: "meta" }, "  " + t("grp.see", groupName(w.primary_group).split(" · ")[0]))));
-      }
       const toggle = el("button", { class: "btn quiet small", type: "button", "aria-expanded": "true" }, t("grp.hide"));
       const sec = el("section", { class: "group", id: "g-" + g.id, style: gstyle(g.id), "data-group": g.id },
         el("div", { class: "ghead" }, el("h3", null, LANG === "en" ? g.name_en : g.name_da), el("span", { class: "soft" }, LANG === "en" ? g.name_da : g.name_en),
           el("span", { class: "count" }, ""), toggle), sheet);
       toggle.addEventListener("click", () => setOpen(sec, sec.classList.contains("collapsed")));
       tierBox.append(sec);
-      sections.push({ g, sec });
+      const s = { g, sec, sheet, filled: false, cnt: 0 };
+      sections.push(s); sectionOf[g.id] = s;
     }
     main.append(tierBox);
   }
@@ -174,28 +168,61 @@ section.group > .ghead button { margin-left: auto; }
     const b = sec.querySelector(".ghead button"); b.textContent = open ? t("grp.hide") : t("grp.show"); b.setAttribute("aria-expanded", String(open));
   }
 
+  // the filters as they are now; a section filled later is shown with the same filters
+  function filt() {
+    return { q: $("#q").value.trim().toLowerCase(), group: $("#fGroup").value, cls: $("#fClass").value, exam: $("#fExam").value,
+      part: $("#fPart").value, ver: $("#fVer").value, tier: prefs.tier };
+  }
+  const matches = (w, g, f) => (f.tier === "all" || String(w.tier) === f.tier) && (!f.q || hay[w.id].includes(f.q))
+    && (!f.group || g.id === f.group) && (!f.cls || w.word_class.startsWith(f.cls))
+    && (!f.exam || w.frequency.exam_list.includes(f.exam)) && (!f.part || w.frequency.by_part[f.part])
+    && (!f.ver || (f.ver === "yes") === (w.verified && w.senses.every(s => s.verified)));
+
+  /** count the section's words from the data; hide its rendered items if it has been filled */
+  function applySection(s, f) {
+    const { g, sec } = s;
+    let cnt = 0;
+    for (const id of g.words) if (matches(byId[id], g, f)) cnt++;
+    if (s.filled) for (const item of s.sheet.querySelectorAll("[data-id]")) item.hidden = !matches(byId[item.dataset.id], g, f);
+    sec.hidden = cnt === 0;
+    sec.querySelector(".count").textContent = t("count.words", cnt);
+    s.cnt = cnt;
+  }
+  /** build the entries of one group (the same markup as before: entries for its own words, cross-references for the rest) */
+  function fill(s) {
+    if (s.filled) return;
+    s.filled = true;
+    const { g, sheet } = s;
+    for (const id of g.words) {
+      const w = byId[id];
+      if (w.primary_group === g.id) sheet.append(entry(w, { id: w.id }));
+      else sheet.append(el("div", { class: "xref", "data-id": w.id },
+        el("a", { href: "#" + w.id }, displayLemma(w)), " – ",
+        w.senses.filter(x => x.group === g.id).map(x => x.en_definition).join("; "),
+        el("span", { class: "meta" }, "  " + t("grp.see", groupName(w.primary_group).split(" · ")[0]))));
+    }
+    applySection(s, filt());
+  }
+  const fillTo = id => { const s = sectionOf[id]; if (s) fill(s); };
+  // the group a link points to: #g-<group> or a word id (its primary group)
+  function groupForHash() {
+    let h = location.hash.slice(1);
+    try { h = decodeURIComponent(h); } catch (e) { /* keep as is */ }
+    if (!h) return null;
+    if (h.startsWith("g-")) return h.slice(2);
+    return byId[h] ? byId[h].primary_group : null;
+  }
+
   function apply() {
-    const q = $("#q").value.trim().toLowerCase();
-    const f = { group: $("#fGroup").value, cls: $("#fClass").value, exam: $("#fExam").value, part: $("#fPart").value, ver: $("#fVer").value };
-    const tier = prefs.tier;
-    let shown = 0;
+    const f = filt();
     const toc = $("#toc"), jump = $("#jump");
     toc.textContent = ""; jump.textContent = ""; jump.append(opt("", t("study.jump")));
     const tierShown = {};
-    let lastTier = 0;
-    for (const { g, sec } of sections) {
-      let cnt = 0;
-      for (const item of sec.querySelectorAll("[data-id]")) {
-        const w = byId[item.dataset.id];
-        const ok = (tier === "all" || String(w.tier) === tier) && (!q || hay[w.id].includes(q))
-          && (!f.group || g.id === f.group) && (!f.cls || w.word_class.startsWith(f.cls))
-          && (!f.exam || w.frequency.exam_list.includes(f.exam)) && (!f.part || w.frequency.by_part[f.part])
-          && (!f.ver || (f.ver === "yes") === (w.verified && w.senses.every(s => s.verified)));
-        item.hidden = !ok;
-        if (ok) cnt++;
-      }
-      sec.hidden = cnt === 0;
-      sec.querySelector(".count").textContent = t("count.words", cnt);
+    let lastTier = 0, shown = 0;
+    for (const s of sections) {
+      const { g } = s;
+      applySection(s, f);
+      const cnt = s.cnt;
       if (cnt) {
         shown += cnt; tierShown[g.tier] = true;
         if (g.tier !== lastTier) { toc.append(el("h2", null, TIER[g.tier][0])); lastTier = g.tier; }
@@ -208,13 +235,23 @@ section.group > .ghead button { margin-left: auto; }
     empty.hidden = shown > 0;
     document.body.classList.toggle("hide-en", prefs.hideEn);
     document.body.classList.toggle("hide-da", prefs.hideDa);
-    document.querySelectorAll(".pick [data-tier]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.tier === tier)));
+    document.querySelectorAll(".pick [data-tier]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.tier === prefs.tier)));
     store.set(KEY, prefs);
   }
+
+  // what the page shows before the first paint: the hash target, then the first two groups
+  const target = groupForHash();
+  if (target) fillTo(target);
+  sections.slice(0, 2).forEach(fill);
+  apply();
+
   let timer;
   $("#q").addEventListener("input", () => { clearTimeout(timer); timer = setTimeout(apply, 120); });
   ["#fGroup", "#fClass", "#fExam", "#fPart", "#fVer"].forEach(s => $(s).addEventListener("change", apply));
-  $("#jump").addEventListener("change", e => { const x = document.getElementById(e.target.value); if (x) { setOpen(x, true); x.scrollIntoView(); } e.target.value = ""; });
+  $("#jump").addEventListener("change", e => { const id = e.target.value.slice(2); fillTo(id); const x = document.getElementById(e.target.value); if (x) { setOpen(x, true); x.scrollIntoView(); } e.target.value = ""; });
+  $("#toc").addEventListener("click", e => { const a = e.target.closest("a"); if (a) fillTo(a.getAttribute("href").slice(3)); });
+  window.addEventListener("hashchange", () => { const id = groupForHash(); if (id) fillTo(id); });
+  window.addEventListener("beforeprint", () => sections.forEach(fill));
   document.querySelectorAll(".pick [data-tier]").forEach(b => b.addEventListener("click", () => { prefs.tier = b.dataset.tier; apply(); }));
   $("#hideEn").checked = prefs.hideEn; $("#hideDa").checked = prefs.hideDa;
   $("#hideEn").addEventListener("change", e => { prefs.hideEn = e.target.checked; if (prefs.hideEn) { prefs.hideDa = false; $("#hideDa").checked = false; } apply(); });
@@ -222,7 +259,15 @@ section.group > .ghead button { margin-left: auto; }
   $("#toggleFilters").addEventListener("click", e => { const f = $("#filters"); f.hidden = !f.hidden; e.currentTarget.setAttribute("aria-expanded", String(!f.hidden)); });
   $("#expand").addEventListener("click", () => sections.forEach(s => setOpen(s.sec, true)));
   $("#collapse").addEventListener("click", () => sections.forEach(s => setOpen(s.sec, false)));
-  apply();
+  // the rest, one group per idle callback
+  const idle = fn => window.requestIdleCallback ? requestIdleCallback(fn, { timeout: 1500 }) : setTimeout(fn, 0);
+  function fillRest() {
+    const s = sections.find(x => !x.filled);
+    if (!s) return;
+    fill(s);
+    idle(fillRest);
+  }
+  idle(fillRest);
 })();
 </script>
 </body>
