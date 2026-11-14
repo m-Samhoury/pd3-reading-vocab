@@ -3227,5 +3227,314 @@
    "alliance med noget",
    "alliance with something"
   ]
+ },
+ "en_skole": {
+  "construction": [
+   "gå i skole; komme hjem fra skole; være dygtig i skolen",
+   "go to school; come home from school; be good at school"
+  ],
+  "prep": "gå i skole; være dygtig i skolen"
+ },
+ "en_uddannelse": {
+  "construction": [
+   "tage en uddannelse som sygeplejerske; være under uddannelse",
+   "train as a nurse; be in education/training"
+  ],
+  "prep": "uddannelse som/til noget; være under uddannelse"
+ },
+ "et_dagtilbud": {
+  "construction": [
+   "være i dagtilbud; få plads i et dagtilbud",
+   "be in childcare; get a place in childcare"
+  ],
+  "prep": "være i dagtilbud; plads i et dagtilbud",
+  "register": [
+   "Officielt/administrativt ord; i tale siger man ofte \"institution\" eller \"pasning\".",
+   "Official/administrative word; in speech people often say \"institution\" or \"pasning\"."
+  ]
+ },
+ "en_vuggestue": {
+  "construction": [
+   "gå/starte i vuggestue; stå på venteliste til vuggestue",
+   "go to/start nursery; be on the waiting list for nursery"
+  ],
+  "prep": "gå i vuggestue; venteliste til vuggestue"
+ },
+ "en_børnehave": {
+  "construction": [
+   "gå i børnehave; hente/aflevere barnet i børnehaven",
+   "go to kindergarten; pick up/drop off the child at kindergarten"
+  ],
+  "prep": "gå i børnehave; hente nogen i børnehaven"
+ },
+ "en_dagpleje": {
+  "construction": [
+   "være i dagpleje; få plads i dagplejen",
+   "be with a childminder; get a place with a childminder"
+  ],
+  "prep": "være i dagpleje; plads i dagplejen"
+ },
+ "et_arbejdsmarked": {
+  "construction": [
+   "komme ud på arbejdsmarkedet; have tilknytning til arbejdsmarkedet",
+   "enter the labour market; be attached to the labour market"
+  ],
+  "prep": "på arbejdsmarkedet; tilknytning til arbejdsmarkedet"
+ },
+ "et_erhvervsliv": {
+  "construction": [
+   "arbejde i erhvervslivet; samarbejde med erhvervslivet",
+   "work in the business sector; cooperate with business"
+  ],
+  "prep": "i erhvervslivet; repræsentanter for erhvervslivet"
+ },
+ "et_velfærdssamfund": {
+  "construction": [
+   "bidrage til velfærdssamfundet; leve i et velfærdssamfund",
+   "contribute to the welfare society; live in a welfare society"
+  ],
+  "prep": "bidrage til velfærdssamfundet; i velfærdssamfundet"
+ },
+ "et_foreningsliv": {
+  "construction": [
+   "være medlem af en forening; tage del i foreningslivet",
+   "be a member of an association; take part in club life"
+  ],
+  "prep": "være medlem af en forening; deltage i foreningslivet"
+ },
+ "et_fritidsliv": {
+  "construction": [
+   "have et aktivt fritidsliv; i min fritid",
+   "have an active leisure life; in my free time"
+  ],
+  "prep": "i fritiden; et aktivt fritidsliv i en klub"
+ },
+ "en_sundhed": {
+  "construction": [
+   "være godt for sundheden; bruge penge på sundhed",
+   "be good for your health; spend money on health"
+  ],
+  "prep": "godt for sundheden; sammenhæng mellem kost og sundhed"
+ },
+ "en_sygdom": {
+  "construction": [
+   "lide af en sygdom; blive behandlet for en sygdom",
+   "suffer from an illness; be treated for an illness"
+  ],
+  "prep": "lide af en sygdom; dø af en sygdom"
+ },
+ "et_demokrati": {
+  "construction": [
+   "leve i et demokrati; indføre demokrati",
+   "live in a democracy; introduce democracy"
+  ],
+  "prep": "i et demokrati; leve i et demokrati"
+ },
+ "en_grundlov": {
+  "construction": [
+   "ifølge grundloven; det står i grundloven",
+   "according to the Constitution; it says so in the Constitution"
+  ],
+  "prep": "ifølge grundloven; i strid med grundloven; stå i grundloven"
+ },
+ "et_retssamfund": {
+  "construction": [
+   "i et retssamfund; stilles for retten",
+   "in a society under the rule of law; be brought to court"
+  ],
+  "prep": "i et retssamfund; for retten"
+ },
+ "et_folketing": {
+  "construction": [
+   "sidde i Folketinget; blive valgt til Folketinget",
+   "sit in parliament; be elected to parliament"
+  ],
+  "prep": "sidde i Folketinget; valg til Folketinget"
+ },
+ "en_regering": {
+  "construction": [
+   "danne regering; sidde i regeringen",
+   "form a government; be in government"
+  ],
+  "prep": "sidde i regeringen; danne regering"
+ },
+ "et_selvstyre": {
+  "construction": [
+   "det kommunale selvstyre; få selvstyre",
+   "local self-government; gain self-rule"
+  ],
+  "prep": "selvstyre over noget; få selvstyre"
+ },
+ "et_folkestyre": {
+  "construction": [
+   "deltage i folkestyret; det danske folkestyre",
+   "take part in democracy; Danish democracy"
+  ],
+  "prep": "deltage i folkestyret"
+ },
+ "et_valg": {
+  "construction": [
+   "valg til Folketinget; stemme ved valget; træffe et valg",
+   "election to parliament; vote in the election; make a choice"
+  ],
+  "prep": "valg til Folketinget; stemme ved et valg; være på valg"
+ },
+ "et_parti": {
+  "construction": [
+   "stemme på et parti; melde sig ind i et parti",
+   "vote for a party; join a party"
+  ],
+  "prep": "stemme på et parti; medlem af et parti; tage parti for nogen"
+ },
+ "en_pligt": {
+  "construction": [
+   "have pligt til at stemme?; rettigheder og pligter",
+   "have a duty to …; rights and duties"
+  ],
+  "prep": "pligt til at + infinitiv / pligt til noget"
+ },
+ "en_religion": {
+  "construction": [
+   "have ret til at praktisere sin religion; tro på Gud",
+   "have the right to practise one's religion; believe in God"
+  ],
+  "prep": "tro på noget; frihed til at praktisere sin religion"
+ },
+ "en_kirke": {
+  "construction": [
+   "gå i kirke; være medlem af folkekirken",
+   "go to church; be a member of the national church"
+  ],
+  "prep": "gå i kirke; medlem af folkekirken"
+ },
+ "en_omverden": {
+  "construction": [
+   "Danmarks forhold til omverdenen; samarbejde med omverdenen",
+   "Denmark's relations with the outside world; cooperate with the world"
+  ],
+  "prep": "forholdet til omverdenen; i kontakt med omverdenen; isoleret fra omverdenen"
+ },
+ "en_geografi": {
+  "construction": [
+   "Danmarks geografi; undervisning i geografi",
+   "Denmark's geography; teaching in geography"
+  ],
+  "prep": "undervisning i geografi"
+ },
+ "en_befolkning": {
+  "construction": [
+   "have en befolkning på 6 mio.; størstedelen af befolkningen",
+   "have a population of 6 million; most of the population"
+  ],
+  "prep": "en befolkning på X; flertal i befolkningen"
+ },
+ "en_historie": {
+  "construction": [
+   "i Danmarks historie; fortælle historien om noget",
+   "in Danish history; tell the story of something"
+  ],
+  "prep": "historien om noget; i Danmarks historie"
+ },
+ "en_kultur": {
+  "construction": [
+   "forskel på dansk kultur og min egen kultur",
+   "difference between Danish culture and my own culture"
+  ],
+  "prep": "forskel på kulturer; interesse for kultur"
+ },
+ "en_tradition": {
+  "construction": [
+   "der er tradition for at …; traditionen tro",
+   "there is a tradition of …; as tradition has it"
+  ],
+  "prep": "tradition for at + infinitiv / tradition for noget"
+ },
+ "en_mærkedag": {
+  "construction": [
+   "fejre en mærkedag; mærkedage i løbet af året",
+   "celebrate a special day; special days during the year"
+  ],
+  "prep": "fejre en mærkedag; mærkedage i løbet af året"
+ },
+ "en_helligdag": {
+  "construction": [
+   "have fri på helligdage; lukket på søn- og helligdage",
+   "have public holidays off; closed on Sundays and public holidays"
+  ],
+  "prep": "på helligdage; fri på en helligdag"
+ },
+ "en_forsvarspolitik": {
+  "construction": [
+   "samarbejde om forsvarspolitik i NATO og EU",
+   "cooperate on defence policy in NATO and the EU"
+  ],
+  "prep": "samarbejde om forsvarspolitik"
+ },
+ "en_sikkerhedspolitik": {
+  "construction": [
+   "udenrigs- og sikkerhedspolitik; samarbejde om sikkerhedspolitik",
+   "foreign and security policy; cooperate on security policy"
+  ],
+  "prep": "samarbejde om sikkerhedspolitik"
+ },
+ "en_diskrimination": {
+  "construction": [
+   "blive udsat for diskrimination på grund af sin religion",
+   "be subjected to discrimination because of one's religion"
+  ],
+  "prep": "diskrimination af/mod nogen; på grund af noget"
+ },
+ "en_antisemitisme": {
+  "construction": [
+   "bekæmpe antisemitisme; kampen mod antisemitisme",
+   "fight antisemitism; the fight against antisemitism"
+  ],
+  "prep": "kampen mod antisemitisme; had mod jøder"
+ },
+ "en_hadforbrydelse": {
+  "construction": [
+   "anmelde en hadforbrydelse til politiet",
+   "report a hate crime to the police"
+  ],
+  "prep": "hadforbrydelse mod nogen; anmelde noget til politiet"
+ },
+ "en_ekstremisme": {
+  "construction": [
+   "forebygge ekstremisme; kampen mod ekstremisme",
+   "prevent extremism; the fight against extremism"
+  ],
+  "prep": "kampen mod ekstremisme; forebygge ekstremisme"
+ },
+ "et_klima": {
+  "construction": [
+   "være godt for klimaet; passe på klimaet",
+   "be good for the climate; protect the climate"
+  ],
+  "prep": "godt/skidt for klimaet; klimaet i Danmark"
+ },
+ "fjerde": {
+  "construction": [
+   "hvert fjerde år; bo på fjerde sal",
+   "every four years; live on the fourth floor"
+  ],
+  "prep": "hvert fjerde år; på fjerde sal; i fjerde klasse"
+ },
+ "at_deltage": {
+  "construction": [
+   "deltage i noget; deltage aktivt i samfundet",
+   "take part in something; take an active part in society"
+  ],
+  "prep": "deltage i noget"
+ },
+ "at_uddybe": {
+  "construction": [
+   "Kan du uddybe det? / uddybe, hvad man mener",
+   "Can you elaborate? / explain more about what you mean"
+  ],
+  "prep": "uddybe noget / uddybe, hvad …",
+  "register": [
+   "Typisk eksaminatorspørgsmål i den mundtlige prøve.",
+   "Typical examiner question in the oral exam."
+  ]
  }
 }

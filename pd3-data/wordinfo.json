@@ -6981,5 +6981,1021 @@
    "rekruttere fra"
   ],
   "brug_src": "study"
+ },
+ "en_skole": {
+  "word": "skole",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-n, -r, -rne",
+  "forms": [
+   [
+    "skole",
+    "skolen",
+    "skoler",
+    "skolerne"
+   ]
+  ],
+  "grammar": [
+   "NOGEN går i skole",
+   "NOGEN/NOGET danner skole (for NOGEN/NOGET)",
+   "NOGEN tager NOGEN i skole"
+  ],
+  "construction": [],
+  "brug": [
+   "gå i skole",
+   "komme hjem fra skole",
+   "skifte skole",
+   "være færdig med skolen",
+   "være dygtig i skolen"
+  ],
+  "brug_src": "study"
+ },
+ "en_uddannelse": {
+  "word": "uddannelse",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-n, -r, -rne",
+  "forms": [
+   [
+    "uddannelse",
+    "uddannelsen",
+    "uddannelser",
+    "uddannelserne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [
+   "tage en uddannelse",
+   "gennemføre/afslutte en uddannelse",
+   "være under uddannelse",
+   "efter endt uddannelse",
+   "en videregående uddannelse"
+  ],
+  "brug_src": "study"
+ },
+ "et_dagtilbud": {
+  "word": "dagtilbud",
+  "pos": "substantiv, intetkøn",
+  "gender": "et",
+  "inflection": "-det, -, -dene",
+  "forms": [
+   [
+    "dagtilbud",
+    "dagtilbuddet",
+    "dagtilbud",
+    "dagtilbuddene"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [
+   "være i dagtilbud",
+   "kommunale dagtilbud",
+   "en plads i et dagtilbud",
+   "kvaliteten i landets dagtilbud"
+  ],
+  "brug_src": "study"
+ },
+ "en_vuggestue": {
+  "word": "vuggestue",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-n, -r, -rne",
+  "forms": [
+   [
+    "vuggestue",
+    "vuggestuen",
+    "vuggestuer",
+    "vuggestuerne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [
+   "gå i vuggestue",
+   "starte i vuggestue",
+   "venteliste til vuggestue",
+   "dagpleje eller vuggestue"
+  ],
+  "brug_src": "study"
+ },
+ "en_børnehave": {
+  "word": "børnehave",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-n, -r, -rne",
+  "forms": [
+   [
+    "børnehave",
+    "børnehaven",
+    "børnehaver",
+    "børnehaverne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [
+   "gå i børnehave",
+   "starte i børnehave",
+   "hente/aflevere i børnehaven",
+   "vuggestuer og børnehaver"
+  ],
+  "brug_src": "study"
+ },
+ "en_dagpleje": {
+  "word": "dagpleje",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-n, -r, -rne",
+  "forms": [
+   [
+    "dagpleje",
+    "dagplejen",
+    "dagplejer",
+    "dagplejerne"
+   ]
+  ],
+  "grammar": [
+   "uden pluralis"
+  ],
+  "construction": [],
+  "brug": [
+   "være i dagpleje",
+   "kommunal dagpleje",
+   "privat dagpleje",
+   "få plads i dagplejen"
+  ],
+  "brug_src": "study"
+ },
+ "et_arbejdsmarked": {
+  "word": "arbejdsmarked",
+  "pos": "substantiv, intetkøn",
+  "gender": "et",
+  "inflection": "-et, -er, -erne",
+  "forms": [
+   [
+    "arbejdsmarked",
+    "arbejdsmarkedet",
+    "arbejdsmarkeder",
+    "arbejdsmarkederne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [
+   "komme ud på arbejdsmarkedet",
+   "tilknytning til arbejdsmarkedet",
+   "det danske arbejdsmarked",
+   "arbejdsmarkedets parter",
+   "stå til rådighed for arbejdsmarkedet"
+  ],
+  "brug_src": "study"
+ },
+ "et_erhvervsliv": {
+  "word": "erhvervsliv",
+  "pos": "substantiv, intetkøn",
+  "gender": "et",
+  "inflection": "-et",
+  "forms": [
+   [
+    "erhvervsliv",
+    "erhvervslivet"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [
+   "dansk erhvervsliv",
+   "det lokale erhvervsliv",
+   "det private erhvervsliv",
+   "repræsentanter for erhvervslivet",
+   "erhvervslivets konkurrenceevne"
+  ],
+  "brug_src": "study"
+ },
+ "et_velfærdssamfund": {
+  "word": "velfærdssamfund",
+  "pos": "substantiv, intetkøn",
+  "gender": "et",
+  "inflection": "-et, -, -ene",
+  "forms": [
+   [
+    "velfærdssamfund",
+    "velfærdssamfundet",
+    "velfærdssamfund",
+    "velfærdssamfundene"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [
+   "det danske velfærdssamfund",
+   "bidrage til velfærdssamfundet",
+   "finansiere velfærdssamfundet",
+   "et godt velfærdssamfund"
+  ],
+  "brug_src": "study"
+ },
+ "et_foreningsliv": {
+  "word": "foreningsliv",
+  "pos": "substantiv, intetkøn",
+  "gender": "et",
+  "inflection": "-et",
+  "forms": [
+   [
+    "foreningsliv",
+    "foreningslivet"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [
+   "det lokale foreningsliv",
+   "deltage i foreningslivet",
+   "være medlem af en forening",
+   "et aktivt foreningsliv"
+  ],
+  "brug_src": "study"
+ },
+ "et_fritidsliv": {
+  "word": "fritidsliv",
+  "pos": "substantiv, intetkøn",
+  "gender": "et",
+  "inflection": "-et",
+  "forms": [
+   [
+    "fritidsliv",
+    "fritidslivet"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [
+   "et aktivt fritidsliv",
+   "i fritiden",
+   "børns fritidsliv",
+   "fritidsliv og foreningsliv"
+  ],
+  "brug_src": "study"
+ },
+ "en_sundhed": {
+  "word": "sundhed",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en",
+  "forms": [
+   [
+    "sundhed",
+    "sundheden"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [
+   "befolkningens sundhed",
+   "sundhed og sygdom",
+   "kost og sundhed",
+   "fremme sundheden"
+  ],
+  "brug_src": "study"
+ },
+ "en_sygdom": {
+  "word": "sygdom",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-men, -me, -mene",
+  "forms": [
+   [
+    "sygdom",
+    "sygdommen",
+    "sygdomme",
+    "sygdommene"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [
+   "alvorlig sygdom",
+   "kronisk sygdom",
+   "smitsomme sygdomme",
+   "lide af en sygdom",
+   "behandle en sygdom"
+  ],
+  "brug_src": "study"
+ },
+ "et_demokrati": {
+  "word": "demokrati",
+  "pos": "substantiv, intetkøn",
+  "gender": "et",
+  "inflection": "-et, -er, -erne",
+  "forms": [
+   [
+    "demokrati",
+    "demokratiet",
+    "demokratier",
+    "demokratierne"
+   ]
+  ],
+  "grammar": [
+   "uden pluralis (om styreformen)"
+  ],
+  "construction": [],
+  "brug": [
+   "det danske demokrati",
+   "repræsentativt demokrati",
+   "direkte demokrati",
+   "leve i et demokrati",
+   "indføre demokrati"
+  ],
+  "brug_src": "study"
+ },
+ "en_grundlov": {
+  "word": "grundlov",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -e, -ene",
+  "forms": [
+   [
+    "grundlov",
+    "grundloven",
+    "grundlove",
+    "grundlovene"
+   ]
+  ],
+  "grammar": [
+   "opfattet som egennavn: Grundloven"
+  ],
+  "construction": [],
+  "brug": [
+   "ifølge grundloven",
+   "i strid med grundloven",
+   "ændring af grundloven",
+   "den danske grundlov",
+   "stå i grundloven"
+  ],
+  "brug_src": "study"
+ },
+ "et_retssamfund": {
+  "word": "retssamfund",
+  "pos": "substantiv, intetkøn",
+  "gender": "et",
+  "inflection": "-et, -, -ene",
+  "forms": [
+   [
+    "retssamfund",
+    "retssamfundet",
+    "retssamfund",
+    "retssamfundene"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [
+   "et demokratisk retssamfund",
+   "leve i et retssamfund",
+   "uafhængige domstole",
+   "retssikkerhed"
+  ],
+  "brug_src": "study"
+ },
+ "et_folketing": {
+  "word": "folketing",
+  "pos": "substantiv, intetkøn",
+  "gender": "et",
+  "inflection": "-et, -, -ene",
+  "forms": [
+   [
+    "folketing",
+    "folketinget",
+    "folketing",
+    "folketingene"
+   ]
+  ],
+  "grammar": [
+   "som egennavn: Folketinget"
+  ],
+  "construction": [],
+  "brug": [
+   "sidde i Folketinget",
+   "blive valgt til Folketinget",
+   "Folketingets partier",
+   "vedtage en lov i Folketinget",
+   "valg til Folketinget"
+  ],
+  "brug_src": "study"
+ },
+ "en_regering": {
+  "word": "regering",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "regering",
+    "regeringen",
+    "regeringer",
+    "regeringerne"
+   ]
+  ],
+  "grammar": [
+   "uden pluralis (betydning 2)"
+  ],
+  "construction": [],
+  "brug": [
+   "danne regering",
+   "den siddende regering",
+   "sidde i regeringen",
+   "regeringen og oppositionen",
+   "gå af"
+  ],
+  "brug_src": "study"
+ },
+ "et_selvstyre": {
+  "word": "selvstyre",
+  "pos": "substantiv, intetkøn",
+  "gender": "et",
+  "inflection": "-t",
+  "forms": [
+   [
+    "selvstyre",
+    "selvstyret"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [
+   "det kommunale selvstyre",
+   "det lokale selvstyre",
+   "Grønlands selvstyre",
+   "få selvstyre"
+  ],
+  "brug_src": "study"
+ },
+ "et_folkestyre": {
+  "word": "folkestyre",
+  "pos": "substantiv, intetkøn",
+  "gender": "et",
+  "inflection": "-t, -r, -rne",
+  "forms": [
+   [
+    "folkestyre",
+    "folkestyret",
+    "folkestyrer",
+    "folkestyrerne"
+   ]
+  ],
+  "grammar": [
+   "især i singularis"
+  ],
+  "construction": [],
+  "brug": [
+   "det danske folkestyre",
+   "det samarbejdende folkestyre",
+   "deltage i folkestyret"
+  ],
+  "brug_src": "study"
+ },
+ "et_valg": {
+  "word": "valg",
+  "pos": "substantiv, intetkøn",
+  "gender": "et",
+  "inflection": "-et, -, -ene",
+  "forms": [
+   [
+    "valg",
+    "valget",
+    "valg",
+    "valgene"
+   ]
+  ],
+  "grammar": [
+   "valg af NOGET/NOGEN",
+   "valg (af NOGEN) (til NOGET)",
+   "NOGEN er på valg (til NOGET)",
+   "NOGEN opnår valg (til NOGET)"
+  ],
+  "construction": [],
+  "brug": [
+   "valg til Folketinget",
+   "stemme ved valget",
+   "udskrive valg",
+   "være på valg",
+   "træffe et valg",
+   "frit valg"
+  ],
+  "brug_src": "study"
+ },
+ "et_parti": {
+  "word": "parti",
+  "pos": "substantiv, intetkøn",
+  "gender": "et",
+  "inflection": "-et, -er, -erne",
+  "forms": [
+   [
+    "parti",
+    "partiet",
+    "partier",
+    "partierne"
+   ]
+  ],
+  "grammar": [
+   "NOGEN/NOGET tager parti (for NOGEN/NOGET) (mod NOGEN/NOGET)",
+   "NOGEN er på NOGENs parti"
+  ],
+  "construction": [],
+  "brug": [
+   "stemme på et parti",
+   "være medlem af et parti",
+   "melde sig ind i et parti",
+   "de borgerlige partier",
+   "tage parti for nogen"
+  ],
+  "brug_src": "study"
+ },
+ "en_pligt": {
+  "word": "pligt",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "pligt",
+    "pligten",
+    "pligter",
+    "pligterne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [
+   "have pligt til at",
+   "rettigheder og pligter",
+   "gøre sin pligt",
+   "undervisningspligt",
+   "huslige pligter"
+  ],
+  "brug_src": "study"
+ },
+ "en_religion": {
+  "word": "religion",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "religion",
+    "religionen",
+    "religioner",
+    "religionerne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [
+   "praktisere sin religion",
+   "religionsfrihed",
+   "den kristne religion",
+   "tro på en religion",
+   "religion og kultur"
+  ],
+  "brug_src": "study"
+ },
+ "en_kirke": {
+  "word": "kirke",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-n, -r, -rne",
+  "forms": [
+   [
+    "kirke",
+    "kirken",
+    "kirker",
+    "kirkerne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [
+   "gå i kirke",
+   "folkekirken",
+   "den evangelisk-lutherske kirke",
+   "melde sig ud af folkekirken",
+   "blive gift i kirken"
+  ],
+  "brug_src": "study"
+ },
+ "en_omverden": {
+  "word": "omverden",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en",
+  "forms": [
+   [
+    "omverden",
+    "omverdenen"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [
+   "forholdet til omverdenen",
+   "i kontakt med omverdenen",
+   "isoleret fra omverdenen",
+   "omverdenens reaktioner"
+  ],
+  "brug_src": "study"
+ },
+ "en_geografi": {
+  "word": "geografi",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en",
+  "forms": [
+   [
+    "geografi",
+    "geografien"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [
+   "Danmarks geografi",
+   "have geografi i skolen",
+   "geografisk placering"
+  ],
+  "brug_src": "study"
+ },
+ "en_befolkning": {
+  "word": "befolkning",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "befolkning",
+    "befolkningen",
+    "befolkninger",
+    "befolkningerne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [
+   "den danske befolkning",
+   "størstedelen af befolkningen",
+   "en befolkning på",
+   "den brede befolkning"
+  ],
+  "brug_src": "study"
+ },
+ "en_historie": {
+  "word": "historie",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-n, -r, -rne",
+  "forms": [
+   [
+    "historie",
+    "historien",
+    "historier",
+    "historierne"
+   ]
+  ],
+  "grammar": [
+   "historie om NOGEN/NOGET/at..",
+   "NOGET/NOGEN går over i historien"
+  ],
+  "construction": [],
+  "brug": [
+   "Danmarks historie",
+   "gå over i historien",
+   "fortælle en historie",
+   "historien om",
+   "skrive historie"
+  ],
+  "brug_src": "study"
+ },
+ "en_kultur": {
+  "word": "kultur",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "kultur",
+    "kulturen",
+    "kulturer",
+    "kulturerne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [
+   "dansk kultur",
+   "fremmede kulturer",
+   "forskellige kulturer",
+   "kultur og traditioner",
+   "den vestlige kultur"
+  ],
+  "brug_src": "study"
+ },
+ "en_tradition": {
+  "word": "tradition",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "tradition",
+    "traditionen",
+    "traditioner",
+    "traditionerne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [
+   "en tradition for",
+   "holde traditionerne i hævd",
+   "bryde traditionen",
+   "traditionen tro",
+   "gamle traditioner"
+  ],
+  "brug_src": "study"
+ },
+ "en_mærkedag": {
+  "word": "mærkedag",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -e, -ene",
+  "forms": [
+   [
+    "mærkedag",
+    "mærkedagen",
+    "mærkedage",
+    "mærkedagene"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [
+   "fejre en mærkedag",
+   "en mærkedag i ens liv",
+   "danske mærkedage",
+   "højtider og mærkedage"
+  ],
+  "brug_src": "study"
+ },
+ "en_helligdag": {
+  "word": "helligdag",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -e, -ene",
+  "forms": [
+   [
+    "helligdag",
+    "helligdagen",
+    "helligdage",
+    "helligdagene"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [
+   "søn- og helligdage",
+   "have fri på helligdage",
+   "en kirkelig helligdag",
+   "lukket på helligdage"
+  ],
+  "brug_src": "study"
+ },
+ "en_forsvarspolitik": {
+  "word": "forsvarspolitik",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-ken",
+  "forms": [
+   [
+    "forsvarspolitik",
+    "forsvarspolitikken"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [
+   "dansk forsvarspolitik",
+   "fælles forsvarspolitik",
+   "udenrigs- og forsvarspolitik",
+   "samarbejde om forsvarspolitik"
+  ],
+  "brug_src": "study"
+ },
+ "en_sikkerhedspolitik": {
+  "word": "sikkerhedspolitik",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-ken, -ker, -kerne",
+  "forms": [
+   [
+    "sikkerhedspolitik",
+    "sikkerhedspolitikken",
+    "sikkerhedspolitikker",
+    "sikkerhedspolitikkerne"
+   ]
+  ],
+  "grammar": [
+   "især i singularis"
+  ],
+  "construction": [],
+  "brug": [
+   "dansk sikkerhedspolitik",
+   "udenrigs- og sikkerhedspolitik",
+   "samarbejde om sikkerhedspolitik"
+  ],
+  "brug_src": "study"
+ },
+ "en_diskrimination": {
+  "word": "diskrimination",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-en, -er, -erne",
+  "forms": [
+   [
+    "diskrimination",
+    "diskriminationen",
+    "diskriminationer",
+    "diskriminationerne"
+   ]
+  ],
+  "grammar": [
+   "diskrimination af/mod/over_for NOGEN/NOGET (især i singularis)"
+  ],
+  "construction": [],
+  "brug": [
+   "diskrimination på grund af",
+   "forbud mod diskrimination",
+   "blive udsat for diskrimination",
+   "diskrimination på arbejdsmarkedet"
+  ],
+  "brug_src": "study"
+ },
+ "en_antisemitisme": {
+  "word": "antisemitisme",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-n",
+  "forms": [
+   [
+    "antisemitisme",
+    "antisemitismen"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [
+   "kampen mod antisemitisme",
+   "stigende antisemitisme",
+   "bekæmpe antisemitisme"
+  ],
+  "brug_src": "study"
+ },
+ "en_hadforbrydelse": {
+  "word": "hadforbrydelse",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-n, -r, -rne",
+  "forms": [
+   [
+    "hadforbrydelse",
+    "hadforbrydelsen",
+    "hadforbrydelser",
+    "hadforbrydelserne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [
+   "kampen mod hadforbrydelser",
+   "anmelde en hadforbrydelse",
+   "blive udsat for en hadforbrydelse"
+  ],
+  "brug_src": "study"
+ },
+ "en_ekstremisme": {
+  "word": "ekstremisme",
+  "pos": "substantiv, fælleskøn",
+  "gender": "en",
+  "inflection": "-n",
+  "forms": [
+   [
+    "ekstremisme",
+    "ekstremismen"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [
+   "voldelig ekstremisme",
+   "forebygge ekstremisme",
+   "politisk/religiøs ekstremisme",
+   "kampen mod ekstremisme"
+  ],
+  "brug_src": "study"
+ },
+ "et_klima": {
+  "word": "klima",
+  "pos": "substantiv, intetkøn",
+  "gender": "et",
+  "inflection": "-et, -er, -erne",
+  "forms": [
+   [
+    "klima",
+    "klimaet",
+    "klimaer",
+    "klimaerne"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [
+   "klimaforandringer",
+   "passe på klimaet",
+   "godt for klimaet",
+   "det politiske klima",
+   "et tempereret klima"
+  ],
+  "brug_src": "study"
+ },
+ "fjerde": {
+  "word": "fjerde",
+  "pos": "talord (ordenstal)",
+  "gender": null,
+  "inflection": "ubøjeligt",
+  "forms": [
+   [
+    "fjerde"
+   ]
+  ],
+  "grammar": [],
+  "construction": [],
+  "brug": [
+   "hvert fjerde år",
+   "fjerde klasse",
+   "fjerde sal",
+   "for fjerde gang"
+  ],
+  "brug_src": "study"
+ },
+ "at_deltage": {
+  "word": "deltage",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, deltog, -t",
+  "forms": [
+   [
+    "deltage",
+    "deltager",
+    "deltog",
+    "deltaget"
+   ]
+  ],
+  "grammar": [
+   "NOGEN deltager (i NOGET)"
+  ],
+  "construction": [],
+  "brug": [
+   "deltage i debatten",
+   "deltage i mødet",
+   "deltage aktivt",
+   "deltage i valget",
+   "deltage i undervisningen"
+  ],
+  "brug_src": "study"
+ },
+ "at_uddybe": {
+  "word": "uddybe",
+  "pos": "verbum",
+  "gender": null,
+  "inflection": "-r, -de, -t",
+  "forms": [
+   [
+    "uddybe",
+    "uddyber",
+    "uddybede",
+    "uddybet"
+   ]
+  ],
+  "grammar": [
+   "NOGEN uddyber NOGET/hv+SÆTNING"
+  ],
+  "construction": [],
+  "brug": [
+   "uddybe nærmere",
+   "uddybe sit svar",
+   "kan du uddybe det?",
+   "en uddybende forklaring"
+  ],
+  "brug_src": "study"
  }
 }

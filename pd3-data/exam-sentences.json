@@ -1,5 +1,5 @@
 {
-  "built": "2026-11-07",
+  "built": "2026-11-14",
   "sentences": {
     "eller": [
       {
@@ -12291,11 +12291,59 @@
         ]
       },
       {
+        "s": "De ti udvalgte byer har for eksempel tænkt velfærdsfunktioner som biblioteker og borgerservice ind i deres planer for nyt liv i bymidterne.",
+        "src": "2024s L2",
+        "m": [
+          28,
+          36
+        ]
+      },
+      {
+        "s": "Hvis de for eksempel ikke har mulighed for at have så mange varer på lager i butikken, kan de tilbyde at fremskaffe dem inden for 24 timer og levere dem til døren.",
+        "src": "2024s L2",
+        "m": [
+          12,
+          20
+        ]
+      },
+      {
+        "s": "For eksempel er uddannelse gratis, og studerende kan få SU, og efter endt uddannelse kan man som nyuddannet også modtage dagpenge.",
+        "src": "2023v L2",
+        "m": [
+          4,
+          12
+        ]
+      },
+      {
+        "s": "eksempel den grænse, vi har i dag.",
+        "src": "2023s L1",
+        "m": [
+          0,
+          8
+        ]
+      },
+      {
         "s": "VIKING er et eksempel på et firma, der har brugt vikinger både i firmaets navn og i det kunstneriske udtryk, som virksomheden benytter sig af.",
         "src": "2022v L1",
         "m": [
           13,
           24
+        ]
+      },
+      {
+        "s": "Domkirken blev for eksempel brændt ned, og man måtte bygge en ny domkirke – det er den, vi har i dag.",
+        "src": "2021v L1",
+        "m": [
+          19,
+          27
+        ]
+      },
+      {
+        "s": "Det vil sige, at man byggede fabrikker, som kunne støbe jern, og fabrikker som brugte dampmaskiner som energi til for eksempel vævemaskiner.",
+        "src": "2021v L1",
+        "m": [
+          118,
+          126
         ]
       }
     ],
@@ -12643,6 +12691,72 @@
         ]
       }
     ],
+    "en_ligestilling": [
+      {
+        "s": "Det giver dem en bedre balance mellem arbejde og fritid, hvor der er mere tid til familien og hobbyer.",
+        "src": "2024s L2",
+        "m": [
+          31,
+          37
+        ]
+      },
+      {
+        "s": "Bornholms Kunstmuseum er med sin beliggenhed oven for Helligdomsklipperne på kysten mellem Gudhjem og Tejn og sin arkitektoniske udformning i sig selv en attraktion.",
+        "src": "2023v L1",
+        "m": [
+          84,
+          90
+        ]
+      },
+      {
+        "s": "Helligdomsklipperne ligger på strækningen mellem Tejn og Gudhjem og er en af Bornholms – ja Danmarks – største naturseværdigheder.",
+        "src": "2023v L1",
+        "m": [
+          42,
+          48
+        ]
+      },
+      {
+        "s": "Det primære formål med Folkemødet er at styrke det danske demokrati ved at mindske afstanden og øge tilliden mellem borgere og beslutningstagere.",
+        "src": "2023v L1",
+        "m": [
+          109,
+          115
+        ]
+      },
+      {
+        "s": "Det sker ved at skabe en ny ramme om møder mellem beslutningstagere i erhvervslivet, interesseorganisationer og politikere fra Folketinget, EU, kommuner og regioner.",
+        "src": "2023v L1",
+        "m": [
+          43,
+          49
+        ]
+      },
+      {
+        "s": "grænse mellem Danmark og Tyskland skulle placeres.",
+        "src": "2023s L1",
+        "m": [
+          7,
+          13
+        ]
+      },
+      {
+        "s": "Vejen følger i store træk det gamle hærvejsspor langs den jyske højderyg og skellet mellem øst- og vestgående vandløb.",
+        "src": "2023s L1",
+        "m": [
+          84,
+          90
+        ]
+      },
+      {
+        "s": "Undervejs er der otte såkaldte stisløjfer med en længde på mellem 2,7 km og 12 km, som er tiltænkt vandrere, der vil gå en kortere afsluttet rute.",
+        "src": "2023s L1",
+        "m": [
+          59,
+          65
+        ]
+      }
+    ],
     "en_trussel": [
       {
         "s": "Få blandt andet viden om deres dagligdag i lejren, fangeselvstyret og den konstante trussel om deportation, der kom til at hænge som en sort sky over lejren.",
@@ -12676,6 +12790,14 @@
         "m": [
           83,
           92
+        ]
+      },
+      {
+        "s": "Legoland har en sikkerheds- og sundhedspolitik, der fastslår, at målene for sundhed, sikkerhed og medarbejdernes velbefindende er lige så vigtige som målene for kommerciel succes og kundeservice.",
+        "src": "2018s L1",
+        "m": [
+          16,
+          26
         ]
       },
       {
@@ -12921,6 +13043,14 @@
         ]
       },
       {
+        "s": "Det kunne lade sig gøre, fordi Danmark var neutralt i 1. verdens- krig og derfor undgik det tyske importforbud.",
+        "src": "2019v L1",
+        "m": [
+          66,
+          70
+        ]
+      },
+      {
         "s": "Olsen-banden-filmene fik også en lidt overraskende succes i Østtyskland og store dele af det kommunistiske Østeuropa under den kolde krig.",
         "src": "2019v L1",
         "m": [
@@ -13008,6 +13138,1198 @@
         "m": [
           108,
           118
+        ]
+      }
+    ],
+    "en_skole": [
+      {
+        "s": "Vi drenge spillede fodbold og havde forskellige småjobs efter skole.",
+        "src": "2024s L1",
+        "m": [
+          62,
+          67
+        ]
+      },
+      {
+        "s": "I mit hjemland, Brasilien, hørte jeg om vikingerne i skolen.",
+        "src": "2022v L1",
+        "m": [
+          53,
+          59
+        ]
+      },
+      {
+        "s": "Julia Puggaard, 12 år Jeg har haft om vikingetiden i skolen.",
+        "src": "2022v L1",
+        "m": [
+          53,
+          59
+        ]
+      },
+      {
+        "s": "Fx anbefaler de, at børn og unge undervises i iværksætteri i skolen.",
+        "src": "2022v L2",
+        "m": [
+          61,
+          67
+        ]
+      },
+      {
+        "s": "De fleste har en idé om, hvordan det er at være lønmodtager, når de forlader skolen.",
+        "src": "2022v L2",
+        "m": [
+          77,
+          83
+        ]
+      },
+      {
+        "s": "De øer, der har sværest ved at fastholde en helårsbefolkning, er øer med en kombination af lang sejltid, fravær af skole og ringe adgang til basal offentlig service.",
+        "src": "2022s L1",
+        "m": [
+          115,
+          120
+        ]
+      },
+      {
+        "s": "Den erhvervsaktive øbo arbejder typisk med egen virksomhed eller i offentlige jobs som ansat på færgen, skolen, i kirken eller hjemmeplejen.",
+        "src": "2022s L1",
+        "m": [
+          104,
+          110
+        ]
+      },
+      {
+        "s": "Vi besøgte også skolen, og jeg tænkte, at Fejø var et helt vidunderligt sted.",
+        "src": "2022s L1",
+        "m": [
+          16,
+          22
+        ]
+      }
+    ],
+    "en_uddannelse": [
+      {
+        "s": "Ikke blot på grund af jobmulighederne, men også fordi nyuddannede med en teknisk uddannelse ofte får en højere løn end nyuddannede med en humanistisk uddannelse.",
+        "src": "2023v L2",
+        "m": [
+          81,
+          91
+        ]
+      },
+      {
+        "s": "Der kan være gode grunde til, at jobmuligheder og løn ikke er mere afgørende for danske unges valg af uddannelse.",
+        "src": "2023v L2",
+        "m": [
+          102,
+          112
+        ]
+      },
+      {
+        "s": "Danske unge er nemlig ikke så afhængige af straks at få et arbejde med en høj løn efter endt uddannelse for at have en god levestandard.",
+        "src": "2023v L2",
+        "m": [
+          93,
+          103
+        ]
+      },
+      {
+        "s": "For eksempel er uddannelse gratis, og studerende kan få SU, og efter endt uddannelse kan man som nyuddannet også modtage dagpenge.",
+        "src": "2023v L2",
+        "m": [
+          16,
+          26
+        ]
+      },
+      {
+        "s": "Den forholdsvis lave søgning til de tekniske bacheloruddannelser er et problem, for der er faktisk mangel på unge med den type uddannelse.",
+        "src": "2023v L2",
+        "m": [
+          127,
+          137
+        ]
+      },
+      {
+        "s": "Hvis man skal have flere unge til at søge ind på en teknisk uddannelse, er der forskellige muligheder.",
+        "src": "2023v L2",
+        "m": [
+          60,
+          70
+        ]
+      },
+      {
+        "s": "Flere, der egentlig ønskede at studere en humanistisk uddannelse, ville så være nødt til at vælge et andet studium.",
+        "src": "2023v L2",
+        "m": [
+          54,
+          64
+        ]
+      },
+      {
+        "s": "En uddannelse som filosofi udbydes fx fem steder i landet, selvom der er høj ledighed blandt nyuddannede.",
+        "src": "2023v L2",
+        "m": [
+          3,
+          13
+        ]
+      }
+    ],
+    "et_dagtilbud": [
+      {
+        "s": "job Som pædagogisk assistent kan du arbejde i vuggestue, børnehave, SFO og i bo- og dagtilbud til handicappede.",
+        "src": "2013s L1",
+        "m": [
+          84,
+          93
+        ]
+      }
+    ],
+    "en_vuggestue": [
+      {
+        "s": "Lars ville blive nødt til at finde et nyt job, selvom han var glad for det gamle, og Niels skulle skifte vuggestue.",
+        "src": "2018v L2",
+        "m": [
+          105,
+          114
+        ]
+      },
+      {
+        "s": "Det går dog fint med Emma i vuggestuen, hvor hun leger og fungerer godt sammen med de andre børn.",
+        "src": "2016v L2",
+        "m": [
+          28,
+          38
+        ]
+      },
+      {
+        "s": "Der er også tablets i hendes vuggestue.",
+        "src": "2016v L2",
+        "m": [
+          29,
+          38
+        ]
+      },
+      {
+        "s": "job Som pædagogisk assistent kan du arbejde i vuggestue, børnehave, SFO og i bo- og dagtilbud til handicappede.",
+        "src": "2013s L1",
+        "m": [
+          46,
+          55
+        ]
+      }
+    ],
+    "en_børnehave": [
+      {
+        "s": "At lære det danske sprog Vores søn Michel havde udfordringer i børnehaven i Maribo, da han havde svært ved dansk, og han nærmede sig skolealderen.",
+        "src": "2022s L1",
+        "m": [
+          63,
+          73
+        ]
+      },
+      {
+        "s": "Michel går nu i 1. klasse på skolen på øen, mens lillesøster Sophie går i børnehave.",
+        "src": "2022s L1",
+        "m": [
+          74,
+          83
+        ]
+      },
+      {
+        "s": "Han mener, at det er vigtigt, at børn også i børnehaven arbejder med tablets og tilsvarende teknologi.",
+        "src": "2016v L2",
+        "m": [
+          45,
+          55
+        ]
+      },
+      {
+        "s": "job Som pædagogisk assistent kan du arbejde i vuggestue, børnehave, SFO og i bo- og dagtilbud til handicappede.",
+        "src": "2013s L1",
+        "m": [
+          57,
+          66
+        ]
+      }
+    ],
+    "et_arbejdsmarked": [
+      {
+        "s": "Formålet med undersøgelsen var at finde ud af, hvor mange nyuddannede med et handicap, der er tilknyttet arbejdsmarkedet, og på hvilken måde de er det.",
+        "src": "2023s L2",
+        "m": [
+          105,
+          120
+        ]
+      },
+      {
+        "s": "Ja, og der er store forskelle i tilknytningen til arbejdsmarkedet.",
+        "src": "2023s L2",
+        "m": [
+          50,
+          65
+        ]
+      },
+      {
+        "s": "Hele 81 % af de nyuddannede uden et handicap var efter tolv måneder kommet ind på arbejdsmarkedet.",
+        "src": "2023s L2",
+        "m": [
+          82,
+          97
+        ]
+      },
+      {
+        "s": "Endelig viste undersøgelsen også, at mange mennesker med et handicap ikke kender særlig meget til de mange forskellige støttemuligheder, der er på arbejdsmarkedet.",
+        "src": "2023s L2",
+        "m": [
+          147,
+          162
+        ]
+      },
+      {
+        "s": "Måske kan det hjælpe den enkelte med et handicap til hurtigt at komme ind på arbejdsmarkedet – og blive der.",
+        "src": "2023s L2",
+        "m": [
+          77,
+          92
+        ]
+      },
+      {
+        "s": "Desuden yder AOF hjælp til den enkelte dansker med at leve op til kravene på arbejdsmarkedet.",
+        "src": "2020v L1",
+        "m": [
+          77,
+          92
+        ]
+      },
+      {
+        "s": "Forberedende voksenundervisning i dansk med fokus på ansøgninger og CV, der får dig tilbage på arbejdsmarkedet.",
+        "src": "2020v L1",
+        "m": [
+          95,
+          110
+        ]
+      },
+      {
+        "s": "På det danske arbejdsmarked er der en relativt høj grad af fleksibilitet for arbejdsgiverne.",
+        "src": "2020v L2",
+        "m": [
+          14,
+          27
+        ]
+      }
+    ],
+    "et_erhvervsliv": [
+      {
+        "s": "Det sker ved at skabe en ny ramme om møder mellem beslutningstagere i erhvervslivet, interesseorganisationer og politikere fra Folketinget, EU, kommuner og regioner.",
+        "src": "2023v L1",
+        "m": [
+          70,
+          83
+        ]
+      },
+      {
+        "s": "SPIS! samarbejder bredt med kultur- og erhvervsliv samt uddannelsesinstitutioner.",
+        "src": "2021v L1",
+        "m": [
+          39,
+          50
+        ]
+      },
+      {
+        "s": "CSR har bredt sig i dansk erhvervsliv i de senere år, blandt andet på hoteller, der har haft stor succes med at tænke CSR ind i deres aktiviteter.",
+        "src": "2020v L2",
+        "m": [
+          26,
+          37
+        ]
+      },
+      {
+        "s": "Der er flere årsager til, at CSR har bredt sig i dansk erhvervsliv i de senere år.",
+        "src": "2020v L2",
+        "m": [
+          55,
+          66
+        ]
+      },
+      {
+        "s": "At CSR har bredt sig hænger også sammen med, at der generelt er kommet mere fokus på emner som miljø og inklusion i samfundet, og det påvirker også det danske erhvervsliv.",
+        "src": "2020v L2",
+        "m": [
+          159,
+          170
+        ]
+      },
+      {
+        "s": "Det kan være både sprogligt, fagligt og kulturelt lærerigt for de unge, og det gør dem mere attraktive for erhvervslivet.",
+        "src": "2020s L2",
+        "m": [
+          107,
+          120
+        ]
+      },
+      {
+        "s": "Dansk erhvervslivs fokus på forståelse for andre kulturer vil ikke blive mindre i fremtiden.",
+        "src": "2020s L2",
+        "m": [
+          6,
+          18
+        ]
+      },
+      {
+        "s": "Attraktive kandidater for erhvervslivet For mange danske virksomheder er unge, der kan skrive et ophold i udlandet på deres CV, altså attraktive kandidater.",
+        "src": "2020s L2",
+        "m": [
+          26,
+          39
+        ]
+      }
+    ],
+    "et_velfærdssamfund": [
+      {
+        "s": "De er med til at skabe vækst, og de hjælper med at finansiere det dyre danske velfærdssamfund, som langt de fleste danskere gerne vil beholde.",
+        "src": "2022v L2",
+        "m": [
+          78,
+          93
+        ]
+      },
+      {
+        "s": "Danmark er sammenlignet med mange andre lande et trygt og velfungerende velfærdssamfund.",
+        "src": "2019v L2",
+        "m": [
+          72,
+          87
+        ]
+      },
+      {
+        "s": "Vi er også vant til, at der er et velfærdssamfund, der tager sig af folk.",
+        "src": "2019s L2",
+        "m": [
+          34,
+          49
+        ]
+      }
+    ],
+    "en_sundhed": [
+      {
+        "s": "Det er netop hvad Hærvejsmarchen i Viborg er, og mottoet er: Vejen til sundhed.",
+        "src": "2024s L1",
+        "m": [
+          71,
+          78
+        ]
+      },
+      {
+        "s": "Hærvejsmarchen i Viborg og aktiviteterne omkring er en international folkelig totaloplevelse med indhold af natur, kultur, historie, sundhed, miljø, oplevelse og livsglæde.",
+        "src": "2024s L1",
+        "m": [
+          133,
+          140
+        ]
+      },
+      {
+        "s": "ter, der hjælper sundhed og trivsel på vej på arbejdspladsen.",
+        "src": "2020v L1",
+        "m": [
+          17,
+          24
+        ]
+      },
+      {
+        "s": "Skolen har fokus på mange forskellige facetter af madlavningen som fx smagssammensætninger, sundhed, kommunikation, eventopbygning, gastronomi, oplevelser, æstetik og råvarer.",
+        "src": "2018v L1",
+        "m": [
+          92,
+          99
+        ]
+      },
+      {
+        "s": "Legoland har en sikkerheds- og sundhedspolitik, der fastslår, at målene for sundhed, sikkerhed og medarbejdernes velbefindende er lige så vigtige som målene for kommerciel succes og kundeservice.",
+        "src": "2018s L1",
+        "m": [
+          76,
+          83
+        ]
+      },
+      {
+        "s": "Der skal ikke herske tvivl om, at vi aldrig vil tillade, at profitovervejelser kommer til at overskygge definerede behov for eller krav om sundhed og sikkerhed.",
+        "src": "2018s L1",
+        "m": [
+          139,
+          146
+        ]
+      },
+      {
+        "s": "Som følge heraf er virksomhedens mål at sikre og opdatere de højeste og mest praktiske standarder for sundhed og sikkerhed i alle virksomhedens aktiviteter.",
+        "src": "2018s L1",
+        "m": [
+          102,
+          109
+        ]
+      },
+      {
+        "s": "medicin & SundHed At arbejde frivilligt på et projekt indenfor Medicin & Sundhed er en uvurderlig oplevelse af et ulands sundhedssystem.",
+        "src": "2016s L1",
+        "m": [
+          10,
+          17
+        ]
+      }
+    ],
+    "en_sygdom": [
+      {
+        "s": "Derfor forekom sult og sygdom stort set ikke i Frøslevlejren – i modsætning til i andre tyske lejre.",
+        "src": "2023s L1",
+        "m": [
+          23,
+          29
+        ]
+      }
+    ],
+    "et_demokrati": [
+      {
+        "s": "På Folkemødet hylder vi det danske demokrati og fællesskab.",
+        "src": "2023v L1",
+        "m": [
+          35,
+          44
+        ]
+      },
+      {
+        "s": "Det primære formål med Folkemødet er at styrke det danske demokrati ved at mindske afstanden og øge tilliden mellem borgere og beslutningstagere.",
+        "src": "2023v L1",
+        "m": [
+          58,
+          67
+        ]
+      },
+      {
+        "s": "Unge skal være med til at sætte dagsordenen og bestemme retningen for vores samfund og demokrati.",
+        "src": "2023v L1",
+        "m": [
+          87,
+          96
+        ]
+      },
+      {
+        "s": "Desuden er det vigtigt for AOF at være med til at udbrede demokrati i Danmark, og det skal gøres med udgangspunkt i viden, udvikling og samvær.",
+        "src": "2020v L1",
+        "m": [
+          58,
+          67
+        ]
+      },
+      {
+        "s": "Jeg er sproglærer og havde min klasse fra sprogskolen med på et undervisningsforløb om demokrati og stemmeret i Danmark.",
+        "src": "2020s L1",
+        "m": [
+          87,
+          96
+        ]
+      },
+      {
+        "s": "Vi hørte om forudsætninger for det demokrati, vi har i dag, og så en masse spændende dele af udstillingerne.",
+        "src": "2020s L1",
+        "m": [
+          35,
+          44
+        ]
+      }
+    ],
+    "et_folketing": [
+      {
+        "s": "Det sker ved at skabe en ny ramme om møder mellem beslutningstagere i erhvervslivet, interesseorganisationer og politikere fra Folketinget, EU, kommuner og regioner.",
+        "src": "2023v L1",
+        "m": [
+          127,
+          138
+        ]
+      },
+      {
+        "s": "Du lærer også at vedligeholde fiskeredskaber, hvordan EU og Folketinget regulerer fiskeriet, hvordan fiskeren styrer fiskeskibets økonomi m.v.",
+        "src": "2015v L1",
+        "m": [
+          60,
+          71
+        ]
+      }
+    ],
+    "en_regering": [
+      {
+        "s": "Lige sydfor grænsen ligger byen Flensborg. (© Grafik: Line Weltz Lyngbye)Tusindvis af vrede arbejdede demonstrerede mod Christian 10. på Amalienborg Slotsplads, efter han havde blandet sig igrænsespørgsmålet og afsat regeringen.",
+        "src": "2023s L1",
+        "m": [
+          217,
+          227
+        ]
+      },
+      {
+        "s": "Verdenskrig, og ved de efterfølgende fredsforhandlinger kom den danske regering med et krav om, at der skulle være folkeafstemninger i de nordligste områder af Tyskland om landsdelenes fremtidige tilhørsforhold.",
+        "src": "2023s L1",
+        "m": [
+          71,
+          79
+        ]
+      },
+      {
+        "s": "Han mener, at regeringen bør lave konkrete tiltag², som skaber flere ‘mønsterbrydere’: “Det er her, man skal sætte ind, hvis man gerne vil højne det generelle uddannelsesniveau i Danmark,” siger han.",
+        "src": "2013v L2",
+        "m": [
+          14,
+          24
+        ]
+      }
+    ],
+    "et_folkestyre": [
+      {
+        "s": "Folkeoplysning bliver i Danmark anset for at være en vigtig forudsætning for folkestyret.",
+        "src": "2020v L1",
+        "m": [
+          77,
+          88
+        ]
+      }
+    ],
+    "et_valg": [
+      {
+        "s": "Der kan være gode grunde til, at jobmuligheder og løn ikke er mere afgørende for danske unges valg af uddannelse.",
+        "src": "2023v L2",
+        "m": [
+          94,
+          98
+        ]
+      },
+      {
+        "s": "Lavere huspriser, bedre karrieremuligheder for konen og mulighed for at få familielivet til at hænge bedre sammen gjorde Sønderjylland til det oplagte valg for Peter Vestergaard.",
+        "src": "2023s L1",
+        "m": [
+          151,
+          155
+        ]
+      },
+      {
+        "s": "Kamilla har ikke fortrudt sit valg, men hun understreger, at det faktisk var svært at finde et job.",
+        "src": "2022s L2",
+        "m": [
+          30,
+          34
+        ]
+      },
+      {
+        "s": "Odense ZOO er naturligvis et oplagt valg, hvad enten I skal på familieudflugt, en kærestetur eller en hyggelig dag med vennerne, og havens muligheder er mange.",
+        "src": "2021v L1",
+        "m": [
+          36,
+          40
+        ]
+      },
+      {
+        "s": "Hvis du er interesseret i frivilligt arbejde i eller flere udviklingslande, er Projects Abroad det oplagte valg.",
+        "src": "2016s L1",
+        "m": [
+          107,
+          111
+        ]
+      },
+      {
+        "s": "Uanset dit valg, vil arbejdet som frivillig inden for Arkæologi garantere dig en oplevelse udover det sædvanlige!",
+        "src": "2016s L1",
+        "m": [
+          11,
+          15
+        ]
+      },
+      {
+        "s": "Diagrammet nedenfor viser dine valg- muligheder med henblik på valg af ungdomsuddannelse.",
+        "src": "2015v L1",
+        "m": [
+          31,
+          35
+        ]
+      },
+      {
+        "s": "Eleven, forældrene, skolen og UU er samarbejdspartnere, når det drejer sig om valg af uddannelse.",
+        "src": "2015s L1",
+        "m": [
+          78,
+          82
+        ]
+      }
+    ],
+    "et_parti": [
+      {
+        "s": "Derudover har mindretallet avisen Der Nordschleswiger og det politiske parti, Slesvigsk Parti.",
+        "src": "2023s L1",
+        "m": [
+          71,
+          76
+        ]
+      }
+    ],
+    "en_pligt": [
+      {
+        "s": "indstilling var, at 'den der gør sin pligt, kan også kræve sin ret'.",
+        "src": "2023s L1",
+        "m": [
+          37,
+          42
+        ]
+      },
+      {
+        "s": "Jeg synes, vi har pligt til at bakke op om vores lille lokale biograf.",
+        "src": "2019v L1",
+        "m": [
+          18,
+          23
+        ]
+      },
+      {
+        "s": "Alle kommuner har pligt til at tilbyde egu.",
+        "src": "2018v L1",
+        "m": [
+          18,
+          23
+        ]
+      },
+      {
+        "s": "Højskolen har pligt til at underrette Styrelsen for International Rekruttering og Integration, hvis en af deres udenlandske kursister ikke længere er studieaktiv.",
+        "src": "2018v L1",
+        "m": [
+          14,
+          19
+        ]
+      },
+      {
+        "s": "Planen skal være realistisk, under skrevet af dig og dine forældre – og du har pligt til at følge din plan.",
+        "src": "2015v L1",
+        "m": [
+          79,
+          84
+        ]
+      },
+      {
+        "s": "Pligt til at følge en uddannelsesplan Uddannelse er vigtig!",
+        "src": "2015v L1",
+        "m": [
+          0,
+          5
+        ]
+      },
+      {
+        "s": "Alle mellem 15-17 år har pligt til at være i uddannelse, beskæftigelse eller deltage i aktiviteter, der sigter mod at blive parat til en ungdomsuddannelse.",
+        "src": "2015v L1",
+        "m": [
+          25,
+          30
+        ]
+      },
+      {
+        "s": "Du har ret til at få de nødvendige tilbud til at blive uddannelsesparat – og du har pligt til at følge din uddannelsesplan!",
+        "src": "2015v L1",
+        "m": [
+          84,
+          89
+        ]
+      }
+    ],
+    "en_religion": [
+      {
+        "s": "Vikingernes religion asa-troen praktiseres også af en gruppe danskere i dag.",
+        "src": "2022v L1",
+        "m": [
+          12,
+          20
+        ]
+      },
+      {
+        "s": "Asien & Stillehavsområdet I Asien har du mulighed for at udforske religioner og kulturer ligeså varierede som landskaberne i dette fascinerende kontinent.",
+        "src": "2016s L1",
+        "m": [
+          66,
+          76
+        ]
+      }
+    ],
+    "en_kirke": [
+      {
+        "s": "Brosten i plænen omkring kirken markerer endvidere, hvor den gamle kirkes tilbygninger lå.",
+        "src": "2024s L1",
+        "m": [
+          25,
+          31
+        ]
+      },
+      {
+        "s": "Mandø By på den vestlige del af øen har kirke, kro, mølle og campingplads.",
+        "src": "2022s L1",
+        "m": [
+          40,
+          45
+        ]
+      },
+      {
+        "s": "Den erhvervsaktive øbo arbejder typisk med egen virksomhed eller i offentlige jobs som ansat på færgen, skolen, i kirken eller hjemmeplejen.",
+        "src": "2022s L1",
+        "m": [
+          114,
+          120
+        ]
+      },
+      {
+        "s": "De forfulgte Knud til Odense, hvor han flygtede ind i Albani Kirke.",
+        "src": "2021v L1",
+        "m": [
+          61,
+          66
+        ]
+      },
+      {
+        "s": "Kong Knud var kristen, og fordi der skete mirakler ved hans grav i kirken, gjorde paven i Rom ham til helgen.",
+        "src": "2021v L1",
+        "m": [
+          67,
+          73
+        ]
+      },
+      {
+        "s": "UNESCOmonumenterne omfatter de to runesten foran kirken, selve Jelling Kirke og de to store høje nord og syd herfor.",
+        "src": "2020s L1",
+        "m": [
+          49,
+          55
+        ]
+      },
+      {
+        "s": "Rundvisning i Jelling Kirke kan bestilles til kl. 13.00 hver dag.",
+        "src": "2020s L1",
+        "m": [
+          22,
+          27
+        ]
+      }
+    ],
+    "en_geografi": [
+      {
+        "s": "Afstand og geografi er den mest almindelige årsag.",
+        "src": "2018v L2",
+        "m": [
+          11,
+          19
+        ]
+      }
+    ],
+    "en_befolkning": [
+      {
+        "s": "Befolkningsudviklingen Den samlede ø-befolkning ser ud til at være stabiliseret de sidste 10-15 år.",
+        "src": "2022s L1",
+        "m": [
+          37,
+          47
+        ]
+      },
+      {
+        "s": "På nogle øer udgør aldersgruppen 50+ mere end 70 % af befolkningen, mens andre øer synes attraktive for familier med småbørn, og børnenes andel af befolkningen her ligger over landsgennemsnittet.",
+        "src": "2022s L1",
+        "m": [
+          54,
+          66
+        ]
+      },
+      {
+        "s": "Med ideen om et Nationalmuseum fulgte håbet om, at den uvidende befolkning kunne løftes op på et højere moralsk trin og hjælpes til en bedre adfærd.",
+        "src": "2020s L1",
+        "m": [
+          64,
+          74
+        ]
+      },
+      {
+        "s": "Befolkningen, naturen, arbejdet og børnenes skolegang i Peru gjorde det til en meget intens og berigende oplevelse.",
+        "src": "2016s L1",
+        "m": [
+          0,
+          12
+        ]
+      },
+      {
+        "s": "Ved at arbejde frivilligt på et projekt i Afrika, får du et unikt indblik i anderledes kulturer og befolkninger.",
+        "src": "2016s L1",
+        "m": [
+          99,
+          111
+        ]
+      },
+      {
+        "s": "Vores ulønnede praktikpladser vil give dig et enestående indblik i forretningsverdenen, samt det pågældende udviklingslands økonomi, kultur og befolkning.",
+        "src": "2016s L1",
+        "m": [
+          143,
+          153
+        ]
+      },
+      {
+        "s": "At opleve andre lande og deres befolkninger er et privilegium, og som frivillig kan du opnå en stor indsigt i lokale traditioner og skikke.",
+        "src": "2016s L1",
+        "m": [
+          31,
+          43
+        ]
+      }
+    ],
+    "en_historie": [
+      {
+        "s": "Viborg har gennem historien været en af Danmarks betydeligste byer.",
+        "src": "2024s L1",
+        "m": [
+          18,
+          27
+        ]
+      },
+      {
+        "s": "Viborg Domkirke står både stærkt i bybilledet og i Viborg bys lange historie.",
+        "src": "2024s L1",
+        "m": [
+          68,
+          76
+        ]
+      },
+      {
+        "s": "Her gemmer mange kilometer af minegange og underjordiske søer på historien om kalkindustrien, der har skabt fundamentet for Viborg, som byen ser ud i dag.",
+        "src": "2024s L1",
+        "m": [
+          65,
+          74
+        ]
+      },
+      {
+        "s": "I Mønsted Kalkgruber kan man opleve en labyrint af minegange, spændende historie og smuk natur.",
+        "src": "2024s L1",
+        "m": [
+          72,
+          80
+        ]
+      },
+      {
+        "s": "Showet vises hver halve time og fortæller om kalkens og grubernes historie.",
+        "src": "2024s L1",
+        "m": [
+          66,
+          74
+        ]
+      },
+      {
+        "s": "Her kan man lære om kalkgrubernes historie, om livet som kalkminearbejder, og man kan udforske flagermusenes liv.",
+        "src": "2024s L1",
+        "m": [
+          34,
+          42
+        ]
+      },
+      {
+        "s": "Energimuseet formidler energiens historie og den grønne omstilling.",
+        "src": "2024s L1",
+        "m": [
+          33,
+          41
+        ]
+      },
+      {
+        "s": "Hærvejsmarchen i Viborg og aktiviteterne omkring er en international folkelig totaloplevelse med indhold af natur, kultur, historie, sundhed, miljø, oplevelse og livsglæde.",
+        "src": "2024s L1",
+        "m": [
+          123,
+          131
+        ]
+      }
+    ],
+    "en_kultur": [
+      {
+        "s": "Hærvejsmarchen i Viborg og aktiviteterne omkring er en international folkelig totaloplevelse med indhold af natur, kultur, historie, sundhed, miljø, oplevelse og livsglæde.",
+        "src": "2024s L1",
+        "m": [
+          115,
+          121
+        ]
+      },
+      {
+        "s": "Vikingemotiver som symboler i dag Vikingerne har sat deres aftryk på den danske nationalfølelse, og referencer til vikinger ses hyppigt i dansk kultur og på nationale symboler.",
+        "src": "2022v L1",
+        "m": [
+          144,
+          150
+        ]
+      },
+      {
+        "s": "Vikingerne er blevet en fast del af den danske kultur og hverdag.",
+        "src": "2022v L1",
+        "m": [
+          47,
+          53
+        ]
+      },
+      {
+        "s": "Vikingeaktiviteter: Kultur og tro Vikingeaktiviteter er blevet populære som turistattraktioner rundt om i Danmark.",
+        "src": "2022v L1",
+        "m": [
+          20,
+          26
+        ]
+      },
+      {
+        "s": "Det er ikke kun vikingernes kultur, der er meget fokus på i nutiden.",
+        "src": "2022v L1",
+        "m": [
+          28,
+          34
+        ]
+      },
+      {
+        "s": "SPIS! samarbejder bredt med kultur- og erhvervsliv samt uddannelsesinstitutioner.",
+        "src": "2021v L1",
+        "m": [
+          28,
+          34
+        ]
+      },
+      {
+        "s": "Odense er også hjem for Fyns største kunstmuseum, Kunstmuseum Brandts, der ligger ved Brandts Passage og er Danmarks første museum for kunst og visuel kultur.",
+        "src": "2021v L1",
+        "m": [
+          151,
+          157
+        ]
+      },
+      {
+        "s": "Som andre nyuddannede akademikere med sprog, historie eller kultur på eksamensbeviset har hun svært ved at finde et job inden for sit fagområde.",
+        "src": "2021s L2",
+        "m": [
+          60,
+          66
+        ]
+      }
+    ],
+    "en_tradition": [
+      {
+        "s": "En mangeårig tradition er, at der i Viborg i hærvejsugen op til og under marchen arrangeres en stor byfest på pladser og torve i den gamle, historiske by.",
+        "src": "2024s L1",
+        "m": [
+          13,
+          22
+        ]
+      },
+      {
+        "s": "Traditionen med at tage til Viborg og vandre sammen med tusinder af andre mennesker vil vi slet ikke undvære.",
+        "src": "2024s L1",
+        "m": [
+          0,
+          11
+        ]
+      },
+      {
+        "s": "I Kulturugen indgår spændende byvandringer, og arkæologisk udgravning er efterhånden også blevet en tradition.",
+        "src": "2023v L1",
+        "m": [
+          100,
+          109
+        ]
+      },
+      {
+        "s": "Kunst Bornholm har tradition for et aktivt kunstmiljø.",
+        "src": "2023v L1",
+        "m": [
+          19,
+          28
+        ]
+      },
+      {
+        "s": "Kunsthåndværk Traditionen for kunsthåndværk fører langt tilbage på Bornholm.",
+        "src": "2023v L1",
+        "m": [
+          14,
+          25
+        ]
+      },
+      {
+        "s": "Den rige tradition, oprindeligt baseret på produktion af glas og keramik, har ført til en bred, rig og solid symbiose af værksteder, museer, biennaler og uddannelsesfaciliteter på øen.",
+        "src": "2023v L1",
+        "m": [
+          9,
+          18
+        ]
+      },
+      {
+        "s": "I Sønderjylland er der en lang tradition for at fremstille pølser af god kvalitet.",
+        "src": "2023s L1",
+        "m": [
+          31,
+          40
+        ]
+      },
+      {
+        "s": "Den sønderjyske tradition for pølsemageri er udviklet af slagtere, der var uddannet i Tyskland.",
+        "src": "2023s L1",
+        "m": [
+          16,
+          25
+        ]
+      }
+    ],
+    "en_helligdag": [
+      {
+        "s": "I forbindelse med helligdage og i turisthøjsæsonen er der dage med dobbeltture, og tidspunkterne varierer, da sejlplanen er tilpasset flere hensyn.",
+        "src": "2022s L1",
+        "m": [
+          18,
+          28
+        ]
+      },
+      {
+        "s": "I alle weekender, på helligdage samt i udvalgte ferier serveres der brunchbuffet.",
+        "src": "2019v L1",
+        "m": [
+          21,
+          31
+        ]
+      },
+      {
+        "s": "Tidspunkt: kl. 08.30-10.00 eller fra kl. 17.15 på hverdage / kl. 18.15 i weekender/helligdage og sommerferien.",
+        "src": "2017v L1",
+        "m": [
+          83,
+          93
+        ]
+      },
+      {
+        "s": "Kommer man uden for højsæsonerne (sommer og jul) kan man opleve flest aktiviteter i weekender, helligdage og skoleferier.",
+        "src": "2017s L1",
+        "m": [
+          95,
+          105
+        ]
+      }
+    ],
+    "et_klima": [
+      {
+        "s": "Det store skovareal, det kuperede terræn og beliggenheden i Østersøen har stor betydning for klimaet på Bornholm.",
+        "src": "2023v L1",
+        "m": [
+          93,
+          100
+        ]
+      },
+      {
+        "s": "Delprøve 2A – Hvem har ansvaret for klimaet?",
+        "src": "2021s L2",
+        "m": [
+          36,
+          43
+        ]
+      },
+      {
+        "s": "Men drivhusgasserne har ikke udelukkende en negativ indvirkning på klimaet.",
+        "src": "2021s L2",
+        "m": [
+          67,
+          74
+        ]
+      },
+      {
+        "s": "Oceanium spænder fra tropisk regnskov med søkøer i en kunstig flod til kongepingviner i et subantarktisk klima.",
+        "src": "2017v L1",
+        "m": [
+          105,
+          110
+        ]
+      },
+      {
+        "s": "Formålet er, at du skal lære dine klasse- kammerater at kende, så du kan samarbejde med dem og medvirke til at skabe et godt klima i klassen.",
+        "src": "2013s L1",
+        "m": [
+          125,
+          130
+        ]
+      }
+    ],
+    "fjerde": [
+      {
+        "s": "Ifølge den Nationale Sundhedsprofil udarbejdet af Syddansk Universitet og Sundhedsstyrelsen har hver fjerde af de unge mellem 16 og 24 år et højt stressniveau.",
+        "src": "2021v L2",
+        "m": [
+          101,
+          107
+        ]
+      },
+      {
+        "s": "En ny undersøgelse viser, at mere end hver fjerde dansker i dag arbejder hjemme mindst én gang om måneden.",
+        "src": "2014s L2",
+        "m": [
+          43,
+          49
+        ]
+      }
+    ],
+    "at_deltage": [
+      {
+        "s": "Når man har tilmeldt sig som deltager til årets hærvejsmarch, modtager man en kvittering for sin betaling.",
+        "src": "2024s L1",
+        "m": [
+          29,
+          37
+        ]
+      },
+      {
+        "s": "I kulturugens kunstspor kan du besøge udstillinger, møde kunstnere og selv deltage i workshops.",
+        "src": "2023v L1",
+        "m": [
+          75,
+          82
+        ]
+      },
+      {
+        "s": "Alle danske øer uden fast broforbindelse kan ansøge og deltage i konkurrencen.",
+        "src": "2022s L1",
+        "m": [
+          55,
+          62
+        ]
+      },
+      {
+        "s": "Ø-lejren var åben for kvinder og børn, dog måtte drenge over 12 år ikke deltage.",
+        "src": "2022s L1",
+        "m": [
+          72,
+          79
+        ]
+      },
+      {
+        "s": "Man kan tilmelde sig som ambassadør og hjælpe med at sprede budskabet om festivalen og rekruttere venner og personer i eget netværk til at deltage i festivalen ved at sælge billetter.",
+        "src": "2021v L1",
+        "m": [
+          139,
+          146
+        ]
+      },
+      {
+        "s": "Kurser på folkehøjskoler og hos oplysningsforbund er i princippet for voksne over 18 år, men sammen med en voksen kan børn deltage i kurser, der er målrettet familier.",
+        "src": "2020v L1",
+        "m": [
+          123,
+          130
+        ]
+      },
+      {
+        "s": "Måden at deltage i fællesskaber på er anderledes, hvilket ikke mindst skyldes den teknologiske udvikling, så folk nu bruger meget tid på nettet, især de sociale medier.",
+        "src": "2020v L1",
+        "m": [
+          9,
+          16
+        ]
+      },
+      {
+        "s": "Det er dog stadig et centralt element i folkeoplysningen, at den skal give kursusdeltagerne fællesskabsfølelse og udvikle kursusdeltagernes personlige egenskaber og lyst til at deltage i samfundslivet.",
+        "src": "2020v L1",
+        "m": [
+          177,
+          184
         ]
       }
     ]

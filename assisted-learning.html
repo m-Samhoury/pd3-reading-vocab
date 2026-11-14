@@ -940,7 +940,7 @@ input.vgap.right { border-color: var(--ok); background: var(--ok-bg); } input.vg
 </div>
 <main class="wrap" id="app"><p class="soft">…</p></main>
 <footer class="wrap foot" id="foot"></footer>
-<script src="assisted-learning-core.054b0fe53d.js" data-extra="assisted-learning-extra.a1ac6b8dbd.js"></script>
+<script src="assisted-learning-core.02eee8ed1c.js" data-extra="assisted-learning-extra.8ff82691f3.js"></script>
 <script>
 "use strict";
 // ---------- interface language (shared with the other pages via localStorage "pd3.lang") ----------
@@ -1353,7 +1353,7 @@ const GROUPS = {
   "l1_ord": ["L1 key words", "L1-nøgleord", 2], "l1_verb": ["L1 verbs", "L1-verber", 2], "l2_ord": ["L2 question words", "L2-spørgeord", 2],
   "modalverbum": ["Modal verbs", "Modalverber", 2], "l3_medfoere": ["L3: lead to / cause", "L3: føre til / forårsage", 2],
   "l3_forhindre": ["L3: prevent / limit", "L3: forhindre / begrænse", 2], "l3_forklare": ["L3: say / claim", "L3: sige / påstå", 2],
-  "l3_ord": ["L3 words", "L3-ord", 2], "praep": ["Fixed prepositions", "Faste præpositioner", 2], "adjektiv": ["Adjectives", "Adjektiver", 3], "nye_ord": ["New words", "Nye ord", 3], "vaernepligt": ["Conscription", "Værnepligt", 3],
+  "l3_ord": ["L3 words", "L3-ord", 2], "praep": ["Fixed prepositions", "Faste præpositioner", 2], "adjektiv": ["Adjectives", "Adjektiver", 3], "nye_ord": ["New words", "Nye ord", 3], "medborgerskab": ["Citizenship topics", "Medborgerskab", 3], "vaernepligt": ["Conscription", "Værnepligt", 3],
 };
 const GROUP_ORDER = Object.keys(GROUPS);
 
@@ -1631,7 +1631,7 @@ function load() {
   const saved = readProgress();
   for (const [id, c] of Object.entries(deck.cards)) DB.cards[id] = { id, ...c, history: c.history || [], ...(saved[id] || {}) };
   addFreqGroups();
-  MINE = mineRead(); mineIndex();
+  MINE = mineRead(); minePresets(deck.minePresets); mineIndex();
   lgIndex();
   // ask the browser not to clear this page's storage when space runs low (Chrome/Firefox; Safari decides itself)
   if (navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(() => {});
@@ -1958,6 +1958,25 @@ function mineSave() {
   try { localStorage.setItem(MINE_KEY, JSON.stringify({ groups: MINE, saved: new Date().toISOString() })); }
   catch (e) { storageOK = false; }
   mineIndex();
+}
+// word lists Claude prepared for a named group (deck.minePresets: [{key, name, ids}]): each is put into the group of that
+// name once (made if missing), so words the learner later removes stay removed
+const PRESET_KEY = "pd3-assisted-learning:mine-presets:v1";
+function minePresets(list) {
+  if (!Array.isArray(list) || !list.length) return;
+  let done = [];
+  try { done = JSON.parse(localStorage.getItem(PRESET_KEY) || "[]"); if (!Array.isArray(done)) done = []; } catch (e) { return; }
+  const fresh = list.filter(p => p && p.key && p.name && Array.isArray(p.ids) && !done.includes(p.key));
+  if (!fresh.length) return;
+  const norm = x => String(x).trim().toLowerCase().replace(/\s+/g, " ");
+  for (const p of fresh) {
+    let g = MINE.find(m => norm(m.name) === norm(p.name));
+    if (!g) { g = { id: "mine_" + Date.now().toString(36) + "_" + done.length, name: p.name, ids: [] }; MINE.push(g); }
+    g.ids = [...new Set([...g.ids, ...p.ids.filter(id => DB.cards[id])])];
+    done.push(p.key);
+  }
+  mineSave();
+  if (storageOK) try { localStorage.setItem(PRESET_KEY, JSON.stringify(done)); } catch (e) {}
 }
 // the groups become ordinary groups of tier 5: groupsOf, byGroup, Lær, Gentag, Test and flashcards all read them
 function mineIndex() {
