@@ -849,7 +849,7 @@ def build_page():
     senses = {cid: {k: v for k, v in e.items() if k != "sentences"} for cid, e in load("senses.json", {}).items()}
     deck = {"cards": cards, "profile": load("profile.json", {}), "senses": senses, "tips": load("tips.json", {}), "info": load("wordinfo.json", {}), "grammar": load("grammar.json", {}),
             "logic": load("logic.json", {}), "l3": load("l3-gaps.json", {}).get("items", []), "lgs": load("logic-drill.json", {}).get("items", []), "mock": load("mock-l3.json", {}).get("items", []), "l2b": load("l2b.json", {}),
-            "sentences": load("exam-sentences.json", {}).get("sentences", {}), "images": load("images.json", {}), "built": TODAY.isoformat()}
+            "sentences": load("exam-sentences.json", {}).get("sentences", {}), "images": load("images.json", {}), "minePresets": load("mine-presets.json", []), "built": TODAY.isoformat()}
     deck["l2ready"] = bool((deck["l2b"] or {}).get("gaps"))         # the home screen's L2B banner, without the trainer data
     extra = {k: deck.pop(k) for k in DECK_EXTRA}
     parts = {"assisted-learning-core": deck_js("PD3_DECK", deck), "assisted-learning-extra": deck_js("PD3_DECK_EXTRA", extra)}

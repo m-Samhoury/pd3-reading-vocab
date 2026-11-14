@@ -5924,11 +5924,11 @@
     },
     "en_rettighed": {
       "word": "en rettighed",
-      "meaning": "a right",
+      "meaning": "a right (borgernes rettigheder = citizens' rights)",
       "group": "fg_04",
       "example": "Alle ansatte har de samme rettigheder.",
       "priority": 4,
-      "note": null,
+      "note": "often plural: rettigheder og pligter; ≈ have ret til noget",
       "ef": 2.5,
       "interval": 0,
       "reps": 0,
@@ -9805,11 +9805,11 @@
     },
     "at_vælge": {
       "word": "at vælge",
-      "meaning": "to choose",
+      "meaning": "to elect (also: to choose)",
       "group": "fg_15",
       "example": "Flere vælger at bo på landet.",
       "priority": 4,
-      "note": null,
+      "note": "Udtale [væljø]. vælge – valgte – valgt; blive valgt til noget; vælge mellem A og B",
       "ef": 2.5,
       "interval": 0,
       "reps": 0,
@@ -10610,7 +10610,7 @@
     },
     "en_ligestilling": {
       "word": "en ligestilling (mellem)",
-      "meaning": "equality (between)",
+      "meaning": "equal rights and opportunities (particularly between men and women)",
       "group": "vaernepligt",
       "example": "Forslaget handler om ligestilling mellem kønnene.",
       "priority": 3,
@@ -11001,6 +11001,1203 @@
         ],
         "url": "https://ordnet.dk/ddo/ordbog?query=rekruttere"
       }
+    },
+    "en_skole": {
+      "word": "en skole",
+      "meaning": "school",
+      "group": "medborgerskab",
+      "example": "Mine børn går i skole tæt på, hvor vi bor.",
+      "priority": 3,
+      "note": "gå i skole (go to school) – i, ikke på; folkeskolen = the public school",
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "skole",
+        "senses": [
+          "institution hvor der gives undervisning (for børn og unge) — også om selve undervisningen",
+          "samtlige elever (og ansatte) på en sådan institution",
+          "bygning hvor der gives undervisning",
+          "forhold i livet der virker uddannende og udviklende (uden at omfatte decideret undervisning)"
+        ],
+        "cite": [
+          "Søren på 6 .. skulle vækkes og i skole kl. 8",
+          "\"Hvad lærer I i skolen?\" \"Vi lærer at læse og regne, og om andre lande og dyr og sådan,\" svarede jeg høfligt",
+          "Samme dag blev vi kaldt ned i aulaen. Hele skolen fra tredje klasse og op efter!",
+          "kan du nå at lave lektierne ovre på skolen?"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=skole"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
+    },
+    "en_uddannelse": {
+      "word": "en uddannelse",
+      "meaning": "education (incl. vocational training and higher education)",
+      "group": "medborgerskab",
+      "example": "Når jeg har bestået PD3, vil jeg gerne tage en uddannelse som sygeplejerske.",
+      "priority": 3,
+      "note": "tage en uddannelse som … (train as …) ≠ undervisning (teaching/lessons)",
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "uddannelse",
+        "senses": [
+          "struktureret forløb bestående af undervisning der sætter modtageren i stand til at udøve et bestemt erhverv, udføre en bestemt opgave m.m.",
+          "det at (lade nogen) gennemgå et sådant forløb"
+        ],
+        "cite": [
+          "Når uddannelsen er gennemført får man et bevis udstedt af skolen",
+          "De unge skal sikres en ret til en uddannelse inden for det område, der interesserer dem",
+          "hun har fortrudt, at hun opgav at gøre uddannelsen færdig",
+          "Både politikerne og fagbevægelsen mener, at øget uddannelse af lønmodtagerne er det, der på langt sigt vil bringe arbejdsløsheden ned"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=uddannelse"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
+    },
+    "et_dagtilbud": {
+      "word": "et dagtilbud",
+      "meaning": "childcare services (vuggestue, børnehave, dagpleje)",
+      "group": "medborgerskab",
+      "example": "Næsten alle danske børn er i et dagtilbud, mens forældrene arbejder.",
+      "priority": 3,
+      "note": "samlebetegnelse (umbrella term) for vuggestue, børnehave og dagpleje; mest officielt sprog",
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, intetkøn",
+        "head": "dagtilbud",
+        "senses": [
+          "mulighed for børnepasning i dagtimerne der tilbydes af fx en kommune",
+          "mulighed for aktivitet eller service der tilbydes til særlige grupper i dagtimerne, fx ældre, misbrugere eller folk med funktionsnedsættelse"
+        ],
+        "cite": [
+          "Den formidlede dagpleje betragtes som et dagtilbud på lige fod med daginstitutioner",
+          "Regeringen har netop et nyt udspil på vej, som skal løfte kvaliteten i landets dagtilbud",
+          "Danske børn tilbringer en stor del af deres tid i dagtilbud, fritidshjem og skole",
+          "Dagtilbuddet består af en vuggestue, en integreret institution og en børnehave"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=dagtilbud"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
+    },
+    "en_vuggestue": {
+      "word": "en vuggestue",
+      "meaning": "nursery (for children under 2 years and 10 months)",
+      "group": "medborgerskab",
+      "example": "Vores datter startede i vuggestue, da hun var ti måneder gammel.",
+      "priority": 3,
+      "note": "gå i vuggestue (i!); vugge (cradle) + stue (room)",
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "vuggestue",
+        "senses": [
+          "daginstitution hvor børn i alderen mellem ca. 6 måneder og 3 år passes af pædagogisk uddannet personale"
+        ],
+        "cite": [
+          "Jeg står op om morgenen, skifter Mads, giver ham mad, klæ'r ham på og kører ham i vuggestue"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=vuggestue"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
+    },
+    "en_børnehave": {
+      "word": "en børnehave",
+      "meaning": "kindergarten/preschool (typically ages 2,10–6)",
+      "group": "medborgerskab",
+      "example": "Min søn går i børnehave fra klokken otte til fire.",
+      "priority": 3,
+      "note": "gå i børnehave (i, ikke på); before school – børnehaveklasse/0. klasse is the first school year",
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "børnehave",
+        "senses": [
+          "daginstitution hvor 3-6-årige børn passes og beskæftiges pædagogisk af uddannet personale",
+          "bygning der rummer en sådan institution",
+          "børn og ansatte fra en sådan institution"
+        ],
+        "cite": [
+          "I vuggestuen og børnehaven lærer vi også sprog, lærer at omgås andre end familien, at begå os i nye sammenhænge",
+          "I alrummet i børnehaven leder Kalle og Susanne efter en bog til højtlæsning",
+          "De havde passeret en børnehave på udflugt. Ungerne gik to og to. Hånd i hånd"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=børnehave"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
+    },
+    "en_dagpleje": {
+      "word": "en dagpleje",
+      "meaning": "childminding",
+      "group": "medborgerskab",
+      "example": "I dagplejen bliver børnene passet hjemme hos en dagplejer sammen med tre-fire andre børn.",
+      "priority": 3,
+      "note": "dagpleje (the scheme) ≠ dagplejer (the person, the childminder)",
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "dagpleje",
+        "senses": [
+          "pasningsordning hvor små børn passes i private hjem mens forældrene er på arbejde el.lign.",
+          "sted hvor denne pasning foregår"
+        ],
+        "cite": [
+          "Der skal satses mere på den billigere private dagpleje frem for de dyre daginstitutioner",
+          "Vi har været heldige at få plads til Camilla i den samme dagpleje hvor Stefan bliver passet"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=dagpleje"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
+    },
+    "et_arbejdsmarked": {
+      "word": "et arbejdsmarked",
+      "meaning": "the labour market (jobs, employment, unemployment, working conditions)",
+      "group": "medborgerskab",
+      "example": "Det er vigtigt for integrationen, at flere indvandrere kommer ud på arbejdsmarkedet.",
+      "priority": 3,
+      "note": "komme ud på arbejdsmarkedet (på!); arbejdsmarkedets parter = employers + trade unions",
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, intetkøn",
+        "head": "arbejdsmarked",
+        "senses": [
+          "personer, virksomheder, institutioner m.m. der tilsammen udgør grundlaget for et samfunds udbud af og efterspørgsel efter arbejdskraft og arbejdspladser"
+        ],
+        "cite": [
+          "Efterhånden som der kom flere og flere kvinder ud på arbejdsmarkedet, oplevede manden sig selv i en ny rolle"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=arbejdsmarked"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
+    },
+    "et_erhvervsliv": {
+      "word": "et erhvervsliv",
+      "meaning": "the business sector (companies, industries and economic activity)",
+      "group": "medborgerskab",
+      "example": "Det danske erhvervsliv mangler kvalificeret arbejdskraft, især inden for IT og sundhed.",
+      "priority": 3,
+      "note": "only singular, mostly definite: erhvervslivet; ≠ arbejdsliv (working life)",
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, intetkøn",
+        "head": "erhvervsliv",
+        "senses": [
+          "et lands eller et geografisk områdes private (og offentlige) virksomheder under ét"
+        ],
+        "cite": [
+          "Erhvervslivet får mere og mere brug for medarbejdere, der både har forstand på edb og almindeligt kontorarbejde"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=erhvervsliv"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
+    },
+    "et_velfærdssamfund": {
+      "word": "et velfærdssamfund",
+      "meaning": "welfare society (the state provides services and financial support, e.g. healthcare, education and unemployment benefits)",
+      "group": "medborgerskab",
+      "example": "I det danske velfærdssamfund betaler vi høj skat, men til gengæld er hospitaler og uddannelse gratis.",
+      "priority": 3,
+      "note": "bidrage til velfærdssamfundet; ≈ velfærdsstaten",
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, intetkøn",
+        "head": "velfærdssamfund",
+        "senses": [
+          "samfund der bygger på idéen om generel velfærd for alle borgere i samfundet"
+        ],
+        "cite": [
+          "Det danske velfærdssamfund har fejl og mangler, ja – men det bygger på en idé om, at vi passer på hinanden",
+          "Det er vigtigt at vi alle bidrager til et godt velfærdssamfund",
+          "Problemet er at vi i velfærdssamfundet er kommet til at nyde mere end vi yder!"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=velfærdssamfund"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
+    },
+    "et_foreningsliv": {
+      "word": "et foreningsliv",
+      "meaning": "associations (sports clubs, volunteer organisations, hobby groups)",
+      "group": "medborgerskab",
+      "example": "Mange danskere er medlem af en forening, og foreningslivet er en vigtig del af demokratiet.",
+      "priority": 3,
+      "note": "være medlem af en forening; tage del i det lokale foreningsliv",
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, intetkøn",
+        "head": "foreningsliv",
+        "senses": [
+          "alle foreninger og deres aktiviteter betragtet under ét, fx i en by eller et bestemt område"
+        ],
+        "cite": [
+          "Jeg tager del i det lokale foreningsliv. Bl.a. har jeg indtil for nylig været med i bestyrelsen for den lokale gymnastikforening"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=foreningsliv"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
+    },
+    "et_fritidsliv": {
+      "word": "et fritidsliv",
+      "meaning": "leisure activities",
+      "group": "medborgerskab",
+      "example": "Mit fritidsliv består mest af fodbold og tid sammen med familien.",
+      "priority": 3,
+      "note": "fritid (free time) → fritidsliv (what you do in it); i min fritid",
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, intetkøn",
+        "head": "fritidsliv",
+        "senses": [
+          "det liv man fører i sin fritid; den periode af livet hvor man har fri"
+        ],
+        "cite": [
+          "Hvad skal danske børn dog med verdens suverænt længste skoledag? Er deres fritidsliv virkelig så fattigt, at det er nødvendigt at lukke det mere eller mindre ned?",
+          "Alle skal kunne få en uddannelse, en plads på arbejdsmarkedet og muligheden for et aktivt fritidsliv i f.eks. en fodboldklub eller forening",
+          "Masser af danskere er erhvervsaktive langt op i 80erne, har også et spændende fritidsliv og er lede og kede af betegnelser som f.eks. ældrebyrden"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=fritidsliv"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
+    },
+    "en_sundhed": {
+      "word": "en sundhed",
+      "meaning": "health",
+      "group": "medborgerskab",
+      "example": "Det offentlige bruger mange penge på sundhed, så alle kan gå gratis til lægen.",
+      "priority": 3,
+      "note": "sundhed (health in general) ≈ helbred (one person's health: mit helbred); sund ↔ usund",
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "sundhed",
+        "senses": [
+          "(det at være i) god helbredstilstand; det at være sund"
+        ],
+        "cite": [
+          "der er en snæver sammenhæng mellem kost, ernæring og sundhed"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=sundhed"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
+    },
+    "en_sygdom": {
+      "word": "en sygdom",
+      "meaning": "illness",
+      "group": "medborgerskab",
+      "example": "Hvis man bliver alvorligt syg, betaler det offentlige behandlingen af ens sygdom.",
+      "priority": 3,
+      "note": "syg (adj.) → sygdom (noun); lide af en sygdom; pl. sygdomme (mm)",
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "sygdom",
+        "senses": [
+          "fysisk eller psykisk forstyrrelse af et organ eller en kropsfunktion, som viser sig ved et eller flere bestemte symptomer"
+        ],
+        "cite": [
+          "Skizofreni er blandt de 5 hyppigste sygdomme (fysiske sygdomme medregnet) i de vestlige lande",
+          "Mangel på rent vand er hovedårsagen til sygdomme i Den tredje Verden"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=sygdom"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
+    },
+    "et_demokrati": {
+      "word": "et demokrati",
+      "meaning": "democracy",
+      "group": "medborgerskab",
+      "example": "I et demokrati har alle voksne borgere ret til at stemme og sige deres mening.",
+      "priority": 3,
+      "note": "adj. demokratisk; direkte ≠ repræsentativt demokrati",
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, intetkøn",
+        "head": "demokrati",
+        "senses": [
+          "styreform hvor den voksne del af befolkningen øver politisk indflydelse gennem folkeafstemninger eller valg af repræsentanter til politiske forsamlinger, mens mindretalsrettigheder sikres gennem bl.a. ytrings- og …",
+          "land hvis forfatning og politiske liv bygger på demokratiske principper",
+          "styreform hvor man søger at give de implicerede parter i en organisation, en forening, et fællesskab el.lign. indflydelse på de beslutninger der træffes"
+        ],
+        "cite": [
+          "Det er helt afgørende for demokratiet, at der er en åben debat, hvor mennesker frit kan danne sin egen mening og derudfra vælge side",
+          "Krisen presser samtidig Sydamerikas unge og skrøbelige demokratier",
+          "Der kan ikke opstilles noget entydigt skema for, hvordan selvforvaltning kan forbindes med mere demokrati"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=demokrati"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
+    },
+    "en_grundlov": {
+      "word": "en grundlov",
+      "meaning": "the Constitution (Grundloven)",
+      "group": "medborgerskab",
+      "example": "Grundloven blev underskrevet den 5. juni 1849, og derfor fejrer vi grundlovsdag.",
+      "priority": 3,
+      "note": "Grundloven (capital G, definite) = Denmark's constitution; grundlovsdag 5. juni",
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "grundlov",
+        "senses": [
+          "lov hvori de grundlæggende bestemmelser for et lands forfatning og for borgernes rettigheder og pligter er angivet — står over andre love og er som oftest beskyttet mod forandring"
+        ],
+        "cite": [
+          "Ifølge grundlovens § 19 er udenrigspolitikken et suverænt dansk anliggende"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=grundlov"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
+    },
+    "et_retssamfund": {
+      "word": "et retssamfund",
+      "meaning": "the legal system and the rule of law (laws, courts, justice, legal rights)",
+      "group": "medborgerskab",
+      "example": "I et retssamfund er man uskyldig, indtil det modsatte er bevist.",
+      "priority": 3,
+      "note": "ret = law/justice (retten = the court); retssikkerhed = legal certainty",
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, intetkøn",
+        "head": "retssamfund",
+        "senses": [
+          "samfund der bygger på lov og ret, har uafhængige domstole og yder den enkelte borger en høj grad af retssikkerhed"
+        ],
+        "cite": [
+          "I et demokratisk retssamfund som det danske er det nu sådan, at en anklaget er uskyldig, indtil det modsatte er bevist"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=retssamfund"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
+    },
+    "et_folketing": {
+      "word": "et folketing",
+      "meaning": "parliament (Folketinget is Denmark's parliament)",
+      "group": "medborgerskab",
+      "example": "Folketinget har 179 medlemmer, og det er Folketinget, der vedtager landets love.",
+      "priority": 3,
+      "note": "Folketinget (capital F, definite); sidde i Folketinget; folketingsvalg",
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, intetkøn",
+        "head": "folketing",
+        "senses": [
+          "folkevalgt forsamling der udgør den øverste lovgivende magt i et land"
+        ],
+        "cite": [
+          "Altinget var en slags nordboernes folketing"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=folketing"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
+    },
+    "en_regering": {
+      "word": "en regering",
+      "meaning": "government (regeringen)",
+      "group": "medborgerskab",
+      "example": "Regeringen består af statsministeren og de andre ministre.",
+      "priority": 3,
+      "note": "regering (government: the ministers) ≠ Folketinget (parliament); danne regering",
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "regering",
+        "senses": [
+          "en stats øverste politiske ledelse der udgøres af en regeringschef og et antal ministre",
+          "det at regere en stat"
+        ],
+        "cite": [
+          "Toppolitikere fra regeringen og oppositionen er vildt uenige om, hvor mange danskere, der er uden arbejde",
+          "Ministrene er ansvarlige for regeringens førelse"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=regering"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
+    },
+    "et_selvstyre": {
+      "word": "et selvstyre",
+      "meaning": "self-rule (det lokale selvstyre: how municipalities and regions govern local affairs)",
+      "group": "medborgerskab",
+      "example": "På grund af det kommunale selvstyre kan kommunerne selv bestemme meget om skoler og ældrepleje.",
+      "priority": 3,
+      "note": "det kommunale/lokale selvstyre; Grønland og Færøerne har selvstyre",
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, intetkøn",
+        "head": "selvstyre",
+        "senses": [
+          "ret til at styre og bestemme over sig selv (i temmelig høj grad)"
+        ],
+        "cite": [
+          "Regeringen ønsker at fremme det kommunale selvstyre og give borgerne øget mulighed for indflydelse"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=selvstyre"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
+    },
+    "et_folkestyre": {
+      "word": "et folkestyre",
+      "meaning": "democracy in practice / rule by the people",
+      "group": "medborgerskab",
+      "example": "Folkestyret bygger på, at borgerne vælger deres repræsentanter.",
+      "priority": 3,
+      "note": "folkestyre ≈ demokrati (Danish-root word: folk + styre)",
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, intetkøn",
+        "head": "folkestyre",
+        "senses": [
+          "politisk styreform hvor folket har indflydelse på de politiske beslutninger i kraft af personer som det har valgt til at repræsentere sig"
+        ],
+        "cite": [
+          "Det er at forråde folkestyret at presse en union igennem mod flertallets vilje"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=folkestyre"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
+    },
+    "et_valg": {
+      "word": "et valg",
+      "meaning": "an election",
+      "group": "medborgerskab",
+      "example": "I Danmark er der valg til Folketinget mindst hvert fjerde år.",
+      "priority": 3,
+      "note": "valg = election AND choice; stemme ved et valg; vælge – valgte – valgt",
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, intetkøn",
+        "head": "valg",
+        "senses": [
+          "det at en større eller mindre gruppe vælgere ved afstemning udpeger én eller flere personer til at sidde i fx et parlament eller en bestyrelse, til at beklæde et offentligt embede el.lign.",
+          "det at bestemme sig for én af to eller flere muligheder",
+          "mulighed for at vælge",
+          "person, genstand, ordning el.lign. som er blevet valgt"
+        ],
+        "cite": [
+          "Når hun ryger ud af folketinget ved næste valg, vil hun gøre sin uddannelse færdig og se noget mere til sin familie",
+          "Forældrene bør have valget mellem forskellige pasningsordninger, heltids, deltids, private ordninger eller at passe barnet selv",
+          "Den norske Nobelkomite gjorde et godt valg, da den besluttede sig for at tildele Lech Walesa årets fredspris"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=valg"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
+    },
+    "et_parti": {
+      "word": "et parti",
+      "meaning": "a political party",
+      "group": "medborgerskab",
+      "example": "Der sidder over ti partier i Folketinget.",
+      "priority": 3,
+      "note": "parti (political party) ≠ fest (party/celebration)! tage parti for nogen = take sides",
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, intetkøn",
+        "head": "parti",
+        "senses": [
+          "sammenslutning af personer med fælles politiske holdninger som søger at påvirke samfundsudviklingen ved at få valgt repræsentanter ind i offentlige forsamlinger, fx et parlament",
+          "et enkelt spil; runde eller omgang i et spil eller en (sports)kamp — især i forbindelse med kortspil og skak"
+        ],
+        "cite": [
+          "Vi mistede desværre to mandater ved byrådsvalget, men vi er stadig det næststørste parti i byrådet",
+          "Bobby Fischer vandt det 16. parti over Boris Spasskij i eks-verdensmesterdysten i Beograd"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=parti"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
+    },
+    "en_pligt": {
+      "word": "en pligt",
+      "meaning": "a duty / responsibility",
+      "group": "medborgerskab",
+      "example": "Forældre har pligt til at sørge for, at deres børn får undervisning.",
+      "priority": 3,
+      "note": "pligt til at + infinitiv; rettigheder og pligter; gøre sin pligt",
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "pligt",
+        "senses": [
+          "indre tilskyndelse til at handle på en bestemt måde fordi ens samvittighed eller nogle sociale normer påbyder det",
+          "opgave eller krav som man er pålagt af ydre nødvendighed, fx fordi det hører til ens arbejde, eller fordi det er påbudt ved lov"
+        ],
+        "cite": [
+          "Hun gjorde det mere af pligt end af interesse",
+          "Rajiv [: Gandhi] følte det som sin pligt at gå ind i politik",
+          "Vi har så mange pligter derhjemme, så der dårligt nok er tid til vores lektier",
+          "Medlemmerne har pligt til at deltage i lærerrådets møder"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=pligt"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
+    },
+    "en_religion": {
+      "word": "en religion",
+      "meaning": "religion",
+      "group": "medborgerskab",
+      "example": "I Danmark er der religionsfrihed, så man selv kan vælge sin religion.",
+      "priority": 3,
+      "note": "religionsfrihed = freedom of religion; adj. religiøs",
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "religion",
+        "senses": [
+          "et samfunds eller en kulturs organiserede tilbedelse af en gud, guder eller overmenneskelige kræfter og den livsopfattelse og de ritualer der knytter sig hertil",
+          "personlig tro og livsførelse i overensstemmelse hermed",
+          "skole- eller studiefag hvor der undervises i forskellige religioners livsopfattelse, opbygning og udøvelse"
+        ],
+        "cite": [
+          "Religionen udstikker rammer for, hvad der er god og dårlig moral",
+          "vor grundlov garanterer jo alle ligeret til at praktisere deres religion efter eget valg"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=religion"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
+    },
+    "en_kirke": {
+      "word": "en kirke",
+      "meaning": "the Church",
+      "group": "medborgerskab",
+      "example": "De fleste danskere er medlem af folkekirken, men kun få går i kirke hver søndag.",
+      "priority": 3,
+      "note": "gå i kirke (attend church); Folkekirken = the Danish (Evangelical Lutheran) national church",
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "kirke",
+        "senses": [
+          "bygning indrettet og beregnet til afholdelse af offentlig, kristen gudstjeneste",
+          "kristent trossamfund",
+          "trossamfund og gejstlighed som institution og politisk magt"
+        ],
+        "cite": [
+          "Slovenien og Kroatien tilhører den katolske kirke. Serbien den græsk-ortodokse kirke",
+          "ude på landet [: i Polen] opfordrer den katolske kirke vælgerne til at støtte Solidaritet"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=kirke"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
+    },
+    "en_omverden": {
+      "word": "en omverden",
+      "meaning": "the wider world (Denmark's relations with other countries and international organisations)",
+      "group": "medborgerskab",
+      "example": "Danmark samarbejder med omverdenen gennem fx EU, NATO og FN.",
+      "priority": 3,
+      "note": "mostly definite: omverdenen; forholdet til omverdenen",
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "omverden",
+        "senses": [
+          "personer, institutioner og ting som man er omgivet af og har kontakt med"
+        ],
+        "cite": [
+          "en banks konkurs kan forringe omverdenens tillid til hele den øvrige banksektor",
+          "Armeniens præsident appellerer til omverdenen om at hjælpe republikken med humanitær hjælp og brændsel",
+          "Barnets opfattelse af den fysiske omverden er direkte og umiddelbar"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=omverden"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
+    },
+    "en_geografi": {
+      "word": "en geografi",
+      "meaning": "geography",
+      "group": "medborgerskab",
+      "example": "Danmark består af Jylland og flere hundrede øer, fx Fyn og Sjælland.",
+      "priority": 3,
+      "note": "adj. geografisk; Danmarks geografi: Jylland, Fyn, Sjælland",
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "geografi",
+        "senses": [
+          "videnskab eller undervisningsfag der beskriver Jordens lande, deres befolkninger og forholdet mellem natur og mennesker",
+          "karakteristiske fysiske træk ved et land, en egn, en bygning osv., opfattet som på et landkort"
+        ],
+        "cite": [
+          "han ville lære mere gennem en måneds ophold i Afrika end [ved] en måneds skoleundervisning i geografi",
+          "Brugsen, valgmenighedskirken og højskolen lå som knudepunkterne i byens geografi"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=geografi"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
+    },
+    "en_befolkning": {
+      "word": "en befolkning",
+      "meaning": "population",
+      "group": "medborgerskab",
+      "example": "Danmarks befolkning er på cirka seks millioner mennesker.",
+      "priority": 3,
+      "note": "en befolkning på 6 millioner (på!); befolkningen = the people/the public",
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "befolkning",
+        "senses": [
+          "samlet antal beboere i et område, et land, en verdensdel el.lign."
+        ],
+        "cite": [
+          "Tanzania har en befolkning på 24 mio. indbyggere",
+          "Da man besluttede, at der skulle fri abort i Danmark, da var der ikke flertal for det ude i befolkningen"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=befolkning"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
+    },
+    "en_historie": {
+      "word": "en historie",
+      "meaning": "history",
+      "group": "medborgerskab",
+      "example": "Danmarks historie går tilbage til vikingetiden og endnu længere.",
+      "priority": 3,
+      "note": "historie = history AND story; fortælle en historie; i Danmarks historie",
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "historie",
+        "senses": [
+          "det samlede udviklingsforløb indtil nutiden, fx for et land, et folk, en epoke, en virksomhed eller et fagligt område — ofte om politiske, økonomiske, kulturelle eller sociale forhold",
+          "videnskabelig disciplin eller undervisningsfag der omfatter studiet af og beskæftigelsen med fortidige forhold og begivenheder",
+          "mundtlig eller skriftlig beretning der gengiver et opdigtet eller virkeligt handlingsforløb",
+          "beretning om eller omtale af en begivenhed, sag, affære el.lign., bragt som artikel i en avis eller et blad eller som indslag i et andet medie — også om den enkelte artikel eller det enkelte indslag"
+        ],
+        "cite": [
+          "Knud Rasmussen er ubestridt den største folkehelt i Grønlands historie",
+          "Ronald Reagan kaldte i sin tale Nixon for en patriot og sagde, at hvad han havde opnået udenrigspolitisk havde skaffet ham en særlig plads i historien",
+          "bedstefar fortalte gruopvækkende historier fra krigens gang"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=historie"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
+    },
+    "en_kultur": {
+      "word": "en kultur",
+      "meaning": "culture",
+      "group": "medborgerskab",
+      "example": "Dansk kultur handler meget om hygge, fællesskab og foreningsliv.",
+      "priority": 3,
+      "note": "adj. kulturel; kulturforskelle; ≈ levevis",
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "kultur",
+        "senses": [
+          "levevis og forestillingsverden der kendetegner en bestemt befolkningsgruppe i en bestemt periode, dvs. alle de materielle og ikkematerielle resultater af menneskelig aktivitet der føres videre fra generation til …",
+          "befolkningsgruppe der har fælles levevis og forestillingsverden",
+          "(resultat af) menneskers forsøg på at skabe åndelige oplevelser for sig selv og hinanden — fx kunst, litteratur, musik og videnskab"
+        ],
+        "cite": [
+          "Næsten alle kulturer har en myte om verdens skabelse",
+          "Man kan sige, at en arbejdsplads har sin særlige kultur – bestemte traditioner, ritualer, ceremonier, rutiner samt myter",
+          "I medborgerhusene blomstrer den folkelige kultur. Her holder den lokale befolkning sine møder, debatter, musikarrangementer, kunstudstillinger, teaterforestillinger, bryllupper …"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=kultur"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
+    },
+    "en_tradition": {
+      "word": "en tradition",
+      "meaning": "tradition",
+      "group": "medborgerskab",
+      "example": "Det er en tradition i Danmark at danse om juletræet juleaften.",
+      "priority": 3,
+      "note": "tradition for at + inf.; traditionen tro (as always); adj. traditionel",
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "tradition",
+        "senses": [
+          "overlevering af normer, værdier, skikke og forestillinger til efterfølgende generationer",
+          "(kulturbestemt) skik, vane eller praksis som er overtaget fra eller taget op igen efter tidligere generationer og gentages efter et bestemt mønster eller bestemte regler",
+          "handling som er blevet gentaget et antal gange, og som efterhånden er blevet en fast tilbagevendende begivenhed; fremgangsmåde, opførsel el.lign. som efterhånden er blevet den sædvanlige"
+        ],
+        "cite": [
+          "Julen er hjerternes tid og traditionernes",
+          "Der er jo i Danmark en god tradition for, at lønfastsættelse klares af arbejdsmarkedets parter",
+          "Det er en del af vores tradition, at vi først accepterer de fremmede, når de accepterer at opføre sig, som vi selv gør"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=tradition"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
+    },
+    "en_mærkedag": {
+      "word": "en mærkedag",
+      "meaning": "special occasion (Christmas, Easter, Constitution Day, birthdays)",
+      "group": "medborgerskab",
+      "example": "Grundlovsdag den 5. juni er en vigtig mærkedag i Danmark.",
+      "priority": 3,
+      "note": "mærkedag (day marking something) ≈ højtid (festival, e.g. jul) ≠ helligdag (public holiday)",
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "mærkedag",
+        "senses": [
+          "dag hvor en særlig begivenhed i historien eller i en persons liv markeres i anledning af at den fandt sted på den samme dato for et vist (rundt) antal år siden",
+          "dag hvor en særlig begivenhed finder sted"
+        ],
+        "cite": [
+          "D. 2. september er altid speciel for mig – for det er min fødselsdag, og i år blev jeg 40 år, så d. 2.9.92 er en mærkedag!",
+          "Gårsdagen var en mærkedag, fordi det er første gang siden Auken-Ritts kup for fem år siden, at de to lider et åbenlyst nederlag i folketingsgruppen"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=mærkedag"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
+    },
+    "en_helligdag": {
+      "word": "en helligdag",
+      "meaning": "(public) holiday",
+      "group": "medborgerskab",
+      "example": "Påskedag og juledag er helligdage, så de fleste har fri fra arbejde.",
+      "priority": 3,
+      "note": "på helligdage; søn- og helligdage; Store Bededag er ikke længere helligdag (fra 2024)",
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "helligdag",
+        "senses": [
+          "årligt tilbagevendende officiel fridag, som regel i anledning af en religiøs højtid"
+        ],
+        "cite": [
+          "Arbejde på kirkelige helligdage var forbudt, og fravær fra gudstjenesterne var strafbart"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=helligdag"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
+    },
+    "en_forsvarspolitik": {
+      "word": "en forsvarspolitik",
+      "meaning": "defence policy",
+      "group": "medborgerskab",
+      "example": "Danmarks forsvarspolitik er tæt knyttet til samarbejdet i NATO.",
+      "priority": 3,
+      "note": "forsvar (defence/armed forces) + politik; narrower than sikkerhedspolitik",
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "forsvarspolitik",
+        "senses": [
+          "den del af en stats eller et statsforbunds (sikkerheds)politik som vedrører forsvarets resurser og opgaver såvel nationalt som internationalt"
+        ],
+        "cite": [
+          "det hidtil neutrale Sverige får samme særordning som Danmark om en fælles forsvarspolitik [: inden for EU]"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=forsvarspolitik"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
+    },
+    "en_sikkerhedspolitik": {
+      "word": "en sikkerhedspolitik",
+      "meaning": "security policy",
+      "group": "medborgerskab",
+      "example": "Krigen i Ukraine har gjort sikkerhedspolitik til et vigtigt emne i Danmark.",
+      "priority": 3,
+      "note": "udenrigs- og sikkerhedspolitik; broader than forsvarspolitik",
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "sikkerhedspolitik",
+        "senses": [
+          "politik hvis målsætning er at varetage (nationale) sikkerhedsmæssige interesser, fx gennem militær op- eller nedrustning eller gennem nedsættelse af risikoen for internationale konflikter",
+          "politik med hensyn til sikkerhed inden for områder som arbejdsmiljø og it"
+        ],
+        "cite": [
+          "Sikkerhedspolitik i dagens Europa går ud på at yde sit bidrag til stabilisering af hele det europæiske geografiske område",
+          "Grundlaget for en god IT-sikkerhed er en gennemtænkt sikkerhedspolitik, der definerer virksomhedens sikkerhedsniveau"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=sikkerhedspolitik"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
+    },
+    "en_diskrimination": {
+      "word": "en diskrimination",
+      "meaning": "discrimination",
+      "group": "medborgerskab",
+      "example": "Det er forbudt at udsætte nogen for diskrimination på grund af køn, hudfarve eller religion.",
+      "priority": 3,
+      "note": "diskrimination af/mod nogen; verb: diskriminere nogen; ≈ forskelsbehandling",
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "diskrimination",
+        "senses": [
+          "det at diskriminere; forskelsbehandling til ugunst for nogen"
+        ],
+        "cite": [
+          "vi [har] allerede en lov, der forbyder diskrimination på grund af race, hudfarve, national eller etnisk oprindelse"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=diskrimination"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
+    },
+    "en_antisemitisme": {
+      "word": "en antisemitisme",
+      "meaning": "antisemitism",
+      "group": "medborgerskab",
+      "example": "Antisemitisme er had mod jøder, og det er stadig et problem i flere europæiske lande.",
+      "priority": 3,
+      "note": "adj. antisemitisk; jøde (Jew), jødisk (Jewish)",
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "antisemitisme",
+        "senses": [
+          "fjendtlig indstilling over for jøder og jødisk kultur"
+        ],
+        "cite": [
+          "Georg mærkede ingen antisemitisme i skolen, hvor læreren holdt hånden over de jødiske elever",
+          "Ni ud af ti europæiske jøder mener, at antisemitismen er vokset de seneste fem år, viste en rapport udgivet af EU i 2018"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=antisemitisme"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
+    },
+    "en_hadforbrydelse": {
+      "word": "en hadforbrydelse",
+      "meaning": "hate crime",
+      "group": "medborgerskab",
+      "example": "Hvis nogen bliver overfaldet på grund af sin hudfarve, kan det være en hadforbrydelse.",
+      "priority": 3,
+      "note": "had (hate) + forbrydelse (crime); anmelde en hadforbrydelse til politiet",
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "hadforbrydelse",
+        "senses": [
+          "forbrydelse som er motiveret af gerningsmandens had mod en anden social gruppe, defineret på grundlag af køn, religiøs eller politisk overbevisning, etnicitet eller seksuel orientering"
+        ],
+        "cite": [
+          "Borgerne skal i højere grad hjælpe til i kampen mod hadforbrydelser, hvor folk bliver overfaldet, blot fordi de er homoseksuelle eller har den forkerte hudfarve",
+          "SF og flere andre partier ønsker, at vold og trusler mod religiøse konvertitter registreres som hadforbrydelser"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=hadforbrydelse"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
+    },
+    "en_ekstremisme": {
+      "word": "en ekstremisme",
+      "meaning": "extremism",
+      "group": "medborgerskab",
+      "example": "Skolen skal lære unge at tænke kritisk, så de ikke bliver tiltrukket af ekstremisme.",
+      "priority": 3,
+      "note": "adj. ekstrem; en ekstremist (person); radikalisering",
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, fælleskøn",
+        "head": "ekstremisme",
+        "senses": [
+          "yderligtgående adfærd eller holdning, især inden for politik eller religion"
+        ],
+        "cite": [
+          "På sociale medier skrev manden støtteerklæringer til terrorangreb og voldelig ekstremisme",
+          "Modstanden mod indvandringen vil ende i ekstremisme"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=ekstremisme"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
+    },
+    "et_klima": {
+      "word": "et klima",
+      "meaning": "climate",
+      "group": "medborgerskab",
+      "example": "Klimaet bliver varmere, og derfor vil Danmark mindske sin CO2-udledning.",
+      "priority": 3,
+      "note": "klima (climate) ≠ vejr (today's weather); klimaforandringer",
+      "dict": {
+        "source": "DDO",
+        "pos": "substantiv, intetkøn",
+        "head": "klima",
+        "senses": [
+          "et områdes fremherskende vejrforhold med hensyn til temperatur, nedbør, fugtighed, lufttryk m.m. målt over en lang periode",
+          "stemning mellem mennesker; de betingelser der gælder på et bestemt felt"
+        ],
+        "cite": [
+          "I Østgrønland var natur og klima alt for barskt til, at man kunne bosætte sig med gårde og husdyr",
+          "Debatten varslede et forsonligt klima mellem regering og opposition"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=klima"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
+    },
+    "fjerde": {
+      "word": "fjerde",
+      "meaning": "fourth",
+      "group": "medborgerskab",
+      "example": "Min datter går i fjerde klasse på den lokale skole.",
+      "priority": 3,
+      "note": "Udtale [fjære] – d er stum. fjerde (4th) ≠ fjorten (14) ≠ fyrre (40); hvert fjerde år",
+      "dict": {
+        "source": "DDO",
+        "pos": "talord (ordenstal)",
+        "head": "fjerde",
+        "senses": [
+          "som er nr. 4 i en rækkefølge"
+        ],
+        "cite": [
+          "hun skulle skifte fra fjerde til femte klasse midtvejs i et skoleår",
+          "Da dette var fjerde gang, manden blev standset uden at have førerret, blev bilen beslaglagt med henblik på konfiskation",
+          "knap hvert fjerde danske barn bor på skift hos sin far og mor"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=fjerde"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
+    },
+    "at_deltage": {
+      "word": "at deltage",
+      "meaning": "participate",
+      "group": "medborgerskab",
+      "example": "Jeg deltager i frivilligt arbejde i min lokale forening.",
+      "priority": 3,
+      "note": "Udtale [delta'i]. deltage i noget (always i); deltog – deltaget; ≈ være med i, tage del i",
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "deltage",
+        "senses": [
+          "være med i en aktivitet"
+        ],
+        "cite": [
+          "For 249 kr. kan man desuden få lov at deltage i den livlige nattefest bagefter"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=deltage"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
+    },
+    "at_uddybe": {
+      "word": "at uddybe",
+      "meaning": "expand on that, explain more about it",
+      "group": "medborgerskab",
+      "example": "Kan du uddybe, hvad du mener med det?",
+      "priority": 3,
+      "note": "Eksaminator: \"Vil du uddybe det?\" = say more about it. uddybe noget (no preposition); ≈ forklare nærmere",
+      "dict": {
+        "source": "DDO",
+        "pos": "verbum",
+        "head": "uddybe",
+        "senses": [
+          "forklare eller beskrive nærmere",
+          "gøre mere grundig og detaljeret; udvide"
+        ],
+        "cite": [
+          "Finansrådets direktør ønsker ikke at uddybe, hvilke transaktioner han hentyder til",
+          "Formålet med undervisningen er, at de studerende .. uddyber deres kendskab til væsentlige kulturelle strømninger og problemstillinger i deres samtid"
+        ],
+        "url": "https://ordnet.dk/ddo/ordbog?query=uddybe"
+      },
+      "ef": 2.5,
+      "interval": 0,
+      "reps": 0,
+      "due": "2026-11-14",
+      "lapses": 0,
+      "history": []
     }
   }
 }
