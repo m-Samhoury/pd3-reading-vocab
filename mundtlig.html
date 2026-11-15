@@ -13,158 +13,300 @@
 <script>try { const m = localStorage.getItem("pd3.theme"); if (m === "light" || m === "dark") document.documentElement.dataset.theme = m; } catch (e) { /* ignore */ }</script>
 <link rel="stylesheet" href="assets/common.abcfe381a8.css">
 <style>
-/* Mundtlig page: the same tokens and cards as the rest of the site (common.css). Only layout lives here. */
-.top { padding-top: 34px; }
-.top h1 { font-size: clamp(1.9rem, 6vw, 2.6rem); font-weight: 700; letter-spacing: -.03em; margin-top: 14px; }
-.top h1 .light { font-weight: 400; display: block; }
-.lead { margin: 10px 0 0; color: var(--soft); max-width: 62ch; }
-.tabs { margin: 26px 0 0; }
-.tabrow { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 14px; }
-.tabs .pick { max-width: 100%; }
-.view { margin-top: 26px; display: grid; gap: 18px; }
-.view > h2 { font-size: 1.35rem; }
-.sec { margin-top: 30px; display: grid; gap: 12px; }
-.sec > h2 { font-size: 1.2rem; }
-.chips { display: flex; flex-wrap: wrap; gap: 8px; }
-.chipbtn .n { font-variant-numeric: tabular-nums; }
-.tgrid { display: grid; gap: 14px; grid-template-columns: 1fr; }
-@media (min-width: 720px) { .tgrid { grid-template-columns: repeat(3, 1fr); } }
-a.tcard { display: grid; gap: 8px; padding: 18px; text-decoration: none; color: inherit; transition: box-shadow .15s, transform .15s; }
-a.tcard:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
-.tcard .letter { font-family: var(--head); font-size: 2rem; font-weight: 800; color: var(--accent-text); line-height: 1; }
-.tcard h3 { font-size: 1.1rem; }
-.tcard .sits { color: var(--soft); font-size: .9rem; margin: 0; }
-.dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--rule-strong); flex: 0 0 auto; }
-.dot.practice { background: var(--md-sys-color-secondary); }
-.dot.sure { background: var(--ok); }
-.st { display: inline-flex; align-items: center; gap: 8px; font-size: .88rem; color: var(--soft); font-weight: 600; }
-.bi .en { display: block; color: var(--faint); font-size: .8rem; font-weight: 500; }
-/* English line under a Danish text (hidden by the "Skjul engelsk" switch: .hide-en on #app, see common.css) */
-.en { display: block; margin-top: 2px; color: var(--soft); font-size: .86rem; font-weight: 500; line-height: 1.45; }
-.progline { display: grid; gap: 8px; padding: 16px 18px; }
-.progline .pl { margin: 0; font-weight: 700; font-size: 1.02rem; font-variant-numeric: tabular-nums; }
-.progline .pl .en { font-weight: 500; }
-.progline .bar { height: 8px; border-radius: 99px; background: var(--rule); overflow: hidden; }
-.progline .bar > span { display: block; height: 100%; background: var(--ok); border-radius: 99px; }
-.howsteps { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; counter-reset: st; }
-.howsteps li { display: grid; gap: 2px; padding: 12px 14px 12px 58px; position: relative; border-radius: 14px; background: var(--paper); }
-.howsteps li::before { counter-increment: st; content: counter(st); position: absolute; left: 14px; top: 12px; width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent-text); font-weight: 800; }
-.ftypes { display: grid; gap: 12px; }
-.ftype { padding: 16px 18px; display: grid; gap: 10px; }
-.ftype .fq { margin: 0; font-size: 1.08rem; font-weight: 700; }
-.ftype .fq .en { font-size: .9rem; }
-.ftype ol.steps li > span { display: inline-flex; flex-direction: column; min-height: 40px; justify-content: center; padding: 4px 12px; border-radius: 12px; border: 1px solid var(--c); background: color-mix(in srgb, var(--c) 16%, var(--sheet)); color: var(--ink); font-weight: 600; font-size: .88rem; }
-.ftype ol.steps li > span .en { font-size: .74rem; font-weight: 500; margin: 0; }
-.crumbs { font-size: .92rem; }
-.crumbs a { display: inline-flex; align-items: center; min-height: 40px; color: var(--soft); text-decoration: none; font-weight: 600; }
-.crumbs a:hover { color: var(--ink); }
-.thead { display: flex; gap: 14px; align-items: flex-start; }
-.thead .letter { flex: 0 0 auto; display: grid; place-items: center; width: 52px; height: 52px; border-radius: 16px; background: var(--accent-soft); color: var(--accent-text); font-family: var(--head); font-size: 1.6rem; font-weight: 800; }
-.thead h2 { font-size: 1.45rem; }
-.thead h2 .en { font-size: .95rem; }
-.thead .lbl { margin-bottom: 4px; }
-.sit { display: grid; gap: 6px; margin: 0; font-size: .95rem; }
-.sit div { display: grid; grid-template-columns: 34px 1fr; gap: 8px; }
-.sit dt { font-weight: 800; color: var(--accent-text); }
-.sit dd { margin: 0; }
-.sit dd .en { font-size: .8rem; }
-figure.pic { margin: 0; position: relative; }
-figure.pic img { display: block; width: 100%; max-width: 520px; height: auto; border-radius: 16px; border: 1px solid var(--rule); background: var(--sheet); cursor: zoom-in; }
-figure.pic.big img { max-width: none; cursor: zoom-out; }
-figure.pic.test img { max-height: 52vh; width: auto; max-width: 100%; margin: 0 auto; object-fit: contain; cursor: zoom-in; }
-figure.pic figcaption { font-size: .82rem; color: var(--soft); margin-top: 6px; }
-.qcard { padding: 20px 18px; display: grid; gap: 14px; }
-.qcard .src { margin: 0; display: grid; gap: 2px; font-size: .9rem; font-weight: 600; color: var(--soft); }
-.qcard .src .en { font-size: .8rem; font-weight: 500; color: var(--faint); }
-.qtext { font-size: 1.2rem; line-height: 1.45; font-weight: 700; letter-spacing: -.01em; font-family: var(--body); }
-.qtext .intro { display: block; font-weight: 500; color: var(--soft); font-size: 1rem; margin-bottom: 4px; }
-.qtext .en { font-size: .95rem; }
-.fus ul { margin: 6px 0 0; padding-left: 18px; color: var(--soft); }
-.fus li { margin: 4px 0; }
-.prov { margin: 0; color: var(--soft); font-size: .92rem; }
-.soon { margin: 0; color: var(--soft); font-style: italic; }
-.answer { display: grid; gap: 18px; }
-.answer[hidden] { display: none; }
-.smap .lbl { margin-bottom: 8px; }
-.smap .frame { font-size: .85rem; color: var(--soft); margin-bottom: 8px; }
-ol.steps { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
-ol.steps li button { min-height: 40px; padding: 6px 12px; border-radius: 12px; border: 1px solid var(--c); font: 600 .88rem var(--body); color: var(--ink); cursor: pointer; background: color-mix(in srgb, var(--c) 16%, var(--sheet)); }
-ol.steps li button:hover { border-width: 2px; }
-ol.steps li.off button { opacity: .42; border-style: dashed; }
-ol.steps li.hi button { box-shadow: 0 0 0 3px color-mix(in srgb, var(--c) 45%, transparent); }
-.structline { display: grid; gap: 4px; padding: 12px 14px; border-radius: 14px; background: var(--paper); font-size: .95rem; color: var(--ink); }
-details.how { font-size: .95rem; }
-details.how summary { cursor: pointer; min-height: 40px; display: inline-flex; align-items: center; font-weight: 600; color: var(--soft); }
-details.how .skel { margin: 6px 0; }
-.segs { display: grid; gap: 10px; }
-.seg { --c: var(--faint); margin: 0; padding: 10px 12px 10px 14px; border-radius: 14px; border-left: 4px solid var(--c); background: color-mix(in srgb, var(--c) 12%, var(--sheet)); font-size: 1.02rem; line-height: 1.5; }
-.seg .seglbl { display: block; font-size: .72rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--c); margin-bottom: 2px; }
-.seg .en { font-size: .88rem; }
-.seg.hi { box-shadow: 0 0 0 2px var(--c); }
-.seg.dim { opacity: .45; }
+/* Mundtlig v3 · Trin for trin (PLAN-v3). Tokens come from common.css; shared pieces first, then the page layout. */
+/* Shared pieces for the Mundtlig redesign prototypes. Uses only the site tokens from common.css. */
+:root { --ok-ink: var(--ok); }
+::selection { background: var(--accent-soft); color: var(--accent-text); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 8px; }
+body { background: var(--paper); }
+
+/* Danish first, English small under it. The switch hides every English line. */
+.bi { display: inline; }
+.bi > .da { display: block; }
+.en { display: block; margin-top: 2px; color: var(--soft); font-size: .84em; font-weight: 450; line-height: 1.4; }
+.hide-en .en { display: none !important; }
+.lab { margin: 0; font: 700 .95rem/1.3 var(--head); color: var(--ink); letter-spacing: 0; }
+.lab .en { font-family: var(--body); font-weight: 500; font-size: .8rem; }
+
+.ic { width: 1.1em; height: 1.1em; flex: 0 0 auto; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; vertical-align: -.18em; }
+
+/* English switch */
+.enbtn { display: inline-flex; align-items: center; gap: 10px; min-height: 40px; padding: 6px 14px 6px 10px; border-radius: 999px; border: 1px solid var(--rule-strong); background: var(--sheet); color: var(--ink); font: 600 .88rem var(--body); cursor: pointer; }
+.enbtn .sw { width: 30px; height: 18px; border-radius: 99px; background: var(--rule-strong); position: relative; transition: background .2s; }
+.enbtn .sw::after { content: ""; position: absolute; top: 2px; left: 2px; width: 14px; height: 14px; border-radius: 50%; background: var(--sheet); transition: transform .2s cubic-bezier(.2,.8,.2,1); }
+.enbtn[aria-pressed="true"] .sw { background: var(--accent); }
+.enbtn[aria-pressed="true"] .sw::after { transform: translateX(12px); }
+
+/* structure parts: one colour per part, the same everywhere */
 .p-intro { --c: var(--faint); }
 .p-aarsag, .p-aarsag2, .p-side1 { --c: var(--accent); }
 .p-fordi, .p-side2, .p-konsekvens { --c: var(--blue); }
 .p-eksempel { --c: var(--violet); }
 .p-stilling { --c: var(--ok); }
 .p-konklusion { --c: var(--warn); }
-.kws { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
-.kw { display: grid; gap: 2px; padding: 10px 12px; border-radius: 12px; background: var(--paper); }
-.kw b { font-size: 1.02rem; }
-.kw .use { color: var(--ink); font-size: .92rem; }
-.kw .en { color: var(--soft); font-size: .85rem; }
-.tips { margin: 0; padding-left: 20px; display: grid; gap: 6px; color: var(--ink); font-size: .95rem; }
-.tips .en { font-size: .84rem; }
-.fu, .fu summary { font-size: .95rem; }
-.fu summary { cursor: pointer; min-height: 40px; display: inline-flex; align-items: center; font-weight: 600; color: var(--soft); }
-.fu p { margin: 6px 0; }
-.note { padding: 12px 14px; background: var(--blue-soft); color: var(--blue-text); border-radius: 14px; display: grid; gap: 4px; }
-.note .lbl { color: var(--blue-text); margin: 0; }
-.note p { margin: 0; }
-.note .en { color: var(--blue-text); }
-.note details summary { cursor: pointer; font-size: .9rem; min-height: 36px; display: inline-flex; align-items: center; }
-.sub-h { font-size: .8rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--faint); margin: 0; }
-/* test */
-.testbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 14px; font-size: .9rem; color: var(--soft); }
-.tm { font-variant-numeric: tabular-nums; font-weight: 600; }
-textarea.ans { width: 100%; min-height: 150px; padding: 12px 14px; border-radius: 14px; border: 1.5px solid var(--rule-strong); background: var(--sheet); color: var(--ink); font: 1.02rem/1.55 var(--body); resize: vertical; }
-textarea.ans:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
-.fb { display: grid; gap: 18px; }
-.box { padding: 14px 16px; border-radius: 16px; background: var(--sheet); border: 1px solid var(--rule); display: grid; gap: 8px; }
-.box .lbl { margin: 0; }
-.box p { margin: 0; }
-.box.warn { background: var(--warn-bg); border-color: transparent; }
-.wlist { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
-.wlist li { display: grid; gap: 3px; padding: 10px 12px; border-radius: 12px; background: var(--paper); font-size: .95rem; }
-.wlist .why { color: var(--ink); font-size: .9rem; }
-.wlist .why.en { color: var(--soft); font-size: .84rem; }
-.sp { text-decoration: underline; text-decoration-color: var(--ok); text-decoration-thickness: 2px; text-underline-offset: 4px; }
-.wo { text-decoration: underline wavy var(--bad); text-underline-offset: 4px; }
-.sp-old { text-decoration: line-through; color: var(--bad); }
-.sp-new { color: var(--ok); }
-.dotbad { display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: var(--bad); margin-right: 6px; vertical-align: middle; }
-.ok-mark { color: var(--ok); font-weight: 800; }
-.no-mark { color: var(--bad); font-weight: 800; }
+
+.segs { display: grid; gap: 8px; }
+.seg { margin: 0; padding: 10px 14px 11px; border-radius: 14px; background: color-mix(in srgb, var(--c) 13%, var(--sheet)); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--c) 30%, transparent); font-size: 1.04rem; line-height: 1.5; transition: opacity .2s, box-shadow .2s; }
+.seg .seglbl { display: block; font: 700 .78rem/1.2 var(--body); color: color-mix(in srgb, var(--c) 80%, var(--ink)); margin-bottom: 3px; }
+.seg .en { font-size: .86rem; }
+.segs.focus .seg:not(.hi) { opacity: .38; }
+.seg.hi { box-shadow: inset 0 0 0 2px var(--c); }
+
+ol.smap, ol.order { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+ol.smap button, ol.order li { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 5px 12px; border-radius: 12px; border: 1px solid color-mix(in srgb, var(--c) 55%, transparent); background: color-mix(in srgb, var(--c) 14%, var(--sheet)); color: var(--ink); font: 600 .88rem/1.2 var(--body); text-align: left; }
+ol.smap button { cursor: pointer; }
+ol.smap button .en, ol.order li .en { font-size: .72rem; margin-top: 0; }
+ol.smap button.on { box-shadow: 0 0 0 3px color-mix(in srgb, var(--c) 45%, transparent); }
+ol.smap li.off button { opacity: .45; border-style: dashed; }
+ol.smap .n { display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--c); color: var(--sheet); font: 800 .75rem var(--body); }
+
+.kws { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.kw { display: grid; gap: 1px; padding: 9px 12px; border-radius: 12px; background: var(--paper); border: 1px solid var(--rule); }
+.kw b { font-size: 1.02rem; color: var(--ink); }
+.kw .use { color: var(--soft); font-size: .9rem; }
+.kw .en { font-size: .82rem; }
+.tips { margin: 0; padding-left: 1.2em; display: grid; gap: 8px; }
+.tips li::marker { color: var(--accent); }
+.tips .en { font-size: .82rem; }
+.fu { display: grid; gap: 8px; }
+.fu p { margin: 0; }
+.fu .fuq { font-weight: 700; }
+.fu .fua { padding: 10px 14px; border-radius: 14px; background: var(--paper); border: 1px solid var(--rule); }
+.notes { display: grid; gap: 6px; padding: 12px 14px; border-radius: 14px; background: var(--hl); color: var(--hl-ink); }
+.notes p { margin: 0; white-space: pre-line; }
+.notes .en { color: color-mix(in srgb, var(--hl-ink) 75%, transparent); white-space: pre-line; }
+.notes summary { cursor: pointer; min-height: 36px; display: inline-flex; align-items: center; font-size: .88rem; font-weight: 600; }
+.notes .raw { font-size: .9rem; opacity: .85; }
+
+figure.pic { margin: 0; display: grid; gap: 6px; }
+figure.pic .picbtn { position: relative; display: block; padding: 0; border: 1px solid var(--rule); border-radius: 16px; overflow: hidden; background: #fff; cursor: zoom-in; width: 100%; }
+figure.pic img { display: block; width: 100%; height: auto; }
+figure.pic .zoom { position: absolute; right: 8px; bottom: 8px; display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--sheet); color: var(--ink); box-shadow: var(--shadow-lg); }
+figure.pic figcaption { font-size: .82rem; color: var(--soft); }
+figure.pic.big { position: fixed; inset: 0; z-index: 50; background: color-mix(in srgb, var(--paper) 94%, transparent); padding: 16px; place-items: center; overflow: auto; }
+figure.pic.big .picbtn { max-width: min(900px, 100%); cursor: zoom-out; }
+
+.src { margin: 0; font-size: .88rem; font-weight: 600; color: var(--soft); }
+.src .en { font-size: .78rem; font-weight: 500; color: var(--faint); }
+.qtext { margin: 0; font: 700 1.28rem/1.4 var(--body); letter-spacing: -.01em; color: var(--ink); text-wrap: pretty; }
+.qtext .intro { display: block; font-weight: 500; color: var(--soft); font-size: 1rem; }
+.qtext .en { font-size: .9rem; }
+
+/* status dots */
+.sdot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: transparent; box-shadow: inset 0 0 0 2px var(--rule-strong); flex: 0 0 auto; }
+.sdot.s-practice { background: var(--warn); box-shadow: none; }
+.sdot.s-sure { background: var(--ok); box-shadow: none; }
+
+/* feedback pieces */
+.yours { margin: 0; font-size: 1.04rem; line-height: 1.7; }
+.yours .sp { text-decoration: underline; text-decoration-color: var(--warn); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.yours .wo { text-decoration: underline wavy var(--bad); text-underline-offset: 5px; text-decoration-thickness: 1.5px; }
+.yours .empty { color: var(--soft); font-style: italic; }
+.fixes { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.fix { display: grid; gap: 4px; padding: 10px 14px; border-radius: 14px; background: var(--sheet); border: 1px solid var(--rule); }
+.fix p { margin: 0; }
+.fix .pair { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; font-size: 1.02rem; }
+.fix .old { color: var(--bad); text-decoration-thickness: 1.5px; }
+.fix .new { color: var(--ok); }
+.fix .pair .ic { color: var(--faint); }
+.fix .why { font-size: .92rem; color: var(--ink); }
+.fix .why .en { font-size: .82rem; }
+.st-fix .pair b { color: color-mix(in srgb, var(--c) 75%, var(--ink)); }
 ol.fsteps, ul.fkw { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
-ol.fsteps li, ul.fkw li { display: inline-flex; align-items: center; gap: 6px; min-height: 34px; padding: 4px 11px; border-radius: 999px; border: 1px solid var(--rule-strong); background: var(--sheet); font-size: .9rem; font-weight: 600; }
-ol.fsteps li.no, ul.fkw li.no { color: var(--soft); }
+ol.fsteps li { display: inline-flex; align-items: center; gap: 7px; min-height: 38px; padding: 4px 12px 4px 9px; border-radius: 12px; font-size: .88rem; font-weight: 600; background: color-mix(in srgb, var(--c) 14%, var(--sheet)); border: 1px solid color-mix(in srgb, var(--c) 45%, transparent); }
+ol.fsteps li .en { font-size: .72rem; margin: 0; }
+ol.fsteps li.ok .ic { color: var(--ok); }
+ol.fsteps li.no { background: var(--sheet); border-style: dashed; color: var(--soft); }
+ol.fsteps li.no .ic { color: var(--bad); }
+ul.fkw { display: grid; gap: 6px; }
+ul.fkw li { display: flex; gap: 10px; align-items: flex-start; padding: 8px 12px; border-radius: 12px; background: var(--sheet); border: 1px solid var(--rule); }
+ul.fkw li .ic { margin-top: 3px; }
+ul.fkw li.ok .ic { color: var(--ok); }
+ul.fkw li.no .ic { color: var(--bad); }
+ul.fkw li > span { display: grid; }
+ul.fkw .use { font-size: .86rem; color: var(--soft); }
+ul.fkw .en { font-size: .8rem; }
+
+/* self-rating */
+.rating { display: grid; gap: 8px; }
+.ratebtns { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.ratebtn { display: grid; gap: 2px; justify-items: start; text-align: left; min-height: 56px; padding: 8px 12px; border-radius: 16px; border: 1px solid var(--rule-strong); background: var(--sheet); color: var(--ink); font: 700 1rem var(--body); cursor: pointer; }
+.ratebtn .en { font-size: .74rem; margin: 0; }
+.ratebtn .hint { font-size: .74rem; font-weight: 500; color: var(--soft); }
+.ratebtn:hover { border-color: var(--ink); }
+.ratebtn.r-k[aria-pressed="true"] { background: var(--ok-bg); border-color: var(--ok); }
+.ratebtn.r-d[aria-pressed="true"] { background: var(--warn-bg); border-color: var(--warn); }
+.ratebtn.r-i[aria-pressed="true"] { background: var(--bad-bg); border-color: var(--bad); }
+.ratemsg { margin: 0; display: flex; gap: 8px; align-items: flex-start; font-size: .9rem; color: var(--ok); min-height: 1.2em; }
+.ratemsg .bi .da { color: var(--ink); }
+@media (max-width: 420px) { .ratebtn .hint { display: none; } }
+
+textarea.ans { width: 100%; min-height: 140px; padding: 12px 14px; border-radius: 16px; border: 1.5px solid var(--rule-strong); background: var(--sheet); color: var(--ink); font: 1.04rem/1.55 var(--body); resize: vertical; caret-color: var(--accent); }
+textarea.ans:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+
+.foot { padding-top: 40px; padding-bottom: 48px; color: var(--faint); font-size: .82rem; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+/* Option 1 · Trin for trin: one question at a time, in four steps. */
+.head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding-top: 24px; }
+.head .pick button { min-width: 76px; }
+.view { padding-top: 22px; }
+
+/* start */
+.hello h1 { font-size: clamp(1.8rem, 5vw, 2.4rem); letter-spacing: -.025em; }
+.hello h1 .en { font: 500 .95rem var(--body); letter-spacing: 0; margin-top: 4px; }
+.hello { display: grid; gap: 4px; margin-bottom: 18px; }
+.next { display: grid; gap: 0; overflow: hidden; border-radius: 28px; background: var(--sheet); border: 1px solid var(--rule); box-shadow: var(--shadow-lg); }
+@media (min-width: 760px) { .next { grid-template-columns: 300px 1fr; } }
+.next .thumb { background: #fff; border-bottom: 1px solid var(--rule); display: grid; place-items: center; max-height: 220px; overflow: hidden; }
+@media (min-width: 760px) { .next .thumb { max-height: none; border-bottom: 0; border-right: 1px solid var(--rule); } }
+.next .thumb img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.next .body { display: grid; gap: 14px; padding: 20px; align-content: center; }
+@media (min-width: 760px) { .next .body { padding: 28px 32px; } }
+.next .lab { color: var(--accent-text); }
+.next .topic { margin: 0; font: 800 1.5rem/1.2 var(--head); }
+.next .topic .en { font: 500 .9rem var(--body); }
+.next .qtext { font-size: 1.12rem; }
+.go { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 26px; border-radius: 999px; border: 0; background: var(--accent); color: var(--accent-ink); font: 700 1.05rem var(--body); cursor: pointer; text-decoration: none; justify-self: start; }
+.go:hover { background: color-mix(in srgb, var(--accent) 88%, black); }
+.go.ghost { background: var(--sheet); color: var(--ink); border: 1px solid var(--rule-strong); }
+.prog { display: grid; gap: 8px; margin-top: 18px; padding: 0 4px; }
+.prog .line { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 16px; }
+.prog .line b { font-size: 1rem; }
+.prog .legend { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: .84rem; color: var(--soft); margin: 0; }
+.prog .legend span { display: inline-flex; align-items: center; gap: 6px; }
+.pbar { display: flex; height: 10px; border-radius: 99px; background: var(--rule); overflow: hidden; }
+.pbar .s { background: var(--ok); } .pbar .p { background: var(--warn); }
+.choose { margin-top: 40px; display: grid; gap: 14px; }
+.choose h2 { font-size: 1.3rem; }
+.choose h2 .en { font: 500 .85rem var(--body); }
+.years { display: flex; gap: 6px; overflow-x: auto; padding: 2px 2px 8px; scrollbar-width: thin; }
+.years .chipbtn { flex: 0 0 auto; }
+.topics { display: grid; gap: 10px; }
+.trow { display: grid; grid-template-columns: 44px 1fr auto; align-items: center; gap: 14px; padding: 14px 16px; border-radius: 20px; background: var(--sheet); border: 1px solid var(--rule); text-decoration: none; color: inherit; }
+.trow:hover { border-color: var(--rule-strong); box-shadow: var(--shadow-lg); }
+.trow .L { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 14px; background: var(--accent-soft); color: var(--accent-text); font: 800 1.3rem var(--head); }
+.trow h3 { font-size: 1.08rem; }
+.trow h3 .en { font: 500 .82rem var(--body); }
+.trow .sits { margin: 2px 0 0; font-size: .86rem; color: var(--soft); }
+.trow .dots { display: flex; gap: 5px; align-items: center; }
+.trow .ic.chev { color: var(--faint); }
+
+/* one question, four steps */
+.flow { display: grid; gap: 22px; }
+@media (min-width: 960px) { .flow { grid-template-columns: minmax(0, 1fr) 380px; align-items: start; } .flow .side { position: sticky; top: 16px; order: 2; } }
+.qhead { display: grid; gap: 10px; }
+.crumb { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; color: var(--soft); text-decoration: none; font-weight: 600; font-size: .92rem; }
+.crumb:hover { color: var(--ink); }
+.qnav { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.qnav .topic { margin: 0; font: 800 1.35rem/1.2 var(--head); }
+.qnav .topic .en { font: 500 .85rem var(--body); }
+.qpills { display: flex; gap: 6px; margin-left: auto; }
+.qpills a { display: inline-flex; align-items: center; gap: 6px; min-height: 36px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--rule-strong); text-decoration: none; color: var(--soft); font: 700 .85rem var(--body); background: var(--sheet); }
+.qpills a[aria-current="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; counter-reset: s; }
+.step { position: relative; display: grid; grid-template-columns: 40px 1fr; gap: 0 14px; padding-bottom: 26px; }
+.step::before { counter-increment: s; content: counter(s); grid-row: 1; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--sheet); border: 2px solid var(--rule-strong); color: var(--soft); font: 800 1rem var(--head); z-index: 1; }
+.step:not(:last-child)::after { content: ""; position: absolute; left: 19px; top: 40px; bottom: 0; width: 2px; background: var(--rule); }
+.step.done::before { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.step.now::before { border-color: var(--accent); color: var(--accent-text); background: var(--accent-soft); }
+.step.later { opacity: .55; }
+.step .sh { grid-column: 2; min-height: 40px; display: flex; align-items: center; }
+.step .sh h3 { font-size: 1.12rem; }
+.step .sh h3 .en { font: 500 .8rem var(--body); }
+.step .sb { grid-column: 2; display: grid; gap: 14px; margin-top: 10px; }
+.step.later .sb { display: none; }
+.card { padding: 18px; border-radius: 22px; background: var(--sheet); border: 1px solid var(--rule); display: grid; gap: 12px; align-content: start; }
+.typecard { display: grid; gap: 10px; padding: 14px 16px; border-radius: 18px; background: var(--paper); border: 1px solid var(--rule); }
+.typecard .t { margin: 0; font-weight: 700; }
+.typecard .t .en { font-weight: 500; }
+.say { display: flex; gap: 10px; align-items: flex-start; margin: 0; color: var(--ink); }
+.say .ic { color: var(--accent); margin-top: 3px; }
+.more { display: grid; gap: 14px; }
+@media (min-width: 720px) { .more { grid-template-columns: 1fr 1fr; } .more .wide { grid-column: 1 / -1; } }
+.more .card h4 { margin: 0; font: 700 1rem var(--head); }
+.more .card h4 .en { font: 500 .78rem var(--body); }
+.side .pic figcaption { padding: 0 2px; }
+@media (max-width: 959px) { .side figure.pic:not(.big) .picbtn { max-height: 240px; } .side figure.pic:not(.big) img { object-fit: cover; object-position: top; max-height: 240px; } }
+.actionbar { position: sticky; bottom: 0; z-index: 20; margin-top: 8px; padding: 12px 0 calc(12px + env(safe-area-inset-bottom)); background: linear-gradient(to top, var(--paper) 70%, transparent); display: flex; gap: 10px; justify-content: flex-end; }
+.actionbar .go { justify-self: auto; }
+
+/* test */
+.tsetup { display: grid; gap: 16px; max-width: 720px; }
+.tsetup h1 { font-size: clamp(1.6rem, 4vw, 2.1rem); }
+.tsetup h1 .en { font: 500 .9rem var(--body); }
+.tsetup p { margin: 0; }
+.tbar { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; font-size: .9rem; color: var(--soft); }
+.tbar .count { font-weight: 700; color: var(--ink); }
+.tbar .dash { display: flex; gap: 4px; flex: 1 1 160px; }
+.tbar .dash i { flex: 1; height: 6px; border-radius: 99px; background: var(--rule); }
+.tbar .dash i.done { background: var(--accent); } .tbar .dash i.now { background: var(--accent-soft); box-shadow: inset 0 0 0 1px var(--accent); }
+.timer { display: inline-flex; align-items: center; gap: 6px; font-variant-numeric: tabular-nums; font-weight: 600; }
+.verdict { display: grid; gap: 10px; padding: 18px 20px; border-radius: 22px; background: var(--sheet); border: 1px solid var(--rule); }
+.verdict h2 { font-size: 1.35rem; }
+.verdict h2 .en { font: 500 .85rem var(--body); }
+.verdict ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.verdict li { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px; background: var(--paper); border: 1px solid var(--rule); font-size: .88rem; font-weight: 600; }
+.verdict li.bad { background: var(--bad-bg); border-color: transparent; color: var(--md-sys-color-on-error-container); }
+.verdict li.good { background: var(--ok-bg); border-color: transparent; color: var(--ok); }
+.verdict li .nb { font-weight: 500; opacity: .8; }
 .cmp { display: grid; gap: 16px; }
-@media (min-width: 760px) { .cmp { grid-template-columns: 1fr 1fr; } }
-.cmp .col { display: grid; gap: 10px; align-content: start; }
-.cmp .yours { font-size: 1.02rem; line-height: 1.6; padding: 12px 14px; border-radius: 14px; background: var(--paper); margin: 0; }
-.rate { display: grid; gap: 10px; }
-.ratebtns { display: flex; flex-wrap: wrap; gap: 8px; }
-.ratebtns .btn[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent); color: var(--accent-text); }
-.sumrow { display: grid; gap: 4px; padding: 12px 14px; border-radius: 14px; background: var(--sheet); border: 1px solid var(--rule); }
-.sumrow b { font-size: 1rem; }
-.sumrow .meta2 { color: var(--soft); font-size: .9rem; }
-.framecards { display: grid; gap: 14px; grid-template-columns: 1fr; }
-@media (min-width: 720px) { .framecards { grid-template-columns: repeat(2, 1fr); } }
-.hint { font-size: .9rem; color: var(--soft); margin: 0; }
-.empty { padding: 18px; color: var(--soft); }
-.backline { margin-top: 10px; }
-footer.foot { padding-top: 40px; padding-bottom: 48px; color: var(--faint); font-size: .85rem; }
-@media (max-width: 480px) { ol.steps li button { font-size: .82rem; } }
+@media (min-width: 820px) { .cmp { grid-template-columns: 1fr 1fr; } }
+.cmp h4 { margin: 0 0 8px; font: 700 1rem var(--head); }
+.cmp h4 .en { font: 500 .78rem var(--body); }
+.cmp .yours { padding: 14px 16px; border-radius: 16px; background: var(--sheet); border: 1px solid var(--rule); }
+/* ── v3 additions to the option 1 prototype CSS (PLAN-v3) ── */
+.lead { margin: 6px 0 0; max-width: 62ch; color: var(--ink); }
+.hint { margin: 0; font-size: .9rem; color: var(--soft); }
+.soon { margin: 0; color: var(--soft); font-style: italic; }
+.view h1, .view h2, .view h3, .view h4 { margin: 0; }
+
+/* start */
+.next .body > .nl { display: grid; gap: 2px; }
+.prog .legend { list-style: none; padding: 0; }
+.prog .legend li { display: inline-flex; align-items: flex-start; gap: 6px; }
+.prog .legend .sdot { margin-top: 5px; }
+.prog .legend .bi { display: grid; gap: 0; }   /* option 1's ".legend span" rule would put the English beside the Danish */
+.choose > .ch { display: grid; gap: 4px; }
+.years .chipbtn { text-align: left; }
+.years .chipbtn .bi .en { font-size: .72rem; margin: 0; font-weight: 500; }
+@media (min-width: 720px) { .years { flex-wrap: wrap; overflow: visible; } }
+/* topic rows: the 3 dots stay on one line, top right next to the title (the prototype wrapped them under the text on a phone) */
+.trow .dots { flex-wrap: nowrap; white-space: nowrap; }
+@media (max-width: 560px) {
+  .trow { grid-template-columns: 36px minmax(0, 1fr) auto; align-items: start; gap: 12px; padding: 12px 14px; }
+  .trow .L { width: 36px; height: 36px; font-size: 1.1rem; border-radius: 12px; }
+  .trow .dots { padding-top: 4px; }
+}
+
+/* question */
+.step { scroll-margin-top: 12px; }
+.qpills a { white-space: nowrap; }
+/* phone: the 3 question pills share the row in equal columns, on one line each (the prototype wrapped "Spørgsmål / 1") */
+@media (max-width: 560px) {
+  .qpills { margin-left: 0; width: 100%; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+  .qpills a { justify-content: center; gap: 5px; padding: 0 6px; font-size: .78rem; }
+}
+.ratebtn .hint .en { font-size: .7rem; margin: 0; }
+.rating > .hint { margin-bottom: 2px; }
+.st-fix .pair { display: grid; gap: 0; }
+
+/* test */
+.tsetup h2 { font-size: 1.1rem; }
+.tsetup h2 .en { font: 500 .8rem var(--body); }
+.card.tq { margin-top: 14px; }
+.tbar .count .en { font-weight: 500; color: var(--soft); font-size: .78rem; margin: 0; }
+.verdict { margin-top: 16px; }
+.verdict li .bi .en { font-size: .74rem; margin: 0; color: inherit; opacity: .8; }
+ol.fbsteps { margin-top: 22px; }
+.cmp > .hint { grid-column: 1 / -1; }
+.endlist { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.endrow a { display: grid; gap: 6px; padding: 14px 16px; border-radius: 20px; background: var(--sheet); border: 1px solid var(--rule); color: inherit; text-decoration: none; }
+.endrow a:hover { border-color: var(--rule-strong); box-shadow: var(--shadow-lg); }
+.endrow .qtext { font-size: 1.02rem; }
+.endrow .rl { display: inline-flex; gap: 8px; align-items: center; font-weight: 600; }
+.tend .row { display: flex; flex-wrap: wrap; gap: 10px; }
+/* full-page test screenshots only (test-oral.mjs adds .shot to <body>): the sticky bar would be drawn mid-page */
+.shot .actionbar { position: static !important; }
 </style>
 </head>
 <body>
@@ -183,14 +325,14 @@ footer.foot { padding-top: 40px; padding-bottom: 48px; color: var(--faint); font
   </div>
 </header>
 <main class="wrap">
-  <div class="wrap tabs tabrow" style="padding:0">
+  <div class="head">
     <nav class="pick" id="tabs" aria-label="Mundtlig">
       <button type="button" data-go="#laer" data-i18n="or.tab.laer">Lær</button>
       <button type="button" data-go="#test" data-i18n="or.tab.test">Test</button>
     </nav>
-    <button type="button" class="btn" id="enToggle" aria-pressed="true">Skjul engelsk</button>
+    <button type="button" class="enbtn" id="enToggle" aria-pressed="true"></button>
   </div>
-  <div id="app"></div>
+  <div id="app" class="view"></div>
 </main>
 <footer class="wrap foot" data-i18n="or.footer"></footer>
 <script src="assets/pd3-data.b6a1b401e8.js"></script>
@@ -287,10 +429,6 @@ footer.foot { padding-top: 40px; padding-bottom: 48px; color: var(--faint); font
     const [da, en] = slotText(q.slot);
     return { da: `${sl.da} · Emne ${q.letter}: ${topic.title} · ${da}`, en: `${sl.en} · Topic ${q.letter}: ${topic.title_en || topic.title} · ${en}` };
   }
-  const bi = (da, en, cls) => el("span", { class: "bi " + (cls || "") }, el("span", { lang: "da" }, da), en ? el("span", { class: "en" }, en) : null);
-  // a sentence of page text: Danish first, English under it (the "Skjul engelsk" switch hides the English)
-  const both = key => bi(I18N[key][0], I18N[key][1]);
-  const enLine = text => text ? el("span", { class: "en", lang: "en" }, text) : null;
   const dIdx = (arr, i) => arr && arr[i] != null ? arr[i] : null;
   const FR = f => (D.frames && D.frames[f]) || {};
   const partDa = p => I18N["part." + p][0], partEn = p => I18N["part." + p][1];
@@ -436,329 +574,443 @@ footer.foot { padding-top: 40px; padding-bottom: 48px; color: var(--faint); font
     if (cur < text.length) out.push(text.slice(cur));
     return out;
   }
+  // ══ v3 · "Trin for trin" (PLAN-v3). Ported from work/oral-topics/redesign (option 1). ══
 
-  // ── pieces shared by Lær and Test ─────────────────────────────────────────────────
-  // one coloured model-answer segment, with its English under it
-  const segP = (s, enText) => el("p", { class: `seg p-${s.part}`, "data-part": s.part, lang: "da" },
-    el("span", { class: "seglbl" }, t("part." + s.part)), s.text, enLine(enText));
-  // the question's own text (intro + question) with the English under each
-  function qtext(q) {
-    const en = q.en || {};
-    return el("h3", { class: "qtext" },
-      q.intro ? el("span", { class: "intro", lang: "da" }, q.intro) : null,
-      q.intro ? enLine(en.intro) : null,
-      el("span", { lang: "da" }, q.question), enLine(en.question));
+  // ── v3 page strings: Danish + English. Sentences use tb(key) (both lines); buttons and aria use t(key) (one language). ──
+  Object.assign(I18N, {
+    "o3.h1": ["Mundtlig · delprøve 2", "Oral exam · part 2"],
+    "o3.lead": ["108 rigtige eksamensspørgsmål fra 2018–2024. Ét spørgsmål ad gangen: se billedet, sig dit svar, se modelsvaret.",
+                "108 real exam questions from 2018–2024. One question at a time: look at the picture, say your answer, see the model answer."],
+    "o3.next": ["Dit næste spørgsmål", "Your next question"],
+    "o3.next.why": ["Det første spørgsmål, som ikke er sikkert endnu. Den nyeste prøve kommer først.",
+                    "The first question that is not secure yet. The newest sitting comes first."],
+    "o3.start": ["Start spørgsmålet", "Start the question"],
+    "o3.prog.sure": ["{0} af {1} spørgsmål er sikre", "{0} of {1} questions are secure"],
+    "o3.prog.rest": ["{0} øvet · {1} ikke startet", "{0} practised · {1} not started"],
+    "o3.leg.sure": ["Sikker: «Kunne» på to forskellige dage", "Secure: “Got it” on two different days"],
+    "o3.leg.practice": ["Øvet: du har svaret mindst én gang", "Practised: you have answered at least once"],
+    "o3.leg.new": ["Ikke startet", "Not started"],
+    "o3.st.sure": ["Sikker", "Secure"], "o3.st.practice": ["Øvet", "Practised"], "o3.st.new": ["Ikke startet", "Not started"],
+    "o3.choose": ["Vælg selv et emne", "Choose a topic yourself"],
+    "o3.choose.p": ["Vælg en prøve. Hver prøve har 3 emner med 3 spørgsmål.", "Choose a sitting. Each sitting has 3 topics with 3 questions."],
+    "o3.yearn": ["{0}/9 sikre", "{0}/9 secure"],
+    "o3.dots": ["{0} af 3 spørgsmål sikre", "{0} of 3 questions secure"],
+    "o3.crumb": ["Alle emner", "All topics"],
+    "o3.topic": ["Emne {0}: {1}", "Topic {0}: {1}"],
+    "o3.qpills": ["Spørgsmål i emnet", "Questions in this topic"],
+    "o3.qpill": ["Spørgsmål {0}", "Question {0}"],
+    "o3.s1": ["Læs spørgsmålet og sig dit svar", "Read the question and say your answer"],
+    "o3.s2": ["Se modelsvaret", "See the model answer"],
+    "o3.s3": ["Lær ordene og tipsene", "Learn the words and tips"],
+    "o3.s4": ["Hvordan gik det?", "How did it go?"],
+    "o3.qtype": ["Spørgsmålstype: {0}", "Question type: {0}"],
+    "o3.order": ["Svar i denne rækkefølge:", "Answer in this order:"],
+    "o3.say": ["Sig dit svar højt (45–90 sekunder). Tryk så «Vis modelsvar».", "Say your answer out loud (45–90 seconds). Then press “Show model answer”."],
+    "o3.tap": ["Tryk på en del for at se den i svaret.", "Tap a part to find it in the answer."],
+    "o3.kw.h": ["Nøgleord med præposition", "Keywords with their preposition"],
+    "o3.fu.h": ["Opfølgende spørgsmål og svar", "Follow-up question and answer"],
+    "o3.notes.raw": ["Se dine noter, som du skrev dem", "See your notes as you wrote them"],
+    "o3.b.show": ["Vis modelsvar", "Show model answer"],
+    "o3.b.words": ["Se ord og tips", "See words and tips"],
+    "o3.b.laer": ["Til Lær", "To Study"],
+    "o3.b.result": ["Se resultatet", "See the result"],
+    "o3.pic.cap": ["Øverst situation A, nederst situation B. Tryk for at forstørre.", "Situation A at the top, situation B below. Tap to enlarge."],
+    "o3.pic.zoom": ["Forstør billedet", "Enlarge the picture"],
+    "o3.pic.alt": ["Billedark: {0}", "Picture sheet: {0}"],
+    "o3.r.p": ["«Kunne» på to forskellige dage gør spørgsmålet sikkert. «Delvist» og «Ikke endnu»: spørgsmålet kommer igen.",
+               "“Got it” on two different days makes the question secure. “Partly” and “Not yet”: the question comes back."],
+    "o3.r.k.h": ["Jeg kunne svare uden hjælp.", "I could answer without help."],
+    "o3.r.d.h": ["Jeg manglede noget.", "I missed something."],
+    "o3.r.i.h": ["Jeg skal øve mere.", "I need more practice."],
+    "o3.r.sure": ["Gemt. Spørgsmålet er nu sikkert.", "Saved. This question is now secure."],
+    "o3.r.k1": ["Gemt. Svar «Kunne» en anden dag, så er det sikkert.", "Saved. Answer “Got it” on another day and it becomes secure."],
+    "o3.r.again": ["Gemt. Spørgsmålet kommer igen.", "Saved. This question comes back."],
+    "o3.t.h1": ["Test dig selv som til eksamen", "Test yourself like in the exam"],
+    "o3.t.p": ["Du får billedarket og to spørgsmål pr. emne: 3 emner, 6 spørgsmål. Skriv dit svar. Så får du feedback på ordstilling, opbygning, nøgleord og stavning.",
+               "You get the picture sheet and two questions per topic: 3 topics, 6 questions. Write your answer. Then you get feedback on word order, structure, keywords and spelling."],
+    "o3.t.choose": ["Vælg en prøve – eller 3 tilfældige emner", "Choose a sitting – or 3 random topics"],
+    "o3.t.start": ["Start testen", "Start the test"],
+    "o3.t.count": ["Spørgsmål {0} af {1}", "Question {0} of {1}"],
+    "o3.t.say": ["Skriv det, du vil sige til eksaminator.", "Write what you would say to the examiner."],
+    "o3.t.ta": ["Skriv dit svar her …", "Write your answer here …"],
+    "o3.t.time": ["{0} · mål 45–90 s", "{0} · target 45–90 s"],
+    "o3.t.check": ["Tjek mit svar", "Check my answer"],
+    "o3.f.todo": ["{0} ting at øve", "{0} things to practise"],
+    "o3.f.clean": ["Flot – ingen sikre fejl", "Well done – no clear errors"],
+    "o3.f.wo.n": ["{0} ordstillingsfejl", "{0} word-order errors"],
+    "o3.f.wo.ok": ["Ordstilling ok", "Word order ok"],
+    "o3.f.st": ["Opbygning {0} af {1}", "Structure {0} of {1}"],
+    "o3.f.kw": ["Nøgleord {0} af {1}", "Keywords {0} of {1}"],
+    "o3.f.sp": ["{0} stavefejl · tæller ikke", "{0} spelling errors · does not count"],
+    "o3.f.wo.none": ["Ingen sikre ordstillingsfejl. (Det betyder ikke, at alt er perfekt.)", "No clear word-order errors. (That does not mean everything is perfect.)"],
+    "o3.f.st.h": ["Opbygning: {0} af {1} dele", "Structure: {0} of {1} parts"],
+    "o3.f.st.p": ["Flueben = delen er i dit svar. Kryds = delen mangler. Under står, hvad du kan sige.",
+                  "Tick = the part is in your answer. Cross = the part is missing. Below: what you can say."],
+    "o3.f.kw.h": ["Nøgleord: {0} af {1} brugt", "Keywords: {0} of {1} used"],
+    "o3.f.kw.p": ["Brug ordene med deres præposition næste gang.", "Use the words with their preposition next time."],
+    "o3.f.sp.h": ["Stavning – tæller ikke til mundtlig", "Spelling – does not count in the oral exam"],
+    "o3.f.sp.none": ["Ingen rettelser.", "No corrections."],
+    "o3.f.cmp": ["Sammenlign med modelsvaret", "Compare with the model answer"],
+    "o3.f.cmp.p": ["Bølget rød linje = ordstilling. Gul linje = stavning.", "Wavy red line = word order. Yellow line = spelling."],
+    "o3.f.why": ["Hvorfor?", "Why?"],
+    "o3.f.miss": ["Mangler: {0}", "Missing: {0}"],
+    "o3.f.empty": ["Du skrev ikke noget.", "You did not write anything."],
+    "o3.end.h": ["Testen er færdig", "The test is done"],
+    "o3.end.p": ["Her er dine {0} svar. Tryk på et spørgsmål for at øve det i Lær.", "Here are your {0} answers. Tap a question to practise it in Study."],
+    "o3.end.row": ["Ordstillingsfejl: {0} · opbygning {1}/{2} · nøgleord {3}/{4}", "Word-order errors: {0} · structure {1}/{2} · keywords {3}/{4}"],
+    "o3.end.skip": ["Ikke tjekket", "Not checked"],
+    "o3.end.none": ["Ikke vurderet", "Not rated"],
+  });
+
+  // what to say when a structure part is missing (from redesign/shared/engine.js)
+  const MISSING = {
+    intro: ["Start med én kort sætning, der svarer på spørgsmålet.", "Start with one short sentence that answers the question."],
+    aarsag: ["Sig årsagen: «En årsag er, at …»", "Give the reason: “En årsag er, at …”"],
+    aarsag2: ["Giv en anden årsag: «En anden årsag er, at …»", "Give a second reason: “En anden årsag er, at …”"],
+    fordi: ["Forklar med «fordi …» – så er din årsag ikke kun en påstand.", "Explain with “fordi …” – then your reason is more than a claim."],
+    eksempel: ["Giv et eksempel: «Fx kender jeg …»", "Give an example: “Fx kender jeg …”"],
+    konklusion: ["Slut af: «Så derfor tror jeg, at …»", "Round off: “Så derfor tror jeg, at …”"],
+    side1: ["Start med fordelen: «På den ene side …»", "Start with the advantage: “På den ene side …”"],
+    side2: ["Sig ulempen: «På den anden side …»", "Give the disadvantage: “På den anden side …”"],
+    stilling: ["Tag stilling: «Hvis jeg skal tage stilling, mener jeg, at …»", "Take a position: “Hvis jeg skal tage stilling, mener jeg, at …”"],
+    konsekvens: ["Sig konsekvensen: «Det betyder, at …»", "Say the consequence: “Det betyder, at …”"],
+  };
+
+  // ── icons: one stroke family (24 px grid, 2 px stroke) ──
+  const ICONS = {
+    check: "M5 12.5l4.5 4.5L19 7.5", x: "M6 6l12 12M18 6L6 18",
+    right: "M9 5l7 7-7 7", left: "M15 5l-7 7 7 7",
+    zoom: "M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14zM20 20l-4-4M11 8v6M8 11h6",
+    clock: "M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM12 7v5l3 2",
+    mic: "M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3zM5 11a7 7 0 0 0 14 0M12 18v3",
+  };
+  function icon(name, cls) {
+    const s = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    s.setAttribute("viewBox", "0 0 24 24"); s.setAttribute("aria-hidden", "true"); s.setAttribute("class", "ic " + (cls || ""));
+    const p = document.createElementNS("http://www.w3.org/2000/svg", "path"); p.setAttribute("d", ICONS[name]); s.append(p); return s;
   }
-  // the answer structure of a frame, in one line above the hidden model answer
-  function structLine(f) {
-    const steps = D.frameSteps[f] || [];
-    const da = `${I18N["or.struct.q"][0]}: ${frameDa(f)} → ${I18N["or.struct.order"][0]}: ${steps.map(partDa).join(" → ")}`;
-    const en = `${I18N["or.struct.q"][1]}: ${frameEn(f)} → ${I18N["or.struct.order"][1]}: ${steps.map(partEn).join(" → ")}`;
-    return el("div", { class: "structline" }, el("span", { lang: "da" }, da), enLine(en));
+
+  // ── Danish line + small English line under it ──
+  const en = s => s ? el("span", { class: "en", lang: "en" }, s) : null;
+  const bi = (da, enT, tag = "span", cls = "") => el(tag, { class: ("bi " + cls).trim() }, el("span", { class: "da", lang: "da" }, da), en(enT));
+  const tb = (key, a = [], b = a, tag = "span", cls = "") => bi(fill(I18N[key][0], ...a), fill(I18N[key][1], ...b), tag, cls);
+  const part = p => partDa(p);
+  const smooth = () => matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
+  // topics in study order: newest sitting first, A → C (start screen, "Dit næste spørgsmål", "Næste emne")
+  const ORDER = () => [...D.sittings].reverse().flatMap(s => ["A", "B", "C"].map(L => `${s.id}-${L}`)).filter(k => D.topics[k]);
+
+  const srcLabel = q => { const s = sourceLabel(q); return bi(s.da, s.en, "p", "src"); };
+  const qText = (q, tag = "h2") => { const e = q.en || {}; return el(tag, { class: "qtext" },
+    q.intro ? el("span", { class: "intro da", lang: "da" }, q.intro) : null, q.intro ? en(e.intro) : null,
+    el("span", { class: "da", lang: "da" }, q.question), en(e.question)); };
+
+  function picture(key) {
+    const topic = D.topics[key];
+    const img = el("img", { src: `oral/pics/${key}.jpg`, alt: t("o3.pic.alt", topic.title) });
+    const fig = el("figure", { class: "pic" },
+      el("button", { type: "button", class: "picbtn", "aria-label": t("o3.pic.zoom") }, img, el("span", { class: "zoom" }, icon("zoom"))),
+      tb("o3.pic.cap", [], [], "figcaption"));
+    fig.querySelector(".picbtn").addEventListener("click", () => fig.classList.toggle("big"));
+    fig.addEventListener("keydown", e => { if (e.key === "Escape") fig.classList.remove("big"); });
+    return fig;
   }
-  // "Hvordan?": the frame's skeleton and tips, each with its English
-  function howBlock(f) {
-    const fr = FR(f), tips = fr.tips || [], tipsEn = fr.tips_en || [];
-    return el("details", { class: "how" }, el("summary", null, both("or.how.h")),
-      el("p", { class: "skel", lang: "da" }, fr.skeleton || ""), enLine(fr.skeleton_en),
-      tips.length ? el("p", { class: "sub-h" }, t("or.how.tips")) : null,
-      tips.length ? el("ul", { class: "tips" }, tips.map((x, i) => el("li", null, el("span", { lang: "da" }, x), enLine(dIdx(tipsEn, i))))) : null);
+
+  // the model answer: coloured segments + a structure map whose chips light up their segment
+  const segP = (q, s, i) => el("p", { class: `seg p-${s.part}`, "data-part": s.part },
+    el("span", { class: "seglbl" }, part(s.part)), el("span", { class: "da", lang: "da" }, s.text), en(dIdx((q.en || {}).answer, i)));
+  const segments = q => el("div", { class: "segs" }, q.answer.answer.map((s, i) => segP(q, s, i)));
+  function smap(q, segsRoot) {
+    const a = q.answer, used = new Set(a.answer.map(s => s.part));
+    return el("ol", { class: "smap", "aria-label": t("or.struct") }, (D.frameSteps[a.frame] || []).map((p, i) =>
+      el("li", { class: `p-${p}${used.has(p) ? "" : " off"}` }, el("button", { type: "button", onclick: e => {
+        const on = !e.currentTarget.classList.contains("on");
+        e.currentTarget.closest(".smap").querySelectorAll("button").forEach(b => b.classList.remove("on"));
+        segsRoot.querySelectorAll(".seg").forEach(s => s.classList.toggle("hi", on && s.dataset.part === p));
+        segsRoot.classList.toggle("focus", on); if (on) e.currentTarget.classList.add("on");
+      } }, el("span", { class: "n" }, i + 1), bi(part(p), partEn(p))))));
   }
-  function answerBlock(q) {
-    const a = q.answer, en = q.en || {}, steps = D.frameSteps[a.frame] || [], used = new Set(a.answer.map(s => s.part));
-    const segs = el("div", { class: "segs" });
-    const put = p => segs.querySelectorAll(`[data-part="${p}"]`);
-    const fuIdx = a.followup ? (q.followups || []).indexOf(a.followup.q) : -1;
-    const box = el("div", { class: "answer", hidden: true },
-      el("div", { class: "smap" }, el("p", { class: "lbl" }, t("or.struct")),
-        el("p", { class: "frame" }, t("frame." + a.frame)),
-        el("ol", { class: "steps" }, steps.map(p => el("li", { class: `p-${p}${used.has(p) ? "" : " off"}`, "data-step": p },
-          el("button", { type: "button", onclick: () => put(p).forEach(x => x.classList.toggle("hi")) }, t("part." + p)))))),
-      segs,
-      a.keywords && a.keywords.length ? el("div", null, el("p", { class: "sub-h" }, t("or.keywords")),
-        el("ul", { class: "kws" }, a.keywords.map(k => el("li", { class: "kw" }, el("b", { lang: "da" }, k.da),
-          el("span", { class: "use", lang: "da" }, k.use), el("span", { class: "en" }, k.en))))) : null,
-      a.tips && a.tips.length ? el("div", null, el("p", { class: "sub-h" }, t("or.tips")),
-        el("ul", { class: "tips", lang: "da" }, a.tips.map((x, i) => el("li", null, x, enLine(dIdx(en.tips, i)))))) : null,
-      a.followup ? el("details", { class: "fu" }, el("summary", null, t("or.followup")),
-        el("p", { lang: "da" }, a.followup.q), enLine(dIdx(en.followups, fuIdx)),
-        el("p", { lang: "da" }, a.followup.answer), enLine(en.followup_answer)) : null,
-      a.notes || a.notes_raw ? el("div", { class: "note" }, el("p", { class: "lbl" }, t("or.notes")),
-        el("p", { lang: "da" }, a.notes || a.notes_raw), enLine(a.notes ? en.notes : null),
-        a.notes && a.notes_raw ? el("details", null, el("summary", null, t("or.notesorig")), el("p", { lang: "da" }, a.notes_raw)) : null) : null);
-    a.answer.forEach((s, i) => segs.append(segP(s, dIdx(en.answer, i))));
+  const order = f => el("ol", { class: "order" }, (D.frameSteps[f] || []).map(p => el("li", { class: `p-${p}` }, bi(part(p), partEn(p)))));
+
+  // keywords: the word with its preposition in bold, the pattern, the English
+  const kwItem = k => el("li", { class: "kw" }, el("b", { lang: "da" }, k.da), el("span", { class: "use", lang: "da" }, k.use), en(k.en));
+  const keywords = q => el("ul", { class: "kws" }, (q.answer.keywords || []).map(kwItem));
+  const qTips = q => el("ul", { class: "tips" }, (q.answer.tips || []).map((x, i) => el("li", null, el("span", { class: "da", lang: "da" }, x), en(dIdx((q.en || {}).tips, i)))));
+  function followup(q) {
+    const a = q.answer, e = q.en || {}; if (!a.followup) return null;
+    const i = (q.followups || []).indexOf(a.followup.q);
+    return el("div", { class: "fu" }, el("p", { class: "fuq" }, el("span", { class: "da", lang: "da" }, a.followup.q), en(dIdx(e.followups, i))),
+      el("p", { class: "fua" }, el("span", { class: "da", lang: "da" }, a.followup.answer), en(e.followup_answer)));
+  }
+  function notes(q) {
+    const a = q.answer, e = q.en || {}; if (!a.notes && !a.notes_raw) return null;
+    return el("div", { class: "notes" }, el("p", { class: "da", lang: "da" }, a.notes || a.notes_raw), en(a.notes ? e.notes : null),
+      a.notes && a.notes_raw ? el("details", null, el("summary", null, t("o3.notes.raw")), el("p", { class: "raw", lang: "da" }, a.notes_raw)) : null);
+  }
+
+  // ── progress ──
+  const statusDot = s => el("span", { class: "sdot s-" + s, title: t("o3.st." + s) });
+  function progressCounts() { const c = { new: 0, practice: 0, sure: 0 }; D.questions.forEach(q => c[qStatus(q.id)]++); return c; }
+  function nextQuestion() {
+    for (const k of ORDER()) for (const id of topicIds(k)) if (qById[id] && qStatus(id) !== "sure") return qById[id];
+    return qById[`${ORDER()[0]}-1A`] || D.questions[0];
+  }
+
+  // ── self-rating: three buttons with what each one means, and a confirmation ──
+  const RATE = [["k", "or.rate.k", "o3.r.k.h"], ["d", "or.rate.d", "o3.r.d.h"], ["i", "or.rate.i", "o3.r.i.h"]];
+  function rating(id, onDone) {
+    const msg = el("p", { class: "ratemsg", "aria-live": "polite" });
+    const box = el("div", { class: "rating" }, tb("o3.r.p", [], [], "p", "hint"),
+      el("div", { class: "ratebtns" }, RATE.map(([r, k, h]) => el("button", { type: "button", class: "ratebtn r-" + r, "aria-pressed": "false", onclick: e => {
+        rate(id, r);
+        box.querySelectorAll(".ratebtn").forEach(b => b.setAttribute("aria-pressed", String(b === e.currentTarget)));
+        const st = qStatus(id);
+        msg.replaceChildren(icon("check"), tb(st === "sure" ? "o3.r.sure" : r === "k" ? "o3.r.k1" : "o3.r.again"));
+        if (onDone) onDone(r);
+      } }, tb(k), tb(h, [], [], "span", "hint")))), msg);
     return box;
   }
-  function segmentsOnly(q) {
-    if (!q.answer) return el("p", { class: "soon" }, t("or.soon"));
-    const en = q.en || {};
-    return el("div", { class: "segs" }, q.answer.answer.map((s, i) => segP(s, dIdx(en.answer, i))));
-  }
-  function toggleAnswer(btn, box) {
-    btn.addEventListener("click", () => { box.hidden = !box.hidden; btn.textContent = t(box.hidden ? "or.show" : "or.hide"); });
-    return btn;
-  }
-  function questionCard(q, focus) {
-    const sl = sourceLabel(q), en = q.en || {};
-    const card = el("article", { class: "qcard sheet", id: "q-" + q.id, "data-id": q.id },
-      el("p", { class: "src" }, el("span", { lang: "da" }, sl.da), el("span", { class: "en" }, sl.en)),
-      qtext(q));
-    if (q.followups && q.followups.length) card.append(el("div", { class: "fus" }, el("p", { class: "sub-h" }, t("or.followups")),
-      el("ul", null, q.followups.map((f, i) => el("li", null, el("span", { lang: "da" }, f), enLine(dIdx(en.followups, i)))))));
-    if (q.answer) {
-      const box = answerBlock(q);
-      card.append(structLine(q.answer.frame), howBlock(q.answer.frame),
-        el("p", { class: "prov" }, both("or.prov")), toggleAnswer(el("button", { class: "btn", type: "button" }, t("or.show")), box), box);
-    } else card.append(el("p", { class: "soon" }, t("or.soon")));
-    if (focus) setTimeout(() => card.scrollIntoView({ block: "start" }), 30);
-    return card;
-  }
-  function picture(key, cls) {
-    const topic = D.topics[key];
-    return el("figure", { class: "pic " + (cls || "") },
-      el("img", { src: `oral/pics/${key}.jpg`, alt: `${I18N["or.picture"][0]} (${topic.title})`, loading: "lazy",
-        onclick: e => e.currentTarget.parentElement.classList.toggle("big") }),
-      el("figcaption", null, both("or.picture")));
-  }
-  function topicHead(key) {
-    const topic = D.topics[key], sit = sitOf(key), letter = key.split("-")[1];
-    const fam = famOf(key), ten = topic.situations_en || {};
-    const sits = [["A", topic.situations.A, ten.A], ["B", topic.situations.B, ten.B]].filter(x => x[1]);
-    return el("header", { class: "thead" }, el("span", { class: "letter", "aria-hidden": "true" }, letter),
-      el("div", null, el("p", { class: "lbl" }, bi(sitLabel(sit).da, sitLabel(sit).en)),
-        el("h2", { lang: "da" }, topic.title, enLine(topic.title_en)),
-        fam ? el("p", { class: "st" }, bi(fam[0], fam[1])) : null,
-        sits.length ? el("dl", { class: "sit" }, sits.map(([L, s, e]) => el("div", null, el("dt", null, L),
-          el("dd", null, el("span", { lang: "da" }, s), enLine(e))))) : null));
+
+  // ── Test feedback blocks (from redesign/shared/ui.js feedback(); every text from I18N) ──
+  function feedback(q, text) {
+    const fb = analyse(text, q);
+    const missing = fb.steps.filter(s => !s.ok), kwMiss = fb.kw.filter(k => !k.used);
+    const [whyDa, whyEn] = I18N["o3.f.why"];
+    const yours = el("p", { class: "yours", lang: "da" }, ...(text.trim() ? annotate(text, fb) : [tb("o3.f.empty", [], [], "span", "empty")]));
+    const woList = fb.wo.length ? el("ul", { class: "fixes" }, fb.wo.map(w => el("li", { class: "fix wo-fix" },
+      el("p", { class: "pair" }, el("s", { class: "old", lang: "da" }, w.snip), icon("right"), el("b", { class: "new", lang: "da" }, w.fix)),
+      el("p", { class: "why" }, el("span", { class: "da", lang: "da" }, whyDa + " " + w.why.da), en(whyEn + " " + w.why.en))))) : null;
+    const spList = fb.spell.length ? el("ul", { class: "fixes spell" }, fb.spell.map(s => el("li", { class: "fix sp-fix" },
+      el("p", { class: "pair" }, el("s", { class: "old", lang: "da" }, s.w), icon("right"), el("b", { class: "new", lang: "da" }, s.fix))))) : null;
+    const steps = el("ol", { class: "fsteps" }, fb.steps.map(s => el("li", { class: (s.ok ? "ok" : "no") + " p-" + s.part },
+      icon(s.ok ? "check" : "x"), bi(part(s.part), partEn(s.part)))));
+    const stepFix = missing.length ? el("ul", { class: "fixes" }, missing.map(s => el("li", { class: "fix st-fix p-" + s.part },
+      el("p", { class: "pair" }, el("b", { lang: "da" }, fill(I18N["o3.f.miss"][0], part(s.part))), en(fill(I18N["o3.f.miss"][1], partEn(s.part)))),
+      el("p", { class: "why" }, el("span", { class: "da", lang: "da" }, MISSING[s.part][0]), en(MISSING[s.part][1]))))) : null;
+    const kws = el("ul", { class: "fkw" }, fb.kw.map(k => el("li", { class: k.used ? "ok" : "no" }, icon(k.used ? "check" : "x"),
+      el("span", null, el("b", { lang: "da" }, k.da), el("span", { class: "use", lang: "da" }, k.use), en(k.en)))));
+    return { fb, missing, kwMiss, yours, woList, spList, steps, stepFix, kws, model: segments(q),
+      nWo: fb.wo.length, nSp: fb.spell.length, nSteps: fb.steps.length, nOk: fb.steps.filter(s => s.ok).length, nKw: fb.kw.length, nKwOk: fb.kw.filter(k => k.used).length };
   }
 
-  // ── Lær ─────────────────────────────────────────────────────────────────────────
-  let laerSit = "2024s";
-  // the four question types, one row each: the wording that signals the type, and the order of its parts
-  function frameTypes() {
-    return el("section", { class: "sec" }, el("h2", null, both("or.ft.h")), el("p", { class: "hint" }, both("or.ft.p")),
-      el("div", { class: "ftypes" }, Object.keys(D.frameSteps).map(f => el("article", { class: "sheet ftype" },
-        el("p", { class: "fq" }, el("span", { lang: "da" }, FR(f).title || frameDa(f)), enLine(FR(f).title_en)),
-        el("ol", { class: "steps" }, D.frameSteps[f].map(p => el("li", { class: `p-${p}` },
-          el("span", null, el("span", { lang: "da" }, partDa(p)), enLine(partEn(p))))))))));
-  }
-  function viewLaer() {
-    const sure = sureCount(), total = D.questions.length;
-    const count = { new: 0, practice: 0, sure: 0 };
-    D.questions.forEach(q => count[qStatus(q.id)]++);
-    const topicsOf = s => topicKeys.filter(k => sitOf(k) === s);
-    const line = i => fill(I18N["or.prog.line"][i], sure, total, count.practice, count.new);
+  // ── a Test session: 3 topics; each asks 1A or 1B at random, then 2. Kept in sessionStorage (and in memory). ──
+  const TKEY = "pd3.oral.test";
+  let tMem = null;
+  const TEST = {
+    build(choice) {
+      const pick = a => a[Math.floor(Math.random() * a.length)];
+      const keys = choice === "random" ? shuffle([...topicKeys]).slice(0, 3) : ["A", "B", "C"].map(L => `${choice}-${L}`).filter(k => D.topics[k]);
+      return keys.flatMap(k => [`${k}-${pick(["1A", "1B"])}`, `${k}-2`]).filter(id => qById[id] && qById[id].answer);
+    },
+    start(choice) { const s = { ids: TEST.build(choice), i: 0, choice, answers: {}, results: {} }; TEST.save(s); return s; },
+    get() { try { const s = JSON.parse(sessionStorage.getItem(TKEY) || "null"); if (s) return s; } catch (e) { /* ignore */ } return tMem; },
+    save(s) { tMem = s; try { sessionStorage.setItem(TKEY, JSON.stringify(s)); } catch (e) { /* ignore */ } },
+    clear() { tMem = null; try { sessionStorage.removeItem(TKEY); } catch (e) { /* ignore */ } },
+  };
+
+  // ══ views ══
+  let year = D.sittings[D.sittings.length - 1].id, tChoice = D.sittings[D.sittings.length - 1].id, timer = null;
+
+  // ── Lær · start: the next question first, then choose yourself ──
+  function viewStart() {
+    const nq = nextQuestion(), key = keyOf(nq.id), topic = D.topics[key];
+    const c = progressCounts(), total = D.questions.length;
+    const pct = n => (100 * n / total).toFixed(2) + "%";
     app.replaceChildren(
-      el("section", { class: "top" }, el("span", { class: "chip" }, el("b", null, t("or.chip.b")), el("span", null, t("or.chip"))),
-        el("h1", null, el("span", { class: "light" }, t("or.h1a")), el("span", null, t("or.h1b"))),
-        el("p", { class: "lead" }, both("or.intro"))),
-      el("section", { class: "sec" }, el("h2", null, both("or.howto.h")),
-        el("ol", { class: "howsteps" }, [1, 2, 3].map(n => el("li", null, both("or.howto." + n))))),
-      frameTypes(),
-      el("section", { class: "sec" }, el("div", { class: "sheet progline" },
-        el("p", { class: "pl" }, el("span", { lang: "da" }, line(0)), enLine(line(1))),
-        el("div", { class: "bar", role: "img", "aria-label": `${sure} / ${total}` },
-          el("span", { style: `width:${(100 * sure / total).toFixed(1)}%` })),
-        el("p", { class: "hint" }, both("or.prog.legend")))),
-      el("section", { class: "sec" }, el("h2", null, t("or.sittings")),
-        el("div", { class: "chips", role: "group" }, D.sittings.map(s => {
-          const ids = topicsOf(s.id).flatMap(topicIds), n = ids.filter(id => qStatus(id) === "sure").length;
-          return el("button", { type: "button", class: "chipbtn", "aria-pressed": laerSit === s.id ? "true" : "false",
-            onclick: () => { laerSit = s.id; route(); } }, LANG === "en" ? s.label.en : s.label.da,
-            el("span", { class: "n" }, `${n}/${ids.length}`));
-        }))),
-      el("section", { class: "sec" }, el("div", { class: "tgrid" }, topicsOf(laerSit).map(key => {
-        const st = tStatus(key), fam = famOf(key), topic = D.topics[key], ten = topic.situations_en || {};
-        const sits = [topic.situations.A, topic.situations.B].filter(Boolean).join(" · ");
-        const sitsEn = [ten.A, ten.B].filter(Boolean).join(" · ");
-        const n = topicIds(key).filter(id => qStatus(id) === "sure").length;
-        return el("a", { class: "sheet tcard", href: `#q/${key}-1A` },
-          el("span", { class: "letter" }, key.split("-")[1]),
-          el("h3", { lang: "da" }, topic.title, enLine(topic.title_en)),
-          fam ? el("p", { class: "st" }, el("span", { class: "dot " + st }), LANG === "en" ? fam[1] : fam[0]) : null,
-          sits ? el("p", { class: "sits" }, el("span", { lang: "da" }, sits), enLine(sitsEn)) : null,
-          el("p", { class: "st" }, el("span", { class: "dot " + st }), t("or.tcount", n)));
-      }))),
-      el("div", { class: "tgrid", style: "margin-top:24px" }, el("a", { class: "btn solid", href: "#test" }, t("or.tab.test"))));
+      el("div", { class: "hello" }, tb("o3.h1", [], [], "h1"), tb("o3.lead", [], [], "p", "lead")),
+      el("section", { class: "next", "aria-label": t("o3.next") },
+        el("div", { class: "thumb" }, el("img", { src: `oral/pics/${key}.jpg`, alt: "" })),
+        el("div", { class: "body" },
+          el("div", { class: "nl" }, tb("o3.next", [], [], "p", "lab"), tb("o3.next.why", [], [], "p", "hint")),
+          el("h2", { class: "topic" }, el("span", { class: "da", lang: "da" }, topic.title), en(topic.title_en)),
+          srcLabel(nq), qText(nq, "p"),
+          el("a", { class: "go", href: `#q/${nq.id}` }, t("o3.start"), icon("right")))),
+      el("div", { class: "prog" },
+        el("div", { class: "line" }, tb("o3.prog.sure", [c.sure, total], [c.sure, total], "b"), tb("o3.prog.rest", [c.practice, c.new], [c.practice, c.new], "span", "hint")),
+        el("div", { class: "pbar", role: "img", "aria-label": t("o3.prog.sure", c.sure, total) },
+          el("span", { class: "s", style: `width:${pct(c.sure)}` }), el("span", { class: "p", style: `width:${pct(c.practice)}` })),
+        el("ul", { class: "legend" }, ["sure", "practice", "new"].map(s => el("li", null, statusDot(s), tb("o3.leg." + s))))),
+      el("section", { class: "choose" },
+        el("div", { class: "ch" }, tb("o3.choose", [], [], "h2"), tb("o3.choose.p", [], [], "p", "hint")),
+        el("div", { class: "years", role: "group", "aria-label": t("or.sittings") }, [...D.sittings].reverse().map(s => {
+          const n = ["A", "B", "C"].flatMap(L => topicIds(`${s.id}-${L}`)).filter(id => qStatus(id) === "sure").length;
+          return el("button", { type: "button", class: "chipbtn", "data-sit": s.id, "aria-pressed": String(s.id === year), onclick: () => { year = s.id; viewStart(); } },
+            bi(s.label.da, s.label.en), el("span", { class: "n" }, t("o3.yearn", n)));
+        })),
+        el("div", { class: "topics" }, ["A", "B", "C"].map(L => `${year}-${L}`).filter(k => D.topics[k]).map(k => {
+          const tp = D.topics[k], ten = tp.situations_en || {}, ids = topicIds(k);
+          const nSure = ids.filter(id => qStatus(id) === "sure").length;
+          return el("a", { class: "trow", href: `#q/${k}-1A`, "data-key": k },
+            el("span", { class: "L", "aria-hidden": "true" }, k.split("-")[1]),
+            el("div", null, el("h3", null, el("span", { class: "da", lang: "da" }, tp.title), en(tp.title_en)),
+              el("p", { class: "sits" }, el("span", { class: "da", lang: "da" }, [tp.situations.A, tp.situations.B].filter(Boolean).join(" · ")),
+                en([ten.A, ten.B].filter(Boolean).join(" · ")))),
+            el("span", { class: "dots", title: t("o3.dots", nSure), "aria-label": t("o3.dots", nSure) }, ids.map(id => statusDot(qStatus(id))), icon("right", "chev")));
+        }))));
   }
 
-  // ── topic view (Lær) ─────────────────────────────────────────────────────────────
-  function viewTopic(id) {
-    const key = keyOf(id), q0 = qById[id];
-    if (!q0 || !D.topics[key]) return viewLaer();
-    laerSit = sitOf(key);
-    const qs = topicIds(key).map(x => qById[x]).filter(Boolean);
-    app.replaceChildren(
-      el("p", { class: "crumbs" }, el("a", { href: "#laer" }, t("or.back"))),
-      el("section", { class: "view" },
-        topicHead(key),
-        picture(key),
-        el("p", { class: "hint" }, el("a", { href: `#test`, onclick: () => startSingle(key) }, t("or.topictest"))),
-        ...qs.map(q => questionCard(q, q.id === id))));
+  // ── one question in four steps ──
+  function viewQuestion(id, stage, scroll) {
+    const q = qById[id]; if (!q) { location.replace("#laer"); return; }
+    const key = keyOf(id), topic = D.topics[key], ids = topicIds(key), idx = ids.indexOf(id);
+    const list = ORDER(), nextKey = list[list.indexOf(key) + 1] || null;
+    const a = q.answer;
+    const cls = n => n < stage ? "step done" : n === stage ? "step now" : "step later";
+    const go = n => { location.hash = `#q/${id}/${n}`; };
+    const segs = a ? segments(q) : null;
+    const soon = () => tb("or.soon", [], [], "p", "soon");
+    const step = (n, k, ...body) => el("li", { class: cls(n), id: "s" + n, "aria-current": n === stage ? "step" : null },
+      el("div", { class: "sh" }, tb(k, [], [], "h3")), el("div", { class: "sb" }, ...body));
+    const card = (k, body) => el("div", { class: "card" }, tb(k, [], [], "h4"), body);
+    let primary;
+    if (stage === 1) primary = [t("o3.b.show"), () => go(2)];
+    else if (stage === 2) primary = [t("o3.b.words"), () => go(3)];
+    else if (stage === 3) primary = [t("o3.s4"), () => go(4)];
+    else if (ids[idx + 1]) primary = [t("or.next"), () => { location.hash = `#q/${ids[idx + 1]}`; }];
+    else if (nextKey) primary = [t("or.nexttopic"), () => { location.hash = `#q/${nextKey}-1A`; }];
+    else primary = [t("o3.crumb"), () => { location.hash = "#laer"; }];
+    const fr = a ? FR(a.frame) : {};
+    app.replaceChildren(el("div", { class: "flow" },
+      el("aside", { class: "side" }, picture(key)),
+      el("div", { class: "main" },
+        el("div", { class: "qhead" },
+          el("a", { class: "crumb", href: "#laer" }, icon("left"), t("o3.crumb")),
+          el("div", { class: "qnav" },
+            tb("o3.topic", [q.letter, topic.title], [q.letter, topic.title_en || topic.title], "h1", "topic"),
+            el("nav", { class: "qpills", "aria-label": t("o3.qpills") }, ids.map((x, i) =>
+              el("a", { href: `#q/${x}`, "aria-current": String(x === id) }, statusDot(qStatus(x)), t("o3.qpill", i + 1))))),
+          srcLabel(q)),
+        el("ol", { class: "steps" },
+          step(1, "o3.s1", el("div", { class: "card" }, qText(q),
+            a ? el("div", { class: "typecard" },
+              tb("o3.qtype", [fr.title || frameDa(a.frame)], [fr.title_en || frameEn(a.frame)], "p", "t"),
+              tb("o3.order", [], [], "p"), order(a.frame)) : null,
+            el("p", { class: "say" }, icon("mic"), tb("o3.say")))),
+          step(2, "o3.s2", a ? el("div", { class: "card" }, tb("o3.tap", [], [], "p", "hint"), smap(q, segs), segs) : soon()),
+          step(3, "o3.s3", a ? el("div", { class: "more" },
+            card("o3.kw.h", keywords(q)), card("or.tips", qTips(q)),
+            a.followup ? card("o3.fu.h", followup(q)) : null,
+            a.notes || a.notes_raw ? card("or.notes", notes(q)) : null) : soon()),
+          step(4, "o3.s4", rating(id))),
+        el("div", { class: "actionbar" }, el("button", { type: "button", class: "go", onclick: primary[1] }, primary[0], icon("right"))))));
+    if (scroll && stage > 1) requestAnimationFrame(() => { const s = document.getElementById("s" + stage); if (s) s.scrollIntoView({ block: "start", behavior: smooth() }); });
   }
 
-  // ── Test ─────────────────────────────────────────────────────────────────────────
-  let testCfg = { sit: "2024s", unsure: false }, S = null, timer = null;
-  function startSession(keys) { return { queue: keys, ti: 0, phase: "topic", slot1: "1A", results: {}, draft: "", last: null, t0: 0 }; }
-  function startSingle(key) { S = startSession([key]); }
-  function testSetup() {
-    const pool = testCfg.sit === "random" ? topicKeys : topicKeys.filter(k => sitOf(k) === testCfg.sit);
-    const keysNow = testCfg.unsure ? pool.filter(k => tStatus(k) !== "sure") : pool;
-    const chips = [...D.sittings.map(s => ({ id: s.id, label: LANG === "en" ? s.label.en : s.label.da })),
-      { id: "random", label: t("or.test.rand") }];
-    app.replaceChildren(
-      el("section", { class: "top" }, el("h1", null, el("span", { class: "light" }, t("or.h1a")), el("span", null, t("or.test.h")))),
-      el("p", { class: "lead" }, both("or.test.p")),
-      el("section", { class: "sec" }, el("h2", null, t("or.test.sit")),
-        el("div", { class: "chips", role: "group" }, chips.map(c => el("button", { type: "button", class: "chipbtn",
-          "aria-pressed": testCfg.sit === c.id ? "true" : "false", onclick: () => { testCfg.sit = c.id; route(); } }, c.label))),
-        el("label", { class: "check" }, el("input", { type: "checkbox", checked: testCfg.unsure ? "" : null,
-          onchange: e => { testCfg.unsure = e.target.checked; route(); } }), t("or.test.unsure")),
-        keysNow.length
-          ? el("button", { class: "btn solid", type: "button", onclick: () => {
-              let keys = keysNow;
-              if (testCfg.sit === "random") keys = shuffle(keys.slice()).slice(0, 3);
-              S = startSession(keys); route(); } }, t("or.test.start"))
-          : el("p", { class: "hint" }, t("or.test.none"))));
+  // ── Test ──
+  function viewTestSetup() {
+    const chip = (id, label) => el("button", { type: "button", class: "chipbtn", "data-sit": id, "aria-pressed": String(tChoice === id),
+      onclick: () => { tChoice = id; viewTestSetup(); } }, label);
+    app.replaceChildren(el("div", { class: "tsetup" },
+      tb("o3.t.h1", [], [], "h1"), tb("o3.t.p", [], [], "p"),
+      tb("o3.t.choose", [], [], "h2"),
+      el("div", { class: "years", role: "group", "aria-label": t("o3.t.choose") },
+        chip("random", t("or.test.rand")), [...D.sittings].reverse().map(s => chip(s.id, bi(s.label.da, s.label.en)))),
+      el("button", { type: "button", class: "go", id: "tstart", onclick: () => { TEST.start(tChoice); location.hash = "#test/q"; } }, t("o3.t.start"), icon("right"))));
   }
-  function testProgressBar() {
-    const total = S.queue.length;
-    return el("div", { class: "testbar" }, el("span", null, t("or.test.topic", S.ti + 1, total)),
-      el("span", null, bi(sitLabel(sitOf(S.queue[S.ti])).da, sitLabel(sitOf(S.queue[S.ti])).en)));
+  function tbar(s) {
+    return el("div", { class: "tbar" }, tb("o3.t.count", [s.i + 1, s.ids.length], [s.i + 1, s.ids.length], "span", "count"),
+      el("span", { class: "dash", "aria-hidden": "true" }, s.ids.map((_, i) => el("i", { class: i < s.i ? "done" : i === s.i ? "now" : "" }))));
   }
-  function startTimer() {
-    clearInterval(timer);
-    const tick = () => { const e = $("#tm"); if (e) e.textContent = t("or.test.time", mmss(Date.now() - S.t0)); };
-    timer = setInterval(tick, 1000); tick();
+  function viewTestQ() {
+    const s = TEST.get(); if (!s || !s.ids.length) { location.replace("#test"); return; }
+    const q = qById[s.ids[s.i]], key = keyOf(q.id), t0 = Date.now();
+    const tt = el("span", { class: "tt" }, t("o3.t.time", "0:00"));
+    const ta = el("textarea", { class: "ans", id: "ta", rows: "7", spellcheck: "false", placeholder: t("o3.t.ta"), "aria-label": t("o3.t.ta") });
+    ta.value = s.answers[q.id] || "";
+    ta.addEventListener("input", () => { s.answers[q.id] = ta.value; TEST.save(s); });
+    app.replaceChildren(el("div", { class: "flow" }, el("aside", { class: "side" }, picture(key)),
+      el("div", { class: "main" }, el("div", { class: "qhead" }, tbar(s), srcLabel(q)),
+        el("div", { class: "card tq" }, qText(q), tb("o3.t.say", [], [], "p", "hint"), ta, el("div", { class: "tbar" }, el("span", { class: "timer" }, icon("clock"), tt))),
+        el("div", { class: "actionbar" }, el("button", { type: "button", class: "go", onclick: () => {
+          s.answers[q.id] = ta.value; TEST.save(s); location.hash = "#test/fb"; } }, t("o3.t.check"), icon("right"))))));
+    timer = setInterval(() => { tt.textContent = t("o3.t.time", mmss(Date.now() - t0)); }, 1000);
   }
-  function ratingBlock(id, phase) {
-    const res = S.results[id];
-    const btns = [["k", "or.rate.k"], ["d", "or.rate.d"], ["i", "or.rate.i"]].map(([r, k]) => el("button", {
-      type: "button", class: "btn", "aria-pressed": res && res.r === r ? "true" : "false",
-      onclick: () => { S.results[id] = { ...(S.results[id] || {}), r }; rate(id, r); route(); } }, t(k)));
-    const next = phase === "fb1" ? { label: t("or.next"), go: () => { S.phase = "q2"; S.draft = ""; S.t0 = Date.now(); route(); } }
-      : { label: t("or.seetopic"), go: () => { S.phase = "sum"; route(); } };
-    return el("div", { class: "rate" }, el("p", { class: "sub-h" }, t("or.rate.h")), el("div", { class: "ratebtns" }, btns),
-      res && res.r ? el("button", { class: "btn solid", type: "button", onclick: next.go }, next.label) : null);
+  function viewFeedback() {
+    const s = TEST.get(); if (!s || !s.ids.length) { location.replace("#test"); return; }
+    const q = qById[s.ids[s.i]];
+    if (!(q.id in s.answers)) { location.replace("#test/q"); return; }
+    const key = keyOf(q.id), text = s.answers[q.id] || "", F = feedback(q, text), last = s.i === s.ids.length - 1;
+    s.results[q.id] = { ...(s.results[q.id] || {}), nWo: F.nWo, nOk: F.nOk, nSteps: F.nSteps, nKwOk: F.nKwOk, nKw: F.nKw, nSp: F.nSp };
+    TEST.save(s);
+    const sec = (code, head, ...body) => el("li", { class: "step done", "data-sec": code }, el("div", { class: "sh" }, head), el("div", { class: "sb" }, ...body));
+    const chip = (ok, label) => el("li", { class: ok === null ? "" : ok ? "good" : "bad" }, ok === null ? null : icon(ok ? "check" : "x"), label);
+    const todo = F.nWo + F.missing.length + F.kwMiss.length;
+    app.replaceChildren(el("div", { class: "flow" }, el("aside", { class: "side" }, picture(key)),
+      el("div", { class: "main" }, el("div", { class: "qhead" }, tbar(s), srcLabel(q), qText(q, "p")),
+        el("section", { class: "verdict" },
+          todo ? tb("o3.f.todo", [todo], [todo], "h2") : tb("o3.f.clean", [], [], "h2"),
+          el("ul", null,
+            chip(!F.nWo, F.nWo ? tb("o3.f.wo.n", [F.nWo]) : tb("o3.f.wo.ok")),
+            chip(!F.missing.length, tb("o3.f.st", [F.nOk, F.nSteps])),
+            chip(F.nKwOk >= Math.ceil(F.nKw / 2), tb("o3.f.kw", [F.nKwOk, F.nKw])),
+            chip(null, tb("o3.f.sp", [F.nSp])))),
+        el("ol", { class: "steps fbsteps" },
+          sec("wo", tb("or.fb.wo.h", [], [], "h3"),
+            F.woList ? tb("or.fb.wo.note", [], [], "p", "hint") : null, F.woList || tb("o3.f.wo.none", [], [], "p")),
+          sec("st", tb("o3.f.st.h", [F.nOk, F.nSteps], [F.nOk, F.nSteps], "h3"), tb("o3.f.st.p", [], [], "p", "hint"), F.steps, F.stepFix),
+          sec("kw", tb("o3.f.kw.h", [F.nKwOk, F.nKw], [F.nKwOk, F.nKw], "h3"), F.kwMiss.length ? tb("o3.f.kw.p", [], [], "p", "hint") : null, F.kws),
+          sec("sp", tb("o3.f.sp.h", [], [], "h3"), F.spList || tb("o3.f.sp.none", [], [], "p")),
+          sec("cmp", tb("o3.f.cmp", [], [], "h3"), el("div", { class: "cmp" }, tb("o3.f.cmp.p", [], [], "p", "hint"),
+            el("div", null, tb("or.fb.yours", [], [], "h4"), F.yours),
+            el("div", null, tb("or.fb.model", [], [], "h4"), F.model))),
+          sec("rate", tb("o3.s4", [], [], "h3"), rating(q.id, r => { s.results[q.id].r = r; TEST.save(s); }))),
+        el("div", { class: "actionbar" }, el("button", { type: "button", class: "go", onclick: () => {
+          if (last) { location.hash = "#test/done"; return; }
+          s.i++; TEST.save(s); location.hash = "#test/q"; } }, last ? t("o3.b.result") : t("or.next"), icon("right"))))));
   }
-  function feedbackView(q, phase) {
-    const last = S.last, fb = last.fb, text = last.text;
-    const spell = fb.spell.length
-      ? el("div", { class: "box" }, el("p", { class: "lbl" }, t("or.fb.spell.h")), el("p", { class: "hint", style: "margin:0" }, both("or.fb.spell.note")),
-          el("ul", { class: "wlist" }, fb.spell.map(s => el("li", null, el("span", { class: "sp-old" }, s.w), el("span", null, " → "), el("b", { class: "sp-new", lang: "da" }, s.fix)))))
-      : el("div", { class: "box" }, el("p", { class: "lbl" }, t("or.fb.spell.h")), el("p", { class: "ok-mark" }, t("or.fb.none")));
-    const wo = fb.wo.length
-      ? el("div", { class: "box warn" }, el("p", { class: "lbl" }, el("span", { class: "dotbad" }), t("or.fb.wo.h")), el("p", { class: "hint", style: "margin:0" }, both("or.fb.wo.note")),
-          el("ul", { class: "wlist" }, fb.wo.map(w => el("li", null, el("span", { class: "wo", lang: "da" }, w.snip), el("span", null, " → "), el("b", { lang: "da" }, w.fix),
-            el("span", { class: "why", lang: "da" }, w.why.da), el("span", { class: "why en" }, w.why.en)))))
-      : el("div", { class: "box" }, el("p", { class: "lbl" }, t("or.fb.wo.h")), el("p", { class: "ok-mark" }, t("or.fb.wo.none")));
-    const n = fb.steps.filter(s => s.ok).length, m = fb.steps.length, k = fb.kw.filter(x => x.used).length;
-    const struct = !q.answer ? null : el("div", { class: "box" }, el("p", { class: "lbl" }, t("or.fb.struct.h"), " · ", t("frame." + q.answer.frame)),
-      el("p", { class: "hint", style: "margin:0" }, t("or.fb.struct.n", n, m)),
-      el("ol", { class: "fsteps" }, fb.steps.map(s => el("li", { class: s.ok ? "" : "no" }, el("span", { class: s.ok ? "ok-mark" : "no-mark" }, s.ok ? "✅" : "❌"), t("part." + s.part)))));
-    const kws = fb.kw.length
-      ? el("div", { class: "box" }, el("p", { class: "lbl" }, t("or.fb.kw.h")), el("p", { class: "hint", style: "margin:0" }, t("or.fb.kw.n", k, fb.kw.length)),
-          el("ul", { class: "fkw" }, fb.kw.map(x => el("li", { class: x.used ? "" : "no" }, el("span", { class: x.used ? "ok-mark" : "no-mark" }, x.used ? "✅" : "❌"), el("span", { lang: "da" }, x.da))))) : null;
-    const cmp = el("div", { class: "cmp" },
-      el("div", { class: "col" }, el("p", { class: "sub-h" }, t("or.fb.yours")), el("p", { class: "yours", lang: "da" }, annotate(text, fb))),
-      el("div", { class: "col" }, el("p", { class: "sub-h" }, t("or.fb.model")), segmentsOnly(q)));
-    return el("div", { class: "fb" }, el("div", { class: "testbar" }, el("span", { class: "lbl", style: "margin:0" }, t("or.fb.h")), el("span", { class: "tm", id: "tm" }, "")),
-      spell, wo, struct, kws, cmp, ratingBlock(q.id, phase));
-  }
-  function viewTest() {
-    if (!S) return testSetup();
-    if (S.phase === "done") return testDone();
-    const key = S.queue[S.ti];
-    const wrap = children => app.replaceChildren(el("section", { class: "view" }, testProgressBar(), ...children));
-    if (S.phase === "topic") {
-      wrap([topicHead(key), picture(key, "test"),
-        el("button", { class: "btn solid", type: "button", onclick: () => {
-          S.slot1 = Math.random() < 0.5 ? "1A" : "1B"; S.phase = "q1"; S.draft = ""; S.t0 = Date.now(); route(); } }, t("or.test.startq"))]);
-      return;
-    }
-    if (S.phase === "q1" || S.phase === "q2") {
-      const id = S.phase === "q1" ? `${key}-${S.slot1}` : `${key}-2`, q = qById[id];
-      const ta = el("textarea", { class: "ans", id: "ta", lang: "da", rows: "7", spellcheck: "false", placeholder: t("or.test.ta"), "aria-label": t("or.test.ta") });
-      ta.value = S.draft || "";
-      ta.addEventListener("input", () => { S.draft = ta.value; });
-      const sl = sourceLabel(q);
-      const card = el("article", { class: "qcard sheet" }, el("p", { class: "src" }, el("span", { lang: "da" }, sl.da), el("span", { class: "en" }, sl.en)),
-        el("p", { class: "lbl", style: "margin:0" }, t("or.test.step", S.phase === "q1" ? 1 : 2)),
-        qtext(q));
-      wrap([picture(key, "test"), card, ta,
-        el("div", { class: "testbar" }, el("span", { id: "tm", class: "tm" }, ""),
-          el("button", { class: "btn solid", type: "button", onclick: () => {
-            const text = ta.value; S.draft = text;
-            S.last = { id, text, fb: analyse(text, q) }; S.phase = S.phase === "q1" ? "fb1" : "fb2"; route(); } }, t("or.test.check")))]);
-      startTimer();
-      return;
-    }
-    if (S.phase === "fb1" || S.phase === "fb2") {
-      const q = qById[S.last.id];
-      clearInterval(timer);
-      wrap([feedbackView(q, S.phase)]);
-      const e = $("#tm"); if (e) e.textContent = t("or.test.time", mmss(Date.now() - S.t0));
-      return;
-    }
-    if (S.phase === "sum") {
-      const rows = topicIds(key).filter(id => id === `${key}-2` || id === `${key}-${S.slot1}`).map(id => {
-        const r = S.results[id]; const q = qById[id];
-        const steps = r && r.fb ? r.fb.steps.filter(x => x.ok).length : 0, m = r && r.fb ? r.fb.steps.length : 0;
-        const kws = r && r.fb ? r.fb.kw.filter(x => x.used).length : 0, mk = r && r.fb ? r.fb.kw.length : 0;
-        const rl = r && r.r ? t({ k: "or.rate.k", d: "or.rate.d", i: "or.rate.i" }[r.r]) : "–";
-        return el("div", { class: "sumrow" }, el("b", null, id.split("-").slice(2).join("-")), el("span", { class: "meta2" }, rl),
-          el("span", { class: "meta2" }, t("or.sum.struct", steps, m) + " · " + t("or.sum.kw", kws, mk)));
-      });
-      const last = S.ti + 1 >= S.queue.length;
-      wrap([el("h2", null, t("or.sum.h")), el("div", { class: "framecards" }, rows),
-        el("div", { class: "ratebtns" },
-          el("button", { class: "btn solid", type: "button", onclick: () => {
-            if (last) { S.phase = "done"; } else { S.ti++; S.phase = "topic"; S.draft = ""; }
-            route(); } }, last ? t("or.seeall") : t("or.nexttopic")),
-          el("button", { class: "btn", type: "button", onclick: () => {
-            topicIds(key).forEach(id => delete S.results[id]); S.phase = "topic"; S.draft = ""; route(); } }, t("or.again")))]);
-    }
-  }
-  function testDone() {
-    const rows = S.queue.map(key => el("section", { class: "sec" }, el("h2", null, bi(sitLabel(sitOf(key)).da, sitLabel(sitOf(key)).en)),
-      el("p", { class: "lead", lang: "da" }, D.topics[key].title, enLine(D.topics[key].title_en))));
-    app.replaceChildren(el("section", { class: "view" }, el("h2", null, t("or.sum.all")), ...rows,
-      el("button", { class: "btn solid", type: "button", onclick: () => { S = null; route(); } }, t("or.newtest"))));
+  function viewTestDone() {
+    const s = TEST.get(); if (!s || !s.ids.length) { location.replace("#test"); return; }
+    const RL = { k: "or.rate.k", d: "or.rate.d", i: "or.rate.i" };
+    app.replaceChildren(el("div", { class: "tsetup tend" },
+      tb("o3.end.h", [], [], "h1"), tb("o3.end.p", [s.ids.length], [s.ids.length], "p"),
+      el("ol", { class: "endlist" }, s.ids.map(id => {
+        const q = qById[id], r = s.results[id] || {}, nums = [r.nWo, r.nOk, r.nSteps, r.nKwOk, r.nKw];
+        return el("li", { class: "endrow" }, el("a", { href: `#q/${id}` }, srcLabel(q), qText(q, "p"),
+          r.nSteps != null ? tb("o3.end.row", nums, nums, "p", "hint") : tb("o3.end.skip", [], [], "p", "hint"),
+          el("span", { class: "rl" }, statusDot(qStatus(id)), r.r ? tb(RL[r.r]) : tb("o3.end.none"))));
+      })),
+      el("div", { class: "row" },
+        el("button", { type: "button", class: "go", onclick: () => { TEST.clear(); location.hash = "#test"; } }, t("or.newtest"), icon("right")),
+        el("a", { class: "go ghost", href: "#laer" }, t("o3.b.laer")))));
   }
 
-  // ── English switch: hides and shows the English lines in place (no re-render, nothing is lost) ──
+  // ── English switch: hides and shows the English lines in place, remembered in pd3.oral.en ──
   const enBtn = $("#enToggle");
   const enOn = () => { try { return localStorage.getItem(EN_KEY) !== "0"; } catch (e) { return true; } };
-  function setEnLabel() {
-    const on = !app.classList.contains("hide-en");
-    enBtn.textContent = I18N[on ? "or.en.hide" : "or.en.show"][LANG === "en" ? 1 : 0];
-    enBtn.setAttribute("aria-pressed", on ? "true" : "false");
+  function paintEn() {
+    const on = !document.body.classList.contains("hide-en");
+    enBtn.setAttribute("aria-pressed", String(on));
+    enBtn.replaceChildren(el("span", { class: "sw", "aria-hidden": "true" }), t(on ? "or.en.hide" : "or.en.show"));
   }
   function setEn(on) {
-    app.classList.toggle("hide-en", !on);
+    document.body.classList.toggle("hide-en", !on);
     try { localStorage.setItem(EN_KEY, on ? "1" : "0"); } catch (e) { /* ignore */ }
-    setEnLabel();
+    paintEn();
   }
-  enBtn.addEventListener("click", () => setEn(app.classList.contains("hide-en")));
+  enBtn.addEventListener("click", () => setEn(document.body.classList.contains("hide-en")));
+  document.body.classList.toggle("hide-en", !enOn());
+  paintEn();
 
-  // ── router ─────────────────────────────────────────────────────────────────────────
+  // ── router. The Dansk/English button is NOT hooked: flipLang swaps texts in place, nothing re-renders. ──
   function route() {
     clearInterval(timer);
     const h = location.hash.slice(1);
     const tab = h.startsWith("test") ? "test" : "laer";
-    document.querySelectorAll("#tabs button").forEach(b => b.setAttribute("aria-pressed", b.dataset.go === "#" + tab ? "true" : "false"));
-    if (h.startsWith("q/")) viewTopic(h.slice(2));
-    else if (tab === "test") viewTest();
-    else viewLaer();
-    setEnLabel();
+    document.querySelectorAll("#tabs button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.go === "#" + tab)));
+    let toStep = false;
+    if (h.startsWith("q/")) {
+      const [, id, st] = h.split("/"), stage = Math.min(4, Math.max(1, +st || 1));
+      viewQuestion(id, stage, true); toStep = stage > 1;
+    }
+    else if (h === "test/q") viewTestQ();
+    else if (h === "test/fb") viewFeedback();
+    else if (h === "test/done") viewTestDone();
+    else if (tab === "test") viewTestSetup();
+    else viewStart();
+    if (!toStep) scrollTo(0, 0);
   }
-  document.querySelectorAll("#tabs button").forEach(b => b.addEventListener("click", () => { location.hash = b.dataset.go; if (location.hash === b.dataset.go) route(); }));
+  document.querySelectorAll("#tabs button").forEach(b => b.addEventListener("click", () => { if (location.hash === b.dataset.go) route(); else location.hash = b.dataset.go; }));
   addEventListener("hashchange", route);
-  // the Dansk/English button re-renders the page so that the dynamic text follows the language
-  const lb = document.querySelector(".langbtn");
-  if (lb) lb.addEventListener("click", () => setTimeout(route, 0));
-  setEn(enOn());
-  if (!location.hash) location.hash = "#laer";
+  if (!location.hash) history.replaceState(null, "", "#laer");
   route();
   applyTexts(document);
 })();

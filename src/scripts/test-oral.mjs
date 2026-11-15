@@ -1,7 +1,7 @@
 // Whole-page test for mundtlig.html (headless Chrome over CDP, Node 22+), modelled on
 // .claude/skills/pd3-coach/app/test-page.mjs.
 //   node src/scripts/test-oral.mjs [path-to-mundtlig.html] [scratch-dir] [port]
-// Topbar at 375, 768, 1024 and 1280 px; the page at 375 and 1280 px, in light and dark theme. Prints one "ok"/"FAIL" line per check, the
+// Topbar at 375, 768, 1024 and 1280 px; the page (v3, "Trin for trin") at 375 and 1280 px in light and dark, a layout pass at 768 and 1024, and an English-UI pass. Prints one "ok"/"FAIL" line per check, the
 // console errors, and writes screenshots of the main views into the scratch dir. Exit code 1 on any failure.
 import { spawn } from "node:child_process";
 import { mkdirSync, rmSync, writeFileSync } from "node:fs";
@@ -56,6 +56,13 @@ const shot = async name => {
   const r = await send("Page.captureScreenshot", { format: "png" });
   writeFileSync(path.join(out, name + ".png"), Buffer.from(r.result.data, "base64"));
 };
+const shotFull = async name => {
+  await ev(`document.body.classList.add("shot"); 1`);
+  const h = await ev(`Math.ceil(document.documentElement.scrollHeight)`), w = await ev(`window.innerWidth`);
+  const r = await send("Page.captureScreenshot", { format: "png", captureBeyondViewport: true, clip: { x: 0, y: 0, width: w, height: Math.min(h, 16000), scale: 1 } });
+  writeFileSync(path.join(out, name + ".png"), Buffer.from(r.result.data, "base64"));
+  await ev(`document.body.classList.remove("shot"); 1`);
+};
 const waitFor = async (expr, ms = 4000) => {
   const end = Date.now() + ms;
   while (Date.now() < end) { if (await ev(`!!(${expr})`) === true) return true; await sleep(80); }
@@ -72,7 +79,7 @@ const SAMPLE = {
 
 async function setViewport(width, dark, lang = "da") {
   await send("Emulation.setDeviceMetricsOverride", { width, height: width < 600 ? 812 : 900, deviceScaleFactor: 1, mobile: width < 600 });
-  await send("Emulation.setEmulatedMedia", { features: [{ name: "prefers-color-scheme", value: dark ? "dark" : "light" }] });
+  await send("Emulation.setEmulatedMedia", { features: [{ name: "prefers-color-scheme", value: dark ? "dark" : "light" }, { name: "prefers-reduced-motion", value: "no-preference" }] });
   await ev(`try { localStorage.setItem("pd3.theme", ${JSON.stringify(dark ? "dark" : "light")}); localStorage.setItem("pd3.lang", ${JSON.stringify(lang)}); } catch (e) {}`);
 }
 async function open(hash) {
@@ -109,237 +116,316 @@ for (const file of ["index.html", "mundtlig.html"]) {
   }
 }
 
-// English-language pass: the layout and the English lines only (the full Danish flows below use Danish button labels)
-async function layoutOnly(tag) {
-  await open("#laer");
-  check(`${tag} · no horizontal scroll`, await ev(`document.documentElement.scrollWidth <= window.innerWidth`), await ev(`[document.documentElement.scrollWidth, window.innerWidth]`));
-  check(`${tag} · UI in English: tabs read Study and Test`, await ev(`[...document.querySelectorAll("#tabs button")].map(b => b.textContent.trim()).join("|")`) === "Study|Test");
-  check(`${tag} · start screen: 4 question types, 3 how-to steps, one progress line`, await ev(`document.querySelectorAll(".ftype").length === 4 && document.querySelectorAll(".howsteps li").length === 3 && document.querySelectorAll(".progline").length === 1 && !document.querySelector(".band")`));
-  check(`${tag} · English switch label is in English`, await ev(`/Hide English|Show English/.test(document.querySelector("#enToggle").textContent)`));
-  check(`${tag} · English lines are on the page`, await ev(`document.querySelectorAll("#app .en").length > 0`));
-  await shot(`${tag.replace(/ /g, "-")}-laer-start`);
-  await open("#q/2018s-A-1A");
-  check(`${tag} · question cards: structure line and Hvordan? block`, await ev(`[...document.querySelectorAll(".qcard")].length === 3 && [...document.querySelectorAll(".qcard")].every(c => c.querySelector(".structline") && c.querySelector("details.how"))`));
-  check(`${tag} · no horizontal scroll on a topic`, await ev(`document.documentElement.scrollWidth <= window.innerWidth`));
+// ── v3 (Trin for trin) ─────────────────────────────────────────────────────────────
+const KEYS36 = sittings.flatMap(s => ["A", "B", "C"].map(L => `${s}-${L}`));
+const DEMO = "Jeg tror, er det fordi de vil spare penge. En årsag er, at de har ikke råd til det. Det er vigtigt med velvlre for børn.";
+const noHScroll = () => ev(`document.documentElement.scrollWidth <= window.innerWidth`);
+const typeAnswer = text => ev(`(() => { const ta = document.querySelector("#ta"); ta.value = ${JSON.stringify(text)}; ta.dispatchEvent(new Event("input")); return 1; })()`);
+const goBtn = () => ev(`(async () => { const b = document.querySelector(".actionbar button.go"); if (!b) return null;
+  const l = b.textContent.trim(); b.click(); await new Promise(r => setTimeout(r, 250)); return l; })()`);
+const hashNow = () => ev(`location.hash`);
+const setProg = obj => ev(`(() => { localStorage.setItem("pd3.oral.v1", ${JSON.stringify(JSON.stringify(obj))}); return 1; })()`);
+const visibleEn = `[...document.querySelectorAll("#app .en")].filter(e => getComputedStyle(e).display !== "none").length`;
+const stepClasses = `[...document.querySelectorAll("ol.steps > li.step")].map(li => li.className.replace("step ", "")).join(",")`;
+const FB_STATE = `({
+  secs: [...document.querySelectorAll("ol.fbsteps > li")].map(li => li.dataset.sec).join(","),
+  woOld: [...document.querySelectorAll(".wo-fix .old")].map(x => x.textContent),
+  woNew: [...document.querySelectorAll(".wo-fix .new")].map(x => x.textContent),
+  woWhy: [...document.querySelectorAll(".wo-fix .why .da")].map(x => x.textContent),
+  woNone: /Ingen sikre ordstillingsfejl/.test((document.querySelector('[data-sec="wo"]') || {}).textContent || ""),
+  spOld: [...document.querySelectorAll(".sp-fix .old")].map(x => x.textContent),
+  spNew: [...document.querySelectorAll(".sp-fix .new")].map(x => x.textContent),
+  spHead: ((document.querySelector('[data-sec="sp"] h3') || {}).textContent) || "",
+  stOk: document.querySelectorAll(".fsteps li.ok").length, stNo: document.querySelectorAll(".fsteps li.no").length,
+  stFix: [...document.querySelectorAll(".st-fix")].map(x => x.textContent),
+  kw: document.querySelectorAll(".fkw li").length, kwUse: [...document.querySelectorAll(".fkw li .use")].every(x => x.textContent.trim().length > 0),
+  chips: [...document.querySelectorAll(".verdict li")].map(x => (x.querySelector(".da") || x).textContent),
+  model: document.querySelectorAll(".cmp .seg").length, yours: ((document.querySelector(".cmp .yours") || {}).textContent) || "",
+  rate: document.querySelectorAll('[data-sec="rate"] .ratebtn').length })`;
+
+// a whole Test: choose a sitting (or "random"), answer 6 questions, rate "Kunne", reach #test/done
+async function runTest(sit, answers) {
   await open("#test");
-  check(`${tag} · Test start screen loads`, await ev(`!!document.querySelector(".chipbtn")`));
-  check(`${tag} · no horizontal scroll on Test`, await ev(`document.documentElement.scrollWidth <= window.innerWidth`));
-  check(`${tag} · no console errors`, consoleErrors.length === 0, consoleErrors.slice(0, 5));
+  await ev(`Math.random = () => 0.1; 1`);
+  await ev(`(async () => { document.querySelector('.chipbtn[data-sit="${sit}"]').click(); await new Promise(r => setTimeout(r, 120));
+    document.querySelector("#tstart").click(); await new Promise(r => setTimeout(r, 250)); return 1; })()`);
+  const seen = [];
+  for (let k = 0; k < 6; k++) {
+    if (!await waitFor(`location.hash === "#test/q" && !!document.querySelector("#ta")`)) { seen.push({ k, stuck: await hashNow() }); break; }
+    const info = await ev(`({ count: document.querySelector(".tbar .count .da").textContent, src: document.querySelector(".qhead .src .da").textContent,
+      pic: !!document.querySelector(".side figure.pic img"), q: document.querySelector(".tq .qtext").textContent.length })`);
+    await typeAnswer(answers[Math.min(k, answers.length - 1)]);
+    const check1 = await goBtn();
+    await waitFor(`location.hash === "#test/fb" && !!document.querySelector(".verdict")`);
+    const fb = await ev(FB_STATE);
+    await ev(`document.querySelector('[data-sec="rate"] .ratebtn.r-k').click(); 1`); await sleep(80);
+    const next = await goBtn();
+    seen.push({ k, ...info, check1, ...fb, next });
+  }
+  const end = await waitFor(`location.hash === "#test/done" && /Testen er færdig/.test(document.querySelector("#app").textContent)`);
+  return { seen, end, rows: await ev(`document.querySelectorAll(".endrow").length`), noScroll: await noHScroll() };
 }
 
-for (const [width, dark, lang] of [[375, false, "da"], [375, true, "da"], [1280, false, "da"], [1280, true, "da"],
+async function danishRun(tag, width, dark) {
+  const P = `${width}-${dark ? "dark" : "light"}`;
+  await open("#laer");
+  await ev(`localStorage.removeItem("pd3.oral.v1"); localStorage.removeItem("pd3.oral.en"); sessionStorage.clear(); 1`);
+  await open("#laer");
+
+  // A. start screen
+  const start = await ev(`(() => { const n = document.querySelector("#app > .next"), a = n && n.querySelector("a.go");
+    return { href: a && a.getAttribute("href"), btn: a && a.textContent.trim(), lab: n && n.querySelector(".lab .da").textContent,
+      first: !!n && n.getBoundingClientRect().top < document.querySelector(".choose").getBoundingClientRect().top,
+      line: document.querySelector(".prog .line .da").textContent, legend: document.querySelectorAll(".prog .legend li").length,
+      legendEn: [...document.querySelectorAll(".prog .legend li")].every(li => li.querySelector(".en")),
+      chips: [...document.querySelectorAll(".years .chipbtn")].map(c => c.dataset.sit), pressed: (document.querySelector('.years .chipbtn[aria-pressed="true"]') || {}).dataset?.sit,
+      rows: document.querySelectorAll(".topics .trow").length,
+      tabs: [...document.querySelectorAll("#tabs button")].map(b => b.textContent.trim()).join("|") }; })()`);
+  check(`${tag} · start: "Dit næste spørgsmål" card first → 2024s-A-1A`, start.href === "#q/2024s-A-1A" && start.btn === "Start spørgsmålet" && start.lab === "Dit næste spørgsmål" && start.first, start);
+  check(`${tag} · start: progress line and 3-item legend with English`, /^0 af 108 spørgsmål er sikre/.test(start.line) && start.legend === 3 && start.legendEn, start);
+  check(`${tag} · start: 12 sitting chips, newest first, 2024s chosen, 3 topic rows`, start.chips.length === 12 && start.chips[0] === "2024s" && start.chips[11] === "2018s" && start.pressed === "2024s" && start.rows === 3, start);
+  check(`${tag} · tabs are Lær and Test only`, start.tabs === "Lær|Test", start.tabs);
+  const theme = await ev(`[document.documentElement.dataset.theme, localStorage.getItem("pd3.theme")]`);
+  check(`${tag} · theme applied`, theme[0] === (dark ? "dark" : "light"), theme);
+  check(`${tag} · no horizontal scroll (Lær start)`, await noHScroll(), await ev(`[document.documentElement.scrollWidth, window.innerWidth]`));
+  if (width < 600) {
+    const dots = await ev(`[...document.querySelectorAll(".trow")].map(r => { const t = [...r.querySelectorAll(".sdot")].map(d => Math.round(d.getBoundingClientRect().top));
+      return new Set(t).size === 1 && t[0] < r.querySelector("h3").getBoundingClientRect().bottom && r.querySelector(".dots").getBoundingClientRect().right <= r.getBoundingClientRect().right; })`);
+    check(`${tag} · phone: topic-row dots on one line, top right`, dots.length === 3 && dots.every(Boolean), dots);
+  }
+  await shotFull(`${P}-laer`);
+
+  // B. every sitting chip shows its 3 topics
+  const sitBad = await ev(`(async () => { const bad = [];
+    for (const s of ${JSON.stringify(sittings)}) { document.querySelector('.years .chipbtn[data-sit="' + s + '"]').click(); await new Promise(r => setTimeout(r, 80));
+      const h = [...document.querySelectorAll(".topics .trow")].map(a => a.getAttribute("href")).join(",");
+      if (h !== ["A","B","C"].map(L => "#q/" + s + "-" + L + "-1A").join(",")) bad.push([s, h]); } return bad; })()`);
+  check(`${tag} · every sitting shows its 3 topics`, Array.isArray(sitBad) && sitBad.length === 0, sitBad);
+
+  // C. all 108 questions: picture, 3 pills, source label, question text, type card
+  const qBad = await ev(`(async () => { const bad = [];
+    for (const k of ${JSON.stringify(KEYS36)}) for (const slot of ["1A", "1B", "2"]) {
+      location.hash = "#q/" + k + "-" + slot; await new Promise(r => setTimeout(r, 90));
+      const img = document.querySelector(".side figure.pic img");
+      const pic = !!img && (img.complete && img.naturalWidth > 0 ? true : await new Promise(res => { img.onload = () => res(true); img.onerror = () => res(false); setTimeout(() => res(img.naturalWidth > 0), 3000); }));
+      const pills = document.querySelectorAll(".qpills a").length, src = ((document.querySelector(".qhead .src .da") || {}).textContent) || "";
+      const q = ((document.querySelector("#s1 .qtext") || {}).textContent) || "", order = document.querySelectorAll("#s1 .typecard ol.order li").length;
+      const hasAns = !!(window.ORAL.questions.find(x => x.id === k + "-" + slot) || {}).answer;
+      if (!pic || pills !== 3 || !/Emne [ABC]:/.test(src) || q.length < 10 || (hasAns && order < 4)) bad.push([k, slot, pic, pills, src.slice(0, 30), order]);
+    } return bad; })()`);
+  check(`${tag} · 108 questions: picture loads, 3 pills, source label, question, type card`, Array.isArray(qBad) && qBad.length === 0, qBad);
+  const soonBad = await ev(`(async () => { const bad = []; for (const q of window.ORAL.questions.filter(x => !x.answer)) {
+    location.hash = "#q/" + q.id + "/2"; await new Promise(r => setTimeout(r, 90)); if (!document.querySelector("#s2 .soon")) bad.push(q.id); } return bad; })()`);
+  check(`${tag} · a question without a model answer shows "Svar kommer snart"`, Array.isArray(soonBad) && soonBad.length === 0, soonBad);
+
+  await open("#q/2018s-A-1A");
+  const pills = await ev(`[...document.querySelectorAll(".qpills a")].map(a => Math.round(a.getBoundingClientRect().height))`);
+  check(`${tag} · question pills: each on one line`, pills.length === 3 && pills.every(h => h <= 44), pills);
+  const src = await ev(`document.querySelector(".qhead .src").textContent`);
+  check(`${tag} · source label Danish + English`, /Maj–juni 2018 · Emne A: .* · 1\. obligatorisk spørgsmål, situation A/.test(src) && /May–June 2018/.test(src), src);
+  await shotFull(`${P}-q1`);
+
+  // D. English under the question, every segment, tip, follow-up answer, part chip and step heading (2018s A)
+  const enBad = await ev(`(async () => { const bad = [];
+    for (const q of window.ORAL.questions.filter(x => x.sitting === "2018s" && x.letter === "A")) {
+      location.hash = "#q/" + q.id + "/3"; await new Promise(r => setTimeout(r, 150));
+      const e = q.en || {}, a = q.answer;
+      const wantQ = (e.question ? 1 : 0) + (q.intro && e.intro ? 1 : 0), gotQ = document.querySelectorAll("#s1 .qtext .en").length;
+      if (gotQ !== wantQ) bad.push([q.id, "question", gotQ, wantQ]);
+      if (!document.querySelector(".qhead .src .en")) bad.push([q.id, "source label"]);
+      if ([...document.querySelectorAll(".step .sh h3")].some(h => !h.querySelector(".en"))) bad.push([q.id, "step heading"]);
+      if (a) {
+        const seg = document.querySelectorAll("#s2 .seg > .en").length, wantSeg = e.answer ? e.answer.length : 0;
+        if (seg !== wantSeg) bad.push([q.id, "segments", seg, wantSeg]);
+        const tips = document.querySelectorAll("#s3 .tips li > .en").length, wantTips = e.tips ? e.tips.length : 0;
+        if (tips !== wantTips) bad.push([q.id, "tips", tips, wantTips]);
+        if (a.followup && e.followup_answer && !document.querySelector("#s3 .fua > .en")) bad.push([q.id, "follow-up answer"]);
+        if (![...document.querySelectorAll("#s2 .seg > .da")].every(s => s.getAttribute("lang") === "da")) bad.push([q.id, "segment lang"]);
+        if ([...document.querySelectorAll("#s1 .order li, #s2 .smap button")].some(x => !x.querySelector(".en"))) bad.push([q.id, "part chip"]);
+        if (![...document.querySelectorAll("#s3 .kws .kw")].every(k => k.querySelector("b").textContent.trim() && k.querySelector(".use").textContent.trim())) bad.push([q.id, "keyword without its pattern"]);
+      }
+    } return bad; })()`);
+  check(`${tag} · English under question, segments, tips, follow-up, chips, headings; keywords with pattern (2018s A)`, Array.isArray(enBad) && enBad.length === 0, enBad);
+
+  // E. the 4 steps and the action button
+  await open("#q/2018s-A-1A");
+  const st1 = await ev(`({ cls: ${stepClasses}, hidden: getComputedStyle(document.querySelector("#s3 .sb")).display })`);
+  check(`${tag} · step 1: now,later,later,later; later steps hidden`, st1.cls === "now,later,later,later" && st1.hidden === "none", st1);
+  const labels = [], hashes = [];
+  for (let k = 0; k < 4; k++) { labels.push(await goBtn()); await sleep(150); hashes.push(await hashNow()); }
+  check(`${tag} · action button: Vis modelsvar → Se ord og tips → Hvordan gik det? → Næste spørgsmål`,
+    labels.join("|") === "Vis modelsvar|Se ord og tips|Hvordan gik det?|Næste spørgsmål"
+    && hashes.join(",") === "#q/2018s-A-1A/2,#q/2018s-A-1A/3,#q/2018s-A-1A/4,#q/2018s-A-1B", [labels, hashes]);
+  await open("#q/2018s-A-1A/3");
+  check(`${tag} · step 3: done,done,now,later`, await ev(stepClasses) === "done,done,now,later");
+  await open("#q/2018s-A-2/4");
+  const nt = [await goBtn(), await hashNow()];
+  check(`${tag} · last question of a topic: "Næste emne" → next topic`, nt[0] === "Næste emne" && nt[1] === "#q/2018s-B-1A", nt);
+  await open("#q/2018s-C-2/4");
+  const al = [await goBtn(), await hashNow()];
+  check(`${tag} · very last topic: "Alle emner" → #laer`, al[0] === "Alle emner" && al[1] === "#laer", al);
+
+  // F. structure map lights its segment
+  await open("#q/2018s-A-1A/2");
+  const smap = await ev(`(async () => { const segs = [...document.querySelectorAll("#s2 .seg")];
+    const cols = new Set(segs.map(s => getComputedStyle(s).backgroundColor)).size, chips = document.querySelectorAll("#s2 ol.smap li").length;
+    document.querySelector("#s2 ol.smap li.p-fordi button").click(); await new Promise(r => setTimeout(r, 60));
+    const lit = [...document.querySelectorAll("#s2 .seg.hi")].map(s => s.dataset.part), focus = document.querySelector("#s2 .segs").classList.contains("focus");
+    document.querySelector("#s2 ol.smap li.p-fordi button").click(); await new Promise(r => setTimeout(r, 60));
+    return { segs: segs.length, cols, chips, lit, focus, off: document.querySelectorAll("#s2 .seg.hi").length }; })()`);
+  check(`${tag} · structure map: 6 parts, 6 coloured segments, "Fordi" lights only its segment`, smap.segs === 6 && smap.cols >= 4 && smap.chips === 6 && smap.lit.join() === "fordi" && smap.focus && smap.off === 0, smap);
+
+  // G. English switch: hides in place, stays on the same step, remembered
+  const sw0 = await ev(visibleEn);
+  await ev(`document.querySelector("#enToggle").click(); 1`); await sleep(120);
+  const sw1 = await ev(`[${visibleEn}, document.body.classList.contains("hide-en"), document.querySelector("#enToggle").textContent.trim(),
+    localStorage.getItem("pd3.oral.en"), location.hash, document.querySelector("#s2").classList.contains("now")]`);
+  check(`${tag} · English switch hides every English line in place and is remembered`,
+    sw0 > 0 && sw1[0] === 0 && sw1[1] && /Vis engelsk/.test(sw1[2]) && sw1[3] === "0" && sw1[4] === "#q/2018s-A-1A/2" && sw1[5], [sw0, sw1]);
+  await open("#q/2018s-A-1A/2");
+  check(`${tag} · English stays off after a reload`, await ev(`document.body.classList.contains("hide-en") && document.querySelector("#enToggle").getAttribute("aria-pressed") === "false"`));
+  await ev(`document.querySelector("#enToggle").click(); 1`); await sleep(120);
+  check(`${tag} · English switch back on`, await ev(`${visibleEn} > 0 && localStorage.getItem("pd3.oral.en") === "1"`));
+
+  // H. Dansk/English button: UI swaps in place, content stays Danish, typed text kept
+  await open("#laer");
+  await ev(`document.querySelector(".langbtn").click(); 1`); await sleep(250);
+  const ui = await ev(`[[...document.querySelectorAll("#tabs button")].map(b => b.textContent.trim()).join("|"), document.querySelector(".next a.go").textContent.trim(),
+    document.querySelector(".next .lab .da").textContent, document.querySelector("#enToggle").textContent.trim()]`);
+  check(`${tag} · language button: UI in English, Danish content unchanged`, ui[0] === "Study|Test" && ui[1] === "Start the question" && ui[2] === "Dit næste spørgsmål" && /Hide English/.test(ui[3]), ui);
+  await ev(`document.querySelector(".langbtn").click(); 1`); await sleep(250);
+  await open("#test");
+  await ev(`(async () => { document.querySelector('.chipbtn[data-sit="2024s"]').click(); await new Promise(r => setTimeout(r, 80)); document.querySelector("#tstart").click(); return 1; })()`);
+  await waitFor(`!!document.querySelector("#ta")`);
+  await typeAnswer("Jeg tror, at det er godt.");
+  await ev(`document.querySelector(".langbtn").click(); 1`); await sleep(250);
+  const kept = await ev(`[document.querySelector("#ta").value, document.querySelector(".actionbar button.go").textContent.trim(), location.hash]`);
+  check(`${tag} · language button in a test: typed text kept, button "Check my answer"`, kept[0] === "Jeg tror, at det er godt." && kept[1] === "Check my answer" && kept[2] === "#test/q", kept);
+  await ev(`document.querySelector(".langbtn").click(); 1`); await sleep(250);
+  check(`${tag} · language button back: "Tjek mit svar"`, await ev(`document.querySelector(".actionbar button.go").textContent.trim()`) === "Tjek mit svar");
+  await ev(`try { localStorage.setItem("pd3.lang", "da"); } catch (e) {} 1`);
+
+  // I. rating and progress
+  await ev(`localStorage.removeItem("pd3.oral.v1"); 1`);
+  await open("#q/2018s-A-1A/4");
+  const r1 = await ev(`(async () => { document.querySelector("#s4 .ratebtn.r-k").click(); await new Promise(r => setTimeout(r, 80));
+    return [document.querySelector("#s4 .ratebtn.r-k").getAttribute("aria-pressed"), document.querySelector("#s4 .ratemsg").textContent,
+      (JSON.parse(localStorage.getItem("pd3.oral.v1") || "{}")["2018s-A-1A"] || { ratings: [] }).ratings.length]; })()`);
+  check(`${tag} · self-rating saved (Kunne) with a confirmation`, r1[0] === "true" && /Gemt/.test(r1[1]) && r1[2] === 1, r1);
+  check(`${tag} · rating buttons explain themselves (hint + English)`, await ev(`!!document.querySelector("#s4 .rating > .hint") && [...document.querySelectorAll("#s4 .ratebtn")].every(b => b.querySelector(".en") && b.querySelector(".hint"))`));
+  await setProg({ "2018s-A-1A": { ratings: [{ d: new Date().toLocaleDateString("sv-SE"), r: "k" }] }, "2018s-A-2": { ratings: [{ d: "2000-01-01", r: "k" }] } });
+  await open("#q/2018s-A-2/4");
+  const r2 = await ev(`(async () => { document.querySelector("#s4 .ratebtn.r-k").click(); await new Promise(r => setTimeout(r, 80)); return document.querySelector("#s4 .ratemsg").textContent; })()`);
+  check(`${tag} · second "Kunne" on another day makes the question secure`, /nu sikkert/.test(r2), r2);
+  await open("#q/2018s-A-2");
+  check(`${tag} · secure question shows a green dot in its pill`, await ev(`!!document.querySelector('.qpills a[aria-current="true"] .sdot.s-sure')`));
+  await open("#laer");
+  const prog = await ev(`document.querySelector(".prog .line .da").textContent`);
+  check(`${tag} · progress line counts the secure question`, /^1 af 108 spørgsmål er sikre/.test(prog), prog);
+  check(`${tag} · progress persists after reload`, await ev(`(JSON.parse(localStorage.getItem("pd3.oral.v1") || "{}"))["2018s-A-2"].ratings.length`) === 2);
+  await setProg({ "2024s-A-1A": { ratings: [{ d: "2000-01-01", r: "k" }, { d: "2000-01-02", r: "k" }] } });
+  await open("#laer");
+  check(`${tag} · next-question card moves on to 2024s-A-1B`, await ev(`document.querySelector(".next a.go").getAttribute("href")`) === "#q/2024s-A-1B");
+
+  // sticky picture (wide) / picture on top (phone)
+  await open("#q/2018s-A-1A/4"); await sleep(700);
+  const side = await ev(`(() => { const s = document.querySelector(".side"), m = document.querySelector(".main"), r = s.querySelector("img").getBoundingClientRect();
+    return { pos: getComputedStyle(s).position, right: s.getBoundingClientRect().left > m.getBoundingClientRect().left, inView: r.top >= 0 && r.top < innerHeight,
+      above: s.getBoundingClientRect().top < m.getBoundingClientRect().top }; })()`);
+  if (width >= 960) check(`${tag} · picture sticky on the right, visible at step 4`, side.pos === "sticky" && side.right && side.inView, side);
+  else check(`${tag} · phone: picture on top of the question`, side.pos === "static" && side.above, side);
+  check(`${tag} · no horizontal scroll (question, step 4)`, await noHScroll());
+  await shotFull(`${P}-q4`);
+
+  // reduced motion: the step jump is instant (once, at 1280 light)
+  if (width === 1280 && !dark) {
+    await send("Emulation.setEmulatedMedia", { features: [{ name: "prefers-color-scheme", value: "light" }, { name: "prefers-reduced-motion", value: "reduce" }] });
+    await open("#q/2018s-A-1A");
+    await ev(`location.hash = "#q/2018s-A-1A/3"; 1`); await sleep(150);
+    const top = await ev(`Math.round(document.querySelector("#s3").getBoundingClientRect().top)`);
+    check(`${tag} · reduced motion: step 3 is in view at once`, top >= -2 && top <= 40, top);
+    await send("Emulation.setEmulatedMedia", { features: [{ name: "prefers-color-scheme", value: "light" }, { name: "prefers-reduced-motion", value: "no-preference" }] });
+  }
+
+  // J. Test: the prototype's demo answer on 2024s-A-1A (for the screenshot), then a sitting test and a random test
+  await ev(`localStorage.removeItem("pd3.oral.v1"); 1`);
+  await open("#test");
+  check(`${tag} · Test setup: random + 12 sittings, Start testen`, await ev(`document.querySelectorAll(".tsetup .chipbtn").length === 13 && document.querySelector(".tsetup .chipbtn").dataset.sit === "random" && document.querySelector("#tstart").textContent.trim() === "Start testen"`));
+  check(`${tag} · no horizontal scroll (Test setup)`, await noHScroll());
+  await ev(`Math.random = () => 0.1; 1`);
+  await ev(`(async () => { document.querySelector('.chipbtn[data-sit="2024s"]').click(); await new Promise(r => setTimeout(r, 80)); document.querySelector("#tstart").click(); return 1; })()`);
+  await waitFor(`!!document.querySelector("#ta")`);
+  check(`${tag} · test question: count, picture, question, timer`, await ev(`/^Spørgsmål 1 af 6$/.test(document.querySelector(".tbar .count .da").textContent) && !!document.querySelector(".side figure.pic img") && !!document.querySelector(".tq .qtext") && /mål 45–90 s/.test(document.querySelector(".timer").textContent)`));
+  check(`${tag} · no horizontal scroll (test question)`, await noHScroll());
+  await shotFull(`${P}-test-q`);
+  await typeAnswer(DEMO); await goBtn();
+  await waitFor(`!!document.querySelector(".verdict")`);
+  const demo = await ev(FB_STATE);
+  check(`${tag} · feedback order: Ordstilling, Opbygning, Nøgleord, Stavning, Sammenlign, Rating`, demo.secs === "wo,st,kw,sp,cmp,rate", demo.secs);
+  check(`${tag} · demo: "at de har ikke" → "at de ikke har"`, demo.woOld.includes("at de har ikke") && demo.woNew.some(x => x.includes("at de ikke har")), demo);
+  check(`${tag} · no horizontal scroll (feedback)`, await noHScroll());
+  await shotFull(`${P}-test-fb`);
+
+  const T = await runTest("2018s", [SAMPLE.wo1, SAMPLE.wo2, SAMPLE.spell, SAMPLE.clean]);
+  const [a, b, c, d] = T.seen;
+  check(`${tag} · sitting test: 6 questions with count, picture, source label`, T.seen.length === 6 && T.seen.every((x, i) => x.count === `Spørgsmål ${i + 1} af 6` && x.pic && /Maj–juni 2018 · Emne [ABC]/.test(x.src) && x.check1 === "Tjek mit svar" && x.model > 0 && x.rate === 3), T.seen.map(x => [x.count, x.src, x.check1, x.model, x.rate]));
+  check(`${tag} · word order: "tror, er det" → "tror, at det er", with Hvorfor?`, a.woOld.includes("tror, er det") && a.woNew.some(x => x.includes("tror, at det er")) && /^Hvorfor\? /.test(a.woWhy[0] || ""), a);
+  check(`${tag} · structure: one "Mangler" fix per missing part`, a.stNo > 0 && a.stFix.length === a.stNo && a.stFix.every(x => /Mangler: /.test(x)), [a.stNo, a.stFix]);
+  check(`${tag} · keywords listed with their pattern`, a.kw > 0 && a.kwUse, [a.kw, a.kwUse]);
+  check(`${tag} · modal + at flagged ("kan at")`, b.woOld.some(x => x.includes("kan at")), b.woOld);
+  check(`${tag} · spelling: "velvlre" → "velvære", "tæller ikke" in heading and verdict`, c.spOld.includes("velvlre") && c.spNew.includes("velvære") && /tæller ikke/.test(c.spHead) && /tæller ikke/.test(c.chips[3] || ""), c);
+  check(`${tag} · clean answer: no word-order flag, structure ticks`, d.woOld.length === 0 && d.woNew.length === 0 && d.woNone && d.stOk >= 1 && d.stOk + d.stNo >= 4, [d.woOld, d.woNone, d.stOk, d.stNo]);
+  check(`${tag} · sitting test ends on "Testen er færdig" with 6 rows`, T.end && T.rows === 6 && T.seen[5].next === "Se resultatet" && T.seen[0].next === "Næste spørgsmål", [T.end, T.rows, T.seen.map(x => x.next)]);
+  check(`${tag} · no horizontal scroll (test end)`, T.noScroll);
+  await shotFull(`${P}-test-done`);
+  const R = await runTest("random", [SAMPLE.clean]);
+  check(`${tag} · random test: 6 questions, reaches the end`, R.seen.length === 6 && R.end && R.rows === 6 && R.seen.every(x => /af 6$/.test(x.count)), [R.end, R.rows, R.seen.map(x => x.count + " " + x.src)]);
+
+  await ev(`localStorage.removeItem("pd3.oral.v1"); sessionStorage.clear(); 1`);
+}
+
+// 768 and 1024: layout only
+async function layoutRun(tag, width) {
+  await open("#laer");
+  check(`${tag} · no horizontal scroll (Lær start)`, await noHScroll(), await ev(`[document.documentElement.scrollWidth, window.innerWidth]`));
+  await open("#q/2018s-A-1A/4");
+  check(`${tag} · no horizontal scroll (question)`, await noHScroll());
+  await open("#test");
+  check(`${tag} · no horizontal scroll (Test setup)`, await noHScroll());
+  const T = await runTest("2024s", [SAMPLE.clean]);
+  check(`${tag} · test runs to the end, no horizontal scroll`, T.end && T.noScroll, [T.end, T.noScroll]);
+  await ev(`localStorage.removeItem("pd3.oral.v1"); sessionStorage.clear(); 1`);
+}
+
+// English UI (pd3.lang = en): buttons in English, content still Danish + English
+async function englishRun(tag, width, dark) {
+  await open("#laer");
+  check(`${tag} · no horizontal scroll`, await noHScroll());
+  check(`${tag} · UI in English: tabs Study|Test`, await ev(`[...document.querySelectorAll("#tabs button")].map(b => b.textContent.trim()).join("|")`) === "Study|Test");
+  check(`${tag} · next-question button "Start the question", label still Danish first`, await ev(`document.querySelector(".next a.go").textContent.trim() === "Start the question" && document.querySelector(".next .lab .da").textContent === "Dit næste spørgsmål"`));
+  check(`${tag} · English switch label in English`, await ev(`/Hide English|Show English/.test(document.querySelector("#enToggle").textContent)`));
+  check(`${tag} · English lines on the page`, await ev(`document.querySelectorAll("#app .en").length > 0`));
+  await shotFull(`${width}-${dark ? "dark" : "light"}-laer-en`);
+  await open("#q/2018s-A-1A/4");
+  check(`${tag} · question: action button "Next question"`, await ev(`document.querySelector(".actionbar button.go").textContent.trim()`) === "Next question");
+  check(`${tag} · no horizontal scroll (question)`, await noHScroll());
+  await open("#test");
+  check(`${tag} · Test: "Start the test"`, await ev(`document.querySelector("#tstart").textContent.trim()`) === "Start the test");
+  check(`${tag} · no horizontal scroll (Test)`, await noHScroll());
+}
+
+for (const [width, dark, lang] of [[375, false, "da"], [375, true, "da"], [1280, false, "da"], [1280, true, "da"], [768, false, "da"], [1024, false, "da"],
                                    [375, false, "en"], [375, true, "en"], [1280, false, "en"], [1280, true, "en"]]) {
   const tag = `${width}px ${dark ? "dark" : "light"} ${lang}`;
   console.log(`\n== ${tag} ==`);
   consoleErrors.length = 0;
   await setViewport(width, dark, lang);
-  if (lang === "en") { await layoutOnly(tag); continue; }
-  await open("#laer");
-  check(`${tag} · Lær loads`, await ev(`!!document.querySelector(".chipbtn")`));
-  check(`${tag} · no horizontal scroll`, await ev(`document.documentElement.scrollWidth <= window.innerWidth`), await ev(`[document.documentElement.scrollWidth, window.innerWidth]`));
-  check(`${tag} · 12 sittings as chips`, await ev(`document.querySelectorAll(".chipbtn").length`) === 12);
-  const theme = await ev(`[document.documentElement.dataset.theme, localStorage.getItem("pd3.theme")]`);
-  check(`${tag} · theme applied`, theme[0] === (dark ? "dark" : "light"), theme);
-  await shot(`${width}-${dark ? "dark" : "light"}-laer`);
-
-  // every sitting: three topic cards, each with a picture and three questions with a source label
-  let badSitting = [];
-  for (const [i, s] of sittings.entries()) {
-    const n = await ev(`(async () => { const c = document.querySelectorAll(".chipbtn")[${i}]; if (!c) return -1;
-      c.click(); await new Promise(r=>setTimeout(r,80)); return document.querySelectorAll(".tcard").length; })()`);
-    if (n !== 3) badSitting.push([s, n]);
-  }
-  check(`${tag} · every sitting shows 3 topics`, badSitting.length === 0, badSitting);
-  const topicsOk = await ev(`(async () => {
-    const keys = ["2018s-A","2018s-B","2018s-C","2018v-A","2018v-B","2018v-C","2019s-A","2019s-B","2019s-C","2019v-A","2019v-B","2019v-C","2020s-A","2020s-B","2020s-C","2020v-A","2020v-B","2020v-C","2021s-A","2021s-B","2021s-C","2021v-A","2021v-B","2021v-C","2022v-A","2022v-B","2022v-C","2023s-A","2023s-B","2023s-C","2023v-A","2023v-B","2023v-C","2024s-A","2024s-B","2024s-C"];
-    const bad = [];
-    for (const k of keys) {
-      location.hash = "#q/" + k + "-1A";
-      await new Promise(r => setTimeout(r, 120));
-      const img = document.querySelector("figure.pic img");
-      const pic = img && (img.complete && img.naturalWidth > 0 ? true : await new Promise(res => { img.onload = () => res(true); img.onerror = () => res(false); setTimeout(() => res(false), 3000); }));
-      const qs = document.querySelectorAll(".qcard");
-      const labels = [...qs].filter(q => /Emne [ABC]:/.test(q.querySelector(".src").textContent)).length;
-      if (!pic || qs.length !== 3 || labels !== 3) bad.push([k, !!pic, qs.length, labels]);
-    }
-    return bad; })()`);
-  check(`${tag} · 36 topics: picture loads, 3 questions with source label`, Array.isArray(topicsOk) && topicsOk.length === 0, topicsOk);
-  await open("#q/2018s-A-1A");
-  // the source label on the first question: Danish first, English underneath
-  const src = await ev(`[...document.querySelectorAll(".qcard .src")].map(x => x.textContent)[0]`);
-  check(`${tag} · source label Danish + English`, /Maj–juni 2018 · Emne A: .* · 1\. obligatorisk spørgsmål, situation A/.test(src) && /May–June 2018/.test(src), src);
-  await shot(`${width}-${dark ? "dark" : "light"}-topic`);
-
-  // ── B3 layout: each question card explains its answer structure and has a "Hvordan?" block
-  check(`${tag} · every question card: structure line + Hvordan?`, await ev(`[...document.querySelectorAll(".qcard")].length === 3 &&
-    [...document.querySelectorAll(".qcard")].every(c => c.querySelector(".structline") && c.querySelector("details.how"))`));
-  // ── B1: English under the question, every answer segment, the tips and the follow-up answer, where a translation exists
-  const enBad = await ev(`(() => { const bad = [];
-    for (const q of window.ORAL.questions.filter(x => x.sitting === "2018s" && x.letter === "A")) {
-      const card = document.querySelector("#q-" + q.id), en = q.en || {};
-      if (!card) { bad.push([q.id, "no card"]); continue; }
-      const want = (en.question ? 1 : 0) + (q.intro && en.intro ? 1 : 0), got = card.querySelectorAll(".qtext .en").length;
-      if (got !== want) bad.push([q.id, "question en", got, want]);
-      if (q.answer) {
-        const seg = card.querySelectorAll(".seg .en").length, wantSeg = en.answer ? en.answer.length : 0;
-        if (seg !== wantSeg) bad.push([q.id, "segments en", seg, wantSeg]);
-        const tips = card.querySelectorAll(".answer .tips .en").length, wantTips = en.tips ? en.tips.length : 0;
-        if (tips !== wantTips) bad.push([q.id, "tips en", tips, wantTips]);
-        const dl = [...card.querySelectorAll(".seg")].every(s => s.getAttribute("lang") === "da");
-        if (!dl) bad.push([q.id, "segment lang"]);
-      }
-    }
-    return bad; })()`);
-  check(`${tag} · English under question, every answer segment and tip (2018s A)`, Array.isArray(enBad) && enBad.length === 0, enBad);
-  const enCount = await ev(`document.querySelectorAll("#app .en").length`);
-  check(`${tag} · English lines exist on the page`, enCount > 0, enCount);
-  // the English switch: hides the lines in place, keeps the open answer open, and is remembered
-  await ev(`(() => { const b = [...document.querySelectorAll("#q-2018s-A-1A .btn")].find(x => /Vis svar/.test(x.textContent)); b.click(); return 1; })()`);
-  const sw0 = await ev(`(() => [...document.querySelectorAll("#app .en")].filter(e => getComputedStyle(e).display !== "none").length)()`);
-  await ev(`document.querySelector("#enToggle").click(); 1`); await sleep(120);
-  const sw1 = await ev(`[[...document.querySelectorAll("#app .en")].filter(e => getComputedStyle(e).display !== "none").length,
-    document.querySelector("#q-2018s-A-1A .answer").hidden, document.querySelector("#enToggle").textContent.trim(), localStorage.getItem("pd3.oral.en")]`);
-  check(`${tag} · English switch hides the English lines, keeps the open answer, and is remembered`,
-    sw0 > 0 && sw1[0] === 0 && sw1[1] === false && sw1[3] === "0" && /Vis engelsk|Show English/.test(sw1[2]), [sw0, sw1]);
-  await open("#q/2018s-A-1A");
-  check(`${tag} · English switch stays off after a reload`, await ev(`document.querySelector("#app").classList.contains("hide-en")`));
-  await ev(`document.querySelector("#enToggle").click(); 1`); await sleep(120);
-  check(`${tag} · English switch back on`, await ev(`[...document.querySelectorAll("#app .en")].some(e => getComputedStyle(e).display !== "none")`));
-
-  // model answer: segments coloured by part, the structure map lights up the parts used
-  const seg = await ev(`(async () => {
-    const card = document.querySelector("#q-2018s-A-1A"); const btn = [...card.querySelectorAll("button")].find(b => /Vis svar/.test(b.textContent)); btn.click();
-    await new Promise(r => setTimeout(r, 80));
-    const segs = card.querySelectorAll(".seg"); const cols = [...segs].map(s => getComputedStyle(s).borderLeftColor);
-    const steps = [...card.querySelectorAll("ol.steps li")];
-    const usedOn = steps.filter(s => !s.classList.contains("off")).length;
-    const fordi = [...steps].find(s => s.dataset.step === "fordi").querySelector("button"); fordi.click();
-    await new Promise(r => setTimeout(r, 60));
-    const lit = card.querySelectorAll(".seg.hi").length, litPart = card.querySelector(".seg.hi") && card.querySelector(".seg.hi").dataset.part;
-    return { segs: segs.length, distinctColours: new Set(cols).size, steps: steps.length, usedOn, lit, litPart }; })()`);
-  check(`${tag} · model answer: segments and structure map`, seg.segs === 6 && seg.distinctColours >= 4 && seg.steps === 6 && seg.usedOn === 6 && seg.lit === 1 && seg.litPart === "fordi", seg);
-  // missing model answer
-  const soon = await ev(`(async () => { await new Promise(r=>setTimeout(r,50)); location.hash = "#q/2018s-C-1A"; await new Promise(r=>setTimeout(r,200)); return [...document.querySelectorAll(".qcard .soon")].length; })()`);
-  const expectSoon = await ev(`window.ORAL.questions.filter(q => q.letter === "C" && q.sitting === "2018s" && !q.answer).length`);
-  check(`${tag} · every question without a model answer shows "Svar kommer snart"`, soon === expectSoon, [soon, expectSoon]);
-
-  // language switch: UI text changes, the question text does not
-  await open("#laer");
-  const before = await ev(`[document.querySelector(".tabs, #tabs").textContent, document.querySelector(".brand").textContent]`);
-  await ev(`document.querySelector(".langbtn").click(); 1`);
-  await sleep(200);
-  const en = await ev(`[document.querySelector("#tabs").textContent, document.querySelector(".langbtn").textContent]`);
-  check(`${tag} · language switch changes UI text`, en[0].includes("Study") && en[0] !== before[0], en);
-  await open("#q/2018s-A-1A");
-  await ev(`document.querySelector(".langbtn").click(); 1`); await sleep(250);
-  const qtext = await ev(`document.querySelector(".qcard .qtext").textContent`);
-  check(`${tag} · question text unchanged by the language switch`, /Frivilligt|Nogle studerende/.test(qtext) || qtext.length > 20, qtext.slice(0, 60));
-  await ev(`document.querySelector(".langbtn").click(); 1`); await sleep(200);
-
-  await ev(`try { localStorage.setItem("pd3.lang", "da"); } catch (e) {} 1`);
-  // ── Test ────────────────────────────────────────────────────────────────
-  // stub Math.random so the examiner picks situation 1A (first question) on the first topic
-  await open("#test");
-  await ev(`Math.random = (() => { const f = Math.random; return () => 0.1; })(); 1`);
-  check(`${tag} · test setup`, await ev(`!!document.querySelector(".chipbtn") && !!document.querySelector("button.btn.solid")`));
-  const started = await ev(`(async () => {
-    document.querySelectorAll(".chipbtn")[0].click(); await new Promise(r => setTimeout(r, 80));
-    [...document.querySelectorAll("button.btn.solid")].find(b => /Start test/.test(b.textContent)).click();
-    await new Promise(r => setTimeout(r, 150)); return document.querySelectorAll("#app .qcard, #app .thead").length > 0; })()`);
-  check(`${tag} · test sitting 2018s starts`, started === true, started);
-  const dbgBtns = await ev(`[...document.querySelectorAll("#app button")].map(b => b.textContent.trim()).join("|") + " || " + location.hash`);
-  await clickText("Start spørgsmål");
-  const q1 = await ev(`[!!document.querySelector("#ta"), document.querySelector("#app").innerText.slice(0, 40), ${JSON.stringify(dbgBtns)}]`);await ev(`[!!document.querySelector("figure.pic.test img"), !!document.querySelector("#ta"), document.querySelector("#app").innerText.slice(0, 160)]`);
-  check(`${tag} · test question 1 shows picture + question`, q1[0] && q1[1], q1);
-  await ev(`(() => { const ta = document.querySelector("#ta"); ta.value = ${JSON.stringify(SAMPLE.wo1)}; ta.dispatchEvent(new Event("input")); return 1; })()`);
-  await clickText("Tjek mit svar");
-  await sleep(120);
-  const fbWo = await ev(`({ wo: [...document.querySelectorAll(".wlist .wo")].map(x => x.textContent), fixes: [...document.querySelectorAll(".wlist li b")].map(x => x.textContent) })`);
-  check(`${tag} · word order: "tror, er det" flagged with fix`, fbWo.wo.includes("tror, er det") && fbWo.fixes.some(x => x.includes("tror, at det er")), fbWo);
-  await shot(`${width}-${dark ? "dark" : "light"}-feedback`);
-  const rated = await ev(`(async () => { [...document.querySelectorAll(".ratebtns button")].find(b => b.textContent.trim() === "Kunne").click(); await new Promise(r=>setTimeout(r,80)); return [...document.querySelectorAll(".ratebtns button")].find(b => b.textContent.trim() === "Kunne").getAttribute("aria-pressed"); })()`);
-  check(`${tag} · self-rating saved (Kunne)`, rated === "true", rated);
-  await clickText("Næste spørgsmål");
-  await ev(`(() => { const ta = document.querySelector("#ta"); ta.value = ${JSON.stringify(SAMPLE.wo2)}; ta.dispatchEvent(new Event("input")); return 1; })()`);
-  await clickText("Tjek mit svar");
-  const modal = await ev(`[...document.querySelectorAll(".wlist .wo")].map(x => x.textContent)`);
-  check(`${tag} · modal + at flagged ("kan at")`, modal.some(x => x.includes("kan at")), modal);
-  await clickText("Kunne"); await clickText("Se emnet");
-  const sum = await ev(`!!document.querySelector(".sumrow")`);
-  check(`${tag} · topic summary reached`, sum);
-  for (let k = 0; k < 2; k++) {
-    await clickText("Næste emne");
-    await clickText("Start spørgsmål");
-    await clickText("Tjek mit svar"); await clickText("Kunne");
-    await clickText("Næste spørgsmål");
-    await clickText("Tjek mit svar"); await clickText("Kunne");
-    await clickText("Se emnet");
-  }
-  await clickText("Se resultat");
-  check(`${tag} · sitting test reaches "Testen er færdig"`, await ev(`/Test færdig|Testen er færdig/.test(document.querySelector("#app").textContent)`));
-
-  // random test, with the topic pass-through checked by its title
-  await open("#test");
-  await ev(`Math.random = () => 0.1; 1`);
-  await clickText("Tilfældig · 3 emner", ".chipbtn");
-  await clickText("Start test");
-  check(`${tag} · random test starts`, await ev(`!!document.querySelector(".testbar")`));
-  for (let k = 0; k < 3; k++) {
-    await clickText("Start spørgsmål");
-    await ev(`(() => { const ta = document.querySelector("#ta"); ta.value = ${JSON.stringify(SAMPLE.clean)}; ta.dispatchEvent(new Event("input")); return 1; })()`);
-    await clickText("Tjek mit svar"); await clickText("Kunne");
-    await clickText("Næste spørgsmål");
-    await ev(`(() => { const ta = document.querySelector("#ta"); ta.value = ${JSON.stringify(SAMPLE.spell)}; ta.dispatchEvent(new Event("input")); return 1; })()`);
-    await clickText("Tjek mit svar"); await clickText("Delvist");
-    await clickText(k < 2 ? "Se emnet" : "Se emnet");
-    if (k < 2) await clickText("Næste emne");
-  }
-  await clickText("Se resultat");
-  check(`${tag} · random test reaches the end`, await ev(`/Test færdig|Testen er færdig/.test(document.querySelector("#app").textContent)`));
-
-  // clean answer: no word-order flags; spelling fix for "velvlre"
-  await open("#test");
-  await ev(`Math.random = () => 0.1; 1`);
-  await clickText("Start test");
-  await clickText("Start spørgsmål");
-  await ev(`(() => { const ta = document.querySelector("#ta"); ta.value = ${JSON.stringify(SAMPLE.clean)}; ta.dispatchEvent(new Event("input")); return 1; })()`);
-  await clickText("Tjek mit svar");
-  const clean = await ev(`({ wo: document.querySelectorAll(".wlist .wo").length, none: [...document.querySelectorAll(".ok-mark")].map(x => x.textContent), struct: [...document.querySelectorAll(".fsteps li")].map(li => li.textContent.slice(0,1)).join("") })`);
-  check(`${tag} · clean answer: no word-order flag`, clean.wo === 0 && clean.none.some(x => /Ingen ordstillingsfejl|No word-order/.test(x)), clean);
-  check(`${tag} · structure ✅/❌ shown for each step`, clean.struct.length >= 5, clean.struct);
-  await open("#test");
-  await ev(`Math.random = () => 0.1; 1`);
-  await clickText("Start test"); await clickText("Start spørgsmål");
-  await ev(`(() => { const ta = document.querySelector("#ta"); ta.value = ${JSON.stringify(SAMPLE.spell)}; ta.dispatchEvent(new Event("input")); return 1; })()`);
-  await clickText("Tjek mit svar");
-  const spell = await ev(`[...document.querySelectorAll(".sp-old")].map(x => x.textContent).concat([...document.querySelectorAll(".sp-new")].map(x => x.textContent))`);
-  check(`${tag} · spelling: "velvlre" → "velvære"`, spell.includes("velvlre") && spell.includes("velvære"), spell);
-  check(`${tag} · spelling note says it does not count`, /tæller ikke|does not count/.test(await ev(`document.querySelector(".box") ? document.querySelector("#app").textContent : ""`)));
-
-  // progress: two "Kunne" on two different days make a question secure; it persists after a reload
-  await ev(`(() => { try { const k = "pd3.oral.v1"; const d = JSON.parse(localStorage.getItem(k) || "{}");
-    d["2018s-A-1B"] = { ratings: [{ d: "2000-01-01", r: "k" }, { d: "2000-01-02", r: "k" }] }; localStorage.setItem(k, JSON.stringify(d)); } catch (e) {} return 1; })()`);
-  await open("#laer");
-  const prog = await ev(`document.querySelector(".progline .pl") && document.querySelector(".progline .pl").textContent`);
-  check(`${tag} · one progress line counts sure questions`, typeof prog === "string" && prog.includes("1 af 108 spørgsmål sikre") && /ikke startet/.test(prog), prog);
-  check(`${tag} · progress persists after reload`, await ev(`(JSON.parse(localStorage.getItem("pd3.oral.v1")||"{}"))["2018s-A-1B"].ratings.length`) === 2);
-
-  // ── B3 start screen: no Rammer tab, the four question types, one progress line, a 3-step how-to ──
-  await open("#laer");
-  check(`${tag} · tabs are Lær and Test only`, await ev(`[...document.querySelectorAll("#tabs button")].map(b => b.textContent.trim()).join("|")`) === "Lær|Test");
-  check(`${tag} · start screen: the four question types`, await ev(`document.querySelectorAll(".ftype").length === 4 &&
-    [...document.querySelectorAll(".ftype .fq")].every(x => x.textContent.trim().length > 0)`));
-  check(`${tag} · start screen: 3-step how-to`, await ev(`document.querySelectorAll(".howsteps li").length === 3`));
-  check(`${tag} · start screen: stat cards replaced by one progress line`, await ev(`!document.querySelector(".band") && document.querySelectorAll(".progline").length === 1`));
-  await shot(`${width}-${dark ? "dark" : "light"}-laer-start`);
-  await open("#test");
-  check(`${tag} · Test tab opens`, await ev(`!!document.querySelector(".chipbtn")`));
-
-  check(`${tag} · no horizontal scroll (Lær + Test)`, await ev(`document.documentElement.scrollWidth <= window.innerWidth`));
+  if (lang === "en") await englishRun(tag, width, dark);
+  else if (width === 768 || width === 1024) await layoutRun(tag, width);
+  else await danishRun(tag, width, dark);
   check(`${tag} · no console errors`, consoleErrors.length === 0, consoleErrors.slice(0, 5));
-  await ev(`localStorage.removeItem("pd3.oral.v1"); 1`);
-  await ev(`Math.random = (() => { const f = Math.random; return f; })(); 1`);
 }
+await ev(`try { localStorage.setItem("pd3.lang", "da"); } catch (e) {} 1`);
 
 await send("Emulation.setDeviceMetricsOverride", { width: 0, height: 0, deviceScaleFactor: 0, mobile: false }).catch(() => {});
 chrome.kill();
