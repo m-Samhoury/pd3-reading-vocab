@@ -1,0 +1,157 @@
+{
+  "2018s-A-1A": {
+    "frame": "aarsag",
+    "answer": [
+      {"part": "intro", "text": "Der kan være mange grunde til det."},
+      {"part": "aarsag", "text": "En årsag er, at mange studerende har brug for flere penge."},
+      {"part": "fordi", "text": "Det er nemlig dyrt at bo i byen, fordi huslejen er høj."},
+      {"part": "eksempel", "text": "Fx kender jeg en studerende, som arbejder i en butik, fordi hun skal betale sin egen telefon."},
+      {"part": "aarsag2", "text": "En anden årsag er, at frivilligt arbejde giver erfaring til CV'et."},
+      {"part": "konklusion", "text": "Så derfor tror jeg, at økonomi er den vigtigste grund."}
+    ],
+    "keywords": [
+      {"da": "have råd til", "use": "have råd til + navneord / at + infinitiv", "en": "to afford"},
+      {"da": "give erfaring", "use": "give erfaring (med/i) + navneord", "en": "to give experience"},
+      {"da": "det skyldes, at", "use": "det skyldes, at + sætning", "en": "it is due to"}
+    ],
+    "tips": ["Start med en kort indledning og svar på spørgsmålet med det samme.", "Jeg tror, at … – husk: subjekt før verbum, og ikke før verbet."],
+    "followup": {"q": "Synes du, at det er et problem, at studerende har svært ved at betale for det?", "answer": "Ja, jeg synes, at det er et problem, fordi mange må holde op med at studere."},
+    "notes_raw": "studerende skal have penge, bil er dyr, frivilligt arbejde giver erfaring",
+    "notes": "Studerende har brug for penge. Frivilligt arbejde giver erfaring."
+  },
+  "2018s-A-1B": {
+    "frame": "fordele_ulemper",
+    "answer": [
+      {"part": "intro", "text": "Der er både fordele og ulemper ved frivilligt arbejde."},
+      {"part": "side1", "text": "På den ene side giver det erfaring, fordi man lærer nye ting."},
+      {"part": "side2", "text": "På den anden side kan det tage tid fra studiet, fordi man ikke har fri."},
+      {"part": "eksempel", "text": "Fx hjælper en ven på et plejehjem to gange om ugen."},
+      {"part": "stilling", "text": "Hvis jeg skal tage stilling, mener jeg, at fordelene er størst."}
+    ],
+    "keywords": [
+      {"da": "på den ene side", "use": "på den ene side, … / på den anden side, …", "en": "on the one hand"},
+      {"da": "tage tid fra", "use": "tage tid fra + navneord", "en": "to take time from"},
+      {"da": "være en fordel", "use": "det er en fordel at + infinitiv", "en": "to be an advantage"}
+    ],
+    "tips": ["Bland to sider med ‘På den ene side / På den anden side’.", "Afslut med en klar stilling."],
+    "followup": {"q": "Hvad kan kommunen gøre for at få flere til at arbejde frivilligt?", "answer": "Kommunen kan give tilskud, så det bliver lettere at deltage."},
+    "notes_raw": null,
+    "notes": null
+  },
+  "2018s-A-2": {
+    "frame": "konsekvens",
+    "answer": [
+      {"part": "konsekvens", "text": "Det betyder, at mange plejehjem får hjælp fra frivillige."},
+      {"part": "fordi", "text": "Det skyldes, at de ansatte ikke har tid nok til at læse højt."},
+      {"part": "eksempel", "text": "Fx kommer en frivillig hver onsdag og læser for de ældre."},
+      {"part": "konklusion", "text": "Alt i alt er det en god ting for både de ældre og de frivillige."}
+    ],
+    "keywords": [
+      {"da": "få hjælp fra", "use": "få hjælp fra + navneord", "en": "to get help from"},
+      {"da": "have betydning for", "use": "have betydning for + navneord", "en": "to matter for"}
+    ],
+    "tips": ["Konsekvens-spørgsmål: start med ‘Det betyder, at …’."],
+    "followup": {"q": "Hvilke andre institutioner kan have gavn af frivillige?", "answer": "Skoler og museer kan også få gavn af frivillige."},
+    "notes_raw": null,
+    "notes": null
+  },
+  "2018s-B-1A": {
+    "frame": "aarsag",
+    "answer": [
+      {"part": "intro", "text": "Der er flere grunde til, at folk går på arbejde, når de er syge."},
+      {"part": "aarsag", "text": "En grund er, at mange føler sig pressede."},
+      {"part": "fordi", "text": "Det skyldes, at arbejdspladsen ikke har nok vikarer, fordi man ikke vil svigte kollegerne."},
+      {"part": "eksempel", "text": "Fx kender jeg en lærer, som møder op med feber."},
+      {"part": "aarsag2", "text": "En anden årsag er, at man er bange for at miste sit job."},
+      {"part": "konklusion", "text": "Så jeg tror, at pres er den største grund."}
+    ],
+    "keywords": [
+      {"da": "føle sig presset", "use": "føle sig presset til + at + infinitiv", "en": "to feel pressured"},
+      {"da": "svigte", "use": "svigte + navneord", "en": "to let down"}
+    ],
+    "tips": ["Jeg tror, at man ikke … – ikke står efter subjektet, men før verbet i at-sætninger."],
+    "followup": {"q": "Hvordan kan en arbejdsplads gøre det lettere at blive hjemme?", "answer": "Virksomheden kan give mulighed for at arbejde hjemmefra."},
+    "notes_raw": null,
+    "notes": null
+  },
+  "2018s-B-1B": {
+    "frame": "holdning",
+    "answer": [
+      {"part": "stilling", "text": "Jeg mener, at det er vigtigt at blive hjemme, når man er syg."},
+      {"part": "fordi", "text": "Det skyldes, at man smitter kollegerne, og de bliver syge også."},
+      {"part": "eksempel", "text": "Fx var der en kollega, som gik på arbejde med influenza, og næsten hele afdelingen blev syg."},
+      {"part": "konklusion", "text": "Derfor synes jeg, at man bør blive hjemme."}
+    ],
+    "keywords": [
+      {"da": "smitte", "use": "smitte + person/navneord", "en": "to infect"},
+      {"da": "efter min mening", "use": "efter min mening, … / efter min mening er det …", "en": "in my opinion"}
+    ],
+    "tips": ["Ved holdning: sig din mening først, derefter grund og eksempel."],
+    "followup": {"q": "Skal arbejdsgiveren betale for sygefravær?", "answer": "Ja, jeg synes, at det er rimeligt, fordi det giver mindre sygefravær."},
+    "notes_raw": null,
+    "notes": null
+  },
+  "2018s-B-2": {
+    "frame": "konsekvens",
+    "answer": [
+      {"part": "konsekvens", "text": "Det betyder, at virksomheder kan spare penge på færre sygedage."},
+      {"part": "fordi", "text": "Det skyldes, at sygefravær koster mange tusinde kroner om året."},
+      {"part": "eksempel", "text": "Fx sparede en virksomhed meget, da den indførte bedre hygiejne."},
+      {"part": "konklusion", "text": "Samlet set er det en god investering for virksomheden."}
+    ],
+    "keywords": [
+      {"da": "spare penge på", "use": "spare penge på + navneord", "en": "to save money on"},
+      {"da": "føre til", "use": "føre til + navneord", "en": "to lead to"}
+    ],
+    "tips": ["Velvære på arbejdet fører til færre sygedage – brug ‘føre til’ med navneord."],
+    "followup": {"q": "Hvad kan virksomheder gøre for at forbedre velvære på arbejdet?", "answer": "De kan tilbyde motion og bedre pauser, så medarbejderne får mere velvære."},
+    "notes_raw": "sygefravær koster penge, hygiejne, velvære",
+    "notes": "Sygefravær koster penge. Hygiejne og velvære er vigtigt."
+  },
+  "2018s-C-1A": {
+    "frame": "fordele_ulemper",
+    "answer": [
+      {"part": "intro", "text": "Der er både fordele og ulemper ved at læse nyheder online."},
+      {"part": "side1", "text": "På den ene side er det billigt og hurtigt, fordi man får nyheder med det samme."},
+      {"part": "side2", "text": "På den anden side kan det være svært at vide, hvad der er rigtigt."},
+      {"part": "eksempel", "text": "Fx ser jeg ofte nyheder på telefonen i bussen."},
+      {"part": "stilling", "text": "Hvis jeg skal tage stilling, mener jeg, at online-nyheder er en god ting."}
+    ],
+    "keywords": [
+      {"da": "på den ene side", "use": "på den ene side, … / på den anden side, …", "en": "on the one hand"},
+      {"da": "være svært at", "use": "det er svært at + infinitiv", "en": "to be difficult to"}
+    ],
+    "tips": ["Brug ‘På den ene side’ og ‘På den anden side’ med en fordel og en ulempe."],
+    "followup": {"q": "Hvem bør have ansvar for at kontrollere nyheder?", "answer": "Medierne selv bør have ansvar, men også brugerne skal være kritiske."},
+    "notes_raw": null,
+    "notes": null
+  },
+  "2018s-C-1B": {
+    "frame": "holdning",
+    "answer": [
+      {"part": "stilling", "text": "Jeg synes, at aviser er vigtige, selv om færre læser dem."},
+      {"part": "fordi", "text": "Det skyldes, at aviser har journalister, som undersøger tingene grundigt."},
+      {"part": "eksempel", "text": "Fx skrev en avis om en skandale, som ingen andre havde fået frem."},
+      {"part": "konklusion", "text": "Derfor tror jeg, at vi har brug for aviser."}
+    ],
+    "keywords": [
+      {"da": "undersøge", "use": "undersøge + navneord", "en": "to investigate"},
+      {"da": "have brug for", "use": "have brug for + navneord", "en": "to need"}
+    ],
+    "tips": ["Ved holdning: begynd med din mening, og brug et konkret eksempel."],
+    "followup": {"q": "Bør aviser få statsstøtte?", "answer": "Ja, jeg mener, at statsstøtte kan sikre uafhængig journalistik."},
+    "notes_raw": null,
+    "notes": null
+  },
+  "topics": {
+    "2018s-A": {"situations": {"A": "Frivilligt arbejde", "B": "Frivilligt arbejde i skolen"}, "family": "arbejde"},
+    "2018s-B": {"situations": {"A": "Sygefravær", "B": "Sygefravær i sundhedssektoren"}, "family": "sundhed"},
+    "2018s-C": {"situations": {"A": "Nyheder online", "B": "Aviser"}, "family": "medier"}
+  },
+  "frames": {
+    "aarsag": {"skeleton": "Indledning → Årsag → Fordi → Eksempel → Anden årsag → Konklusion", "tips": ["Svar med det samme.", "Hver årsag får sit eget ‘fordi’."]},
+    "fordele_ulemper": {"skeleton": "Indledning → På den ene side … → På den anden side … → Eksempel → Min stilling", "tips": ["Brug ‘På den ene side / På den anden side’."]},
+    "konsekvens": {"skeleton": "Indledning → Konsekvens (Det betyder, at …) → Fordi → Eksempel → Konklusion", "tips": ["Start konsekvensen med ‘Det betyder, at …’."]},
+    "holdning": {"skeleton": "Min stilling → Fordi → Eksempel → Konklusion", "tips": ["Sig din mening først."]}
+  }
+}

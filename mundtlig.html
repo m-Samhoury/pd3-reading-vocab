@@ -1,0 +1,690 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mundtlig · PD3</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="description" content="Mundtlig delprøve 2: alle eksamensspørgsmål 2018–2024 med billedark, modelsvar, opbygning og en offline test.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500..900&family=Roboto+Flex:opsz,wght@8..144,400..700&display=swap">
+<script>try { const m = localStorage.getItem("pd3.theme"); if (m === "light" || m === "dark") document.documentElement.dataset.theme = m; } catch (e) { /* ignore */ }</script>
+<link rel="stylesheet" href="assets/common.65227e65e9.css">
+<style>
+/* Mundtlig page: the same tokens and cards as the rest of the site (common.css). Only layout lives here. */
+.top { padding-top: 34px; }
+.top h1 { font-size: clamp(1.9rem, 6vw, 2.6rem); font-weight: 700; letter-spacing: -.03em; margin-top: 14px; }
+.top h1 .light { font-weight: 400; display: block; }
+.lead { margin: 10px 0 0; color: var(--soft); max-width: 62ch; }
+.tabs { margin: 26px 0 0; }
+.tabs .pick { max-width: 100%; }
+.view { margin-top: 26px; display: grid; gap: 18px; }
+.view > h2 { font-size: 1.35rem; }
+.sec { margin-top: 30px; display: grid; gap: 12px; }
+.sec > h2 { font-size: 1.2rem; }
+.band { background: var(--md-sys-color-primary); color: var(--md-sys-color-on-primary); border-radius: 32px; padding: 22px; }
+.prog { display: grid; gap: 14px 24px; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+.prog .m .lbl { color: inherit; opacity: .85; margin: 0; text-transform: none; letter-spacing: 0; font-size: .82rem; }
+.prog .m b { display: block; font-size: 1.8rem; font-weight: 700; letter-spacing: -.02em; line-height: 1.15; }
+.prog .m .s { font-size: .85rem; opacity: .85; }
+.prog .bar { margin-top: 10px; background: color-mix(in srgb, currentColor 25%, transparent); }
+.prog .bar > span { background: currentColor; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chipbtn .n { font-variant-numeric: tabular-nums; }
+.tgrid { display: grid; gap: 14px; grid-template-columns: 1fr; }
+@media (min-width: 720px) { .tgrid { grid-template-columns: repeat(3, 1fr); } }
+a.tcard { display: grid; gap: 8px; padding: 18px; text-decoration: none; color: inherit; transition: box-shadow .15s, transform .15s; }
+a.tcard:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+.tcard .letter { font-family: var(--head); font-size: 2rem; font-weight: 800; color: var(--accent-text); line-height: 1; }
+.tcard h3 { font-size: 1.1rem; }
+.tcard .sits { color: var(--soft); font-size: .9rem; margin: 0; }
+.dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--rule-strong); flex: 0 0 auto; }
+.dot.practice { background: var(--md-sys-color-secondary); }
+.dot.sure { background: var(--ok); }
+.st { display: inline-flex; align-items: center; gap: 8px; font-size: .88rem; color: var(--soft); font-weight: 600; }
+.bi .en { display: block; color: var(--faint); font-size: .8rem; font-weight: 500; }
+.crumbs { font-size: .92rem; }
+.crumbs a { display: inline-flex; align-items: center; min-height: 40px; color: var(--soft); text-decoration: none; font-weight: 600; }
+.crumbs a:hover { color: var(--ink); }
+.thead { display: flex; gap: 14px; align-items: flex-start; }
+.thead .letter { flex: 0 0 auto; display: grid; place-items: center; width: 52px; height: 52px; border-radius: 16px; background: var(--accent-soft); color: var(--accent-text); font-family: var(--head); font-size: 1.6rem; font-weight: 800; }
+.thead h2 { font-size: 1.45rem; }
+.thead .lbl { margin-bottom: 4px; }
+.sit { display: grid; gap: 6px; margin: 0; font-size: .95rem; }
+.sit div { display: grid; grid-template-columns: 34px 1fr; gap: 8px; }
+.sit dt { font-weight: 800; color: var(--accent-text); }
+.sit dd { margin: 0; }
+figure.pic { margin: 0; position: relative; }
+figure.pic img { display: block; width: 100%; max-width: 520px; height: auto; border-radius: 16px; border: 1px solid var(--rule); background: var(--sheet); cursor: zoom-in; }
+figure.pic.big img { max-width: none; cursor: zoom-out; }
+figure.pic.test img { max-height: 52vh; width: auto; max-width: 100%; margin: 0 auto; object-fit: contain; cursor: zoom-in; }
+figure.pic figcaption { font-size: .82rem; color: var(--soft); margin-top: 6px; }
+.qcard { padding: 20px 18px; display: grid; gap: 14px; }
+.qcard .src { margin: 0; display: grid; gap: 2px; font-size: .9rem; font-weight: 600; color: var(--soft); }
+.qcard .src .en { font-size: .8rem; font-weight: 500; color: var(--faint); }
+.qtext { font-size: 1.2rem; line-height: 1.45; font-weight: 700; letter-spacing: -.01em; font-family: var(--body); }
+.qtext .intro { display: block; font-weight: 500; color: var(--soft); font-size: 1rem; margin-bottom: 4px; }
+.fus ul { margin: 6px 0 0; padding-left: 18px; color: var(--soft); }
+.fus li { margin: 4px 0; }
+.prov { margin: 0; color: var(--soft); font-size: .92rem; }
+.soon { margin: 0; color: var(--soft); font-style: italic; }
+.answer { display: grid; gap: 18px; }
+.answer[hidden] { display: none; }
+.smap .lbl { margin-bottom: 8px; }
+.smap .frame { font-size: .85rem; color: var(--soft); margin-bottom: 8px; }
+ol.steps { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+ol.steps li button { min-height: 40px; padding: 6px 12px; border-radius: 12px; border: 1px solid var(--c); font: 600 .88rem var(--body); color: var(--ink); cursor: pointer; background: color-mix(in srgb, var(--c) 16%, var(--sheet)); }
+ol.steps li button:hover { border-width: 2px; }
+ol.steps li.off button { opacity: .42; border-style: dashed; }
+ol.steps li.hi button { box-shadow: 0 0 0 3px color-mix(in srgb, var(--c) 45%, transparent); }
+.segs { display: grid; gap: 10px; }
+.seg { --c: var(--faint); margin: 0; padding: 10px 12px 10px 14px; border-radius: 14px; border-left: 4px solid var(--c); background: color-mix(in srgb, var(--c) 12%, var(--sheet)); font-size: 1.02rem; line-height: 1.5; }
+.seg .seglbl { display: block; font-size: .72rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--c); margin-bottom: 2px; }
+.seg.hi { box-shadow: 0 0 0 2px var(--c); }
+.seg.dim { opacity: .45; }
+.p-intro { --c: var(--faint); }
+.p-aarsag, .p-aarsag2, .p-side1 { --c: var(--accent); }
+.p-fordi, .p-side2, .p-konsekvens { --c: var(--blue); }
+.p-eksempel { --c: var(--violet); }
+.p-stilling { --c: var(--ok); }
+.p-konklusion { --c: var(--warn); }
+.kws { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.kw { display: grid; gap: 2px; padding: 10px 12px; border-radius: 12px; background: var(--paper); }
+.kw b { font-size: 1.02rem; }
+.kw .use { color: var(--ink); font-size: .92rem; }
+.kw .en { color: var(--soft); font-size: .85rem; }
+.tips { margin: 0; padding-left: 20px; display: grid; gap: 6px; color: var(--ink); font-size: .95rem; }
+.fu, .fu summary { font-size: .95rem; }
+.fu summary { cursor: pointer; min-height: 40px; display: inline-flex; align-items: center; font-weight: 600; color: var(--soft); }
+.fu p { margin: 6px 0; }
+.note { padding: 12px 14px; background: var(--blue-soft); color: var(--blue-text); border-radius: 14px; display: grid; gap: 4px; }
+.note .lbl { color: var(--blue-text); margin: 0; }
+.note p { margin: 0; }
+.note details summary { cursor: pointer; font-size: .9rem; min-height: 36px; display: inline-flex; align-items: center; }
+.sub-h { font-size: .8rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--faint); margin: 0; }
+/* test */
+.testbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 14px; font-size: .9rem; color: var(--soft); }
+.tm { font-variant-numeric: tabular-nums; font-weight: 600; }
+textarea.ans { width: 100%; min-height: 150px; padding: 12px 14px; border-radius: 14px; border: 1.5px solid var(--rule-strong); background: var(--sheet); color: var(--ink); font: 1.02rem/1.55 var(--body); resize: vertical; }
+textarea.ans:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.fb { display: grid; gap: 18px; }
+.box { padding: 14px 16px; border-radius: 16px; background: var(--sheet); border: 1px solid var(--rule); display: grid; gap: 8px; }
+.box .lbl { margin: 0; }
+.box p { margin: 0; }
+.box.warn { background: var(--warn-bg); border-color: transparent; }
+.wlist { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.wlist li { display: grid; gap: 3px; padding: 10px 12px; border-radius: 12px; background: var(--paper); font-size: .95rem; }
+.wlist .why { color: var(--ink); font-size: .9rem; }
+.wlist .why.en { color: var(--soft); font-size: .84rem; }
+.sp { text-decoration: underline; text-decoration-color: var(--ok); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.wo { text-decoration: underline wavy var(--bad); text-underline-offset: 4px; }
+.sp-old { text-decoration: line-through; color: var(--bad); }
+.sp-new { color: var(--ok); }
+.dotbad { display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: var(--bad); margin-right: 6px; vertical-align: middle; }
+.ok-mark { color: var(--ok); font-weight: 800; }
+.no-mark { color: var(--bad); font-weight: 800; }
+ol.fsteps, ul.fkw { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+ol.fsteps li, ul.fkw li { display: inline-flex; align-items: center; gap: 6px; min-height: 34px; padding: 4px 11px; border-radius: 999px; border: 1px solid var(--rule-strong); background: var(--sheet); font-size: .9rem; font-weight: 600; }
+ol.fsteps li.no, ul.fkw li.no { color: var(--soft); }
+.cmp { display: grid; gap: 16px; }
+@media (min-width: 760px) { .cmp { grid-template-columns: 1fr 1fr; } }
+.cmp .col { display: grid; gap: 10px; align-content: start; }
+.cmp .yours { font-size: 1.02rem; line-height: 1.6; padding: 12px 14px; border-radius: 14px; background: var(--paper); margin: 0; }
+.rate { display: grid; gap: 10px; }
+.ratebtns { display: flex; flex-wrap: wrap; gap: 8px; }
+.ratebtns .btn[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent); color: var(--accent-text); }
+.sumrow { display: grid; gap: 4px; padding: 12px 14px; border-radius: 14px; background: var(--sheet); border: 1px solid var(--rule); }
+.sumrow b { font-size: 1rem; }
+.sumrow .meta2 { color: var(--soft); font-size: .9rem; }
+.framecards { display: grid; gap: 14px; grid-template-columns: 1fr; }
+@media (min-width: 720px) { .framecards { grid-template-columns: repeat(2, 1fr); } }
+.fcard { padding: 18px; display: grid; gap: 10px; align-content: start; }
+.fcard h3 { font-size: 1.15rem; }
+.fcard .skel { margin: 0; font-size: .95rem; color: var(--ink); }
+.fcard ul { margin: 0; padding-left: 18px; color: var(--soft); font-size: .92rem; }
+.hint { font-size: .9rem; color: var(--soft); margin: 0; }
+.empty { padding: 18px; color: var(--soft); }
+.backline { margin-top: 10px; }
+footer.foot { padding-top: 40px; padding-bottom: 48px; color: var(--faint); font-size: .85rem; }
+@media (max-width: 480px) { ol.steps li button { font-size: .82rem; } }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" href="index.html"><span class="logo" aria-hidden="true">Pd</span><span data-i18n="brand">PD3 ordforråd</span></a>
+    <nav class="nav" aria-label="Pages">
+      <a href="index.html" data-i18n="nav.overview">Overblik</a>
+      <a href="study-sheet.html" data-i18n="nav.study">Studieark</a>
+      <a href="flashcards.html#learn" data-i18n="nav.flash">Flashcards</a>
+      <a href="flashcards.html#test" data-i18n="nav.test">Test</a>
+      <a href="assisted-learning.html" data-i18n="nav.assisted">Guidet læring</a>
+      <a href="assisted-learning.html#find" data-i18n="nav.find">Find ord</a>
+      <a href="mundtlig.html" aria-current="page" data-i18n="nav.oral">Mundtlig</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <div class="wrap tabs" style="padding:0">
+    <nav class="pick" id="tabs" aria-label="Mundtlig">
+      <button type="button" data-go="#laer" data-i18n="or.tab.laer">Lær</button>
+      <button type="button" data-go="#test" data-i18n="or.tab.test">Test</button>
+      <button type="button" data-go="#rammer" data-i18n="or.tab.frames">Rammer</button>
+    </nav>
+  </div>
+  <div id="app"></div>
+</main>
+<footer class="wrap foot" data-i18n="or.footer"></footer>
+<script src="assets/pd3-data.b6a1b401e8.js"></script>
+<script src="assets/common.33a13d988f.js"></script>
+<script src="oral/data.5d4753797e.js"></script>
+<script src="oral/lexicon.c57f395103.js"></script>
+<script>
+(() => {
+  const { el, store, shuffle } = PD3;
+  const D = window.ORAL, LEXW = window.ORAL_LEX || {};
+  const $ = s => document.querySelector(s);
+  const app = $("#app");
+  const KEY = "pd3.oral.v1";
+
+  // ── page strings (merged into the shared I18N, so the Dansk/English button and nav labels work) ──
+  Object.assign(I18N, {
+    "or.tab.laer": ["Lær", "Study"], "or.tab.test": ["Test", "Test"], "or.tab.frames": ["Rammer", "Frames"],
+    "or.chip.b": ["Ny", "New"], "or.chip": ["Emner 2018–2024", "Topics 2018–2024"],
+    "or.h1a": ["Mundtlig", "Oral"], "or.h1b": ["Delprøve 2 · 2018–2024", "Part 2 · 2018–2024"],
+    "or.intro": ["Alle eksamensspørgsmål fra 2018 til 2024, med billedarket. Prøv selv først, og se så et modelsvar.",
+                 "Every exam question from 2018 to 2024, with its picture sheet. Try first, then look at a model answer."],
+    "or.progress": ["Dit fremskridt", "Your progress"], "or.sure": ["sikre", "secure"], "or.sure1": ["sikker", "secure"],
+    "or.new": ["ny", "new"], "or.practice": ["øvet", "practised"], "or.sittings": ["Prøve", "Sitting"],
+    "or.tcount": ["{0} / 3 sikre", "{0} / 3 secure"], "or.back": ["← Alle emner", "← All topics"],
+    "or.picture": ["Billedark · øverst situation A, nederst situation B", "Picture sheet · situation A at the top, situation B below"],
+    "or.situations": ["Situationer", "Situations"], "or.prov": ["Prøv selv først. Sig eller skriv svaret, og vis det så.", "Try first: say or write the answer, then show it."],
+    "or.show": ["Vis svar", "Show answer"], "or.hide": ["Skjul svar", "Hide answer"], "or.soon": ["Svar kommer snart", "Answer coming soon"],
+    "or.struct": ["Opbygning", "Structure"], "or.keywords": ["Nøgleord", "Keywords"], "or.tips": ["Tips", "Tips"],
+    "or.followup": ["Opfølgende spørgsmål", "Follow-up question"], "or.followups": ["Mulige opfølgende spørgsmål", "Possible follow-up questions"],
+    "or.notes": ["Dine noter", "Your notes"], "or.notesorig": ["vis original", "show original"],
+    "or.topictest": ["Test dig selv på dette emne", "Test yourself on this topic"],
+    "or.test.h": ["Test · eksamensform", "Test · exam format"],
+    "or.test.p": ["Du får et billedark og et spørgsmål, skriver dit svar og får feedback. Tiden er kun til orientering: 45–90 sekunder pr. spørgsmål.",
+                  "You get a picture sheet and a question, write your answer and get feedback. The timer is only a guide: 45–90 seconds per question."],
+    "or.test.sit": ["Prøve eller tilfældig", "Sitting or random"], "or.test.rand": ["Tilfældig · 3 emner", "Random · 3 topics"],
+    "or.test.unsure": ["Kun emner, der ikke er sikre", "Only topics that are not secure yet"],
+    "or.test.start": ["Start test", "Start test"], "or.test.none": ["Alle emner i dette valg er sikre.", "All topics in this choice are secure."],
+    "or.test.startq": ["Start spørgsmål", "Start question"], "or.test.step": ["Spørgsmål {0} af 2", "Question {0} of 2"],
+    "or.test.ta": ["Skriv dit svar her…", "Write your answer here…"], "or.test.check": ["Tjek mit svar", "Check my answer"],
+    "or.test.time": ["Tid {0} · mål 45–90 s", "Time {0} · target 45–90 s"], "or.test.topic": ["Emne {0} af {1}", "Topic {0} of {1}"],
+    "or.fb.h": ["Feedback", "Feedback"], "or.fb.spell.h": ["Stavning", "Spelling"],
+    "or.fb.spell.note": ["Stavning tæller ikke til mundtlig – men her er rettelserne.", "Spelling does not count in the oral exam – but here are the corrections."],
+    "or.fb.none": ["Ingen rettelser", "No corrections"], "or.fb.wo.h": ["Ordstilling", "Word order"],
+    "or.fb.wo.note": ["Kun de sikre fejl vises. Ingen fejl betyder ikke, at svaret er perfekt.", "Only the clear errors are shown. No errors does not mean the answer is perfect."],
+    "or.fb.wo.none": ["Ingen ordstillingsfejl fundet", "No word-order errors found"],
+    "or.fb.struct.h": ["Opbygning", "Structure"], "or.fb.struct.n": ["{0} af {1} trin", "{0} of {1} steps"],
+    "or.fb.kw.h": ["Nøgleord", "Keywords"], "or.fb.kw.n": ["{0} af {1} brugt", "{0} of {1} used"],
+    "or.fb.yours": ["Dit svar", "Your answer"], "or.fb.model": ["Modelsvar", "Model answer"],
+    "or.rate.h": ["Hvordan gik det?", "How did it go?"], "or.rate.k": ["Kunne", "Got it"], "or.rate.d": ["Delvist", "Partly"], "or.rate.i": ["Ikke endnu", "Not yet"],
+    "or.rate.saved": ["Gemt", "Saved"], "or.next": ["Næste spørgsmål", "Next question"], "or.nexttopic": ["Næste emne", "Next topic"],
+    "or.again": ["Prøv igen", "Try again"], "or.finish": ["Afslut", "Finish"], "or.seeall": ["Se resultat", "See result"],
+    "or.sum.h": ["Emnet er færdigt", "Topic done"], "or.sum.all": ["Testen er færdig", "Test done"], "or.newtest": ["Ny test", "New test"],
+    "or.sum.none": ["ikke spurgt", "not asked"], "or.sum.struct": ["struktur {0}/{1}", "structure {0}/{1}"], "or.sum.kw": ["ord {0}/{1}", "words {0}/{1}"],
+    "or.frames.h": ["Rammer", "Frames"], "or.frames.p": ["Fire opbygninger. Brug dem som stillads: skriv dem op, og fyld dem ud.", "Four structures. Use them as scaffolding: write them down and fill them in."],
+    "or.footer": ["Kilde: Prøve i Dansk 3, mundtlig delprøve 2, maj 2018 – maj 2024 (SIRI), samt dine egne noter. Maj 2022 er ikke med (intet talehæfte). Modelsvarene er skrevet til dette værktøj. Fremskridt gemmes kun i denne browser.",
+                  "Source: Prøve i Dansk 3, oral part 2, May 2018 – May 2024 (SIRI), and your own notes. May 2022 is not included (no speaking booklet). Model answers were written for this tool. Progress is stored only in this browser."],
+    "frame.aarsag": ["Hvorfor? · årsag", "Why? · reason"], "frame.fordele_ulemper": ["Fordele og ulemper", "Advantages and disadvantages"],
+    "frame.konsekvens": ["Konsekvens", "Consequence"], "frame.holdning": ["Din holdning", "Your view"],
+    "part.intro": ["Indledning", "Intro"], "part.aarsag": ["Årsag", "Reason"], "part.aarsag2": ["Anden årsag", "Second reason"],
+    "part.fordi": ["Fordi", "Because"], "part.eksempel": ["Eksempel", "Example"], "part.konklusion": ["Konklusion", "Conclusion"],
+    "part.side1": ["På den ene side", "On the one hand"], "part.side2": ["På den anden side", "On the other hand"],
+    "part.stilling": ["Min stilling", "My view"], "part.konsekvens": ["Konsekvens", "Consequence"],
+    "or.seetopic": ["Se emnet", "See topic"],
+  });
+
+  // ── data helpers ───────────────────────────────────────────────────────────
+  const qById = Object.fromEntries(D.questions.map(q => [q.id, q]));
+  const topicKeys = Object.keys(D.topics);
+  const topicIds = k => [k + "-1A", k + "-1B", k + "-2"];
+  const keyOf = id => id.split("-").slice(0, 2).join("-");
+  const sitOf = key => key.split("-")[0];
+  const sitLabel = s => (D.sittings.find(x => x.id === s) || { label: { da: s, en: s } }).label;
+  const SIT_LABEL_TEXT = s => LANG === "en" ? sitLabel(s).en : sitLabel(s).da;
+  const FAM = { arbejde: ["Arbejde", "Work"], uddannelse: ["Uddannelse", "Education"], klima: ["Klima", "Climate"],
+    sundhed: ["Sundhed", "Health"], unge_born: ["Unge og børn", "Young people and children"], medier: ["Medier", "Media"], samfund: ["Samfund", "Society"] };
+  const famOf = key => { const f = D.topics[key].family; return FAM[f] || null; };
+  const today = () => new Date().toLocaleDateString("sv-SE");
+  const mmss = ms => { const s = Math.floor(ms / 1000); return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`; };
+  const slotText = slot => slot === "2" ? ["2. obligatorisk spørgsmål", "2nd compulsory question"]
+    : [`1. obligatorisk spørgsmål, situation ${slot === "1A" ? "A" : "B"}`, `1st compulsory question, situation ${slot === "1A" ? "A" : "B"}`];
+  function sourceLabel(q) {
+    const sl = sitLabel(q.sitting), topic = D.topics[`${q.sitting}-${q.letter}`];
+    const [da, en] = slotText(q.slot);
+    return { da: `${sl.da} · Emne ${q.letter}: ${topic.title} · ${da}`, en: `${sl.en} · Topic ${q.letter}: ${topic.title} · ${en}` };
+  }
+  const bi = (da, en, cls) => el("span", { class: "bi " + (cls || "") }, el("span", { lang: "da" }, da), en ? el("span", { class: "en" }, en) : null);
+
+  // ── progress (localStorage) ────────────────────────────────────────────────
+  const loadProg = () => store.get(KEY, {});
+  function rate(id, r) {
+    const all = loadProg(), e = all[id] || { ratings: [] };
+    e.ratings = [...e.ratings, { d: today(), r }].slice(-30); all[id] = e; store.set(KEY, all);
+  }
+  function qStatus(id) {
+    const rs = (loadProg()[id] || {}).ratings || [];
+    if (!rs.length) return "new";
+    const days = new Set(rs.filter(x => x.r === "k").map(x => x.d));
+    return days.size >= 2 ? "sure" : "practice";
+  }
+  function tStatus(key) {
+    const s = topicIds(key).map(qStatus);
+    if (s.every(x => x === "sure")) return "sure";
+    return s.some(x => x !== "new") ? "practice" : "new";
+  }
+  const sureCount = () => D.questions.filter(q => qStatus(q.id) === "sure").length;
+
+  // ── offline checks: spelling, word order, structure, keywords ──────────────────────────
+  const SUBJ = new Set(["jeg", "du", "han", "hun", "vi", "de", "det", "den", "man"]);
+  const FIN = new Set(["er", "var", "har", "havde", "kan", "kunne", "skal", "skulle", "vil", "ville", "må", "bør", "bliver", "blev",
+    "får", "fik", "gør", "gjorde", "kommer", "går", "betyder", "giver", "tror", "mener", "synes", "ved", "siger", "findes", "bruger", "kender", "ser"]);
+  const TRIG = new Set(["synes", "tror", "mener", "syntes", "ved", "siger"]);
+  const CONJ = new Set(["at", "fordi", "selvom", "hvis", "når"]);
+  const MODAL = new Set(["kan", "skal", "må", "bør"]);
+  const ADV1 = new Set(["derfor", "måske", "desuden", "tit", "ofte", "heldigvis", "desværre"]);
+  const MARK = {
+    aarsag: /\ben (første |anden |tredje )?(årsag|grund)\b|\bdet skyldes\b|\bskyldes\b/,
+    aarsag2: /\ben (anden|tredje|yderligere) (årsag|grund)\b|\ben anden (årsag|grund)\b/,
+    fordi: /\bfordi\b|\bnemlig\b|\bpå grund af\b|\bdet skyldes\b/,
+    eksempel: /\bfx\b|\bf\.eks\b|\bfor eksempel\b|\beksempelvis\b|\bkender jeg\b/,
+    konklusion: /\bderfor\b|\balt i alt\b|\bsamlet set\b|\bkonklusion\b|\bså (jeg|vi|man) (tror|mener|synes)\b/,
+    side1: /\bpå den ene side\b/,
+    side2: /\bpå den anden side\b/,
+    stilling: /\bjeg (mener|synes|tror)\b|\befter min mening\b|\bhvis jeg skal tage stilling\b|\bmin holdning\b/,
+    konsekvens: /\bdet betyder\b|\bkonsekvens\b|\bfører til\b|\bmedfører\b|\bdet får\b/,
+  };
+  const WHY = {
+    trig: { da: "Efter synes, tror, mener (+ komma og at) kommer en ledsætning: subjekt før verbum.",
+            en: "After synes/tror/mener (+ comma and 'at') comes a subordinate clause: subject before verb." },
+    neg: { da: "I en ledsætning (at, fordi, hvis, når) står ikke før verbet: subjekt + ikke + verbum.",
+           en: "In a subordinate clause 'ikke' comes before the verb: subject + ikke + verb." },
+    modal: { da: "Efter kan, skal, må og bør kommer infinitiv uden at.", en: "After kan, skal, må and bør the infinitive has no 'at'." },
+    inv: { da: "Når ordet før subjektet er fx Derfor, skal verbum stå på plads 2: Derfor + verbum + subjekt.",
+           en: "When a word such as Derfor starts the sentence, the verb comes second: Derfor + verb + subject." },
+  };
+  function dl(a, b) {  // optimal string alignment distance (a transposition counts as one)
+    const n = a.length, m = b.length; if (!n) return m; if (!m) return n;
+    const d = Array.from({ length: n + 1 }, (_, i) => [i]);
+    for (let j = 0; j <= m; j++) d[0][j] = j;
+    for (let i = 1; i <= n; i++) for (let j = 1; j <= m; j++) {
+      const c = a[i - 1] === b[j - 1] ? 0 : 1;
+      d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + c);
+      if (i > 1 && j > 1 && a[i - 1] === b[j - 2] && a[i - 2] === b[j - 1]) d[i][j] = Math.min(d[i][j], d[i - 2][j - 2] + 1);
+    }
+    return d[n][m];
+  }
+  const CANDS = Object.keys(LEXW).filter(w => LEXW[w] >= 3);
+  const fixCache = new Map();
+  function spellFix(lo) {  // the closest common known word, or null
+    if (fixCache.has(lo)) return fixCache.get(lo);
+    const maxd = lo.length <= 5 ? 1 : 2;
+    let best = null, bd = 99, bc = 0;
+    for (const c of CANDS) {
+      if (Math.abs(c.length - lo.length) > maxd) continue;
+      if (c.includes(lo) || lo.includes(c)) continue;   // compounds and inflections are not typos
+      const d = dl(lo, c);
+      if (d > maxd) continue;
+      if (d < bd || (d === bd && LEXW[c] > bc)) { best = c; bd = d; bc = LEXW[c]; }
+    }
+    fixCache.set(lo, best); return best;
+  }
+  const cap = (orig, w) => orig[0] === orig[0].toUpperCase() && orig[0] !== orig[0].toLowerCase() ? w[0].toUpperCase() + w.slice(1) : w;
+  function analyse(text, q) {
+    const toks = [...text.matchAll(/[a-zæøåA-ZÆØÅ]+|[.,!?;:]/g)].map(m => ({ w: m[0], lo: m[0].toLowerCase(), s: m.index, e: m.index + m[0].length }));
+    const isWord = t => /[a-zæøå]/i.test(t.w);
+    // spelling: an unknown word with a close, common word; names (capitalised mid-sentence) are skipped
+    const spell = [];
+    toks.forEach((t, i) => {
+      if (!isWord(t) || t.lo.length < 3 || LEXW[t.lo]) return;
+      const prev = toks[i - 1];
+      const sentStart = !prev || prev.w === "." || prev.w === "!" || prev.w === "?";
+      if (!sentStart && t.w[0] !== t.w[0].toLowerCase()) return;
+      const fix = spellFix(t.lo);
+      if (fix) spell.push({ s: t.s, e: t.e, w: t.w, fix: cap(t.w, fix) });
+    });
+    // word order: only the clear, common mistakes
+    const wo = [], snip = (a, b) => text.slice(a, b);
+    toks.forEach((t, i) => {
+      const nx = toks[i + 1], n2 = toks[i + 2], n3 = toks[i + 3];
+      if (TRIG.has(t.lo)) {
+        let j = i + 1; if (toks[j]?.w === ",") j++;
+        if (toks[j]?.lo === "at") j++;
+        if (toks[j] && FIN.has(toks[j].lo) && toks[j + 1] && SUBJ.has(toks[j + 1].lo)) {
+          wo.push({ s: t.s, e: toks[j + 1].e, snip: snip(t.s, toks[j + 1].e), fix: `${t.w}, at ${toks[j + 1].w} ${toks[j].w}`, why: WHY.trig });
+        }
+      }
+      if (CONJ.has(t.lo) && nx && SUBJ.has(nx.lo) && n2 && FIN.has(n2.lo) && n3 && n3.lo === "ikke") {
+        wo.push({ s: t.s, e: n3.e, snip: snip(t.s, n3.e), fix: `${t.w} ${nx.w} ikke ${n2.w}`, why: WHY.neg });
+      }
+      if (MODAL.has(t.lo) && nx && nx.lo === "at" && n2 && /[a-zæøå]/.test(n2.lo)) {
+        wo.push({ s: t.s, e: nx.e, snip: snip(t.s, nx.e), fix: `${t.w} ${n2.w}`, why: WHY.modal });
+      }
+      const starts = i === 0 || ["." , "!", "?"].includes(toks[i - 1].w);
+      if (starts) {
+        if (ADV1.has(t.lo) && nx && SUBJ.has(nx.lo)) {
+          wo.push({ s: t.s, e: nx.e, snip: snip(t.s, nx.e), fix: `${t.w} [verbum] ${nx.w}`, why: WHY.inv });
+        }
+        if (t.lo === "i" && nx && (nx.lo === "dag" || nx.lo === "går") && n2 && SUBJ.has(n2.lo)) {
+          wo.push({ s: t.s, e: n2.e, snip: snip(t.s, n2.e), fix: `${t.w} ${nx.w} [verbum] ${n2.w}`, why: WHY.inv });
+        }
+      }
+    });
+    wo.sort((a, b) => a.s - b.s);
+    // structure: one ✅/❌ per step of the question's frame
+    const low = text.toLowerCase();
+    const steps = (D.frameSteps[q.answer ? q.answer.frame : "aarsag"] || []).map(p => ({
+      part: p, ok: p === "intro" ? text.trim().length > 0 : !!(MARK[p] && MARK[p].test(low)) }));
+    // keywords: each content word of the keyword (4+ letters) must appear in the answer (by its first five letters)
+    const stems = new Set(toks.filter(isWord).map(t => t.lo.slice(0, 5)));
+    const kw = ((q.answer && q.answer.keywords) || []).map(k => {
+      let words = k.da.toLowerCase().split(/\s+/).filter(w => w.length >= 4);
+      if (!words.length) words = k.da.toLowerCase().split(/\s+/);
+      return { da: k.da, use: k.use, en: k.en, used: words.every(w => stems.has(w.slice(0, 5))) };
+    });
+    return { spell, wo, steps, kw };
+  }
+  function annotate(text, fb) {
+    const marks = [...fb.spell.map(x => ({ ...x, cls: "sp" })), ...fb.wo.map(x => ({ ...x, cls: "wo" }))].sort((a, b) => a.s - b.s);
+    const out = []; let cur = 0;
+    for (const m of marks) {
+      if (m.s < cur) continue;
+      if (m.s > cur) out.push(text.slice(cur, m.s));
+      out.push(el("span", { class: m.cls }, text.slice(m.s, m.e)));
+      cur = m.e;
+    }
+    if (cur < text.length) out.push(text.slice(cur));
+    return out;
+  }
+
+  // ── pieces shared by Lær and Test ─────────────────────────────────────────────────
+  function answerBlock(q) {
+    const a = q.answer, steps = D.frameSteps[a.frame] || [], used = new Set(a.answer.map(s => s.part));
+    const segs = el("div", { class: "segs" });
+    const put = p => segs.querySelectorAll(`[data-part="${p}"]`);
+    const box = el("div", { class: "answer", hidden: true },
+      el("div", { class: "smap" }, el("p", { class: "lbl" }, t("or.struct")),
+        el("p", { class: "frame" }, t("frame." + a.frame)),
+        el("ol", { class: "steps" }, steps.map(p => el("li", { class: `p-${p}${used.has(p) ? "" : " off"}`, "data-step": p },
+          el("button", { type: "button", onclick: () => put(p).forEach(x => x.classList.toggle("hi")) }, t("part." + p)))))),
+      segs,
+      a.keywords && a.keywords.length ? el("div", null, el("p", { class: "sub-h" }, t("or.keywords")),
+        el("ul", { class: "kws" }, a.keywords.map(k => el("li", { class: "kw" }, el("b", { lang: "da" }, k.da),
+          el("span", { class: "use", lang: "da" }, k.use), el("span", { class: "en" }, k.en))))) : null,
+      a.tips && a.tips.length ? el("div", null, el("p", { class: "sub-h" }, t("or.tips")), el("ul", { class: "tips", lang: "da" }, a.tips.map(x => el("li", null, x)))) : null,
+      a.followup ? el("details", { class: "fu" }, el("summary", null, t("or.followup")),
+        el("p", { lang: "da" }, a.followup.q), el("p", { lang: "da" }, a.followup.answer)) : null,
+      a.notes || a.notes_raw ? el("div", { class: "note" }, el("p", { class: "lbl" }, t("or.notes")),
+        el("p", { lang: "da" }, a.notes || a.notes_raw),
+        a.notes && a.notes_raw ? el("details", null, el("summary", null, t("or.notesorig")), el("p", { lang: "da" }, a.notes_raw)) : null) : null);
+    a.answer.forEach(s => segs.append(el("p", { class: `seg p-${s.part}`, "data-part": s.part, lang: "da" },
+      el("span", { class: "seglbl" }, t("part." + s.part)), s.text)));
+    return box;
+  }
+  function segmentsOnly(q) {
+    if (!q.answer) return el("p", { class: "soon" }, t("or.soon"));
+    return el("div", { class: "segs" }, q.answer.answer.map(s => el("p", { class: `seg p-${s.part}`, lang: "da" },
+      el("span", { class: "seglbl" }, t("part." + s.part)), s.text)));
+  }
+  function toggleAnswer(btn, box) {
+    btn.addEventListener("click", () => { box.hidden = !box.hidden; btn.textContent = t(box.hidden ? "or.show" : "or.hide"); });
+    return btn;
+  }
+  function questionCard(q, focus) {
+    const sl = sourceLabel(q);
+    const card = el("article", { class: "qcard sheet", id: "q-" + q.id, "data-id": q.id },
+      el("p", { class: "src" }, el("span", { lang: "da" }, sl.da), el("span", { class: "en" }, sl.en)),
+      el("h3", { class: "qtext", lang: "da" }, q.intro ? el("span", { class: "intro" }, q.intro) : null, q.question));
+    if (q.followups && q.followups.length) card.append(el("div", { class: "fus" }, el("p", { class: "sub-h" }, t("or.followups")),
+      el("ul", { lang: "da" }, q.followups.map(f => el("li", null, f)))));
+    if (q.answer) {
+      const box = answerBlock(q);
+      card.append(el("p", { class: "prov" }, t("or.prov")), toggleAnswer(el("button", { class: "btn", type: "button" }, t("or.show")), box), box);
+    } else card.append(el("p", { class: "soon" }, t("or.soon")));
+    if (focus) setTimeout(() => card.scrollIntoView({ block: "start" }), 30);
+    return card;
+  }
+  function picture(key, cls) {
+    const topic = D.topics[key];
+    return el("figure", { class: "pic " + (cls || "") },
+      el("img", { src: `oral/pics/${key}.jpg`, alt: `${t("or.picture")} (${topic.title})`, loading: "lazy",
+        onclick: e => e.currentTarget.parentElement.classList.toggle("big") }),
+      el("figcaption", null, t("or.picture")));
+  }
+  function topicHead(key) {
+    const topic = D.topics[key], sit = sitOf(key), letter = key.split("-")[1];
+    const fam = famOf(key);
+    const sits = [["A", topic.situations.A], ["B", topic.situations.B]].filter(x => x[1]);
+    return el("header", { class: "thead" }, el("span", { class: "letter", "aria-hidden": "true" }, letter),
+      el("div", null, el("p", { class: "lbl" }, bi(sitLabel(sit).da, sitLabel(sit).en)),
+        el("h2", { lang: "da" }, topic.title),
+        fam ? el("p", { class: "st" }, bi(fam[0], fam[1])) : null,
+        sits.length ? el("dl", { class: "sit", lang: "da" }, sits.map(([L, s]) => el("div", null, el("dt", null, L), el("dd", null, s)))) : null));
+  }
+
+  // ── Lær ─────────────────────────────────────────────────────────────────────────
+  let laerSit = "2024s";
+  function viewLaer() {
+    const sure = sureCount(), total = D.questions.length;
+    const count = { new: 0, practice: 0, sure: 0 };
+    D.questions.forEach(q => count[qStatus(q.id)]++);
+    const topicsOf = s => topicKeys.filter(k => sitOf(k) === s);
+    app.replaceChildren(
+      el("section", { class: "top" }, el("span", { class: "chip" }, el("b", null, t("or.chip.b")), el("span", null, t("or.chip"))),
+        el("h1", null, el("span", { class: "light" }, t("or.h1a")), el("span", null, t("or.h1b"))),
+        el("p", { class: "lead" }, t("or.intro"))),
+      el("div", { class: "band" }, el("div", { class: "prog" },
+        el("div", { class: "m" }, el("p", { class: "lbl" }, t("or.progress")),
+          el("b", null, `${sure} / ${total}`), el("span", { class: "s" }, t("or.sure")),
+          el("div", { class: "bar" }, el("span", { style: `width:${(100 * sure / total).toFixed(1)}%` }))),
+        el("div", { class: "m" }, el("p", { class: "lbl" }, t("or.new")), el("b", null, String(count.new))),
+        el("div", { class: "m" }, el("p", { class: "lbl" }, t("or.practice")), el("b", null, String(count.practice))),
+        el("div", { class: "m" }, el("p", { class: "lbl" }, t("or.sure1")), el("b", null, String(count.sure))))),
+      el("section", { class: "sec" }, el("h2", null, t("or.sittings")),
+        el("div", { class: "chips", role: "group" }, D.sittings.map(s => {
+          const ids = topicsOf(s.id).flatMap(topicIds), n = ids.filter(id => qStatus(id) === "sure").length;
+          return el("button", { type: "button", class: "chipbtn", "aria-pressed": laerSit === s.id ? "true" : "false",
+            onclick: () => { laerSit = s.id; route(); } }, LANG === "en" ? s.label.en : s.label.da,
+            el("span", { class: "n" }, `${n}/${ids.length}`));
+        }))),
+      el("section", { class: "sec" }, el("div", { class: "tgrid" }, topicsOf(laerSit).map(key => {
+        const st = tStatus(key), fam = famOf(key), topic = D.topics[key];
+        const sits = [topic.situations.A, topic.situations.B].filter(Boolean).join(" · ");
+        const n = topicIds(key).filter(id => qStatus(id) === "sure").length;
+        return el("a", { class: "sheet tcard", href: `#q/${key}-1A` },
+          el("span", { class: "letter" }, key.split("-")[1]),
+          el("h3", { lang: "da" }, topic.title),
+          fam ? el("p", { class: "st" }, el("span", { class: "dot " + st }), LANG === "en" ? fam[1] : fam[0]) : null,
+          sits ? el("p", { class: "sits", lang: "da" }, sits) : null,
+          el("p", { class: "st" }, el("span", { class: "dot " + st }), t("or.tcount", n)));
+      }))),
+      el("div", { class: "tgrid", style: "margin-top:24px" }, el("a", { class: "btn solid", href: "#test" }, t("or.tab.test")),
+        el("a", { class: "btn", href: "#rammer" }, t("or.tab.frames"))));
+  }
+
+  // ── topic view (Lær) ─────────────────────────────────────────────────────────────
+  function viewTopic(id) {
+    const key = keyOf(id), q0 = qById[id];
+    if (!q0 || !D.topics[key]) return viewLaer();
+    laerSit = sitOf(key);
+    const qs = topicIds(key).map(x => qById[x]).filter(Boolean);
+    app.replaceChildren(
+      el("p", { class: "crumbs" }, el("a", { href: "#laer" }, t("or.back"))),
+      el("section", { class: "view" },
+        topicHead(key),
+        picture(key),
+        el("p", { class: "hint" }, el("a", { href: `#test`, onclick: () => startSingle(key) }, t("or.topictest"))),
+        ...qs.map(q => questionCard(q, q.id === id))));
+  }
+
+  // ── rammer ────────────────────────────────────────────────────────────────────────
+  function viewFrames() {
+    const fr = D.frames || {};
+    app.replaceChildren(el("section", { class: "top" }, el("h1", null, el("span", { class: "light" }, t("or.h1a")), el("span", null, t("or.frames.h")))),
+      el("p", { class: "lead" }, t("or.frames.p")),
+      el("section", { class: "view framecards" }, Object.keys(D.frameSteps).map(f => el("article", { class: "sheet fcard" },
+        el("h3", null, t("frame." + f)),
+        el("div", { class: "smap" }, el("ol", { class: "steps" }, D.frameSteps[f].map(p => el("li", { class: `p-${p}` },
+          el("button", { type: "button", tabindex: "-1" }, t("part." + p)))))),
+        el("p", { class: "skel", lang: "da" }, fr[f] ? fr[f].skeleton : ""),
+        fr[f] && fr[f].tips ? el("ul", { lang: "da" }, fr[f].tips.map(x => el("li", null, x))) : null))));
+  }
+
+  // ── Test ─────────────────────────────────────────────────────────────────────────
+  let testCfg = { sit: "2024s", unsure: false }, S = null, timer = null;
+  function startSession(keys) { return { queue: keys, ti: 0, phase: "topic", slot1: "1A", results: {}, draft: "", last: null, t0: 0 }; }
+  function startSingle(key) { S = startSession([key]); }
+  function testSetup() {
+    const pool = testCfg.sit === "random" ? topicKeys : topicKeys.filter(k => sitOf(k) === testCfg.sit);
+    const keysNow = testCfg.unsure ? pool.filter(k => tStatus(k) !== "sure") : pool;
+    const chips = [...D.sittings.map(s => ({ id: s.id, label: LANG === "en" ? s.label.en : s.label.da })),
+      { id: "random", label: t("or.test.rand") }];
+    app.replaceChildren(
+      el("section", { class: "top" }, el("h1", null, el("span", { class: "light" }, t("or.h1a")), el("span", null, t("or.test.h")))),
+      el("p", { class: "lead" }, t("or.test.p")),
+      el("section", { class: "sec" }, el("h2", null, t("or.test.sit")),
+        el("div", { class: "chips", role: "group" }, chips.map(c => el("button", { type: "button", class: "chipbtn",
+          "aria-pressed": testCfg.sit === c.id ? "true" : "false", onclick: () => { testCfg.sit = c.id; route(); } }, c.label))),
+        el("label", { class: "check" }, el("input", { type: "checkbox", checked: testCfg.unsure ? "" : null,
+          onchange: e => { testCfg.unsure = e.target.checked; route(); } }), t("or.test.unsure")),
+        keysNow.length
+          ? el("button", { class: "btn solid", type: "button", onclick: () => {
+              let keys = keysNow;
+              if (testCfg.sit === "random") keys = shuffle(keys.slice()).slice(0, 3);
+              S = startSession(keys); route(); } }, t("or.test.start"))
+          : el("p", { class: "hint" }, t("or.test.none"))));
+  }
+  function testProgressBar() {
+    const total = S.queue.length;
+    return el("div", { class: "testbar" }, el("span", null, t("or.test.topic", S.ti + 1, total)),
+      el("span", null, bi(sitLabel(sitOf(S.queue[S.ti])).da, sitLabel(sitOf(S.queue[S.ti])).en)));
+  }
+  function startTimer() {
+    clearInterval(timer);
+    const tick = () => { const e = $("#tm"); if (e) e.textContent = t("or.test.time", mmss(Date.now() - S.t0)); };
+    timer = setInterval(tick, 1000); tick();
+  }
+  function ratingBlock(id, phase) {
+    const res = S.results[id];
+    const btns = [["k", "or.rate.k"], ["d", "or.rate.d"], ["i", "or.rate.i"]].map(([r, k]) => el("button", {
+      type: "button", class: "btn", "aria-pressed": res && res.r === r ? "true" : "false",
+      onclick: () => { S.results[id] = { ...(S.results[id] || {}), r }; rate(id, r); route(); } }, t(k)));
+    const next = phase === "fb1" ? { label: t("or.next"), go: () => { S.phase = "q2"; S.draft = ""; S.t0 = Date.now(); route(); } }
+      : { label: t("or.seetopic"), go: () => { S.phase = "sum"; route(); } };
+    return el("div", { class: "rate" }, el("p", { class: "sub-h" }, t("or.rate.h")), el("div", { class: "ratebtns" }, btns),
+      res && res.r ? el("button", { class: "btn solid", type: "button", onclick: next.go }, next.label) : null);
+  }
+  function feedbackView(q, phase) {
+    const last = S.last, fb = last.fb, text = last.text;
+    const spell = fb.spell.length
+      ? el("div", { class: "box" }, el("p", { class: "lbl" }, t("or.fb.spell.h")), el("p", { class: "hint", style: "margin:0" }, t("or.fb.spell.note")),
+          el("ul", { class: "wlist" }, fb.spell.map(s => el("li", null, el("span", { class: "sp-old" }, s.w), el("span", null, " → "), el("b", { class: "sp-new", lang: "da" }, s.fix)))))
+      : el("div", { class: "box" }, el("p", { class: "lbl" }, t("or.fb.spell.h")), el("p", { class: "ok-mark" }, t("or.fb.none")));
+    const wo = fb.wo.length
+      ? el("div", { class: "box warn" }, el("p", { class: "lbl" }, el("span", { class: "dotbad" }), t("or.fb.wo.h")), el("p", { class: "hint", style: "margin:0" }, t("or.fb.wo.note")),
+          el("ul", { class: "wlist" }, fb.wo.map(w => el("li", null, el("span", { class: "wo", lang: "da" }, w.snip), el("span", null, " → "), el("b", { lang: "da" }, w.fix),
+            el("span", { class: "why", lang: "da" }, w.why.da), el("span", { class: "why en" }, w.why.en)))))
+      : el("div", { class: "box" }, el("p", { class: "lbl" }, t("or.fb.wo.h")), el("p", { class: "ok-mark" }, t("or.fb.wo.none")));
+    const n = fb.steps.filter(s => s.ok).length, m = fb.steps.length, k = fb.kw.filter(x => x.used).length;
+    const struct = !q.answer ? null : el("div", { class: "box" }, el("p", { class: "lbl" }, t("or.fb.struct.h"), " · ", t("frame." + q.answer.frame)),
+      el("p", { class: "hint", style: "margin:0" }, t("or.fb.struct.n", n, m)),
+      el("ol", { class: "fsteps" }, fb.steps.map(s => el("li", { class: s.ok ? "" : "no" }, el("span", { class: s.ok ? "ok-mark" : "no-mark" }, s.ok ? "✅" : "❌"), t("part." + s.part)))));
+    const kws = fb.kw.length
+      ? el("div", { class: "box" }, el("p", { class: "lbl" }, t("or.fb.kw.h")), el("p", { class: "hint", style: "margin:0" }, t("or.fb.kw.n", k, fb.kw.length)),
+          el("ul", { class: "fkw" }, fb.kw.map(x => el("li", { class: x.used ? "" : "no" }, el("span", { class: x.used ? "ok-mark" : "no-mark" }, x.used ? "✅" : "❌"), el("span", { lang: "da" }, x.da))))) : null;
+    const cmp = el("div", { class: "cmp" },
+      el("div", { class: "col" }, el("p", { class: "sub-h" }, t("or.fb.yours")), el("p", { class: "yours", lang: "da" }, annotate(text, fb))),
+      el("div", { class: "col" }, el("p", { class: "sub-h" }, t("or.fb.model")), segmentsOnly(q)));
+    return el("div", { class: "fb" }, el("div", { class: "testbar" }, el("span", { class: "lbl", style: "margin:0" }, t("or.fb.h")), el("span", { class: "tm", id: "tm" }, "")),
+      spell, wo, struct, kws, cmp, ratingBlock(q.id, phase));
+  }
+  function viewTest() {
+    if (!S) return testSetup();
+    if (S.phase === "done") return testDone();
+    const key = S.queue[S.ti];
+    const wrap = children => app.replaceChildren(el("section", { class: "view" }, testProgressBar(), ...children));
+    if (S.phase === "topic") {
+      wrap([topicHead(key), picture(key, "test"),
+        el("button", { class: "btn solid", type: "button", onclick: () => {
+          S.slot1 = Math.random() < 0.5 ? "1A" : "1B"; S.phase = "q1"; S.draft = ""; S.t0 = Date.now(); route(); } }, t("or.test.startq"))]);
+      return;
+    }
+    if (S.phase === "q1" || S.phase === "q2") {
+      const id = S.phase === "q1" ? `${key}-${S.slot1}` : `${key}-2`, q = qById[id];
+      const ta = el("textarea", { class: "ans", id: "ta", lang: "da", rows: "7", spellcheck: "false", placeholder: t("or.test.ta"), "aria-label": t("or.test.ta") });
+      ta.value = S.draft || "";
+      ta.addEventListener("input", () => { S.draft = ta.value; });
+      const sl = sourceLabel(q);
+      const card = el("article", { class: "qcard sheet" }, el("p", { class: "src" }, el("span", { lang: "da" }, sl.da), el("span", { class: "en" }, sl.en)),
+        el("p", { class: "lbl", style: "margin:0" }, t("or.test.step", S.phase === "q1" ? 1 : 2)),
+        el("h3", { class: "qtext", lang: "da" }, q.intro ? el("span", { class: "intro" }, q.intro) : null, q.question));
+      wrap([picture(key, "test"), card, ta,
+        el("div", { class: "testbar" }, el("span", { id: "tm", class: "tm" }, ""),
+          el("button", { class: "btn solid", type: "button", onclick: () => {
+            const text = ta.value; S.draft = text;
+            S.last = { id, text, fb: analyse(text, q) }; S.phase = S.phase === "q1" ? "fb1" : "fb2"; route(); } }, t("or.test.check")))]);
+      startTimer();
+      return;
+    }
+    if (S.phase === "fb1" || S.phase === "fb2") {
+      const q = qById[S.last.id];
+      clearInterval(timer);
+      wrap([feedbackView(q, S.phase)]);
+      const e = $("#tm"); if (e) e.textContent = t("or.test.time", mmss(Date.now() - S.t0));
+      return;
+    }
+    if (S.phase === "sum") {
+      const rows = topicIds(key).filter(id => id === `${key}-2` || id === `${key}-${S.slot1}`).map(id => {
+        const r = S.results[id]; const q = qById[id];
+        const steps = r && r.fb ? r.fb.steps.filter(x => x.ok).length : 0, m = r && r.fb ? r.fb.steps.length : 0;
+        const kws = r && r.fb ? r.fb.kw.filter(x => x.used).length : 0, mk = r && r.fb ? r.fb.kw.length : 0;
+        const rl = r && r.r ? t({ k: "or.rate.k", d: "or.rate.d", i: "or.rate.i" }[r.r]) : "–";
+        return el("div", { class: "sumrow" }, el("b", null, id.split("-").slice(2).join("-")), el("span", { class: "meta2" }, rl),
+          el("span", { class: "meta2" }, t("or.sum.struct", steps, m) + " · " + t("or.sum.kw", kws, mk)));
+      });
+      const last = S.ti + 1 >= S.queue.length;
+      wrap([el("h2", null, t("or.sum.h")), el("div", { class: "framecards" }, rows),
+        el("div", { class: "ratebtns" },
+          el("button", { class: "btn solid", type: "button", onclick: () => {
+            if (last) { S.phase = "done"; } else { S.ti++; S.phase = "topic"; S.draft = ""; }
+            route(); } }, last ? t("or.seeall") : t("or.nexttopic")),
+          el("button", { class: "btn", type: "button", onclick: () => {
+            topicIds(key).forEach(id => delete S.results[id]); S.phase = "topic"; S.draft = ""; route(); } }, t("or.again")))]);
+    }
+  }
+  function testDone() {
+    const rows = S.queue.map(key => el("section", { class: "sec" }, el("h2", null, bi(sitLabel(sitOf(key)).da, sitLabel(sitOf(key)).en)),
+      el("p", { class: "lead", lang: "da" }, D.topics[key].title)));
+    app.replaceChildren(el("section", { class: "view" }, el("h2", null, t("or.sum.all")), ...rows,
+      el("button", { class: "btn solid", type: "button", onclick: () => { S = null; route(); } }, t("or.newtest"))));
+  }
+
+  // ── router ─────────────────────────────────────────────────────────────────────────
+  function route() {
+    clearInterval(timer);
+    const h = location.hash.slice(1);
+    const tab = h.startsWith("test") ? "test" : h.startsWith("rammer") ? "rammer" : "laer";
+    document.querySelectorAll("#tabs button").forEach(b => b.setAttribute("aria-pressed", b.dataset.go === "#" + tab ? "true" : "false"));
+    if (h.startsWith("q/")) viewTopic(h.slice(2));
+    else if (tab === "test") viewTest();
+    else if (tab === "rammer") viewFrames();
+    else viewLaer();
+  }
+  document.querySelectorAll("#tabs button").forEach(b => b.addEventListener("click", () => { location.hash = b.dataset.go; if (location.hash === b.dataset.go) route(); }));
+  addEventListener("hashchange", route);
+  // the Dansk/English button re-renders the page so that the dynamic text follows the language
+  const lb = document.querySelector(".langbtn");
+  if (lb) lb.addEventListener("click", () => setTimeout(route, 0));
+  if (!location.hash) location.hash = "#laer";
+  route();
+  applyTexts(document);
+})();
+</script>
+</body>
+</html>

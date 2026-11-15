@@ -17,7 +17,7 @@
 .hero-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
 .go { display: grid; gap: 14px; grid-template-columns: 1fr; margin: 34px 0 8px; }
 @media (min-width: 640px) { .go { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1000px) { .go { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 1000px) { .go { grid-template-columns: repeat(5, 1fr); } }
 .go a { display: flex; flex-direction: column; gap: 6px; padding: 20px; text-decoration: none; color: inherit; transition: box-shadow .15s, transform .15s; }
 .go a:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
 .go .ic { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 12px; margin-bottom: 8px; }
@@ -58,6 +58,7 @@
       <a href="flashcards.html#test" data-i18n="nav.test">Test</a>
       <a href="assisted-learning.html" data-i18n="nav.assisted">Guidet læring</a>
       <a href="assisted-learning.html#find" data-i18n="nav.find">Find ord</a>
+      <a href="mundtlig.html" data-i18n="nav.oral">Mundtlig</a>
     </nav>
   </div>
 </header>
@@ -76,6 +77,7 @@
     <a class="sheet" href="flashcards.html#learn"><span class="ic b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="14" height="14" rx="2"/><path d="M7 3h12a2 2 0 0 1 2 2v12"/></svg></span><h2 data-i18n="nav.flash">Flashcards</h2><p data-i18n="idx.flash.p">Gentagelse med mellemrum. Starter med forbinderordene i Tier 1.</p><span class="more" data-i18n="idx.open">Åbn</span></a>
     <a class="sheet" href="flashcards.html#test"><span class="ic v"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9"/></svg></span><h2 data-i18n="idx.test.h">Test · 10 spørgsmål</h2><p data-i18n="idx.test.p">Opgavetyper som til prøven – også de rigtige huller fra Læseforståelse 3.</p><span class="more" data-i18n="idx.open">Åbn</span></a>
     <a class="sheet" href="assisted-learning.html"><span class="ic g"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2.5 9 2.5 12 0v-5"/></svg></span><h2 data-i18n="nav.assisted">Guidet læring</h2><p data-i18n="idx.al.p">Lær forbinderordene trin for trin: forklaring, ordstilling og eksempler fra prøverne – så test og gentagelse.</p><span class="more" data-i18n="idx.open">Åbn</span></a>
+    <a class="sheet" href="mundtlig.html"><span class="ic o"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><h2 data-i18n="nav.oral">Mundtlig</h2><p data-i18n="idx.oral.p">Alle eksamensspørgsmål 2018–2024 med billedark, modelsvar og en test med feedback.</p><span class="more" data-i18n="idx.open">Åbn</span></a>
   </div>
   <div class="section"><h2 data-i18n="idx.progress">Dit fremskridt</h2><div class="band"><div class="prog" id="progress"></div></div></div>
   <div class="section"><h2 data-i18n="idx.groups">Grupper</h2><div id="groups"></div></div>

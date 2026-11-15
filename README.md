@@ -6,9 +6,32 @@ exam sittings Nov 2022 – May 2024. Standalone pages, no install needed, work o
 - `index.html` – overview, progress and word groups
 - `study-sheet.html` – every word with meanings, examples, collocations and word order; search, filter, print
 - `flashcards.html` – spaced-repetition flashcards (`#learn`; the card front shows the word, the word in a real exam sentence, or its meaning) and a 10-question exam-style test (`#test`)
+- `mundtlig.html` – oral Delprøve 2: every 2018–2024 question with picture, model answer, structure and a test with offline feedback
 - `assisted-learning.html` – guided teach → test → review for the PD3 coach deck ([open](https://m-samhoury.github.io/pd3-reading-vocab/assisted-learning.html)), plus *Find ord*, a word → group lookup ([open](https://m-samhoury.github.io/pd3-reading-vocab/assisted-learning.html#find))
 
 Progress is stored in the browser (localStorage). Use Export/Import on the flashcards page to move it.
+
+## Mundtlig (oral Delprøve 2)
+
+**Open it: https://m-samhoury.github.io/pd3-reading-vocab/mundtlig.html**
+
+Every examiner question from the 12 sittings 2018–2024 (2022 maj has no speaking booklet, so it is not included): the
+picture sheet, the source label (sitting, topic, which question), a model answer shown in parts, a structure map of the
+answer, the keywords with their prepositions, tips and the learner's own notes. Test mode runs the exam format, by
+sitting or at random, and gives offline feedback: spelling (not counted), conservative word-order flags, structure
+✅/❌ and the keywords used, then a comparison with the model answer and a self-rating. Progress is kept in the browser.
+No AI examiner and no speech: everything runs from the static files.
+
+Build (after `render.py`, which writes the shared CSS/JS this page loads):
+
+```bash
+python3 src/scripts/render.py && python3 src/scripts/build_oral.py
+node src/scripts/test-oral.mjs
+```
+
+`build_oral.py` reads `pd3-data/oral-questions.json` and `pd3-data/oral-answers.json` in the PD3 project (or `--answers`
+to use another file, e.g. `src/fixtures/oral-answers.sample.json`). It writes `mundtlig.html`, `oral/` (data, the
+spelling lexicon and re-encoded picture sheets). The test needs Google Chrome.
 
 ## Assisted Learning
 
