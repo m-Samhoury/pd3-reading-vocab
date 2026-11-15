@@ -425,6 +425,41 @@ for (const [width, dark, lang] of [[375, false, "da"], [375, true, "da"], [1280,
   else await danishRun(tag, width, dark);
   check(`${tag} · no console errors`, consoleErrors.length === 0, consoleErrors.slice(0, 5));
 }
+
+// ── picture zoom (≥ 960 px): closed it stays in its own column; tapped (.big) it covers the whole viewport,
+//    above the steps and the action bar; tapping it again, the backdrop or Escape closes it ──
+const PIC_PROBE = `(() => {
+  const side = document.querySelector(".flow .side"), main = document.querySelector(".flow .main"), fig = side.querySelector("figure.pic");
+  const sr = side.getBoundingClientRect(), mr = main.getBoundingClientRect();
+  const go = document.querySelector(".actionbar .go").getBoundingClientRect();
+  const pts = [[innerWidth / 2, innerHeight / 2], [mr.left + 30, innerHeight / 2], [go.left + go.width / 2, go.top + go.height / 2], [mr.left + 30, 30]];
+  const hits = pts.map(([x, y]) => { const h = document.elementFromPoint(x, y); return !!h && fig.contains(h); });
+  return { big: fig.classList.contains("big"), overlapX: Math.max(0, Math.min(sr.right, mr.right) - Math.max(sr.left, mr.left)), hits }; })()`;
+console.log(`\n== picture zoom ==`);
+for (const [width, dark, lang] of [[960, true, "en"], [1024, true, "en"], [1100, false, "da"], [1180, true, "da"], [1280, true, "en"], [1440, false, "en"], [1920, true, "da"]]) {
+  const tag = `${width}px ${dark ? "dark" : "light"} ${lang} · picture`;
+  await setViewport(width, dark, lang);
+  await open("#q/2024s-B-2/2"); await sleep(500);
+  await ev(`window.scrollTo(0, document.documentElement.scrollHeight * 0.35); 1`); await sleep(200);
+  const closed = await ev(PIC_PROBE);
+  check(`${tag}: closed, in its own column (no overlap with the steps)`, !closed.big && closed.overlapX === 0, closed);
+  await ev(`document.querySelector(".side .picbtn").click(); 1`); await sleep(200);
+  const big = await ev(PIC_PROBE);
+  check(`${tag}: tapped, the big picture is on top everywhere (centre, over the steps, over the action bar)`, big.big && big.hits.every(Boolean), big);
+  if (width === 1024) await shot(`${width}-${dark ? "dark" : "light"}-picture-big`);
+  await ev(`document.querySelector(".side .picbtn").click(); 1`); await sleep(150);
+  const again = await ev(PIC_PROBE);
+  check(`${tag}: tapped again, closed and back in its column`, !again.big && again.overlapX === 0, again);
+  await ev(`document.querySelector(".side .picbtn").click(); 1`); await sleep(150);
+  await ev(`document.querySelector(".side figure.pic").dispatchEvent(new MouseEvent("click", { bubbles: true })); 1`); await sleep(150);
+  check(`${tag}: tap on the backdrop closes it`, await ev(`!document.querySelector("figure.pic.big") && !document.querySelector(".side.zoomed")`));
+  await ev(`if (!document.querySelector("figure.pic.big")) document.querySelector(".side .picbtn").click(); document.querySelector(".side .picbtn").blur(); 1`); await sleep(100);
+  check(`${tag}: open again before Escape`, await ev(`!!document.querySelector("figure.pic.big")`));
+  await send("Input.dispatchKeyEvent", { type: "keyDown", key: "Escape", code: "Escape", windowsVirtualKeyCode: 27 });
+  await send("Input.dispatchKeyEvent", { type: "keyUp", key: "Escape", code: "Escape", windowsVirtualKeyCode: 27 }); await sleep(150);
+  check(`${tag}: Escape closes it, even without focus on the picture`, await ev(`!document.querySelector("figure.pic.big") && !document.querySelector(".side.zoomed")`));
+}
+
 await ev(`try { localStorage.setItem("pd3.lang", "da"); } catch (e) {} 1`);
 
 await send("Emulation.setDeviceMetricsOverride", { width: 0, height: 0, deviceScaleFactor: 0, mobile: false }).catch(() => {});
