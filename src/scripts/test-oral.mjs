@@ -1,7 +1,7 @@
 // Whole-page test for mundtlig.html (headless Chrome over CDP, Node 22+), modelled on
 // .claude/skills/pd3-coach/app/test-page.mjs.
 //   node src/scripts/test-oral.mjs [path-to-mundtlig.html] [scratch-dir] [port]
-// Runs at 375 px and 1000 px, in light and dark theme. Prints one "ok"/"FAIL" line per check, the
+// Topbar at 375, 768, 1024 and 1280 px; the page at 375 and 1280 px, in light and dark theme. Prints one "ok"/"FAIL" line per check, the
 // console errors, and writes screenshots of the main views into the scratch dir. Exit code 1 on any failure.
 import { spawn } from "node:child_process";
 import { mkdirSync, rmSync, writeFileSync } from "node:fs";
@@ -16,7 +16,7 @@ const port = process.argv[4] || "9364";
 mkdirSync(out, { recursive: true });
 const CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
 const sleep = ms => new Promise(r => setTimeout(r, ms));
-setTimeout(() => { console.log("SAFETY TIMEOUT"); process.exit(2); }, 420000);
+setTimeout(() => { console.log("SAFETY TIMEOUT"); process.exit(2); }, 1500000);
 
 const profile = path.join(out, "profile"); rmSync(profile, { recursive: true, force: true });
 const chrome = spawn(CHROME, ["--headless=new", `--user-data-dir=${profile}`, `--remote-debugging-port=${port}`,
@@ -70,10 +70,10 @@ const SAMPLE = {
   spell: "Det er vigtigt med velvlre på arbejdet.",
 };
 
-async function setViewport(width, dark) {
+async function setViewport(width, dark, lang = "da") {
   await send("Emulation.setDeviceMetricsOverride", { width, height: width < 600 ? 812 : 900, deviceScaleFactor: 1, mobile: width < 600 });
   await send("Emulation.setEmulatedMedia", { features: [{ name: "prefers-color-scheme", value: dark ? "dark" : "light" }] });
-  await ev(`try { localStorage.setItem("pd3.theme", ${JSON.stringify(dark ? "dark" : "light")}); localStorage.setItem("pd3.lang", "da"); } catch (e) {}`);
+  await ev(`try { localStorage.setItem("pd3.theme", ${JSON.stringify(dark ? "dark" : "light")}); localStorage.setItem("pd3.lang", ${JSON.stringify(lang)}); } catch (e) {}`);
 }
 async function open(hash) {
   await send("Page.navigate", { url: "about:blank" });
@@ -85,11 +85,55 @@ async function open(hash) {
 
 const sittings = ["2018s", "2018v", "2019s", "2019v", "2020s", "2020v", "2021s", "2021v", "2022v", "2023s", "2023v", "2024s"];
 
-for (const [width, dark] of [[375, false], [375, true], [1000, false], [1000, true]]) {
-  const tag = `${width}px ${dark ? "dark" : "light"}`;
+// ── topbar (B2): the language button stays on the nav row and does not move when the language changes ──
+const siteRoot = path.dirname(path.resolve(process.argv[2] || path.resolve(here, "../../mundtlig.html")));
+const topbarMetrics = `(() => { const b = document.querySelector(".langbtn").getBoundingClientRect();
+  const n = document.querySelector(".nav").getBoundingClientRect(), br = document.querySelector(".brand").getBoundingClientRect();
+  const desktop = window.innerWidth >= 641;
+  return { x: Math.round(b.x), y: Math.round(b.y), w: Math.round(b.width), label: document.querySelector(".langbtn").textContent.trim(),
+    rowOK: desktop ? Math.abs(b.y + b.height / 2 - (n.y + n.height / 2)) < 8 : Math.abs(b.y + b.height / 2 - (br.y + br.height / 2)) < 8,
+    overflow: document.documentElement.scrollWidth > window.innerWidth }; })()`;
+for (const file of ["index.html", "mundtlig.html"]) {
+  for (const width of [375, 768, 1024, 1280]) {
+    await setViewport(width, false);
+    await send("Page.navigate", { url: "about:blank" }); await sleep(60);
+    await send("Page.navigate", { url: "file://" + path.join(siteRoot, file) });
+    await waitFor(`!!document.querySelector(".langbtn")`, 6000); await sleep(200);
+    const before = await ev(topbarMetrics);
+    await ev(`document.querySelector(".langbtn").click(); 1`); await sleep(300);
+    const after = await ev(topbarMetrics);
+    check(`topbar · ${file} ${width}px: lang button on the nav row`, before.rowOK && after.rowOK, [before, after]);
+    check(`topbar · ${file} ${width}px: lang button does not move or change size when switching`,
+      before.x === after.x && before.y === after.y && before.w === after.w, [before, after]);
+    check(`topbar · ${file} ${width}px: no horizontal scroll`, !before.overflow && !after.overflow);
+  }
+}
+
+// English-language pass: the layout and the English lines only (the full Danish flows below use Danish button labels)
+async function layoutOnly(tag) {
+  await open("#laer");
+  check(`${tag} · no horizontal scroll`, await ev(`document.documentElement.scrollWidth <= window.innerWidth`), await ev(`[document.documentElement.scrollWidth, window.innerWidth]`));
+  check(`${tag} · UI in English: tabs read Study and Test`, await ev(`[...document.querySelectorAll("#tabs button")].map(b => b.textContent.trim()).join("|")`) === "Study|Test");
+  check(`${tag} · start screen: 4 question types, 3 how-to steps, one progress line`, await ev(`document.querySelectorAll(".ftype").length === 4 && document.querySelectorAll(".howsteps li").length === 3 && document.querySelectorAll(".progline").length === 1 && !document.querySelector(".band")`));
+  check(`${tag} · English switch label is in English`, await ev(`/Hide English|Show English/.test(document.querySelector("#enToggle").textContent)`));
+  check(`${tag} · English lines are on the page`, await ev(`document.querySelectorAll("#app .en").length > 0`));
+  await shot(`${tag.replace(/ /g, "-")}-laer-start`);
+  await open("#q/2018s-A-1A");
+  check(`${tag} · question cards: structure line and Hvordan? block`, await ev(`[...document.querySelectorAll(".qcard")].length === 3 && [...document.querySelectorAll(".qcard")].every(c => c.querySelector(".structline") && c.querySelector("details.how"))`));
+  check(`${tag} · no horizontal scroll on a topic`, await ev(`document.documentElement.scrollWidth <= window.innerWidth`));
+  await open("#test");
+  check(`${tag} · Test start screen loads`, await ev(`!!document.querySelector(".chipbtn")`));
+  check(`${tag} · no horizontal scroll on Test`, await ev(`document.documentElement.scrollWidth <= window.innerWidth`));
+  check(`${tag} · no console errors`, consoleErrors.length === 0, consoleErrors.slice(0, 5));
+}
+
+for (const [width, dark, lang] of [[375, false, "da"], [375, true, "da"], [1280, false, "da"], [1280, true, "da"],
+                                   [375, false, "en"], [375, true, "en"], [1280, false, "en"], [1280, true, "en"]]) {
+  const tag = `${width}px ${dark ? "dark" : "light"} ${lang}`;
   console.log(`\n== ${tag} ==`);
   consoleErrors.length = 0;
-  await setViewport(width, dark);
+  await setViewport(width, dark, lang);
+  if (lang === "en") { await layoutOnly(tag); continue; }
   await open("#laer");
   check(`${tag} · Lær loads`, await ev(`!!document.querySelector(".chipbtn")`));
   check(`${tag} · no horizontal scroll`, await ev(`document.documentElement.scrollWidth <= window.innerWidth`), await ev(`[document.documentElement.scrollWidth, window.innerWidth]`));
@@ -125,6 +169,42 @@ for (const [width, dark] of [[375, false], [375, true], [1000, false], [1000, tr
   const src = await ev(`[...document.querySelectorAll(".qcard .src")].map(x => x.textContent)[0]`);
   check(`${tag} · source label Danish + English`, /Maj–juni 2018 · Emne A: .* · 1\. obligatorisk spørgsmål, situation A/.test(src) && /May–June 2018/.test(src), src);
   await shot(`${width}-${dark ? "dark" : "light"}-topic`);
+
+  // ── B3 layout: each question card explains its answer structure and has a "Hvordan?" block
+  check(`${tag} · every question card: structure line + Hvordan?`, await ev(`[...document.querySelectorAll(".qcard")].length === 3 &&
+    [...document.querySelectorAll(".qcard")].every(c => c.querySelector(".structline") && c.querySelector("details.how"))`));
+  // ── B1: English under the question, every answer segment, the tips and the follow-up answer, where a translation exists
+  const enBad = await ev(`(() => { const bad = [];
+    for (const q of window.ORAL.questions.filter(x => x.sitting === "2018s" && x.letter === "A")) {
+      const card = document.querySelector("#q-" + q.id), en = q.en || {};
+      if (!card) { bad.push([q.id, "no card"]); continue; }
+      const want = (en.question ? 1 : 0) + (q.intro && en.intro ? 1 : 0), got = card.querySelectorAll(".qtext .en").length;
+      if (got !== want) bad.push([q.id, "question en", got, want]);
+      if (q.answer) {
+        const seg = card.querySelectorAll(".seg .en").length, wantSeg = en.answer ? en.answer.length : 0;
+        if (seg !== wantSeg) bad.push([q.id, "segments en", seg, wantSeg]);
+        const tips = card.querySelectorAll(".answer .tips .en").length, wantTips = en.tips ? en.tips.length : 0;
+        if (tips !== wantTips) bad.push([q.id, "tips en", tips, wantTips]);
+        const dl = [...card.querySelectorAll(".seg")].every(s => s.getAttribute("lang") === "da");
+        if (!dl) bad.push([q.id, "segment lang"]);
+      }
+    }
+    return bad; })()`);
+  check(`${tag} · English under question, every answer segment and tip (2018s A)`, Array.isArray(enBad) && enBad.length === 0, enBad);
+  const enCount = await ev(`document.querySelectorAll("#app .en").length`);
+  check(`${tag} · English lines exist on the page`, enCount > 0, enCount);
+  // the English switch: hides the lines in place, keeps the open answer open, and is remembered
+  await ev(`(() => { const b = [...document.querySelectorAll("#q-2018s-A-1A .btn")].find(x => /Vis svar/.test(x.textContent)); b.click(); return 1; })()`);
+  const sw0 = await ev(`(() => [...document.querySelectorAll("#app .en")].filter(e => getComputedStyle(e).display !== "none").length)()`);
+  await ev(`document.querySelector("#enToggle").click(); 1`); await sleep(120);
+  const sw1 = await ev(`[[...document.querySelectorAll("#app .en")].filter(e => getComputedStyle(e).display !== "none").length,
+    document.querySelector("#q-2018s-A-1A .answer").hidden, document.querySelector("#enToggle").textContent.trim(), localStorage.getItem("pd3.oral.en")]`);
+  check(`${tag} · English switch hides the English lines, keeps the open answer, and is remembered`,
+    sw0 > 0 && sw1[0] === 0 && sw1[1] === false && sw1[3] === "0" && /Vis engelsk|Show English/.test(sw1[2]), [sw0, sw1]);
+  await open("#q/2018s-A-1A");
+  check(`${tag} · English switch stays off after a reload`, await ev(`document.querySelector("#app").classList.contains("hide-en")`));
+  await ev(`document.querySelector("#enToggle").click(); 1`); await sleep(120);
+  check(`${tag} · English switch back on`, await ev(`[...document.querySelectorAll("#app .en")].some(e => getComputedStyle(e).display !== "none")`));
 
   // model answer: segments coloured by part, the structure map lights up the parts used
   const seg = await ev(`(async () => {
@@ -240,17 +320,22 @@ for (const [width, dark] of [[375, false], [375, true], [1000, false], [1000, tr
   await ev(`(() => { try { const k = "pd3.oral.v1"; const d = JSON.parse(localStorage.getItem(k) || "{}");
     d["2018s-A-1B"] = { ratings: [{ d: "2000-01-01", r: "k" }, { d: "2000-01-02", r: "k" }] }; localStorage.setItem(k, JSON.stringify(d)); } catch (e) {} return 1; })()`);
   await open("#laer");
-  const prog = await ev(`document.querySelector(".band b") && document.querySelector(".band b").textContent`);
-  check(`${tag} · progress counts sure questions`, prog === "1 / 108", prog);
-  await open("#laer");
+  const prog = await ev(`document.querySelector(".progline .pl") && document.querySelector(".progline .pl").textContent`);
+  check(`${tag} · one progress line counts sure questions`, typeof prog === "string" && prog.includes("1 af 108 spørgsmål sikre") && /ikke startet/.test(prog), prog);
   check(`${tag} · progress persists after reload`, await ev(`(JSON.parse(localStorage.getItem("pd3.oral.v1")||"{}"))["2018s-A-1B"].ratings.length`) === 2);
 
-  // ── Rammer ──────────────────────────────────────────────────────────────
-  await open("#rammer");
-  check(`${tag} · Rammer shows the four frames`, await ev(`document.querySelectorAll(".fcard").length === 4`));
-  await shot(`${width}-${dark ? "dark" : "light"}-rammer`);
+  // ── B3 start screen: no Rammer tab, the four question types, one progress line, a 3-step how-to ──
+  await open("#laer");
+  check(`${tag} · tabs are Lær and Test only`, await ev(`[...document.querySelectorAll("#tabs button")].map(b => b.textContent.trim()).join("|")`) === "Lær|Test");
+  check(`${tag} · start screen: the four question types`, await ev(`document.querySelectorAll(".ftype").length === 4 &&
+    [...document.querySelectorAll(".ftype .fq")].every(x => x.textContent.trim().length > 0)`));
+  check(`${tag} · start screen: 3-step how-to`, await ev(`document.querySelectorAll(".howsteps li").length === 3`));
+  check(`${tag} · start screen: stat cards replaced by one progress line`, await ev(`!document.querySelector(".band") && document.querySelectorAll(".progline").length === 1`));
+  await shot(`${width}-${dark ? "dark" : "light"}-laer-start`);
+  await open("#test");
+  check(`${tag} · Test tab opens`, await ev(`!!document.querySelector(".chipbtn")`));
 
-  check(`${tag} · no horizontal scroll (Test + Rammer)`, await ev(`document.documentElement.scrollWidth <= window.innerWidth`));
+  check(`${tag} · no horizontal scroll (Lær + Test)`, await ev(`document.documentElement.scrollWidth <= window.innerWidth`));
   check(`${tag} · no console errors`, consoleErrors.length === 0, consoleErrors.slice(0, 5));
   await ev(`localStorage.removeItem("pd3.oral.v1"); 1`);
   await ev(`Math.random = (() => { const f = Math.random; return f; })(); 1`);

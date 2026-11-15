@@ -19,18 +19,12 @@
 .top h1 .light { font-weight: 400; display: block; }
 .lead { margin: 10px 0 0; color: var(--soft); max-width: 62ch; }
 .tabs { margin: 26px 0 0; }
+.tabrow { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 14px; }
 .tabs .pick { max-width: 100%; }
 .view { margin-top: 26px; display: grid; gap: 18px; }
 .view > h2 { font-size: 1.35rem; }
 .sec { margin-top: 30px; display: grid; gap: 12px; }
 .sec > h2 { font-size: 1.2rem; }
-.band { background: var(--md-sys-color-primary); color: var(--md-sys-color-on-primary); border-radius: 32px; padding: 22px; }
-.prog { display: grid; gap: 14px 24px; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
-.prog .m .lbl { color: inherit; opacity: .85; margin: 0; text-transform: none; letter-spacing: 0; font-size: .82rem; }
-.prog .m b { display: block; font-size: 1.8rem; font-weight: 700; letter-spacing: -.02em; line-height: 1.15; }
-.prog .m .s { font-size: .85rem; opacity: .85; }
-.prog .bar { margin-top: 10px; background: color-mix(in srgb, currentColor 25%, transparent); }
-.prog .bar > span { background: currentColor; }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .chipbtn .n { font-variant-numeric: tabular-nums; }
 .tgrid { display: grid; gap: 14px; grid-template-columns: 1fr; }
@@ -45,17 +39,35 @@ a.tcard:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
 .dot.sure { background: var(--ok); }
 .st { display: inline-flex; align-items: center; gap: 8px; font-size: .88rem; color: var(--soft); font-weight: 600; }
 .bi .en { display: block; color: var(--faint); font-size: .8rem; font-weight: 500; }
+/* English line under a Danish text (hidden by the "Skjul engelsk" switch: .hide-en on #app, see common.css) */
+.en { display: block; margin-top: 2px; color: var(--soft); font-size: .86rem; font-weight: 500; line-height: 1.45; }
+.progline { display: grid; gap: 8px; padding: 16px 18px; }
+.progline .pl { margin: 0; font-weight: 700; font-size: 1.02rem; font-variant-numeric: tabular-nums; }
+.progline .pl .en { font-weight: 500; }
+.progline .bar { height: 8px; border-radius: 99px; background: var(--rule); overflow: hidden; }
+.progline .bar > span { display: block; height: 100%; background: var(--ok); border-radius: 99px; }
+.howsteps { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; counter-reset: st; }
+.howsteps li { display: grid; gap: 2px; padding: 12px 14px 12px 58px; position: relative; border-radius: 14px; background: var(--paper); }
+.howsteps li::before { counter-increment: st; content: counter(st); position: absolute; left: 14px; top: 12px; width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent-text); font-weight: 800; }
+.ftypes { display: grid; gap: 12px; }
+.ftype { padding: 16px 18px; display: grid; gap: 10px; }
+.ftype .fq { margin: 0; font-size: 1.08rem; font-weight: 700; }
+.ftype .fq .en { font-size: .9rem; }
+.ftype ol.steps li > span { display: inline-flex; flex-direction: column; min-height: 40px; justify-content: center; padding: 4px 12px; border-radius: 12px; border: 1px solid var(--c); background: color-mix(in srgb, var(--c) 16%, var(--sheet)); color: var(--ink); font-weight: 600; font-size: .88rem; }
+.ftype ol.steps li > span .en { font-size: .74rem; font-weight: 500; margin: 0; }
 .crumbs { font-size: .92rem; }
 .crumbs a { display: inline-flex; align-items: center; min-height: 40px; color: var(--soft); text-decoration: none; font-weight: 600; }
 .crumbs a:hover { color: var(--ink); }
 .thead { display: flex; gap: 14px; align-items: flex-start; }
 .thead .letter { flex: 0 0 auto; display: grid; place-items: center; width: 52px; height: 52px; border-radius: 16px; background: var(--accent-soft); color: var(--accent-text); font-family: var(--head); font-size: 1.6rem; font-weight: 800; }
 .thead h2 { font-size: 1.45rem; }
+.thead h2 .en { font-size: .95rem; }
 .thead .lbl { margin-bottom: 4px; }
 .sit { display: grid; gap: 6px; margin: 0; font-size: .95rem; }
 .sit div { display: grid; grid-template-columns: 34px 1fr; gap: 8px; }
 .sit dt { font-weight: 800; color: var(--accent-text); }
 .sit dd { margin: 0; }
+.sit dd .en { font-size: .8rem; }
 figure.pic { margin: 0; position: relative; }
 figure.pic img { display: block; width: 100%; max-width: 520px; height: auto; border-radius: 16px; border: 1px solid var(--rule); background: var(--sheet); cursor: zoom-in; }
 figure.pic.big img { max-width: none; cursor: zoom-out; }
@@ -66,6 +78,7 @@ figure.pic figcaption { font-size: .82rem; color: var(--soft); margin-top: 6px; 
 .qcard .src .en { font-size: .8rem; font-weight: 500; color: var(--faint); }
 .qtext { font-size: 1.2rem; line-height: 1.45; font-weight: 700; letter-spacing: -.01em; font-family: var(--body); }
 .qtext .intro { display: block; font-weight: 500; color: var(--soft); font-size: 1rem; margin-bottom: 4px; }
+.qtext .en { font-size: .95rem; }
 .fus ul { margin: 6px 0 0; padding-left: 18px; color: var(--soft); }
 .fus li { margin: 4px 0; }
 .prov { margin: 0; color: var(--soft); font-size: .92rem; }
@@ -79,9 +92,14 @@ ol.steps li button { min-height: 40px; padding: 6px 12px; border-radius: 12px; b
 ol.steps li button:hover { border-width: 2px; }
 ol.steps li.off button { opacity: .42; border-style: dashed; }
 ol.steps li.hi button { box-shadow: 0 0 0 3px color-mix(in srgb, var(--c) 45%, transparent); }
+.structline { display: grid; gap: 4px; padding: 12px 14px; border-radius: 14px; background: var(--paper); font-size: .95rem; color: var(--ink); }
+details.how { font-size: .95rem; }
+details.how summary { cursor: pointer; min-height: 40px; display: inline-flex; align-items: center; font-weight: 600; color: var(--soft); }
+details.how .skel { margin: 6px 0; }
 .segs { display: grid; gap: 10px; }
 .seg { --c: var(--faint); margin: 0; padding: 10px 12px 10px 14px; border-radius: 14px; border-left: 4px solid var(--c); background: color-mix(in srgb, var(--c) 12%, var(--sheet)); font-size: 1.02rem; line-height: 1.5; }
 .seg .seglbl { display: block; font-size: .72rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--c); margin-bottom: 2px; }
+.seg .en { font-size: .88rem; }
 .seg.hi { box-shadow: 0 0 0 2px var(--c); }
 .seg.dim { opacity: .45; }
 .p-intro { --c: var(--faint); }
@@ -96,12 +114,14 @@ ol.steps li.hi button { box-shadow: 0 0 0 3px color-mix(in srgb, var(--c) 45%, t
 .kw .use { color: var(--ink); font-size: .92rem; }
 .kw .en { color: var(--soft); font-size: .85rem; }
 .tips { margin: 0; padding-left: 20px; display: grid; gap: 6px; color: var(--ink); font-size: .95rem; }
+.tips .en { font-size: .84rem; }
 .fu, .fu summary { font-size: .95rem; }
 .fu summary { cursor: pointer; min-height: 40px; display: inline-flex; align-items: center; font-weight: 600; color: var(--soft); }
 .fu p { margin: 6px 0; }
 .note { padding: 12px 14px; background: var(--blue-soft); color: var(--blue-text); border-radius: 14px; display: grid; gap: 4px; }
 .note .lbl { color: var(--blue-text); margin: 0; }
 .note p { margin: 0; }
+.note .en { color: var(--blue-text); }
 .note details summary { cursor: pointer; font-size: .9rem; min-height: 36px; display: inline-flex; align-items: center; }
 .sub-h { font-size: .8rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--faint); margin: 0; }
 /* test */
@@ -140,10 +160,6 @@ ol.fsteps li.no, ul.fkw li.no { color: var(--soft); }
 .sumrow .meta2 { color: var(--soft); font-size: .9rem; }
 .framecards { display: grid; gap: 14px; grid-template-columns: 1fr; }
 @media (min-width: 720px) { .framecards { grid-template-columns: repeat(2, 1fr); } }
-.fcard { padding: 18px; display: grid; gap: 10px; align-content: start; }
-.fcard h3 { font-size: 1.15rem; }
-.fcard .skel { margin: 0; font-size: .95rem; color: var(--ink); }
-.fcard ul { margin: 0; padding-left: 18px; color: var(--soft); font-size: .92rem; }
 .hint { font-size: .9rem; color: var(--soft); margin: 0; }
 .empty { padding: 18px; color: var(--soft); }
 .backline { margin-top: 10px; }
@@ -167,12 +183,12 @@ footer.foot { padding-top: 40px; padding-bottom: 48px; color: var(--faint); font
   </div>
 </header>
 <main class="wrap">
-  <div class="wrap tabs" style="padding:0">
+  <div class="wrap tabs tabrow" style="padding:0">
     <nav class="pick" id="tabs" aria-label="Mundtlig">
       <button type="button" data-go="#laer" data-i18n="or.tab.laer">Lær</button>
       <button type="button" data-go="#test" data-i18n="or.tab.test">Test</button>
-      <button type="button" data-go="#rammer" data-i18n="or.tab.frames">Rammer</button>
     </nav>
+    <button type="button" class="btn" id="enToggle" aria-pressed="true">Skjul engelsk</button>
   </div>
   <div id="app"></div>
 </main>
@@ -188,14 +204,26 @@ footer.foot { padding-top: 40px; padding-bottom: 48px; color: var(--faint); font
   const $ = s => document.querySelector(s);
   const app = $("#app");
   const KEY = "pd3.oral.v1";
+  const EN_KEY = "pd3.oral.en";
 
   // ── page strings (merged into the shared I18N, so the Dansk/English button and nav labels work) ──
   Object.assign(I18N, {
-    "or.tab.laer": ["Lær", "Study"], "or.tab.test": ["Test", "Test"], "or.tab.frames": ["Rammer", "Frames"],
+    "or.tab.laer": ["Lær", "Study"], "or.tab.test": ["Test", "Test"],
     "or.chip.b": ["Ny", "New"], "or.chip": ["Emner 2018–2024", "Topics 2018–2024"],
     "or.h1a": ["Mundtlig", "Oral"], "or.h1b": ["Delprøve 2 · 2018–2024", "Part 2 · 2018–2024"],
     "or.intro": ["Alle eksamensspørgsmål fra 2018 til 2024, med billedarket. Prøv selv først, og se så et modelsvar.",
                  "Every exam question from 2018 to 2024, with its picture sheet. Try first, then look at a model answer."],
+    "or.howto.h": ["Sådan bruger du siden", "How to use this page"],
+    "or.howto.1": ["Vælg en prøve og et emne.", "Choose a sitting and a topic."],
+    "or.howto.2": ["Læs spørgsmålet, sig dit svar, og tryk «Vis svar».", "Read the question, say your answer, and press “Show answer”."],
+    "or.howto.3": ["Test dig selv under «Test».", "Test yourself under “Test”."],
+    "or.ft.h": ["4 typer spørgsmål – 4 måder at svare på", "4 question types – 4 ways to answer"],
+    "or.ft.p": ["Spørgsmålets ordlyd fortæller dig, hvilken opbygning du skal bruge.", "The wording of the question tells you which structure to use."],
+    "or.prog.line": ["{0} af {1} spørgsmål sikre · {2} øvet · {3} ikke startet", "{0} of {1} questions secure · {2} practised · {3} not started"],
+    "or.prog.legend": ["sikker = svarede «Kunne» på to forskellige dage", "secure = answered “Got it” on two different days"],
+    "or.struct.q": ["Spørgsmålstype", "Question type"], "or.struct.order": ["Svar i denne rækkefølge", "Answer in this order"],
+    "or.how.h": ["Hvordan?", "How?"], "or.how.tips": ["Tips til denne type", "Tips for this type"],
+    "or.en.hide": ["Skjul engelsk", "Hide English"], "or.en.show": ["Vis engelsk", "Show English"],
     "or.progress": ["Dit fremskridt", "Your progress"], "or.sure": ["sikre", "secure"], "or.sure1": ["sikker", "secure"],
     "or.new": ["ny", "new"], "or.practice": ["øvet", "practised"], "or.sittings": ["Prøve", "Sitting"],
     "or.tcount": ["{0} / 3 sikre", "{0} / 3 secure"], "or.back": ["← Alle emner", "← All topics"],
@@ -228,7 +256,6 @@ footer.foot { padding-top: 40px; padding-bottom: 48px; color: var(--faint); font
     "or.again": ["Prøv igen", "Try again"], "or.finish": ["Afslut", "Finish"], "or.seeall": ["Se resultat", "See result"],
     "or.sum.h": ["Emnet er færdigt", "Topic done"], "or.sum.all": ["Testen er færdig", "Test done"], "or.newtest": ["Ny test", "New test"],
     "or.sum.none": ["ikke spurgt", "not asked"], "or.sum.struct": ["struktur {0}/{1}", "structure {0}/{1}"], "or.sum.kw": ["ord {0}/{1}", "words {0}/{1}"],
-    "or.frames.h": ["Rammer", "Frames"], "or.frames.p": ["Fire opbygninger. Brug dem som stillads: skriv dem op, og fyld dem ud.", "Four structures. Use them as scaffolding: write them down and fill them in."],
     "or.footer": ["Kilde: Prøve i Dansk 3, mundtlig delprøve 2, maj 2018 – maj 2024 (SIRI), samt dine egne noter. Maj 2022 er ikke med (intet talehæfte). Modelsvarene er skrevet til dette værktøj. Fremskridt gemmes kun i denne browser.",
                   "Source: Prøve i Dansk 3, oral part 2, May 2018 – May 2024 (SIRI), and your own notes. May 2022 is not included (no speaking booklet). Model answers were written for this tool. Progress is stored only in this browser."],
     "frame.aarsag": ["Hvorfor? · årsag", "Why? · reason"], "frame.fordele_ulemper": ["Fordele og ulemper", "Advantages and disadvantages"],
@@ -247,12 +274,12 @@ footer.foot { padding-top: 40px; padding-bottom: 48px; color: var(--faint); font
   const keyOf = id => id.split("-").slice(0, 2).join("-");
   const sitOf = key => key.split("-")[0];
   const sitLabel = s => (D.sittings.find(x => x.id === s) || { label: { da: s, en: s } }).label;
-  const SIT_LABEL_TEXT = s => LANG === "en" ? sitLabel(s).en : sitLabel(s).da;
   const FAM = { arbejde: ["Arbejde", "Work"], uddannelse: ["Uddannelse", "Education"], klima: ["Klima", "Climate"],
     sundhed: ["Sundhed", "Health"], unge_born: ["Unge og børn", "Young people and children"], medier: ["Medier", "Media"], samfund: ["Samfund", "Society"] };
   const famOf = key => { const f = D.topics[key].family; return FAM[f] || null; };
   const today = () => new Date().toLocaleDateString("sv-SE");
   const mmss = ms => { const s = Math.floor(ms / 1000); return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`; };
+  const fill = (s, ...a) => a.reduce((x, v, i) => x.split(`{${i}}`).join(String(v)), s);
   const slotText = slot => slot === "2" ? ["2. obligatorisk spørgsmål", "2nd compulsory question"]
     : [`1. obligatorisk spørgsmål, situation ${slot === "1A" ? "A" : "B"}`, `1st compulsory question, situation ${slot === "1A" ? "A" : "B"}`];
   function sourceLabel(q) {
@@ -261,6 +288,13 @@ footer.foot { padding-top: 40px; padding-bottom: 48px; color: var(--faint); font
     return { da: `${sl.da} · Emne ${q.letter}: ${topic.title} · ${da}`, en: `${sl.en} · Topic ${q.letter}: ${topic.title} · ${en}` };
   }
   const bi = (da, en, cls) => el("span", { class: "bi " + (cls || "") }, el("span", { lang: "da" }, da), en ? el("span", { class: "en" }, en) : null);
+  // a sentence of page text: Danish first, English under it (the "Skjul engelsk" switch hides the English)
+  const both = key => bi(I18N[key][0], I18N[key][1]);
+  const enLine = text => text ? el("span", { class: "en", lang: "en" }, text) : null;
+  const dIdx = (arr, i) => arr && arr[i] != null ? arr[i] : null;
+  const FR = f => (D.frames && D.frames[f]) || {};
+  const partDa = p => I18N["part." + p][0], partEn = p => I18N["part." + p][1];
+  const frameDa = f => I18N["frame." + f][0], frameEn = f => I18N["frame." + f][1];
 
   // ── progress (localStorage) ────────────────────────────────────────────────
   const loadProg = () => store.get(KEY, {});
@@ -404,10 +438,37 @@ footer.foot { padding-top: 40px; padding-bottom: 48px; color: var(--faint); font
   }
 
   // ── pieces shared by Lær and Test ─────────────────────────────────────────────────
+  // one coloured model-answer segment, with its English under it
+  const segP = (s, enText) => el("p", { class: `seg p-${s.part}`, "data-part": s.part, lang: "da" },
+    el("span", { class: "seglbl" }, t("part." + s.part)), s.text, enLine(enText));
+  // the question's own text (intro + question) with the English under each
+  function qtext(q) {
+    const en = q.en || {};
+    return el("h3", { class: "qtext" },
+      q.intro ? el("span", { class: "intro", lang: "da" }, q.intro) : null,
+      q.intro ? enLine(en.intro) : null,
+      el("span", { lang: "da" }, q.question), enLine(en.question));
+  }
+  // the answer structure of a frame, in one line above the hidden model answer
+  function structLine(f) {
+    const steps = D.frameSteps[f] || [];
+    const da = `${I18N["or.struct.q"][0]}: ${frameDa(f)} → ${I18N["or.struct.order"][0]}: ${steps.map(partDa).join(" → ")}`;
+    const en = `${I18N["or.struct.q"][1]}: ${frameEn(f)} → ${I18N["or.struct.order"][1]}: ${steps.map(partEn).join(" → ")}`;
+    return el("div", { class: "structline" }, el("span", { lang: "da" }, da), enLine(en));
+  }
+  // "Hvordan?": the frame's skeleton and tips, each with its English
+  function howBlock(f) {
+    const fr = FR(f), tips = fr.tips || [], tipsEn = fr.tips_en || [];
+    return el("details", { class: "how" }, el("summary", null, both("or.how.h")),
+      el("p", { class: "skel", lang: "da" }, fr.skeleton || ""), enLine(fr.skeleton_en),
+      tips.length ? el("p", { class: "sub-h" }, t("or.how.tips")) : null,
+      tips.length ? el("ul", { class: "tips" }, tips.map((x, i) => el("li", null, el("span", { lang: "da" }, x), enLine(dIdx(tipsEn, i))))) : null);
+  }
   function answerBlock(q) {
-    const a = q.answer, steps = D.frameSteps[a.frame] || [], used = new Set(a.answer.map(s => s.part));
+    const a = q.answer, en = q.en || {}, steps = D.frameSteps[a.frame] || [], used = new Set(a.answer.map(s => s.part));
     const segs = el("div", { class: "segs" });
     const put = p => segs.querySelectorAll(`[data-part="${p}"]`);
+    const fuIdx = a.followup ? (q.followups || []).indexOf(a.followup.q) : -1;
     const box = el("div", { class: "answer", hidden: true },
       el("div", { class: "smap" }, el("p", { class: "lbl" }, t("or.struct")),
         el("p", { class: "frame" }, t("frame." + a.frame)),
@@ -417,35 +478,37 @@ footer.foot { padding-top: 40px; padding-bottom: 48px; color: var(--faint); font
       a.keywords && a.keywords.length ? el("div", null, el("p", { class: "sub-h" }, t("or.keywords")),
         el("ul", { class: "kws" }, a.keywords.map(k => el("li", { class: "kw" }, el("b", { lang: "da" }, k.da),
           el("span", { class: "use", lang: "da" }, k.use), el("span", { class: "en" }, k.en))))) : null,
-      a.tips && a.tips.length ? el("div", null, el("p", { class: "sub-h" }, t("or.tips")), el("ul", { class: "tips", lang: "da" }, a.tips.map(x => el("li", null, x)))) : null,
+      a.tips && a.tips.length ? el("div", null, el("p", { class: "sub-h" }, t("or.tips")),
+        el("ul", { class: "tips", lang: "da" }, a.tips.map((x, i) => el("li", null, x, enLine(dIdx(en.tips, i)))))) : null,
       a.followup ? el("details", { class: "fu" }, el("summary", null, t("or.followup")),
-        el("p", { lang: "da" }, a.followup.q), el("p", { lang: "da" }, a.followup.answer)) : null,
+        el("p", { lang: "da" }, a.followup.q), enLine(dIdx(en.followups, fuIdx)),
+        el("p", { lang: "da" }, a.followup.answer), enLine(en.followup_answer)) : null,
       a.notes || a.notes_raw ? el("div", { class: "note" }, el("p", { class: "lbl" }, t("or.notes")),
-        el("p", { lang: "da" }, a.notes || a.notes_raw),
+        el("p", { lang: "da" }, a.notes || a.notes_raw), enLine(a.notes ? en.notes : null),
         a.notes && a.notes_raw ? el("details", null, el("summary", null, t("or.notesorig")), el("p", { lang: "da" }, a.notes_raw)) : null) : null);
-    a.answer.forEach(s => segs.append(el("p", { class: `seg p-${s.part}`, "data-part": s.part, lang: "da" },
-      el("span", { class: "seglbl" }, t("part." + s.part)), s.text)));
+    a.answer.forEach((s, i) => segs.append(segP(s, dIdx(en.answer, i))));
     return box;
   }
   function segmentsOnly(q) {
     if (!q.answer) return el("p", { class: "soon" }, t("or.soon"));
-    return el("div", { class: "segs" }, q.answer.answer.map(s => el("p", { class: `seg p-${s.part}`, lang: "da" },
-      el("span", { class: "seglbl" }, t("part." + s.part)), s.text)));
+    const en = q.en || {};
+    return el("div", { class: "segs" }, q.answer.answer.map((s, i) => segP(s, dIdx(en.answer, i))));
   }
   function toggleAnswer(btn, box) {
     btn.addEventListener("click", () => { box.hidden = !box.hidden; btn.textContent = t(box.hidden ? "or.show" : "or.hide"); });
     return btn;
   }
   function questionCard(q, focus) {
-    const sl = sourceLabel(q);
+    const sl = sourceLabel(q), en = q.en || {};
     const card = el("article", { class: "qcard sheet", id: "q-" + q.id, "data-id": q.id },
       el("p", { class: "src" }, el("span", { lang: "da" }, sl.da), el("span", { class: "en" }, sl.en)),
-      el("h3", { class: "qtext", lang: "da" }, q.intro ? el("span", { class: "intro" }, q.intro) : null, q.question));
+      qtext(q));
     if (q.followups && q.followups.length) card.append(el("div", { class: "fus" }, el("p", { class: "sub-h" }, t("or.followups")),
-      el("ul", { lang: "da" }, q.followups.map(f => el("li", null, f)))));
+      el("ul", null, q.followups.map((f, i) => el("li", null, el("span", { lang: "da" }, f), enLine(dIdx(en.followups, i)))))));
     if (q.answer) {
       const box = answerBlock(q);
-      card.append(el("p", { class: "prov" }, t("or.prov")), toggleAnswer(el("button", { class: "btn", type: "button" }, t("or.show")), box), box);
+      card.append(structLine(q.answer.frame), howBlock(q.answer.frame),
+        el("p", { class: "prov" }, both("or.prov")), toggleAnswer(el("button", { class: "btn", type: "button" }, t("or.show")), box), box);
     } else card.append(el("p", { class: "soon" }, t("or.soon")));
     if (focus) setTimeout(() => card.scrollIntoView({ block: "start" }), 30);
     return card;
@@ -453,39 +516,50 @@ footer.foot { padding-top: 40px; padding-bottom: 48px; color: var(--faint); font
   function picture(key, cls) {
     const topic = D.topics[key];
     return el("figure", { class: "pic " + (cls || "") },
-      el("img", { src: `oral/pics/${key}.jpg`, alt: `${t("or.picture")} (${topic.title})`, loading: "lazy",
+      el("img", { src: `oral/pics/${key}.jpg`, alt: `${I18N["or.picture"][0]} (${topic.title})`, loading: "lazy",
         onclick: e => e.currentTarget.parentElement.classList.toggle("big") }),
-      el("figcaption", null, t("or.picture")));
+      el("figcaption", null, both("or.picture")));
   }
   function topicHead(key) {
     const topic = D.topics[key], sit = sitOf(key), letter = key.split("-")[1];
-    const fam = famOf(key);
-    const sits = [["A", topic.situations.A], ["B", topic.situations.B]].filter(x => x[1]);
+    const fam = famOf(key), ten = topic.situations_en || {};
+    const sits = [["A", topic.situations.A, ten.A], ["B", topic.situations.B, ten.B]].filter(x => x[1]);
     return el("header", { class: "thead" }, el("span", { class: "letter", "aria-hidden": "true" }, letter),
       el("div", null, el("p", { class: "lbl" }, bi(sitLabel(sit).da, sitLabel(sit).en)),
-        el("h2", { lang: "da" }, topic.title),
+        el("h2", { lang: "da" }, topic.title, enLine(topic.title_en)),
         fam ? el("p", { class: "st" }, bi(fam[0], fam[1])) : null,
-        sits.length ? el("dl", { class: "sit", lang: "da" }, sits.map(([L, s]) => el("div", null, el("dt", null, L), el("dd", null, s)))) : null));
+        sits.length ? el("dl", { class: "sit" }, sits.map(([L, s, e]) => el("div", null, el("dt", null, L),
+          el("dd", null, el("span", { lang: "da" }, s), enLine(e))))) : null));
   }
 
   // ── Lær ─────────────────────────────────────────────────────────────────────────
   let laerSit = "2024s";
+  // the four question types, one row each: the wording that signals the type, and the order of its parts
+  function frameTypes() {
+    return el("section", { class: "sec" }, el("h2", null, both("or.ft.h")), el("p", { class: "hint" }, both("or.ft.p")),
+      el("div", { class: "ftypes" }, Object.keys(D.frameSteps).map(f => el("article", { class: "sheet ftype" },
+        el("p", { class: "fq" }, el("span", { lang: "da" }, FR(f).title || frameDa(f)), enLine(FR(f).title_en)),
+        el("ol", { class: "steps" }, D.frameSteps[f].map(p => el("li", { class: `p-${p}` },
+          el("span", null, el("span", { lang: "da" }, partDa(p)), enLine(partEn(p))))))))));
+  }
   function viewLaer() {
     const sure = sureCount(), total = D.questions.length;
     const count = { new: 0, practice: 0, sure: 0 };
     D.questions.forEach(q => count[qStatus(q.id)]++);
     const topicsOf = s => topicKeys.filter(k => sitOf(k) === s);
+    const line = i => fill(I18N["or.prog.line"][i], sure, total, count.practice, count.new);
     app.replaceChildren(
       el("section", { class: "top" }, el("span", { class: "chip" }, el("b", null, t("or.chip.b")), el("span", null, t("or.chip"))),
         el("h1", null, el("span", { class: "light" }, t("or.h1a")), el("span", null, t("or.h1b"))),
-        el("p", { class: "lead" }, t("or.intro"))),
-      el("div", { class: "band" }, el("div", { class: "prog" },
-        el("div", { class: "m" }, el("p", { class: "lbl" }, t("or.progress")),
-          el("b", null, `${sure} / ${total}`), el("span", { class: "s" }, t("or.sure")),
-          el("div", { class: "bar" }, el("span", { style: `width:${(100 * sure / total).toFixed(1)}%` }))),
-        el("div", { class: "m" }, el("p", { class: "lbl" }, t("or.new")), el("b", null, String(count.new))),
-        el("div", { class: "m" }, el("p", { class: "lbl" }, t("or.practice")), el("b", null, String(count.practice))),
-        el("div", { class: "m" }, el("p", { class: "lbl" }, t("or.sure1")), el("b", null, String(count.sure))))),
+        el("p", { class: "lead" }, both("or.intro"))),
+      el("section", { class: "sec" }, el("h2", null, both("or.howto.h")),
+        el("ol", { class: "howsteps" }, [1, 2, 3].map(n => el("li", null, both("or.howto." + n))))),
+      frameTypes(),
+      el("section", { class: "sec" }, el("div", { class: "sheet progline" },
+        el("p", { class: "pl" }, el("span", { lang: "da" }, line(0)), enLine(line(1))),
+        el("div", { class: "bar", role: "img", "aria-label": `${sure} / ${total}` },
+          el("span", { style: `width:${(100 * sure / total).toFixed(1)}%` })),
+        el("p", { class: "hint" }, both("or.prog.legend")))),
       el("section", { class: "sec" }, el("h2", null, t("or.sittings")),
         el("div", { class: "chips", role: "group" }, D.sittings.map(s => {
           const ids = topicsOf(s.id).flatMap(topicIds), n = ids.filter(id => qStatus(id) === "sure").length;
@@ -494,18 +568,18 @@ footer.foot { padding-top: 40px; padding-bottom: 48px; color: var(--faint); font
             el("span", { class: "n" }, `${n}/${ids.length}`));
         }))),
       el("section", { class: "sec" }, el("div", { class: "tgrid" }, topicsOf(laerSit).map(key => {
-        const st = tStatus(key), fam = famOf(key), topic = D.topics[key];
+        const st = tStatus(key), fam = famOf(key), topic = D.topics[key], ten = topic.situations_en || {};
         const sits = [topic.situations.A, topic.situations.B].filter(Boolean).join(" · ");
+        const sitsEn = [ten.A, ten.B].filter(Boolean).join(" · ");
         const n = topicIds(key).filter(id => qStatus(id) === "sure").length;
         return el("a", { class: "sheet tcard", href: `#q/${key}-1A` },
           el("span", { class: "letter" }, key.split("-")[1]),
-          el("h3", { lang: "da" }, topic.title),
+          el("h3", { lang: "da" }, topic.title, enLine(topic.title_en)),
           fam ? el("p", { class: "st" }, el("span", { class: "dot " + st }), LANG === "en" ? fam[1] : fam[0]) : null,
-          sits ? el("p", { class: "sits", lang: "da" }, sits) : null,
+          sits ? el("p", { class: "sits" }, el("span", { lang: "da" }, sits), enLine(sitsEn)) : null,
           el("p", { class: "st" }, el("span", { class: "dot " + st }), t("or.tcount", n)));
       }))),
-      el("div", { class: "tgrid", style: "margin-top:24px" }, el("a", { class: "btn solid", href: "#test" }, t("or.tab.test")),
-        el("a", { class: "btn", href: "#rammer" }, t("or.tab.frames"))));
+      el("div", { class: "tgrid", style: "margin-top:24px" }, el("a", { class: "btn solid", href: "#test" }, t("or.tab.test"))));
   }
 
   // ── topic view (Lær) ─────────────────────────────────────────────────────────────
@@ -523,19 +597,6 @@ footer.foot { padding-top: 40px; padding-bottom: 48px; color: var(--faint); font
         ...qs.map(q => questionCard(q, q.id === id))));
   }
 
-  // ── rammer ────────────────────────────────────────────────────────────────────────
-  function viewFrames() {
-    const fr = D.frames || {};
-    app.replaceChildren(el("section", { class: "top" }, el("h1", null, el("span", { class: "light" }, t("or.h1a")), el("span", null, t("or.frames.h")))),
-      el("p", { class: "lead" }, t("or.frames.p")),
-      el("section", { class: "view framecards" }, Object.keys(D.frameSteps).map(f => el("article", { class: "sheet fcard" },
-        el("h3", null, t("frame." + f)),
-        el("div", { class: "smap" }, el("ol", { class: "steps" }, D.frameSteps[f].map(p => el("li", { class: `p-${p}` },
-          el("button", { type: "button", tabindex: "-1" }, t("part." + p)))))),
-        el("p", { class: "skel", lang: "da" }, fr[f] ? fr[f].skeleton : ""),
-        fr[f] && fr[f].tips ? el("ul", { lang: "da" }, fr[f].tips.map(x => el("li", null, x))) : null))));
-  }
-
   // ── Test ─────────────────────────────────────────────────────────────────────────
   let testCfg = { sit: "2024s", unsure: false }, S = null, timer = null;
   function startSession(keys) { return { queue: keys, ti: 0, phase: "topic", slot1: "1A", results: {}, draft: "", last: null, t0: 0 }; }
@@ -547,7 +608,7 @@ footer.foot { padding-top: 40px; padding-bottom: 48px; color: var(--faint); font
       { id: "random", label: t("or.test.rand") }];
     app.replaceChildren(
       el("section", { class: "top" }, el("h1", null, el("span", { class: "light" }, t("or.h1a")), el("span", null, t("or.test.h")))),
-      el("p", { class: "lead" }, t("or.test.p")),
+      el("p", { class: "lead" }, both("or.test.p")),
       el("section", { class: "sec" }, el("h2", null, t("or.test.sit")),
         el("div", { class: "chips", role: "group" }, chips.map(c => el("button", { type: "button", class: "chipbtn",
           "aria-pressed": testCfg.sit === c.id ? "true" : "false", onclick: () => { testCfg.sit = c.id; route(); } }, c.label))),
@@ -583,11 +644,11 @@ footer.foot { padding-top: 40px; padding-bottom: 48px; color: var(--faint); font
   function feedbackView(q, phase) {
     const last = S.last, fb = last.fb, text = last.text;
     const spell = fb.spell.length
-      ? el("div", { class: "box" }, el("p", { class: "lbl" }, t("or.fb.spell.h")), el("p", { class: "hint", style: "margin:0" }, t("or.fb.spell.note")),
+      ? el("div", { class: "box" }, el("p", { class: "lbl" }, t("or.fb.spell.h")), el("p", { class: "hint", style: "margin:0" }, both("or.fb.spell.note")),
           el("ul", { class: "wlist" }, fb.spell.map(s => el("li", null, el("span", { class: "sp-old" }, s.w), el("span", null, " → "), el("b", { class: "sp-new", lang: "da" }, s.fix)))))
       : el("div", { class: "box" }, el("p", { class: "lbl" }, t("or.fb.spell.h")), el("p", { class: "ok-mark" }, t("or.fb.none")));
     const wo = fb.wo.length
-      ? el("div", { class: "box warn" }, el("p", { class: "lbl" }, el("span", { class: "dotbad" }), t("or.fb.wo.h")), el("p", { class: "hint", style: "margin:0" }, t("or.fb.wo.note")),
+      ? el("div", { class: "box warn" }, el("p", { class: "lbl" }, el("span", { class: "dotbad" }), t("or.fb.wo.h")), el("p", { class: "hint", style: "margin:0" }, both("or.fb.wo.note")),
           el("ul", { class: "wlist" }, fb.wo.map(w => el("li", null, el("span", { class: "wo", lang: "da" }, w.snip), el("span", null, " → "), el("b", { lang: "da" }, w.fix),
             el("span", { class: "why", lang: "da" }, w.why.da), el("span", { class: "why en" }, w.why.en)))))
       : el("div", { class: "box" }, el("p", { class: "lbl" }, t("or.fb.wo.h")), el("p", { class: "ok-mark" }, t("or.fb.wo.none")));
@@ -623,7 +684,7 @@ footer.foot { padding-top: 40px; padding-bottom: 48px; color: var(--faint); font
       const sl = sourceLabel(q);
       const card = el("article", { class: "qcard sheet" }, el("p", { class: "src" }, el("span", { lang: "da" }, sl.da), el("span", { class: "en" }, sl.en)),
         el("p", { class: "lbl", style: "margin:0" }, t("or.test.step", S.phase === "q1" ? 1 : 2)),
-        el("h3", { class: "qtext", lang: "da" }, q.intro ? el("span", { class: "intro" }, q.intro) : null, q.question));
+        qtext(q));
       wrap([picture(key, "test"), card, ta,
         el("div", { class: "testbar" }, el("span", { id: "tm", class: "tm" }, ""),
           el("button", { class: "btn solid", type: "button", onclick: () => {
@@ -660,27 +721,43 @@ footer.foot { padding-top: 40px; padding-bottom: 48px; color: var(--faint); font
   }
   function testDone() {
     const rows = S.queue.map(key => el("section", { class: "sec" }, el("h2", null, bi(sitLabel(sitOf(key)).da, sitLabel(sitOf(key)).en)),
-      el("p", { class: "lead", lang: "da" }, D.topics[key].title)));
+      el("p", { class: "lead", lang: "da" }, D.topics[key].title, enLine(D.topics[key].title_en))));
     app.replaceChildren(el("section", { class: "view" }, el("h2", null, t("or.sum.all")), ...rows,
       el("button", { class: "btn solid", type: "button", onclick: () => { S = null; route(); } }, t("or.newtest"))));
   }
+
+  // ── English switch: hides and shows the English lines in place (no re-render, nothing is lost) ──
+  const enBtn = $("#enToggle");
+  const enOn = () => { try { return localStorage.getItem(EN_KEY) !== "0"; } catch (e) { return true; } };
+  function setEnLabel() {
+    const on = !app.classList.contains("hide-en");
+    enBtn.textContent = I18N[on ? "or.en.hide" : "or.en.show"][LANG === "en" ? 1 : 0];
+    enBtn.setAttribute("aria-pressed", on ? "true" : "false");
+  }
+  function setEn(on) {
+    app.classList.toggle("hide-en", !on);
+    try { localStorage.setItem(EN_KEY, on ? "1" : "0"); } catch (e) { /* ignore */ }
+    setEnLabel();
+  }
+  enBtn.addEventListener("click", () => setEn(app.classList.contains("hide-en")));
 
   // ── router ─────────────────────────────────────────────────────────────────────────
   function route() {
     clearInterval(timer);
     const h = location.hash.slice(1);
-    const tab = h.startsWith("test") ? "test" : h.startsWith("rammer") ? "rammer" : "laer";
+    const tab = h.startsWith("test") ? "test" : "laer";
     document.querySelectorAll("#tabs button").forEach(b => b.setAttribute("aria-pressed", b.dataset.go === "#" + tab ? "true" : "false"));
     if (h.startsWith("q/")) viewTopic(h.slice(2));
     else if (tab === "test") viewTest();
-    else if (tab === "rammer") viewFrames();
     else viewLaer();
+    setEnLabel();
   }
   document.querySelectorAll("#tabs button").forEach(b => b.addEventListener("click", () => { location.hash = b.dataset.go; if (location.hash === b.dataset.go) route(); }));
   addEventListener("hashchange", route);
   // the Dansk/English button re-renders the page so that the dynamic text follows the language
   const lb = document.querySelector(".langbtn");
   if (lb) lb.addEventListener("click", () => setTimeout(route, 0));
+  setEn(enOn());
   if (!location.hash) location.hash = "#laer";
   route();
   applyTexts(document);

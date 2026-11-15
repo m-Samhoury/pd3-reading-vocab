@@ -196,25 +196,36 @@ button, input, select { font: inherit; color: inherit; }
 
 /* top bar: logo · links · language */
 .topbar { background: var(--sheet); border-bottom: 1px solid var(--rule); }
-.topbar-in { display: flex; flex-wrap: wrap; align-items: center; gap: 0 24px; min-height: 64px; }
-.brand { display: inline-flex; align-items: center; gap: 10px; min-height: 56px; text-decoration: none; color: var(--ink); font-weight: 700; letter-spacing: -.01em; }
+/* One row on every screen: logo · links (scroll sideways when they do not fit) · ⓘ · theme · language.
+   The buttons never wrap, and the language button has a fixed width, so it stays put when the language changes. */
+.topbar-in { display: flex; flex-wrap: nowrap; align-items: center; gap: 0 16px; min-height: 64px; }
+.brand { display: inline-flex; align-items: center; flex: 0 0 auto; gap: 10px; min-height: 56px; text-decoration: none; color: var(--ink); font-weight: 700; letter-spacing: -.01em; white-space: nowrap; }
 .logo { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 9px; background: var(--accent-soft);
   color: var(--accent); font-weight: 800; font-size: .95rem; letter-spacing: -.04em; }
-.nav { display: flex; align-items: center; gap: 2px 4px; flex: 1 1 auto; flex-wrap: wrap; order: 1; }
+.nav { display: flex; align-items: center; gap: 2px 4px; flex: 1 1 auto; min-width: 0; flex-wrap: nowrap; overflow-x: auto;
+  scrollbar-width: none; order: 1; }
+.nav::-webkit-scrollbar { display: none; }
 .brand { order: 0; }
-.nav a { display: inline-flex; align-items: center; min-height: 40px; padding: 0 12px; border-radius: 10px; text-decoration: none;
+.nav a { display: inline-flex; flex: 0 0 auto; white-space: nowrap; align-items: center; min-height: 40px; padding: 0 12px; border-radius: 10px; text-decoration: none;
   color: var(--soft); font-weight: 500; font-size: .95rem; }
+@media (max-width: 1100px) {
+  .brand > span:not(.logo) { display: none; }
+  .nav a { padding: 0 9px; }
+}
 .nav a:hover { color: var(--ink); background: var(--paper); }
 .nav a[aria-current="page"] { color: var(--ink); font-weight: 600; background: var(--paper); }
-.langbtn { margin-left: auto; order: 2; min-height: 38px; padding: 6px 16px; border-radius: 10px; border: 1px solid var(--rule-strong);
-  background: var(--sheet); color: var(--ink); font-weight: 600; font-size: .9rem; cursor: pointer; }
+.langbtn { order: 2; flex: 0 0 auto; min-width: 96px; min-height: 38px; padding: 6px 16px; border-radius: 10px; border: 1px solid var(--rule-strong);
+  background: var(--sheet); color: var(--ink); font-weight: 600; font-size: .9rem; text-align: center; white-space: nowrap; cursor: pointer; }
 .langbtn:hover { border-color: var(--ink); }
 @media (max-width: 640px) {
-  .topbar-in { padding-bottom: 8px; column-gap: 8px; }
+  /* phones: logo and buttons on the first row, the links on a second row that scrolls sideways */
+  .topbar-in { flex-wrap: wrap; padding-bottom: 8px; column-gap: 8px; }
   .brand { margin-right: auto; }
-  .iconbtn { margin-left: 0; }
-  .langbtn { padding: 6px 12px; }
-  .nav { order: 3; flex-basis: 100%; margin-left: -10px; }
+  .brand > span:not(.logo) { display: none; }
+  .iconbtn { margin-left: 0; flex: 0 0 auto; }
+  .langbtn { padding: 6px 12px; min-width: 92px; }
+  .nav { order: 3; flex: 0 0 100%; width: 100%; margin-left: -10px;
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent); }
   .nav a { padding: 0 10px; }
 }
 

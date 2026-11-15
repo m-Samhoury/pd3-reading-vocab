@@ -9,6 +9,7 @@ Writes into the site repo:
 Inputs (PD3 project, PD3_EXAMS or the default folder next to this repo):
   pd3-data/oral-questions.json   every examiner question (filtered to the 12 sittings below)
   pd3-data/oral-answers.json     Part A content: model answers, keywords, notes, topic and frame maps
+  pd3-data/oral-translations.json  English for the questions, answers, tips, topics and frames (optional)
   pd3-data/cache/*.txt, pd3-data/exam-sentences.json   the exam texts, for the spelling check
   .claude/skills/pd3-coach/app/oral-pics/<sitting>-<letter>.jpg   the picture sheets
 
@@ -55,7 +56,29 @@ def slot_of(qid):
     return qid.split("-")[-1]
 
 
-def build_questions(questions, answers):
+def english_for(qid, q, tr):
+    """The English for one question from the translations file, or None. A list that does not match the Danish
+    length is left out (with a warning) rather than shown against the wrong line."""
+    if not tr:
+        return None
+    e = {}
+    danish = {"followups": q.get("followups") or [], "answer": (q.get("answer") or {}).get("answer") or [],
+              "tips": (q.get("answer") or {}).get("tips") or []}
+    for key in ("intro", "question", "followup_answer", "notes"):
+        if tr.get(key):
+            e[key] = tr[key]
+    for key, da in danish.items():
+        val = tr.get(key)
+        if not val:
+            continue
+        if isinstance(val, list) and len(val) == len(da):
+            e[key] = val
+        else:
+            print(f"warning: {qid}: English {key} has {len(val) if isinstance(val, list) else 'no list'} lines, Danish has {len(da)}; left out")
+    return e or None
+
+
+def build_questions(questions, answers, tr=None):
     out, missing = [], []
     for q in questions:
         if q["sitting"] not in SITTINGS:
@@ -64,11 +87,15 @@ def build_questions(questions, answers):
         ans = answers.get(q["id"])
         if not ans:
             missing.append(q["id"])
-        out.append({
+        item = {
             "id": q["id"], "sitting": q["sitting"], "letter": letter, "topic": q["topic"], "slot": slot_of(q["id"]),
             "kind": q["kind"], "intro": q.get("intro"), "question": q["question"],
             "followups": q.get("followups") or [], "answer": ans or None,
-        })
+        }
+        en = english_for(q["id"], {**item, "answer": ans}, (tr or {}).get("questions", {}).get(q["id"]))
+        if en:
+            item["en"] = en
+        out.append(item)
     order = {k: i for i, k in enumerate(SLOTS)}
     out.sort(key=lambda x: (SITTINGS.index(x["sitting"]), LETTERS.index(x["letter"]), order[x["slot"]]))
     return out, missing
@@ -163,18 +190,42 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--answers", help="answers JSON (default: pd3-data/oral-answers.json in the PD3 project)")
     ap.add_argument("--no-pics", action="store_true", help="skip re-encoding the picture sheets")
+    ap.add_argument("--translations", help="English translations (default: pd3-data/oral-translations.json in the "
+                    "PD3 project; optional: without it the page simply shows no English)")
     a = ap.parse_args()
     ans_path = a.answers or os.path.join(EXAMS, "pd3-data", "oral-answers.json")
     answers = load(ans_path) if os.path.exists(ans_path) else {}
     if not answers:
         print(f"no answers at {ans_path}: building without model answers")
+    tr_path = a.translations or os.path.join(EXAMS, "pd3-data", "oral-translations.json")
+    tr = load(tr_path) if os.path.exists(tr_path) else {}
+    print(f"English: {tr_path} ({len(tr.get('questions', {}))} questions)" if tr else f"no translations at {tr_path}: building without English")
     questions_raw = load(os.path.join(EXAMS, "pd3-data", "oral-questions.json"))
-    questions, missing = build_questions(questions_raw, answers)
+    questions, missing = build_questions(questions_raw, answers, tr)
     known = {q["id"] for q in questions}
     extra = [k for k in answers if re.match(r"^\d{4}[sv]-[A-C]-(1A|1B|2)$", k) and k not in known]
     if extra:
         print("answers for ids that are not in the 12 sittings (ignored):", extra)
     topics = build_topics(questions, answers)
+    for key, t_ in topics.items():
+        given = (tr.get("topics") or {}).get(key) or {}
+        if given.get("title"):
+            t_["title_en"] = given["title"]
+        sit_en = {k: v for k, v in (given.get("situations") or {}).items() if v}
+        if sit_en:
+            t_["situations_en"] = sit_en
+    frames = {}
+    for f, fr in (answers.get("frames") or {}).items():
+        frames[f] = dict(fr)
+        for field in ("title", "skeleton", "tips"):
+            val = (tr.get("frames") or {}).get(f, {}).get(field)
+            if val is None:
+                continue
+            if field == "tips":
+                if isinstance(val, list) and len(val) == len(fr.get("tips") or []):
+                    frames[f]["tips_en"] = val
+            else:
+                frames[f][field + "_en"] = val
     # lightly check the answer blocks that do exist, so a bad hand-edit is caught at build time
     for q in questions:
         a_ = q["answer"]
@@ -188,7 +239,7 @@ def main():
     out_dir = os.path.join(ROOT, "oral")
     os.makedirs(out_dir, exist_ok=True)
     sittings = [{"id": s, "label": sitting_label(s)} for s in SITTINGS]
-    data = {"sittings": sittings, "questions": questions, "topics": topics, "frames": answers.get("frames", {}),
+    data = {"sittings": sittings, "questions": questions, "topics": topics, "frames": frames,
             "frameSteps": FRAME_STEPS, "letters": LETTERS, "slots": SLOTS}
     data_js = "window.ORAL = " + json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/") + ";\n"
     data_name = write_hashed(out_dir, "data", data_js)

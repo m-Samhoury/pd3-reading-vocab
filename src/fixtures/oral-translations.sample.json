@@ -1,0 +1,227 @@
+{
+ "questions": {
+  "2018s-A-1A": {
+   "intro": null,
+   "question": "FIXTURE EN question 2018s-A-1A",
+   "followups": [
+    "FIXTURE EN followup 0 2018s-A-1A"
+   ],
+   "answer": [
+    "FIXTURE EN segment 0 2018s-A-1A",
+    "FIXTURE EN segment 1 2018s-A-1A",
+    "FIXTURE EN segment 2 2018s-A-1A",
+    "FIXTURE EN segment 3 2018s-A-1A",
+    "FIXTURE EN segment 4 2018s-A-1A",
+    "FIXTURE EN segment 5 2018s-A-1A"
+   ],
+   "tips": [
+    "FIXTURE EN tip 0 2018s-A-1A",
+    "FIXTURE EN tip 1 2018s-A-1A",
+    "FIXTURE EN tip 2 2018s-A-1A"
+   ],
+   "followup_answer": "FIXTURE EN followup answer 2018s-A-1A",
+   "notes": "FIXTURE EN notes 2018s-A-1A"
+  },
+  "2018s-A-1B": {
+   "intro": null,
+   "question": "FIXTURE EN question 2018s-A-1B",
+   "followups": [
+    "FIXTURE EN followup 0 2018s-A-1B"
+   ],
+   "answer": [
+    "FIXTURE EN segment 0 2018s-A-1B",
+    "FIXTURE EN segment 1 2018s-A-1B",
+    "FIXTURE EN segment 2 2018s-A-1B",
+    "FIXTURE EN segment 3 2018s-A-1B",
+    "FIXTURE EN segment 4 2018s-A-1B",
+    "FIXTURE EN segment 5 2018s-A-1B"
+   ],
+   "tips": [
+    "FIXTURE EN tip 0 2018s-A-1B",
+    "FIXTURE EN tip 1 2018s-A-1B",
+    "FIXTURE EN tip 2 2018s-A-1B"
+   ],
+   "followup_answer": "FIXTURE EN followup answer 2018s-A-1B",
+   "notes": "FIXTURE EN notes 2018s-A-1B"
+  },
+  "2018s-A-2": {
+   "intro": null,
+   "question": "FIXTURE EN question 2018s-A-2",
+   "followups": [
+    "FIXTURE EN followup 0 2018s-A-2"
+   ],
+   "answer": [
+    "FIXTURE EN segment 0 2018s-A-2",
+    "FIXTURE EN segment 1 2018s-A-2",
+    "FIXTURE EN segment 2 2018s-A-2",
+    "FIXTURE EN segment 3 2018s-A-2",
+    "FIXTURE EN segment 4 2018s-A-2"
+   ],
+   "tips": [
+    "FIXTURE EN tip 0 2018s-A-2",
+    "FIXTURE EN tip 1 2018s-A-2",
+    "FIXTURE EN tip 2 2018s-A-2"
+   ],
+   "followup_answer": "FIXTURE EN followup answer 2018s-A-2",
+   "notes": "FIXTURE EN notes 2018s-A-2"
+  },
+  "2018s-B-1A": {
+   "intro": null,
+   "question": "FIXTURE EN question 2018s-B-1A",
+   "followups": [
+    "FIXTURE EN followup 0 2018s-B-1A"
+   ],
+   "answer": [
+    "FIXTURE EN segment 0 2018s-B-1A",
+    "FIXTURE EN segment 1 2018s-B-1A",
+    "FIXTURE EN segment 2 2018s-B-1A",
+    "FIXTURE EN segment 3 2018s-B-1A",
+    "FIXTURE EN segment 4 2018s-B-1A",
+    "FIXTURE EN segment 5 2018s-B-1A"
+   ],
+   "tips": [
+    "FIXTURE EN tip 0 2018s-B-1A",
+    "FIXTURE EN tip 1 2018s-B-1A"
+   ],
+   "followup_answer": "FIXTURE EN followup answer 2018s-B-1A",
+   "notes": null
+  },
+  "2018s-B-1B": {
+   "intro": null,
+   "question": "FIXTURE EN question 2018s-B-1B",
+   "followups": [
+    "FIXTURE EN followup 0 2018s-B-1B"
+   ],
+   "answer": [
+    "FIXTURE EN segment 0 2018s-B-1B",
+    "FIXTURE EN segment 1 2018s-B-1B",
+    "FIXTURE EN segment 2 2018s-B-1B",
+    "FIXTURE EN segment 3 2018s-B-1B",
+    "FIXTURE EN segment 4 2018s-B-1B",
+    "FIXTURE EN segment 5 2018s-B-1B"
+   ],
+   "tips": [
+    "FIXTURE EN tip 0 2018s-B-1B",
+    "FIXTURE EN tip 1 2018s-B-1B"
+   ],
+   "followup_answer": "FIXTURE EN followup answer 2018s-B-1B",
+   "notes": null
+  },
+  "2018s-B-2": {
+   "intro": null,
+   "question": "FIXTURE EN question 2018s-B-2",
+   "followups": [
+    "FIXTURE EN followup 0 2018s-B-2"
+   ],
+   "answer": [
+    "FIXTURE EN segment 0 2018s-B-2",
+    "FIXTURE EN segment 1 2018s-B-2",
+    "FIXTURE EN segment 2 2018s-B-2",
+    "FIXTURE EN segment 3 2018s-B-2",
+    "FIXTURE EN segment 4 2018s-B-2"
+   ],
+   "tips": [
+    "FIXTURE EN tip 0 2018s-B-2",
+    "FIXTURE EN tip 1 2018s-B-2"
+   ],
+   "followup_answer": "FIXTURE EN followup answer 2018s-B-2",
+   "notes": null
+  },
+  "2018s-C-1A": {
+   "intro": null,
+   "question": "FIXTURE EN question 2018s-C-1A",
+   "followups": [
+    "FIXTURE EN followup 0 2018s-C-1A"
+   ],
+   "answer": [
+    "FIXTURE EN segment 0 2018s-C-1A",
+    "FIXTURE EN segment 1 2018s-C-1A",
+    "FIXTURE EN segment 2 2018s-C-1A",
+    "FIXTURE EN segment 3 2018s-C-1A",
+    "FIXTURE EN segment 4 2018s-C-1A",
+    "FIXTURE EN segment 5 2018s-C-1A"
+   ],
+   "tips": [
+    "FIXTURE EN tip 0 2018s-C-1A",
+    "FIXTURE EN tip 1 2018s-C-1A"
+   ],
+   "followup_answer": "FIXTURE EN followup answer 2018s-C-1A",
+   "notes": null
+  },
+  "2018s-C-1B": {
+   "intro": null,
+   "question": "FIXTURE EN question 2018s-C-1B",
+   "followups": [
+    "FIXTURE EN followup 0 2018s-C-1B"
+   ],
+   "answer": [
+    "FIXTURE EN segment 0 2018s-C-1B",
+    "FIXTURE EN segment 1 2018s-C-1B",
+    "FIXTURE EN segment 2 2018s-C-1B",
+    "FIXTURE EN segment 3 2018s-C-1B",
+    "FIXTURE EN segment 4 2018s-C-1B",
+    "FIXTURE EN segment 5 2018s-C-1B"
+   ],
+   "tips": [
+    "FIXTURE EN tip 0 2018s-C-1B",
+    "FIXTURE EN tip 1 2018s-C-1B"
+   ],
+   "followup_answer": "FIXTURE EN followup answer 2018s-C-1B",
+   "notes": null
+  },
+  "2018s-C-2": {
+   "intro": null,
+   "question": "FIXTURE EN question 2018s-C-2",
+   "followups": [
+    "FIXTURE EN followup 0 2018s-C-2"
+   ],
+   "answer": [
+    "FIXTURE EN segment 0 2018s-C-2",
+    "FIXTURE EN segment 1 2018s-C-2",
+    "FIXTURE EN segment 2 2018s-C-2",
+    "FIXTURE EN segment 3 2018s-C-2",
+    "FIXTURE EN segment 4 2018s-C-2"
+   ],
+   "tips": [
+    "FIXTURE EN tip 0 2018s-C-2",
+    "FIXTURE EN tip 1 2018s-C-2"
+   ],
+   "followup_answer": "FIXTURE EN followup answer 2018s-C-2",
+   "notes": null
+  }
+ },
+ "topics": {
+  "2018s-A": {
+   "title": "FIXTURE EN topic A",
+   "situations": {
+    "A": "FIXTURE EN situation A",
+    "B": "FIXTURE EN situation B"
+   }
+  },
+  "2018s-B": {
+   "title": "FIXTURE EN topic B",
+   "situations": {
+    "A": "FIXTURE EN situation A",
+    "B": "FIXTURE EN situation B"
+   }
+  },
+  "2018s-C": {
+   "title": "FIXTURE EN topic C",
+   "situations": {
+    "A": "FIXTURE EN situation A",
+    "B": "FIXTURE EN situation B"
+   }
+  }
+ },
+ "frames": {
+  "aarsag": {
+   "title": "FIXTURE EN why?",
+   "skeleton": "FIXTURE EN skeleton",
+   "tips": [
+    "FIXTURE EN tip 0",
+    "FIXTURE EN tip 1",
+    "FIXTURE EN tip 2"
+   ]
+  }
+ }
+}
