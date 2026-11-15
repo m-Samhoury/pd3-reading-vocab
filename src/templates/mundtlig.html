@@ -285,7 +285,7 @@ footer.foot { padding-top: 40px; padding-bottom: 48px; color: var(--faint); font
   function sourceLabel(q) {
     const sl = sitLabel(q.sitting), topic = D.topics[`${q.sitting}-${q.letter}`];
     const [da, en] = slotText(q.slot);
-    return { da: `${sl.da} · Emne ${q.letter}: ${topic.title} · ${da}`, en: `${sl.en} · Topic ${q.letter}: ${topic.title} · ${en}` };
+    return { da: `${sl.da} · Emne ${q.letter}: ${topic.title} · ${da}`, en: `${sl.en} · Topic ${q.letter}: ${topic.title_en || topic.title} · ${en}` };
   }
   const bi = (da, en, cls) => el("span", { class: "bi " + (cls || "") }, el("span", { lang: "da" }, da), en ? el("span", { class: "en" }, en) : null);
   // a sentence of page text: Danish first, English under it (the "Skjul engelsk" switch hides the English)
