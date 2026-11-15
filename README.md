@@ -15,12 +15,15 @@ Progress is stored in the browser (localStorage). Use Export/Import on the flash
 
 **Open it: https://m-samhoury.github.io/pd3-reading-vocab/mundtlig.html**
 
-Every examiner question from the 12 sittings 2018–2024 (2022 maj has no speaking booklet, so it is not included): the
-picture sheet, the source label (sitting, topic, which question), a model answer shown in parts, a structure map of the
-answer, the keywords with their prepositions, tips and the learner's own notes. Test mode runs the exam format, by
-sitting or at random, and gives offline feedback: spelling (not counted), conservative word-order flags, structure
-✅/❌ and the keywords used, then a comparison with the model answer and a self-rating. Progress is kept in the browser.
-No AI examiner and no speech: everything runs from the static files.
+Every examiner question from the 12 sittings 2018–2024 (2022 maj has no speaking booklet, so it is not included).
+The start screen shows your next question first (the first one that is not secure yet, newest sitting first), the
+progress line, and then every sitting and topic. A question is 4 steps: read it and say your answer, see the model
+answer in coloured parts with a structure map, learn the keywords (with their prepositions), tips, follow-up and your
+notes, and rate yourself. The picture sheet stays on the right on a wide screen. Test mode runs the exam format
+(3 topics, 6 questions, by sitting or at random) and gives offline feedback in this order: word order (with why),
+structure (with what to say for a missing part), keywords, spelling (not counted), then your answer next to the
+model answer and a self-rating. Danish first, English under every line (switch: Skjul engelsk). Progress is kept in
+the browser. No AI examiner and no speech: everything runs from the static files.
 
 Build (after `render.py`, which writes the shared CSS/JS this page loads):
 
@@ -28,6 +31,8 @@ Build (after `render.py`, which writes the shared CSS/JS this page loads):
 python3 src/scripts/render.py && python3 src/scripts/build_oral.py
 node src/scripts/test-oral.mjs
 ```
+
+After a change to src/templates/mundtlig.html only: `python3 src/scripts/build_oral.py --no-pics`.
 
 `build_oral.py` reads `pd3-data/oral-questions.json` and `pd3-data/oral-answers.json` in the PD3 project (or `--answers`
 to use another file, e.g. `src/fixtures/oral-answers.sample.json`). It writes `mundtlig.html`, `oral/` (data, the
