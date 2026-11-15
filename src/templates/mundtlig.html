@@ -85,6 +85,9 @@ figure.pic .zoom { position: absolute; right: 8px; bottom: 8px; display: grid; p
 figure.pic figcaption { font-size: .82rem; color: var(--soft); }
 figure.pic.big { position: fixed; inset: 0; z-index: 50; background: color-mix(in srgb, var(--paper) 94%, transparent); padding: 16px; place-items: center; overflow: auto; }
 figure.pic.big .picbtn { max-width: min(900px, 100%); cursor: zoom-out; }
+/* the sticky .side (>= 960 px) is its own stacking context and comes before .main in the DOM, so the
+   fixed .big overlay inside it is drawn under the steps and the action bar unless the whole .side is raised */
+.flow .side.zoomed { z-index: 60; }
 
 .src { margin: 0; font-size: .88rem; font-weight: 600; color: var(--soft); }
 .src .en { font-size: .78rem; font-weight: 500; color: var(--faint); }
@@ -710,10 +713,16 @@ ol.fbsteps { margin-top: 22px; }
     const fig = el("figure", { class: "pic" },
       el("button", { type: "button", class: "picbtn", "aria-label": t("o3.pic.zoom") }, img, el("span", { class: "zoom" }, icon("zoom"))),
       tb("o3.pic.cap", [], [], "figcaption"));
-    fig.querySelector(".picbtn").addEventListener("click", () => fig.classList.toggle("big"));
-    fig.addEventListener("keydown", e => { if (e.key === "Escape") fig.classList.remove("big"); });
+    const setBig = on => { fig.classList.toggle("big", on); const s = fig.closest(".side"); if (s) s.classList.toggle("zoomed", on); };
+    fig.querySelector(".picbtn").addEventListener("click", () => setBig(!fig.classList.contains("big")));
+    fig.addEventListener("click", e => { if (e.target === fig) setBig(false); });  // tap the backdrop to close
     return fig;
   }
+  document.addEventListener("keydown", e => {  // Escape closes the big picture, wherever the focus is
+    if (e.key !== "Escape") return;
+    document.querySelectorAll("figure.pic.big").forEach(f => f.classList.remove("big"));
+    document.querySelectorAll(".side.zoomed").forEach(s => s.classList.remove("zoomed"));
+  });
 
   // the model answer: coloured segments + a structure map whose chips light up their segment
   const segP = (q, s, i) => el("p", { class: `seg p-${s.part}`, "data-part": s.part },
