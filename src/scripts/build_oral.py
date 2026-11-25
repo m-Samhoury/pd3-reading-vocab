@@ -5,6 +5,7 @@ Writes into the site repo:
   oral/data.<hash>.js           window.ORAL: questions, model answers, topics, frames, sittings
   oral/lexicon.<hash>.js        window.ORAL_LEX: word → count, for the offline spelling check
   oral/pics/<sitting>-<letter>.jpg   picture sheets, re-encoded to ≤ 1000 px wide
+  oral/vocab/<id>.jpg           the small word pictures of the Emneord tab (copied, only the ones used)
 
 Inputs (PD3 project, PD3_EXAMS or the default folder next to this repo):
   pd3-data/oral-questions.json   every examiner question (filtered to the 12 sittings below)
@@ -12,6 +13,9 @@ Inputs (PD3 project, PD3_EXAMS or the default folder next to this repo):
   pd3-data/oral-translations.json  English for the questions, answers, tips, topics and frames (optional)
   pd3-data/cache/*.txt, pd3-data/exam-sentences.json   the exam texts, for the spelling check
   .claude/skills/pd3-coach/app/oral-pics/<sitting>-<letter>.jpg   the picture sheets
+  pd3-data/oral-vocab.json       Emneord: topic word lists (optional; --vocab)
+  pd3-data/oral-vocab-images.json  Emneord: picture per word id, with credit (optional; --vocab-images).
+                                 Its "file" paths are relative to the folder of this JSON, then to the PD3 project.
 
 Missing answers are fine: those questions show "Svar kommer snart". Use --answers to build from another file
 (e.g. the fixture src/fixtures/oral-answers.sample.json while developing).
@@ -19,7 +23,7 @@ Missing answers are fine: those questions show "Svar kommer snart". Use --answer
 Run order (render.py writes the hashed common.css / common.js / pd3-data.js this page loads):
   python3 src/scripts/render.py && python3 src/scripts/build_oral.py
 """
-import argparse, glob, hashlib, json, os, re, subprocess, sys, collections
+import argparse, glob, hashlib, json, os, re, shutil, subprocess, sys, collections
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
@@ -39,6 +43,8 @@ FRAME_STEPS = {
     "holdning": ["stilling", "fordi", "eksempel", "konklusion"],
 }
 PIC_SRC = os.path.join(EXAMS, ".claude", "skills", "pd3-coach", "app", "oral-pics")
+VOCAB_DEFAULT = os.path.join(EXAMS, "pd3-data", "oral-vocab.json")
+VOCAB_IMG_DEFAULT = os.path.join(EXAMS, "pd3-data", "oral-vocab-images.json")
 
 
 def load(path):
@@ -166,6 +172,54 @@ def pics(out_dir, sittings_used):
                            check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
 
+def build_vocab(vocab_path, imgs_path, questions):
+    """Emneord: the topic word lists, each word with its picture (img) when the images file has an entry whose
+    file exists. Returns (topics for the page, {word id: source jpg}, warnings). A missing vocab file gives an
+    empty list, so the page still builds (the tab then says it is coming)."""
+    warn = []
+    if not vocab_path or not os.path.exists(vocab_path):
+        warn.append(f"no vocab at {vocab_path}: the Emneord tab is empty")
+        return [], {}, warn
+    vocab = load(vocab_path)
+    imgs = load(imgs_path) if imgs_path and os.path.exists(imgs_path) else {}
+    if not imgs:
+        warn.append(f"no vocab images at {imgs_path}: the word list has no pictures")
+    img_base = os.path.dirname(os.path.abspath(imgs_path)) if imgs else ""
+    known_qids = {q["id"] for q in questions}
+    files, topics = {}, []
+    for t in vocab.get("topics", []):
+        words = []
+        for w in t.get("words", []):
+            word = dict(w)
+            im = imgs.get(w["id"])
+            if im:
+                src = next((p for p in (os.path.join(img_base, im.get("file", "")), os.path.join(EXAMS, im.get("file", "")))
+                            if im.get("file") and os.path.isfile(p)), None)
+                if src:
+                    files[w["id"]] = src
+                    word["img"] = {"f": f"oral/vocab/{w['id']}.jpg", "w": im.get("w"), "h": im.get("h"),
+                                   "credit": im.get("credit", ""), "source": im.get("source", ""),
+                                   "license": im.get("license", ""), "alt": im.get("alt_da", ""), "alt_en": im.get("alt_en", "")}
+                else:
+                    warn.append(f"picture file missing for {w['id']}: {im.get('file')}")
+            if w.get("qid") and w["qid"] not in known_qids:
+                warn.append(f"{w['id']}: qid {w['qid']} is not in the 12 sittings")
+            words.append(word)
+        topics.append({**{k: t[k] for k in ("key", "title", "title_en", "family", "qids") if k in t}, "words": words})
+    return topics, files, warn
+
+
+def copy_vocab_pics(out_dir, files):
+    """Copy only the referenced word pictures to oral/vocab/ and drop stale ones (they are already small)."""
+    dst_dir = os.path.join(out_dir, "vocab")
+    os.makedirs(dst_dir, exist_ok=True)
+    for old in glob.glob(os.path.join(dst_dir, "*.jpg")):
+        if os.path.basename(old)[:-4] not in files:
+            os.remove(old)
+    for wid, src in files.items():
+        shutil.copyfile(src, os.path.join(dst_dir, f"{wid}.jpg"))
+
+
 def h10(text):
     return hashlib.sha1(text.encode("utf-8")).hexdigest()[:10]
 
@@ -192,6 +246,11 @@ def main():
     ap.add_argument("--no-pics", action="store_true", help="skip re-encoding the picture sheets")
     ap.add_argument("--translations", help="English translations (default: pd3-data/oral-translations.json in the "
                     "PD3 project; optional: without it the page simply shows no English)")
+    ap.add_argument("--vocab", default=VOCAB_DEFAULT, help="Emneord word lists (default: pd3-data/oral-vocab.json in the "
+                    "PD3 project; if missing, the tab is empty). Fixture: src/fixtures/oral-vocab.sample.json")
+    ap.add_argument("--vocab-images", default=VOCAB_IMG_DEFAULT, help="Emneord pictures and credits (default: "
+                    "pd3-data/oral-vocab-images.json; its file paths are relative to that folder). Fixture: "
+                    "src/fixtures/oral-vocab-images.sample.json")
     a = ap.parse_args()
     ans_path = a.answers or os.path.join(EXAMS, "pd3-data", "oral-answers.json")
     answers = load(ans_path) if os.path.exists(ans_path) else {}
@@ -239,8 +298,11 @@ def main():
     out_dir = os.path.join(ROOT, "oral")
     os.makedirs(out_dir, exist_ok=True)
     sittings = [{"id": s, "label": sitting_label(s)} for s in SITTINGS]
+    vocab_topics, vocab_files, vwarn = build_vocab(a.vocab, a.vocab_images, questions)
+    for w in vwarn:
+        print("warning: vocab:", w)
     data = {"sittings": sittings, "questions": questions, "topics": topics, "frames": frames,
-            "frameSteps": FRAME_STEPS, "letters": LETTERS, "slots": SLOTS}
+            "frameSteps": FRAME_STEPS, "letters": LETTERS, "slots": SLOTS, "vocab": {"topics": vocab_topics}}
     data_js = "window.ORAL = " + json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/") + ";\n"
     data_name = write_hashed(out_dir, "data", data_js)
     lex = build_lexicon(questions, answers)
@@ -248,6 +310,7 @@ def main():
     lex_name = write_hashed(out_dir, "lexicon", lex_js)
     if not a.no_pics:
         pics(out_dir, SITTINGS)
+        copy_vocab_pics(out_dir, vocab_files)
     # the page: the shared CSS/JS and pd3-data written by render.py, plus this build's data and lexicon
     tpl = open(os.path.join(SRC, "templates", "mundtlig.html"), encoding="utf-8").read()
     html = (tpl.replace("{{CSS_HREF}}", "assets/" + existing("common.*.css"))
@@ -260,6 +323,8 @@ def main():
     with_ans = sum(1 for q in questions if q["answer"])
     print(f"questions: {len(questions)} · with model answer: {with_ans} · missing: {len(missing)}")
     print(f"topics: {len(topics)} · lexicon words: {len(lex)} · {data_name} ({len(data_js) // 1024} KB) · {lex_name} ({len(lex_js) // 1024} KB)")
+    nw = sum(len(t_["words"]) for t_ in vocab_topics)
+    print(f"emneord: {len(vocab_topics)} topics · {nw} words · {len(vocab_files)} pictures" + (" (pictures not copied: --no-pics)" if a.no_pics else ""))
 
 
 if __name__ == "__main__":
