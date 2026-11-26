@@ -398,6 +398,13 @@ const vocabRun = async (tag, width, dark) => {
     await ev(`[...document.querySelectorAll("#app .vtopic")].map(a => a.getAttribute("href")).join(",") === "#ord/frivilligt-arbejde,#ord/transport-og-miljoe"`));
   check(`${tag} · Emneord: each card shows word count and known / total`,
     await ev(`[...document.querySelectorAll("#app .vtopic")].every(a => /4 ord/.test(a.textContent) && /0 af 4 kan/.test(a.textContent))`));
+  // exam sources on the cards: frivilligt-arbejde has 2023v-B and 2018s-A (newest first), transport 2018s-B only
+  const cardOf = `k => [...document.querySelectorAll("#app .vtopic")].find(a => a.getAttribute("href") === "#ord/" + k)`;
+  check(`${tag} · Emneord cards: exam sources, Danish, newest first (two-source and one-source topic)`,
+    await ev(`(() => { const c = ${cardOf}; const da = k => [...c(k).querySelectorAll(".vexam .da")].map(x => x.textContent);
+      return da("frivilligt-arbejde").join("|") === "November–december 2023 · Emne B|Maj–juni 2018 · Emne A" && da("transport-og-miljoe").join("|") === "Maj–juni 2018 · Emne B"; })()`));
+  check(`${tag} · Emneord cards: English line under each exam ("Topic")`,
+    await ev(`(() => { const c = ${cardOf}; return [...c("frivilligt-arbejde").querySelectorAll(".vexam .en")].map(x => x.textContent).join("|") === "November–December 2023 · Topic B|May–June 2018 · Topic A"; })()`));
   check(`${tag} · Emneord overview: no horizontal scroll`, await noHScroll());
   await shotFull(`${P}-ord`);
 
@@ -411,6 +418,8 @@ const vocabRun = async (tag, width, dark) => {
   check(`${tag} · written example carries the "eget eksempel" tag`, await ev(`[...document.querySelectorAll("#app .vw")].some(r => r.querySelector(".vtag") && /de fleste/.test(r.textContent))`));
   check(`${tag} · picture alt text from alt_da`, await ev(`document.querySelector("#app img.vpic").alt === "En ung kvinde hjælper en ældre mand."`));
   check(`${tag} · link to the question (#q/<id>/2)`, await ev(`document.querySelector("#app .vw a.vsrc").getAttribute("href") === "#q/2018s-A-1A/2"`));
+  check(`${tag} · topic page header: each exam links to its first question (#q/<sitting>-<letter>-1A), newest first`,
+    await ev(`[...document.querySelectorAll("#app header.vtophead a.vexam")].map(a => a.getAttribute("href")).join() === "#q/2023v-B-1A,#q/2018s-A-1A"`));
   check(`${tag} · no horizontal scroll (topic page)`, await noHScroll());
   await shotFull(`${P}-ord-topic`);
 
@@ -425,6 +434,8 @@ const vocabRun = async (tag, width, dark) => {
   // a topic without a picture: its rows have a blank cell, no <img>
   await open("#ord/transport-og-miljoe");
   check(`${tag} · missing picture: blank cell, no broken <img>`, await ev(`[document.querySelectorAll("#app .vnopic").length, document.querySelectorAll("#app img.vpic").length, [...document.querySelectorAll("#app img.vpic")].filter(i => i.complete && i.naturalWidth === 0).length].join() === "2,2,0"`));
+  check(`${tag} · one-source topic header: one exam, linked (#q/2018s-B-1A)`,
+    await ev(`[...document.querySelectorAll("#app header.vtophead a.vexam")].map(a => a.getAttribute("href")).join() === "#q/2018s-B-1A" && /Maj–juni 2018 · Emne B/.test(document.querySelector("#app header.vtophead").textContent)`));
   check(`${tag} · last topic has no "Næste emne" link`, await ev(`document.querySelector("#app .vtools a.go") === null || document.querySelector("#app .vtools a.go").getAttribute("href") === "#ord"`));
 
   // Kan den: saved per browser, survives a reload

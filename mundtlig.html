@@ -331,6 +331,12 @@ ol.fbsteps { margin-top: 22px; }
 .vtophead { display: grid; gap: 6px; }
 .vtophead h1 { font: 800 clamp(1.5rem, 4vw, 2rem)/1.2 var(--head); letter-spacing: -.02em; margin: 0; }
 .vtophead .en { font: 500 .9rem var(--body); }
+.vexams { display: flex; flex-wrap: wrap; gap: 2px 14px; font-size: .86rem; color: var(--soft); }
+.vexams span.vexam { min-width: 0; color: inherit; text-decoration: none; overflow-wrap: anywhere; }
+.vexams a.vexam { min-width: 0; overflow-wrap: anywhere; }
+a.vexam { color: var(--accent-text); text-decoration: underline; text-underline-offset: 2px; }
+.vexam .en { font-size: .8rem; margin-top: 0; }
+.vtopic .vexams { margin-top: 4px; }
 .vtools { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 4px 0 6px; }
 .vtools .enbtn, .vtools .go { min-height: 40px; }
 .vlist { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
@@ -396,7 +402,7 @@ body:has(.vdlg[open]) { overflow: hidden; }
 <footer class="wrap foot" data-i18n="or.footer"></footer>
 <script src="assets/pd3-data.b6a1b401e8.js"></script>
 <script src="assets/common.33a13d988f.js"></script>
-<script src="oral/data.713c018ada.js"></script>
+<script src="oral/data.edf464c141.js"></script>
 <script src="oral/lexicon.c57f395103.js"></script>
 <script>
 (() => {
@@ -732,7 +738,7 @@ body:has(.vdlg[open]) { overflow: hidden; }
     "ov.cloze": ["Skjul ordene", "Hide the words"],
     "ov.tip": ["Tryk på et billede for at forstørre det. «Kan den» gemmes i denne browser.",
                "Tap a picture to enlarge it. “I know it” is saved in this browser."],
-    "ov.from": ["Fra", "From"],
+    "ov.from": ["Fra", "From"], "ov.emne": ["Emne", "Topic"],
     "ov.eget": ["eget eksempel", "own example"],
     "ov.gap": ["Tryk for at se ordet", "Tap to see the word"],
     "ov.next": ["Næste emne", "Next topic"],
@@ -1138,6 +1144,19 @@ body:has(.vdlg[open]) { overflow: hidden; }
     return el("li", { class: "vw" , "data-id": w.id }, pic, el("div", { class: "vbody" }, head, sent, senten, foot), dlg);
   }
 
+  // ── Emneord · which exam(s) a topic comes from: "Maj–juni 2018 · Emne A" (newest first; en under da). On the
+  //    topic page each source links to its first question (#q/<sitting>-<letter>-1A); on a card it is plain text ──
+  function vexams(v, link) {
+    const items = (v.sources || []).map(s => {
+      const sl = sitLabel(s.sitting), kids = [
+        el("span", { class: "da", lang: "da" }, `${sl.da} · ${I18N["ov.emne"][0]} ${s.letter}`),
+        " ", en(`${sl.en} · ${I18N["ov.emne"][1]} ${s.letter}`)];
+      return link ? el("a", { class: "vexam", href: `#q/${s.sitting}-${s.letter}-1A` }, ...kids)
+                  : el("span", { class: "vexam" }, ...kids);
+    });
+    return items.length ? el("div", { class: "vexams" }, ...items) : null;
+  }
+
   // ── Emneord · overview: families, then the topic cards with their known / total ──
   function viewVocab() {
     const known = vknown();
@@ -1147,7 +1166,7 @@ body:has(.vdlg[open]) { overflow: hidden; }
         el("div", { class: "vgrid" }, g.topics.map(v => {
           const [n, tot] = vcount(v, known), pct = tot ? (100 * n / tot).toFixed(1) : "0";
           return el("a", { class: "vtopic", href: `#ord/${v.key}` },
-            el("b", { class: "da", lang: "da" }, v.title), en(v.title_en),
+            el("b", { class: "da", lang: "da" }, v.title), en(v.title_en), vexams(v, false),
             el("small", null, el("span", null, t("ov.count", tot)), el("span", null, t("ov.known", n, tot))),
             el("span", { class: "vbar", role: "img", "aria-label": t("ov.known", n, tot) }, el("i", { class: "s", style: `width:${pct}%` })));
         })));
@@ -1174,7 +1193,7 @@ body:has(.vdlg[open]) { overflow: hidden; }
     paint(); draw();
     app.replaceChildren(el("div", { class: "vtopage" },
       el("a", { class: "crumb", href: "#ord" }, icon("left"), t("ov.back")),
-      el("header", { class: "vtophead" }, bi(v.title, v.title_en, "h1", "vtitle"), cnt),
+      el("header", { class: "vtophead" }, bi(v.title, v.title_en, "h1", "vtitle"), vexams(v, true), cnt),
       tb("ov.tip", [], [], "p", "hint"),
       el("div", { class: "vtools" }, cl, nxt ? el("a", { class: "go ghost", href: `#ord/${nxt.key}` }, t("ov.next"), icon("right")) : null),
       list));
