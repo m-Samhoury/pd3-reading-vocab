@@ -205,8 +205,23 @@ def build_vocab(vocab_path, imgs_path, questions):
             if w.get("qid") and w["qid"] not in known_qids:
                 warn.append(f"{w['id']}: qid {w['qid']} is not in the 12 sittings")
             words.append(word)
-        topics.append({**{k: t[k] for k in ("key", "title", "title_en", "family", "qids") if k in t}, "words": words})
+        topics.append({**{k: t[k] for k in ("key", "title", "title_en", "family", "qids") if k in t},
+                       "sources": topic_sources(t.get("qids"), t.get("key"), warn), "words": words})
     return topics, files, warn
+
+
+def topic_sources(qids, key, warn):
+    """The exams a topic comes from: [{"sitting": "2018s", "letter": "A"}, ...], deduped, newest sitting first.
+    The sitting and letter are the first two parts of each qid (e.g. 2018s-A-1A)."""
+    seen = set()
+    for qid in qids or []:
+        parts = qid.split("-")
+        if len(parts) < 2 or parts[0] not in SITTINGS or parts[1] not in LETTERS:
+            warn.append(f"{key}: qid {qid} has no known sitting and letter; not listed as a source")
+            continue
+        seen.add((parts[0], parts[1]))
+    ordered = sorted(seen, key=lambda sl: (-SITTINGS.index(sl[0]), LETTERS.index(sl[1])))
+    return [{"sitting": s, "letter": l} for s, l in ordered]
 
 
 def copy_vocab_pics(out_dir, files):
