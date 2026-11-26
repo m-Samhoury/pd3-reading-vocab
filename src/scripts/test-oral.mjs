@@ -1,7 +1,7 @@
 // Whole-page test for mundtlig.html (headless Chrome over CDP, Node 22+), modelled on
 // .claude/skills/pd3-coach/app/test-page.mjs.
 //   node src/scripts/test-oral.mjs [path-to-mundtlig.html] [scratch-dir] [port]
-// Topbar at 375, 768, 1024 and 1280 px; the page (v3, "Trin for trin") at 375 and 1280 px in light and dark, a layout pass at 768 and 1024, and an English-UI pass. Prints one "ok"/"FAIL" line per check, the
+// Topbar at 375, 768, 1024 and 1280 px; the page (v3, "Trin for trin") at 375 and 1280 px in light and dark, the Emneord tab (PLAN-3) at 375 and 1280, a layout pass at 768 and 1024, and an English-UI pass. Prints one "ok"/"FAIL" line per check, the
 // console errors, and writes screenshots of the main views into the scratch dir. Exit code 1 on any failure.
 import { spawn } from "node:child_process";
 import { mkdirSync, rmSync, writeFileSync } from "node:fs";
@@ -184,7 +184,7 @@ async function danishRun(tag, width, dark) {
   check(`${tag} · start: "Dit næste spørgsmål" card first → 2024s-A-1A`, start.href === "#q/2024s-A-1A" && start.btn === "Start spørgsmålet" && start.lab === "Dit næste spørgsmål" && start.first, start);
   check(`${tag} · start: progress line and 3-item legend with English`, /^0 af 108 spørgsmål er sikre/.test(start.line) && start.legend === 3 && start.legendEn, start);
   check(`${tag} · start: 12 sitting chips, newest first, 2024s chosen, 3 topic rows`, start.chips.length === 12 && start.chips[0] === "2024s" && start.chips[11] === "2018s" && start.pressed === "2024s" && start.rows === 3, start);
-  check(`${tag} · tabs are Lær and Test only`, start.tabs === "Lær|Test", start.tabs);
+  check(`${tag} · tabs are Lær, Emneord and Test`, start.tabs === "Lær|Emneord|Test", start.tabs);
   const theme = await ev(`[document.documentElement.dataset.theme, localStorage.getItem("pd3.theme")]`);
   check(`${tag} · theme applied`, theme[0] === (dark ? "dark" : "light"), theme);
   check(`${tag} · no horizontal scroll (Lær start)`, await noHScroll(), await ev(`[document.documentElement.scrollWidth, window.innerWidth]`));
@@ -292,7 +292,7 @@ async function danishRun(tag, width, dark) {
   await ev(`document.querySelector(".langbtn").click(); 1`); await sleep(250);
   const ui = await ev(`[[...document.querySelectorAll("#tabs button")].map(b => b.textContent.trim()).join("|"), document.querySelector(".next a.go").textContent.trim(),
     document.querySelector(".next .lab .da").textContent, document.querySelector("#enToggle").textContent.trim()]`);
-  check(`${tag} · language button: UI in English, Danish content unchanged`, ui[0] === "Study|Test" && ui[1] === "Start the question" && ui[2] === "Dit næste spørgsmål" && /Hide English/.test(ui[3]), ui);
+  check(`${tag} · language button: UI in English, Danish content unchanged`, ui[0] === "Study|Topic words|Test" && ui[1] === "Start the question" && ui[2] === "Dit næste spørgsmål" && /Hide English/.test(ui[3]), ui);
   await ev(`document.querySelector(".langbtn").click(); 1`); await sleep(250);
   await open("#test");
   await ev(`(async () => { document.querySelector('.chipbtn[data-sit="2024s"]').click(); await new Promise(r => setTimeout(r, 80)); document.querySelector("#tstart").click(); return 1; })()`);
@@ -384,10 +384,90 @@ async function danishRun(tag, width, dark) {
   await ev(`localStorage.removeItem("pd3.oral.v1"); sessionStorage.clear(); 1`);
 }
 
+
+// ── Emneord (PLAN-3): the third tab. Runs on the fixture build (src/fixtures/oral-vocab.sample.json) ──
+const VK = "pd3-oral-vocab:known:v1", VC = "pd3-oral-vocab:cloze:v1";
+const vocabRun = async (tag, width, dark) => {
+  const P = `${width}-${dark ? "dark" : "light"}`;
+  await ev(`try { localStorage.removeItem("${VK}"); localStorage.removeItem("${VC}"); } catch (e) {} 1`);
+  await open("#laer");
+  await ev(`document.querySelector('#tabs button[data-go="#ord"]').click(); 1`); await sleep(200);
+  const tab = await ev(`[location.hash, document.querySelector('#tabs button[data-go="#ord"]').getAttribute("aria-pressed")]`);
+  check(`${tag} · Emneord tab opens #ord`, tab[0] === "#ord" && tab[1] === "true", tab);
+  check(`${tag} · Emneord: two topic cards, families, start-screen order`,
+    await ev(`[...document.querySelectorAll("#app .vtopic")].map(a => a.getAttribute("href")).join(",") === "#ord/frivilligt-arbejde,#ord/transport-og-miljoe"`));
+  check(`${tag} · Emneord: each card shows word count and known / total`,
+    await ev(`[...document.querySelectorAll("#app .vtopic")].every(a => /4 ord/.test(a.textContent) && /0 af 4 kan/.test(a.textContent))`));
+  check(`${tag} · Emneord overview: no horizontal scroll`, await noHScroll());
+  await shotFull(`${P}-ord`);
+
+  await open("#ord/frivilligt-arbejde");
+  await waitFor(`[...document.querySelectorAll("#app img.vpic")].every(i => i.complete)`, 5000);
+  check(`${tag} · topic page: 4 rows, pictures on 4, none missing`,
+    await ev(`[document.querySelectorAll("#app .vw").length, document.querySelectorAll("#app img.vpic").length, document.querySelectorAll("#app .vnopic").length].join() === "4,4,0"`));
+  check(`${tag} · topic page: every <mark> equals the sentence span`, await ev(`(() => { const t = window.ORAL.vocab.topics.find(x => x.key === "frivilligt-arbejde");
+    return [...document.querySelectorAll("#app .vw")].every((r, i) => { const w = t.words[i], m = r.querySelector(".vsent mark");
+      return !!m && m.textContent === w.sentence.slice(w.span[0], w.span[1]); }); })()`));
+  check(`${tag} · written example carries the "eget eksempel" tag`, await ev(`[...document.querySelectorAll("#app .vw")].some(r => r.querySelector(".vtag") && /de fleste/.test(r.textContent))`));
+  check(`${tag} · picture alt text from alt_da`, await ev(`document.querySelector("#app img.vpic").alt === "En ung kvinde hjælper en ældre mand."`));
+  check(`${tag} · link to the question (#q/<id>/2)`, await ev(`document.querySelector("#app .vw a.vsrc").getAttribute("href") === "#q/2018s-A-1A/2"`));
+  check(`${tag} · no horizontal scroll (topic page)`, await noHScroll());
+  await shotFull(`${P}-ord-topic`);
+
+  // the picture dialog: opens large, Escape closes it
+  await ev(`document.querySelector("#app .vpicbtn").click(); 1`); await sleep(150);
+  check(`${tag} · picture opens in the dialog with its credit`, await ev(`document.querySelector("dialog.vdlg").open && /Testbillede/.test(document.querySelector("dialog.vdlg").textContent)`));
+  if (width >= 375) await shot(`${P}-ord-dialog`);
+  await send("Input.dispatchKeyEvent", { type: "keyDown", key: "Escape", code: "Escape", windowsVirtualKeyCode: 27 });
+  await send("Input.dispatchKeyEvent", { type: "keyUp", key: "Escape", code: "Escape", windowsVirtualKeyCode: 27 }); await sleep(150);
+  check(`${tag} · Escape closes the picture dialog`, await ev(`!document.querySelector("dialog.vdlg").open`));
+
+  // a topic without a picture: its rows have a blank cell, no <img>
+  await open("#ord/transport-og-miljoe");
+  check(`${tag} · missing picture: blank cell, no broken <img>`, await ev(`[document.querySelectorAll("#app .vnopic").length, document.querySelectorAll("#app img.vpic").length, [...document.querySelectorAll("#app img.vpic")].filter(i => i.complete && i.naturalWidth === 0).length].join() === "2,2,0"`));
+  check(`${tag} · last topic has no "Næste emne" link`, await ev(`document.querySelector("#app .vtools a.go") === null || document.querySelector("#app .vtools a.go").getAttribute("href") === "#ord"`));
+
+  // Kan den: saved per browser, survives a reload
+  await open("#ord/frivilligt-arbejde");
+  await ev(`document.querySelector("#app .vknow").click(); 1`); await sleep(120);
+  check(`${tag} · "Kan den" toggles, counted in the topic`, await ev(`document.querySelector("#app .vknow").getAttribute("aria-pressed") === "true" && /1 af 4 kan/.test(document.querySelector(".vcount").textContent)`));
+  await open("#ord/frivilligt-arbejde");
+  check(`${tag} · "Kan den" persists after a reload (topic|id)`, await ev(`document.querySelector("#app .vknow").getAttribute("aria-pressed") === "true" && JSON.parse(localStorage.getItem("${VK}")).join() === "frivilligt-arbejde|hjaelpe_andre"`));
+  await ev(`document.querySelector("#app .vknow").click(); 1`); await sleep(100);
+
+  // Skjul ordene: cloze, remembered; English off in cloze mode; a tap reveals the gap
+  await open("#ord/frivilligt-arbejde");
+  await ev(`document.querySelector("#app .vtools .enbtn").click(); 1`); await sleep(150);
+  check(`${tag} · "Skjul ordene" blanks every <mark>, hides the word line and the English sentence`,
+    await ev(`[document.querySelectorAll("#app .gap").length, document.querySelectorAll("#app mark").length, document.querySelectorAll("#app .vsent .en").length, getComputedStyle(document.querySelector("#app .gap .ga")).display].join() === "4,0,0,none"`));
+  await ev(`document.querySelector("#app .gap").click(); 1`); await sleep(100);
+  check(`${tag} · tapping a gap reveals the word`, await ev(`document.querySelectorAll("#app .gap.open").length === 1`));
+  await open("#ord/frivilligt-arbejde");
+  check(`${tag} · "Skjul ordene" is remembered per browser`, await ev(`document.querySelectorAll("#app .gap").length === 4 && document.querySelector("#app .vtools .enbtn").getAttribute("aria-pressed") === "true"`));
+  await shotFull(`${P}-ord-cloze`);
+  await ev(`document.querySelector("#app .vtools .enbtn").click(); 1`); await sleep(120);
+  check(`${tag} · switching cloze off restores the marks`, await ev(`document.querySelectorAll("#app mark").length === 4 && document.querySelectorAll("#app .gap").length === 0`));
+
+  // the English switch hides the English lines on this page too
+  const enVis = `[...document.querySelectorAll("#app .en")].filter(e => getComputedStyle(e).display !== "none").length`;
+  const en0 = await ev(enVis);
+  await ev(`document.querySelector("#enToggle").click(); 1`); await sleep(120);
+  check(`${tag} · English switch hides the English lines on the word pages`, en0 > 0 && (await ev(enVis)) === 0, en0);
+  await ev(`document.querySelector("#enToggle").click(); 1`); await sleep(120);
+
+  // the phone: rows and the cloze switch fit the width
+  check(`${tag} · no horizontal scroll (topic page, cloze off)`, await noHScroll());
+  await ev(`try { localStorage.removeItem("${VK}"); localStorage.removeItem("${VC}"); } catch (e) {} 1`);
+};
+
 // 768 and 1024: layout only
 async function layoutRun(tag, width) {
   await open("#laer");
   check(`${tag} · no horizontal scroll (Lær start)`, await noHScroll(), await ev(`[document.documentElement.scrollWidth, window.innerWidth]`));
+  await open("#ord");
+  check(`${tag} · no horizontal scroll (Emneord)`, await noHScroll());
+  await open("#ord/frivilligt-arbejde");
+  check(`${tag} · no horizontal scroll (Emneord topic)`, await noHScroll());
   await open("#q/2018s-A-1A/4");
   check(`${tag} · no horizontal scroll (question)`, await noHScroll());
   await open("#test");
@@ -401,7 +481,7 @@ async function layoutRun(tag, width) {
 async function englishRun(tag, width, dark) {
   await open("#laer");
   check(`${tag} · no horizontal scroll`, await noHScroll());
-  check(`${tag} · UI in English: tabs Study|Test`, await ev(`[...document.querySelectorAll("#tabs button")].map(b => b.textContent.trim()).join("|")`) === "Study|Test");
+  check(`${tag} · UI in English: tabs Study|Topic words|Test`, await ev(`[...document.querySelectorAll("#tabs button")].map(b => b.textContent.trim()).join("|")`) === "Study|Topic words|Test");
   check(`${tag} · next-question button "Start the question", label still Danish first`, await ev(`document.querySelector(".next a.go").textContent.trim() === "Start the question" && document.querySelector(".next .lab .da").textContent === "Dit næste spørgsmål"`));
   check(`${tag} · English switch label in English`, await ev(`/Hide English|Show English/.test(document.querySelector("#enToggle").textContent)`));
   check(`${tag} · English lines on the page`, await ev(`document.querySelectorAll("#app .en").length > 0`));
@@ -422,7 +502,7 @@ for (const [width, dark, lang] of [[375, false, "da"], [375, true, "da"], [1280,
   await setViewport(width, dark, lang);
   if (lang === "en") await englishRun(tag, width, dark);
   else if (width === 768 || width === 1024) await layoutRun(tag, width);
-  else await danishRun(tag, width, dark);
+  else { await danishRun(tag, width, dark); await vocabRun(tag, width, dark); }
   check(`${tag} · no console errors`, consoleErrors.length === 0, consoleErrors.slice(0, 5));
 }
 

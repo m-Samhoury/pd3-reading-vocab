@@ -1,0 +1,62 @@
+{
+  "hjaelpe_andre": {
+    "file": "vocab-img/hjaelpe_andre.jpg",
+    "w": 200,
+    "h": 144,
+    "credit": "Testbillede (fixture, ikke til udgivelse)",
+    "source": "",
+    "license": "cc0",
+    "alt_da": "En ung kvinde hjælper en ældre mand.",
+    "alt_en": "A young woman helps an older man."
+  },
+  "faar_erfaring_med": {
+    "file": "vocab-img/faar_erfaring_med.jpg",
+    "w": 200,
+    "h": 140,
+    "credit": "Testbillede (fixture, ikke til udgivelse)",
+    "source": "",
+    "license": "cc0",
+    "alt_da": "En person arbejder sammen med andre.",
+    "alt_en": "A person works together with others."
+  },
+  "vaere_frivillig_i": {
+    "file": "vocab-img/vaere_frivillig_i.jpg",
+    "w": 184,
+    "h": 200,
+    "credit": "Testbillede (fixture, ikke til udgivelse)",
+    "source": "",
+    "license": "cc0",
+    "alt_da": "Frivillige på en idrætsbane.",
+    "alt_en": "Volunteers at a sports field."
+  },
+  "de_fleste": {
+    "file": "vocab-img/de_fleste.jpg",
+    "w": 200,
+    "h": 121,
+    "credit": "Testbillede (fixture, ikke til udgivelse)",
+    "source": "",
+    "license": "cc0",
+    "alt_da": "Unge mennesker i en café.",
+    "alt_en": "Young people in a café."
+  },
+  "afhaenge_af": {
+    "file": "vocab-img/afhaenge_af.jpg",
+    "w": 200,
+    "h": 126,
+    "credit": "Testbillede (fixture, ikke til udgivelse)",
+    "source": "",
+    "license": "cc0",
+    "alt_da": "Trafik i en storby.",
+    "alt_en": "Traffic in a big city."
+  },
+  "forurening": {
+    "file": "vocab-img/forurening.jpg",
+    "w": 200,
+    "h": 200,
+    "credit": "Testbillede (fixture, ikke til udgivelse)",
+    "source": "",
+    "license": "cc0",
+    "alt_da": "Røg fra en fabrik.",
+    "alt_en": "Smoke from a factory."
+  }
+}

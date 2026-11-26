@@ -38,6 +38,16 @@ After a change to src/templates/mundtlig.html only: `python3 src/scripts/build_o
 to use another file, e.g. `src/fixtures/oral-answers.sample.json`). It writes `mundtlig.html`, `oral/` (data, the
 spelling lexicon and re-encoded picture sheets). The test needs Google Chrome.
 
+**Emneord** (the third tab, `#ord`, with `#ord/<topic key>` per topic): the topic words used in the model answers, each with
+a small picture (tap it to enlarge, with its credit), the word and its construction with prepositions, the English, a
+sentence from the model answer with the word highlighted (`<mark>`), a link to that question, a *Kan den* toggle (saved in the browser)
+and *Skjul ordene*, a cloze switch that blanks the words in the sentences. The data comes from two PD3 files:
+`--vocab` (default `pd3-data/oral-vocab.json`, the word lists) and `--vocab-images` (default
+`pd3-data/oral-vocab-images.json`, a picture and credit per word id; its `file` paths are relative to that JSON's folder).
+If the vocab file is missing the tab says it is coming; a word without an image entry simply shows a blank picture cell.
+Pictures are copied to `oral/vocab/` (skipped with `--no-pics`). Fixtures for building without the real data:
+`python3 src/scripts/build_oral.py --vocab src/fixtures/oral-vocab.sample.json --vocab-images src/fixtures/oral-vocab-images.sample.json`.
+
 ## Assisted Learning
 
 **Open it: https://m-samhoury.github.io/pd3-reading-vocab/assisted-learning.html**

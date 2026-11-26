@@ -1,0 +1,135 @@
+{
+  "version": 1,
+  "topics": [
+    {
+      "key": "frivilligt-arbejde",
+      "title": "Frivilligt arbejde",
+      "title_en": "Volunteer work",
+      "family": "arbejde",
+      "qids": [
+        "2018s-A-1A",
+        "2018s-A-1B",
+        "2018s-A-2"
+      ],
+      "words": [
+        {
+          "id": "hjaelpe_andre",
+          "da": "hjælpe andre",
+          "use": "hjælpe + nogen (med noget)",
+          "en": "help others",
+          "sentence": "En årsag er, at mange studerende gerne vil hjælpe andre mennesker.",
+          "span": [
+            43,
+            55
+          ],
+          "qid": "2018s-A-1A",
+          "source": "answer",
+          "sentence_en": "One reason is that many students like to help other people."
+        },
+        {
+          "id": "faar_erfaring_med",
+          "da": "får erfaring med",
+          "use": "få + erfaring + med + noget",
+          "en": "get experience with",
+          "sentence": "Man får erfaring med at arbejde i et team, og det er vigtigt for mange arbejdsgivere.",
+          "span": [
+            4,
+            20
+          ],
+          "qid": "2018s-A-2",
+          "source": "answer",
+          "sentence_en": "You get experience with working in a team, and that is important to many employers."
+        },
+        {
+          "id": "vaere_frivillig_i",
+          "da": "være frivillig i",
+          "use": "være + frivillig + i + noget",
+          "en": "be a volunteer in",
+          "sentence": "Mange unge vil være frivillig i den lokale idrætsklub.",
+          "span": [
+            15,
+            31
+          ],
+          "qid": "2018s-A-1B",
+          "source": "notes"
+        },
+        {
+          "id": "de_fleste",
+          "da": "de fleste",
+          "use": "de fleste + substantiv i flertal",
+          "en": "most",
+          "sentence": "De fleste unge har et job ved siden af studiet.",
+          "span": [
+            0,
+            9
+          ],
+          "qid": "2018s-A-2",
+          "source": "written"
+        }
+      ]
+    },
+    {
+      "key": "transport-og-miljoe",
+      "title": "Transport og miljø",
+      "title_en": "Transport and environment",
+      "family": "klima",
+      "qids": [
+        "2018s-B-2"
+      ],
+      "words": [
+        {
+          "id": "afhaenge_af",
+          "da": "afhænge af",
+          "use": "afhænge + af + noget",
+          "en": "depend on",
+          "sentence": "Hvor mange biler der kører, afhænger af, hvordan byen er bygget.",
+          "span": [
+            28,
+            39
+          ],
+          "qid": "2018s-B-2",
+          "source": "followup"
+        },
+        {
+          "id": "forurening",
+          "da": "forurening",
+          "use": "forurening + af + noget",
+          "en": "pollution",
+          "sentence": "Forurening fra biler er et stort problem i storbyerne.",
+          "span": [
+            0,
+            10
+          ],
+          "qid": "2018s-B-2",
+          "source": "notes"
+        },
+        {
+          "id": "kollektiv_trafik",
+          "da": "kollektiv trafik",
+          "use": "kollektiv trafik + til + sted",
+          "en": "public transport",
+          "sentence": "Kollektiv trafik kan være et godt alternativ til bilen.",
+          "span": [
+            0,
+            16
+          ],
+          "qid": "2018s-B-2",
+          "source": "answer"
+        },
+        {
+          "id": "stoette_op_om",
+          "da": "støtte op om",
+          "use": "støtte op om + noget",
+          "en": "support",
+          "sentence": "Mange politikere støtter op om grønne løsninger.",
+          "span": [
+            17,
+            30
+          ],
+          "qid": "2018s-B-2",
+          "source": "written"
+        }
+      ]
+    }
+  ]
+}
