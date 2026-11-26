@@ -310,6 +310,61 @@ ol.fbsteps { margin-top: 22px; }
 .tend .row { display: flex; flex-wrap: wrap; gap: 10px; }
 /* full-page test screenshots only (test-oral.mjs adds .shot to <body>): the sticky bar would be drawn mid-page */
 .shot .actionbar { position: static !important; }
+
+/* Emneord (PLAN-3): topic word lists with a small picture per word */
+.vsec { margin-top: 26px; }
+.vsec:first-child { margin-top: 0; }
+.vfam { font: 700 .78rem var(--head); letter-spacing: .08em; text-transform: uppercase; color: var(--faint); margin: 0 0 10px; }
+.vfam .en { text-transform: none; letter-spacing: 0; }
+.vgrid { display: grid; gap: 12px; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 640px) { .vgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 960px) { .vgrid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.vtopic { display: block; min-width: 0; padding: 14px 16px; background: var(--sheet); border: 1px solid var(--rule); border-radius: 16px; color: var(--ink); text-decoration: none; box-shadow: var(--shadow-lg); }
+.vtopic:hover { border-color: var(--rule-strong); }
+.vtopic b { display: block; font: 800 1.05rem/1.25 var(--head); overflow-wrap: anywhere; }
+.vtopic .en { font-size: .86rem; }
+.vtopic small { display: flex; justify-content: space-between; gap: 8px; color: var(--soft); font-size: .8rem; margin-top: 10px; }
+.vbar { display: block; height: 6px; border-radius: 99px; background: var(--rule); margin-top: 6px; overflow: hidden; }
+.vbar > i.s { display: block; height: 100%; background: var(--ok); }
+
+.vtopage { display: grid; gap: 10px; }
+.vtophead { display: grid; gap: 6px; }
+.vtophead h1 { font: 800 clamp(1.5rem, 4vw, 2rem)/1.2 var(--head); letter-spacing: -.02em; margin: 0; }
+.vtophead .en { font: 500 .9rem var(--body); }
+.vtools { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 4px 0 6px; }
+.vtools .enbtn, .vtools .go { min-height: 40px; }
+.vlist { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.vw { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 12px; align-items: start; min-width: 0; padding: 12px; background: var(--sheet); border: 1px solid var(--rule); border-radius: 16px; }
+@media (min-width: 640px) { .vw { grid-template-columns: 80px minmax(0, 1fr); gap: 16px; padding: 14px; } }
+.vpicbtn { display: block; flex: 0 0 auto; width: 64px; height: 48px; padding: 0; border: 0; border-radius: 10px; overflow: hidden; background: none; cursor: zoom-in; }
+@media (min-width: 640px) { .vpicbtn { width: 80px; height: 60px; } }
+.vpic, .vnopic { display: block; width: 64px; height: 48px; border-radius: 10px; object-fit: cover; background: var(--rule); }
+@media (min-width: 640px) { .vpic, .vnopic { width: 80px; height: 60px; } }
+.vbody { min-width: 0; display: grid; gap: 4px; }
+.vhead { display: grid; gap: 2px; }
+.vword { font: 800 1.05rem/1.25 var(--head); color: var(--ink); overflow-wrap: anywhere; }
+.vuse { font-size: .92rem; color: var(--soft); overflow-wrap: anywhere; }
+.vhead .en { font-size: .86rem; margin-top: 0; }
+.vsent { margin: 6px 0 0; line-height: 1.9; font-size: 1.02rem; overflow-wrap: anywhere; }
+.vsent mark { background: var(--accent-soft); color: var(--accent-text); border-radius: 5px; padding: 0 3px; }
+.vsent .en { line-height: 1.5; }
+.gap { display: inline-block; min-width: 56px; min-height: 32px; margin: 2px 0; padding: 4px 10px; border: 1px dashed var(--accent); border-radius: 8px; background: var(--accent-soft); color: var(--accent-text); font: inherit; cursor: pointer; }
+.gap .ga { display: none; }
+.gap.open .ga { display: inline; }
+.gap.open .gq { display: none; }
+.vlist.cloze .vword, .vlist.cloze .vuse, .vlist.cloze .vhead .en { visibility: hidden; }
+.vfoot { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: center; margin-top: 6px; font-size: .84rem; color: var(--soft); }
+.vsrc { flex: 1 1 180px; min-width: 0; padding: 10px 0; color: var(--soft); overflow-wrap: anywhere; }
+.vtag { padding: 2px 8px; border-radius: 99px; background: var(--accent-soft); color: var(--accent-text); font-size: .78rem; }
+.vknow { margin-left: auto; min-height: 40px; padding: 0 16px; border-radius: 99px; border: 1px solid var(--rule-strong); background: transparent; color: var(--ink); font: 600 .9rem var(--body); cursor: pointer; }
+.vknow[aria-pressed="true"] { background: var(--ok); border-color: var(--ok); color: var(--sheet); }
+
+.vdlg { width: min(320px, 90vw); max-width: 90vw; padding: 16px; border: 0; border-radius: 18px; background: var(--sheet); color: var(--ink); box-shadow: var(--shadow-lg); }
+.vdlg::backdrop { background: rgba(0, 0, 0, .55); }
+.vdlg img { display: block; width: 100%; height: auto; border-radius: 12px; background: #fff; }
+.vdlg .vcredit { display: block; margin: 10px 0 0; font-size: .84rem; color: var(--soft); overflow-wrap: anywhere; }
+.vdlg .go { margin-top: 12px; }
+body:has(.vdlg[open]) { overflow: hidden; }
 </style>
 </head>
 <body>
@@ -331,6 +386,7 @@ ol.fbsteps { margin-top: 22px; }
   <div class="head">
     <nav class="pick" id="tabs" aria-label="Mundtlig">
       <button type="button" data-go="#laer" data-i18n="or.tab.laer">Lær</button>
+      <button type="button" data-go="#ord" data-i18n="or.tab.ord">Emneord</button>
       <button type="button" data-go="#test" data-i18n="or.tab.test">Test</button>
     </nav>
     <button type="button" class="enbtn" id="enToggle" aria-pressed="true"></button>
@@ -340,7 +396,7 @@ ol.fbsteps { margin-top: 22px; }
 <footer class="wrap foot" data-i18n="or.footer"></footer>
 <script src="assets/pd3-data.b6a1b401e8.js"></script>
 <script src="assets/common.33a13d988f.js"></script>
-<script src="oral/data.4d4ed45d38.js"></script>
+<script src="oral/data.713c018ada.js"></script>
 <script src="oral/lexicon.c57f395103.js"></script>
 <script>
 (() => {
@@ -664,6 +720,27 @@ ol.fbsteps { margin-top: 22px; }
     "o3.end.skip": ["Ikke tjekket", "Not checked"],
     "o3.end.none": ["Ikke vurderet", "Not rated"],
   });
+  Object.assign(I18N, {
+    "or.tab.ord": ["Emneord", "Topic words"],
+    "ov.h1": ["Emneord", "Topic words"],
+    "ov.lead": ["De vigtigste ord i hvert emne, med et billede og en sætning fra modelsvaret. Vælg et emne.",
+                "The key words of each topic, with a picture and a sentence from the model answer. Choose a topic."],
+    "ov.soon": ["Emneord kommer snart.", "Topic words are coming soon."],
+    "ov.count": ["{0} ord", "{0} words"],
+    "ov.known": ["{0} af {1} kan", "{0} of {1} known"],
+    "ov.kan": ["Kan den", "I know it"],
+    "ov.cloze": ["Skjul ordene", "Hide the words"],
+    "ov.tip": ["Tryk på et billede for at forstørre det. «Kan den» gemmes i denne browser.",
+               "Tap a picture to enlarge it. “I know it” is saved in this browser."],
+    "ov.from": ["Fra", "From"],
+    "ov.eget": ["eget eksempel", "own example"],
+    "ov.gap": ["Tryk for at se ordet", "Tap to see the word"],
+    "ov.next": ["Næste emne", "Next topic"],
+    "ov.back": ["Emneord", "Topic words"],
+    "ov.pic.zoom": ["Forstør billedet", "Enlarge the picture"],
+    "ov.pic.close": ["Luk", "Close"],
+    "ov.pic.source": ["Kilde ↗", "Source ↗"],
+  });
 
   // what to say when a structure part is missing (from redesign/shared/engine.js)
   const MISSING = {
@@ -982,6 +1059,127 @@ ol.fbsteps { margin-top: 22px; }
         el("a", { class: "go ghost", href: "#laer" }, t("o3.b.laer")))));
   }
 
+  // ══ Emneord (PLAN-3): topic word lists. Each word: a small picture (tap = larger, with credit), the word, its
+  //    construction, English, a sentence from the model answer with the word in <mark>, a link to the question,
+  //    "Kan den" (saved per browser) and the "Skjul ordene" cloze switch. ══
+  const VKEY = "pd3-oral-vocab:known:v1", VCLOZE = "pd3-oral-vocab:cloze:v1";
+  const VOC = (D.vocab && D.vocab.topics) || [];
+  const vocOf = key => VOC.find(v => v.key === key) || null;
+  const vocFirst = v => { const pos = (v.qids || []).map(q => ORDER().indexOf(keyOf(q))).filter(i => i >= 0); return pos.length ? Math.min(...pos) : 1e9; };
+  function vocabGroups() {  // families in the order their first topic appears on the start screen; topics in start-screen order
+    const out = [];
+    [...VOC].sort((a, b) => vocFirst(a) - vocFirst(b)).forEach(v => {
+      const f = v.family || ""; let g = out.find(x => x.f === f);
+      if (!g) { g = { f, topics: [] }; out.push(g); }
+      g.topics.push(v);
+    });
+    return out;
+  }
+  const vocabFlat = () => vocabGroups().flatMap(g => g.topics);
+  function vknown() { try { return new Set(JSON.parse(localStorage.getItem(VKEY) || "[]")); } catch (e) { return new Set(); } }
+  function vsaveKnown(s) { try { localStorage.setItem(VKEY, JSON.stringify([...s])); } catch (e) { /* ignore */ } }
+  const vkeyOf = (v, w) => v.key + "|" + w.id;
+  const vcount = (v, known) => [v.words.filter(w => known.has(vkeyOf(v, w))).length, v.words.length];
+  function clozeOn() { try { return localStorage.getItem(VCLOZE) === "1"; } catch (e) { return false; } }
+  function setCloze(on) { try { localStorage.setItem(VCLOZE, on ? "1" : "0"); } catch (e) { /* ignore */ } }
+
+  // the sentence with the word as used in <mark>; in cloze mode the word becomes a gap (first letter shown, tap to see it)
+  function sentenceNodes(w, cloze) {
+    const s = w.sentence || "", a = (w.span || [])[0], b = (w.span || [])[1];
+    if (!Number.isInteger(a) || !Number.isInteger(b) || a < 0 || b <= a || b > s.length) return cloze ? ["—"] : [s];
+    const word = s.slice(a, b), before = s.slice(0, a), after = s.slice(b);
+    if (!cloze) return [before, el("mark", null, word), after];
+    const blank = word[0] + word.slice(1).replace(/\S/g, "_");
+    const gap = el("button", { type: "button", class: "gap", "aria-expanded": "false" },
+      el("span", { class: "gq" }, blank), el("span", { class: "ga" }, word));
+    gap.addEventListener("click", () => { gap.classList.toggle("open"); gap.setAttribute("aria-expanded", String(gap.classList.contains("open"))); });
+    return [before, gap, after];
+  }
+  // the larger picture: a native dialog (Escape closes it; a tap on the backdrop closes it too)
+  function vdialog(w) {
+    const im = w.img, dlg = el("dialog", { class: "vdlg", "aria-label": t("ov.pic.zoom") });
+    const safeSrc = /^https?:\/\//.test(im.source || "");
+    dlg.append(el("img", { src: im.f, alt: im.alt || "" }),
+      im.credit ? el("p", { class: "vcredit" }, im.credit) : null,
+      safeSrc ? el("a", { class: "vcredit", href: im.source, target: "_blank", rel: "noopener" }, t("ov.pic.source")) : null,
+      el("button", { type: "button", class: "go ghost", onclick: () => dlg.close() }, t("ov.pic.close")));
+    // a click outside the box (the backdrop) closes it; clicks on its padding do not
+    dlg.addEventListener("click", e => {
+      const r = dlg.getBoundingClientRect();
+      if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) dlg.close();
+    });
+    return dlg;
+  }
+  function vrow(v, w, cloze, onKnow) {
+    const k = vkeyOf(v, w), isKnown = vknown().has(k), im = w.img;
+    let pic, dlg = null;
+    if (im) {
+      dlg = vdialog(w);
+      pic = el("button", { type: "button", class: "vpicbtn", "aria-label": t("ov.pic.zoom") },
+        el("img", { class: "vpic", src: im.f, alt: im.alt || "", loading: "lazy" }));
+      pic.addEventListener("click", () => dlg.showModal());
+    } else {
+      pic = el("span", { class: "vnopic", "aria-hidden": "true" });
+    }
+    const know = el("button", { type: "button", class: "vknow", "aria-pressed": String(isKnown) }, t("ov.kan"));
+    know.addEventListener("click", () => {
+      const s = vknown(), on = !s.has(k);
+      if (on) s.add(k); else s.delete(k);
+      vsaveKnown(s); know.setAttribute("aria-pressed", String(on)); onKnow();
+    });
+    const q = qById[w.qid];
+    const srcLink = q ? el("a", { class: "vsrc", href: `#q/${w.qid}/2` },
+      bi(`${I18N["ov.from"][0]}: ${sourceLabel(q).da}`, `${I18N["ov.from"][1]}: ${sourceLabel(q).en}`)) : null;
+    const head = el("div", { class: "vhead" }, el("span", { class: "vword", lang: "da" }, w.da),
+      w.use ? el("span", { class: "vuse", lang: "da" }, w.use) : null, en(w.en));
+    const sent = el("p", { class: "vsent", lang: "da" }, ...sentenceNodes(w, cloze));
+    const senten = !cloze && w.sentence_en ? en(w.sentence_en) : null;   // no English in cloze mode: it would give the word away
+    const foot = el("div", { class: "vfoot" }, srcLink, w.source === "written" ? el("span", { class: "vtag" }, t("ov.eget")) : null, know);
+    return el("li", { class: "vw" , "data-id": w.id }, pic, el("div", { class: "vbody" }, head, sent, senten, foot), dlg);
+  }
+
+  // ── Emneord · overview: families, then the topic cards with their known / total ──
+  function viewVocab() {
+    const known = vknown();
+    const cards = vocabGroups().map(g => {
+      const [fda, fen] = FAM[g.f] || [g.f, g.f];
+      return el("section", { class: "vsec" }, bi(fda, fen, "h2", "vfam"),
+        el("div", { class: "vgrid" }, g.topics.map(v => {
+          const [n, tot] = vcount(v, known), pct = tot ? (100 * n / tot).toFixed(1) : "0";
+          return el("a", { class: "vtopic", href: `#ord/${v.key}` },
+            el("b", { class: "da", lang: "da" }, v.title), en(v.title_en),
+            el("small", null, el("span", null, t("ov.count", tot)), el("span", null, t("ov.known", n, tot))),
+            el("span", { class: "vbar", role: "img", "aria-label": t("ov.known", n, tot) }, el("i", { class: "s", style: `width:${pct}%` })));
+        })));
+    });
+    app.replaceChildren(el("div", { class: "hello" }, tb("ov.h1", [], [], "h1"), tb("ov.lead", [], [], "p", "lead")),
+      VOC.length ? el("div", null, ...cards) : tb("ov.soon", [], [], "p", "soon"));
+  }
+
+  // ── Emneord · one topic: the word list, the cloze switch, the count and the next topic ──
+  function viewVocabTopic(key) {
+    const v = vocOf(key); if (!v) { location.replace("#ord"); return; }
+    const flat = vocabFlat(), nxt = flat[flat.indexOf(v) + 1] || null;
+    const cnt = el("p", { class: "hint vcount", "aria-live": "polite" });
+    const list = el("ol", { class: "vlist", role: "list", "aria-label": v.title });
+    const paint = () => { const [n, tot] = vcount(v, vknown()); cnt.textContent = t("ov.known", n, tot); };
+    const draw = () => {
+      const on = clozeOn();
+      list.classList.toggle("cloze", on);
+      list.replaceChildren(...v.words.map(w => vrow(v, w, on, paint)));
+      cl.setAttribute("aria-pressed", String(on));
+    };
+    const cl = el("button", { type: "button", class: "enbtn", "aria-pressed": "false", onclick: () => { setCloze(!clozeOn()); draw(); } },
+      el("span", { class: "sw", "aria-hidden": "true" }), t("ov.cloze"));
+    paint(); draw();
+    app.replaceChildren(el("div", { class: "vtopage" },
+      el("a", { class: "crumb", href: "#ord" }, icon("left"), t("ov.back")),
+      el("header", { class: "vtophead" }, bi(v.title, v.title_en, "h1", "vtitle"), cnt),
+      tb("ov.tip", [], [], "p", "hint"),
+      el("div", { class: "vtools" }, cl, nxt ? el("a", { class: "go ghost", href: `#ord/${nxt.key}` }, t("ov.next"), icon("right")) : null),
+      list));
+  }
+
   // ── English switch: hides and shows the English lines in place, remembered in pd3.oral.en ──
   const enBtn = $("#enToggle");
   const enOn = () => { try { return localStorage.getItem(EN_KEY) !== "0"; } catch (e) { return true; } };
@@ -1003,7 +1201,7 @@ ol.fbsteps { margin-top: 22px; }
   function route() {
     clearInterval(timer);
     const h = location.hash.slice(1);
-    const tab = h.startsWith("test") ? "test" : "laer";
+    const tab = h.startsWith("test") ? "test" : (h === "ord" || h.startsWith("ord/")) ? "ord" : "laer";
     document.querySelectorAll("#tabs button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.go === "#" + tab)));
     let toStep = false;
     if (h.startsWith("q/")) {
@@ -1013,6 +1211,11 @@ ol.fbsteps { margin-top: 22px; }
     else if (h === "test/q") viewTestQ();
     else if (h === "test/fb") viewFeedback();
     else if (h === "test/done") viewTestDone();
+    else if (h === "ord") viewVocab();
+    else if (h.startsWith("ord/")) {
+      let key = null; try { key = decodeURIComponent(h.slice(4)); } catch (e) { /* malformed: fall back below */ }
+      if (key && vocOf(key)) viewVocabTopic(key); else location.replace("#ord");
+    }
     else if (tab === "test") viewTestSetup();
     else viewStart();
     if (!toStep) scrollTo(0, 0);
